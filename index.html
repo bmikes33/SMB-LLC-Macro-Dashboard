@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMB LLC Macro Research Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.5/babel.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: #0B0F19; }
+        button { font-family: inherit; }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 100; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .modal-content { background: #0F172A; border-radius: 14px; max-width: 800px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 24px; position: relative; }
+        .modal-close { position: absolute; top: 12px; right: 16px; background: none; border: none; color: #94A3B8; font-size: 22px; cursor: pointer; }
+        .inst-card { cursor: pointer; transition: transform 0.1s, box-shadow 0.1s; }
+        .inst-card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState } = React;
+
+// ============================================================
+// DATA
+// ============================================================
+const UPDATED = "March 24, 2026 — 4:30 PM ET (Close)";
+
+const INSTRUMENT_GROUPS = [
+  { name: "Volatility", color: "#EF4444", instruments: ["VIX", "VVIX", "MOVE"] },
+  { name: "Credit", color: "#8B5CF6", instruments: ["HYG", "LQD"] },
+  { name: "Equity Indexes", color: "#3B82F6", instruments: ["SPY", "QQQ", "DIA", "IWM", "RSP"] },
+  { name: "Factors", color: "#06B6D4", instruments: ["MTUM", "QUAL", "VLUE"] },
+  { name: "System Liquidity", color: "#EC4899", instruments: ["WALCL", "TGA", "RRP", "Reserves", "SOFR", "Net Liq"] },
+  { name: "Rates & Currency", color: "#F59E0B", instruments: ["US 2Y", "US 10Y", "US 30Y", "DXY", "USD/JPY", "JP 10Y"] },
+  { name: "Commodities", color: "#22C55E", instruments: ["Gold", "Silver", "Copper", "Oil", "Nat Gas"] },
+  { name: "Crypto", color: "#F97316", instruments: ["BTC", "ETH", "ETH/BTC"] },
+  { name: "Sectors", color: "#A78BFA", instruments: ["XLK", "XLV", "XLF", "XLE", "XLI", "XLC", "XLY", "XLP", "XLU", "XLB", "XLRE", "IGV"] },
+];
+
+const INSTRUMENT_DETAILS = {
+  "VIX": {
+    value: "26.94", change: "+2.98%", signal: "Elevated above 25 — fear regime intact", color: "#EF4444",
+    chartTime: "March 24, 2026 — Daily",
+    chartUrl: "https://www.tradingview.com/x/29JqmmHb/",
+    levels: "16 (normal floor) · 20 (regime line — now support) · 25 (elevated — broken above) · 27.87 ← HERE · 30 (fear) · 40 (crisis)",
+    indicators: "10 SMA (blue) · 50 SMA (purple) · Bollinger Bands · RSI (14)",
+    analysis: "VIX surging +6.54% to 27.87, firmly above the 25 elevated threshold. Higher lows since February — 20 has become the floor, not the ceiling. The 50 SMA (purple) has risen to ~23-24 area. Price making a pattern of higher highs (peaked at 36 in early March, now testing 28). RSI elevated around 60. The VIX structure is telling you this is NOT a temporary spike — it's a regime shift to structurally higher volatility. SPY breaking its 200 SMA while VIX holds above 25 is a classic bear market setup.",
+    keyWatch: "VIX above 25 = elevated regime. Above 30 = fear, put ladders gain gamma fast. Below 25 = tension easing, possible to re-engage growth longs. Iran/Hormuz resolution or rate relief needed to break VIX lower.",
+  },
+  "VVIX": {
+    value: "124.14", change: "+1.07%", signal: "Above 120 — hedging demand elevated", color: "#EF4444",
+    chartTime: "March 24, 2026 — Daily",
+    chartUrl: "https://www.tradingview.com/x/gM7pNVZ1/",
+    levels: "80 (floor) · 90 (normal) · 100 (baseline) · 110 (elevated) · 120 (warning ← broken above) · 125 ← HERE · 140 (high alert)",
+    indicators: "10 SMA (blue) · Bollinger Bands (20, 2.0) · RSI (14)",
+    analysis: "VVIX back above 120 at 125.04 — reversing the brief sub-120 all-clear signal from March 16. Options market pricing in continued uncertainty about where VIX goes. The 10 SMA and 50 SMA both rising. RSI elevated. VVIX above 120 combined with VIX above 25 = the volatility complex is NOT calming down. This is a structurally high-vol environment where option premiums remain rich — relevant for both put ladder pricing (expensive) and put selling (rich premium to collect).",
+    keyWatch: "VVIX needs to break below 110 for a true all-clear. Above 120 = wide range of VIX outcomes priced in. Above 140 = panic hedging. The March 16 sub-120 reading was a false dawn.",
+  },
+  "MOVE": {
+    value: "103.01", change: "+4.95%", signal: "SURGED above 100 — bond vol stress escalating", color: "#EF4444",
+    chartTime: "March 24, 2026 — Daily",
+    chartUrl: "https://www.tradingview.com/x/uRag3Cbe/",
+    levels: "55 (extreme calm) · 70 (calm) · 80 (broken) · 100 (elevated ← broken above) · 103 ← HERE · 120 (stress)",
+    indicators: "20 SMA + 50 SMA · Bollinger Bands (20, 2.5) · RSI (14)",
+    analysis: "MOVE has confirmed the break above 80 and is accelerating higher, likely near 95+ given the 10Y at 4.41% and 30Y approaching 5.00%. Bond vol reflects massive uncertainty around the Fed path, geopolitical oil premium, and fiscal concerns. The 20 SMA has crossed above the 50 SMA — bullish for bond volatility (bearish for equities). Rising MOVE + rising VIX + falling HYG is the triple-threat for risk assets.",
+    keyWatch: "MOVE above 100 = serious bond market stress, expect equity drawdowns to accelerate. Below 80 = bond market calming, first condition for equity recovery. Fed commentary on rates is the primary driver.",
+  },
+  "HYG": {
+    value: "79.17", change: "-0.34%", signal: "BROKEN below $80 + all MAs — credit stress confirmed", color: "#EF4444",
+    chartTime: "March 24, 2026 — Daily",
+    chartUrl: "https://www.tradingview.com/x/k57kMcpt/",
+    levels: "75 (crisis) · 77 (major support) · 79.08 ← HERE · 80 (broken support) · 80.50 (all MAs above) · 81.50 (52-wk high)",
+    indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · Bollinger Bands · RSI (14) · Volume",
+    analysis: "MOST IMPORTANT CHART ON THE DASHBOARD. HYG has broken decisively below $80 and all three moving averages — full bearish MA stacking confirmed (price < 21 EMA < 50 SMA < 200 SMA). This is no longer 'emerging' credit stress — it's confirmed. RSI in the low 30s, approaching oversold. Volume spiked on the breakdown = institutional selling, not retail noise. The $80 level that held as support for months has now become resistance. Credit leads equities — this breakdown preceded and confirmed the SPY 200 SMA break.",
+    keyWatch: "$79 is the next support. Below $77 = credit crisis territory, expect High Growth and leveraged names to accelerate lower. Reclaim $80 = first sign of stabilization. HYG must recover BEFORE equities can sustain a rally. This is THE macro signal for your put ladder strategy — credit confirmation of bearish equity thesis.",
+  },
+  "LQD": {
+    value: "$108.34", change: "-0.20%", signal: "Death cross confirmed — below $110 support", color: "#EF4444",
+    chartTime: "March 24, 2026 — Daily",
+    chartUrl: "https://www.tradingview.com/x/CEnTpCQO/",
+    levels: "103 (crisis) · 105 (stress) · 108 ← HERE · 110 (broken support) · 112 (resistance) · 113 (52-wk high)",
+    indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · Bollinger Bands · RSI (14)",
+    analysis: "LQD has broken below the critical $110 support level, confirming the death cross (50 SMA crossed below 200 SMA). Full bearish MA stacking — all MAs above price and declining. RSI in mid-30s. Volume increasing on down moves. The 10Y at 4.41% heading toward 4.50% is the direct driver. Investment-grade credit breaking alongside high-yield means the rate shock is hitting ALL corporate debt, not just junk. Duration-sensitive equities (High Growth, Mature Growth with high multiples) face the same math.",
+    keyWatch: "LQD below $108 targets $105 (stress). Reclaim $110 = rate pressure easing. 10Y yield must stabilize below 4.50% for LQD to find a floor. LQD + HYG both broken = the entire credit complex is under stress.",
+  },
+  "SPY": { value: "653.18", change: "-0.34%", signal: "BELOW 200 SMA — failed to reclaim, 3rd day below", color: "#EF4444", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/TStdHtVG/", levels: "Fib: 0.618 ($615) · 0.786 ($651.62) ← HERE · 1.0 ($697.89 ATH) | MAs: 21 EMA ~$660 · 50 SMA ~$670 · 200 SMA ~$662 (broken)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD (12,26,9) · RSI (14) · Fibonacci", analysis: "Third consecutive close below the 200 SMA (~$662). The relief rally attempt today was tepid — opened above yesterday but closed down -0.34%. Price at $653 sitting right on the 0.786 Fib ($651.62). Each failed attempt to reclaim the 200 SMA strengthens the bearish case. MOVE surging to 103 (above 100 for first time) means bond volatility is now a separate equity headwind. PMI data mixed (Mfg 52.4 beat, Services 51.1 miss) = stagflationary signal.", keyWatch: "0.786 Fib ($651) is the last line. Below = next stop 0.618 ($615), another ~6% down. Must reclaim 200 SMA ($662) this week to avoid further institutional selling. Friday's PCE data is the next major catalyst." },
+  "QQQ": { value: "583.98", change: "-0.68%", signal: "AT the 200 SMA — do-or-die level", color: "#EF4444", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/uAhRIKMH/", levels: "Fib: 0.786 ($586.99) · 1.0 ($637.40 ATH) | MAs: 21 EMA ~$595 · 50 SMA ~$600 · 200 SMA ~$582", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD (12,26,9) · RSI (14) · Fibonacci", analysis: "QQQ closed at $583.98, below the 0.786 Fib ($587) and just above the 200 SMA (~$582). IGV -4.29% dragging tech — the SaaSpocalypse is accelerating. MOVE surging to 103 adds bond vol as a new headwind. MACD below zero, RSI low 40s. This is the put ladder sweet spot — price compressing at the 200 SMA with negative momentum from credit (HYG), rates (MOVE 103), and sector (IGV -4.29%) all confirming.", keyWatch: "200 SMA (~$582) is THE line. A close below confirms trend reversal. QQQ already below 0.786 Fib. Next target $560. Put ladders: technical setup is as clean as it gets." },
+  "DIA": { value: "461.17", change: "-0.17%", signal: "Flat — testing between 50 and 200 SMA", color: "#F59E0B", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/QyXPcN8e/", levels: "200 SMA ~$440-445 · 50 SMA ~$470 · $425 (orange support) · $458 ← HERE", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD (12,26,9) · RSI (14) · Fibonacci", analysis: "DIA has broken below the 50 SMA and is trading between the 50 SMA (~$470) and 200 SMA (~$440-445). MACD turning negative, histogram declining. RSI ~38-40 approaching oversold. Behaves as a Maturity-stage index — oscillators are the right tool family here. Approaching the guide's Maturity entry zone (RSI < 35 + Stochastic %K/%D crossover below 20). The $425 horizontal support (your orange line) is the major floor below the 200 SMA.", keyWatch: "200 SMA ($440-445) is the major floor. RSI below 35 with Stochastic confirmation = Maturity-stage range buy per the guide. Break below 200 SMA targets $425." },
+  "IWM": { value: "248.78", change: "+0.54%", signal: "Small caps green — diverging from mega-cap", color: "#F59E0B", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/0yHgOAMI/", levels: "Fib: 0.786 ($250.28) · 1.0 ($271.62) | MAs: 50 SMA ~$240 · 200 SMA ~$228", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD (12,26,9) · RSI (14) · Fibonacci", analysis: "IWM has reversed from the 'most bullish chart' designation — the small-cap bounce was a head-fake. Now likely below the 50 SMA with bearish momentum. Higher-for-longer rates hit small caps hardest (more floating-rate debt, more rate-sensitive valuations). HYG credit stress is a direct headwind for small-cap balance sheets. The former bull signal (IWM leading) has reversed.", keyWatch: "200 SMA ($228) is the floor. Small caps need rate relief AND credit stabilization (HYG above $80) before they can recover. Young Growth and small-cap High Growth names should be avoided." },
+  "RSP": { value: "191.92", change: "+0.12%", signal: "Equal-weight FLAT — breadth holding better than cap-weight", color: "#F59E0B", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/WmEQZrmD/", levels: "Fib: 0.786 ($193.50) · 1.0 ($205.25 ATH) | MAs: 50 SMA ~$195 · 200 SMA ~$191", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD (12,26,9) · RSI (14) · Fibonacci", analysis: "RSP at $190.48, now below the 50 SMA ($195) and testing the 200 SMA (~$191). The equal-weight index was the 'healthiest chart' but has caught the broader market weakness. Still less damaged than QQQ (RSP ~7% from ATH vs QQQ ~8%), confirming the relative breadth strength vs mega-cap. RSI ~38-40 approaching oversold. If RSP holds its 200 SMA while QQQ breaks below its own, that's a powerful rotation signal into equal-weight / value.", keyWatch: "200 SMA ($191) is critical. Hold = breadth intact, value/Maturity plays still work. Break = the selloff is broadening beyond tech into the average stock, much more concerning." },
+  "MTUM": { value: "245.54", change: "+0.42%", signal: "Momentum slightly green — diverging from QQQ", color: "#F59E0B", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/KmLoDKQP/", levels: "Fib: 0.382 ($205.99) · 0.5 ($221) · 0.618 ($227.40) · 0.786 ($242.67) · 1.0 ($262.12 ATH)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "MTUM at $245.54, slightly green while QQQ falls -0.68%. The momentum factor holding above the 0.786 Fib ($242.67) while QQQ breaks below its own 0.786 = momentum is in value/industrial/energy names, NOT in tech. This confirms the rotation is real. The factor is being driven by XLE (+2.03%), XLI (+0.58%), and VLUE names, not by mega-cap growth.", keyWatch: "Hold $242 (0.786 Fib). MTUM green while QQQ red = the market has rotated. Momentum strategies favor energy, industrials, and value — not tech." },
+  "QUAL": { value: "193.30", change: "-0.34%", signal: "Quality declining — even fundamentals getting hit", color: "#F59E0B", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/Jwa3OxXs/", levels: "Fib: 0.786 ($193.42) · 1.0 ($205.66 ATH) | MAs: 21 EMA ~$198 · 50 SMA ~$197 · 200 SMA ~$188", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "QUAL at $193.30, right at the 0.786 Fib ($193.42) — critical test. Below both the 21 EMA and 50 SMA. The quality factor weakening means even high-ROE, high-margin names are being sold. When QUAL breaks its 0.786 Fib, the 'buy quality in a correction' trade stops working. 200 SMA ($188) is the next major support.", keyWatch: "0.786 Fib ($193.42) is make-or-break. Below = quality no longer a safe haven, market is indiscriminately selling. Hold = quality remains the relative winner. Maturity-stage quality names (high div, low beta) may hold better than Mature Growth quality." },
+  "VLUE": { value: "144.91", change: "+0.77%", signal: "Value OUTPERFORMING — rotation confirmed at close", color: "#22C55E", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/pa5fzmsj/", levels: "Fib: 0.786 ($141.06) · 1.0 ($154.48 ATH) | MAs: 21 EMA ~$143 · 50 SMA ~$140 · 200 SMA ~$126", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "VLUE at $144.91 (+0.77%) is the STRONGEST factor today. Value green while QQQ red, QUAL red, SPY red = the value rotation is not only intact, it's accelerating. Above the 21 EMA and well above the 0.786 Fib ($141). This is the clearest signal on the dashboard: the market is pricing in stagflation (oil up, rates up) which favors value/dividend/low-duration names over growth.", keyWatch: "VLUE above $141 (0.786 Fib) = value rotation intact. Target $154+ ATH. VLUE leading confirms: Maturity-stage overweight is correct. Energy (LNG), industrials, and dividend payers are the right trades." },
+  "WALCL": { value: "$6.68T", change: "Rising", signal: "QT ended Dec 2025 — balance sheet expanding", color: "#22C55E", chartTime: "Weekly — FRED", chartUrl: "", levels: "$6.58T (QT end level, Dec 2025) · $6.68T (current, rising) · $9.0T (pandemic peak)", indicators: "Weekly level from FRED:WALCL", analysis: "The Fed officially ended QT on December 1, 2025 after removing ~$2.5T from the pandemic peak of $9T. Balance sheet bottomed at $6.58T and is now RISING as the Fed transitions to 'active reserve management' — rolling maturing Treasuries into new Treasuries to match trend growth in reserve demand. This is effectively passive QE. The balance sheet climbing is a MAJOR liquidity tailwind for risk assets. MBS holdings (~$2.1T) will gradually decline as the Fed rolls into Treasuries only.", keyWatch: "WALCL rising = liquidity expanding = bullish risk assets. Watch for any announcements about MBS reinvestment changes or active Treasury purchases. If WALCL accelerates above $6.8T, it signals the Fed is actively adding liquidity, extremely bullish for all stages especially Young/High Growth." },
+  "TGA": { value: "~$750B", change: "Drawing down", signal: "TGA declining from $900B — liquidity injection", color: "#22C55E", chartTime: "Weekly — FRED:D2WLTGAL", chartUrl: "", levels: "$200B (low / post-debt ceiling) · $500B (normal operating) · $750B (current, declining) · $900B (recent peak)", indicators: "Weekly level from Treasury", analysis: "The Treasury General Account hit ~$900B recently (elevated from heavy issuance) and is now drawing down toward ~$750B as Treasury spends. TGA declining = cash flowing FROM Treasury's account INTO the banking system = liquidity injection. Every $100B TGA drawdown adds approximately $100B to bank reserves and loosens financial conditions. The TGA drawdown combined with WALCL rising creates a DOUBLE liquidity tailwind. This is one of the most important dynamics in the current market — it explains why risk assets are bouncing despite credit stress and elevated rates.", keyWatch: "TGA continuing to decline toward $500B = sustained liquidity injection. TGA rising (new issuance surge) = liquidity drain, headwind for risk. Tax season (April 15) typically causes a temporary TGA spike as tax receipts flow in — watch for this seasonal effect." },
+  "RRP": { value: "~$0B", change: "Fully drained", signal: "No more buffer — neutral", color: "#94A3B8", chartTime: "Daily — NY Fed", chartUrl: "", levels: "$0 (current — fully drained) · $500B (moderate buffer) · $2.5T (2022-2023 peak)", indicators: "Daily from NY Fed reverse repo operations", analysis: "The overnight reverse repo facility has been fully drained — from $2.5T at peak to effectively zero in early January 2026. This was a massive liquidity tailwind as money flowed OUT of the RRP and INTO the financial system (T-bills, money markets, risk assets). Now that the RRP buffer is exhausted, there's no more passive liquidity injection from this source. Any further reserve drains go directly against bank reserves, which is why the Fed ended QT. The RRP at zero means the financial system is operating without a liquidity cushion — making SOFR spikes and repo stress more likely during periods of heavy Treasury settlement or quarter-end.", keyWatch: "RRP at zero is a STRUCTURAL change. The system no longer has a buffer. Watch SOFR for any spikes above 3.75% — without RRP to absorb, SOFR stress transmits directly to the real economy. If RRP somehow rebuilds (very unlikely), it would signal excess liquidity returning." },
+  "Reserves": { value: "~$3.2T", change: "Stable/Rising", signal: "Above scarcity threshold — ample", color: "#22C55E", chartTime: "Weekly — FRED:WRESBAL", chartUrl: "", levels: "$2.5T (scarcity danger zone) · $2.85T (2019 repo crisis level) · $3.0T (minimum comfortable) · $3.2T (current) · $3.5T+ (abundant)", indicators: "Weekly from FRED:WRESBAL", analysis: "Bank reserves at the Fed are approximately $3.2T — above the 'minimum comfortable level' that the Fed targets but not deeply abundant. Reserves fell from $4.2T+ during QE to $2.85T in late 2025 (which triggered SOFR stress and accelerated the QT end). Now rising as WALCL expands and TGA draws down. The $3.0T level is the floor the Fed is trying to maintain. Below $2.85T = repo stress (we saw this in Oct-Nov 2025). Above $3.5T = deeply ample, no stress. Current $3.2T is comfortable but not abundant — the system works but has limited buffer.", keyWatch: "Reserves rising toward $3.5T = bullish, system building buffer. Reserves falling toward $3.0T = caution, approaching stress. Below $2.85T = emergency territory, expect SOFR spikes and potential Fed intervention (like 2019 repo crisis). FOMC Wednesday may address reserve management explicitly." },
+  "SOFR": { value: "3.65%", change: "Stable", signal: "At Fed funds — plumbing working", color: "#22C55E", chartTime: "Daily — NY Fed", chartUrl: "", levels: "3.50% (Fed funds floor) · 3.625% (Fed funds midpoint) · 3.65% (current) · 3.75% (Fed funds ceiling) · 4.00%+ (stress signal)", indicators: "Daily from NY Fed SOFR publication", analysis: "SOFR at 3.65% is within the Fed funds target range of 3.50-3.75% — the overnight repo plumbing is functioning normally. This was NOT always the case: in late 2025, SOFR spiked above the Standing Repo Facility rate during the government shutdown, signaling the Fed briefly lost control of the overnight rate. That crisis is what forced the QT end. Current stability is a positive sign that the reserve management transition is working. The SOFR-to-Fed-funds spread of ~2.5bps is normal and healthy.", keyWatch: "SOFR stable near 3.65% = green light, plumbing works. SOFR above 3.75% (ceiling) = funding stress emerging. SOFR above 4.00% = the Fed is losing control, expect emergency repo operations. Quarter-end (March 31) often causes temporary SOFR spikes as banks window-dress balance sheets — watch for this in 2 weeks." },
+  "Net Liq": { value: "~$5.93T", change: "Rising", signal: "EXPANDING — major risk tailwind", color: "#22C55E", chartTime: "Calculated: WALCL − TGA − RRP", chartUrl: "", levels: "$5.0T (contractionary) · $5.5T (neutral) · $5.93T (current, expanding) · $6.5T+ (very expansionary)", indicators: "Net Liquidity = WALCL ($6.68T) − TGA ($0.75T) − RRP ($0B) = ~$5.93T", analysis: "NET LIQUIDITY IS EXPANDING. This is the single most important number on the entire dashboard for understanding why risk assets can rally despite credit stress, elevated rates, and geopolitical uncertainty. The formula: Fed Balance Sheet ($6.68T rising) minus TGA ($750B declining) minus RRP ($0) = ~$5.93T and GROWING. Both components are moving in the bullish direction: WALCL rising (Fed adding reserves) and TGA declining (Treasury spending). This is the invisible hand pushing equities, crypto, and risk assets higher. SPY and BTC have tracked net liquidity with remarkable correlation since 2020. The ETH/BTC +5.18% surge today is consistent with expanding liquidity pushing into riskier assets.", keyWatch: "Net Liq rising toward $6T+ = strong tailwind for all risk assets, especially Young Growth, High Growth, and crypto. If TGA reverses higher (new issuance) while WALCL plateaus, Net Liq could stall — watch Treasury auction schedule. FOMC Wednesday and any balance sheet commentary from Powell is critical for the trajectory." },
+  "US 2Y": { value: "3.887%", change: "+0.80%", signal: "Easing slightly from 3.91% — still elevated", color: "#EF4444", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "3.50% (Fed floor) · 3.625% (Fed midpoint) · 3.75% (Fed ceiling) · 3.91% ← HERE · 4.00% (higher-for-longer resistance)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · Horizontals at policy levels", analysis: "2Y has surged from 3.67% to 3.91% in just 8 days — a massive repricing of rate cut expectations. Now pushing against the 4.00% resistance (red dashed line on chart). This move says the market has fully priced out 2026 rate cuts and is now pricing in 'higher for longer' with conviction. The FOMC held at 3.50-3.75% with a hawkish tone, revised dot plot to just one cut in 2026. The 2Y above 3.75% (the Fed ceiling) = market pricing no cuts or risk of a hike.", keyWatch: "4.00% is the alarm. A break above = the market believes the next move is a HIKE, not a cut. Catastrophic for growth equities. A retreat below 3.75% = rate relief, first condition for equity recovery." },
+  "US 10Y": { value: "4.362%", change: "+0.28%", signal: "Eased slightly — still elevated near 4.50%", color: "#EF4444", chartTime: "March 24, 2026 — Close", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "4.00% (psych) · 4.362% ← HERE · 4.50% (ceiling / growth stock stress) · 5.00% (crisis)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · Horizontals", analysis: "10Y has surged to 4.414%, approaching the critical 4.50% resistance level. The 200 SMA (orange on rate chart) has been reclaimed and price is accelerating higher. This is the most important rate for equity valuations — Murphy's intermarket framework: rising long-term yields compress equity multiples. The move from 4.23% to 4.41% in a week reflects the oil/inflation premium, Fed hawkishness (2.7% PCE projection), and term premium expansion. The 2s10s spread at +50bps is positively sloped but steepening because LONG rates are rising — the bearish version.", keyWatch: "4.50% is the alarm level. Above 4.50% sustained = serious growth stock compression, MACD and trend-following signals on growth names become unreliable. Below 4.00% = green light for duration. Every 25bps move in the 10Y moves equity valuations ~2-3% in the opposite direction." },
+  "US 30Y": { value: "4.931%", change: "+0.20%", signal: "Just below 5.00% — fiscal/inflation alarm", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "4.50% · 4.975% ← HERE · 5.00% (alarm) · 5.50% (fiscal stress)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · Horizontals", analysis: "The 30Y is knocking on the door of 5.00% — the level we flagged as the alarm. This is the inflation/term premium signal. At 5%, the long end is saying the bond market doesn't believe inflation is coming down. The oil/geopolitical premium is fully baked in. Powell projected 2.7% PCE for 2026, well above 2% target. A sustained move above 5.00% would be the worst-case scenario for any equity with duration sensitivity — High Growth and Mature Growth both face valuation compression.", keyWatch: "5.00% is THE line. Above 5% sustained = bond market demanding serious fiscal/inflation premium, weighs on ALL equities. The 30Y at 5% + 10Y above 4.50% = a rate environment that's hostile to growth at any lifecycle stage." },
+  "DXY": { value: "99.26", change: "+0.11%", signal: "Stable near 100 — testing psych level", color: "#F59E0B", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "95 (extreme weak — recent low) · 99.49 ← HERE · 100 (psych / major level) · 103 · 106", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "DXY bouncing off the 95 area and recovering toward 100. MAs converging around $99-100. RSI ~60. The dollar strengthening from lows is a shift from the weak-dollar tailwind that was supporting commodities and EM. A stronger dollar is traditionally a headwind for commodities, international earnings, and crypto — but supportive of domestic Maturity-stage names. The DXY recovery reflects rising US yields attracting capital vs. rest-of-world.", keyWatch: "Does DXY reclaim 100? Above 100 = dollar strengthening, headwind for commodities, EM (DLO exposure), crypto. Below 95 sustaining = weak dollar continues, bullish risk. DXY strength + rising yields = the classic risk-off combination." },
+  "USD/JPY": { value: "158.72", change: "+0.20%", signal: "Near 160 — BOJ intervention risk", color: "#F59E0B", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "140 (carry unwind crisis) · 150 (equilibrium) · 155 (comfortable) · 158.88 ← HERE · 160 (BOJ/MOF intervention risk)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · RSI (14) · Horizontals", analysis: "USD/JPY at 158.88, pushing toward the 160 intervention zone. All MAs below price — carry trade still profitable and running. BUT the Japan 10Y at 2.27% is creating domestic competition for Japanese capital. If Japanese institutional investors start repatriating from US Treasuries/equities, that's a liquidity headwind. The 160 level is where BOJ/MOF historically intervenes to support the yen.", keyWatch: "160 is the intervention ceiling. Any surprise BOJ hawkishness or MOF intervention near 160 → sharp USD/JPY reversal → yen carry unwind → VIX spike (exactly like Aug 2024). Low probability but high impact tail risk." },
+  "JP 10Y": { value: "2.262%", change: "-1.22%", signal: "Eased slightly — still parabolic trend", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/wD0Ie1ch/", levels: "1.50% (post-YCC normal) · 2.00% (broken above) · 2.27% ← HERE · 2.50% (alarm / carry unwind trigger)", indicators: "50 SMA (orange) · 200 SMA (purple) · Horizontals", analysis: "Japan 10Y has broken above 2.00% and is accelerating at 2.27% — the chart is parabolic. This is a global story: Japanese investors seeing competitive domestic yields for the first time in decades means the single largest pool of foreign capital in US Treasuries ($1.1T+) has a reason to come home. This slow-motion repatriation risk is a structural headwind for US rates and equities. Combined with USD/JPY near 160, the carry trade is under pressure from BOTH sides.", keyWatch: "2.50% is the alarm level. JP 10Y above 2.50% likely triggers meaningful yen carry unwind and global vol spike. This is the underappreciated macro risk right now." },
+  "Gold": { value: "$4,460", change: "+1.20%", signal: "Surging — flight to safety confirmed", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/Jw0ID9ZV/", levels: "50 SMA ~$4,100 · 200 SMA ~$3,900 · $4,378 ← HERE · $5,607 (ATH)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "Gold at $4,378, pulling back from recent highs but still in a powerful structural uptrend. Well above all MAs. The correction from $5,607 ATH has been orderly. Gold remains the flight-to-safety asset in this environment — geopolitical risk (Iran/Hormuz), rising inflation expectations (30Y near 5%), and central bank buying all support the secular bull thesis. A stronger DXY (99.5) is a minor headwind but gold is trading on fear, not dollar dynamics right now.", keyWatch: "Hold above $4,200 (50 SMA area) for structural bull intact. Below $4,000 = the rate rise is finally hurting gold (opportunity cost of holding non-yielding asset). Gold strength while equities weaken = classic risk-off signal confirming defensive positioning." },
+  "Silver": { value: "$70.67", change: "+2.26%", signal: "Bouncing with gold — precious metals bid", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/NZRRTuko/", levels: "50 SMA ~$65 · 200 SMA ~$56 · $68.34 ← HERE · $122 (ATH)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "Silver at $68.34, continuing to correct from the $122 ATH. The deeper correction vs gold (silver down 44% from ATH vs gold down 22%) reflects silver's dual nature — the monetary premium is holding but the industrial demand component is weakening as growth concerns mount. Gold/silver ratio rising = classic risk-off signal.", keyWatch: "50 SMA ($65) is key support. Silver underperforming gold = industrial slowdown signal, consistent with rising rates and credit stress narrative." },
+  "Copper": { value: "$73.00", change: "-0.75%", signal: "COPX weak — growth doubts persist", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/KO7ZPDM9/", levels: "50 SMA ~$75 · 200 SMA ~$66 · COPX $71.80 ← HERE · $100 (ATH)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "COPX dropping -2.38% — a significant move for the global growth bellwether. Below the 50 SMA and declining. Copper falling while oil rises = stagflationary signal. The supply deficit thesis (AI data centers, EVs, electrification) is intact structurally but near-term demand is being questioned as rates rise and credit tightens. COPX at $71.80 vs $100 ATH = 28% drawdown.", keyWatch: "200 SMA ($66) is the structural floor. COPX below $66 = the growth thesis is being seriously questioned. COPX recovering above $75 (50 SMA) = growth confidence returning. This is the purest global growth indicator — its weakness confirms the broader risk-off narrative." },
+  "Oil": { value: "$88.93", change: "+0.08%", signal: "Eased from $92 — Iran deal hopes", color: "#F59E0B", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/hOq9VXkF/", levels: "$65-70 (pre-crisis / MAs) · $92.22 ← HERE · $100 (psych / inflation alarm) · $119 (spike high)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "Oil surging +3.78% to $92.22 — the geopolitical premium from Iran/Hormuz is back after a brief de-escalation dip. Oil is the single most inflationary input in the economy. At $92+, it pushes CPI higher, constrains the Fed from cutting, hurts consumer spending (XLY under pressure), and widens credit spreads (energy cost → margin pressure → default risk). Oil rising + yields rising + credit widening = the stagflationary scenario that's worst for equities.", keyWatch: "$100 is THE level. Oil above $100 sustained = stagflation pricing, forces Fed hand, bearish ALL equities. Oil falling below $80 = de-escalation confirmed, rates ease, equity relief. Goldman warning: Brent could spike to $135 if Hormuz stays choked." },
+  "Nat Gas": { value: "$2.87", change: "-1.24%", signal: "Continued weakness — below all MAs", color: "#94A3B8", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/6aWMJwxS/", levels: "$2.50 (floor) · $2.91 ← HERE · $3.20 (21 EMA) · $3.50 (50/200 SMA cluster)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "Nat gas at $2.91, still below all MAs in a structural downtrend from $5.30. US/Canadian LNG supply expansion overwhelming demand. Not a significant equity signal unless it spikes above $5.", keyWatch: "Below all MAs. Needs to reclaim $3.20 (21 EMA) for any bullish signal. Low nat gas benefits XLU (utility margins) but not a market mover." },
+  "BTC": { value: "$70,070", change: "-1.13%", signal: "Basing at $70K — below all MAs, bear trend intact", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/gKo86gPY/", levels: "$54-55K (March low) · $64K (100 SMA / green line rising) · $70K ← HERE · $78K (50 SMA) · $82-84K (200 SMA / red line) · $95K+ (ATH zone)", indicators: "21 EMA (white) · 50 SMA (purple/pink) · 200 SMA (red) · 100 SMA (green) · MACD · RSI (14)", analysis: "BTC at $70,070, reclaimed the 21 EMA (white, ~$70K) but remains well below the 50 SMA (~$78K) and 200 SMA (~$82-84K). Full bearish MA stacking intact. The bounce from $54-55K to $70K is a 30% recovery — constructive but not a trend change. The green line (100 SMA, ~$64K) provided the floor and is rising. RSI ~48-50 neutral. MACD deeply negative but histogram may be flattening. Volume declining on the bounce = low conviction.", keyWatch: "$78K (50 SMA) is the first level to reclaim for any trend change. Below $64K (100 SMA green) = retests the $54K low. BTC below all major MAs while equities also breaking down = crypto is NOT providing diversification. Correlated risk-off across all assets." },
+  "ETH": { value: "$2,135", change: "-0.76%", signal: "Basing at 21 EMA — bear trend intact", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/hWq5QwOJ/", levels: "$1,500 (March low) · $1,850 (100 SMA / green rising) · $2,135 ← HERE · $2,400-2,500 (50 SMA) · $3,000+ (200 SMA) · $4,700 (ATH)", indicators: "21 EMA (white) · 50 SMA (purple/pink) · 200 SMA (red) · 100 SMA (green) · MACD · RSI (14)", analysis: "ETH at $2,135, right at the 21 EMA (white). Bounced from $1,500 low — a 42% recovery. Still below all major MAs with massive separation to the 50 SMA ($2,400-2,500) and 200 SMA ($3,000+). RSI ~50 neutral. The 100 SMA (green, ~$1,850) is providing rising support. FOR YOUR BMNR PUT SELLING: ETH at $2,135 with the 21 EMA as the battle line. The $1,800-1,900 consolidation zone is key support to size strikes against. Elevated VIX/VVIX = rich option premium to collect, favorable for selling. But correlated selloff risk (HYG + equities + crypto all breaking) = size conservatively.", keyWatch: "21 EMA ($2,135) is the inflection. Hold + push through 50 SMA ($2,400-2,500) = base confirmed. Reject here = double-bottom at $1,500 in play. For BMNR: strikes below $1,800 have the 100 SMA as structural support. Monitor HYG — if credit deteriorates further, crypto sells in sympathy." },
+  "ETH/BTC": { value: "~0.0305", change: "-0.5%", signal: "BTC dominance persists — no alt season", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/wfqK9Cka/", levels: "0.022 (absolute floor) · 0.030 ← HERE · 0.035 (200 SMA / alt season signal) · 0.042 (2025 bounce high)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · RSI (14) · MACD", analysis: "ETH/BTC ratio hovering around 0.030-0.031, still near multi-year lows. The March 16 '+5.18% alt season signal' was premature — the ratio has not confirmed a sustained turn. Below all MAs. Money in crypto remains concentrated in BTC as a relative safe haven vs alts. Until this ratio reclaims 0.035 (200 SMA), there is no alt season. Risk-seeking behavior in crypto is not present.", keyWatch: "0.035 = alt season confirmation. 0.022 = structural ETH crisis. The ETH/BTC ratio is the LAST thing to turn in a risk-on cycle — it confirms after equities, credit, and VIX all improve. We're nowhere near that." },
+  "XLK": { value: "$136.15", change: "-0.58%", signal: "Below all MAs — tech weak but off lows", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/2zeGVhrq/", levels: "0.618 ($127.58) · $135 ← HERE · 0.786 ($138.84) · 50 SMA ~$140 · $153 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLK at $135.46, broken below the 0.786 Fib ($138.84) with all MAs above. The descending triangle from $153 ATH has resolved to the downside. Tech is the worst-performing major sector today alongside IGV. Rate-sensitive, duration-heavy, and directly pressured by the 10Y heading toward 4.50%. Confirms the QQQ read — tech is not just underperforming, it's actively leading the selloff.", keyWatch: "0.618 Fib ($127.58) is next support. Reclaim $139 (0.786 + 21 EMA) = stabilizing. Avoid tech-heavy High Growth names until XLK reclaims its 50 SMA ($140)." },
+  "XLV": { value: "$144.79", change: "+0.01%", signal: "Flat — holding near 200 SMA", color: "#94A3B8", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/DC0QYEdu/", levels: "0.618 ($147.97) · $143.67 ← HERE · 200 SMA ~$146 · 50 SMA ~$154", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLV at $143.67, below the 200 SMA (~$146) and all MAs. The bearish crossover (21 EMA through 50 SMA) has confirmed. Healthcare no longer defensive — it's participating in the broad selloff. GLUE and other healthcare lifecycle plays face a sector headwind.", keyWatch: "Needs to reclaim $146 (200 SMA) for any recovery signal. Below $140 = healthcare entering bear territory. Sector headwind for GLUE position." },
+  "XLF": { value: "$49.28", change: "+0.02%", signal: "Flat — still below 200 SMA", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/XcbzULxZ/", levels: "0.382 ($47.60) · $48.94 ← HERE · 0.5 ($49.38) · 200 SMA ~$50-51 · $56.55 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLF still broken — full bearish MA stacking confirmed. Below all MAs. The credit stress (HYG breakdown) is hitting financials directly as spread widening and potential default risk weigh on bank earnings. VLUE leadership is NOT coming from financials — filter OUT financial Maturity names.", keyWatch: "0.382 Fib ($47.60) is the floor. Below = financial stress accelerating. Reclaim 200 SMA ($50-51) = first recovery sign. AVOID financial sector stocks." },
+  "XLE": { value: "$60.84", change: "+2.03%", signal: "LEADER — energy surging on oil + Iran deal hopes", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/aiUKRRDB/", levels: "50 SMA ~$52 · 200 SMA ~$48 · $60.70 ← HERE · $65 (spike high)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "XLE is the sole sector in the green today at +1.79%, directly tracking oil's +3.78% surge. Above all MAs with bullish stacking. The Iran/Hormuz premium is the driver. Energy is the only sector benefiting from the macro headwinds (oil → energy earnings). LNG thesis (Cheniere) directly benefits from this backdrop — US Gulf Coast LNG with zero Hormuz exposure.", keyWatch: "XLE strength is geopolitics-dependent. De-escalation = XLE snaps back to $50-52. Escalation = XLE runs to $65+. The XLE vs oil divergence from March 16 has reversed — energy stocks now tracking oil higher." },
+  "XLI": { value: "$164.00", change: "+0.58%", signal: "Industrials GREEN — value rotation working", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/EoloLPBP/", levels: "0.786 ($165.10) · $161.85 ← HERE · 50 SMA ~$167 · 200 SMA ~$156 · $179 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLI at $161.85, now below the 0.786 Fib ($165) and the 50 SMA ($167). Approaching the 200 SMA ($156). Still one of the better structural charts — the VLUE leadership is likely coming from industrials, not financials. Defense, infrastructure, and machinery names with real earnings growth. But the broader selloff is dragging even quality sectors lower.", keyWatch: "200 SMA ($156) is the major floor. Hold = value/industrial thesis intact. Break = the rotation into value/industrials is failing too, much more bearish signal." },
+  "XLC": { value: "$111.13", change: "-1.40%", signal: "Comms WEAK — META/GOOG selling", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/DNxrPUaN/", levels: "0.786 ($112.62) · $112.26 ← HERE · 50 SMA ~$114 · 200 SMA ~$109 · $120.41 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLC at $112.26, slightly below the 0.786 Fib ($112.62) and the 50 SMA ($114). META/GOOG ad revenue resilience has held this sector better than hardware tech. Still above the 200 SMA ($109) = primary trend intact. Mature Growth comms names with strong FCF are the relative winners in this selloff.", keyWatch: "200 SMA ($109) is the floor. XLC holding above it while XLK breaks lower = quality comms > hardware tech rotation continues." },
+  "XLY": { value: "$109.68", change: "-0.40%", signal: "Below 200 SMA — consumer still under pressure", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/bHNFcJc6/", levels: "0.618 ($110.54) · $109.32 ← HERE · 200 SMA ~$114 (broken) · $125 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLY at $109.32 has broken below the 200 SMA ($114) and the 0.618 Fib ($110.54). Consumer discretionary is in bear territory — AMZN/TSLA/HD consumer names under pressure from oil at $92 (hurts consumer wallets), rising rates (kills housing/autos), and credit tightening. Full bearish MA stacking.", keyWatch: "Below 200 SMA and 0.618 Fib = avoid consumer discretionary names. Next support is 0.5 Fib (~$106). Consumer sector weakness confirms the stagflationary backdrop." },
+  "XLP": { value: "$81.11", change: "-0.09%", signal: "Flat — defensive exhausted", color: "#94A3B8", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/TG2ntI5x/", levels: "200 SMA ~$83 · $81.25 ← HERE · 50 SMA ~$85 · $90 ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14) · Fibonacci", analysis: "XLP at $81.25, flat while everything else sells off. The defensive fear trade from the Growth Scare has fully unwound — staples broke out to $90 on defensive rotation and have since given it all back. Now below the 200 SMA ($83). Not a place to hide anymore — the fear premium has been fully priced out.", keyWatch: "XLP flat while market sells = the defensive rotation is exhausted. Not actionable for Maturity plays — better value in XLI." },
+  "XLRE": { value: "$40.29", change: "-0.81%", signal: "Rate-crushed — approaching range lows", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/0htXJoSj/", levels: "$40 (range low) · $40.40 ← HERE · $42-43 (all MAs converged) · $44 (range high)", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "XLRE at $40.40, near the bottom of its year-long range. 30Y at 4.975% heading toward 5% is the direct headwind. REITs can't rally until long rates stabilize. All MAs above price.", keyWatch: "Skip entirely. Wrong way to play value rotation when 30Y is approaching 5%. Only works if rates reverse hard." },
+  "XLU": { value: "$45.09", change: "+0.69%", signal: "Defensive + AI data center — holding up", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/s3ZUpMIF/", levels: "50 SMA ~$44.50 · $45.13 ← HERE · 21 EMA ~$46 · 200 SMA ~$42.50", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "XLU at $45.13, one of the few sectors holding up. Still above the 50 SMA ($44.50) and 200 SMA ($42.50). Structural tailwind from AI data center power demand giving utilities growth they haven't seen in decades. Outperforming XLRE despite rate sensitivity because the AI narrative overrides. Relative strength in a selloff = defensive quality.", keyWatch: "50 SMA ($44.50) is support. Utilities with data center exposure = high-conviction Maturity picks. One of the rare sectors where Maturity companies have Mature Growth characteristics." },
+  "XLB": { value: "$48.45", change: "+1.89%", signal: "Materials SURGING — gold miners leading", color: "#22C55E", chartTime: "March 24, 2026 — Daily", chartUrl: "", levels: "", indicators: "", analysis: "XLB at $47.68, slightly green. Materials sector tracking between gold (supportive) and copper (weak). Mixed signals. Not a primary sector for lifecycle positioning.", keyWatch: "Secondary sector. Gold miners providing support while industrial metals weaken." },
+  "IGV": { value: "$80.82", change: "-4.29%", signal: "WORST sector — SaaSpocalypse accelerating", color: "#EF4444", chartTime: "March 24, 2026 — Daily", chartUrl: "https://www.tradingview.com/x/SZfHDPPD/", levels: "All MAs above: 21 EMA ~$88 · 50 SMA ~$94 · 200 SMA ~$98 | $81.49 ← HERE · $113 double-top ATH", indicators: "21 EMA (white) · 50 SMA (orange) · 200 SMA (purple) · MACD · RSI (14)", analysis: "WORST chart on the entire dashboard. IGV at $81.49, down -3.49% today — active liquidation while the broad market is only down ~0.7%. Full bear market with 28% drawdown from $113 double-top. Bearish MA stacking with ALL MAs declining above price. RSI near 25-30 deeply oversold. MACD deeply negative. SaaS/cloud repricing accelerating as rates rise and the 'growth at any price' trade unwinds. This is the strongest argument against ANY software/SaaS position from the lifecycle model.", keyWatch: "RSI near 30 may produce a dead-cat bounce but in a bear market these are selling opportunities per the guide. Needs to reclaim 21 EMA ($88+) before any software name is actionable. DO NOT buy software/SaaS from the lifecycle model." },
+};
+
+const MACRO = {
+  regime: "Correction / Bear Market Transition — Credit + Rate Shock Confirmed",
+  regimeColor: "#EF4444",
+  desc: "MARCH 24 CLOSE: SPY -0.34% (3rd day below 200 SMA). MOVE surged to 103 (above 100!). VLUE +0.77% vs QQQ -0.68% = stagflation rotation confirmed. IGV -4.29% (SaaSpocalypse). Oil eased to $89 on Iran deal signals. Gold $4,460 +1.2%. PMI Mfg beat 52.4. Unit labor costs +4.4% (hot). LNG +2.5%, ADEA +3.1%, TSM +1.4% — value/energy watchlist names all green. Put ladder thesis confirmed.",
+  stageBias: [
+    { stage: "Young Growth", bias: "Avoid", color: "#EF4444", note: "VIX >25, HYG broken, IGV bear market. No setups.", icon: "🌱" },
+    { stage: "High Growth", bias: "Avoid", color: "#EF4444", note: "QQQ testing 200 SMA, rates hostile, credit stress", icon: "🚀" },
+    { stage: "Mature Growth", bias: "Selective", color: "#F59E0B", note: "Downgraded from OW. Only energy (LNG) + non-rate-sensitive", icon: "📈" },
+    { stage: "Maturity", bias: "Overweight", color: "#22C55E", note: "PRIMARY allocation. Oscillator entries at oversold. XLI/XLU", icon: "🏛️" },
+    { stage: "Decline", bias: "Caution", color: "#EF4444", note: "HYG credit stress = rising default risk on leveraged names", icon: "📉" },
+  ],
+  sectors: [
+    { s: "XLE (Energy)", c: "+2.03%", clr: "#22C55E" }, { s: "XLB (Materials)", c: "+1.89%", clr: "#22C55E" },
+    { s: "XLU (Utilities)", c: "+0.69%", clr: "#22C55E" }, { s: "XLI (Industrials)", c: "+0.58%", clr: "#22C55E" },
+    { s: "IWM (Small Cap)", c: "+0.54%", clr: "#22C55E" }, { s: "MTUM (Momentum)", c: "+0.42%", clr: "#22C55E" },
+    { s: "RSP (Equal Wt)", c: "+0.12%", clr: "#22C55E" }, { s: "VLUE (Value)", c: "+0.77%", clr: "#22C55E" },
+    { s: "XLV (Healthcare)", c: "+0.01%", clr: "#94A3B8" }, { s: "XLF (Financials)", c: "+0.02%", clr: "#94A3B8" },
+    { s: "XLP (Staples)", c: "-0.09%", clr: "#EF4444" }, { s: "DIA (Dow Jones)", c: "-0.17%", clr: "#EF4444" },
+    { s: "QUAL (Quality)", c: "-0.34%", clr: "#EF4444" }, { s: "SPY (S&P 500)", c: "-0.34%", clr: "#EF4444" },
+    { s: "XLY (Discret.)", c: "-0.40%", clr: "#EF4444" }, { s: "XLK (Tech)", c: "-0.58%", clr: "#EF4444" },
+    { s: "QQQ (Nasdaq 100)", c: "-0.68%", clr: "#EF4444" }, { s: "XLRE (Real Estate)", c: "-0.81%", clr: "#EF4444" },
+    { s: "XLC (Comms)", c: "-1.40%", clr: "#EF4444" }, { s: "IGV (Software)", c: "-4.29%", clr: "#EF4444" },
+  ],
+  narrative: "MARCH 24 CLOSE — BIFURCATED MARKET: The correction continues but today revealed a clear split. SPY closed -0.34% for its THIRD consecutive day below the 200 SMA — the failed reclaim pattern that technical analysts warn is the strongest bear signal. QQQ -0.68% with IGV -4.29% (software being liquidated). BUT the rotation is unmistakable: XLE +2.03%, XLB +1.89%, XLI +0.58%, IWM +0.54%, VLUE +0.77%, RSP +0.12%. Value and cyclicals are green while growth/tech/comms are red. This is a textbook stagflation rotation — oil up ($89), rates up (10Y 4.36%), gold up ($4,460 +1.2%), while growth gets repriced lower. CRITICAL NEW SIGNAL: MOVE surged to 103.01 (+4.95%), breaking above 100 for the first time — bond volatility is now a SEPARATE equity headwind beyond credit and rates. HYG -0.34% continues to deteriorate. On the positive side: PMI manufacturing beat (52.4 vs 51.0 expected), Trump signaling Iran deal progress ('15 points of agreement,' 'think we're going to end' war), and oil eased from $92 morning to $89 close. Fed Gov Miran sees FOUR cuts this year (very dovish outlier). Goolsbee warned a hike is possible if oil skyrockets. Chicago Fed National Activity Index -0.11 (contraction from +0.20). Unit labor costs revised UP to +4.4% (vs +3.0% expected) — stagflationary. Productivity revised DOWN to +1.8% (vs +2.4%). WATCHLIST: LNG +2.51% ($294.58), ADEA +3.06% ($25.24), TSM +1.42% ($343.25), CALM +1.99% ($78.60), DLO +1.57% ($12.92) — all Mature Growth/Maturity names GREEN. GLUE -2.06% ($14.72) — High Growth underperforming. STRATEGY CONFIRMED: Maturity + selective Mature Growth (energy/value) is the correct positioning. Put ladders on QQQ have the cleanest setup — third day below 200 SMA, MOVE above 100, IGV -4.29%, credit deteriorating.",
+  calendar: [
+    { d: "Mar 24", e: "Flash PMIs · Productivity (Q4 final)", i: "Medium" },
+    { d: "Mar 25", e: "Consumer Confidence · Richmond Fed Mfg", i: "Medium" },
+    { d: "Mar 26", e: "Durable Goods · Weekly Jobless Claims", i: "Medium" },
+    { d: "Mar 27", e: "Consumer Sentiment (Final) · Pending Home Sales", i: "Medium" },
+    { d: "Mar 28", e: "PCE Inflation (Feb) — Core PCE is Fed's preferred gauge", i: "Critical" },
+    { d: "Mar 31", e: "Quarter-end rebalancing · SOFR spike risk", i: "High" },
+    { d: "Apr 2", e: "Tariff deadline — 15% global tariff implementation", i: "Critical" },
+  ],
+  news: [
+    { cat: "200 SMA BREAK — DAY 3+", signal: "Bearish but testing", items: ["SPY closed below 200 SMA for 3rd consecutive session at $653.", "ES futures at 6,663 pre-market — pressing up against the 200 SMA cluster (~6,620-6,700).", "Rates pulling back (10Y 4.33%, 30Y 4.89%) gives equities breathing room for reclaim attempt.", "VIX down ~5% premarket — first genuine two-sided session since breakdown.", "KEY: must CLOSE above 200 SMA to halt bearish momentum. Intraday touch without close = another failed rally."] },
+    { cat: "GEOPOLITICAL ESCALATION (Mar 26)", signal: "Escalating", items: ["WSJ: Pentagon looking at sending up to 10,000 ADDITIONAL ground troops to Middle East.", "This contradicts the 'war ending' narrative — sending more troops = escalation, not de-escalation.", "Iran state media maintains 'ZERO CONTACT' with USA despite Trump's deal claims.", "Oil risk remains elevated — additional troops keep Hormuz disruption premium intact.", "If ground deployment confirmed, expect oil spike, VIX spike, equity selloff."] },
+    { cat: "KC FED MFG (Mar 26)", signal: "Expanding but margin pressure", items: ["Kansas City Fed Manufacturing Index: 11 in March (up from 5 in Feb, zero in Jan) — accelerating expansion.", "Volume of shipping up to 20, orders 15, employment 6 (vs -7 prior).", "Expectations up to 16 from 15, led by production.", "BUT: 'Larger share expects LOWER PROFIT MARGINS due to cost pressures.'", "Growth in durables driven by wood products; non-durables by paper/plastics/rubber.", "Capital expenditures DOWN to 5 from 8 — firms pulling back on investment despite rising orders."] },
+    { cat: "FED SPEAKERS (Mar 26)", signal: "Hawkish consensus forming", items: ["Vice Chair JEFFERSON (Hawkish-Hold): 'Little progress in slowing inflation over past year' — still 'an upside risk.' Monetary policy 'well positioned.' Job market 'complex, mixed.' Oil effects 'depend on how long prices remain elevated.' Watching private credit 'to see how it navigates a full credit cycle.' AI could sustain higher productivity, making Fed's job easier.", "Gov COOK (Hawkish): 'Inflation a GREAT RISK because of the Iran war.' 'Job market tough for entry-level jobs.' Studying agentic AI — 'found cuts both ways for stability.' Watching private credit — was supposed to be 'patient capital.' Financial stability 'is an exercise in continual study.'", "Gov MIRAN (Dovish but shifting): Possible to shrink balance sheet 'without returning to era of scarce reserves.' 'Could take several years.' If shrinking further, 'most important would be to do slowly' — shrinkage 'could mean need for rate cut.'", "NET READ: Jefferson + Cook joining the hawkish consensus. The Fed is converging on 'hold for longer' with inflation the dominant risk. Only Miran remains dovish. Private credit scrutiny (Cook + Jefferson) = potential credit tightening ahead."] },
+    { cat: "CREDIT / BOND VOL", signal: "Still stressed", items: ["MOVE at 103+ — still above 100 despite rate pullback today.", "HYG still below $80 and all MAs. No credit recovery yet.", "LQD death cross confirmed. Below $110.", "Jefferson + Cook both flagging PRIVATE CREDIT risk — a new channel of potential stress.", "Bond vol + credit stress remain the structural negatives even as rates ease slightly."] },
+  ],
+  fedPersonas: [
+    { name: "Powell", title: "Fed Chair", lean: "Hawkish-Hold", color: "#EF4444", quotes: ["'Stalled inflation progress'", "Projected 2.7% PCE for 2026", "Only one cut in revised dot plot", "Higher-for-longer stance", "'Not appropriate to adjust rates until picture clears'"] },
+    { name: "Jefferson", title: "Vice Chair", lean: "Hawkish-Hold", color: "#EF4444", quotes: ["'Little progress in slowing inflation over past year'", "Inflation still 'an upside risk'", "Monetary policy 'well positioned'", "Job market 'complex, mixed but changing slowly'", "Oil effects 'depend on how long prices remain elevated'", "Watching private credit 'through a full credit cycle'", "AI could sustain higher productivity growth", "'Stronger safe-haven dollar helps restrain inflation'"] },
+    { name: "Cook", title: "Fed Governor", lean: "Hawkish", color: "#EF4444", quotes: ["'Inflation a GREAT RISK because of the Iran war'", "'Job market tough for entry-level jobs'", "Studying agentic AI — 'cuts both ways for stability'", "Private credit was supposed to be 'patient capital'", "Financial stability 'is an exercise in continual study'", "'Must do scenario analysis in advance'"] },
+    { name: "Hammack", title: "Cleveland Fed", lean: "Hawkish-Hold", color: "#EF4444", quotes: ["'Virtually no progress on inflation'", "'Policy should be on hold for quite some time'", "Watching oil price surge for demand destruction"] },
+    { name: "Collins", title: "Boston Fed", lean: "Hawkish", color: "#EF4444", quotes: ["'Continued upside risks' on inflation", "'Would pause rate cuts for some time'", "Mideast hostilities 'exacerbated' uncertainty"] },
+    { name: "Goolsbee", title: "Chicago Fed", lean: "Neutral (shifted)", color: "#F59E0B", quotes: ["'Could envision a hike if oil prices skyrocket'", "'Everything always on the table'", "Inflation expectations anchored but can 'go wrong quickly'", "Threat of 'lasting gasoline price shock'"] },
+    { name: "Miran", title: "Fed Governor", lean: "Dovish", color: "#22C55E", quotes: ["Sees FOUR cuts this year", "'Inflation actually coming down'", "Possible to shrink balance sheet without scarce reserves", "'Could take several years to shrink appreciably'", "If shrinking further, 'could mean need for rate cut'"] },
+  ],
+};
+
+const WATCHLIST = [{
+  ticker: "GLUE", company: "Monte Rosa Therapeutics", stage: "High Growth", sector: "Health Technology",
+  price: 14.72, composite: 7.2,
+  setup: "Continued decline. Below all MAs. -2.06% today while broad market flat. High Growth stage under macro pressure (VIX >25, rates rising).",
+  thesis: "AI molecular glue degrader platform. Two Novartis deals ($7.8B potential). MRT-8102 targeting NLRP3/cardiovascular (85% CRP reduction Phase 1). $500M+ cash.",
+  entry: "$14-15 (current, but macro hostile)", stop: "$12.50", target: "$21.11 / $24", rr: "1:2.6 / 1:3.7",
+  catalyst: "GFORCE-1 H2 2026 · Pipeline updates", status: "PAUSED — macro hostile for High Growth", sc: "#EF4444",
+  macro: "Weak. High Growth AVOID. VIX >25, XLV flat, IGV -4.29%. Wait for macro improvement.", research: true,
+},{
+  ticker: "DLO", company: "DLocal Limited", stage: "Mature Growth", sector: "Technology Services / EM Fintech",
+  price: 12.92, composite: 9.7,
+  setup: "Recovered to $12.92 (+1.57%). Getting closer to the 200 SMA trigger ($12.50). DXY at 99.26 (near 100) is a headwind for EM exposure.",
+  thesis: "EM payments platform. 52% YoY revenue growth, $960M TTM. 37% gross margin, 70% Adj EBITDA/GP. $604M cash. NRR 149%. Trading at 22x P/E vs 52x peer avg.",
+  entry: "$12.50-13.00 (on 200 SMA reclaim)", stop: "$10.90 (below 0.382 Fib)", target: "$14.82 / $16.80", rr: "1:1.4 / 1:2.8",
+  catalyst: "Q4 earnings done · DXY direction key · EM digital payments secular growth", status: "Approaching trigger — watch DXY", sc: "#F59E0B",
+  macro: "Mixed. Mature Growth selective + DXY firming (EM headwind) + but price recovering.", research: true,
+},{
+  ticker: "CALM", company: "Cal-Maine Foods", stage: "Mature Growth", sector: "Process Industries / Food Production",
+  price: 78.60, composite: 10.0,
+  setup: "+1.99% today. Value/Maturity name working in this rotation. Below 0.618 Fib ($88.69) but bouncing. VLUE +0.77% confirms the bid for value names.",
+  thesis: "Largest US egg producer. FY2025 $4.26B revenue, $1.2B net income. Zero debt, $1.1B cash. Pivoting to specialty eggs (44% of shell sales) + prepared foods (Echo Lake acquisition). Forward P/E 4.4x, FCF yield 15.95%, ROIC ~50%.",
+  entry: "$78-82 (current range, partial)", stop: "$72 (below 0.5 Fib)", target: "$92 / $101 / $117", rr: "1:1.7 / 1:2.9 / 1:5.6",
+  catalyst: "Q3 FY2026 earnings · Egg price recovery · Value rotation tailwind · Prepared foods ramp", status: "Approaching entry — value rotation supportive", sc: "#F59E0B",
+  macro: "Strong. Maturity OW + VLUE leading + food/staples defensive + zero debt.", research: true,
+},{
+  ticker: "TSM", company: "Taiwan Semiconductor (TSMC)", stage: "Mature Growth", sector: "Electronic Technology / Semiconductors",
+  price: 343.25, composite: 9.2,
+  setup: "+1.42% today. Holding up despite XLK -0.58%. TSM is infrastructure/foundry, not software — different dynamics than IGV. Above key support levels.",
+  thesis: "World's most important semiconductor company. FY2025 revenue $122.9B (+35.9% YoY), net income $55.4B (record). 62.3% gross margin. AI accelerator revenue growing 55-59% CAGR through 2029. 2026 guidance: ~30% revenue growth, $52-56B capex. 77% of wafer revenue from 7nm and below.",
+  entry: "$340-350 (current)", stop: "$320 (below 50 SMA)", target: "$390 / $420+", rr: "1:2.0 / 1:3.5",
+  catalyst: "Q1 2026 earnings · Monthly sales releases · N2 ramp · AI spending cycle · $250B US chipmaking deal", status: "Actionable — Mature Growth selective, infrastructure not software", sc: "#22C55E",
+  macro: "Selective. Mature Growth selective + TSM is AI infrastructure (secular) not SaaS (broken). XLK weak but TSM diverging positively.", research: true,
+},{
+  ticker: "ADEA", company: "Adeia Inc.", stage: "Mature Growth", sector: "Technology Services / IP Licensing",
+  price: 25.24, composite: 9.3,
+  setup: "+3.06% today — strongest watchlist performer. In price discovery above ATH. IP licensing is recession-resistant (royalties keep flowing). Perfect for this macro.",
+  thesis: "IP licensing powerhouse — 12,000+ patents in media and semiconductors. Record FY2025: $443M revenue, $278M adj EBITDA (63% margin). Disney, Microsoft, Amazon, AMD deals. Non-Pay-TV revenue +30% YoY. Semiconductor revenue +40% YoY. RapidCool thermal solution for AI chips.",
+  entry: "$23-24 (pullback to 21 EMA) or $25 (current, accepting elevated entry)", stop: "$21 (below prior ATH zone)", target: "$28 / $32", rr: "1:1.5 / 1:3.5 (from $24)",
+  catalyst: "AMD licensing deal · 2026 guidance $395-435M · $160M buyback auth · Semiconductor IP expansion", status: "Actionable — IP licensing recession-proof, strong in this macro", sc: "#22C55E",
+  macro: "Strong. Mature Growth selective + IP licensing = non-cyclical revenue + semi exposure without semi risk.", research: true,
+},{
+  ticker: "LNG", company: "Cheniere Energy", stage: "Mature Growth", sector: "Industrial Services / LNG Export",
+  price: 294.58, composite: 9.2,
+  setup: "+2.51% today ($294.58). Surging with oil/energy. Golden cross intact. Above all MAs. The Iran/Hormuz crisis is a direct tailwind — global LNG demand spikes when Hormuz is disrupted, and LNG has ZERO Hormuz exposure (US Gulf Coast).",
+  thesis: "Largest US LNG exporter. FY2025: $20B revenue, $5.3B net income, $6.9B adj EBITDA, $5.3B DCF (record). 670 cargoes / 46M tonnes. 95%+ contracted for next 10 years. 50% capacity expansion planned. Zero Hormuz exposure (US Gulf Coast). $2.7B buybacks in 2025.",
+  entry: "$285-295 (current) or $275 (pullback to 50 SMA)", stop: "$260 (below 200 SMA)", target: "$320 / $350+", rr: "1:0.9 / 1:1.8 (from current) or 1:2.3 / 1:3.8 (from pullback)",
+  catalyst: "Hormuz crisis = global LNG demand spike · Trump: Iran deal signals (could ease oil but LNG structural) · DOE expansion approval · 2026 EBITDA guide $6.75-7.25B", status: "ACTIONABLE — strongest macro alignment on watchlist", sc: "#22C55E",
+  macro: "Strongest. Mature Growth selective + XLE +2.03% sector leader + Hormuz = structural LNG demand + zero geopolitical risk (US based) + value rotation tailwind.", research: true,
+},{
+  ticker: "GAP", company: "Gap Inc.", stage: "Maturity", sector: "Retail Apparel / Consumer Cyclical",
+  price: 23.90, composite: 7.8,
+  setup: "Pulled back ~20% from $30 highs post-earnings miss. Below 50 SMA, testing 200 SMA area. RSI approaching oversold. XLY sector broken (below 200 SMA) = headwind. Oscillator entry setup forming per Maturity playbook.",
+  thesis: "Largest US specialty apparel company. FY2025: $15.4B revenue (+2% YoY), $816M net income, $2.13 EPS, $1.3B operating cash flow, $823M FCF. Gross margin 40.8% — one of highest in 25 years. 8 consecutive quarters of positive comps. $3B cash on balance sheet. Gap brand +6% comps, Old Navy +3% comps (US #1 specialty apparel). New $1B buyback authorization. Dividend raised 6% to $0.175/quarter. CEO Dickson turnaround gaining traction — beauty/accessories/Fashiontainment expansion. FY2026 guide: +2-3% sales, adj EPS $2.20-$2.35, adj operating margin 7.3-7.5%. Tariff impact: ~200bps Q1 headwind but net neutral full year via sourcing mitigation.",
+  entry: "$22-23 (at 200 SMA area, RSI <35)", stop: "$20 (below 200 SMA + prior support)", target: "$28 / $31.50", rr: "1:2.0 / 1:3.2",
+  catalyst: "Q1 FY2026 earnings (May) · Tariff mitigation H2 tailwind · Beauty/accessories launch · $1B buyback · Dividend increase", status: "Watching — oscillator oversold entry forming", sc: "#F59E0B",
+  macro: "Mixed. Maturity OW + VLUE leading (value tailwind) + but XLY broken (sector headwind) + consumer under oil/rate pressure.", research: true,
+},{
+  ticker: "T", company: "AT&T Inc.", stage: "Maturity", sector: "Telecommunications / Wireline + Wireless",
+  price: 28.50, composite: 8.5,
+  setup: "Strong chart — near 52-week highs. Above all MAs with bullish stacking. RSI ~55-60 healthy. Q4 double beat + raised 2026-2028 outlook. Pullback to 21 EMA or 50 SMA = ideal Maturity entry. Convergence strategy (fiber + 5G + wireless) driving subscriber growth.",
+  thesis: "Telecom cash cow executing flawlessly. Q4 2025: $33.5B revenue, adj EPS $0.52 (+21% YoY), adj EBITDA $11.2B. Full year: adj EPS $2.12 (+9%), FCF $16.6B. FY2026 guide: adj EPS $2.25-$2.35, FCF >$18B (a year ahead of plan), adj EBITDA +3-4%. 421K postpaid phone net adds, 283K fiber net adds, 221K Internet Air net adds in Q4. Best consumer broadband year in a decade. $45B+ shareholder returns 2026-2028 ($8B buybacks in 2026 + $1.11/share dividend maintained). ~4% dividend yield + massive buyback = ~10% total yield. P/E ~9x on 2026E. Lumen + EchoStar acquisitions expanding fiber footprint.",
+  entry: "$27-28 (pullback to 21 EMA/50 SMA)", stop: "$25.50 (below 200 SMA)", target: "$32 / $35", rr: "1:2.0 / 1:3.5",
+  catalyst: "Q1 2026 earnings (late Apr) · $8B buyback execution · Fiber expansion milestones · Lumen deal close · Rate cuts (eventual) = dividend yield more attractive", status: "Actionable — Maturity stage with Mature Growth characteristics", sc: "#22C55E",
+  macro: "Strong. Maturity OW + defensive telecom + subscription revenue (non-cyclical) + massive capital return + not rate-sensitive like REITs.", research: true,
+},{
+  ticker: "ERIC", company: "Ericsson (ADR)", stage: "Mature Growth", sector: "Telecom Equipment / 5G Infrastructure",
+  price: 11.45, composite: 8.0,
+  setup: "Near 52-week high ($11.64). Bullish MA stacking — price > 21 EMA > 50 SMA > 200 SMA, all rising. MACD positive. RSI ~60-65. 9 consecutive quarters of YoY EBITA margin expansion. Stock +16% YTD. 5G cycle turning after multi-year downturn. $1.33B VodafoneThree contract win.",
+  thesis: "Global 5G infrastructure leader. Q4 2025: SEK 69.3B sales (+6% organic YoY), all 3 segments growing. Cloud Software +12%. Adj gross margin 48.0% (up from 46.3%). Adj EBITA margin 18.3% (up from 14.1%). Net income SEK 8.6B (up from 4.9B). FY2025: SEK 236.7B revenue (+2% organic). Free cash flow SEK 14.9B. 2026 outlook: RAN market flat but growth from mission-critical networks, 5G core, enterprise, and defense. Dividend raised to SEK 3.00/share + SEK 15B buyback mandate. Increasing R&D in defense and AI-native autonomous mobile networks. 5G subscriptions forecast: 6.4B by 2031. FWA connections: 185M (2025) → 350M (2031).",
+  entry: "$11.00-11.30 (pullback to 21 EMA)", stop: "$10.00 (below 50 SMA)", target: "$13.50 / $15.00", rr: "1:1.7 / 1:2.8",
+  catalyst: "Q1 2026 earnings (Apr 23) · VodafoneThree $1.33B deal execution · Defense R&D investment · Japan market entry 2026 · AI-native network platform · China restrictions on Nokia/Ericsson (potential headwind)", status: "Actionable — Mature Growth reclassification with 5G secular tailwind", sc: "#22C55E",
+  macro: "Strong. Mature Growth selective + XLC sector (comms infrastructure) + non-rate-sensitive physical infrastructure + value rotation tailwind + defense/security secular theme.", research: true,
+},{
+  ticker: "CRH", company: "CRH plc", stage: "Mature Growth", sector: "Building Materials / Infrastructure",
+  price: 105.60, composite: 9.0,
+  setup: "Weekly chart: healthy pullback from $131.58 ATH to 0.786 Fib ($110.16) zone, bouncing +5.11%. 21 EMA (white) at price (~$105-108). 50 SMA (orange) rising ~$95-100. 200 SMA (purple) ~$70-75 — massive separation = powerful primary uptrend. Weekly MACD above zero, RSI ~55 cooling from overbought. Bullish MA stacking fully intact. This is a textbook Mature Growth pullback per the guide — weekly trend bullish, daily pulling back to the 20 EMA zone.",
+  thesis: "Leading global building materials company — #1 infrastructure play in North America. FY2025: $37.4B revenue (+5% YoY), $3.8B net income (+8%), $7.7B adj EBITDA (+11%), 20.5% EBITDA margin (12th consecutive year of margin expansion). Diluted EPS $5.51 (+10%). $1.3B operating cash flow. S&P 500 inclusion in 2025. 83,000 employees across 4,000 locations. 75%+ of EBITDA from North America, 40% tied to publicly-funded infrastructure. $4.1B invested in 38 acquisitions in 2025 including $2.1B Eco Material Technologies (low-carbon materials). $9.4B total buybacks since 2018. Dividend raised 5% to $0.39/quarter ($1.56/year). 2026 guide: net income $3.9-4.1B, diluted EPS $5.60-6.05. TSR 36.8% in 2025.",
+  entry: "$102-106 (current, at weekly 21 EMA) or $95-98 (pullback to weekly 50 SMA)", stop: "$90 (below 50 SMA + 0.618 Fib $93.34)", target: "$120 / $131+ (ATH)", rr: "1:1.4 / 1:2.5 (from current) or 1:3.0 / 1:4.6 (from 50 SMA pullback)",
+  catalyst: "US infrastructure super-cycle (IIJA/IRA/CHIPS spending) · Reindustrialization demand · Eco Material integration · Q1 2026 earnings · Continued buybacks ($0.3B new tranche) · Simply Wall St fair value $140", status: "Actionable — Mature Growth pullback to weekly 21 EMA in intact uptrend", sc: "#22C55E",
+  macro: "Strong. Mature Growth selective + XLI/XLB sector strength (industrials/materials green) + infrastructure secular theme + value rotation tailwind + non-tech, non-rate-sensitive real-economy earnings.", research: true,
+},{
+  ticker: "RKLB", company: "Rocket Lab (SHORT)", stage: "Young Growth", sector: "Electronic Technology / Aerospace",
+  price: 67.37, composite: 3.5,
+  setup: "SHORT — HIGHEST CONVICTION. Parabolic blowoff from $5 to $90, now reversing. -7.56% today. Bearish MA crossover (21 EMA crossed below 50 SMA). Below 0.786 Fib ($78.88), sitting at 0.618 Fib ($62.79). MACD crossed bearish from extremes. RSI plunging from 70+ to low 40s. Heavy volume on selloff = institutional distribution. 200 SMA way below at ~$35-40.",
+  thesis: "SHORT THESIS: Young Growth in the worst macro for the stage (VIX >25, rates rising, credit stress). Parabolic blowoff top classic — 18x run from $5 to $90 now unwinding. Pre-profit space company with speculative valuation getting repriced as growth-at-any-price trade unwinds. Same pattern as IGV (-4.29%) but with more extreme prior move = more room to fall. No fundamental floor from earnings/dividends.",
+  entry: "Short on rally to $72-75 (21 EMA) or $78-79 (broken 0.786 Fib as resistance)", stop: "$83 (above 0.786 Fib)", target: "$51.50 (0.5 Fib) / $40 (0.382 Fib)", rr: "1:2.5 / 1:4.5",
+  catalyst: "Macro hostile to Young Growth · Rate shock repricing duration · IGV bear market contagion · Pentagon 10K troops to ME (defense rotation helps primes, not RKLB) · Q1 earnings risk", status: "ACTIONABLE SHORT — cleanest bearish setup on dashboard", sc: "#EF4444",
+  macro: "Strongest short alignment. Young Growth AVOID + parabolic reversal + bearish MA crossover + credit stress + VIX >25 + no earnings floor.",
+},{
+  ticker: "F", company: "Ford Motor (SHORT)", stage: "Decline", sector: "Consumer Durables / Automotive",
+  price: 11.55, composite: 4.0,
+  setup: "SHORT — Consumer cyclical breaking down. Price at $11.55 has broken below 21 EMA and 50 SMA (~$13-13.50), sitting right on 200 SMA (~$11.50). RSI collapsed to ~35. MACD bearish crossover confirmed. The rally from $8.50 to $14.50 is being fully retraced. If 200 SMA breaks, targets $10-10.50.",
+  thesis: "SHORT THESIS: Consumer cyclical in a stagflationary macro. Oil at $89 directly hurts auto demand. 15% global tariffs hit manufacturing costs. XLY sector broken below 200 SMA. Ford's EV division (Model e) burning cash. ~5% dividend yield is the Decline-stage 'compensation for structural erosion' per the guide. The consumer is under pressure from elevated energy + rates.",
+  entry: "Short on bounce to $12.00-12.50 (21 EMA as resistance) or $13.00 (50 SMA)", stop: "$13.80 (above 50 SMA + recent highs)", target: "$10.00 / $9.00", rr: "1:2.0 / 1:3.0",
+  catalyst: "Oil $89 hurts demand · 15% tariffs · XLY broken · Consumer confidence weakening · EV cash burn · Iran escalation (Pentagon 10K troops) keeping oil elevated", status: "Actionable SHORT — short the bounce to broken MA levels", sc: "#EF4444",
+  macro: "Strong short alignment. Decline stage + XLY broken + consumer under oil/rate pressure + tariff headwind.",
+},{
+  ticker: "H", company: "Hyatt Hotels (SHORT)", stage: "Maturity", sector: "Consumer Services / Hotels",
+  price: 145.99, composite: 5.5,
+  setup: "SHORT — Travel/hospitality breakdown. Price at $145.99 has broken below 50 SMA (~$155) and 200 SMA (~$148-150). RSI collapsed to low 30s. MACD negative, histogram deepening. Price at bottom of 2-year range ($140-180). Best as 'short the bounce' — wait for failed rally to broken 200 SMA.",
+  thesis: "SHORT THESIS: Travel exposed to consumer slowdown + geopolitical disruption. Oil at $89 raises travel costs. Iran/Hormuz disrupts international travel routes. Pentagon sending 10K additional troops to ME = escalation, not de-escalation. Consumer confidence declining. Rising rates hurt discretionary spending. But near range bottom — risk of oversold bounce before continuation lower.",
+  entry: "Short on bounce to $150-155 (broken 200 SMA / 50 SMA as resistance)", stop: "$160 (above 50 SMA)", target: "$130 / $120", rr: "1:2.0 / 1:3.5",
+  catalyst: "Oil/travel cost pressure · Pentagon ME troop deployment · Consumer weakness · Iran escalation · Rate pressure on discretionary", status: "Watching — short the bounce, not short here at range bottom", sc: "#F59E0B",
+  macro: "Moderate short alignment. XLY broken + travel under pressure + but near range bottom (oscillator oversold risk).",
+}];
+
+const REPORTS = [{
+  ticker: "GLUE", company: "Monte Rosa Therapeutics", stage: "High Growth", date: "March 9, 2026",
+  sects: [
+    { t: "Business", x: "Clinical-stage biotech developing molecular glue degraders via AI-driven QuEEN platform. Three programs: MRT-8102 (cardiovascular, wholly owned), MRT-2359 (prostate cancer, wholly owned), MRT-6160 (autoimmune, Novartis-partnered)." },
+    { t: "Market", x: "TPD market ~$544M (2024) → $1.7B by 2030 (21% CAGR). No FDA-approved NLRP3 inhibitors. CVD inflammation TAM in tens of billions." },
+    { t: "Competition", x: "Molecular glue differentiation vs PROTAC players (Arvinas, Kymera, C4). QuEEN data moat: 34M protein measurements, 37B virtual MGDs. Two Novartis deals ($270M upfront, $7.8B potential). NLRP3 rivals: Ventyx, NodThera, Roche, Novo." },
+    { t: "Financials", x: "$500M+ cash. Recently profitable via Novartis milestones (lumpy). $1.3B cap. Runway into 2028+. 95% gross margins." },
+    { t: "Catalysts", x: "Earnings Mar 18. GFORCE-1 MRT-8102 data H2 2026. Phase 2 ASCVD 2026. MRT-2359 Phase 2 Q3 2026." },
+    { t: "Risks", x: "Clinical failure. Dilution. NLRP3 competition. Revenue quality. Insider selling (small, 10b5-1). Binary events." },
+    { t: "Scenarios", x: "Bull $37 (Piper PT): MRT-8102 success. Base $24: Steady progress. Bear $10: Clinical setback." },
+  ],
+},{
+  ticker: "DLO", company: "DLocal Limited", stage: "Mature Growth", date: "March 10, 2026",
+  sects: [
+    { t: "Business", x: "Technology-first payments platform enabling global enterprise merchants to accept and send payments across 40+ emerging markets in LatAm, Africa, and Asia. Founded 2016 in Montevideo, Uruguay. CEO Pedro Arnt (ex-MercadoLibre CFO). Serves commerce, streaming, ride-hailing, financial services, remittances, SaaS, travel, gaming, and crypto verticals. ~1,090 employees." },
+    { t: "Platform & Moat", x: "Single API integration gives merchants access to 900+ local payment methods across 40 countries. Pay-in (merchant collections), pay-out (merchant disbursements), and dLocal for Platforms (end-to-end for marketplaces). Alternative payment methods (APMs) on-file across 27 local payment methods in 16 countries. SmartPix in Brazil, BNPL Fuse, stablecoin remittances (partnership with Stable Sea, Feb 2026). Network effects: more merchants → more payment method coverage → more merchants. Switching costs are high — integrating local payments in EM is complex and merchants don't switch once live." },
+    { t: "Market & TAM", x: "85% of the world's population lives in emerging markets. Two-thirds of global growth through 2035 will come from EM. Digital payments penetration in LatAm, Africa, Asia still early innings vs developed markets. The S-curve thesis: merchants start with one country, then expand across dLocal's footprint. Net Revenue Retention (NRR) at 149% in Q3 2025 proves the land-and-expand model works." },
+    { t: "Financials (Q3 2025 — most recent)", x: "TPV: $10.4B (record, +59% YoY, 4th straight quarter above 50% growth). Revenue: $282M (+52% YoY, +63% constant currency). Gross Profit: $103M (first time above $100M, +32% YoY). Gross Margin: 37% (down from 41% prior year — take rate compression as mix shifts to newer markets). Adj EBITDA: $72M (70% of gross profit, +37% YoY). Net Income: $51.8M (+93% YoY). EPS: $0.17 (met estimates). TTM Revenue: $960M. Cash: $604.5M ($333M corporate). Adj Free Cash Flow: $37.6M (+28% YoY). Gross take rate: 2.71% (declining as expected with scale/mix)." },
+    { t: "Valuation", x: "Market Cap: ~$3.5B. P/E: 22.1x (vs peer avg 52.5x — massive discount). EV/Revenue: ~3.5x on TTM (cheap for 50%+ grower). Simply Wall St DCF: fair value ~$20 (vs $11.79 current — 70% upside to intrinsic). Rule of 40: Revenue growth 52% + EBITDA margin ~25% = 77 (exceptional). Composite Score: 9.7/10 in our lifecycle model." },
+    { t: "Analyst Consensus", x: "Consensus: Buy (6 Buy, 3 Hold, 0 Sell). Median PT: $16-18. High: $20. Low: $15. Average PT: ~$16.40 (39% upside from $11.79). Q4 2025 EPS estimate: $0.18." },
+    { t: "Catalysts", x: "Q4 2025 earnings March 18 after close (same day as GLUE and FOMC Day 1). Weak DXY below 100 = structural EM tailwind (EM revenue worth more in USD when dollar weakens). Stablecoin remittances partnership (Stable Sea, Feb 2026) — opens crypto/remittance corridor. Continued merchant expansion across Africa/Asia (fastest growing geos). Potential for take rate stabilization as Mexico/Argentina headwinds normalize." },
+    { t: "Risks", x: "Take rate compression: gross profit/TPV declining from 1.20% to 0.99% as mix shifts. Currency/FX volatility in Argentina, Nigeria, Egypt. Regulatory risk in EM countries (capital controls, payment regulations). Competition from local players and global PSPs (Adyen, PayPal, Stripe) entering EM. CEO transition risk — Pedro Arnt joined mid-2024 from MercadoLibre, still proving himself. 8 warning signs flagged by GuruFocus (worth investigating). Q4 2024 EPS missed estimates ($0.10 vs $0.14), stock dropped 17% — earnings volatility is real." },
+    { t: "Technical Setup", x: "Price at $11.79 below all three MAs (bearish). Sitting on 0.382 Fib ($11.09) from $7.57-$16.80 swing. 200 SMA (~$12.50) + 0.5 Fib ($12.19) = confluence resistance to reclaim. TRIGGER: price reclaims $12.50 and holds for 2-3 days. Entry $12.50-13.00 / Stop $10.90 / T1 $14.82 (0.786) / T2 $16.80 (1.0). R:R 1:1.4 to T1, 1:2.8 to T2. Do NOT buy below MAs — wait for confirmation." },
+    { t: "Scenarios", x: "Bull $20 (DCF fair value): earnings accelerate, take rates stabilize, DXY stays weak, NRR expands. Base $16-17 (analyst median): steady execution, Q4 beats, gradual MA reclaim. Bear $8-9 (below cycle lows): take rate compression worsens, Argentina/FX blow up, earnings miss badly." },
+  ],
+},{
+  ticker: "CALM", company: "Cal-Maine Foods", stage: "Mature Growth", date: "March 10, 2026",
+  sects: [
+    { t: "Business", x: "Largest egg company in the United States and leading player in egg-based food industry. Produces, grades, packages, markets, and distributes shell eggs and egg products. Brands include Egg-Land's Best, Land O' Lakes, Farmhouse Eggs, Sunups, Sunny Meadow. Headquartered in Ridgeland, Mississippi. CEO Sherman Miller." },
+    { t: "Strategic Pivot", x: "Transforming from a pure commodity egg producer into a diversified egg-based food platform. Three pillars: (1) Specialty eggs (cage-free, organic, free-range, pasture-raised, nutritionally enhanced) now 44% of shell egg sales and growing toward 50%+, commanding premium pricing. (2) Prepared foods via Echo Lake Foods acquisition ($275M, June 2025) — ready-to-eat eggs, egg wraps, protein pancakes. Prepared foods revenue surged 586% to $71.7M in Q2 FY2026. Capacity expanding 30%+ over next 18-24 months. (3) Clean Egg asset purchase ($23.7M) adding cage-free capacity." },
+    { t: "Market & Moat", x: "Dominant market share in US egg production — scale advantages in production, distribution, and purchasing power. Egg demand is inelastic and growing (protein trend, GLP-1 dietary shifts favoring nutrient-dense foods over processed snacks). Avian flu (HPAI) creates recurring supply shocks that benefit large-scale producers who can manage biosecurity better than smaller competitors. Industry consolidation favors CALM as the largest player with the balance sheet to acquire." },
+    { t: "Financials", x: "FY2025 (ended May 2025): Revenue $4.26B (+83% YoY), Net Income $1.22B (+339%), EPS $24.95. Q2 FY2026 (Nov 2025): Revenue $769.5M (-19.4% YoY — egg price normalization), EPS $2.13 (beat $2.06 estimate despite revenue miss). Gross profit down 41.8% as conventional egg prices dropped 38.8%. BUT: specialty egg mix shift protected margins, and prepared foods surged. Q3 FY2026 estimates: ~$900M revenue, ~$2.46 EPS. Balance sheet: ZERO DEBT. Cash and investments $1.1B. Operating cash flow $94.8M in Q2 (down 22.8% but still strong). Share repurchases: 846K shares for $74.8M, $375M remaining under $500M authorization. Dividend: ~$0.72/share quarterly." },
+    { t: "Valuation", x: "Forward P/E: 4.4x (extremely cheap). EV/Sales: ~1x. FCF yield: 15.95%. ROIC: ~50%. Market cap: ~$4.3B. Simply Wall St fair value: $98 (11% upside from $88). Analyst median PT: $92-97.50 (4 analysts, all Buy). The 10.0 Composite Score in our lifecycle model reflects the extreme value — profitable, growing, zero debt, massive cash generation, trading at a fraction of peers." },
+    { t: "Catalysts", x: "Q3 FY2026 earnings (expected early April 2026). Egg price dynamics — if avian flu persists or recurs, egg prices spike and CALM benefits disproportionately. Prepared foods ramp — capacity expanding 30%+ with improvement from Q4 FY2026 onward. Specialty egg mix crossing 50% of shell sales = structural margin improvement. GLP-1 tailwind — users cutting processed snacks and trading up to high-quality protein (eggs). $375M remaining share buyback authorization." },
+    { t: "Risks", x: "Egg price normalization: FY2025 was an extraordinary year driven by avian flu supply shock. If egg prices continue normalizing, revenue and earnings decline further (analysts forecast -16% annual revenue decline over next 2 years). Avian flu uncertainty: both a risk (if CALM flocks are infected) and an opportunity (if competitor flocks are hit). DOJ price-fixing investigation — ongoing legal overhang. Kraft egg products lawsuit final judgment. Commodity business cyclicality — even with specialty/prepared foods diversification, shell eggs remain 84% of revenue. Limited analyst coverage (only 4 analysts)." },
+    { t: "Technical Setup", x: "Price at $88.38 sitting on the 0.618 Fib ($88.69) from the $42.95-$117.32 swing — a golden ratio support level. 21 EMA (white) just reclaimed. MACD crossing bullish from negative. 50 SMA (~$89-90) and 200 SMA (~$91-92) converging just above as resistance. TRIGGER: close above $92 (200 SMA reclaim). Entry $88-92 / Stop $79 (below 0.5 Fib) / T1 $101.28 (0.786 Fib) / T2 $117 (ATH). R:R 1:1.2 to T1, 1:2.7 to T2. The 10.0 composite + 0.618 Fib + MACD cross is one of the strongest fundamental-meets-technical setups on the screener." },
+    { t: "Scenarios", x: "Bull $117+ (ATH retest): avian flu recurs, egg prices spike, prepared foods ramp delivers, specialty mix crosses 50%. Base $97-100 (analyst PT zone): steady execution, egg prices stabilize, prepared foods grows double digits. Bear $70-75 (0.382 Fib): egg prices collapse to pre-2024 levels, prepared foods ramp disappoints, legal costs escalate." },
+  ],
+},{
+  ticker: "TSM", company: "Taiwan Semiconductor (TSMC)", stage: "Mature Growth", date: "March 10, 2026",
+  sects: [
+    { t: "Business", x: "World's largest semiconductor foundry, fabricating chips for Apple, NVIDIA, AMD, Qualcomm, Broadcom, and virtually every major tech company. Founded 1987 in Hsinchu, Taiwan. 83,000+ employees. Market cap ~$1.9 trillion. The sole gatekeeper of high-performance computing — no competitor can match TSMC's scale and process technology at the leading edge." },
+    { t: "Technology & Moat", x: "Advanced technologies (7nm and below) = 77% of Q4 2025 wafer revenue. 3nm at 28%, 5nm at 35%, 7nm at 14%. N2 (2nm) entered high-volume manufacturing in Q4 2025 with good yields in Hsinchu and Kaohsiung. N3 gross margin expected to cross corporate average in FY2026. AI accelerator revenue was high-teens percent of 2025 revenue, growing at 55-59% CAGR through 2029. The moat is multi-layered: $52-56B annual capex creates massive barriers to entry, cumulative process know-how from decades of manufacturing, and customer lock-in through co-optimization of chip designs with TSMC's process nodes." },
+    { t: "AI Infrastructure Thesis", x: "Management describes AI demand as 'voracious and relentless' — not a bubble but a structural 'Giga Cycle' re-architecting global computing. AI revenue CAGR of 55-59% from 2024-2029. High Performance Computing (HPC) was 55% of Q4 revenue. Every major AI chip (NVIDIA H100/B100, AMD MI300, Google TPU, Amazon Trainium, Microsoft Maia) is fabricated by TSMC. The transition to 2nm is about power efficiency — critical as data centers strain power grids. This directly connects to the XLU thesis (AI data center power demand)." },
+    { t: "Financials (Q4 2025 / FY2025)", x: "Q4 2025: Revenue NT$1.046T ($33.7B), +20.5% YoY, +5.7% QoQ. Gross margin 62.3% (record high, +2.8pp QoQ). Operating margin 54.0%. Net income NT$505.7B ($16.3B), +35.0% YoY. EPS NT$19.50 ($3.14 per ADR). FY2025: Revenue NT$3.809T ($122.9B), +35.9% YoY. Gross margin 59.9% (+3.8pp YoY). Net income NT$1.718T ($55.4B) — record. EPS NT$66.25. 2026 guidance: Q1 revenue $34.6-35.8B (sequential growth in a traditionally weak quarter), gross margin 63-65%, operating margin 54-56%. Full year ~30% revenue growth expected. Capex $52-56B. Dividend raised 28% to TWD 23/share for 2026. Debt-to-equity just 0.17." },
+    { t: "Valuation", x: "Market cap ~$1.9T. Trailing P/E ~30x. Forward P/E ~27x on 2026E EPS of ~$12.61. Lower than NVIDIA (~35x) and AMD (~40x). EV/Revenue ~15x on TTM, ~12x on 2026E. For a company growing revenue 30%+ with 62% gross margins and monopoly-like market position, 27x forward P/E is reasonable. Composite Score 9.2 in our lifecycle model." },
+    { t: "Analyst Consensus", x: "Strong Buy consensus: 7 Buy, 1 Hold, 0 Sell (from 8 analysts). Average PT: $423.50 (+21% upside). High: $470 (D.A. Davidson). Low: $330 (Bernstein). Most recent: $450 from both D.A. Davidson and Barclays. Citi placed an 'upside 30-day catalyst watch.' 17 of 18 analysts across all coverage rate TSM Buy or Strong Buy." },
+    { t: "Geopolitical Risk", x: "The elephant in the room. Taiwan Strait tensions between the US and China are the key overhang. A military escalation could disrupt the global chip supply chain catastrophically — TSMC controls ~70% of the global foundry market. TSMC's response: $65B+ investment in Arizona fabrication plants, $250B US chipmaking deal with the Trump administration. Arizona fabs de-risk the US supply chain but are years from matching Taiwan's scale and yield. US tariffs on Chinese chips from June 2027 may actually benefit TSMC by pricing out SMIC. The risk is real but has been persistent for years without materializing — the market has mostly learned to price it as a background discount rather than an imminent threat." },
+    { t: "Technical Setup", x: "Textbook Mature Growth entry. Price at $349.92 pulled back from $390.57 ATH. Bounced at 50 SMA (orange, ~$338) + 0.786 Fib ($335.79) confluence support. 21 EMA (white, ~$345-350) right at price. 200 SMA (purple, ~$285-290) well below with healthy separation. MACD turning from negative. RSI ~55. Entry $345-350 / Stop $330 (below 0.786+50SMA) / T1 $390 (ATH) / T2 $420+ (analyst consensus). R:R 1:2.1 to T1, 1:3.7 to T2. CPI risk: hot CPI could retest $335 (better entry), cool CPI likely runs toward $370+." },
+    { t: "Scenarios", x: "Bull $450-470 (high analyst PTs): AI spending accelerates, N2 ramp exceeds expectations, Arizona fabs de-risk geopolitical overhang, gross margins sustain above 60%. Base $390-420 (consensus PT): steady 30% revenue growth, margin expansion, AI cycle continues as guided. Bear $280-300 (200 SMA area): Taiwan Strait escalation, AI spending pullback, US-China tariff war disrupts supply chain, gross margin compression from US fab costs." },
+  ],
+},{
+  ticker: "ADEA", company: "Adeia Inc.", stage: "Mature Growth", date: "March 10, 2026",
+  sects: [
+    { t: "Business", x: "Leading R&D and intellectual property licensing company accelerating adoption of innovative technologies in media and semiconductor industries. 12,000+ patent assets (grew 13% in 2025, third consecutive year of double-digit growth). Licenses foundational IP to Disney, Microsoft, Amazon, AMD, Roku, Vodafone, MLB, and many others. Headquartered in San Jose, CA. CEO Paul Davis." },
+    { t: "Revenue Model & Moat", x: "IP licensing generates recurring, high-margin revenue. Two segments: Media (content discovery, video coding, OTT streaming tech) and Semiconductors (hybrid bonding, chip packaging, processing). Non-Pay-TV recurring revenue grew 30% YoY in Q4 2025 as the company diversifies away from traditional Pay-TV. Semiconductor revenue grew ~40% YoY to $26M. The moat: 12,000+ patents built over decades through R&D and 6 tuck-in acquisitions in 2025 alone. Patents are legally enforceable and create a toll-booth business model — companies must license or face litigation. Disney and Microsoft both signed long-term deals after patent disputes were resolved." },
+    { t: "Financials (FY2025)", x: "Record year. Revenue: $443.4M (exceeded raised guidance). Q4: $182.6M revenue (record quarter), 9 deals including 4 new customers. GAAP net income: $111.1M (full year), $73.7M (Q4). Adjusted EBITDA: $277.6M (full year, 63% margin), $133.9M (Q4). Cash from operations: $60M in Q4. Cash: $136.7M. Debt reduced by $60.4M in 2025. Share repurchases: $20M ($160M remaining authorization). Dividend: $0.05/share quarterly. Capex: minimal ($2M guided for 2026) — this is an IP business with almost no physical capital requirements." },
+    { t: "2026 Guidance & Outlook", x: "Revenue: $395-435M (appears lower than 2025's $443M, but 2025 included a one-time Disney litigation payment; excluding that, underlying growth is ~15% YoY). Adjusted EBITDA: $213-245M. Operating expenses: $184-192M (non-GAAP), with litigation costs expected to increase. Revenue balanced between H1 and H2. Non-GAAP tax rate: 20-21%. Key growth drivers: OTT expansion (Disney, Microsoft now licensed), semiconductor IP (AMD deal just signed March 9, 2026), and RapidCool thermal solution being evaluated by AI semiconductor leaders." },
+    { t: "Catalysts", x: "AMD multi-year licensing deal announced March 9 (resolves all litigation). Rosenblatt raised PT to $30 post-Q4 results. BWS Financial also $30 PT. RapidCool thermal solution for AI chips — named Best of Show for Most Innovative Technology. Semiconductor IP is early innings ($26M of $443M, massive room to grow). Specialty eggs of Adeia = semiconductor licensing is the high-growth segment within a stable business. $160M buyback authorization. DIRECTV litigation ongoing (potential upside resolution)." },
+    { t: "Risks", x: "Pay-TV secular decline — traditional cable operators are shrinking, reducing that revenue stream (mitigated by OTT/semiconductor diversification). Litigation dependency — IP licensing businesses require ongoing legal enforcement which is expensive and uncertain. DIRECTV challenging license renewal. Revenue lumpiness — large deals create quarter-to-quarter volatility. Limited float/coverage — smaller company, less analyst attention." },
+    { t: "Technical Setup", x: "In price discovery above $20.35 ATH. Perfect bullish MA stacking (price > 21 EMA > 50 SMA > 200 SMA, all rising). 1.618 Fib extension target at $25.75. RSI ~70-75 elevated but normal for breakouts. Wait for pullback to $20-21 (broken ATH + 21 EMA) for optimal entry. Stop $18.48 (0.786 Fib). T1 $25.75 (1.618 ext) / T2 $28-30. R:R from pullback: 1:2.6 / 1:4.8." },
+    { t: "Scenarios", x: "Bull $30+ (analyst PTs): semiconductor IP licensing accelerates, RapidCool adopted by major AI chipmakers, OTT deals multiply. Base $25-27 (1.618 Fib extension): steady execution, 2026 guidance met, semiconductor segment doubles. Bear $15-16 (200 SMA area): Pay-TV decline accelerates, litigation losses, semiconductor IP fails to gain traction." },
+  ],
+},{
+  ticker: "LNG", company: "Cheniere Energy", stage: "Mature Growth", date: "March 10, 2026",
+  sects: [
+    { t: "Business", x: "Largest US LNG producer and exporter. Operates Sabine Pass (Louisiana) and Corpus Christi (Texas) liquefaction facilities on the US Gulf Coast with combined production capacity of ~52 million tonnes per annum (mtpa), with an additional 9+ mtpa under construction. Full-service LNG provider: gas procurement, transportation, liquefaction, vessel chartering, and delivery. ~210M shares outstanding. CEO Jack Fusco. Headquartered in Houston, TX." },
+    { t: "Infrastructure Moat", x: "LNG export terminals take 5-10 years and billions of dollars to build — massive barriers to entry. Cheniere's two-facility platform is the largest in the US. Over 95% of capacity contracted under long-term take-or-pay agreements for the next 10 years — customers pay fixed fees regardless of whether they take delivery. This creates highly predictable, annuity-like cash flows. Phase 1 expansions at both sites provide 'line of sight' to grow the platform ~50% from today, targeting total capacity of ~75 mtpa. DOE just approved Corpus Christi Trains 8 & 9 expansion. New 25-year supply agreement with CPC Corporation Taiwan for 1.2 mtpa through 2050." },
+    { t: "Macro Thesis", x: "Multiple tailwinds converging: (1) Iran/Hormuz crisis — Qatar LNG output halted, global buyers scrambling for alternative supply, US Gulf Coast exports are geographically insulated from Middle East disruption. (2) European energy security — post-Russia, Europe is structurally increasing LNG imports to replace pipeline gas. (3) Asian demand — Japan, Korea, Taiwan, China all growing LNG imports for power generation and industrial use. (4) Weak DXY — LNG contracts priced in dollars, weak dollar makes US LNG more competitive globally. (5) Bridge fuel — natural gas/LNG is the transition fuel between coal and renewables, creating multi-decade demand runway." },
+    { t: "Financials (FY2025)", x: "Record year. Revenue: $20.0B (+27% YoY). Net income: $5.3B (+63% YoY). Adjusted EBITDA: $6.94B (high end of guidance). Distributable Cash Flow: $5.3B (~$100M above top of guidance). LNG production: 670 cargoes / 46M+ tonnes (record). Run-rate DCF: $20+/share. Completed '2020 Vision' capital allocation plan ahead of schedule — deployed $20B+. Capital returns: $2.7B in share repurchases (12.1M shares) + dividends in 2025 = ~60% of DCF returned to shareholders. Debt reduced by $652M of long-term debt in 2025." },
+    { t: "2026 Guidance", x: "Adjusted EBITDA: $6.75-7.25B. Distributable Cash Flow: $4.35-4.85B. Lower spot margins expected (gas prices moderating) offset by higher production from new train completions. Over 95% contracted means guidance reliability is high. New $4B share repurchase authorization announced. Expansion capex continuing for Corpus Christi Stage 3 and Midscale Trains 8 & 9." },
+    { t: "Valuation", x: "Market cap: ~$52B. EV/EBITDA: ~8-9x on 2026E (cheap for infrastructure-quality cash flows). P/E: ~10x on TTM. DCF yield: ~10% ($5.3B DCF / $52B market cap). Dividend + buyback yield combined: ~12-13%. For a company with 95%+ contracted revenue, multi-decade asset life, and 50% growth visibility, this is deeply undervalued vs infrastructure peers. Composite Score 9.2 in our lifecycle model." },
+    { t: "Risks", x: "Hormuz de-escalation — if the crisis resolves, spot LNG prices drop and the $280 spike premium unwinds (though long-term contracts provide floor). Global LNG oversupply — new projects from Qatar, Australia, Mozambique, and other US exporters could pressure pricing post-2027. Natural gas price volatility — feed gas costs affect margins on non-contracted volumes. Regulatory risk — DOE export authorizations can be politically influenced. Environmental/climate opposition — LNG is fossil fuel, faces long-term demand risk from renewables. Debt load — significant project finance debt, though manageable given cash flows." },
+    { t: "Technical Setup", x: "Golden cross (50 SMA crossed above 200 SMA) — one of the most bullish long-term signals. Price above all MAs. 21 EMA (white, ~$248-250) at price. 50 SMA (orange, ~$235-240) rising below. 200 SMA (purple, ~$225-230) below. Pullback from $280 Hormuz spike to $248 is healthy retracement. Entry $245-250 (current) or $235-240 (pullback to 50 SMA). Stop $220 (below 200 SMA). T1 $280 (prior high) / T2 $300+. Energy sector (XLE) diverging from oil today — monitor." },
+    { t: "Scenarios", x: "Bull $320+ : Hormuz crisis persists/escalates, global LNG demand surges, expansion projects accelerate, spot margins stay elevated. Base $280-300 (analyst consensus area): steady execution, contracts deliver, expansion on schedule, moderate spot margins. Bear $200-210 (below 200 SMA): Hormuz de-escalates, global LNG oversupply materializes, gas prices collapse, regulatory headwinds." },
+  ],
+},{
+  ticker: "GAP", company: "Gap Inc.", stage: "Maturity", date: "March 24, 2026",
+  sects: [
+    { t: "Business", x: "Largest US specialty apparel company. Portfolio: Old Navy (54% of sales, #1 US specialty apparel brand), Gap (25%, +6% comps), Banana Republic (~13%, +3% comps), Athleta (~8%, underperforming — mid-to-high single digit decline expected H1). ~3,500 stores globally plus e-commerce (42% of Q4 sales). CEO Richard Dickson (ex-Mattel) driving turnaround since Aug 2023." },
+    { t: "Turnaround Execution", x: "8 consecutive quarters of positive comparable sales. Second consecutive year of topline growth. One of the highest gross margins (40.8%) in 25 years. Gap brand moved from #10 to #6 in denim within 2 years. New growth vectors: beauty (fragrance relaunch at Gap in 2026), accessories (expanded line for holiday 2026), Fashiontainment platform (entertainment as marketing), Encore loyalty program. Athleta remains the weak spot — declining comps, brand reset underway with new leadership." },
+    { t: "Financials (FY2025 — ended Jan 31, 2026)", x: "Revenue: $15.4B (+2% YoY, at high end of outlook). Comparable sales: +3%. Net income: $816M. Diluted EPS: $2.13. Gross margin: 40.8% (down 50bps, tariffs ~200bps headwind offset by lower discounting). Operating income: $1.1B. Operating margin: 7.3%. Operating cash flow: $1.3B. Free cash flow: $823M. Cash/short-term investments: $3.0B (+$414M YoY). Inventory: $2.2B (+7% due to tariff-driven cost increases). Capex: $470M. Q4 specifically: $4.2B revenue (+2%), gross margin 38.1% (-80bps), online +5%." },
+    { t: "FY2026 Guidance", x: "Net sales: +2-3% YoY. Gross margin: flat to slightly up (tariff impact net neutral for full year — 200bps Q1 headwind offset by sourcing mitigation in H2). Adj operating margin: 7.3-7.5% (expansion). Adj diluted EPS: $2.20-$2.35. Reported EPS: $2.71-$2.86 (includes $313M legal settlement gain minus $50M charitable donation). Capex: ~$650M (up from $470M — investing in stores, tech, new formats). Effective tax rate: ~27%." },
+    { t: "Valuation", x: "Market cap: ~$8.9B. P/E: ~10.3x on FY2026 adj EPS midpoint ($2.28). P/S: ~0.58x. FCF yield: ~9.2% ($823M/$8.9B). EV/EBITDA: ~6.5x. Dividend yield: ~2.9% ($0.70/year). $1B new buyback authorization. Analyst consensus: Buy (14 analysts), median PT $31.46 (+31% upside). Cheap relative to its own history (10-year avg P/E 18.5x) and peers. The turnaround is being valued at trough multiples despite improving execution." },
+    { t: "Risks", x: "Tariffs: 15% global tariff is a direct headwind — ~200bps gross margin impact in Q1 2026, with mitigation expected by H2. Athleta continues to underperform. Consumer discretionary sector (XLY) is broken below 200 SMA — macro headwind from oil ($89) and rising rates hurting consumer wallets. Stock dropped 10%+ post-Q4 earnings despite beat — market punishing guidance quality. Fashion risk is ever-present in retail. Inventory +7% on tariff costs could become a problem if demand slows." },
+    { t: "Technical Setup", x: "Maturity-stage oscillator play. Price ~$24 below 50 SMA, testing 200 SMA area. RSI approaching 30-35 oversold zone. Per the guide: buy when RSI < 35 with Stochastic %K crossing above %D below 20, at defined support. The 200 SMA and prior support zone around $22-23 is the target entry area. Stop below $20. Target $28-31. XLY sector headwind means patience is required — wait for the oscillator signal, don't anticipate." },
+    { t: "Scenarios", x: "Bull $32+ (analyst high): turnaround accelerates, tariff mitigation works, Athleta stabilizes, beauty/accessories contribute, multiple re-rates toward 14-15x P/E. Base $28-31 (consensus): steady execution, EPS delivered at guide midpoint, modest multiple expansion. Bear $18-20: consumer recession, tariffs worsen, Athleta drags, XLY sector continues lower, multiple compresses to 8x." },
+  ],
+},{
+  ticker: "T", company: "AT&T Inc.", stage: "Maturity", date: "March 24, 2026",
+  sects: [
+    { t: "Business", x: "Largest US telecom company by wireless subscribers. Mobility segment (~$68B revenue): 5G wireless serving ~200M+ subscribers. Consumer Wireline: AT&T Fiber (fastest-growing broadband) + Internet Air (fixed wireless). Q4 2025: 421K postpaid phone net adds (0.98% churn — industry best), 283K fiber net adds, 221K Internet Air net adds. Convergence strategy: bundle wireless + fiber for lower churn and higher ARPU." },
+    { t: "Financial Performance (FY2025)", x: "Revenue: ~$124B. Adjusted EPS: $2.12 (+9% YoY). Free cash flow: $16.6B. Adjusted EBITDA: ~$44B. Q4 specifically: $33.5B revenue, adj EPS $0.52 (+21% YoY), adj EBITDA $11.2B, FCF $4.2B. Cash from operations: $11.3B in Q4. Mobility service revenues +2.4% YoY. Consumer Wireline fiber revenues +13.6%. Best consumer broadband subscriber year in a decade." },
+    { t: "2026-2028 Outlook", x: "FY2026: Adj EPS $2.25-$2.35 (+6-11% YoY). FCF >$18B (a year ahead of prior guidance). Consolidated adj EBITDA +3-4%. Capital returns: $45B+ to shareholders 2026-2028 through dividends ($1.11/share annualized, maintained) and buybacks ($8B in 2026 alone from two $10B authorizations). The $18B+ FCF in 2026 supports both dividend ($8B) and buybacks ($8B) with room for debt reduction. Lumen and EchoStar acquisitions expanding fiber footprint — accretive to convergence strategy." },
+    { t: "Valuation", x: "Market cap: ~$205B. P/E: ~12.5x on FY2026 midpoint ($2.30). EV/EBITDA: ~6.5x. FCF yield: ~8.8% ($18B/$205B). Dividend yield: ~3.9% ($1.11/$28.50). Total shareholder yield (div + buyback): ~7.8%. For a company with improving subscriber metrics, accelerating FCF, and a massive capital return program, 12.5x P/E is cheap relative to the quality of cash flows. The convergence strategy is driving structural churn reduction — a genuine competitive moat." },
+    { t: "Risks", x: "Telecom is capital-intensive — $6.8B capex in Q4 alone. Lumen and EchoStar acquisitions add integration risk and debt. Wireless market is mature — net adds are slowing industry-wide. Fiber buildout requires sustained heavy investment. Competition from T-Mobile and cable companies. Regulatory risk from FCC spectrum decisions. Inflation in labor costs for network buildout. If rates stay elevated, the 3.9% dividend yield becomes relatively less attractive vs. risk-free Treasuries at 4.4%." },
+    { t: "Technical Setup", x: "Maturity-stage but trading with Mature Growth characteristics. Near 52-week highs. Bullish MA stacking (price > 21 EMA > 50 SMA > 200 SMA). RSI ~55-60 healthy. The guide says when a Maturity stock breaks out of its range on heavy volume, switch to trend-following tools — T may be in this transition. Use 50 SMA as trailing stop rather than oscillator range trading. Pullback to 21 EMA or 50 SMA = entry. The $45B capital return program is a structural bid under the stock." },
+    { t: "Scenarios", x: "Bull $35+ : FCF exceeds $18B, buybacks accelerate, convergence drives subscriber acceleration, rate cuts make 3.9% yield more attractive. Base $30-33: execution in line with guide, steady buybacks, fiber expansion on track. Bear $23-24 (back to 200 SMA): rates stay at 5%+ making dividend uncompetitive, integration issues with Lumen/EchoStar, subscriber growth stalls." },
+  ],
+},{
+  ticker: "ERIC", company: "Ericsson (ADR)", stage: "Mature Growth", date: "March 24, 2026",
+  sects: [
+    { t: "Business", x: "Global leader in 5G telecom infrastructure. Three segments: Networks (RAN equipment, ~65% of revenue), Cloud Software & Services (5G core, OSS/BSS, ~25%), Enterprise (private networks, IoT). Headquartered in Stockholm. CEO Börje Ekholm since 2017. ~100,000 employees. Serves carriers worldwide including AT&T, Verizon, T-Mobile, Vodafone, NTT, KT, and hundreds of others across 180+ countries." },
+    { t: "Financial Performance (FY2025)", x: "Q4: SEK 69.3B revenue (+6% organic YoY). All three segments grew organically in Q4 — Cloud Software & Services +12%. Adjusted gross margin: 48.0% (up from 46.3%). Adjusted EBITA: SEK 12.7B, margin 18.3% (up from 14.1%) — 9th consecutive quarter of YoY margin expansion. Net income: SEK 8.6B (up from 4.9B). EPS diluted: SEK 2.57 (up from 1.44). Free cash flow: SEK 14.9B. Full year: SEK 236.7B revenue (+2% organic). Adj gross margin: 48.2%. Strong cash position enabling capital returns. EMEA and South East Asia/India markets grew; Americas stable; North East Asia declined." },
+    { t: "2026 Outlook & Strategy", x: "RAN market expected flat in 2026 — but Ericsson plans to grow through: (1) Mission-critical networks (defense, public safety — increasing R&D investment in defense in 2026), (2) 5G core rollouts, (3) Enterprise/private 5G, (4) AI-native autonomous mobile networks. Won $1.33B VodafoneThree 5G contract — the largest single deal in recent years. Entering Japan market in 2026. 5G subscriptions forecast to reach 6.4B by 2031 (from ~2B today). Fixed Wireless Access connections: 185M (2025) → 350M by 2031. Dividend raised to SEK 3.00/share + SEK 15B buyback mandate — first major capital return program. Q1 2026 guide: Networks sales growth similar to 3-year avg seasonality; Networks adj gross margin 49-51%." },
+    { t: "Valuation", x: "ADR price ~$11.45. Market cap: ~$38B. P/E: ~12x on normalized earnings. P/S: ~1.6x. EV/EBITDA: ~9x. Dividend yield: ~2.5-3%. The stock is +16% YTD and near 52-week highs ($11.64). Key comparison: Ericsson at 12x P/E vs Nokia at similar multiples, but Ericsson has better margins, stronger 5G positioning, and defense exposure. The 9 consecutive quarters of margin expansion show the operational turnaround is real. The SEK 15B buyback adds a new floor of support." },
+    { t: "Moat & Competition", x: "Ericsson is one of only three global-scale RAN vendors (with Nokia and Huawei). Huawei sanctions in Western markets create a structural tailwind for Ericsson and Nokia. However, China is now restricting Nokia and Ericsson in its domestic market — a risk but also confirms the geopolitical moat in Western markets. Open-RAN is a long-term competitive threat as it commoditizes hardware, but Ericsson is investing in software-defined, AI-native networks to stay ahead. The defense pivot (mission-critical networks) opens an entirely new TAM with higher margins and longer contract cycles." },
+    { t: "Risks", x: "RAN market flat in 2026 limits near-term revenue growth. China restrictions on Ericsson could impact ~10% of revenue. Currency headwinds — SEK-denominated costs with USD/EUR-denominated revenue. Restructuring charges expected 'at elevated levels' in 2026 (headcount reductions in Sweden + other markets). Competition from Nokia and Samsung in 5G. Open-RAN adoption could commoditize Ericsson's hardware advantage. ADR at 52-week high — technically extended, pullback likely before next leg." },
+    { t: "Technical Setup", x: "Mature Growth stage — multi-timeframe trend following per the guide. Price at $11.45 near 52-week high ($11.64). Bullish MA stacking: price > 21 EMA > 50 SMA > 200 SMA, all rising. MACD positive. RSI ~60-65 healthy but approaching overbought. Weekly MACD bullish. 9 straight quarters of margin expansion = fundamental support for the trend. Entry: pullback to 21 EMA (~$11.00-11.10) or 50 SMA (~$10.30-10.50). Trail stop: Parabolic SAR or 50 SMA. The $1.33B VodafoneThree deal and SEK 15B buyback are catalysts that support the uptrend." },
+    { t: "Scenarios", x: "Bull $15+ (20x P/E on improving earnings): 5G cycle accelerates, defense contracts materialize, enterprise private 5G scales, margins continue expanding, currency tailwinds. Base $13-14 (analyst consensus area): flat RAN market, steady margin improvement, buyback support, defense R&D early innings. Bear $8-9 (back to 50 SMA/200 SMA): RAN market declines, China restrictions materially impact revenue, restructuring costs escalate, open-RAN disrupts." },
+  ],
+},{
+  ticker: "CRH", company: "CRH plc", stage: "Mature Growth", date: "March 26, 2026",
+  sects: [
+    { t: "Business", x: "Leading global provider of building materials critical to modernizing infrastructure. #1 infrastructure play in North America. 83,000 employees across 4,000 locations. Products: aggregates, cement, asphalt, ready-mix concrete, paving, and building products. Vertically integrated value chain — owns quarries, cement plants, asphalt plants, and distribution. S&P 500 member since 2025 (migrated primary listing from London to NYSE in 2023). CEO Jim Mintern (since Jan 2025, previously CFO). 75%+ of EBITDA from North America, ~40% tied to publicly-funded infrastructure spending." },
+    { t: "Financial Performance (FY2025)", x: "Record year. Revenue: $37.4B (+5% YoY). Net income: $3.8B (+8%). Adj EBITDA: $7.7B (+11%). EBITDA margin: 20.5% — 12th consecutive year of margin expansion (100bps YoY improvement). Diluted EPS: $5.51 (+10%). Q4 specifically: $9.4B revenue (+6%), $2.0B adj EBITDA (+14%), net income $1.0B (+46%), EPS $1.52 (+49%). Free cash flow robust, supporting both acquisitions and capital returns. Performance driven by pricing momentum, acquisition contributions, and operational efficiency." },
+    { t: "Capital Allocation", x: "Exceptional shareholder returns. $9.4B in cumulative buybacks since 2018. New $0.3B buyback tranche launched Feb 2026. Dividend raised 5% to $0.39/quarter ($1.56/year annualized). Invested $4.1B in 38 acquisitions in FY2025, including the transformative $2.1B Eco Material Technologies deal (low-carbon building materials — fly ash, slag cement). $1.7B in growth capex. Total Shareholder Return: 36.8% in 2025 (share price $92.52 → $124.80). The dual strategy of disciplined M&A + aggressive buybacks creates a compounding machine." },
+    { t: "2026 Outlook & Secular Tailwinds", x: "2026 guide: net income $3.9-4.1B, diluted EPS $5.60-6.05 (+2-10% YoY). Management expects 'favorable underlying demand across key end-markets, underpinned by significant public investment in infrastructure and continued reindustrialization activity.' The US infrastructure super-cycle is the core thesis: IIJA ($1.2T infrastructure), IRA (clean energy/manufacturing), and CHIPS Act all drive multi-year demand for aggregates, cement, and materials. Residential is subdued but repair/remodel is resilient. Eco Material Technologies integration positions CRH for the transition to lower-carbon building materials. Simply Wall St projects $43.1B revenue and $4.9B earnings by 2028, with a $140.46 fair value estimate." },
+    { t: "Valuation", x: "Market cap: ~$69B. P/E: ~19x on FY2025 EPS ($5.51), ~18x on FY2026 midpoint ($5.83). EV/EBITDA: ~10x. Dividend yield: ~1.5% ($1.56/$105). FCF yield: ~4-5%. Not cheap on an absolute basis — this is a premium multiple for a materials company. But justified by: 12 consecutive years of margin expansion, 75%+ North America exposure (infrastructure spending secular), S&P 500 membership driving institutional flows, and industry-leading returns on capital. Seeking Alpha flags it as potentially overvalued at 22x+ P/E, with a sub-$90 entry target for value buyers. The Fib pullback to $105 (from $131 ATH) improves the entry vs. buying at the peak." },
+    { t: "Moat & Competition", x: "CRH's moat is geographic and vertical integration. Aggregates (sand, gravel, crushed stone) are heavy, low-value materials with high transport costs — local market dominance creates natural monopolies. Once you own the quarry, competitors can't easily enter. The vertically integrated model (quarry → cement → ready-mix → asphalt → paving) captures margin at every step. Competitors: Vulcan Materials, Martin Marietta, HeidelbergCement, Holcim. CRH is the largest globally with the most North America-focused footprint. The Eco Material acquisition adds low-carbon positioning that competitors lack at scale." },
+    { t: "Risks", x: "Cyclicality: building materials are tied to construction cycles. A US recession would reduce private construction demand (though public infrastructure is more resilient). Valuation: at 19x P/E, any earnings miss gets punished. Infrastructure funding risk: political changes could slow IIJA/IRA disbursements. Interest rate sensitivity: higher rates slow construction and housing. Acquisition integration: $4.1B in 38 deals in one year is aggressive. Tariffs: CRH sources some materials internationally. Weather dependence: seasonal patterns affect Q1/Q4 results. The 20% pullback from $131 ATH suggests the market is already pricing some of these risks." },
+    { t: "Technical Setup (Weekly)", x: "Mature Growth stage — multi-timeframe trend following per the guide. Weekly chart shows textbook healthy pullback: from $131.58 ATH to the 0.786 Fib ($110.16) zone, currently bouncing at $105.60 (+5.11% this week). Weekly 21 EMA (white) at price (~$105-108). Weekly 50 SMA (orange) rising at ~$95-100. Weekly 200 SMA (purple) ~$70-75 with massive separation = powerful long-term uptrend. MACD above zero on weekly, RSI ~55 cooled from overbought. Entry: current ($102-106) at weekly 21 EMA, or $95-98 on pullback to weekly 50 SMA. Stop: $90 (below 0.618 Fib $93.34 + weekly 50 SMA). T1: $120. T2: $131+ (ATH retest). Trail stop: weekly 21 EMA or Parabolic SAR." },
+    { t: "Scenarios", x: "Bull $140+ (Simply Wall St fair value): infrastructure super-cycle accelerates, Eco Material integration drives margin expansion, earnings beat $6.05 high end, S&P 500 index flows continue, multiple re-rates to 22-24x. Base $120-131 (ATH retest): execution in line with $5.60-6.05 EPS guide, steady infrastructure demand, buybacks support. Bear $85-90 (below 50 SMA): US recession, infrastructure spending delayed, margins contract, valuation de-rates to 15x on lower earnings." },
+  ],
+}];
+
+const STG = { "Young Growth": {c:"#F87171",bg:"#1F0A0A",i:"🌱"}, "High Growth": {c:"#F97316",bg:"#1A1206",i:"🚀"}, "Mature Growth": {c:"#22C55E",bg:"#0A1F12",i:"📈"}, "Maturity": {c:"#3B82F6",bg:"#0C1A2E",i:"🏛️"}, "Decline": {c:"#8B5CF6",bg:"#150F2A",i:"📉"} };
+
+// ============================================================
+// INSTRUMENT DETAIL MODAL
+// ============================================================
+function InstrumentModal({ name, onClose }) {
+  const d = INSTRUMENT_DETAILS[name];
+  if (!d) return null;
+  const hasAnalysis = d.analysis && !d.analysis.includes("pending");
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>✕</button>
+        <div style={{ display: "flex", alignItems: "baseline", gap: 12, marginBottom: 4 }}>
+          <span style={{ fontSize: 24, fontWeight: 800, color: "#F1F5F9" }}>{name}</span>
+          <span style={{ fontSize: 20, fontWeight: 700, color: "#F1F5F9" }}>{d.value}</span>
+          <span style={{ fontSize: 14, fontWeight: 700, color: d.change?.startsWith("-") ? "#EF4444" : "#22C55E" }}>{d.change}</span>
+        </div>
+        <div style={{ fontSize: 12, fontWeight: 600, color: d.color, marginBottom: 16 }}>{d.signal}</div>
+
+        {hasAnalysis ? (<>
+          {d.chartUrl && <div style={{ marginBottom: 14, borderRadius: 8, overflow: "hidden", border: "1px solid #334155" }}><img src={d.chartUrl} alt={name + " chart"} style={{ width: "100%", display: "block" }} /></div>}
+          {d.chartTime && <div style={{ fontSize: 11, color: "#64748B", marginBottom: 12 }}>Chart: {d.chartTime}</div>}
+          {d.levels && (<div style={{ marginBottom: 14 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#64748B", marginBottom: 5 }}>Key Levels</div>
+            <div style={{ fontSize: 12, color: "#CBD5E1", lineHeight: 1.6 }}>{d.levels}</div>
+          </div>)}
+          {d.indicators && (<div style={{ marginBottom: 14 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#64748B", marginBottom: 5 }}>Indicators</div>
+            <div style={{ fontSize: 12, color: "#CBD5E1" }}>{d.indicators}</div>
+          </div>)}
+          <div style={{ marginBottom: 14 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#64748B", marginBottom: 5 }}>Technical Analysis</div>
+            <div style={{ fontSize: 13, color: "#E2E8F0", lineHeight: 1.7 }}>{d.analysis}</div>
+          </div>
+          {d.keyWatch && (<div style={{ padding: "12px 14px", background: "#1E293B", borderRadius: 8, border: "1px solid #334155" }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#F59E0B", marginBottom: 5 }}>Key Watch</div>
+            <div style={{ fontSize: 12, color: "#CBD5E1", lineHeight: 1.6 }}>{d.keyWatch}</div>
+          </div>)}
+        </>) : (
+          <div style={{ padding: "20px", textAlign: "center", color: "#64748B", fontSize: 13 }}>
+            Chart analysis pending — send a daily chart screenshot in our Claude chat to activate.
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ============================================================
+// APP
+// ============================================================
+function App() {
+  const [tab, setTab] = useState("macro");
+  const [modal, setModal] = useState(null);
+  const [expStock, setExpStock] = useState(null);
+  const [expSect, setExpSect] = useState({});
+
+  const tabs = [{ id:"macro",l:"Macro",i:"◉" },{ id:"watchlist",l:"Watchlist",i:"◎" },{ id:"research",l:"Research",i:"◈" },{ id:"workflow",l:"Workflow",i:"◇" }];
+  const d = MACRO;
+  const instruments = Object.keys(INSTRUMENT_DETAILS);
+
+  return (
+    <div style={{ minHeight: "100vh", background: "#0F1628" }}>
+      {modal && <InstrumentModal name={modal} onClose={() => setModal(null)} />}
+
+      {/* NAV */}
+      <div style={{ background: "linear-gradient(135deg,#0F172A,#1E293B)", padding: "14px 20px", borderBottom: "1px solid #334155" }}>
+        <div style={{ maxWidth: 960, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
+          <div>
+            <div style={{ fontSize: 19, fontWeight: 800, color: "#F1F5F9", letterSpacing: -0.5 }}>SMB LLC Macro Research</div>
+            <div style={{ fontSize: 10, color: "#64748B" }}>Macro · Fundamentals · Technicals · Execution</div>
+          </div>
+          <div style={{ display: "flex", gap: 3 }}>
+            {tabs.map(t => (
+              <button key={t.id} onClick={() => setTab(t.id)} style={{
+                padding: "6px 13px", borderRadius: 7, border: "none", cursor: "pointer", fontSize: 12, fontWeight: 600,
+                display: "flex", alignItems: "center", gap: 4,
+                background: tab === t.id ? "#3B82F6" : "transparent", color: tab === t.id ? "#FFF" : "#94A3B8",
+              }}><span style={{ fontSize: 12 }}>{t.i}</span>{t.l}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div style={{ maxWidth: 960, margin: "0 auto", padding: "20px 14px" }}>
+
+        {/* MACRO */}
+        {tab === "macro" && (<div>
+          <h2 style={{ fontSize: 19, fontWeight: 800, color: "#F1F5F9", marginBottom: 14 }}>Macro Dashboard</h2>
+
+          <div style={{ background: d.regimeColor+"10", border: "1px solid "+d.regimeColor+"30", borderRadius: 12, padding: "18px 22px", marginBottom: 16 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
+              <div>
+                <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: d.regimeColor }}>Current Regime</div>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#F1F5F9", marginTop: 4 }}>{d.regime}</div>
+              </div>
+              <div style={{ fontSize: 10, color: "#94A3B8", textAlign: "right" }}>Updated<br/><b style={{ color: "#64748B" }}>{UPDATED}</b></div>
+            </div>
+            <p style={{ fontSize: 13, color: "#94A3B8", marginTop: 12, lineHeight: 1.65 }}>{d.desc}</p>
+          </div>
+
+          {/* Stage Bias */}
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>Stage Positioning</div>
+            {d.stageBias.map(s => (
+              <div key={s.stage} style={{ display: "flex", alignItems: "center", gap: 10, background: "#131B2E", border: "1px solid #1E293B", borderLeft: "3px solid "+s.color, borderRadius: 7, padding: "7px 12px", marginBottom: 5 }}>
+                <span style={{ fontSize: 15 }}>{s.icon}</span>
+                <span style={{ fontSize: 12, fontWeight: 600, color: "#CBD5E1", minWidth: 110 }}>{s.stage}</span>
+                <span style={{ fontSize: 12, fontWeight: 800, color: s.color, minWidth: 85 }}>{s.bias}</span>
+                <span style={{ fontSize: 11, color: "#94A3B8" }}>{s.note}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Grouped Instruments */}
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>
+              Key Instruments <span style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0 }}>— click for analysis</span>
+            </div>
+            {INSTRUMENT_GROUPS.map(group => (
+              <div key={group.name} style={{ marginBottom: 12 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: group.color, marginBottom: 6, display: "flex", alignItems: "center", gap: 6 }}>
+                  <div style={{ width: 10, height: 3, background: group.color, borderRadius: 2 }}></div>
+                  {group.name}
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(170px,1fr))", gap: 6 }}>
+                  {group.instruments.map(name => {
+                    const k = INSTRUMENT_DETAILS[name];
+                    if (!k) return null;
+                    const hasDetail = k.analysis && !k.analysis.includes("pending");
+                    return (
+                      <div key={name} className="inst-card" onClick={() => setModal(name)} style={{
+                        background: "#131B2E", border: "1px solid #1E293B", borderLeft: "3px solid "+k.color, borderRadius: 7, padding: "8px 12px",
+                      }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                          <div style={{ fontSize: 10, color: "#94A3B8", fontWeight: 600 }}>{name}</div>
+                          {hasDetail && <div style={{ width: 6, height: 6, borderRadius: 3, background: "#3B82F6" }} title="Chart analysis available" />}
+                        </div>
+                        <div style={{ display: "flex", alignItems: "baseline", gap: 5, margin: "2px 0" }}>
+                          <span style={{ fontSize: 16, fontWeight: 700, color: "#F1F5F9" }}>{k.value}</span>
+                          <span style={{ fontSize: 11, fontWeight: 700, color: k.change?.startsWith("-") ? "#EF4444" : "#22C55E" }}>{k.change}</span>
+                        </div>
+                        <div style={{ fontSize: 10, color: k.color, fontWeight: 600 }}>{k.signal}</div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+            <div style={{ fontSize: 10, color: "#94A3B8", marginTop: 6 }}>
+              <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: 3, background: "#3B82F6", marginRight: 4 }}></span>
+              Blue dot = chart analysis with TradingView snapshot available. Click any card.
+            </div>
+          </div>
+
+          {/* Sectors */}
+          <div style={{ marginBottom: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>Sector Performance</div>
+            <div style={{ background: "#131B2E", border: "1px solid #1E293B", borderRadius: 9, overflow: "hidden" }}>
+              {d.sectors.map((s,i) => (
+                <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "6px 14px", borderBottom: i<d.sectors.length-1 ? "1px solid #1A2336" : "none", background: i%2===0 ? "#131B2E" : "#0F1628" }}>
+                  <span style={{ fontSize: 12, color: "#CBD5E1" }}>{s.s}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: s.clr, fontVariantNumeric: "tabular-nums" }}>{s.c}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Narrative */}
+          <div style={{ background: "#0F172A", borderRadius: 10, padding: "16px 20px", marginBottom: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#64748B", marginBottom: 6 }}>Daily Summary</div>
+            <p style={{ fontSize: 13, color: "#CBD5E1", lineHeight: 1.7, margin: 0 }}>{d.narrative}</p>
+          </div>
+
+          {/* Calendar */}
+          <div style={{ background: "#131B2E", border: "1px solid #1E293B", borderRadius: 9, overflow: "hidden" }}>
+            <div style={{ background: "#1E293B", padding: "10px 14px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 10, fontWeight: 700, color: "#94A3B8", letterSpacing: 1.5, textTransform: "uppercase" }}>March 2026</span>
+              <span style={{ fontSize: 10, color: "#64748B" }}>Economic Calendar</span>
+            </div>
+            {/* Day headers */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", borderBottom: "1px solid #1A2336" }}>
+              {["Mon","Tue","Wed","Thu","Fri"].map(d => (
+                <div key={d} style={{ padding: "6px 0", textAlign: "center", fontSize: 9, fontWeight: 700, color: "#64748B", letterSpacing: 1 }}>{d}</div>
+              ))}
+            </div>
+            {/* Week: Mar 16-20 (current week) */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)" }}>
+              {[
+                { day: 16, events: [{ e: "Empire Mfg: -0.2 ✓", i: "Done" }, { e: "Ind. Prod: +0.2% ✓", i: "Done" }, { e: "NAHB: 38 ✓", i: "Done" }], today: true },
+                { day: 17, events: [{ e: "Pending Home Sales", i: "Medium" }], today: false },
+                { day: 18, events: [{ e: "PPI (Feb)", i: "Critical" }, { e: "FOMC Decision 2pm", i: "Critical" }, { e: "GLUE Earnings", i: "Position" }, { e: "DLO Earnings", i: "Position" }], today: false },
+                { day: 19, events: [{ e: "Powell Presser 2:30", i: "Critical" }, { e: "Jobless Claims", i: "Medium" }, { e: "Philly Fed Mfg", i: "Medium" }, { e: "New Home Sales", i: "Medium" }], today: false },
+                { day: 20, events: [], today: false },
+              ].map((d,idx) => (
+                <div key={idx} style={{ padding: "8px 6px", borderRight: idx<4 ? "1px solid #1A2336" : "none", borderBottom: "1px solid #1A2336", background: d.today ? "#1A2336" : "transparent", minHeight: 85 }}>
+                  <div style={{ fontSize: 13, fontWeight: d.today ? 800 : 600, color: d.today ? "#3B82F6" : "#CBD5E1", marginBottom: 4 }}>{d.day}</div>
+                  {d.events.map((ev,j) => (
+                    <div key={j} style={{ fontSize: 8, padding: "2px 4px", borderRadius: 3, marginBottom: 2, fontWeight: 600,
+                      background: ev.i==="Critical" ? "#7F1D1D" : ev.i==="Position" ? "#1E3A5F" : ev.i==="Done" ? "#0A1F12" : "#1A2336",
+                      color: ev.i==="Critical" ? "#FCA5A5" : ev.i==="Position" ? "#93C5FD" : ev.i==="Done" ? "#4ADE80" : "#94A3B8",
+                      border: ev.i==="Critical" ? "1px solid #DC2626" : ev.i==="Position" ? "1px solid #2563EB" : "1px solid transparent"
+                    }}>{ev.e}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            {/* Week: Mar 21-27 (Powell speech Sat) */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)" }}>
+              {[
+                { day: 23, events: [{ e: "Construction Spend", i: "Medium" }], today: false },
+                { day: 24, events: [{ e: "Productivity (Q4)", i: "Medium" }, { e: "Flash PMIs", i: "Medium" }], today: false },
+                { day: 25, events: [{ e: "Import Prices", i: "Medium" }], today: false },
+                { day: 26, events: [{ e: "Jobless Claims", i: "Medium" }], today: false },
+                { day: 27, events: [{ e: "Consumer Sentiment", i: "Medium" }], today: false },
+              ].map((d,idx) => (
+                <div key={idx} style={{ padding: "8px 6px", borderRight: idx<4 ? "1px solid #1A2336" : "none", borderBottom: "1px solid #1A2336", minHeight: 70 }}>
+                  <div style={{ fontSize: 13, fontWeight: 600, color: "#CBD5E1", marginBottom: 4 }}>{d.day}</div>
+                  {d.events.map((ev,j) => (
+                    <div key={j} style={{ fontSize: 8, padding: "2px 4px", borderRadius: 3, marginBottom: 2, fontWeight: 600,
+                      background: ev.i==="Critical" ? "#7F1D1D" : ev.i==="Position" ? "#1E3A5F" : "#1A2336",
+                      color: ev.i==="Critical" ? "#FCA5A5" : ev.i==="Position" ? "#93C5FD" : "#94A3B8",
+                      border: ev.i==="Critical" ? "1px solid #DC2626" : "1px solid transparent"
+                    }}>{ev.e}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            {/* Note about Powell Saturday speech */}
+            <div style={{ padding: "6px 10px", fontSize: 9, color: "#64748B", borderBottom: "1px solid #1A2336" }}>
+              <span style={{ color: "#FCA5A5" }}>★</span> Sat Mar 21: Powell speech 1:30pm ET — post-FOMC color
+            </div>
+            <div style={{ padding: "6px 10px", fontSize: 9, color: "#64748B", display: "flex", gap: 12 }}>
+              <span><span style={{ display:"inline-block",width:8,height:8,borderRadius:2,background:"#7F1D1D",border:"1px solid #DC2626",marginRight:3,verticalAlign:"middle" }}></span>Critical</span>
+              <span><span style={{ display:"inline-block",width:8,height:8,borderRadius:2,background:"#1E3A5F",border:"1px solid #2563EB",marginRight:3,verticalAlign:"middle" }}></span>Position</span>
+              <span><span style={{ display:"inline-block",width:8,height:8,borderRadius:2,background:"#0A1F12",marginRight:3,verticalAlign:"middle" }}></span>Done</span>
+              <span><span style={{ display:"inline-block",width:8,height:8,borderRadius:2,background:"#1A2336",marginRight:3,verticalAlign:"middle" }}></span>Data</span>
+            </div>
+          </div>
+
+          {/* News Feed */}
+          <div style={{ marginTop: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>Macro News Digest <span style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "#64748B" }}>— signal from noise</span></div>
+            {d.news.map((n,i) => (
+              <div key={i} style={{ background: "#131B2E", border: "1px solid #1E293B", borderRadius: 9, marginBottom: 8, overflow: "hidden" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 14px", background: "#1A2336" }}>
+                  <span style={{ fontSize: 10, fontWeight: 800, letterSpacing: 1, color: "#F1F5F9" }}>{n.cat}</span>
+                  <span style={{ fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 3,
+                    background: n.signal==="Dovish"?"#0A1F12":n.signal==="Hawkish"?"#1F0A0A":n.signal==="Mixed"?"#1A1206":n.signal.includes("De-escalation")?"#0C1A2E":"#1A2336",
+                    color: n.signal==="Dovish"?"#4ADE80":n.signal==="Hawkish"?"#FCA5A5":n.signal==="Mixed"?"#FBBF24":n.signal.includes("De-escalation")?"#93C5FD":"#94A3B8",
+                  }}>{n.signal}</span>
+                </div>
+                <div style={{ padding: "8px 14px" }}>
+                  {n.items.map((item,j) => (
+                    <div key={j} style={{ fontSize: 11, color: "#94A3B8", lineHeight: 1.6, padding: "4px 0", borderBottom: j<n.items.length-1 ? "1px solid #1A2336" : "none" }}>
+                      <span style={{ color: "#64748B", marginRight: 6 }}>›</span>{item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Fed Speaker Personas */}
+          <div style={{ marginTop: 16 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: "#94A3B8", marginBottom: 8 }}>Fed Speaker Tracker <span style={{ fontWeight: 400, textTransform: "none", letterSpacing: 0, color: "#64748B" }}>— who says what</span></div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: 8 }}>
+              {d.fedPersonas.map((f,i) => (
+                <div key={i} style={{ background: "#131B2E", border: "1px solid #1E293B", borderLeft: "3px solid "+f.color, borderRadius: 9, padding: "12px 14px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+                    <div>
+                      <span style={{ fontSize: 14, fontWeight: 800, color: "#F1F5F9" }}>{f.name}</span>
+                      <span style={{ fontSize: 10, color: "#64748B", marginLeft: 6 }}>{f.title}</span>
+                    </div>
+                    <span style={{ fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 3,
+                      background: f.lean.includes("Hawkish")?"#1F0A0A":f.lean.includes("Dovish")?"#0A1F12":"#1A1206",
+                      color: f.lean.includes("Hawkish")?"#FCA5A5":f.lean.includes("Dovish")?"#4ADE80":"#FBBF24",
+                    }}>{f.lean}</span>
+                  </div>
+                  {f.quotes.map((q,j) => (
+                    <div key={j} style={{ fontSize: 10, color: "#94A3B8", lineHeight: 1.5, padding: "2px 0", borderBottom: j<f.quotes.length-1 ? "1px solid #0F1628" : "none" }}>
+                      <span style={{ color: f.color, marginRight: 4 }}>•</span>{q}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: 8, padding: "10px 14px", background: "#0F172A", borderRadius: 7, fontSize: 11, color: "#64748B", lineHeight: 1.6 }}>
+              <b style={{ color: "#94A3B8" }}>CPI Reaction Matrix:</b> Hot CPI → hawks (Hammack, Collins) dominate narrative, cuts pushed to H2 2026+, bearish growth equities. Cool CPI → doves (Goolsbee, Miran) have cover to push for June cut, bullish risk. Inline → status quo, Daly's "no need for speed" becomes consensus.
+            </div>
+          </div>
+        </div>)}
+
+        {/* WATCHLIST */}
+        {tab === "watchlist" && (<div>
+          <h2 style={{ fontSize: 19, fontWeight: 800, color: "#F1F5F9", marginBottom: 14 }}>Active Watchlist</h2>
+          {WATCHLIST.map(s => {
+            const st = STG[s.stage]||{};
+            const open = expStock === s.ticker;
+            return (<div key={s.ticker} style={{ background:"#131B2E", border:"1px solid #1E293B", borderRadius:11, marginBottom:10, overflow:"hidden", boxShadow: open?"0 4px 16px rgba(0,0,0,0.06)":"none" }}>
+              <div onClick={() => setExpStock(open?null:s.ticker)} style={{ padding:"14px 18px", cursor:"pointer", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+                <div style={{ display:"flex", alignItems:"center", gap:12 }}>
+                  <div style={{ width:40,height:40,borderRadius:9,display:"flex",alignItems:"center",justifyContent:"center",background:st.bg,fontSize:18,border:"1px solid "+st.c+"30" }}>{st.i}</div>
+                  <div>
+                    <div style={{ display:"flex",alignItems:"center",gap:6,flexWrap:"wrap" }}>
+                      <span style={{ fontSize:17,fontWeight:800,color:"#F1F5F9" }}>{s.ticker}</span>
+                      <span style={{ fontSize:9,fontWeight:700,padding:"2px 7px",borderRadius:4,background:st.bg,color:st.c,textTransform:"uppercase",letterSpacing:0.5 }}>{s.stage}</span>
+                      <span style={{ fontSize:9,fontWeight:700,padding:"2px 7px",borderRadius:4,background:s.sc+"12",color:s.sc }}>{s.status}</span>
+                    </div>
+                    <div style={{ fontSize:11,color:"#94A3B8",marginTop:2 }}>{s.company} · {s.sector}</div>
+                  </div>
+                </div>
+                <div style={{ display:"flex",alignItems:"center",gap:16 }}>
+                  <div style={{ textAlign:"right" }}>
+                    <div style={{ fontSize:17,fontWeight:700,color:"#F1F5F9" }}>${s.price}</div>
+                    <div style={{ fontSize:10,color:"#64748B" }}>Score: <b style={{ color:s.composite>=7?"#22C55E":"#F59E0B" }}>{s.composite}</b></div>
+                  </div>
+                  <span style={{ fontSize:16,color:"#94A3B8",transition:"transform 0.2s",transform:open?"rotate(180deg)":"none" }}>▾</span>
+                </div>
+              </div>
+              {open && (<div style={{ padding:"0 18px 18px",borderTop:"1px solid #1A2336" }}>
+                {s.macro && <div style={{ padding:"10px 12px",background:"#0A1F12",border:"1px solid #166534",borderRadius:7,margin:"12px 0",fontSize:12,color:"#4ADE80" }}><b style={{ fontSize:10,letterSpacing:1,textTransform:"uppercase",color:"#4ADE80" }}>Macro:</b> {s.macro}</div>}
+                <div style={{ padding:"12px 0",borderBottom:"1px solid #1A2336" }}><div style={{ fontSize:10,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#94A3B8",marginBottom:5 }}>Thesis</div><p style={{ fontSize:13,color:"#CBD5E1",lineHeight:1.6,margin:0 }}>{s.thesis}</p></div>
+                <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,padding:"12px 0",borderBottom:"1px solid #1A2336" }}>
+                  {[["Entry",s.entry,"#22C55E"],["Stop",s.stop,"#EF4444"],["Targets",s.target,"#3B82F6"]].map(([l,v,c])=>(<div key={l}><div style={{ fontSize:10,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#94A3B8",marginBottom:3 }}>{l}</div><div style={{ fontSize:13,fontWeight:700,color:c }}>{v}</div></div>))}
+                </div>
+                <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:14,padding:"12px 0" }}>
+                  <div><div style={{ fontSize:10,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#94A3B8",marginBottom:5 }}>Setup</div><p style={{ fontSize:12,color:"#94A3B8",lineHeight:1.5,margin:0 }}>{s.setup}</p></div>
+                  <div><div style={{ fontSize:10,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#94A3B8",marginBottom:5 }}>Catalysts</div><p style={{ fontSize:12,color:"#94A3B8",lineHeight:1.5,margin:0 }}>{s.catalyst}</p><div style={{ marginTop:6,fontSize:11,color:"#64748B" }}>R:R — <b style={{ color:"#F1F5F9" }}>{s.rr}</b></div></div>
+                </div>
+                {s.research && <div style={{ marginTop:6,padding:"7px 10px",background:"#0C1A2E",borderRadius:5,fontSize:11,color:"#2563EB",fontWeight:600 }}>✓ Research report — see Research tab</div>}
+              </div>)}
+            </div>);
+          })}
+          <div style={{ marginTop:16,padding:"20px",border:"2px dashed #1E293B",borderRadius:10,textAlign:"center",color:"#94A3B8",fontSize:12 }}>More stocks added as we analyze them.</div>
+        </div>)}
+
+        {/* RESEARCH */}
+        {tab === "research" && (<div>
+          <h2 style={{ fontSize:19,fontWeight:800,color:"#F1F5F9",marginBottom:14 }}>Research Reports</h2>
+          {REPORTS.map(r => {
+            const st = STG[r.stage]||{};
+            return (<div key={r.ticker} style={{ background:"#131B2E",border:"1px solid #1E293B",borderRadius:11,overflow:"hidden",marginBottom:14 }}>
+              <div style={{ padding:"14px 18px",borderBottom:"1px solid #1A2336",display:"flex",justifyContent:"space-between",alignItems:"center" }}>
+                <div><div style={{ fontSize:18,fontWeight:800,color:"#F1F5F9" }}>{r.ticker} — {r.company}</div><div style={{ fontSize:11,color:"#94A3B8",marginTop:2 }}>{r.date}</div></div>
+                <span style={{ fontSize:9,fontWeight:700,padding:"3px 8px",borderRadius:4,background:st.bg,color:st.c,textTransform:"uppercase",letterSpacing:0.5 }}>{r.stage}</span>
+              </div>
+              {r.sects.map((s,i) => {
+                const k = r.ticker+"-"+i; const isOpen = expSect[k];
+                return (<div key={i}>
+                  <div onClick={() => setExpSect(p=>({...p,[k]:!p[k]}))} style={{ padding:"10px 18px",cursor:"pointer",display:"flex",justifyContent:"space-between",alignItems:"center",background:isOpen?"#1A2336":"#131B2E",borderBottom:"1px solid #1A2336" }}>
+                    <span style={{ fontSize:13,fontWeight:600,color:"#E2E8F0" }}>{s.t}</span>
+                    <span style={{ fontSize:13,color:"#94A3B8",transform:isOpen?"rotate(180deg)":"none",transition:"transform 0.15s" }}>▾</span>
+                  </div>
+                  {isOpen && <div style={{ padding:"12px 18px 16px",background:"#0F1628" }}><p style={{ fontSize:13,color:"#CBD5E1",lineHeight:1.7,margin:0 }}>{s.x}</p></div>}
+                </div>);
+              })}
+            </div>);
+          })}
+        </div>)}
+
+        {/* WORKFLOW */}
+        {tab === "workflow" && (<div>
+          <h2 style={{ fontSize:19,fontWeight:800,color:"#F1F5F9",marginBottom:14 }}>Research Workflow</h2>
+          {[
+            { p:"0",n:"Macro Regime",d:"Screenshot dashboard → Claude reads regime + vol charts",c:"#EF4444",s:"Active" },
+            { p:"1",n:"Screening",d:"TradingView export → lifecycle valuation model (13,602 stocks)",c:"#F97316",s:"Complete" },
+            { p:"2",n:"Selection",d:"Filter with macro bias → confirm stages & indicators",c:"#22C55E",s:"In Progress" },
+            { p:"3",n:"Technical",d:"Chart screenshots → trade plans (entry/stop/targets)",c:"#8B5CF6",s:"Active" },
+            { p:"4",n:"Deep Research",d:"SEC filings, analyst data, competitive landscape",c:"#3B82F6",s:"Active" },
+            { p:"5",n:"Execution",d:"Trade, track, bring updated charts",c:"#EC4899",s:"Pending" },
+          ].map((ph,i)=>(
+            <div key={i} style={{ display:"flex",gap:14,padding:"14px 0",borderBottom:i<5?"1px solid #1A2336":"none" }}>
+              <div style={{ width:38,height:38,borderRadius:9,display:"flex",alignItems:"center",justifyContent:"center",background:ph.c+"12",color:ph.c,fontSize:15,fontWeight:800,flexShrink:0 }}>{ph.p}</div>
+              <div>
+                <div style={{ display:"flex",alignItems:"center",gap:6 }}>
+                  <span style={{ fontSize:14,fontWeight:700,color:"#F1F5F9" }}>{ph.n}</span>
+                  <span style={{ fontSize:9,fontWeight:700,padding:"2px 7px",borderRadius:3,letterSpacing:0.5,
+                    background:ph.s==="Complete"?"#0A1F12":ph.s==="Active"?"#0C1A2E":ph.s==="In Progress"?"#1A1206":"#131B2E",
+                    color:ph.s==="Complete"?"#4ADE80":ph.s==="Active"?"#60A5FA":ph.s==="In Progress"?"#FB923C":"#94A3B8"
+                  }}>{ph.s}</span>
+                </div>
+                <div style={{ fontSize:12,color:"#64748B",marginTop:3 }}>{ph.d}</div>
+              </div>
+            </div>
+          ))}
+          <div style={{ marginTop:20,padding:"16px 18px",background:"#0F172A",borderRadius:10 }}>
+            <div style={{ fontSize:12,fontWeight:700,color:"#F1F5F9",marginBottom:6 }}>How Updates Work</div>
+            <div style={{ fontSize:11,color:"#94A3B8",lineHeight:1.8 }}>
+              Updated through Claude chat. New index.html → replace in GitHub → live in 60s.
+              <br/><span style={{color:"#EF4444"}}>•</span> Macro screenshots → regime + instrument analysis
+              <br/><span style={{color:"#F97316"}}>•</span> New TradingView data → fresh screener
+              <br/><span style={{color:"#22C55E"}}>•</span> Stock charts → updated trade plans
+              <br/><span style={{color:"#3B82F6"}}>•</span> "Deep dive on X" → new research report
+              <br/><span style={{color:"#EC4899"}}>•</span> "X hit target" → position management
+            </div>
+          </div>
+        </div>)}
+      </div>
+      <div style={{ padding:"14px 20px",textAlign:"center",fontSize:10,color:"#94A3B8",borderTop:"1px solid #1E293B",marginTop:32 }}>SMB LLC Macro Research · Not financial advice · {UPDATED}</div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

@@ -671,6 +671,7 @@ function AISummary() {
 function App() {
   const [activeSym, setActiveSym] = React.useState("SPY");
   const [rightTab, setRightTab] = React.useState("news");
+  const [centerView, setCenterView] = React.useState("chart");
   const tvSymbol = getTVSymbol(activeSym);
   const analysis = INSTRUMENT_ANALYSIS[activeSym] || DEFAULT_ANALYSIS;
   const chartUrl = `https://s.tradingview.com/widgetembed/?frameElementId=tv&symbol=${encodeURIComponent(tvSymbol)}&interval=D&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=0a0e17&studies=MASimple@tv-basicstudies!1,MASimple@tv-basicstudies!2,MASimple@tv-basicstudies!3,MACD@tv-basicstudies,RSI@tv-basicstudies&theme=dark&style=1&timezone=America%2FNew_York&withdateranges=1&hideideas=1&locale=en`;
@@ -706,57 +707,77 @@ function App() {
         {/* CENTER */}
         <div className="center">
           <div className="chart-header">
-            <span className="chart-symbol">{activeSym}</span>
-            {activeItem && <span style={{ fontFamily:"var(--font-mono)", fontSize:12, fontWeight:700, color:activeItem.color }}>{activeItem.price} <span style={{fontSize:10}}>{activeItem.chg}</span></span>}
-            <span className="chart-info">{tvSymbol} · Daily</span>
+            {centerView==="chart" ? (
+              <React.Fragment>
+                <span className="chart-symbol">{activeSym}</span>
+                {activeItem && <span style={{ fontFamily:"var(--font-mono)", fontSize:12, fontWeight:700, color:activeItem.color }}>{activeItem.price} <span style={{fontSize:10}}>{activeItem.chg}</span></span>}
+                <span className="chart-info">{tvSymbol} · Daily</span>
+              </React.Fragment>
+            ) : (
+              <span className="chart-symbol" style={{color:"var(--text-primary)"}}>Economic Calendar</span>
+            )}
+            <div style={{marginLeft:"auto",display:"flex",gap:2}}>
+              <div onClick={() => setCenterView("chart")} style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",padding:"4px 10px",cursor:"pointer",borderRadius:3,color:centerView==="chart"?"var(--accent)":"var(--text-muted)",background:centerView==="chart"?"var(--border)":"transparent",transition:"all .15s"}}>Chart</div>
+              <div onClick={() => setCenterView("calendar")} style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",padding:"4px 10px",cursor:"pointer",borderRadius:3,color:centerView==="calendar"?"var(--accent)":"var(--text-muted)",background:centerView==="calendar"?"var(--border)":"transparent",transition:"all .15s"}}>Calendar</div>
+            </div>
           </div>
-          <div className="chart-container">
-            <iframe key={tvSymbol} src={chartUrl} allowTransparency="true" allowFullScreen />
-          </div>
-          <div className="analysis-scroll">
-            <div className="analysis-grid">
-              <div className="case-card bear">
-                <div className="case-header">
-                  <span className="case-label" style={{ color:"#ff3d57" }}>🔴 Bear / Short</span>
-                  <span className="case-pct" style={{ color:"#ff3d57" }}>{analysis.bearPct}%</span>
+          {centerView==="chart" ? (
+            <React.Fragment>
+              <div className="chart-container">
+                <iframe key={tvSymbol} src={chartUrl} allowTransparency="true" allowFullScreen />
+              </div>
+              <div className="analysis-scroll">
+                <div className="analysis-grid">
+                  <div className="case-card bear">
+                    <div className="case-header">
+                      <span className="case-label" style={{ color:"#ff3d57" }}>🔴 Bear / Short</span>
+                      <span className="case-pct" style={{ color:"#ff3d57" }}>{analysis.bearPct}%</span>
+                    </div>
+                    <div className="case-text">{analysis.bearCase}</div>
+                  </div>
+                  <div className="case-card bull">
+                    <div className="case-header">
+                      <span className="case-label" style={{ color:"#00e676" }}>🟢 Bull / Long</span>
+                      <span className="case-pct" style={{ color:"#00e676" }}>{analysis.bullPct}%</span>
+                    </div>
+                    <div className="case-text">{analysis.bullCase}</div>
+                  </div>
                 </div>
-                <div className="case-text">{analysis.bearCase}</div>
-              </div>
-              <div className="case-card bull">
-                <div className="case-header">
-                  <span className="case-label" style={{ color:"#00e676" }}>🟢 Bull / Long</span>
-                  <span className="case-pct" style={{ color:"#00e676" }}>{analysis.bullPct}%</span>
+                <div className="info-row">
+                  <div className="info-box">
+                    <div className="info-label">Bias</div>
+                    <div className="info-value" style={{ color:analysis.biasColor }}>{analysis.bias}</div>
+                  </div>
+                  <div className="info-box">
+                    <div className="info-label">Key Watch</div>
+                    <div className="info-detail">{analysis.keyWatch}</div>
+                  </div>
                 </div>
-                <div className="case-text">{analysis.bullCase}</div>
+                <div className="sr-grid">
+                  <div>
+                    <div className="analysis-title">Resistance</div>
+                    {analysis.resistance.map((r,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#ff3d57"}} /><span className="sr-level">{r.l}</span><span className="sr-desc">— {r.d}</span></div>))}
+                    {analysis.resistance.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
+                  </div>
+                  <div>
+                    <div className="analysis-title">Support</div>
+                    {analysis.support.map((s,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#00e676"}} /><span className="sr-level">{s.l}</span><span className="sr-desc">— {s.d}</span></div>))}
+                    {analysis.support.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
+                  </div>
+                </div>
+              </div>
+            </React.Fragment>
+          ) : (
+            <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
+              <div style={{padding:"8px 14px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
+                <div className="analysis-title" style={{marginBottom:4}}>Key Events</div>
+                {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i} style={{padding:"3px 0"}}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
+              </div>
+              <div style={{flex:1,overflow:"hidden"}}>
+                <iframe srcDoc={calHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
               </div>
             </div>
-            <div className="info-row">
-              <div className="info-box">
-                <div className="info-label">Bias</div>
-                <div className="info-value" style={{ color:analysis.biasColor }}>{analysis.bias}</div>
-              </div>
-              <div className="info-box">
-                <div className="info-label">Key Watch</div>
-                <div className="info-detail">{analysis.keyWatch}</div>
-              </div>
-            </div>
-            <div className="sr-grid">
-              <div>
-                <div className="analysis-title">Resistance</div>
-                {analysis.resistance.map((r,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#ff3d57"}} /><span className="sr-level">{r.l}</span><span className="sr-desc">— {r.d}</span></div>))}
-                {analysis.resistance.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
-              </div>
-              <div>
-                <div className="analysis-title">Support</div>
-                {analysis.support.map((s,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#00e676"}} /><span className="sr-level">{s.l}</span><span className="sr-desc">— {s.d}</span></div>))}
-                {analysis.support.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
-              </div>
-            </div>
-            <div className="analysis-title">Economic Calendar</div>
-            <div style={{borderRadius:6,overflow:"hidden",height:280,border:"1px solid var(--border)"}}>
-              <iframe srcDoc={calHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
-            </div>
-          </div>
+          )}
         </div>
         {/* RIGHT */}
         <div className="sidebar-right">
@@ -781,9 +802,11 @@ function App() {
               <div style={{padding:10,overflowY:"auto",height:"100%"}}>
                 <div className="analysis-title">Key Events</div>
                 {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
-                <div style={{marginTop:14,padding:8,background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6}}>
-                  <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",lineHeight:1.6}}>Full economic calendar is now in the center panel below the analysis.</div>
-                </div>
+                {centerView!=="calendar" && (
+                  <div onClick={() => setCenterView("calendar")} style={{marginTop:14,padding:8,background:"var(--accent)"+"15",border:"1px solid var(--accent)"+"30",borderRadius:6,cursor:"pointer",textAlign:"center"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--accent)",letterSpacing:.5}}>OPEN FULL CALENDAR →</div>
+                  </div>
+                )}
               </div>
             )}
             {rightTab==="regime" && (

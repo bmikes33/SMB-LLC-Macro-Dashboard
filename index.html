@@ -551,13 +551,129 @@ function getTVSymbol(sym) {
   return m[sym] || `AMEX:${sym}`;
 }
 
+// ============================================================
+// NEWS FEED COMPONENT — reads from news.json
+// ============================================================
+function NewsFeed() {
+  const [news, setNews] = React.useState(null);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    const fetchNews = () => {
+      fetch("news.json?t=" + Date.now())
+        .then(r => { if(!r.ok) throw new Error("No news.json yet"); return r.json(); })
+        .then(data => setNews(data))
+        .catch(e => setError(e.message));
+    };
+    fetchNews();
+    const interval = setInterval(fetchNews, 5 * 60 * 1000); // Refresh every 5 min
+    return () => clearInterval(interval);
+  }, []);
+
+  if (error) return (
+    <div style={{padding:12,color:"var(--text-muted)",fontSize:11,lineHeight:1.6}}>
+      <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:8}}>News Wire</div>
+      <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10}}>
+        Waiting for first news fetch... The GitHub Action runs on a schedule and populates news.json. You can also trigger it manually: repo → Actions → "Fetch News" → Run workflow.
+      </div>
+    </div>
+  );
+
+  if (!news) return <div style={{padding:12,color:"var(--text-muted)",fontSize:11}}>Loading...</div>;
+
+  return (
+    <div style={{padding:"6px 8px",overflowY:"auto",height:"100%"}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--text-muted)"}}>Live Wire — {news.articleCount} articles</div>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{news.lastUpdatedDisplay}</div>
+      </div>
+      {news.articles.map((a, i) => (
+        <div key={i} style={{padding:"5px 0",borderBottom:"1px solid var(--border)"}}>
+          <div style={{display:"flex",alignItems:"center",gap:6,marginBottom:2}}>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,color:a.color,letterSpacing:.5,textTransform:"uppercase"}}>{a.source}</span>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:8,color:"var(--text-muted)"}}>{a.timeDisplay}</span>
+          </div>
+          <a href={a.link} target="_blank" rel="noopener noreferrer" style={{fontSize:11,color:"var(--text-primary)",textDecoration:"none",lineHeight:1.4,display:"block"}}>
+            {a.title}
+          </a>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function AISummary() {
+  const [news, setNews] = React.useState(null);
+  const [error, setError] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("news.json?t=" + Date.now())
+      .then(r => { if(!r.ok) throw new Error("Not available"); return r.json(); })
+      .then(data => setNews(data))
+      .catch(e => setError(e.message));
+  }, []);
+
+  if (error || !news) return (
+    <div style={{padding:12,color:"var(--text-muted)",fontSize:11}}>
+      {error ? "Waiting for first news fetch..." : "Loading..."}
+    </div>
+  );
+
+  const s = news.summary || {};
+
+  return (
+    <div style={{padding:10,overflowY:"auto",height:"100%"}}>
+      <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)",marginBottom:8}}>Claude Macro Analysis</div>
+      <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginBottom:10}}>Updated: {news.lastUpdatedDisplay}</div>
+
+      {/* Macro Summary */}
+      <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10,marginBottom:8}}>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:4}}>Macro Summary</div>
+        <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.macroSummary || "N/A"}</div>
+      </div>
+
+      {/* Regime Impact */}
+      <div style={{background:"#ff3d5715",border:"1px solid #ff3d5730",borderRadius:6,padding:10,marginBottom:8}}>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#ff3d57",marginBottom:4}}>Regime Impact</div>
+        <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.regimeImpact || "N/A"}</div>
+      </div>
+
+      {/* Key Signals */}
+      {s.keySignals && s.keySignals.length > 0 && (
+        <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10,marginBottom:8}}>
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:4}}>Key Signals</div>
+          {s.keySignals.map((sig, i) => (
+            <div key={i} style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,padding:"2px 0",display:"flex",gap:6}}>
+              <span style={{color:"var(--accent)",flexShrink:0}}>▸</span> {sig}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Action Items */}
+      {s.actionItems && s.actionItems.length > 0 && (
+        <div style={{background:"#2196f315",border:"1px solid #2196f330",borderRadius:6,padding:10}}>
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#2196f3",marginBottom:4}}>Action Items</div>
+          {s.actionItems.map((item, i) => (
+            <div key={i} style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,padding:"2px 0",display:"flex",gap:6}}>
+              <span style={{color:"#2196f3",flexShrink:0}}>→</span> {item}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ============================================================
+// APP
+// ============================================================
 function App() {
   const [activeSym, setActiveSym] = React.useState("SPY");
   const [rightTab, setRightTab] = React.useState("news");
   const tvSymbol = getTVSymbol(activeSym);
   const analysis = INSTRUMENT_ANALYSIS[activeSym] || DEFAULT_ANALYSIS;
   const chartUrl = `https://s.tradingview.com/widgetembed/?frameElementId=tv&symbol=${encodeURIComponent(tvSymbol)}&interval=D&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=0a0e17&studies=MASimple@tv-basicstudies!1,MASimple@tv-basicstudies!2,MASimple@tv-basicstudies!3,MACD@tv-basicstudies,RSI@tv-basicstudies&theme=dark&style=1&timezone=America%2FNew_York&withdateranges=1&hideideas=1&locale=en`;
-  const newsHtml = `<div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"all_symbols","isTransparent":true,"displayMode":"regular","width":"100%","height":"100%","colorTheme":"dark","locale":"en"}<\/script></div>`;
   const calHtml = `<div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":"100%","locale":"en","importanceFilter":"0,1"}<\/script></div>`;
   const impC = i => i==="Critical"?"#ff3d57":i==="High"?"#ffab00":"#8b9ab5";
   const impB = i => i==="Critical"?"#ff3d5720":i==="High"?"#ffab0020":"#8b9ab520";
@@ -643,18 +759,21 @@ function App() {
         {/* RIGHT */}
         <div className="sidebar-right">
           <div className="right-tabs">
-            {["news","live feed","calendar","regime"].map(t => (
+            {["wire","summary","notes","calendar","regime"].map(t => (
               <div key={t} className={`right-tab ${rightTab===t?"active":""}`} onClick={() => setRightTab(t)}>{t}</div>
             ))}
           </div>
           <div className="right-content">
-            {rightTab==="news" && (
+            {rightTab==="wire" && (
+              <NewsFeed />
+            )}
+            {rightTab==="summary" && (
+              <AISummary />
+            )}
+            {rightTab==="notes" && (
               <div className="news-manual">
                 {MACRO.news.map((n,i) => (<div className="news-item" key={i}><div className="news-cat" style={{color:n.color}}>{n.cat}</div>{n.items.map((item,j) => (<div className="news-detail" key={j}>• {item}</div>))}</div>))}
               </div>
-            )}
-            {rightTab==="live feed" && (
-              <div style={{height:"100%"}}><iframe srcDoc={newsHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" /></div>
             )}
             {rightTab==="calendar" && (
               <div style={{padding:10,overflowY:"auto",height:"100%"}}>

@@ -752,8 +752,10 @@ function App() {
                 {analysis.support.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
               </div>
             </div>
-            <div className="analysis-title">Stage Positioning</div>
-            {MACRO.stages.map(s => (<div className="stage-row" key={s.name}><span className="stage-name">{s.name}</span><span className="stage-bias" style={{color:s.color}}>{s.bias}</span><span className="stage-note">{s.note}</span></div>))}
+            <div className="analysis-title">Economic Calendar</div>
+            <div style={{borderRadius:6,overflow:"hidden",height:280,border:"1px solid var(--border)"}}>
+              <iframe srcDoc={calHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
+            </div>
           </div>
         </div>
         {/* RIGHT */}
@@ -776,14 +778,11 @@ function App() {
               </div>
             )}
             {rightTab==="calendar" && (
-              <div style={{padding:10,overflowY:"auto",height:"100%",display:"flex",flexDirection:"column"}}>
+              <div style={{padding:10,overflowY:"auto",height:"100%"}}>
                 <div className="analysis-title">Key Events</div>
-                <div style={{flexShrink:0}}>
-                  {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
-                </div>
-                <div className="analysis-title" style={{marginTop:10}}>Economic Calendar</div>
-                <div style={{flex:1,minHeight:300,borderRadius:6,overflow:"hidden"}}>
-                  <iframe srcDoc={calHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
+                {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
+                <div style={{marginTop:14,padding:8,background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6}}>
+                  <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",lineHeight:1.6}}>Full economic calendar is now in the center panel below the analysis.</div>
                 </div>
               </div>
             )}

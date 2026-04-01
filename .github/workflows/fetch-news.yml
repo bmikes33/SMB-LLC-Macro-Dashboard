@@ -1,0 +1,41 @@
+name: Fetch News & Claude Summary
+
+on:
+  schedule:
+    # Weekdays: every 30 minutes during market hours (8am-6pm ET = 13:00-23:00 UTC)
+    - cron: '*/30 13-23 * * 1-5'
+    # Weekdays: every hour outside market hours
+    - cron: '0 0-12 * * 1-5'
+    # Weekends: noon ET only (17:00 UTC Saturday and Sunday)
+    - cron: '0 17 * * 0,6'
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic tradingview-scraper
+
+      - name: Fetch news and generate summary
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python fetch_news.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git diff --staged --quiet || (git commit -m "Auto-update news $(date -u '+%Y-%m-%d %H:%M UTC')" && git push)

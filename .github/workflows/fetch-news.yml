@@ -26,7 +26,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic tradingview-scraper
+        run: pip install requests anthropic feedparser
 
       - name: Fetch news and generate summary
         env:

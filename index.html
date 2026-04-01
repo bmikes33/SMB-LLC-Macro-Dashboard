@@ -776,10 +776,13 @@ function App() {
               </div>
             )}
             {rightTab==="calendar" && (
-              <div style={{padding:10,overflowY:"auto",height:"100%"}}>
+              <div style={{padding:10,overflowY:"auto",height:"100%",display:"flex",flexDirection:"column"}}>
                 <div className="analysis-title">Key Events</div>
-                {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
-                <div style={{marginTop:12,borderRadius:6,overflow:"hidden",height:"calc(100% - 180px)"}}>
+                <div style={{flexShrink:0}}>
+                  {MACRO.calendar.map((c,i) => (<div className="cal-item" key={i}><span className="cal-date">{c.d}</span><span className="cal-event">{c.e}</span><span className="cal-imp" style={{color:impC(c.imp),background:impB(c.imp)}}>{c.imp}</span></div>))}
+                </div>
+                <div className="analysis-title" style={{marginTop:10}}>Economic Calendar</div>
+                <div style={{flex:1,minHeight:300,borderRadius:6,overflow:"hidden"}}>
                   <iframe srcDoc={calHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
                 </div>
               </div>

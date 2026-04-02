@@ -43,7 +43,7 @@
       .main { display:flex; height:calc(100vh - 36px); }
 
       /* LEFT SIDEBAR */
-      .sidebar-left { width:240px; min-width:240px; background:var(--bg-secondary); border-right:1px solid var(--border); overflow:hidden; }
+      .sidebar-left { width:280px; min-width:280px; background:var(--bg-secondary); border-right:1px solid var(--border); overflow:hidden; }
       .wl-group-header { font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); padding:8px 10px 3px; border-top:1px solid var(--border); position:sticky; top:0; background:var(--bg-secondary); z-index:2; }
       .wl-group-header:first-child { border-top:none; }
       .wl-item { display:flex; align-items:center; padding:3px 10px; cursor:pointer; transition:background .1s; gap:4px; }
@@ -516,27 +516,27 @@ const DEFAULT_ANALYSIS = {
 };
 
 const MACRO = {
-  regime: "Bear Market — Tariff Shock + Oil Spike",
+  regime: "Bear Market — Oil Spike + Stagflation Risk",
   regimeColor: "#ff3d57",
-  desc: "SPY 656 testing 200 SMA (663). VIX 24 below 25. MOVE 90 — bond stress CLEARED. Oil +13% to $112 = STAGFLATION. BTC $66.9K approaching $62.3K freeze. BMNR collapsed to $14.31.",
+  desc: "Oil +13% to $112 = stagflation. SPY 656 testing 200 SMA (663). VIX 24 below 25. MOVE 90 = bond stress cleared. BTC $66.9K approaching $62.3K freeze. BMNR collapsed to $14.31. Tariffs at 15% temp through June (SCOTUS struck IEEPA, admin seeking workaround).",
   stages: [
-    { name: "Young Growth", bias: "Avoid", color: "#ff3d57", note: "No setups. Oil spike = stagflation headwind" },
-    { name: "High Growth", bias: "Avoid", color: "#ff3d57", note: "QQQ 585 below 200 SMA (595). Tariff impact unclear" },
+    { name: "Young Growth", bias: "Avoid", color: "#ff3d57", note: "Oil spike = stagflation headwind" },
+    { name: "High Growth", bias: "Avoid", color: "#ff3d57", note: "QQQ 585 below 200 SMA (595). Guidance risk" },
     { name: "Mature Growth", bias: "Selective", color: "#ffab00", note: "Energy surging. Oil >$110 benefits XLE/LNG" },
     { name: "Maturity", bias: "Overweight", color: "#00e676", note: "XLU +0.5%, XLP +0.5%. Defensives holding" },
     { name: "Decline", bias: "Caution", color: "#ff3d57", note: "HYG sub-80. BMNR ladder deep ITM" },
   ],
   calendar: [
-    { d: "Apr 2", e: "TARIFF DEADLINE — 15% global (TODAY)", imp: "Critical" },
     { d: "Apr 3", e: "ISM Services · Jobless Claims", imp: "Medium" },
     { d: "Apr 4", e: "NFP · Unemployment · Powell", imp: "Critical" },
-    { d: "Apr 7", e: "Consumer Credit", imp: "Medium" },
     { d: "Apr 10", e: "CPI · Core CPI", imp: "Critical" },
+    { d: "Apr 30", e: "GDP Advance · PCE", imp: "Critical" },
+    { d: "June", e: "15% tariff extension deadline", imp: "High" },
   ],
   news: [
     { cat: "Oil Spike", color: "#ff3d57", items: ["Oil +13% to $112 — biggest single-day move in months", "Above $100 = stagflation threshold BREACHED", "CPI implications: energy pushes headline inflation higher", "Fed flexibility severely constrained"] },
     { cat: "Bond Vol Cleared", color: "#00e676", items: ["MOVE collapsed to 90 — below 100 for first time", "Bond stress officially cleared", "Rate vol decompression = duration equities get breathing room"] },
-    { cat: "Tariff Day", color: "#ff3d57", items: ["15% global tariffs effective today", "SPY flat at 656 — muted reaction so far", "DIA -0.09% underperforming — industrial exposure", "Real impact shows in next 1-2 weeks of earnings guidance"] },
+    { cat: "Tariff Background", color: "#ffab00", items: ["SCOTUS struck down IEEPA tariff authority (prior)", "15% temp tariffs through June while admin seeks workaround", "Prolonged uncertainty — not resolved, just extended", "Watch for alternative legal pathway before June deadline"] },
     { cat: "BMNR Crisis", color: "#b388ff", items: ["BMNR collapsed to $14.31 from $19.89 (Mar 31)", "ETH $2,067 (-3.4%), BTC $66.9K (-1.8%)", "BTC approaching $62,300 freeze level", "Entire put ladder deep ITM — restructure needed"] },
     { cat: "Rates", color: "#2196f3", items: ["10Y 4.31% — stable", "30Y 4.88% — below 5% alarm", "DXY back above 100 — dollar strengthening", "US02Y 3.80% — Fed ceiling range"] },
     { cat: "Metals Reversal", color: "#ffab00", items: ["Gold -1.8% to $4,673 — profit taking", "Silver -3.1%, Copper -1.7%", "Metals reversing while oil spikes = stagflation, not reflation"] },
@@ -549,6 +549,7 @@ const MACRO = {
     { color: "#ff3d57", text: "Oil $112 > $100 = STAGFLATION ✗" },
     { color: "#ffab00", text: "BTC $66.9K > $62,300 = ladder NOT frozen (yet)" },
     { color: "#ff3d57", text: "ETH/BTC 0.031 < 0.035 = no alt season" },
+    { color: "#ffab00", text: "15% tariffs temp through June — IEEPA workaround pending" },
   ],
 };
 

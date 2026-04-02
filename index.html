@@ -43,7 +43,7 @@
       .main { display:flex; height:calc(100vh - 36px); }
 
       /* LEFT SIDEBAR */
-      .sidebar-left { width:210px; min-width:210px; background:var(--bg-secondary); border-right:1px solid var(--border); overflow-y:auto; }
+      .sidebar-left { width:240px; min-width:240px; background:var(--bg-secondary); border-right:1px solid var(--border); overflow:hidden; }
       .wl-group-header { font-family:var(--font-mono); font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-muted); padding:8px 10px 3px; border-top:1px solid var(--border); position:sticky; top:0; background:var(--bg-secondary); z-index:2; }
       .wl-group-header:first-child { border-top:none; }
       .wl-item { display:flex; align-items:center; padding:3px 10px; cursor:pointer; transition:background .1s; gap:4px; }
@@ -109,6 +109,12 @@
       .cal-imp { font-family:var(--font-mono); font-size:9px; font-weight:700; padding:1px 5px; border-radius:2px; white-space:nowrap; }
       .threshold-row { display:flex; align-items:center; gap:6px; padding:2px 0; font-family:var(--font-mono); font-size:10px; }
       .threshold-dot { width:6px; height:6px; border-radius:50%; flex-shrink:0; }
+
+      /* Symbol selector */
+      .sym-select { font-family:var(--font-mono); font-size:11px; font-weight:700; background:var(--bg-tertiary); color:var(--accent); border:1px solid var(--border); border-radius:3px; padding:2px 6px; cursor:pointer; outline:none; appearance:none; -webkit-appearance:none; }
+      .sym-select:hover { border-color:var(--accent); }
+      .sym-select option { background:var(--bg-secondary); color:var(--text-primary); }
+      .sym-select optgroup { font-family:var(--font-mono); font-size:9px; font-weight:700; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; }
     </style>
 </head>
 <body>
@@ -676,6 +682,7 @@ function App() {
   const analysis = INSTRUMENT_ANALYSIS[activeSym] || DEFAULT_ANALYSIS;
   const chartUrl = `https://s.tradingview.com/widgetembed/?frameElementId=tv&symbol=${encodeURIComponent(tvSymbol)}&interval=D&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=0a0e17&studies=MASimple@tv-basicstudies!1,MASimple@tv-basicstudies!2,MASimple@tv-basicstudies!3,MACD@tv-basicstudies,RSI@tv-basicstudies&theme=dark&style=1&timezone=America%2FNew_York&withdateranges=1&hideideas=1&locale=en`;
   const calHtml = `<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;height:100%;overflow:hidden;background:transparent;}</style></head><body><div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":"100%","locale":"en","importanceFilter":"-1,0,1","currencyFilter":"USD"}<\/script></div></body></html>`;
+  const watchlistHtml = `<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;height:100%;overflow:hidden;background:transparent;}</style></head><body><div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":"100%","locale":"en","showFloatingTooltip":true,"plotLineColorGrowing":"rgba(0,230,118,1)","plotLineColorFalling":"rgba(255,61,87,1)","gridLineColor":"rgba(30,42,58,0)","scaleFontColor":"rgba(139,154,181,1)","belowLineFillColorGrowing":"rgba(0,230,118,0.05)","belowLineFillColorFalling":"rgba(255,61,87,0.05)","belowLineFillColorGrowingBottom":"rgba(0,230,118,0)","belowLineFillColorFallingBottom":"rgba(255,61,87,0)","symbolActiveColor":"rgba(0,229,255,0.12)","tabs":[{"title":"Volatility","symbols":[{"s":"TVC:VIX","d":"VIX"},{"s":"CBOE:VVIX","d":"VVIX"},{"s":"TVC:MOVE","d":"MOVE"}]},{"title":"Credit","symbols":[{"s":"AMEX:LQD","d":"LQD"},{"s":"AMEX:HYG","d":"HYG"}]},{"title":"Indexes","symbols":[{"s":"AMEX:SPY","d":"SPY"},{"s":"NASDAQ:QQQ","d":"QQQ"},{"s":"AMEX:DIA","d":"DIA"},{"s":"AMEX:IWM","d":"IWM"},{"s":"AMEX:RSP","d":"RSP"}]},{"title":"Factors","symbols":[{"s":"AMEX:MTUM","d":"MTUM"},{"s":"AMEX:QUAL","d":"QUAL"},{"s":"AMEX:VLUE","d":"VLUE"}]},{"title":"Rates","symbols":[{"s":"TVC:DXY","d":"DXY"},{"s":"TVC:US02Y","d":"US02Y"},{"s":"TVC:US10Y","d":"US10Y"},{"s":"TVC:US30Y","d":"US30Y"},{"s":"FX:USDJPY","d":"USDJPY"},{"s":"TVC:JP10Y","d":"JP10Y"}]},{"title":"Cmdty","symbols":[{"s":"TVC:GOLD","d":"GOLD"},{"s":"TVC:SILVER","d":"SILVER"},{"s":"AMEX:COPX","d":"COPX"},{"s":"TVC:USOIL","d":"OIL"},{"s":"TVC:NATGAS","d":"NATGAS"}]},{"title":"Crypto","symbols":[{"s":"COINBASE:BTCUSD","d":"BTC"},{"s":"COINBASE:ETHUSD","d":"ETH"},{"s":"AMEX:BMNR","d":"BMNR"}]},{"title":"Sectors","symbols":[{"s":"AMEX:XLK","d":"XLK"},{"s":"AMEX:XLI","d":"XLI"},{"s":"AMEX:XLC","d":"XLC"},{"s":"AMEX:XLF","d":"XLF"},{"s":"AMEX:XLE","d":"XLE"},{"s":"AMEX:XLU","d":"XLU"},{"s":"AMEX:XLP","d":"XLP"},{"s":"AMEX:IGV","d":"IGV"}]}]}<\/script></div></body></html>`;
   const impC = i => i==="Critical"?"#ff3d57":i==="High"?"#ffab00":"#8b9ab5";
   const impB = i => i==="Critical"?"#ff3d5720":i==="High"?"#ffab0020":"#8b9ab520";
   let activeItem = null;
@@ -689,28 +696,22 @@ function App() {
         <div className="topbar-time">{UPDATED}</div>
       </div>
       <div className="main">
-        {/* LEFT */}
+        {/* LEFT — Live TradingView Market Overview */}
         <div className="sidebar-left">
-          {Object.entries(WATCHLIST).map(([g, items]) => (
-            <React.Fragment key={g}>
-              <div className="wl-group-header">{g}</div>
-              {items.map(it => (
-                <div key={it.sym} className={`wl-item ${activeSym===it.sym?"active":""}`} onClick={() => setActiveSym(it.sym)}>
-                  <span className="wl-symbol">{it.sym}</span>
-                  <span className="wl-price">{it.price}</span>
-                  <span className="wl-change" style={{ color: it.color }}>{it.chg}</span>
-                </div>
-              ))}
-            </React.Fragment>
-          ))}
+          <iframe srcDoc={watchlistHtml} style={{width:"100%",height:"100%",border:"none"}} sandbox="allow-scripts allow-same-origin" />
         </div>
         {/* CENTER */}
         <div className="center">
           <div className="chart-header">
             {centerView==="chart" ? (
               <React.Fragment>
-                <span className="chart-symbol">{activeSym}</span>
-                {activeItem && <span style={{ fontFamily:"var(--font-mono)", fontSize:12, fontWeight:700, color:activeItem.color }}>{activeItem.price} <span style={{fontSize:10}}>{activeItem.chg}</span></span>}
+                <select className="sym-select" value={activeSym} onChange={e => setActiveSym(e.target.value)}>
+                  {Object.entries(WATCHLIST).map(([g, items]) => (
+                    <optgroup key={g} label={g}>
+                      {items.map(it => <option key={it.sym} value={it.sym}>{it.sym}</option>)}
+                    </optgroup>
+                  ))}
+                </select>
                 <span className="chart-info">{tvSymbol} · Daily</span>
               </React.Fragment>
             ) : (

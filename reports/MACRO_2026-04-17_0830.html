@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACRO REGIME · 2026-04-17 08:30</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #0f1420;
+  --bg-tertiary: #141926;
+  --border: #1e2a3a;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8b9ab5;
+  --text-muted: #4a5976;
+  --green: #00e676;
+  --green-dim: #00c85320;
+  --red: #ff3d57;
+  --red-dim: #ff3d5720;
+  --amber: #ffab00;
+  --amber-dim: #ffab0020;
+  --blue: #2196f3;
+  --accent: #00e5ff;
+  --accent-dim: #00e5ff20;
+  --purple: #b388ff;
+  --purple-dim: #b388ff20;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+
+  /* Regime-specific accent (Stagflation for this report) */
+  --regime-accent: var(--amber);
+  --regime-accent-dim: var(--amber-dim);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg-primary); color:var(--text-primary); font-family:var(--font-sans); font-size:13px; line-height:1.5; padding:24px; max-width:1100px; margin:0 auto; }
+
+.report-header { border-bottom:2px solid var(--regime-accent); padding-bottom:16px; margin-bottom:24px; }
+.report-ticker { font-family:var(--font-mono); font-size:32px; font-weight:800; color:var(--regime-accent); letter-spacing:1px; }
+.report-subtitle { font-family:var(--font-mono); font-size:11px; color:var(--text-secondary); letter-spacing:1px; text-transform:uppercase; margin-top:6px; }
+.report-meta { display:flex; gap:24px; margin-top:14px; flex-wrap:wrap; }
+.meta-item { display:flex; flex-direction:column; }
+.meta-label { font-family:var(--font-mono); font-size:9px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase; }
+.meta-value { font-family:var(--font-mono); font-size:13px; font-weight:600; color:var(--text-primary); margin-top:2px; }
+
+.section-heading { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--regime-accent); padding-bottom:6px; border-bottom:1px solid var(--border); margin:32px 0 14px; }
+.subsection-heading { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-secondary); margin:18px 0 8px; }
+.section-note { font-size:11px; color:var(--text-muted); font-style:italic; margin-bottom:10px; }
+
+table { width:100%; border-collapse:collapse; margin:8px 0 14px; background:var(--bg-secondary); border:1px solid var(--border); font-size:12px; }
+th { background:var(--bg-tertiary); color:var(--text-secondary); font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; text-align:left; padding:8px 10px; border-bottom:2px solid var(--border); }
+td { padding:7px 10px; border-bottom:1px solid var(--border); color:var(--text-primary); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+.label-cell { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--text-secondary); width:180px; background:var(--bg-tertiary); }
+
+/* Indicator table rows */
+.group-credit  { background:var(--accent-dim); color:var(--accent); }
+.group-rates   { background:var(--amber-dim); color:var(--amber); }
+.group-vol     { background:var(--purple-dim); color:var(--purple); }
+.vote-riskon   { color:var(--green); font-weight:700; }
+.vote-riskoff  { color:var(--red); font-weight:700; }
+.vote-stagflat { color:var(--amber); font-weight:700; }
+.vote-deflat   { color:var(--purple); font-weight:700; }
+.vote-reflat   { color:var(--accent); font-weight:700; }
+.vote-neutral  { color:var(--text-muted); }
+.group-cell { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-align:center; width:70px; padding:5px 6px; }
+.indicator-cell { font-family:var(--font-mono); font-size:11px; font-weight:600; width:90px; }
+.vote-cell { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; width:130px; }
+
+.pill { display:inline-block; font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:2px 8px; border-radius:3px; }
+.pill-regime   { background:var(--amber-dim); color:var(--amber); }
+.pill-high     { background:var(--green-dim); color:var(--green); }
+.pill-medium   { background:var(--amber-dim); color:var(--amber); }
+.pill-low      { background:var(--red-dim); color:var(--red); }
+
+.prose p { margin:8px 0; color:var(--text-primary); font-size:13px; }
+.prose p strong { color:var(--regime-accent); font-weight:600; }
+.prose ul { margin:8px 0 8px 20px; }
+.prose ul li { padding:4px 0; color:var(--text-primary); font-size:13px; }
+
+.threshold-row { display:flex; align-items:center; gap:10px; padding:6px 10px; border-bottom:1px solid var(--border); background:var(--bg-secondary); }
+.threshold-row:last-child { border-bottom:none; }
+.threshold-ind { font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--accent); width:80px; }
+.threshold-level { font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--regime-accent); width:100px; }
+.threshold-signal { font-size:11px; color:var(--text-secondary); flex:1; }
+
+.report-footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--border); font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:.5px; text-align:center; }
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <div class="report-ticker">STAGFLATION</div>
+  <div class="report-subtitle">Cross-Asset Macro Regime · Credit / Rates / Volatility</div>
+  <div class="report-meta">
+    <div class="meta-item"><div class="meta-label">Generated</div><div class="meta-value">2026-04-17 08:30 ET</div></div>
+    <div class="meta-item"><div class="meta-label">Regime Confidence</div><div class="meta-value" style="color:var(--amber)">MEDIUM</div></div>
+    <div class="meta-item"><div class="meta-label">Equity Bias</div><div class="meta-value" style="color:var(--amber)">BEARISH GROWTH · NEUTRAL VALUE</div></div>
+    <div class="meta-item"><div class="meta-label">Aggregate</div><div class="meta-value">0.58 Stagflation</div></div>
+  </div>
+</div>
+
+<!-- SECTION 1: DECISION SUMMARY -->
+<div class="section-heading">1 · Decision Summary</div>
+
+<div class="subsection-heading">1A · Executive Summary</div>
+<table>
+  <tr><td class="label-cell">Regime</td><td><span class="pill pill-regime">STAGFLATION</span></td></tr>
+  <tr><td class="label-cell">Regime Confidence</td><td><span class="pill pill-medium">MEDIUM</span></td></tr>
+  <tr><td class="label-cell">Equity Bias</td><td>BEARISH High Growth / long-duration tech · NEUTRAL-to-BULLISH energy, staples, quality value, commodities</td></tr>
+  <tr><td class="label-cell">Group Support</td><td>Credit 2/3 · Rates 5/8 · Vol 1/3 for Stagflation</td></tr>
+  <tr><td class="label-cell">Primary Tension</td><td>Credit & Rates aligned on Stagflation; Volatility compressed — equity vol lagging the rates and credit stress</td></tr>
+  <tr><td class="label-cell">Macro Watch</td><td>CPI release · Apr 23, 08:30 ET · HIGH impact</td></tr>
+</table>
+
+<div class="subsection-heading">1B · Indicator Readings</div>
+<div class="section-note">14 indicators scored. Each votes for one regime or NEUTRAL. Group weights: Credit 40% · Rates 40% · Vol 20%.</div>
+<table>
+  <thead><tr><th>Group</th><th>Indicator</th><th>Reading</th><th>Vote</th></tr></thead>
+  <tbody>
+    <tr><td class="group-cell group-credit">CREDIT</td><td class="indicator-cell">HYG</td><td>Below 50 SMA, grinding lower, spreads widening slowly</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-credit">CREDIT</td><td class="indicator-cell">LQD</td><td>Rolling over with yields rising; duration pain visible</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-credit">CREDIT</td><td class="indicator-cell">HYG/LQD</td><td>Ratio stable but volatile — no clear directional bias</td><td class="vote-cell vote-neutral">Neutral</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">US02Y</td><td>Sticky above 4.6%, not pricing cuts aggressively</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">US10Y</td><td>Holding 4.4–4.6% range with oil firm above $85</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">US30Y</td><td>Rising faster than 10Y — bear steepener, inflation premium building</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">2s10s</td><td>Slight negative, flat — no clear signal, watching disinversion</td><td class="vote-cell vote-neutral">Neutral</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">MOVE</td><td>112 — elevated, rates volatility running hot</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">DXY</td><td>Soft at 102, weakening despite higher yields — classic stagflation tell</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">USDJPY</td><td>152 — elevated but stable, carry still on</td><td class="vote-cell vote-riskon">Risk-On</td></tr>
+    <tr><td class="group-cell group-rates">RATES</td><td class="indicator-cell">JP10Y</td><td>1.35% — rising steadily, global rate pressure</td><td class="vote-cell vote-stagflat">Stagflation</td></tr>
+    <tr><td class="group-cell group-vol">VOL</td><td class="indicator-cell">VIX</td><td>17 — compressed despite macro stress, equity complacency</td><td class="vote-cell vote-riskon">Risk-On</td></tr>
+    <tr><td class="group-cell group-vol">VOL</td><td class="indicator-cell">VVIX</td><td>98 — below danger zone, but vol-of-vol rising</td><td class="vote-cell vote-neutral">Neutral</td></tr>
+    <tr><td class="group-cell group-vol">VOL</td><td class="indicator-cell">SPY IV</td><td>Low, elevated skew — protection being bid selectively</td><td class="vote-cell vote-neutral">Neutral</td></tr>
+  </tbody>
+</table>
+
+<div class="subsection-heading">1C · Key Thresholds to Watch</div>
+<div class="threshold-row">
+  <span class="threshold-ind">VIX</span>
+  <span class="threshold-level">&gt; 22</span>
+  <span class="threshold-signal">Vol catches up to rates/credit stress → regime flip to Risk-Off</span>
+</div>
+<div class="threshold-row">
+  <span class="threshold-ind">HYG</span>
+  <span class="threshold-level">&lt; 75</span>
+  <span class="threshold-signal">Structural credit break → escalates Stagflation toward Deflation/Risk-Off</span>
+</div>
+<div class="threshold-row">
+  <span class="threshold-ind">US10Y</span>
+  <span class="threshold-level">&gt; 4.75%</span>
+  <span class="threshold-signal">Yield breakout → amplifies duration pain, further pressure on High Growth</span>
+</div>
+<div class="threshold-row">
+  <span class="threshold-ind">DXY</span>
+  <span class="threshold-level">&lt; 100</span>
+  <span class="threshold-signal">Dollar breakdown → bullish commodities and EM, soft-Stagflation tilt</span>
+</div>
+<div class="threshold-row">
+  <span class="threshold-ind">USDJPY</span>
+  <span class="threshold-level">&gt; 155</span>
+  <span class="threshold-signal">BOJ intervention zone → yen carry unwind risk, Risk-Off catalyst</span>
+</div>
+<div class="threshold-row">
+  <span class="threshold-ind">MOVE</span>
+  <span class="threshold-level">&gt; 130</span>
+  <span class="threshold-signal">Rate vol escalation → headwind for all risk assets, flags Risk-Off transition</span>
+</div>
+
+<!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+<div class="section-heading">2 · Confidence Breakdown</div>
+<table>
+  <tr><td class="label-cell">Credit Score (40%)</td><td>Stagflation at 0.27 (2 of 3 votes → 0.67 × 0.40)</td></tr>
+  <tr><td class="label-cell">Rates Score (40%)</td><td>Stagflation at 0.25 (5 of 8 votes → 0.625 × 0.40)</td></tr>
+  <tr><td class="label-cell">Volatility Score (20%)</td><td>Stagflation at 0.00 (0 of 3 votes — Vol group dissents)</td></tr>
+  <tr><td class="label-cell">Aggregate</td><td><strong style="color:var(--amber)">Stagflation · 0.52</strong></td></tr>
+  <tr><td class="label-cell">Regime Confidence</td><td><span class="pill pill-medium">MEDIUM</span> — score in 0.45–0.64 band, Credit + Rates aligned but Vol dissenting caps at MEDIUM</td></tr>
+</table>
+
+<!-- SECTION 3: SUPPORTING ANALYSIS -->
+<div class="section-heading">3 · Supporting Analysis</div>
+
+<div class="subsection-heading">3A · Credit Read</div>
+<div class="prose">
+  <p><strong>HYG and LQD both under pressure — differently.</strong> HYG is grinding lower with spreads slowly widening, classic late-cycle credit behavior. LQD is being dragged by duration as long-end yields rise. The HYG/LQD ratio is the cleanest tell: ratio is stable but volatile, which isn't a structural breakdown yet — but it is a warning that credit stress is building. If HYG cracks the $75 level, the ratio breaks down meaningfully and credit flips from Stagflation-supportive to Risk-Off-supportive.</p>
+</div>
+
+<div class="subsection-heading">3B · Rates Read</div>
+<div class="prose">
+  <p><strong>Classic bear-steepener signature.</strong> Long end (30Y) outpacing the belly (10Y), with the front end (2Y) anchored. That combination — short-rate stickiness + long-end pressure — is the clearest rates signal for Stagflation. The dollar weakening despite higher yields is the key confirmation: in a Risk-Off scenario, rising yields would pull DXY higher. Here, the market is saying "the Fed won't cut enough, and the US growth premium is eroding," which is the exact rates signature John Murphy would classify as Stagflationary.</p>
+  <p><strong>JP10Y is the under-appreciated signal.</strong> At 1.35% and rising, BOJ yield curve control continues to fray. The upside: USDJPY at 152 shows carry is still on, which is why we don't have a Risk-Off escalation yet. The downside: any disorderly move above 155 flips the entire regime to Risk-Off overnight as yen carry unwinds. Monitor daily.</p>
+</div>
+
+<div class="subsection-heading">3C · Volatility Read</div>
+<div class="prose">
+  <p><strong>Equity vol is lagging the rates/credit stress.</strong> VIX at 17 and VVIX below 100 are Risk-On readings — but they're increasingly disconnected from what MOVE (112) and credit are saying. This is the primary cross-asset tension in this read. Historically, extended divergences between compressed equity vol and elevated rate/credit vol resolve in one of two ways: (1) rates/credit calm down and equity vol stays low (Risk-On confirms), or (2) equity vol snaps higher to catch up (Risk-Off emerges quickly). The SKEW/SPY IV profile shows protection is being bid selectively, which suggests institutional positioning is leaning toward scenario #2.</p>
+</div>
+
+<div class="subsection-heading">3D · Cross-Asset Tensions</div>
+<div class="prose">
+  <ul>
+    <li><strong>Vol vs. Rates/Credit:</strong> VIX compressed while MOVE elevated and HYG weak. Equity market is priced for continuity; fixed income is priced for stress. Resolution direction is the key question — most often, vol catches up (bearish for equities).</li>
+    <li><strong>USDJPY vs. everything else:</strong> Still elevated carry trade is the only thing keeping this from being a full Risk-Off read. A USDJPY break below 150 would cascade.</li>
+    <li><strong>2s10s neutral:</strong> Curve is giving no signal currently — it's neither steepening enough for Reflation nor inverting further for Risk-Off. Watch for a clear directional break.</li>
+  </ul>
+</div>
+
+<div class="subsection-heading">3E · Notes</div>
+<div class="prose">
+  <ul>
+    <li><strong>CPI on Apr 23</strong> is the near-term tape-moving catalyst. A hot print confirms Stagflation and likely breaks 10Y above 4.75%. A cool print opens the door to a Reflation re-think.</li>
+    <li><strong>This is the same regime the dashboard has been flagging</strong> — Stagflationary Rotation with vol compression. No regime change, but Credit/Rates scores have firmed slightly since last read while Vol remains dissenting.</li>
+    <li><strong>Trading implication:</strong> The lifecycle filter is doing its job. High Growth names (IREN, RKLB, counter-trend tech) remain suboptimal longs; Maturity-stage energy (CF, LNG) and defensive value align with the regime.</li>
+    <li><strong>What would flip the call to Risk-Off:</strong> VIX > 22 with credit breaking, OR USDJPY below 150 with JP10Y above 1.5%, OR HYG below 75.</li>
+    <li><strong>What would soften to Reflation:</strong> DXY rolling over hard, 10Y falling back to 4.0%, cyclicals (XLI/XLF) breaking out relative to defensives. Not close yet.</li>
+  </ul>
+</div>
+
+<!-- APPENDIX -->
+<div class="section-heading">Appendix · Sources</div>
+<div class="prose">
+  <ul>
+    <li>Chart data: user-provided screenshots from TradingView Premium</li>
+    <li>Macro calendar: NY Fed Economic Indicator Calendar · Trading Economics</li>
+    <li>Framework: John Murphy, <em>Intermarket Analysis</em>; SMB LLC Macro Dashboard regime taxonomy</li>
+  </ul>
+  <p style="color:var(--text-muted);font-size:11px;font-style:italic;margin-top:10px">Retrieved: April 17, 2026 · 08:30 ET</p>
+</div>
+
+<div class="report-footer">
+  SMB LLC · Danger Zone Research Console · Macro Regime Analysis Skill
+</div>
+
+</body>
+</html>

@@ -590,17 +590,23 @@ function App() {
   const [centerView, setCenterView] = React.useState("chart");
   const [activeReport, setActiveReport] = React.useState(null);
   const [activeTvSymbol, setActiveTvSymbol] = React.useState(null);
+  const [latestMacro, setLatestMacro] = React.useState(null);
 
-  // Load most recent report on mount — drives initial chart + levels panel
+  // Load reports on mount — drive initial state from newest, track latest macro separately for topbar
   React.useEffect(() => {
     fetch("reports/index.json?t=" + Date.now())
       .then(r => r.ok ? r.json() : null)
       .then(d => {
         if (!d || !d.reports || !d.reports.length) return;
-        const latest = d.reports.slice().sort((a,b) => new Date(b.date) - new Date(a.date))[0];
+        const sorted = d.reports.slice().sort((a,b) => new Date(b.date) - new Date(a.date));
+        const latest = sorted[0];
         setActiveReport(latest);
         if (latest.ticker) setActiveSym(latest.ticker);
         if (latest.tvSymbol) setActiveTvSymbol(latest.tvSymbol);
+
+        // Track latest macro for topbar regime display
+        const latestMacroReport = sorted.find(r => r.type === "macro");
+        if (latestMacroReport) setLatestMacro(latestMacroReport);
       })
       .catch(() => {});
   }, []);
@@ -623,8 +629,8 @@ function App() {
   const biasColor = (b) => {
     if (!b) return "#8b9ab5";
     const u = b.toUpperCase();
-    if (u.includes("LONG")) return "#00e676";
-    if (u.includes("SHORT")) return "#ff3d57";
+    if (u.includes("LONG") || u === "BULLISH" || u === "BULLISH-CYCLICALS") return "#00e676";
+    if (u.includes("SHORT") || u === "BEARISH") return "#ff3d57";
     return "#ffab00";
   };
   const levelWeightColor = (w) => {
@@ -638,6 +644,23 @@ function App() {
     if (w === "MEDIUM") return "#ffab0012";
     if (w === "CURRENT") return "#00e5ff12";
     return "transparent";
+  };
+  const regimeColor = (r) => {
+    if (r === "Risk-On") return "#00e676";
+    if (r === "Reflation") return "#00e5ff";
+    if (r === "Risk-Off") return "#ff3d57";
+    if (r === "Deflation") return "#b388ff";
+    if (r === "Stagflation") return "#ffab00";
+    return "#8b9ab5";
+  };
+  const voteColor = (v) => {
+    if (!v) return "#8b9ab5";
+    if (v === "Risk-On") return "#00e676";
+    if (v === "Reflation") return "#00e5ff";
+    if (v === "Risk-Off") return "#ff3d57";
+    if (v === "Deflation") return "#b388ff";
+    if (v === "Stagflation") return "#ffab00";
+    return "#8b9ab5";
   };
 
   // activeReport.tvSymbol takes priority; fall back to getTVSymbol mapping
@@ -655,7 +678,7 @@ function App() {
     <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <div className="topbar">
         <div className="topbar-logo"><div className="dot" /> Danger Zone Terminal</div>
-        <div className="topbar-regime" style={{ background: MACRO.regimeColor+"20", color: MACRO.regimeColor, border: `1px solid ${MACRO.regimeColor}40` }}>{MACRO.regime}</div>
+        <div className="topbar-regime" style={{ background: (latestMacro ? latestMacro.regimeColor : MACRO.regimeColor)+"20", color: latestMacro ? latestMacro.regimeColor : MACRO.regimeColor, border: `1px solid ${latestMacro ? latestMacro.regimeColor : MACRO.regimeColor}40` }}>{latestMacro ? latestMacro.regime : MACRO.regime}</div>
         <div className="topbar-time">{UPDATED}</div>
       </div>
       <div className="main">
@@ -692,7 +715,100 @@ function App() {
             </div>
           </div>
           {centerView==="chart" ? (
-            <React.Fragment>
+            activeReport && activeReport.type === "macro" ? (
+              /* ============ MACRO REPORT VIEW ============ */
+              <div className="analysis-scroll" style={{overflowY:"auto"}}>
+                {/* REGIME HEADER */}
+                <div style={{padding:"16px 20px",background:"var(--bg-secondary)",borderBottom:"2px solid "+regimeColor(activeReport.regime)}}>
+                  <div style={{display:"flex",alignItems:"center",gap:20,flexWrap:"wrap"}}>
+                    <div>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Macro Regime</div>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:24,fontWeight:800,color:regimeColor(activeReport.regime),letterSpacing:1,textTransform:"uppercase",marginTop:4}}>{activeReport.regime}</div>
+                    </div>
+                    <div>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Confidence</div>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,letterSpacing:.5,padding:"3px 10px",borderRadius:3,background:confColor(activeReport.regimeConfidence)+"20",color:confColor(activeReport.regimeConfidence),marginTop:4,display:"inline-block"}}>{activeReport.regimeConfidence}</div>
+                    </div>
+                    <div style={{flex:1,minWidth:200}}>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Equity Bias</div>
+                      <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:biasColor(activeReport.equityBias),letterSpacing:.5,textTransform:"uppercase",marginTop:4}}>{activeReport.equityBias}</div>
+                    </div>
+                    <a href={"reports/" + activeReport.file} target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:regimeColor(activeReport.regime),textDecoration:"none",padding:"5px 10px",border:"1px solid "+regimeColor(activeReport.regime),borderRadius:3}}>Open Full Report →</a>
+                  </div>
+                </div>
+                {/* GROUP SCORES ROW */}
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr",gap:1,background:"var(--border)"}}>
+                  <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Credit (40%)</div>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--accent)",marginTop:2}}>{(activeReport.creditScore !== undefined ? activeReport.creditScore.toFixed(2) : "—")}</div>
+                  </div>
+                  <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Rates (40%)</div>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--amber)",marginTop:2}}>{(activeReport.ratesScore !== undefined ? activeReport.ratesScore.toFixed(2) : "—")}</div>
+                  </div>
+                  <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Vol (20%)</div>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--purple)",marginTop:2}}>{(activeReport.volScore !== undefined ? activeReport.volScore.toFixed(2) : "—")}</div>
+                  </div>
+                  <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Aggregate</div>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:regimeColor(activeReport.regime),marginTop:2}}>{(activeReport.aggregateScore !== undefined ? activeReport.aggregateScore.toFixed(2) : "—")}</div>
+                  </div>
+                </div>
+                {/* TENSION CALLOUT */}
+                {activeReport.primaryTension && (
+                  <div style={{padding:"10px 20px",background:"var(--bg-tertiary)",borderBottom:"1px solid var(--border)"}}>
+                    <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase",marginBottom:3}}>Primary Cross-Asset Tension</div>
+                    <div style={{fontSize:12,color:"var(--text-secondary)",lineHeight:1.5}}>{activeReport.primaryTension}</div>
+                  </div>
+                )}
+                {/* INDICATOR GRID */}
+                {activeReport.indicators && activeReport.indicators.length > 0 && (
+                  <div style={{padding:"12px 20px"}}>
+                    <div className="analysis-title" style={{marginBottom:8}}>Indicator Readings</div>
+                    <table style={{width:"100%",borderCollapse:"collapse",fontSize:12}}>
+                      <thead>
+                        <tr style={{borderBottom:"1px solid var(--border)"}}>
+                          <th style={{textAlign:"left",padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",width:70}}>Group</th>
+                          <th style={{textAlign:"left",padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",width:90}}>Indicator</th>
+                          <th style={{textAlign:"left",padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase"}}>Reading</th>
+                          <th style={{textAlign:"left",padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",width:130}}>Vote</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {activeReport.indicators.map((ind,i) => {
+                          const groupBg = ind.group === "Credit" ? "#00e5ff12" : ind.group === "Rates" ? "#ffab0012" : "#b388ff12";
+                          const groupColor = ind.group === "Credit" ? "var(--accent)" : ind.group === "Rates" ? "var(--amber)" : "var(--purple)";
+                          return (
+                            <tr key={i} style={{borderBottom:"1px solid var(--border)"}}>
+                              <td style={{padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:groupColor,letterSpacing:.8,textTransform:"uppercase",background:groupBg,textAlign:"center"}}>{ind.group}</td>
+                              <td style={{padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:11,fontWeight:600,color:"var(--text-primary)"}}>{ind.name}</td>
+                              <td style={{padding:"5px 6px",fontSize:11,color:"var(--text-secondary)"}}>{ind.reading}</td>
+                              <td style={{padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:voteColor(ind.vote),letterSpacing:.5,textTransform:"uppercase"}}>{ind.vote || "—"}</td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {/* THRESHOLDS */}
+                {activeReport.thresholds && activeReport.thresholds.length > 0 && (
+                  <div style={{padding:"12px 20px"}}>
+                    <div className="analysis-title" style={{marginBottom:8}}>Key Thresholds to Watch</div>
+                    {activeReport.thresholds.map((t,i) => (
+                      <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"6px 10px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
+                        <span style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:"var(--accent)",width:80}}>{t.indicator}</span>
+                        <span style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:regimeColor(activeReport.regime),width:100}}>{t.level}</span>
+                        <span style={{fontSize:11,color:"var(--text-secondary)",flex:1}}>{t.signal}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              /* ============ TA REPORT VIEW (existing) ============ */
+              <React.Fragment>
               <div className="chart-container">
                 <iframe key={tvSymbol} src={chartUrl} allowTransparency="true" allowFullScreen />
               </div>
@@ -775,6 +891,7 @@ function App() {
                 )}
               </div>
             </React.Fragment>
+            )
           ) : (
             <div style={{flex:1,display:"flex",flexDirection:"column",overflow:"hidden"}}>
               <div style={{padding:"8px 14px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
@@ -875,21 +992,40 @@ function Reports({ onSelect, activeFile }) {
       )}
       {list.map((r,i) => {
         const isActive = activeFile === r.file;
+        const isMacro = r.type === "macro";
+        const regimeColors = { "Risk-On":"#00e676","Reflation":"#00e5ff","Risk-Off":"#ff3d57","Deflation":"#b388ff","Stagflation":"#ffab00" };
+        const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
+        const accentColor = isMacro ? regColor : "var(--accent)";
         return (
           <div key={i}
-               style={{padding:"8px 0 8px 8px",borderBottom:"1px solid var(--border)",cursor:"pointer",marginLeft:-8,marginRight:-8,paddingLeft:8,paddingRight:8,borderLeft:isActive?"2px solid var(--accent)":"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
+               style={{padding:"8px 0 8px 8px",borderBottom:"1px solid var(--border)",cursor:"pointer",marginLeft:-8,marginRight:-8,paddingLeft:8,paddingRight:8,borderLeft:isActive?"2px solid "+accentColor:"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
                onClick={() => onSelect && onSelect(r)}
                onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
                onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = "transparent"; }}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
-              <div style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:"var(--accent)",letterSpacing:.5}}>{r.ticker}</div>
+              <div style={{display:"flex",alignItems:"center",gap:6}}>
+                <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:isMacro?regColor+"25":"var(--accent)20",color:accentColor,textTransform:"uppercase"}}>{isMacro?"MACRO":"TA"}</span>
+                <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:accentColor,letterSpacing:.5}}>{isMacro ? r.regime : r.ticker}</span>
+              </div>
               <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{fmtDate(r.date)}</div>
             </div>
             <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
-              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",color:biasColor(r.bias)}}>{r.bias}</span>
-              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
-              {r.bullScore !== undefined && (
-                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>{r.bullScore}/{r.scoreMax} bull · {r.bearScore}/{r.scoreMax} bear</span>
+              {!isMacro && (
+                <React.Fragment>
+                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",color:biasColor(r.bias)}}>{r.bias}</span>
+                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
+                  {r.bullScore !== undefined && (
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>{r.bullScore}/{r.scoreMax} bull</span>
+                  )}
+                </React.Fragment>
+              )}
+              {isMacro && (
+                <React.Fragment>
+                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.regimeConfidence)+"20",color:confColor(r.regimeConfidence)}}>{r.regimeConfidence}</span>
+                  {r.aggregateScore !== undefined && (
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>agg {r.aggregateScore.toFixed(2)}</span>
+                  )}
+                </React.Fragment>
               )}
             </div>
             <div style={{marginTop:3}}>

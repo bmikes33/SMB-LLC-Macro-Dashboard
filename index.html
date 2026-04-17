@@ -805,6 +805,24 @@ function App() {
                     ))}
                   </div>
                 )}
+                {/* STAGE POSITIONING */}
+                {activeReport.stagePositioning && activeReport.stagePositioning.length > 0 && (
+                  <div style={{padding:"12px 20px"}}>
+                    <div className="analysis-title" style={{marginBottom:8}}>Lifecycle Stage Positioning</div>
+                    <div style={{fontSize:11,color:"var(--text-muted)",fontStyle:"italic",marginBottom:8}}>Equity tilts implied by the regime call.</div>
+                    {activeReport.stagePositioning.map((s,i) => {
+                      const biasColors = { AVOID:"#ff3d57", UNDERWEIGHT:"#ffab00", NEUTRAL:"#8b9ab5", OVERWEIGHT:"#00e676", FAVORED:"#00e5ff" };
+                      const bc = biasColors[s.bias] || "#8b9ab5";
+                      return (
+                        <div key={i} style={{display:"flex",alignItems:"center",gap:12,padding:"6px 10px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:600,color:"var(--text-primary)",width:140}}>{s.stage}</span>
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:bc,letterSpacing:.5,textTransform:"uppercase",width:110,padding:"1px 6px",borderRadius:2,background:bc+"20",textAlign:"center"}}>{s.bias}</span>
+                          <span style={{fontSize:11,color:"var(--text-secondary)",flex:1}}>{s.note}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             ) : (
               /* ============ TA REPORT VIEW (existing) ============ */
@@ -907,7 +925,7 @@ function App() {
         {/* RIGHT */}
         <div className="sidebar-right">
           <div className="right-tabs">
-            {["wire","summary","notes","regime"].map(t => (
+            {["wire","summary"].map(t => (
               <div key={t} className={`right-tab ${rightTab===t?"active":""}`} onClick={() => setRightTab(t)}>{t}</div>
             ))}
           </div>
@@ -917,26 +935,6 @@ function App() {
             )}
             {rightTab==="summary" && (
               <AISummary />
-            )}
-            {rightTab==="notes" && (
-              <div className="news-manual">
-                {MACRO.news.map((n,i) => (<div className="news-item" key={i}><div className="news-cat" style={{color:n.color}}>{n.cat}</div>{n.items.map((item,j) => (<div className="news-detail" key={j}>• {item}</div>))}</div>))}
-              </div>
-            )}
-            {rightTab==="regime" && (
-              <div className="regime-panel">
-                <div className="regime-box" style={{background:MACRO.regimeColor+"15",border:`1px solid ${MACRO.regimeColor}30`}}>
-                  <div className="regime-label" style={{color:MACRO.regimeColor}}>Current Regime</div>
-                  <div className="regime-value" style={{color:"#e2e8f0"}}>{MACRO.regime}</div>
-                  <div className="regime-desc">{MACRO.desc}</div>
-                </div>
-                <div className="analysis-title">Stage Positioning</div>
-                {MACRO.stages.map(s => (<div className="stage-row" key={s.name} style={{padding:"4px 0"}}><span className="stage-name">{s.name}</span><span className="stage-bias" style={{color:s.color}}>{s.bias}</span><span className="stage-note">{s.note}</span></div>))}
-                <div className="analysis-title" style={{marginTop:12}}>Key Thresholds</div>
-                <div className="info-box">
-                  {MACRO.thresholds.map((t,i) => (<div className="threshold-row" key={i}><div className="threshold-dot" style={{background:t.color}} /><span style={{color:"var(--text-secondary)"}}>{t.text}</span></div>))}
-                </div>
-              </div>
             )}
           </div>
         </div>

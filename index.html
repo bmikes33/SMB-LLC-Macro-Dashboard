@@ -659,6 +659,16 @@ function App() {
         <div className="topbar-time">{UPDATED}</div>
       </div>
       <div className="main">
+        {/* LEFT — Reports */}
+        <div className="sidebar-left" style={{display:"flex",flexDirection:"column"}}>
+          <div style={{padding:"10px 12px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
+            <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)"}}>TA Reports</div>
+            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginTop:2}}>Click to load chart + levels</div>
+          </div>
+          <div style={{flex:1,overflowY:"auto"}}>
+            <Reports onSelect={handleReportSelect} activeFile={activeReport && activeReport.file} />
+          </div>
+        </div>
         {/* CENTER */}
         <div className="center">
           <div className="chart-header">
@@ -780,7 +790,7 @@ function App() {
         {/* RIGHT */}
         <div className="sidebar-right">
           <div className="right-tabs">
-            {["wire","summary","notes","regime","reports"].map(t => (
+            {["wire","summary","notes","regime"].map(t => (
               <div key={t} className={`right-tab ${rightTab===t?"active":""}`} onClick={() => setRightTab(t)}>{t}</div>
             ))}
           </div>
@@ -810,9 +820,6 @@ function App() {
                   {MACRO.thresholds.map((t,i) => (<div className="threshold-row" key={i}><div className="threshold-dot" style={{background:t.color}} /><span style={{color:"var(--text-secondary)"}}>{t.text}</span></div>))}
                 </div>
               </div>
-            )}
-            {rightTab==="reports" && (
-              <Reports onSelect={handleReportSelect} activeFile={activeReport && activeReport.file} />
             )}
           </div>
         </div>
@@ -860,9 +867,8 @@ function Reports({ onSelect, activeFile }) {
 
   return (
     <div className="news-manual">
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,paddingBottom:6,borderBottom:"1px solid var(--border)"}}>
-        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--text-muted)"}}>TA Reports — {list.length}</div>
-        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>Click to load</div>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4,paddingBottom:4}}>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:.5}}>{list.length} report{list.length===1?"":"s"}</div>
       </div>
       {list.length === 0 && (
         <div style={{color:"var(--text-muted)",fontSize:11,padding:"8px 0"}}>No reports yet.</div>

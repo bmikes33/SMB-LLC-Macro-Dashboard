@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSFT TA · 2026-04-16 00:05</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #0f1420;
+  --bg-tertiary: #141926;
+  --border: #1e2a3a;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8b9ab5;
+  --text-muted: #4a5976;
+  --green: #00e676;
+  --green-dim: #00c85320;
+  --red: #ff3d57;
+  --red-dim: #ff3d5720;
+  --amber: #ffab00;
+  --amber-dim: #ffab0020;
+  --blue: #2196f3;
+  --accent: #00e5ff;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg-primary); color:var(--text-primary); font-family:var(--font-sans); font-size:13px; line-height:1.5; padding:24px; max-width:1100px; margin:0 auto; }
+
+/* Header */
+.report-header { border-bottom:2px solid var(--accent); padding-bottom:16px; margin-bottom:24px; }
+.report-ticker { font-family:var(--font-mono); font-size:32px; font-weight:800; color:var(--accent); letter-spacing:1px; }
+.report-subtitle { font-family:var(--font-mono); font-size:11px; color:var(--text-secondary); letter-spacing:1px; text-transform:uppercase; margin-top:6px; }
+.report-meta { display:flex; gap:24px; margin-top:14px; flex-wrap:wrap; }
+.meta-item { display:flex; flex-direction:column; }
+.meta-label { font-family:var(--font-mono); font-size:9px; color:var(--text-muted); letter-spacing:1.5px; text-transform:uppercase; }
+.meta-value { font-family:var(--font-mono); font-size:13px; font-weight:600; color:var(--text-primary); margin-top:2px; }
+.meta-value.bias-long { color:var(--green); }
+.meta-value.bias-short { color:var(--red); }
+.meta-value.bias-neutral { color:var(--amber); }
+.meta-value.conf-high { color:var(--green); }
+.meta-value.conf-medium { color:var(--amber); }
+.meta-value.conf-low, .meta-value.conf-noedge { color:var(--red); }
+
+/* Section headers */
+.section-heading { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--accent); padding-bottom:6px; border-bottom:1px solid var(--border); margin:32px 0 14px; }
+.subsection-heading { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--text-secondary); margin:18px 0 8px; }
+.section-note { font-size:11px; color:var(--text-muted); font-style:italic; margin-bottom:10px; }
+
+/* Tables */
+table { width:100%; border-collapse:collapse; margin:8px 0 14px; background:var(--bg-secondary); border:1px solid var(--border); font-size:12px; }
+th { background:var(--bg-tertiary); color:var(--text-secondary); font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; text-align:left; padding:8px 10px; border-bottom:2px solid var(--border); }
+td { padding:7px 10px; border-bottom:1px solid var(--border); color:var(--text-primary); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+.label-cell { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--text-secondary); width:180px; background:var(--bg-tertiary); }
+.price-cell { font-family:var(--font-mono); font-weight:600; }
+
+/* Level weight rows */
+tr.heavy td { background:var(--red-dim); }
+tr.heavy td.weight-cell { color:var(--red); font-weight:700; }
+tr.heavy td.price-cell { color:var(--red); font-weight:700; }
+tr.medium td { background:var(--amber-dim); }
+tr.medium td.weight-cell { color:var(--amber); font-weight:700; }
+tr.light td { background:transparent; }
+tr.light td.weight-cell { color:var(--text-muted); }
+tr.current td { background:var(--green-dim); border-top:1px solid var(--green); border-bottom:1px solid var(--green); }
+tr.current td.price-cell { color:var(--green); font-weight:700; }
+
+.weight-cell { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:1px; text-align:center; width:80px; }
+
+/* CSP tier colors */
+tr.tier1 td { background:var(--green-dim); }
+tr.tier1 td.tier-cell { color:var(--green); font-weight:700; }
+tr.tier2 td { background:var(--amber-dim); }
+tr.tier2 td.tier-cell { color:var(--amber); font-weight:700; }
+tr.avoid td { background:var(--red-dim); }
+tr.avoid td.tier-cell { color:var(--red); font-weight:700; }
+
+/* Prose blocks */
+.prose p { margin:8px 0; color:var(--text-primary); font-size:13px; }
+.prose p strong { color:var(--accent); font-weight:600; }
+.prose ul { margin:8px 0 8px 20px; }
+.prose ul li { padding:4px 0; color:var(--text-primary); font-size:13px; }
+
+/* Bias/confidence pill coloring for inline */
+.pill { display:inline-block; font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:2px 8px; border-radius:3px; }
+.pill.heavy { background:var(--red-dim); color:var(--red); }
+.pill.medium { background:var(--amber-dim); color:var(--amber); }
+.pill.light { background:var(--bg-tertiary); color:var(--text-muted); }
+
+/* Footer */
+.report-footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--border); font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:.5px; text-align:center; }
+
+/* Print-friendly */
+@media print {
+  body { padding:12px; }
+  .report-header { page-break-after:avoid; }
+  table { page-break-inside:avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <div class="report-ticker">MSFT</div>
+  <div class="report-subtitle">Multi-Timeframe Technical Analysis · Weekly · Daily · 4h · 30m</div>
+  <div class="report-meta">
+    <div class="meta-item"><div class="meta-label">Generated</div><div class="meta-value">2026-04-16 00:05 ET</div></div>
+    <div class="meta-item"><div class="meta-label">Bias</div><div class="meta-value bias-long">LONG TACTICAL</div></div>
+    <div class="meta-item"><div class="meta-label">Confidence</div><div class="meta-value conf-medium">MEDIUM</div></div>
+    <div class="meta-item"><div class="meta-label">Options Expiry</div><div class="meta-value">APR 24 (8D)</div></div>
+  </div>
+</div>
+
+<!-- SECTION 1: DECISION SUMMARY -->
+<div class="section-heading">1 · Decision Summary</div>
+<div class="section-note">Three tables below contain all decision-critical information. Supporting analysis follows in Section 3.</div>
+
+<div class="subsection-heading">1A · Executive Summary</div>
+<table>
+  <tr><td class="label-cell">Bias</td><td>LONG tactical (counter-trend rally within weekly downtrend)</td></tr>
+  <tr><td class="label-cell">Final Confidence</td><td><span class="pill medium">MEDIUM</span></td></tr>
+  <tr><td class="label-cell">Invalidation</td><td class="price-cell">$400 short-term / $375 structural</td></tr>
+  <tr><td class="label-cell">Entry Zone</td><td class="price-cell">$400–$405 (HEAVY — former call wall flipping to support)</td></tr>
+  <tr><td class="label-cell">Exit Zone</td><td class="price-cell">$430–$435 (HEAVY — 4h 200 SMA + call OI cluster)</td></tr>
+  <tr><td class="label-cell">Macro Watch</td><td>MSFT earnings Apr 29 · HIGH · 13D out · OUTSIDE Apr 24 expiry</td></tr>
+</table>
+
+<div class="subsection-heading">1B · Key Levels</div>
+<div class="section-note">Sorted top-to-bottom by price. Weighted by confluence of tools.</div>
+<table>
+  <thead><tr><th>Weight</th><th style="width:130px">Price</th><th>Sources</th></tr></thead>
+  <tbody>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$472.69</td><td>Daily 200 SMA (major overhead, not in near-term play)</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$450</td><td>Call OI 1,892</td></tr>
+    <tr class="heavy"><td class="weight-cell">HEAVY</td><td class="price-cell">$430–$435</td><td>4h 200 SMA ($433.44) + Call OI 2,057 ($430) + extended target confluence</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$425</td><td>Call OI 1,533</td></tr>
+    <tr class="light"><td class="weight-cell">LIGHT</td><td class="price-cell">$423.25</td><td>30m upper VWAP band (+2.5σ)</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$420</td><td>Call OI 3,941 + round number</td></tr>
+    <tr class="current"><td class="weight-cell">← AH</td><td class="price-cell">$417.41</td><td>Current after-hours print</td></tr>
+    <tr class="light"><td class="weight-cell">LIGHT</td><td class="price-cell">$416.19</td><td>4h upper VWAP band</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$415</td><td>Call OI 2,514</td></tr>
+    <tr class="light"><td class="weight-cell">LIGHT</td><td class="price-cell">$411.77</td><td>Daily upper VWAP band</td></tr>
+    <tr class="current"><td class="weight-cell">← CLOSE</td><td class="price-cell">$411.22</td><td>Regular session close</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$410</td><td>Call OI 4,775</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$405</td><td>Call OI 4,024</td></tr>
+    <tr class="heavy"><td class="weight-cell">HEAVY</td><td class="price-cell">$400</td><td>Massive call wall (10,879 OI) + prior resistance — breakout level, likely flips to support</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$395</td><td>Call OI 4,584</td></tr>
+    <tr class="medium"><td class="weight-cell">MEDIUM</td><td class="price-cell">$391.91</td><td>Daily 50 SMA</td></tr>
+    <tr class="light"><td class="weight-cell">LIGHT</td><td class="price-cell">$389.11</td><td>30m 50 SMA</td></tr>
+    <tr class="heavy"><td class="weight-cell">HEAVY</td><td class="price-cell">$375–$385</td><td>Put walls $375 (1,757) + $380 (1,290) + $385 (1,003) + Weekly 200 SMA ($380.16)</td></tr>
+    <tr class="light"><td class="weight-cell">LIGHT</td><td class="price-cell">$345.75</td><td>Daily lower VWAP band (deep invalidation)</td></tr>
+  </tbody>
+</table>
+
+<div class="subsection-heading">1C · CSP Strike Zones</div>
+<div class="section-note">Assignment-neutral, cost-basis focus. Skill identifies zones; user chooses delta, expiry, and sizing.</div>
+<table>
+  <thead><tr><th style="width:130px">Tier</th><th style="width:130px">Strike Zone</th><th>Confluence</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr class="tier1"><td class="tier-cell">TIER 1</td><td class="price-cell">$375–$380</td><td>Put walls + Weekly 200 SMA stacked — HEAVY structural floor</td><td>Assignment puts you at the most defended price on the chart. $375 bid $0.54 / $380 bid $0.77. Delta ~0.04–0.06.</td></tr>
+    <tr class="tier2"><td class="tier-cell">TIER 2</td><td class="price-cell">$385–$390</td><td>Put walls $385 (1,003) + $390 (1,114)</td><td>Premium $1.12 / $1.64 bid. Delta 0.08–0.11. Still below critical $400 pivot.</td></tr>
+    <tr class="avoid"><td class="tier-cell">AVOID</td><td class="price-cell">Above $395</td><td>—</td><td>Delta climbs fast. $395 is -0.15, $400 is -0.21. Too much assignment risk.</td></tr>
+  </tbody>
+</table>
+
+<div class="prose">
+  <p><strong>Strike Selection:</strong> At MEDIUM Final Confidence, default to Tier 1 ($375–$380). Premium is thin but assignment there means shares at the structural weekly 200 SMA — ideal cost basis. $385 is the aggressive pivot if you want more premium.</p>
+</div>
+
+<!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+<div class="section-heading">2 · Confidence Breakdown</div>
+<table>
+  <tr><td class="label-cell">TA Confidence</td><td><span class="pill medium">MEDIUM</span> &nbsp; LTF all aligned bullish with momentum confirming; weekly still bearish; extremely stretched on 4h/30m RSI; no Fibs drawn caps at MEDIUM</td></tr>
+  <tr><td class="label-cell">Fundamental Context</td><td>Not provided</td></tr>
+  <tr><td class="label-cell">Fundamental Modifier</td><td>Not applied</td></tr>
+  <tr><td class="label-cell">Macro Calendar</td><td>Retail Sales today (priced in); MSFT earnings Apr 29 (13D out, outside Apr 24 expiry)</td></tr>
+  <tr><td class="label-cell">Macro Modifier</td><td>No modifier on Apr 24 chain (earnings outside expiry); longer-dated positions face binary risk</td></tr>
+  <tr><td class="label-cell">Final Confidence</td><td><span class="pill medium">MEDIUM</span></td></tr>
+</table>
+
+<!-- SECTION 3: SUPPORTING ANALYSIS -->
+<div class="section-heading">3 · Supporting Analysis</div>
+
+<div class="subsection-heading">3A · Higher Timeframe Context</div>
+<div class="prose">
+  <p><strong>Weekly:</strong> Deep downtrend with violent +10.88% capitulation bounce this week. Price reclaimed 200 SMA ($380.16). RVWAP $422.30 overhead. 50 SMA $469.04 descending. RSI 45.16 rising from oversold. MACD histogram -24.32 — still deeply negative but earliest curl visible. <strong>Weekly bias: BEARISH regime attempting to base — not yet confirmed.</strong></p>
+  <p><strong>Daily:</strong> Price above daily RVWAP ($378.76, rising), above 50 SMA ($391.91), far below descending 200 SMA ($472.69). Pushed above upper VWAP band ($411.77). RSI 67.21 elevated, MACD flipped positive and expanding. <strong>Daily bias: BULLISH short-term.</strong> No Fibs drawn — confidence capped at MEDIUM.</p>
+</div>
+
+<div class="subsection-heading">3B · Current Timeframe Read</div>
+<div class="prose">
+  <ul>
+    <li><strong>Regime:</strong> Strong breakout, band width expanding across 4h/30m. Extended.</li>
+    <li><strong>VWAP (30m):</strong> Price at/above upper band ($423.25 intraday high); VWAP line $404.75 rising.</li>
+    <li><strong>MAs (30m):</strong> 50 SMA ($389.11) above 200 SMA ($374.05), both rising.</li>
+    <li><strong>Momentum:</strong> RSI 75.45 (30m), 77.82 (4h) — deeply overbought both TFs. MACD expanding positive on all LTFs.</li>
+    <li><strong>Fib reference:</strong> Not drawn on daily or weekly — significant gap, caps TA confidence at MEDIUM.</li>
+  </ul>
+</div>
+
+<div class="subsection-heading">3C · Confluence Zones</div>
+<div class="prose">
+  <p><strong>$430–$435 Resistance (HEAVY):</strong> 4h 200 SMA + $430 call OI — primary upside exit zone.</p>
+  <p><strong>$400 Pivot (HEAVY):</strong> Former massive call wall, now tested and broken. Acts as flip support/resistance. Breakout confirmation level.</p>
+  <p><strong>$375–$385 Support (HEAVY):</strong> Three stacked put walls + Weekly 200 SMA. Structural floor and prime CSP territory.</p>
+</div>
+
+<div class="subsection-heading">3D · Divergences</div>
+<div class="prose">
+  <p>No LTF divergences — RSI and MACD confirm the bullish breakout on 30m/4h/daily.</p>
+  <p><strong>Weekly MACD histogram remains -24.32</strong> while price made a violent higher low — an early bullish divergence setup on the weekly, but not yet confirmed. Watch for histogram curl.</p>
+</div>
+
+<div class="subsection-heading">3E · Notes</div>
+<div class="prose">
+  <ul>
+    <li>The $400 level flipping from massive call wall to support is the structural story. Dealer gamma dynamics: shorts being squeezed as price went through $400, which drove the magnitude of this bounce.</li>
+    <li>After-hours $417.41 extends the breakout; if tomorrow opens and holds above $415, the daily breakout is confirmed and $420–$425 comes quickly.</li>
+    <li>Fade setup only triggers on a rejection back under $400 with volume — which would be a bull trap and invalidate the entire LTF structure.</li>
+    <li>Earnings Apr 29 is the tape-moving event. Any position with expiry beyond Apr 24 carries binary risk. Apr 24 contracts are "safe" from earnings directly but IV skew is already building in anticipation.</li>
+  </ul>
+</div>
+
+<!-- SECTION 4: OPTIONS CHAIN DETAIL -->
+<div class="section-heading">4 · Options Chain Detail</div>
+<div class="prose">
+  <p><strong>Source:</strong> User-provided screenshot · Apr 24 expiry · 8D · IV 33.5%</p>
+  <ul>
+    <li><strong>Call wall:</strong> $400 (10,879 OI) — now BELOW price, likely flipped support</li>
+    <li><strong>Secondary calls:</strong> $410 (4,775), $395 (4,584), $405 (4,024), $420 (3,941)</li>
+    <li><strong>Put wall:</strong> $375 (1,757) — primary support</li>
+    <li><strong>Secondary puts:</strong> $380 (1,290), $390 (1,114), $385 (1,003)</li>
+    <li><strong>Max pain estimate:</strong> $400–$405 zone given combined OI gravity</li>
+    <li><strong>Notable:</strong> IV contained at 33.5% for 8D because earnings is after expiry; post-Apr 24 weeklies will show much higher IV</li>
+  </ul>
+</div>
+
+<!-- APPENDIX -->
+<div class="section-heading">Appendix · Sources</div>
+<div class="prose">
+  <ul>
+    <li>NY Fed Economic Indicator Calendar · <code>newyorkfed.org/research/calendars/nationalecon_cal</code></li>
+    <li>Yahoo Finance Economic Calendar</li>
+    <li>MSFT earnings date: Microsoft Investor Relations (April 8, 2026 announcement)</li>
+    <li>Options chain: User-provided screenshot from broker platform</li>
+  </ul>
+  <p style="color:var(--text-muted);font-size:11px;font-style:italic;margin-top:10px">Retrieved: April 16, 2026</p>
+</div>
+
+<div class="report-footer">
+  SMB LLC · Danger Zone Research Console · TA Chart Analysis Skill
+</div>
+
+</body>
+</html>

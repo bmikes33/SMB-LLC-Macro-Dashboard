@@ -84,6 +84,18 @@ tr:last-child td { border-bottom:none; }
 .threshold-level { font-family:var(--font-mono); font-size:11px; font-weight:700; color:var(--regime-accent); width:100px; }
 .threshold-signal { font-size:11px; color:var(--text-secondary); flex:1; }
 
+/* Stage Positioning */
+.stage-row { display:flex; align-items:center; gap:12px; padding:7px 10px; border-bottom:1px solid var(--border); background:var(--bg-secondary); }
+.stage-row:last-child { border-bottom:none; }
+.stage-name { font-family:var(--font-mono); font-size:11px; font-weight:600; color:var(--text-primary); width:140px; }
+.stage-bias { font-family:var(--font-mono); font-size:10px; font-weight:700; letter-spacing:.5px; text-transform:uppercase; width:110px; padding:2px 8px; border-radius:2px; text-align:center; }
+.stage-note { font-size:11px; color:var(--text-secondary); flex:1; }
+.bias-favored     { color:var(--accent);  background:var(--accent-dim); }
+.bias-overweight  { color:var(--green);   background:var(--green-dim); }
+.bias-neutral     { color:var(--text-secondary); background:var(--bg-tertiary); }
+.bias-underweight { color:var(--amber);   background:var(--amber-dim); }
+.bias-avoid       { color:var(--red);     background:var(--red-dim); }
+
 .report-footer { margin-top:40px; padding-top:16px; border-top:1px solid var(--border); font-family:var(--font-mono); font-size:10px; color:var(--text-muted); letter-spacing:.5px; text-align:center; }
 </style>
 </head>
@@ -165,6 +177,34 @@ tr:last-child td { border-bottom:none; }
   <span class="threshold-ind">MOVE</span>
   <span class="threshold-level">&gt; 130</span>
   <span class="threshold-signal">Rate vol escalation → headwind for all risk assets, flags Risk-Off transition</span>
+</div>
+
+<div class="subsection-heading">1D · Lifecycle Stage Positioning</div>
+<div class="section-note">Equity tilts implied by the Stagflation regime call.</div>
+<div class="stage-row">
+  <span class="stage-name">Young Growth</span>
+  <span class="stage-bias bias-avoid">AVOID</span>
+  <span class="stage-note">High beta, no cash flow — crushed in stagflation. IREN, RKLB-style names.</span>
+</div>
+<div class="stage-row">
+  <span class="stage-name">High Growth</span>
+  <span class="stage-bias bias-underweight">UNDERWEIGHT</span>
+  <span class="stage-note">Duration-sensitive, multiple compression. QQQ, IGV, AI-HPC names — skeptical of longs.</span>
+</div>
+<div class="stage-row">
+  <span class="stage-name">Mature Growth</span>
+  <span class="stage-bias bias-neutral">NEUTRAL</span>
+  <span class="stage-note">Quality cohort — selective entries on structural pullbacks. MSFT, AAPL, GOOGL.</span>
+</div>
+<div class="stage-row">
+  <span class="stage-name">Maturity</span>
+  <span class="stage-bias bias-overweight">OVERWEIGHT</span>
+  <span class="stage-note">Energy, staples, defensives — regime fits. CF, LNG, XLE, XLP. Core allocation.</span>
+</div>
+<div class="stage-row">
+  <span class="stage-name">Decline</span>
+  <span class="stage-bias bias-avoid">AVOID</span>
+  <span class="stage-note">Structural headwinds compound with regime. Media, legacy retail, auto OEMs.</span>
 </div>
 
 <!-- SECTION 2: CONFIDENCE BREAKDOWN -->

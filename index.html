@@ -588,7 +588,60 @@ function App() {
   const [activeSym, setActiveSym] = React.useState("SPY");
   const [rightTab, setRightTab] = React.useState("wire");
   const [centerView, setCenterView] = React.useState("chart");
-  const tvSymbol = getTVSymbol(activeSym);
+  const [activeReport, setActiveReport] = React.useState(null);
+  const [activeTvSymbol, setActiveTvSymbol] = React.useState(null);
+
+  // Load most recent report on mount — drives initial chart + levels panel
+  React.useEffect(() => {
+    fetch("reports/index.json?t=" + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (!d || !d.reports || !d.reports.length) return;
+        const latest = d.reports.slice().sort((a,b) => new Date(b.date) - new Date(a.date))[0];
+        setActiveReport(latest);
+        if (latest.ticker) setActiveSym(latest.ticker);
+        if (latest.tvSymbol) setActiveTvSymbol(latest.tvSymbol);
+      })
+      .catch(() => {});
+  }, []);
+
+  // Handler used by Reports component to swap active report
+  const handleReportSelect = (report) => {
+    setActiveReport(report);
+    if (report.ticker) setActiveSym(report.ticker);
+    if (report.tvSymbol) setActiveTvSymbol(report.tvSymbol);
+    setCenterView("chart");
+  };
+
+  // Color helpers for report-driven panels
+  const confColor = (c) => {
+    if (c === "HIGH") return "#00e676";
+    if (c === "MEDIUM") return "#ffab00";
+    if (c === "LOW") return "#ff3d57";
+    return "#8b9ab5";
+  };
+  const biasColor = (b) => {
+    if (!b) return "#8b9ab5";
+    const u = b.toUpperCase();
+    if (u.includes("LONG")) return "#00e676";
+    if (u.includes("SHORT")) return "#ff3d57";
+    return "#ffab00";
+  };
+  const levelWeightColor = (w) => {
+    if (w === "HEAVY") return "#ff3d57";
+    if (w === "MEDIUM") return "#ffab00";
+    if (w === "CURRENT") return "#00e5ff";
+    return "#8b9ab5";
+  };
+  const levelRowBg = (w) => {
+    if (w === "HEAVY") return "#ff3d5712";
+    if (w === "MEDIUM") return "#ffab0012";
+    if (w === "CURRENT") return "#00e5ff12";
+    return "transparent";
+  };
+
+  // activeReport.tvSymbol takes priority; fall back to getTVSymbol mapping
+  const tvSymbol = activeTvSymbol || getTVSymbol(activeSym);
   const analysis = INSTRUMENT_ANALYSIS[activeSym] || DEFAULT_ANALYSIS;
   const chartUrl = `https://s.tradingview.com/widgetembed/?frameElementId=tv&symbol=${encodeURIComponent(tvSymbol)}&interval=D&hidesidetoolbar=1&symboledit=1&saveimage=0&toolbarbg=0a0e17&studies=MASimple@tv-basicstudies!1,MASimple@tv-basicstudies!2,MASimple@tv-basicstudies!3,MACD@tv-basicstudies,RSI@tv-basicstudies&theme=dark&style=1&timezone=America%2FNew_York&withdateranges=1&hideideas=1&locale=en`;
   const calHtml = `<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;height:100%;overflow:hidden;background:transparent;}</style></head><body><div class="tradingview-widget-container" style="height:100%;width:100%"><div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div><script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":"100%","locale":"en","importanceFilter":"-1,0,1","currencyFilter":"USD"}<\/script></div></body></html>`;
@@ -606,28 +659,6 @@ function App() {
         <div className="topbar-time">{UPDATED}</div>
       </div>
       <div className="main">
-        {/* LEFT — Bucket Summaries */}
-        <div className="sidebar-left" style={{overflowY:"auto"}}>
-          {Object.entries(WATCHLIST).map(([group, items]) => {
-            const bk = BUCKET_SUMMARIES[group];
-            return (
-              <div key={group}>
-                <div className="wl-group-header" style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                  <span>{group}</span>
-                  {bk && <span style={{fontSize:8,fontWeight:700,color:bk.color,letterSpacing:.5}}>{bk.signal}</span>}
-                </div>
-                {bk && <div style={{padding:"2px 10px 6px",fontSize:10,color:"var(--text-secondary)",lineHeight:1.45}}>{bk.summary}</div>}
-                {items.map(it => (
-                  <div key={it.sym} className={`wl-item ${activeSym===it.sym?"active":""}`} onClick={() => {setActiveSym(it.sym); setCenterView("chart");}}>
-                    <span className="wl-symbol">{it.sym}</span>
-                    <span className="wl-price">{it.price}</span>
-                    <span className="wl-change" style={{color:it.color}}>{it.chg}</span>
-                  </div>
-                ))}
-              </div>
-            );
-          })}
-        </div>
         {/* CENTER */}
         <div className="center">
           <div className="chart-header">
@@ -656,44 +687,82 @@ function App() {
                 <iframe key={tvSymbol} src={chartUrl} allowTransparency="true" allowFullScreen />
               </div>
               <div className="analysis-scroll">
-                <div className="analysis-grid">
-                  <div className="case-card bear">
-                    <div className="case-header">
-                      <span className="case-label" style={{ color:"#ff3d57" }}>🔴 Bear / Short</span>
-                      <span className="case-pct" style={{ color:"#ff3d57" }}>{analysis.bearPct}%</span>
+                {activeReport ? (
+                  <React.Fragment>
+                    {/* REPORT-DRIVEN TICKER HEADER */}
+                    <div style={{display:"flex",alignItems:"center",gap:14,padding:"10px 14px",background:"var(--bg-secondary)",borderBottom:"1px solid var(--border)",flexWrap:"wrap"}}>
+                      <div style={{display:"flex",flexDirection:"column"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Active Report</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:800,color:"var(--accent)",letterSpacing:.5}}>{activeReport.ticker}</div>
+                      </div>
+                      <div style={{display:"flex",flexDirection:"column"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Bias</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:biasColor(activeReport.bias),letterSpacing:.5,textTransform:"uppercase"}}>{activeReport.bias}</div>
+                      </div>
+                      <div style={{display:"flex",flexDirection:"column"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Confidence</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,letterSpacing:.5,padding:"1px 8px",borderRadius:3,background:confColor(activeReport.confidence)+"20",color:confColor(activeReport.confidence),alignSelf:"flex-start"}}>{activeReport.confidence}</div>
+                      </div>
+                      {activeReport.bullScore !== undefined && (
+                        <div style={{display:"flex",flexDirection:"column",minWidth:160,flex:1,maxWidth:300}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase",marginBottom:4}}>Tool Agreement · {activeReport.bullScore}/{activeReport.scoreMax} Bull · {activeReport.bearScore}/{activeReport.scoreMax} Bear</div>
+                          <div style={{display:"flex",height:8,borderRadius:2,overflow:"hidden",background:"var(--bg-tertiary)"}}>
+                            <div style={{width:((activeReport.bullScore/activeReport.scoreMax)*100)+"%",background:"var(--green)"}} />
+                            <div style={{width:((activeReport.bearScore/activeReport.scoreMax)*100)+"%",background:"var(--red)"}} />
+                          </div>
+                          <div style={{display:"flex",justifyContent:"space-between",fontFamily:"var(--font-mono)",fontSize:9,marginTop:2}}>
+                            <span style={{color:"var(--green)"}}>{Math.round((activeReport.bullScore/activeReport.scoreMax)*100)}% bull</span>
+                            <span style={{color:"var(--red)"}}>{Math.round((activeReport.bearScore/activeReport.scoreMax)*100)}% bear</span>
+                          </div>
+                        </div>
+                      )}
+                      <a href={"reports/" + activeReport.file} target="_blank" rel="noopener noreferrer" style={{marginLeft:"auto",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--accent)",textDecoration:"none",padding:"5px 10px",border:"1px solid var(--accent)",borderRadius:3}}>Open Full Report →</a>
                     </div>
-                    <div className="case-text">{analysis.bearCase}</div>
-                  </div>
-                  <div className="case-card bull">
-                    <div className="case-header">
-                      <span className="case-label" style={{ color:"#00e676" }}>🟢 Bull / Long</span>
-                      <span className="case-pct" style={{ color:"#00e676" }}>{analysis.bullPct}%</span>
+                    {/* ZONES ROW */}
+                    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:1,background:"var(--border)"}}>
+                      <div style={{background:"var(--bg-secondary)",padding:"8px 12px"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Entry Zone</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--green)",marginTop:2}}>{activeReport.entryZone || "—"}</div>
+                      </div>
+                      <div style={{background:"var(--bg-secondary)",padding:"8px 12px"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Exit Zone</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--accent)",marginTop:2}}>{activeReport.exitZone || "—"}</div>
+                      </div>
+                      <div style={{background:"var(--bg-secondary)",padding:"8px 12px"}}>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Invalidation</div>
+                        <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--red)",marginTop:2}}>{activeReport.invalidation || "—"}</div>
+                      </div>
                     </div>
-                    <div className="case-text">{analysis.bullCase}</div>
+                    {/* LEVELS TABLE */}
+                    {activeReport.levels && activeReport.levels.length > 0 && (
+                      <div style={{padding:"10px 14px"}}>
+                        <div className="analysis-title" style={{marginBottom:6}}>Key Levels</div>
+                        <table style={{width:"100%",borderCollapse:"collapse",fontSize:12}}>
+                          <thead>
+                            <tr style={{borderBottom:"1px solid var(--border)"}}>
+                              <th style={{textAlign:"left",padding:"4px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",width:80}}>Weight</th>
+                              <th style={{textAlign:"left",padding:"4px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",width:110}}>Price</th>
+                              <th style={{textAlign:"left",padding:"4px 6px",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase"}}>Sources</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {activeReport.levels.map((lv,i) => (
+                              <tr key={i} style={{background:levelRowBg(lv.weight),borderBottom:"1px solid var(--border)"}}>
+                                <td style={{padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:levelWeightColor(lv.weight),letterSpacing:.5}}>{lv.weight}</td>
+                                <td style={{padding:"5px 6px",fontFamily:"var(--font-mono)",fontSize:11,fontWeight:600,color:levelWeightColor(lv.weight)}}>{lv.price}</td>
+                                <td style={{padding:"5px 6px",fontSize:11,color:"var(--text-secondary)"}}>{lv.sources}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </React.Fragment>
+                ) : (
+                  <div style={{padding:"20px 14px",color:"var(--text-muted)",fontSize:12}}>
+                    No active report. Generate a TA report and commit it to <code>reports/</code> to populate this panel. Manual chart changes via the ticker dropdown above do not load report data.
                   </div>
-                </div>
-                <div className="info-row">
-                  <div className="info-box">
-                    <div className="info-label">Bias</div>
-                    <div className="info-value" style={{ color:analysis.biasColor }}>{analysis.bias}</div>
-                  </div>
-                  <div className="info-box">
-                    <div className="info-label">Key Watch</div>
-                    <div className="info-detail">{analysis.keyWatch}</div>
-                  </div>
-                </div>
-                <div className="sr-grid">
-                  <div>
-                    <div className="analysis-title">Resistance</div>
-                    {analysis.resistance.map((r,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#ff3d57"}} /><span className="sr-level">{r.l}</span><span className="sr-desc">— {r.d}</span></div>))}
-                    {analysis.resistance.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
-                  </div>
-                  <div>
-                    <div className="analysis-title">Support</div>
-                    {analysis.support.map((s,i) => (<div className="sr-row" key={i}><div className="sr-dot" style={{background:"#00e676"}} /><span className="sr-level">{s.l}</span><span className="sr-desc">— {s.d}</span></div>))}
-                    {analysis.support.length===0 && <div style={{fontSize:10,color:"var(--text-muted)"}}>Pending analysis</div>}
-                  </div>
-                </div>
+                )}
               </div>
             </React.Fragment>
           ) : (
@@ -743,7 +812,7 @@ function App() {
               </div>
             )}
             {rightTab==="reports" && (
-              <Reports />
+              <Reports onSelect={handleReportSelect} activeFile={activeReport && activeReport.file} />
             )}
           </div>
         </div>
@@ -752,7 +821,7 @@ function App() {
   );
 }
 // REPORTS FEED COMPONENT — reads from reports/index.json
-function Reports() {
+function Reports({ onSelect, activeFile }) {
   const [reports, setReports] = React.useState(null);
   const [error, setError] = React.useState(null);
 
@@ -793,25 +862,40 @@ function Reports() {
     <div className="news-manual">
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8,paddingBottom:6,borderBottom:"1px solid var(--border)"}}>
         <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--text-muted)"}}>TA Reports — {list.length}</div>
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>Click to load</div>
       </div>
       {list.length === 0 && (
         <div style={{color:"var(--text-muted)",fontSize:11,padding:"8px 0"}}>No reports yet.</div>
       )}
-      {list.map((r,i) => (
-        <a key={i} href={"reports/" + r.file} target="_blank" rel="noopener noreferrer"
-           style={{display:"block",padding:"8px 0",borderBottom:"1px solid var(--border)",textDecoration:"none",color:"inherit",cursor:"pointer"}}
-           onMouseEnter={e => e.currentTarget.style.background = "var(--bg-tertiary)"}
-           onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
-            <div style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:"var(--accent)",letterSpacing:.5}}>{r.ticker}</div>
-            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{fmtDate(r.date)}</div>
+      {list.map((r,i) => {
+        const isActive = activeFile === r.file;
+        return (
+          <div key={i}
+               style={{padding:"8px 0 8px 8px",borderBottom:"1px solid var(--border)",cursor:"pointer",marginLeft:-8,marginRight:-8,paddingLeft:8,paddingRight:8,borderLeft:isActive?"2px solid var(--accent)":"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
+               onClick={() => onSelect && onSelect(r)}
+               onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
+               onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = "transparent"; }}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+              <div style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:"var(--accent)",letterSpacing:.5}}>{r.ticker}</div>
+              <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{fmtDate(r.date)}</div>
+            </div>
+            <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",color:biasColor(r.bias)}}>{r.bias}</span>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
+              {r.bullScore !== undefined && (
+                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>{r.bullScore}/{r.scoreMax} bull · {r.bearScore}/{r.scoreMax} bear</span>
+              )}
+            </div>
+            <div style={{marginTop:3}}>
+              <a href={"reports/" + r.file} target="_blank" rel="noopener noreferrer"
+                 onClick={e => e.stopPropagation()}
+                 style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",textDecoration:"none",letterSpacing:.5}}>
+                open html →
+              </a>
+            </div>
           </div>
-          <div style={{display:"flex",gap:10,alignItems:"center"}}>
-            <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",color:biasColor(r.bias)}}>{r.bias}</span>
-            <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
-          </div>
-        </a>
-      ))}
+        );
+      })}
     </div>
   );
 }

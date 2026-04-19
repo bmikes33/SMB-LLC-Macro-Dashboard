@@ -1,0 +1,79 @@
+name: Rebuild Reports Index
+
+# Auto-rebuilds reports/index.json whenever a report is added, updated, or removed.
+# User workflow: commit HTML report + sidecar JSON file into reports/ — this Action does the rest.
+#
+# Failure modes handled:
+#   - HTML without sidecar JSON: that report is silently skipped (no broken state)
+#   - Malformed sidecar JSON: logged, skipped, others still indexed
+#   - Action's own commits: excluded via actor check + [skip ci] in commit message
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reports/**/*.json'
+      - 'reports/**/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    # Don't trigger on the Action's own auto-commits
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Rebuild reports/index.json
+        run: |
+          python3 << 'PYEOF'
+          import json
+          import os
+          import glob
+
+          REPORTS_DIR = 'reports'
+          INDEX_PATH = os.path.join(REPORTS_DIR, 'index.json')
+
+          entries = []
+          for path in sorted(glob.glob(os.path.join(REPORTS_DIR, '*.json'))):
+              # Skip the index file itself
+              if os.path.basename(path) == 'index.json':
+                  continue
+              try:
+                  with open(path, 'r', encoding='utf-8') as f:
+                      data = json.load(f)
+                  if not isinstance(data, dict):
+                      print(f"SKIP {path}: not a JSON object")
+                      continue
+                  if 'file' not in data or 'date' not in data:
+                      print(f"SKIP {path}: missing required 'file' or 'date' field")
+                      continue
+                  entries.append(data)
+              except (json.JSONDecodeError, IOError) as e:
+                  print(f"SKIP {path}: {e}")
+
+          # Sort by date descending — newest first
+          entries.sort(key=lambda r: r.get('date', ''), reverse=True)
+
+          with open(INDEX_PATH, 'w', encoding='utf-8') as f:
+              json.dump({'reports': entries}, f, indent=2, ensure_ascii=False)
+
+          print(f"Rebuilt {INDEX_PATH} with {len(entries)} reports")
+          PYEOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/index.json
+          if git diff --staged --quiet; then
+            echo "No changes to index.json — skipping commit"
+          else
+            git commit -m "auto-rebuild reports index [skip ci]"
+            git push
+            echo "Pushed updated index.json"
+          fi

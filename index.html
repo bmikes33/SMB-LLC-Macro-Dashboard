@@ -537,32 +537,119 @@ function AISummary() {
 
   const s = news.summary || {};
 
+  // Color helpers
+  const pressureColors = {
+    "REINFORCING": "#00e676",
+    "MIXED":       "#ffab00",
+    "PRESSURING":  "#ff6d00",
+    "CHALLENGING": "#ff3d57",
+  };
+  const pressureColor = pressureColors[s.regimePressure] || "#8b9ab5";
+
+  const tagColors = {
+    "SUPPORTS":         "#00e676",
+    "CONTRADICTS":      "#ff3d57",
+    "THRESHOLD_WATCH":  "#ffab00",
+    "NEUTRAL":          "#8b9ab5",
+  };
+  const regimeFallbackColor = news.currentRegimeColor || "#00e5ff";
+
+  // Format the "as of" timestamp nicely
+  let regimeAsOfDisplay = null;
+  if (news.regimeAsOf) {
+    try {
+      const dt = new Date(news.regimeAsOf);
+      regimeAsOfDisplay = dt.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " " +
+                          dt.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",hour12:false});
+    } catch (e) {}
+  }
+
   return (
     <div style={{padding:10,overflowY:"auto",height:"100%"}}>
-      <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)",marginBottom:8}}>Claude Macro Analysis</div>
+      <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)",marginBottom:4}}>Claude Macro Analysis</div>
       <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginBottom:10}}>Updated: {news.lastUpdatedDisplay}</div>
 
+      {/* REGIME CONTEXT + PRESSURE BANNER (new) */}
+      {news.currentRegime && (
+        <div style={{background:regimeFallbackColor+"15",border:"1px solid "+regimeFallbackColor+"40",borderRadius:6,padding:10,marginBottom:8}}>
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
+            <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)"}}>Regime Context</div>
+            {regimeAsOfDisplay && <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>as of {regimeAsOfDisplay}</div>}
+          </div>
+          <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6,flexWrap:"wrap"}}>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:800,color:regimeFallbackColor,letterSpacing:1,textTransform:"uppercase"}}>{news.currentRegime}</span>
+            {news.regimeConfidence && (
+              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:regimeFallbackColor+"25",color:regimeFallbackColor}}>{news.regimeConfidence}</span>
+            )}
+          </div>
+          {s.regimePressure && s.regimePressure !== "N/A" && (
+            <React.Fragment>
+              <div style={{display:"flex",alignItems:"center",gap:6,marginTop:6,paddingTop:6,borderTop:"1px solid "+regimeFallbackColor+"25"}}>
+                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase"}}>News Pressure:</span>
+                <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:800,color:pressureColor,letterSpacing:.5,padding:"1px 7px",borderRadius:2,background:pressureColor+"20"}}>{s.regimePressure}</span>
+              </div>
+              {s.regimePressureReason && (
+                <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,marginTop:4,fontStyle:"italic"}}>{s.regimePressureReason}</div>
+              )}
+            </React.Fragment>
+          )}
+        </div>
+      )}
+
       {/* Macro Summary */}
-      <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10,marginBottom:8}}>
-        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:4}}>Macro Summary</div>
-        <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.macroSummary || "N/A"}</div>
-      </div>
-
-      {/* Regime Impact */}
-      <div style={{background:"#ff3d5715",border:"1px solid #ff3d5730",borderRadius:6,padding:10,marginBottom:8}}>
-        <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#ff3d57",marginBottom:4}}>Regime Impact</div>
-        <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.regimeImpact || "N/A"}</div>
-      </div>
-
-      {/* Key Signals */}
-      {s.keySignals && s.keySignals.length > 0 && (
+      {s.macroSummary && (
         <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10,marginBottom:8}}>
-          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:4}}>Key Signals</div>
-          {s.keySignals.map((sig, i) => (
-            <div key={i} style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,padding:"2px 0",display:"flex",gap:6}}>
-              <span style={{color:"var(--accent)",flexShrink:0}}>▸</span> {sig}
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:4}}>Macro Summary</div>
+          <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.macroSummary}</div>
+        </div>
+      )}
+
+      {/* THRESHOLD WATCHES (new) — only render if present */}
+      {s.thresholdWatches && s.thresholdWatches.length > 0 && (
+        <div style={{background:"#ffab0015",border:"1px solid #ffab0040",borderRadius:6,padding:10,marginBottom:8}}>
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#ffab00",marginBottom:6}}>⚠ Threshold Watches</div>
+          {s.thresholdWatches.map((tw, i) => (
+            <div key={i} style={{display:"flex",alignItems:"flex-start",gap:8,padding:"4px 0",borderTop: i > 0 ? "1px solid #ffab0025" : "none"}}>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:"#ffab00",minWidth:60}}>{tw.indicator}</span>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:"#ffab00",minWidth:70}}>{tw.level}</span>
+              <span style={{fontSize:10,color:"var(--text-secondary)",lineHeight:1.4,flex:1}}>{tw.signal}</span>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* BACKWARD COMPAT: old regimeImpact field (if old news.json still around) */}
+      {s.regimeImpact && !s.regimePressure && (
+        <div style={{background:"#ff3d5715",border:"1px solid #ff3d5730",borderRadius:6,padding:10,marginBottom:8}}>
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"#ff3d57",marginBottom:4}}>Regime Impact</div>
+          <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.6}}>{s.regimeImpact}</div>
+        </div>
+      )}
+
+      {/* Key Signals — tagged in new schema, plain strings in old */}
+      {s.keySignals && s.keySignals.length > 0 && (
+        <div style={{background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:6,padding:10,marginBottom:8}}>
+          <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)",marginBottom:6}}>Key Signals</div>
+          {s.keySignals.map((sig, i) => {
+            // Support both new format {signal, tag} and old format (plain string)
+            const isTagged = typeof sig === "object" && sig !== null;
+            const sigText = isTagged ? sig.signal : sig;
+            const tag = isTagged ? sig.tag : null;
+            const tagColor = tag ? (tagColors[tag] || "#8b9ab5") : null;
+            return (
+              <div key={i} style={{padding:"4px 0",borderTop: i > 0 ? "1px solid var(--border)" : "none"}}>
+                {tag && (
+                  <div style={{marginBottom:3}}>
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:800,letterSpacing:.8,padding:"1px 5px",borderRadius:2,background:tagColor+"25",color:tagColor,textTransform:"uppercase"}}>{tag.replace("_"," ")}</span>
+                  </div>
+                )}
+                <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,display:"flex",gap:6}}>
+                  {!tag && <span style={{color:"var(--accent)",flexShrink:0}}>▸</span>}
+                  <span>{sigText}</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       )}
 

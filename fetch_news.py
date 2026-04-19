@@ -3,7 +3,8 @@
 SMB LLC News Pipeline
 Hits TradingView's news API directly for headlines (includes Mace News,
 Reuters, Dow Jones, Benzinga, etc). No third-party scraper library needed.
-Sends to Claude for macro framework summarization.
+Sends to Claude for NEUTRAL macro framework summarization — regime is context,
+not conclusion. Claude is explicitly instructed to surface contradictions.
 Outputs news.json for the dashboard.
 """
 
@@ -43,6 +44,30 @@ PROVIDER_COLORS = {
 }
 
 
+def load_latest_regime():
+    """
+    Read reports/index.json and return the latest macro report context.
+    Returns None if no macro reports exist or file is missing/malformed.
+    """
+    try:
+        with open("reports/index.json", "r") as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"  No regime context available: {e}")
+        return None
+
+    reports = data.get("reports", [])
+    macro_reports = [r for r in reports if r.get("type") == "macro"]
+    if not macro_reports:
+        print("  No macro reports in index.")
+        return None
+
+    macro_reports.sort(key=lambda r: r.get("date", ""), reverse=True)
+    latest = macro_reports[0]
+    print(f"  Latest regime: {latest.get('regime')} ({latest.get('regimeConfidence')}) as of {latest.get('date')}")
+    return latest
+
+
 def fetch_tradingview_news():
     """Fetch news from TradingView's headline API for multiple symbols."""
     articles = []
@@ -69,7 +94,6 @@ def fetch_tradingview_news():
 
             if resp.status_code != 200:
                 print(f"    HTTP {resp.status_code} for {symbol}")
-                # Try alternate endpoint format
                 alt_url = f"https://news-headlines.tradingview.com/v2/view/headlines"
                 params_alt = {
                     "client": "web",
@@ -85,7 +109,6 @@ def fetch_tradingview_news():
 
             data = resp.json()
 
-            # Handle different response formats
             items = []
             if isinstance(data, list):
                 items = data
@@ -101,7 +124,6 @@ def fetch_tradingview_news():
                     continue
                 seen_titles.add(title)
 
-                # Parse timestamp
                 pub_time = datetime.now(timezone.utc)
                 for time_field in ["published", "published_at", "publishedAt", "created", "timestamp"]:
                     ts = item.get(time_field)
@@ -115,11 +137,9 @@ def fetch_tradingview_news():
                         except Exception:
                             continue
 
-                # Only last 24 hours
                 if (datetime.now(timezone.utc) - pub_time) > timedelta(hours=24):
                     continue
 
-                # Extract provider
                 provider_raw = item.get("provider", item.get("source", {}))
                 if isinstance(provider_raw, dict):
                     provider = provider_raw.get("name", provider_raw.get("title", "TradingView"))
@@ -130,7 +150,6 @@ def fetch_tradingview_news():
 
                 color = PROVIDER_COLORS.get(provider, "#00e5ff")
 
-                # Build URL
                 story_path = item.get("storyPath", item.get("link", item.get("url", "")))
                 if story_path and not story_path.startswith("http"):
                     link = f"https://www.tradingview.com{story_path}"
@@ -153,7 +172,6 @@ def fetch_tradingview_news():
             print(f"    Error for {symbol}: {e}")
             continue
 
-    # Dedupe, sort, cap
     articles.sort(key=lambda x: x["timestamp"], reverse=True)
     articles = articles[:75]
     print(f"\nTotal: {len(articles)} unique articles")
@@ -165,17 +183,12 @@ def fetch_tradingview_news_fallback():
     articles = []
     try:
         print("  Trying fallback: TradingView news page scrape...")
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        }
-
-        # Try the general news flow page
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
         urls_to_try = [
             "https://news-headlines.tradingview.com/v2/view/headlines?client=web&lang=en&category=market&count=50",
             "https://news-headlines.tradingview.com/v2/view/headlines?client=web&lang=en&category=base&count=50",
             "https://www.tradingview.com/news-flow/",
         ]
-
         for url in urls_to_try:
             try:
                 resp = requests.get(url, headers=headers, timeout=15)
@@ -204,15 +217,13 @@ def fetch_tradingview_news_fallback():
             except Exception as e:
                 print(f"    Fallback failed for {url}: {e}")
                 continue
-
     except Exception as e:
         print(f"  Fallback completely failed: {e}")
-
     return articles
 
 
 def fetch_rss_fallback():
-    """Last resort fallback: RSS feeds if TradingView is completely blocked."""
+    """Last resort: RSS feeds if TradingView is completely blocked."""
     articles = []
     try:
         import feedparser
@@ -226,7 +237,6 @@ def fetch_rss_fallback():
         ("https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114", "CNBC", "#2196f3"),
         ("https://www.federalreserve.gov/feeds/press_all.xml", "Fed", "#ff3d57"),
     ]
-
     for url, source, color in feeds:
         try:
             feed = feedparser.parse(url)
@@ -246,55 +256,133 @@ def fetch_rss_fallback():
                 })
         except Exception as e:
             print(f"  RSS fallback failed for {source}: {e}")
-
     print(f"  RSS fallback got {len(articles)} articles")
     return articles
 
 
-def summarize_with_claude(articles):
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        return {"macroSummary": "AI summary unavailable — no API key.", "regimeImpact": "N/A", "actionItems": [], "keySignals": []}
+def build_prompt(articles, regime_context):
+    """
+    Construct the Claude prompt.
+    regime_context: dict from latest macro report, or None if unavailable.
 
+    Key design: regime is provided as CONTEXT only. Claude is explicitly instructed
+    to evaluate news neutrally and actively surface contradictions — not confirm
+    the regime call.
+    """
     headline_text = "\n".join([f"[{a['source']}] {a['title']}" for a in articles[:35]])
 
-    prompt = f"""You are a macro research analyst for SMB LLC, a trading operation that uses:
-- Lifecycle-stage analysis (Young Growth > High Growth > Mature Growth > Maturity > Decline)
-- Multi-timeframe technical analysis (21 EMA, 50 SMA, 200 SMA, MACD, RSI)
+    if regime_context:
+        thresholds = regime_context.get("thresholds", [])
+        # Show up to 8 most relevant thresholds
+        threshold_lines = "\n".join([
+            f"  - {t.get('indicator', '?')} {t.get('level', '?')}: {t.get('signal', '')}"
+            for t in thresholds[:8]
+        ])
+
+        regime_block = f"""CURRENT REGIME CONTEXT (from last macro analysis):
+- Regime: {regime_context.get('regime', 'Unknown')} ({regime_context.get('regimeConfidence', 'UNKNOWN')} confidence)
+- As of: {regime_context.get('date', 'unknown')}
+- Equity bias: {regime_context.get('equityBias', 'N/A')}
+- Primary tension: {regime_context.get('primaryTension', 'N/A')}
+- Invalidation thresholds to watch:
+{threshold_lines}
+
+CRITICAL INSTRUCTION: The regime above is the most recent Claude-generated classification. It may be stale or wrong. Your job is NOT to confirm this regime. Evaluate each headline on its own merits. Actively surface evidence that contradicts the regime or approaches an invalidation threshold. If the news in aggregate challenges the regime call, say so directly and plainly. Do not soften contradictory news to preserve the thesis."""
+    else:
+        regime_block = """NO RECENT REGIME CONTEXT AVAILABLE. Summarize the news in neutral terms without a regime lens."""
+
+    prompt = f"""You are a macro research analyst for SMB LLC, a trading operation using:
+- Lifecycle-stage equity analysis (Young Growth → High Growth → Mature Growth → Maturity → Decline)
+- Multi-timeframe TA (21 EMA, 50 SMA, 200 SMA, MACD, RSI)
 - John Murphy intermarket analysis framework
 - A BMNR (ETH-linked trust) cash-secured put ladder strategy
 
-Current regime: Bear Market — Oversold Relief Rally. Key levels:
-- SPY 200 SMA at 662 (below = bear), VIX 25 regime line, HYG $80 credit threshold
-- BTC $62,300 BMNR structural level, Oil above $100 = stagflation
-- MOVE above 100 = bond stress, 10Y above 4.50% = growth stress
-- Apr 2 tariff deadline = next binary catalyst
+{regime_block}
 
-Here are the latest headlines:
+HEADLINES (last 24 hours):
 
 {headline_text}
 
-Respond in JSON format ONLY (no markdown, no backticks, no preamble):
-{{"macroSummary": "2-3 sentence summary of what these headlines mean for the current macro regime", "regimeImpact": "One sentence: does anything change the bear market relief rally assessment?", "actionItems": ["Up to 3 items for current positions (BMNR ladder, short book, Maturity overweight)"], "keySignals": ["Up to 4 most important signals, each 1 sentence"]}}"""
+Respond in JSON format ONLY — no markdown, no backticks, no preamble:
+{{
+  "macroSummary": "2-3 neutral sentences describing what the headlines collectively say. Do not frame through the regime lens; just summarize what's happening.",
+  "regimePressure": "REINFORCING | MIXED | PRESSURING | CHALLENGING",
+  "regimePressureReason": "One sentence explaining the pressure call. Be direct — if news challenges the regime, say so.",
+  "thresholdWatches": [
+    {{"indicator": "VIX", "level": "> 22", "signal": "One-line article-derived observation"}}
+  ],
+  "keySignals": [
+    {{"signal": "One-sentence signal summary", "tag": "SUPPORTS | CONTRADICTS | NEUTRAL | THRESHOLD_WATCH"}}
+  ],
+  "actionItems": ["Up to 3 items for current positions (BMNR ladder, short book, Maturity overweight, etc.)"]
+}}
+
+Rules:
+- regimePressure: REINFORCING = broadly confirms regime, MIXED = split evidence, PRESSURING = noticeable contradictions emerging, CHALLENGING = regime call likely stale or wrong.
+- thresholdWatches: empty array if no article approaches a threshold. Do not fabricate.
+- keySignals: 3-5 entries, prioritize CONTRADICTS and THRESHOLD_WATCH over SUPPORTS.
+- Tag each keySignal honestly. Do not tag CONTRADICTS as NEUTRAL to protect the regime call.
+- actionItems: can be empty array if no clear actions."""
+    return prompt
+
+
+def summarize_with_claude(articles, regime_context):
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return {
+            "macroSummary": "AI summary unavailable — no API key.",
+            "regimePressure": "N/A",
+            "regimePressureReason": "",
+            "thresholdWatches": [],
+            "keySignals": [],
+            "actionItems": [],
+        }
+
+    prompt = build_prompt(articles, regime_context)
 
     try:
         import anthropic
         client = anthropic.Anthropic(api_key=api_key)
-        response = client.messages.create(model="claude-sonnet-4-20250514", max_tokens=600, messages=[{"role": "user", "content": prompt}])
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1000,
+            messages=[{"role": "user", "content": prompt}]
+        )
         text = response.content[0].text.strip().replace("```json", "").replace("```", "").strip()
-        return json.loads(text)
+        parsed = json.loads(text)
+
+        # Normalize — ensure all expected fields exist even if Claude omits them
+        return {
+            "macroSummary": parsed.get("macroSummary", ""),
+            "regimePressure": parsed.get("regimePressure", "N/A"),
+            "regimePressureReason": parsed.get("regimePressureReason", ""),
+            "thresholdWatches": parsed.get("thresholdWatches", []),
+            "keySignals": parsed.get("keySignals", []),
+            "actionItems": parsed.get("actionItems", []),
+        }
     except Exception as e:
         print(f"Warning: Claude summary failed: {e}")
-        return {"macroSummary": f"Summary failed: {str(e)[:100]}", "regimeImpact": "N/A", "actionItems": [], "keySignals": []}
+        return {
+            "macroSummary": f"Summary failed: {str(e)[:100]}",
+            "regimePressure": "N/A",
+            "regimePressureReason": "",
+            "thresholdWatches": [],
+            "keySignals": [],
+            "actionItems": [],
+        }
 
 
 def main():
     print(f"[{datetime.now(timezone.utc).isoformat()}] Starting news fetch...\n")
 
-    # Try TradingView API first
+    # Load current regime for context
+    print("Loading regime context...")
+    regime_context = load_latest_regime()
+    print()
+
+    # Fetch news
     articles = fetch_tradingview_news()
 
-    # If API returned nothing, try fallback methods
     if not articles:
         print("\nPrimary API returned no results. Trying fallback...")
         articles = fetch_tradingview_news_fallback()
@@ -310,23 +398,50 @@ def main():
                 "lastUpdated": datetime.now(timezone.utc).isoformat(),
                 "lastUpdatedDisplay": datetime.now(timezone.utc).strftime("%b %d, %Y — %I:%M %p UTC"),
                 "articleCount": 0,
-                "summary": {"macroSummary": "All news sources failed. Check GitHub Action logs.", "regimeImpact": "N/A", "actionItems": [], "keySignals": []},
+                "currentRegime": regime_context.get("regime") if regime_context else None,
+                "currentRegimeColor": regime_context.get("regimeColor") if regime_context else None,
+                "regimeConfidence": regime_context.get("regimeConfidence") if regime_context else None,
+                "regimeAsOf": regime_context.get("date") if regime_context else None,
+                "summary": {
+                    "macroSummary": "All news sources failed. Check GitHub Action logs.",
+                    "regimePressure": "N/A",
+                    "regimePressureReason": "",
+                    "thresholdWatches": [],
+                    "keySignals": [],
+                    "actionItems": [],
+                },
                 "articles": [],
             }, f, indent=2)
         return
 
     # Summarize with Claude
     print("\nGenerating Claude macro summary...")
-    summary = summarize_with_claude(articles)
+    summary = summarize_with_claude(articles, regime_context)
     print(f"Summary: {summary.get('macroSummary', 'N/A')[:120]}...")
+    print(f"Regime pressure: {summary.get('regimePressure', 'N/A')}")
 
     # Write output
     output = {
         "lastUpdated": datetime.now(timezone.utc).isoformat(),
         "lastUpdatedDisplay": datetime.now(timezone.utc).strftime("%b %d, %Y — %I:%M %p UTC"),
         "articleCount": len(articles),
+        # Dashboard-visible regime context: which regime was in Claude's context when this summary ran
+        "currentRegime": regime_context.get("regime") if regime_context else None,
+        "currentRegimeColor": regime_context.get("regimeColor") if regime_context else None,
+        "regimeConfidence": regime_context.get("regimeConfidence") if regime_context else None,
+        "regimeAsOf": regime_context.get("date") if regime_context else None,
         "summary": summary,
-        "articles": [{"title": a["title"], "source": a["source"], "color": a["color"], "timestamp": a["timestamp"], "timeDisplay": a["time_display"], "link": a["link"]} for a in articles],
+        "articles": [
+            {
+                "title": a["title"],
+                "source": a["source"],
+                "color": a["color"],
+                "timestamp": a["timestamp"],
+                "timeDisplay": a["time_display"],
+                "link": a["link"],
+            }
+            for a in articles
+        ],
     }
     with open("news.json", "w") as f:
         json.dump(output, f, indent=2)

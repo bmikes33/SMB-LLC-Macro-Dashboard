@@ -2,6 +2,187 @@
   "reports": [
     {
       "type": "macro",
+      "file": "MACRO_2026-04-18_1200.html",
+      "ticker": "MACRO",
+      "tvSymbol": null,
+      "date": "2026-04-18T12:00:00-05:00",
+      "regime": "Risk-On",
+      "regimeColor": "#00e676",
+      "regimeConfidence": "HIGH",
+      "equityBias": "BULLISH",
+      "creditScore": 0.4,
+      "ratesScore": 0.2,
+      "volScore": 0.2,
+      "aggregateScore": 0.8,
+      "primaryTension": "Credit & Vol unanimous Risk-On; Rates group internally split between Risk-On (MOVE, DXY, USDJPY) and early Reflation signature (bull-steepening, dovish front-end)",
+      "indicators": [
+        {
+          "group": "Credit",
+          "name": "HYG",
+          "reading": "80.65 (+0.37%). V-shape recovery from 78 low; reclaimed 80/80.50 pivots; hugging 200 SMA from above; above 21 EMA and 50 SMA. Target 81.00–81.50.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Credit",
+          "name": "LQD",
+          "reading": "110.04 (+0.56%). Reclaimed 110; above 50 SMA and 200 SMA. IG credit firming with yields pulling back — duration relief + spread relief.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Credit",
+          "name": "HYG/LQD",
+          "reading": "0.733. Both legs recovering together; HY modestly outperforming off the low. Pure risk-appetite signal.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "US02Y",
+          "reading": "3.706% (−1.96%). Pulled back from 3.80%; dovish front-end repricing under 3.75% ceiling. No recession-grade collapse.",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US10Y",
+          "reading": "4.248% (−1.55%). Off recent 4.40% highs; still elevated but no breakout. Growth expectations firm, term premium not expanding.",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US30Y",
+          "reading": "4.885% (−1.01%). Sticky near 5% but not breaking higher; residual inflation concern without fresh stagflation signal.",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Rates",
+          "name": "2s10s",
+          "reading": "+54 bps positive slope; front-end falling roughly equal with long end today but multi-week structure is bull-steepener. Classic Reflation signature forming.",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "MOVE",
+          "reading": "65.69 (−0.30%). Deep compression from the 118 spike; well below 70 green support and far below 100 stability threshold. Rates-vol fully supportive of risk.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "DXY",
+          "reading": "98.22 (+0.05%). Grinding under the 100 yellow; no safe-haven bid. Soft-dollar tailwind for risk assets globally.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "USDJPY",
+          "reading": "158.59 (−0.33%). Pinned under 160 red; carry intact, no unwind pressure. 155 is the next structural shelf.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "JP10Y",
+          "reading": "2.416% (+0.33%). Elevated, hovering under 2.50%; stable — no spike that would force global re-pricing.",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Vol",
+          "name": "VIX",
+          "reading": "17.47 (−2.67%). Collapsed from the 33 spike; back below 18 into 16–20 corridor. Classic post-stress washout profile.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Vol",
+          "name": "VVIX",
+          "reading": "95.13 (−1.73%). Pierced the 95 complacency threshold from above; no hedging rebuild yet. Vol-of-vol supports continued compression.",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Vol",
+          "name": "SPY IV",
+          "reading": "SPY 710.75 (+1.30%). Term structure 10.3%→13.7%→16.2%→17.5% (2D→27D). Upward-sloping contango, no backwardation, no event kink. Stability priced in.",
+          "vote": "Risk-On"
+        }
+      ],
+      "thresholds": [
+        {
+          "indicator": "VIX",
+          "level": "> 22",
+          "signal": "Flips vol group; confirms regime break to Risk-Off"
+        },
+        {
+          "indicator": "VVIX",
+          "level": "> 110",
+          "signal": "Market pricing vol-regime change; leading signal for flip"
+        },
+        {
+          "indicator": "MOVE",
+          "level": "> 100",
+          "signal": "Rates volatility re-engages; Stagflation risk back on table"
+        },
+        {
+          "indicator": "HYG",
+          "level": "< 79.00",
+          "signal": "Structural break, credit flight; first flip to Risk-Off"
+        },
+        {
+          "indicator": "HYG",
+          "level": "> 81.50",
+          "signal": "Clean breakout, fully confirms risk-on continuation"
+        },
+        {
+          "indicator": "DXY",
+          "level": "> 100",
+          "signal": "Dollar reclaim, risk-off bid emerging"
+        },
+        {
+          "indicator": "DXY",
+          "level": "> 103",
+          "signal": "Safe-haven squeeze, flips rates group hard"
+        },
+        {
+          "indicator": "USDJPY",
+          "level": "< 155",
+          "signal": "Carry unwind trigger; historically coincident with global Risk-Off"
+        },
+        {
+          "indicator": "US10Y",
+          "level": "> 4.50%",
+          "signal": "Bear break, duration pain returns; Stagflation re-assertion"
+        },
+        {
+          "indicator": "US10Y",
+          "level": "< 4.00%",
+          "signal": "Growth scare or dovish pivot; context dependent"
+        }
+      ],
+      "stagePositioning": [
+        {
+          "stage": "Young Growth",
+          "bias": "OVERWEIGHT",
+          "note": "Vol compression & soft DXY support speculative risk; short of Reflation FAVORED given sticky long-end yields"
+        },
+        {
+          "stage": "High Growth",
+          "bias": "FAVORED",
+          "note": "Duration pain is off; MOVE collapse & dovish front-end lift multiples; regime tailwind strongest here"
+        },
+        {
+          "stage": "Mature Growth",
+          "bias": "OVERWEIGHT",
+          "note": "Quality cohort in a risk-on tape; stable vol lets fundamentals drive re-rating"
+        },
+        {
+          "stage": "Maturity",
+          "bias": "NEUTRAL",
+          "note": "Energy/staples/fertilizer keep an inflation-hedge kicker but lose relative leadership if regime holds"
+        },
+        {
+          "stage": "Decline",
+          "bias": "UNDERWEIGHT",
+          "note": "Risk-on regime exposes secular-decline names; structural headwinds aren't neutralized by tape"
+        }
+      ]
+    },
+    {
+      "type": "macro",
       "file": "MACRO_2026-04-17_0830.html",
       "ticker": "MACRO",
       "tvSymbol": null,

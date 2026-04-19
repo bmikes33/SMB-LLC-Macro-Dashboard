@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACRO REGIME — 2026-04-18</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-primary:#0a0e17;
+  --bg-secondary:#0f1420;
+  --bg-tertiary:#141926;
+  --text-primary:#e2e8f0;
+  --text-secondary:#8b9ab5;
+  --text-muted:#4a5976;
+  --border:#1e2a3a;
+  --risk-on:#00e676;
+  --reflation:#00e5ff;
+  --risk-off:#ff3d57;
+  --deflation:#b388ff;
+  --stagflation:#ffab00;
+  --regime:#00e676;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:var(--sans);line-height:1.55;padding:32px 24px;min-height:100vh}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* Header */
+.hdr{border-bottom:1px solid var(--border);padding-bottom:20px;margin-bottom:28px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px}
+.hdr h1{font-family:var(--mono);font-size:22px;letter-spacing:1.5px;font-weight:700;color:var(--text-primary)}
+.hdr .ts{font-family:var(--mono);font-size:12px;color:var(--text-secondary);letter-spacing:0.5px}
+
+/* Regime banner */
+.banner{background:var(--bg-secondary);border:1px solid var(--border);border-left:4px solid var(--regime);border-radius:6px;padding:20px 22px;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.banner .regime-label{font-family:var(--mono);font-size:11px;letter-spacing:1.8px;color:var(--text-secondary);margin-bottom:6px}
+.banner .regime-name{font-family:var(--mono);font-size:28px;letter-spacing:2px;color:var(--regime);font-weight:700}
+.banner .agg{text-align:right}
+.banner .conf{font-family:var(--mono);font-size:11px;letter-spacing:1.8px;color:var(--text-secondary);margin-bottom:6px}
+.banner .conf-val{font-family:var(--mono);font-size:22px;color:var(--text-primary);font-weight:700}
+.banner .conf-val .hi{color:var(--regime)}
+
+/* Section headers */
+h2{font-family:var(--mono);font-size:13px;letter-spacing:2px;color:var(--text-secondary);margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border);font-weight:500;text-transform:uppercase}
+h3{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--regime);margin:22px 0 10px;font-weight:600;text-transform:uppercase}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:16px}
+th{background:var(--bg-tertiary);color:var(--text-secondary);font-family:var(--mono);font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;text-align:left;padding:11px 14px;border-bottom:1px solid var(--border);font-weight:500}
+td{padding:11px 14px;border-bottom:1px solid var(--border);font-size:13px;color:var(--text-primary);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mono,th.mono{font-family:var(--mono);font-size:12.5px}
+td.field{color:var(--text-secondary);font-family:var(--mono);font-size:11.5px;letter-spacing:0.5px;text-transform:uppercase;width:30%}
+td.val{font-family:var(--mono);color:var(--text-primary);font-weight:500}
+.grp{font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;color:var(--text-muted);text-transform:uppercase}
+.tick{font-family:var(--mono);font-size:12.5px;color:var(--text-primary);font-weight:600;letter-spacing:0.3px}
+.vote{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+.vote.risk-on{color:var(--risk-on)}
+.vote.reflation{color:var(--reflation)}
+.vote.risk-off{color:var(--risk-off)}
+.vote.deflation{color:var(--deflation)}
+.vote.stagflation{color:var(--stagflation)}
+.vote.neutral{color:var(--text-muted)}
+
+/* Prose */
+p{color:var(--text-primary);margin-bottom:12px;font-size:14px}
+p.muted{color:var(--text-secondary);font-size:13px}
+ul{margin:10px 0 16px 22px;color:var(--text-primary)}
+ul li{margin-bottom:7px;font-size:13.5px}
+.thr{font-family:var(--mono);color:var(--text-primary)}
+.thr .lvl{color:var(--regime);font-weight:600}
+
+/* Scores */
+.score-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:16px}
+.score-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;padding:14px 16px}
+.score-card .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:1.3px;color:var(--text-secondary);text-transform:uppercase;margin-bottom:8px}
+.score-card .val{font-family:var(--mono);font-size:20px;color:var(--text-primary);font-weight:600}
+.score-card .val .regime-tag{font-size:12px;color:var(--regime);margin-left:6px;letter-spacing:1px}
+
+/* Stage table */
+.stage-favored{color:#00e5ff;font-weight:600}
+.stage-overweight{color:#00e676;font-weight:600}
+.stage-neutral{color:#8b9ab5;font-weight:600}
+.stage-underweight{color:#ffab00;font-weight:600}
+.stage-avoid{color:#ff3d57;font-weight:600}
+
+/* Tension block */
+.tension{background:var(--bg-secondary);border:1px solid var(--border);border-left:3px solid var(--stagflation);border-radius:6px;padding:14px 18px;margin:14px 0;font-size:13.5px}
+
+/* Footer */
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);font-family:var(--mono);font-size:11px;color:var(--text-muted);letter-spacing:0.5px}
+footer a{color:var(--text-secondary);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hdr">
+  <h1>MACRO REGIME REPORT</h1>
+  <div class="ts">2026-04-18 &middot; 12:00 CT &middot; SMB LLC Dashboard</div>
+</div>
+
+<!-- Regime banner -->
+<div class="banner">
+  <div>
+    <div class="regime-label">CURRENT REGIME</div>
+    <div class="regime-name">RISK-ON</div>
+  </div>
+  <div class="agg">
+    <div class="conf">CONFIDENCE &middot; AGGREGATE</div>
+    <div class="conf-val"><span class="hi">HIGH</span> &middot; 0.80</div>
+  </div>
+</div>
+
+<!-- SECTION 1A: Executive Summary -->
+<h2>1A &middot; Executive Summary</h2>
+<table>
+  <tbody>
+    <tr><td class="field">Regime</td><td class="val"><span class="vote risk-on">RISK-ON</span></td></tr>
+    <tr><td class="field">Regime Confidence</td><td class="val">HIGH</td></tr>
+    <tr><td class="field">Equity Bias</td><td class="val">BULLISH &mdash; broad tilt long, favor Mature Growth &amp; High Growth; Reflation undertones lift cyclicals</td></tr>
+    <tr><td class="field">Group Support</td><td class="val">Credit 3/3 &middot; Rates 3/8 (Risk-On) &middot; Vol 3/3</td></tr>
+    <tr><td class="field">Primary Tension</td><td class="val">Credit &amp; Vol unanimous Risk-On; Rates group internally split between Risk-On (MOVE, DXY, USDJPY) and early Reflation signature (bull-steepening, dovish front-end)</td></tr>
+    <tr><td class="field">Macro Watch</td><td class="val">FOMC Apr 28&ndash;29 (non-SEP &rarr; language-sensitive) &middot; current range 3.50&ndash;3.75% &middot; March CPI 3.3% HL / 2.6% core, energy +12.5% YoY</td></tr>
+  </tbody>
+</table>
+
+<!-- SECTION 1B: Indicator Readings -->
+<h2>1B &middot; Indicator Readings</h2>
+<table>
+  <thead>
+    <tr><th>Group</th><th>Indicator</th><th>Reading</th><th>Vote</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="grp">Credit</td><td class="tick">HYG</td><td>80.65 (+0.37%). V-shape recovery from 78 low; reclaimed 80 and 80.50 pivots; hugging 200 SMA from above; price above 21 EMA and 50 SMA. Near-term target 81.00&ndash;81.50.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Credit</td><td class="tick">LQD</td><td>110.04 (+0.56%). Reclaimed 110 yellow; back above 50 SMA, above 200 SMA. IG credit firming with yields pulling back &mdash; duration relief layered on spread relief.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Credit</td><td class="tick">HYG/LQD</td><td>0.733. Both legs recovering together; HY modestly outperforming off the low. Pure risk-appetite signal confirming credit group.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">US02Y</td><td>3.706% (&minus;1.96%). Pulled back from 3.80% area; dovish front-end repricing under the 3.75% ceiling. No recession-grade collapse.</td><td class="vote reflation">Reflation</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">US10Y</td><td>4.248% (&minus;1.55%). Off recent highs near 4.40%; still elevated but no breakout. Growth expectations firm, term premium not expanding.</td><td class="vote reflation">Reflation</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">US30Y</td><td>4.885% (&minus;1.01%). Sticky near 5% but not breaking higher; consistent with residual inflation concern without fresh stagflation signal.</td><td class="vote neutral">Neutral</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">2s10s</td><td>+54 bps positive slope; front-end falling &asymp; equal with long end today but structure over past weeks is bull-steepener. Classic Reflation signature forming.</td><td class="vote reflation">Reflation</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">MOVE</td><td>65.69 (&minus;0.30%). Deep compression from the 118 spike; now well below 70 green support and far below the 100 stability threshold. Rates-vol backdrop is fully supportive of risk.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">DXY</td><td>98.22 (+0.05%). Grinding under the 100 yellow; no safe-haven bid. Soft-dollar tailwind for risk assets globally.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">USDJPY</td><td>158.59 (&minus;0.33%). Pinned under 160 red; carry intact, no unwind pressure. 155 is the next structural shelf to watch.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Rates</td><td class="tick">JP10Y</td><td>2.416% (+0.33%). Elevated, hovering under 2.50%; stable &mdash; no spike that would force global re-pricing.</td><td class="vote neutral">Neutral</td></tr>
+    <tr><td class="grp">Vol</td><td class="tick">VIX</td><td>17.47 (&minus;2.67%). Collapsed from the 33 spike; back below 18 into the 16&ndash;20 corridor. Classic post-stress washout profile.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Vol</td><td class="tick">VVIX</td><td>95.13 (&minus;1.73%). Pierced the 95 complacency threshold from above; no hedging rebuild yet. Vol-of-vol supports continued compression.</td><td class="vote risk-on">Risk-On</td></tr>
+    <tr><td class="grp">Vol</td><td class="tick">SPY IV</td><td>SPY 710.75 (+1.30%). Term structure: 10.3% (2D) &rarr; 13.7% (5D) &rarr; 16.2% (13D) &rarr; 17.5% (27D). Upward-sloping contango, no backwardation, no event kink. Stability priced in.</td><td class="vote risk-on">Risk-On</td></tr>
+  </tbody>
+</table>
+
+<!-- SECTION 1C: Thresholds -->
+<h2>1C &middot; Key Thresholds to Watch</h2>
+<ul>
+  <li class="thr"><strong>VIX</strong> &gt; <span class="lvl">22</span> &mdash; flips vol group; confirms regime break to Risk-Off</li>
+  <li class="thr"><strong>VVIX</strong> &gt; <span class="lvl">110</span> &mdash; market pricing vol-regime change; leading signal for flip</li>
+  <li class="thr"><strong>MOVE</strong> &gt; <span class="lvl">100</span> &mdash; rates volatility re-engages; Stagflation risk back on table</li>
+  <li class="thr"><strong>HYG</strong> &lt; <span class="lvl">79.00</span> &mdash; structural break, credit flight; first flip to Risk-Off</li>
+  <li class="thr"><strong>HYG</strong> &gt; <span class="lvl">81.50</span> &mdash; clean breakout, fully confirms risk-on continuation</li>
+  <li class="thr"><strong>DXY</strong> &gt; <span class="lvl">100</span> &mdash; dollar reclaim, risk-off bid emerging</li>
+  <li class="thr"><strong>DXY</strong> &gt; <span class="lvl">103</span> &mdash; safe-haven squeeze, flips rates group hard</li>
+  <li class="thr"><strong>USDJPY</strong> &lt; <span class="lvl">155</span> &mdash; carry unwind trigger; historically coincident with global Risk-Off</li>
+  <li class="thr"><strong>US10Y</strong> &gt; <span class="lvl">4.50%</span> &mdash; bear break, duration pain returns; Stagflation re-assertion</li>
+  <li class="thr"><strong>US10Y</strong> &lt; <span class="lvl">4.00%</span> &mdash; growth scare or dovish pivot; context dependent</li>
+</ul>
+
+<!-- SECTION 2: Confidence Breakdown -->
+<h2>2 &middot; Confidence Breakdown</h2>
+<div class="score-grid">
+  <div class="score-card"><div class="lbl">Credit (40%)</div><div class="val">0.40 <span class="regime-tag">Risk-On</span></div></div>
+  <div class="score-card"><div class="lbl">Rates (40%)</div><div class="val">0.20 <span class="regime-tag">Risk-On</span></div></div>
+  <div class="score-card"><div class="lbl">Volatility (20%)</div><div class="val">0.20 <span class="regime-tag">Risk-On</span></div></div>
+  <div class="score-card"><div class="lbl">Aggregate</div><div class="val">0.80 <span class="regime-tag">Risk-On</span></div></div>
+</div>
+<table>
+  <tbody>
+    <tr><td class="field">Rates &mdash; secondary</td><td class="val">Reflation at 0.20 (tied with Risk-On within group; contributes to constructive tension, not dissent)</td></tr>
+    <tr><td class="field">Regime Confidence</td><td class="val"><span class="vote risk-on">HIGH</span> &mdash; aggregate &ge; 0.65 AND all three groups support Risk-On at minimum</td></tr>
+  </tbody>
+</table>
+
+<!-- SECTION 3: Supporting Analysis -->
+<h2>3 &middot; Supporting Analysis</h2>
+
+<h3>3A &middot; Credit Read</h3>
+<p>Unambiguous risk appetite. Both HYG and LQD V-shaped off their recent lows and reclaimed key pivots &mdash; HYG back above 80.50, LQD back above 110. The ratio is rising as HY takes the lead off the bottom, the textbook sign that credit is re-engaging rather than rotating to quality. Both instruments sit above their 200 SMAs with rising 21 EMAs and 50 SMAs underneath. For the credit group to flip, HYG would need to lose 79 convincingly and take LQD below 108 with it &mdash; nothing on the tape currently threatens that.</p>
+
+<h3>3B &middot; Rates Read</h3>
+<p>The most interesting group. The front end (US02Y at 3.71%) has pulled back dovishly under 3.75% while the back end (US30Y at 4.89%) remains pinned near 5%. 2s10s is a positive +54 bps with recent bull-steepening character &mdash; the canonical Reflation signature. Layered on top, MOVE at 65.7 is a full-on collapse of rates vol (down from the 118 spike), DXY is soft under 100, and USDJPY is stable under 160 with no carry-unwind stress. JP10Y at 2.42% is elevated but not spiking, so no global risk-off amplifier from Tokyo.</p>
+<p class="muted">The group&rsquo;s internal split is constructive, not contradictory: MOVE/DXY/USDJPY read clean Risk-On, while 2Y/10Y/2s10s lean Reflation. Both regimes are risk-positive for equities. The real watch is US10Y &mdash; a break back above 4.50% would flip the rates group materially and re-assert the Stagflation read from prior weeks.</p>
+
+<h3>3C &middot; Volatility Read</h3>
+<p>Full compression across the vol complex. VIX collapsed from the 33 high to 17.47 &mdash; a classic post-stress washout. VVIX punctured the 95 complacency level from above, meaning the vol-of-vol market is no longer positioned for another shock. The SPY IV term structure is clean upward-sloping contango (10% front to 17% at one month), with no kink near the FOMC. This is the quietest the vol complex has been since the last cycle of stress began. The only caveat: compressed vol is also the setup from which vol can expand quickly on a surprise catalyst &mdash; FOMC language on Apr 29 is the first real test.</p>
+
+<h3>3D &middot; Cross-Asset Tensions</h3>
+<div class="tension">
+  <strong>Risk-On with Reflation undertones.</strong> Credit and Vol are unanimous Risk-On; Rates is split between Risk-On (MOVE/DXY/USDJPY) and Reflation (2s10s bull-steepening, dovish 2Y). Both are bullish-equity regimes, so the tension is directional agreement with different flavor. If the 10Y continues to drift lower and oil cooperates, Rates migrates fully to Reflation and cyclicals/small-caps should lead. If oil re-engages or CPI surprises hot, the 10Y backs up and Rates flips back toward Stagflation.
+</div>
+
+<h3>3E &middot; Stage Positioning (Lifecycle Tilts)</h3>
+<table>
+  <thead><tr><th>Stage</th><th>Bias</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td class="tick">Young Growth</td><td><span class="stage-overweight">OVERWEIGHT</span></td><td>Vol compression &amp; soft DXY support speculative risk; short of Reflation FAVORED given sticky long-end yields</td></tr>
+    <tr><td class="tick">High Growth</td><td><span class="stage-favored">FAVORED</span></td><td>Duration pain is off; MOVE collapse &amp; dovish front-end lift multiples; regime tailwind is strongest here</td></tr>
+    <tr><td class="tick">Mature Growth</td><td><span class="stage-overweight">OVERWEIGHT</span></td><td>Quality cohort in a risk-on tape; stable vol lets fundamentals drive re-rating</td></tr>
+    <tr><td class="tick">Maturity</td><td><span class="stage-neutral">NEUTRAL</span></td><td>Energy/staples/fertilizer keep an inflation-hedge kicker but lose relative leadership if regime holds</td></tr>
+    <tr><td class="tick">Decline</td><td><span class="stage-underweight">UNDERWEIGHT</span></td><td>Risk-on regime exposes secular-decline names; structural headwinds aren&rsquo;t neutralized by tape</td></tr>
+  </tbody>
+</table>
+
+<h3>3F &middot; Notes &amp; Context</h3>
+<ul>
+  <li><strong>FOMC Apr 28&ndash;29</strong> is the dominant near-term catalyst. Non-SEP meeting &mdash; no dot plot &mdash; so markets will trade the statement wording and Powell&rsquo;s tone. Fed funds currently 3.50&ndash;3.75%; futures pricing no change, cuts pushed later in 2026. A hawkish hold is the primary risk to this Risk-On read.</li>
+  <li><strong>Inflation backdrop:</strong> March CPI 3.3% headline / 2.6% core, energy +12.5% YoY. Inflation has not been resolved; it has gone quiet. Any oil re-engagement flips the 10Y back through 4.50% and invalidates this regime.</li>
+  <li><strong>Regime change from prior read:</strong> Last logged regime was Stagflation (rising yields, elevated oil, vol-compressing-then-volatile). Current read is a clean flip to Risk-On driven by (1) vol collapse, (2) credit recovery, (3) yields pulling back modestly, and (4) soft-dollar continuation. Treat this as genuine but watch whether it sticks past FOMC and the Q2 inflation data &mdash; the speed of the flip argues for tactical sizing.</li>
+  <li><strong>Earnings season</strong> accelerates into the FOMC week &mdash; idiosyncratic vol risk rises even if macro vol stays suppressed.</li>
+</ul>
+
+<h2>Appendix &middot; Sources</h2>
+<ul>
+  <li>TradingView charts: VIX, VVIX, MOVE, US02Y / US10Y / US30Y / DXY / USDJPY / JP10Y, HYG, LQD</li>
+  <li>Robinhood Legend: SPY options chain IV term structure</li>
+  <li>FOMC calendar: Federal Reserve Board (federalreserve.gov)</li>
+  <li>Inflation context: March CPI release, BLS; energy component published in same release</li>
+</ul>
+
+<footer>
+  SMB LLC Macro Dashboard &middot; MACRO_2026-04-18_1200 &middot; Regime accent: <span style="color:var(--risk-on)">#00e676</span>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "type": "ta",
+  "file": "MSTR_2026-04-19_2345.html",
+  "ticker": "MSTR",
+  "tvSymbol": "NASDAQ:MSTR",
+  "date": "2026-04-19T23:45:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 4,
+  "bearScore": 2,
+  "scoreMax": 6,
+  "invalidation": "$140 short-term / $129.50 structural",
+  "entryZone": "$152–$158 (pullback) or $140–$145 (deeper)",
+  "exitZone": "$178–$185 (4h upper VWAP + HVN) / $200 stretch",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$200.75",      "sources": "Weekly 0.382 Fib + $200 call OI" },
+    { "weight": "HEAVY",   "price": "$178–$180",    "sources": "4h upper VWAP band + $180 call OI (3,059) + HVN edge" },
+    { "weight": "MEDIUM",  "price": "$167–$170",    "sources": "Daily upper VWAP band ($167.64) + $170 call OI + today's rejection wick" },
+    { "weight": "CURRENT", "price": "$166.52",      "sources": "Regular session close · +29.45% weekly · +11.80% daily" },
+    { "weight": "HEAVY",   "price": "$155–$157.50", "sources": "Former call wall stack 119k+ combined OI flipped to support + HVN" },
+    { "weight": "MEDIUM",  "price": "$147–$152",    "sources": "Weekly 200 SMA + 4h 200 SMA + 30m 50 SMA + $150 put wall" },
+    { "weight": "HEAVY",   "price": "$140–$145",    "sources": "$142 put wall (1,694 OI) + $145 former call wall (19,869 OI flipped) + daily horizontal + 4h 50 SMA zone" },
+    { "weight": "MEDIUM",  "price": "$133.60",      "sources": "Daily 50 SMA" },
+    { "weight": "HEAVY",   "price": "$129.50",      "sources": "Weekly 0.236 Fib (bounce anchor) + recent swing low" }
+  ]
+}

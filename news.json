@@ -1,23 +1,133 @@
 {
-  "lastUpdated": "2026-04-18T17:35:38.287328+00:00",
-  "lastUpdatedDisplay": "Apr 18, 2026 \u2014 05:35 PM UTC",
-  "articleCount": 60,
+  "lastUpdated": "2026-04-19T02:50:26.118871+00:00",
+  "lastUpdatedDisplay": "Apr 19, 2026 \u2014 02:50 AM UTC",
+  "articleCount": 31,
+  "currentRegime": "Risk-On",
+  "currentRegimeColor": "#00e676",
+  "regimeConfidence": "HIGH",
+  "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are rallying strongly on hopes of a US-Iran peace deal that could normalize Hormuz Strait traffic, with stocks hitting records and oil plunging as geopolitical tensions ease. Bitcoin and crypto are benefiting from the risk-on sentiment with nearly $1B in weekly BTC ETF inflows, though underlying metrics show some caution with miner selling and low trading volumes suggesting this may be more relief rally than sustainable trend reversal.",
-    "regimeImpact": "The peace deal optimism and oil decline supports the oversold relief rally thesis, but we remain in the bear market regime until SPY decisively breaks above 662 and sustains.",
-    "actionItems": [
-      "Monitor BMNR ladder strikes closely as BTC approaches $77k resistance - consider rolling up if we break above $76.5k with conviction",
-      "Reduce short book exposure temporarily given peace deal momentum, but maintain core positions as relief rallies can reverse quickly",
-      "Add to Maturity sector overweight on any pullback as defensive positioning remains prudent in bear market regime"
-    ],
+    "macroSummary": "Bitcoin and Ethereum show technical breakouts with significant ETF inflows ($996M weekly, largest since January) and whale accumulation, but mixed signals emerge from negative Coinbase premiums, miner selling pressure, and warnings of potential crypto winter conditions. Trading volumes have hit lowest levels since 2023 despite the price breakouts.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Strong institutional flows and technical breakouts support risk-on, but negative Coinbase premiums, low trading volumes, and crypto winter warnings suggest underlying weakness in risk appetite.",
+    "thresholdWatches": [],
     "keySignals": [
-      "Oil plunging on Hormuz normalization hopes removes stagflation pressure and supports risk assets short-term.",
-      "Bitcoin ETF inflows of nearly $1B weekly show institutional demand returning but miner selling suggests supply pressure building.",
-      "Polymarket odds of 73% for Hormuz normalization by May-end indicates market pricing in geopolitical resolution.",
-      "Trump's Iran nuclear stance and upcoming US-Iran talks next week represent binary catalyst that could extend or reverse relief rally."
+      {
+        "signal": "Bitcoin ETFs see $996M weekly inflows, largest since January, indicating institutional risk-on appetite",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Coinbase premium turns negative despite Bitcoin breakout, suggesting US institutional demand weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Trading volumes hit lowest levels since 2023 amid breakout, indicating lack of conviction in risk-taking",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Ethereum whale accumulation (32,007 ETH off Binance) and technical breakout targets $2,900",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "CoinGecko warns crypto winter is coming despite recent price strength",
+        "tag": "CONTRADICTS"
+      }
+    ],
+    "actionItems": [
+      "Monitor BMNR ladder for potential volatility increase given mixed crypto signals that could spill into broader risk assets",
+      "Watch for confirmation of institutional demand through Coinbase premium recovery or continued negative readings",
+      "Consider tightening stops on growth positions if crypto weakness spreads to equity risk appetite"
     ]
   },
   "articles": [
+    {
+      "title": "Key facts: ETF $996M, $101B assets; BTC breaks downtrend; 36,383 BTC buy; Coinbase premium negative",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T00:04:29+00:00",
+      "timeDisplay": "12:04 AM",
+      "link": "https://www.tradingview.com/news/tradingview:b06662800ec96:0-key-facts-etf-996m-101b-assets-btc-breaks-downtrend-36-383-btc-buy-coinbase-premium-negative/"
+    },
+    {
+      "title": "Key facts: ETH Breakout Holds; 32,007 ETH Off Binance; Model Sees Gains",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T00:03:01+00:00",
+      "timeDisplay": "12:03 AM",
+      "link": "https://www.tradingview.com/news/tradingview:ef4a07603cb10:0-key-facts-eth-breakout-holds-32-007-eth-off-binance-model-sees-gains/"
+    },
+    {
+      "title": "Bitcoin Breakout Confirmed, But Is It Real Or A Bull Trap?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T23:30:44+00:00",
+      "timeDisplay": "11:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:c53ad072c094b:0-bitcoin-breakout-confirmed-but-is-it-real-or-a-bull-trap/"
+    },
+    {
+      "title": "Ethereum Signals Major Reversal \u2013 $2,900 Target Back In Focus",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T20:30:10+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:9d76f784a094b:0-ethereum-signals-major-reversal-2-900-target-back-in-focus/"
+    },
+    {
+      "title": "Coinbase Says MicroStrategy\u2019s Bitcoin Buying Tightens Supply More Than Market Expects",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T20:15:02+00:00",
+      "timeDisplay": "8:15 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:ed93f19f5094b:0-coinbase-says-microstrategy-s-bitcoin-buying-tightens-supply-more-than-market-expects/"
+    },
+    {
+      "title": "Bitcoin mining difficulty falls, but projected to rise in next adjustment",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T20:02:42+00:00",
+      "timeDisplay": "8:02 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:f55fea186094b:0-bitcoin-mining-difficulty-falls-but-projected-to-rise-in-next-adjustment/"
+    },
+    {
+      "title": "KelpDAO Loses $292 Million in DeFi Wallet Drain Across Ethereum, Arbitrum",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T19:05:03+00:00",
+      "timeDisplay": "7:05 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:dd100c55c094b:0-kelpdao-loses-292-million-in-defi-wallet-drain-across-ethereum-arbitrum/"
+    },
+    {
+      "title": "Can Bitcoin Buyers Join The Breakout Party? Analyst Says Not Yet",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T19:00:38+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:5c4ec5e95094b:0-can-bitcoin-buyers-join-the-breakout-party-analyst-says-not-yet/"
+    },
+    {
+      "title": "Iran views BTC as a strategic asset, but USDt still dominates oil tolls: BPI",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T18:27:35+00:00",
+      "timeDisplay": "6:27 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:4ff6bb33a094b:0-iran-views-btc-as-a-strategic-asset-but-usdt-still-dominates-oil-tolls-bpi/"
+    },
+    {
+      "title": "Digital Gold, ETF, or Jewellery: What works best for your money?",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T17:19:08+00:00",
+      "timeDisplay": "5:19 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:1659937c7094b:0-digital-gold-etf-or-jewellery-what-works-best-for-your-money/"
+    },
+    {
+      "title": "Wall Street\u2019s Biggest Wealth Manager Now Has a Public Bitcoin Wallet",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T17:00:00+00:00",
+      "timeDisplay": "5:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:82ab4f846094b:0-wall-street-s-biggest-wealth-manager-now-has-a-public-bitcoin-wallet/"
+    },
     {
       "title": "\u2018Impossible To Blockade Bitcoin,\u2019 Michael Saylor Defies Critics, Schiff Slams Strategy\u2019s 11.5% Yield",
       "source": "stocktwits",
@@ -67,12 +177,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:9647c1f71094b:0-bitcoin-could-see-short-term-pullback-following-price-rebound-analyst/"
     },
     {
-      "title": "Digital Gold, ETF, or Jewellery: What works best for your money?",
-      "source": "moneycontrol",
+      "title": "Mysterious Whale Buys Ethereum: 32,007 ETH Leaves Binance",
+      "source": "u_today",
       "color": "#00e5ff",
-      "timestamp": "2026-04-18T11:19:08+00:00",
-      "timeDisplay": "11:19 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:1659937c7094b:0-digital-gold-etf-or-jewellery-what-works-best-for-your-money/"
+      "timestamp": "2026-04-18T11:30:00+00:00",
+      "timeDisplay": "11:30 AM",
+      "link": "https://www.tradingview.com/news/u_today:40dd17fe2094b:0-mysterious-whale-buys-ethereum-32-007-eth-leaves-binance/"
     },
     {
       "title": "Bitcoin Slips Below $76.5K as Miner Selling Picks Up \u2014 More Downside Ahead?",
@@ -89,6 +199,14 @@
       "timestamp": "2026-04-18T10:48:46+00:00",
       "timeDisplay": "10:48 AM",
       "link": "https://www.tradingview.com/news/u_today:9b4696afe094b:0-crypto-winter-is-coming-says-coingecko/"
+    },
+    {
+      "title": "Iran Accuses Trump of \u201cSeven Lies\u201d After Bitcoin and Stock Markets Surge",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-18T10:09:20+00:00",
+      "timeDisplay": "10:09 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:502a102fb094b:0-iran-accuses-trump-of-seven-lies-after-bitcoin-and-stock-markets-surge/"
     },
     {
       "title": "Bitcoin ETFs Back on Track With Biggest Inflows Since January",
@@ -169,334 +287,6 @@
       "timestamp": "2026-04-18T03:00:54+00:00",
       "timeDisplay": "3:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:8b443e471094b:0-bitcoin-coinbase-premium-turns-red-bearish-signal/"
-    },
-    {
-      "title": "Wall Street extends April surge on peace prospects",
-      "source": "cnbctv",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T02:12:08+00:00",
-      "timeDisplay": "2:12 AM",
-      "link": "https://www.tradingview.com/news/cnbctv:cea0eec3b094b:0/"
-    },
-    {
-      "title": "Bitcoin LTH Data Turns Cautious: Supply Rises, But SOPR Stays Below 1.0",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T02:00:13+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f839664cc094b:0-bitcoin-lth-data-turns-cautious-supply-rises-but-sopr-stays-below-1-0/"
-    },
-    {
-      "title": "Coinbase Can't Escape Bitcoin's Bumpy Orbit \u2014 Barron's",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T01:31:00+00:00",
-      "timeDisplay": "1:31 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260414000322:0/"
-    },
-    {
-      "title": "Key facts: Inst. Buy BTC; 1.1-1.7M Satoshi Risk; Miners Shift to AI",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T00:06:46+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/tradingview:e035814d5cf56:0-key-facts-inst-buy-btc-1-1-1-7m-satoshi-risk-miners-shift-to-ai/"
-    },
-    {
-      "title": "Key facts: Heavy ETH Shorts; Price $2,322; Schwab Begins Spot Trading",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T00:06:46+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/tradingview:b297755da3b3d:0-key-facts-heavy-eth-shorts-price-2-322-schwab-begins-spot-trading/"
-    },
-    {
-      "title": "Most Important Bitcoin (BTC) Price Test in 2026, Ethereum (ETH) Hits Ceiling, XRP Will Go Parabolic If Price Growth Accelerates: Crypto Market Review",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T00:01:00+00:00",
-      "timeDisplay": "12:01 AM",
-      "link": "https://www.tradingview.com/news/u_today:c99708ddd094b:0-most-important-bitcoin-btc-price-test-in-2026-ethereum-eth-hits-ceiling-xrp-will-go-parabolic-if-price-growth-accelerates-crypto-market-review/"
-    },
-    {
-      "title": "PRES TRUMP/PHOENIX: TO SEE 'A NEW DAWN FOR CUBA;' HAVE SAVED 'PERSECUTED SOUTH AFRICANS' WHERE 'THEY KILL WHITE FARMERS;' CLIMATE CHANGE IS 'SCAM'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T22:28:00+00:00",
-      "timeDisplay": "10:28 PM",
-      "link": "https://www.tradingview.com/news/macenews:447de6e40094b:0-pres-trump-phoenix-to-see-a-new-dawn-for-cuba-have-saved-persecuted-south-africans-where-they-kill-white-farmers-climate-change-is-scam/"
-    },
-    {
-      "title": "Rep. Sheri Biggs Discloses $250,000 Bitcoin ETF Buy Amid Reserve Bill Push",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T22:27:00+00:00",
-      "timeDisplay": "10:27 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:763ac0688094b:0-rep-sheri-biggs-discloses-250-000-bitcoin-etf-buy-amid-reserve-bill-push/"
-    },
-    {
-      "title": "PRES TRUMP/PHOENIX: REPEATS, IRAN CAN NEVER HAVE A NUCLEAR WEAPON; NATO 'WEREN'T THERE FOR US; 'I'M THE PEACEMAKER;' 'NOBODY THANKS US'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T22:22:00+00:00",
-      "timeDisplay": "10:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:f5fa05f52094b:0-pres-trump-phoenix-repeats-iran-can-never-have-a-nuclear-weapon-nato-weren-t-there-for-us-i-m-the-peacemaker-nobody-thanks-us/"
-    },
-    {
-      "title": "CNN: IRANIANS PUSHING BACK ON SOME TRUMP CLAIMS; US-IRAN TALKS TO TAKE PLACE EARLY NEXT WEEK; AGREEMENT ON 80% OF ISSUES BUT REMAINING VERY TOUGH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T22:11:00+00:00",
-      "timeDisplay": "10:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:cc7190623094b:0-cnn-iranians-pushing-back-on-some-trump-claims-us-iran-talks-to-take-place-early-next-week-agreement-on-80-of-issues-but-remaining-very-tough/"
-    },
-    {
-      "title": "PRES TRUMP/PHOENIX: IRAN TO HELP EXCAVATE ENRICHED URANIUM; AGAIN CRITICIZES NATO; PRAISES PAKISTAN; REPEATS, CONTINUING BLOCKADE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T22:08:00+00:00",
-      "timeDisplay": "10:08 PM",
-      "link": "https://www.tradingview.com/news/macenews:8b528836c094b:0-pres-trump-phoenix-iran-to-help-excavate-enriched-uranium-again-criticizes-nato-praises-pakistan-repeats-continuing-blockade/"
-    },
-    {
-      "title": "Gold jumps to one-month high as Iran says Hormuz completely open",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T21:34:51+00:00",
-      "timeDisplay": "9:34 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:085769e34094b:0-gold-jumps-to-one-month-high-as-iran-says-hormuz-completely-open/"
-    },
-    {
-      "title": "Bitcoin climbs to two-month high amid Middle East deal optimism",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T21:25:40+00:00",
-      "timeDisplay": "9:25 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:d20b43a9b094b:0-bitcoin-climbs-to-two-month-high-amid-middle-east-deal-optimism/"
-    },
-    {
-      "title": "Stocks romp to records, oil plunges on hopes of US-Iran peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-17T21:21:13+00:00",
-      "timeDisplay": "9:21 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4100Y7:0-stocks-romp-to-records-oil-plunges-on-hopes-of-us-iran-peace-deal/"
-    },
-    {
-      "title": "Polymarket odds of Hormuz Strait traffic normalizing by end of May spike to 73%",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T21:12:19+00:00",
-      "timeDisplay": "9:12 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:67b440ded094b:0-polymarket-odds-of-hormuz-strait-traffic-normalizing-by-end-of-may-spike-to-73/"
-    },
-    {
-      "title": "ETF League Tables: Invesco Inflows Total $3B",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T21:00:04+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:f230a10db094b:0-etf-league-tables-invesco-inflows-total-3b/"
-    },
-    {
-      "title": "S&P 500 and Nasdaq hit records; Nasdaq sees longest winning streak since grunge",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-17T20:19:52+00:00",
-      "timeDisplay": "8:19 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41017M:0-s-p-500-and-nasdaq-hit-records-nasdaq-sees-longest-winning-streak-since-grunge/"
-    },
-    {
-      "title": "Dollar falls to multi-week lows as risk appetite rises on Hormuz news",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-17T20:17:21+00:00",
-      "timeDisplay": "8:17 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4100MT:0-dollar-falls-to-multi-week-lows-as-risk-appetite-rises-on-hormuz-news/"
-    },
-    {
-      "title": "The Hidden FVG Zone That Says Ethereum Price Could Rally To $10,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T20:00:20+00:00",
-      "timeDisplay": "8:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:3c0572f11094b:0-the-hidden-fvg-zone-that-says-ethereum-price-could-rally-to-10-000/"
-    },
-    {
-      "title": "Fed Officials Remain Uncertain, Hesitant for Now as Middle East Tensions Continue",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:42:00+00:00",
-      "timeDisplay": "7:42 PM",
-      "link": "https://www.tradingview.com/news/macenews:d50006fec094b:0-fed-officials-remain-uncertain-hesitant-for-now-as-middle-east-tensions-continue/"
-    },
-    {
-      "title": "2026 Is Poised For Another Year Of Double-Digit Gains, Don't Miss Out",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:35:00+00:00",
-      "timeDisplay": "7:35 PM",
-      "link": "https://www.tradingview.com/news/zacks:249b04322094b:0-2026-is-poised-for-another-year-of-double-digit-gains-don-t-miss-out/"
-    },
-    {
-      "title": "CFTC Commitments: Comex Gold Futures/Options - Apr 17",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:35:00+00:00",
-      "timeDisplay": "7:35 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260417006426:0/"
-    },
-    {
-      "title": "Dollar Drops on Middle East Peace Optimism",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:33:45+00:00",
-      "timeDisplay": "7:33 PM",
-      "link": "https://www.tradingview.com/news/barchart:3f1f5ca70094b:0-dollar-drops-on-middle-east-peace-optimism/"
-    },
-    {
-      "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:31:00+00:00",
-      "timeDisplay": "7:31 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260417006373:0/"
-    },
-    {
-      "title": "Oil Futures Fall on Reopening of Strait of Hormuz \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:31:00+00:00",
-      "timeDisplay": "7:31 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260417006340:0/"
-    },
-    {
-      "title": "CFTC Commitments: Comex Gold Futures - Apr 17",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:30:00+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260417006334:0/"
-    },
-    {
-      "title": "CFTC Disaggregated Commitments: Comex Gold Futures",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:30:00+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260417006322:0/"
-    },
-    {
-      "title": "Crude Oil Prices Plummet as the Strait of Hormuz Reopens",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:20:10+00:00",
-      "timeDisplay": "7:20 PM",
-      "link": "https://www.tradingview.com/news/barchart:da748e8a8094b:0-crude-oil-prices-plummet-as-the-strait-of-hormuz-reopens/"
-    },
-    {
-      "title": "Ether accumulation wallet balances increased by 33%: Is a rally to $3K next?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T19:14:41+00:00",
-      "timeDisplay": "7:14 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:018160647094b:0-ether-accumulation-wallet-balances-increased-by-33-is-a-rally-to-3k-next/"
-    },
-    {
-      "title": "Yields fall as hopes of end to Iran war ease inflation fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-17T19:13:43+00:00",
-      "timeDisplay": "7:13 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4100MF:0-yields-fall-as-hopes-of-end-to-iran-war-ease-inflation-fears/"
-    },
-    {
-      "title": "Why Ethereum Has Become One Of The Most Heavily Shorted Assets Globally",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:30:37+00:00",
-      "timeDisplay": "6:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a0c30e4d6094b:0-why-ethereum-has-become-one-of-the-most-heavily-shorted-assets-globally/"
-    },
-    {
-      "title": "Sugar Prices Settle Sharply Lower as Crude Oil Plummets",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:29:16+00:00",
-      "timeDisplay": "6:29 PM",
-      "link": "https://www.tradingview.com/news/barchart:8d6053b62094b:0-sugar-prices-settle-sharply-lower-as-crude-oil-plummets/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: 'REASONABLE PROBABILITY' STRAIT OF HORMUZ REOPENS AND RETURN 'TO CONDITIONS THAT EXISTED BEFORE CONFLICT STARTED'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:19:00+00:00",
-      "timeDisplay": "6:19 PM",
-      "link": "https://www.tradingview.com/news/macenews:938c31c60094b:0-fed-gov-waller-auburn-u-reasonable-probability-strait-of-hormuz-reopens-and-return-to-conditions-that-existed-before-conflict-started/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: EXPECT SUPPPLY CHAIN DISRUPTIONS TO RESULT FROM STRAIT BLOCKAGE;' RISK HIGHER OIL PRICES 'WILL BLEED INTO OTHER PRICES'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:17:00+00:00",
-      "timeDisplay": "6:17 PM",
-      "link": "https://www.tradingview.com/news/macenews:d2aa60571094b:0-fed-gov-waller-auburn-u-expect-suppply-chain-disruptions-to-result-from-strait-blockage-risk-higher-oil-prices-will-bleed-into-other-prices/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: 'I WILL BE CAUTIOUS WHEN FACED WITH A SEQUENCE OF TRANSITORY SHOCKS;' 'STANDARD 'LOOK THROUGH' CAN BECOME PROBLEMATIC'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:13:00+00:00",
-      "timeDisplay": "6:13 PM",
-      "link": "https://www.tradingview.com/news/macenews:13461d136094b:0-fed-gov-waller-auburn-u-i-will-be-cautious-when-faced-with-a-sequence-of-transitory-shocks-standard-look-through-can-become-problematic/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: 'THERE MAY BE A THRESHOLD  CROSSED AT WHICH POINT (CONSUMERS) START TO ECONOMIZE'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:10:00+00:00",
-      "timeDisplay": "6:10 PM",
-      "link": "https://www.tradingview.com/news/macenews:68a7ef91d094b:0-fed-gov-waller-auburn-u-there-may-be-a-threshold-crossed-at-which-point-consumers-start-to-economize/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: 'THERE MAY BE A THRESHOLD CROSSED AT WHICH POINT (CONSUMERS) START TO ECONOMIZE'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:08:00+00:00",
-      "timeDisplay": "6:08 PM",
-      "link": "https://www.tradingview.com/news/macenews:8f48d03de094b:0-fed-gov-waller-auburn-u-there-may-be-a-threshold-crossed-at-which-point-consumers-start-to-economize/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: MARKETS MAY BE UNDERVALUING RISKS; 'HIGHLY UNCERTAIN' HOW IRAN CONFLICT GETS RESOLVED AS WELL AS ITS EFFECT ON ECONOMY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:07:00+00:00",
-      "timeDisplay": "6:07 PM",
-      "link": "https://www.tradingview.com/news/macenews:779bfc070094b:0-fed-gov-waller-auburn-u-markets-may-be-undervaluing-risks-highly-uncertain-how-iran-conflict-gets-resolved-as-well-as-its-effect-on-economy/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: HAVE TO BALANCE RISKS TO BOTH MANDATES; IF RISK TO INFLATION GTREATER THEN MAY HAVE TO MAINTAIN CURRENT TARGET RANGE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:05:00+00:00",
-      "timeDisplay": "6:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:a2174cc9b094b:0-fed-gov-waller-auburn-u-have-to-balance-risks-to-both-mandates-if-risk-to-inflation-gtreater-then-may-have-to-maintain-current-target-range/"
-    },
-    {
-      "title": "FED GOV WALLER/AUBURN U: THE LONGER THE OIL PRICE SHOCK, THE HIGHER THE CHANCE HIGHER INFLATION 'GETS EMBEDDED'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-17T18:02:00+00:00",
-      "timeDisplay": "6:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:5ed15c1b5094b:0-fed-gov-waller-auburn-u-the-longer-the-oil-price-shock-the-higher-the-chance-higher-inflation-gets-embedded/"
-    },
-    {
-      "title": "Wall Street stocks flourish, oil plunges below $90 after Iran says Strait of Hormuz is open",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-17T17:43:55+00:00",
-      "timeDisplay": "5:43 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N410113:0-wall-street-stocks-flourish-oil-plunges-below-90-after-iran-says-strait-of-hormuz-is-open/"
     }
   ]
 }

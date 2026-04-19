@@ -12,39 +12,153 @@
       "equityBias": "BEARISH-GROWTH-NEUTRAL-VALUE",
       "creditScore": 0.27,
       "ratesScore": 0.25,
-      "volScore": 0.00,
+      "volScore": 0.0,
       "aggregateScore": 0.52,
       "primaryTension": "Credit & Rates aligned on Stagflation; Volatility compressed — equity vol lagging",
       "indicators": [
-        { "group": "Credit", "name": "HYG",     "reading": "Below 50 SMA, grinding lower, spreads widening slowly", "vote": "Stagflation" },
-        { "group": "Credit", "name": "LQD",     "reading": "Rolling over with yields rising; duration pain visible", "vote": "Stagflation" },
-        { "group": "Credit", "name": "HYG/LQD", "reading": "Ratio stable but volatile — no clear directional bias", "vote": "Neutral" },
-        { "group": "Rates",  "name": "US02Y",   "reading": "Sticky above 4.6%, not pricing cuts aggressively", "vote": "Stagflation" },
-        { "group": "Rates",  "name": "US10Y",   "reading": "Holding 4.4–4.6% range with oil firm above $85", "vote": "Stagflation" },
-        { "group": "Rates",  "name": "US30Y",   "reading": "Rising faster than 10Y — bear steepener, inflation premium building", "vote": "Stagflation" },
-        { "group": "Rates",  "name": "2s10s",   "reading": "Slight negative, flat — no clear signal, watching disinversion", "vote": "Neutral" },
-        { "group": "Rates",  "name": "MOVE",    "reading": "112 — elevated, rates volatility running hot", "vote": "Stagflation" },
-        { "group": "Rates",  "name": "DXY",     "reading": "Soft at 102, weakening despite higher yields — classic stagflation tell", "vote": "Stagflation" },
-        { "group": "Rates",  "name": "USDJPY",  "reading": "152 — elevated but stable, carry still on", "vote": "Risk-On" },
-        { "group": "Rates",  "name": "JP10Y",   "reading": "1.35% — rising steadily, global rate pressure", "vote": "Stagflation" },
-        { "group": "Vol",    "name": "VIX",     "reading": "17 — compressed despite macro stress, equity complacency", "vote": "Risk-On" },
-        { "group": "Vol",    "name": "VVIX",    "reading": "98 — below danger zone, but vol-of-vol rising", "vote": "Neutral" },
-        { "group": "Vol",    "name": "SPY IV",  "reading": "Low, elevated skew — protection being bid selectively", "vote": "Neutral" }
+        {
+          "group": "Credit",
+          "name": "HYG",
+          "reading": "Below 50 SMA, grinding lower, spreads widening slowly",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Credit",
+          "name": "LQD",
+          "reading": "Rolling over with yields rising; duration pain visible",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Credit",
+          "name": "HYG/LQD",
+          "reading": "Ratio stable but volatile — no clear directional bias",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Rates",
+          "name": "US02Y",
+          "reading": "Sticky above 4.6%, not pricing cuts aggressively",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US10Y",
+          "reading": "Holding 4.4–4.6% range with oil firm above $85",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US30Y",
+          "reading": "Rising faster than 10Y — bear steepener, inflation premium building",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "2s10s",
+          "reading": "Slight negative, flat — no clear signal, watching disinversion",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Rates",
+          "name": "MOVE",
+          "reading": "112 — elevated, rates volatility running hot",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "DXY",
+          "reading": "Soft at 102, weakening despite higher yields — classic stagflation tell",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "USDJPY",
+          "reading": "152 — elevated but stable, carry still on",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "JP10Y",
+          "reading": "1.35% — rising steadily, global rate pressure",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Vol",
+          "name": "VIX",
+          "reading": "17 — compressed despite macro stress, equity complacency",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Vol",
+          "name": "VVIX",
+          "reading": "98 — below danger zone, but vol-of-vol rising",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Vol",
+          "name": "SPY IV",
+          "reading": "Low, elevated skew — protection being bid selectively",
+          "vote": "Neutral"
+        }
       ],
       "thresholds": [
-        { "indicator": "VIX",    "level": "> 22",    "signal": "Vol catches up to rates/credit stress → regime flip to Risk-Off" },
-        { "indicator": "HYG",    "level": "< 75",    "signal": "Structural credit break → escalates Stagflation toward Deflation/Risk-Off" },
-        { "indicator": "US10Y",  "level": "> 4.75%", "signal": "Yield breakout → amplifies duration pain, further pressure on High Growth" },
-        { "indicator": "DXY",    "level": "< 100",   "signal": "Dollar breakdown → bullish commodities and EM, soft-Stagflation tilt" },
-        { "indicator": "USDJPY", "level": "> 155",   "signal": "BOJ intervention zone → yen carry unwind risk, Risk-Off catalyst" },
-        { "indicator": "MOVE",   "level": "> 130",   "signal": "Rate vol escalation → headwind for all risk assets, flags Risk-Off transition" }
+        {
+          "indicator": "VIX",
+          "level": "> 22",
+          "signal": "Vol catches up to rates/credit stress → regime flip to Risk-Off"
+        },
+        {
+          "indicator": "HYG",
+          "level": "< 75",
+          "signal": "Structural credit break → escalates Stagflation toward Deflation/Risk-Off"
+        },
+        {
+          "indicator": "US10Y",
+          "level": "> 4.75%",
+          "signal": "Yield breakout → amplifies duration pain, further pressure on High Growth"
+        },
+        {
+          "indicator": "DXY",
+          "level": "< 100",
+          "signal": "Dollar breakdown → bullish commodities and EM, soft-Stagflation tilt"
+        },
+        {
+          "indicator": "USDJPY",
+          "level": "> 155",
+          "signal": "BOJ intervention zone → yen carry unwind risk, Risk-Off catalyst"
+        },
+        {
+          "indicator": "MOVE",
+          "level": "> 130",
+          "signal": "Rate vol escalation → headwind for all risk assets, flags Risk-Off transition"
+        }
       ],
       "stagePositioning": [
-        { "stage": "Young Growth",  "bias": "AVOID",       "note": "High beta, no cash flow — crushed in stagflation. IREN, RKLB-style names." },
-        { "stage": "High Growth",   "bias": "UNDERWEIGHT", "note": "Duration-sensitive, multiple compression. QQQ, IGV, AI-HPC names — skeptical of longs." },
-        { "stage": "Mature Growth", "bias": "NEUTRAL",     "note": "Quality cohort — selective entries on structural pullbacks. MSFT, AAPL, GOOGL." },
-        { "stage": "Maturity",      "bias": "OVERWEIGHT",  "note": "Energy, staples, defensives — regime fits. CF, LNG, XLE, XLP. Core allocation." },
-        { "stage": "Decline",       "bias": "AVOID",       "note": "Structural headwinds compound with regime. Media, legacy retail, auto OEMs." }
+        {
+          "stage": "Young Growth",
+          "bias": "AVOID",
+          "note": "High beta, no cash flow — crushed in stagflation. IREN, RKLB-style names."
+        },
+        {
+          "stage": "High Growth",
+          "bias": "UNDERWEIGHT",
+          "note": "Duration-sensitive, multiple compression. QQQ, IGV, AI-HPC names — skeptical of longs."
+        },
+        {
+          "stage": "Mature Growth",
+          "bias": "NEUTRAL",
+          "note": "Quality cohort — selective entries on structural pullbacks. MSFT, AAPL, GOOGL."
+        },
+        {
+          "stage": "Maturity",
+          "bias": "OVERWEIGHT",
+          "note": "Energy, staples, defensives — regime fits. CF, LNG, XLE, XLP. Core allocation."
+        },
+        {
+          "stage": "Decline",
+          "bias": "AVOID",
+          "note": "Structural headwinds compound with regime. Media, legacy retail, auto OEMs."
+        }
       ]
     },
     {
@@ -62,20 +176,76 @@
       "entryZone": "$400–$405",
       "exitZone": "$430–$435",
       "levels": [
-        { "weight": "MEDIUM", "price": "$472.69",   "sources": "Daily 200 SMA" },
-        { "weight": "MEDIUM", "price": "$450",      "sources": "Call OI 1,892" },
-        { "weight": "HEAVY",  "price": "$430–$435", "sources": "4h 200 SMA + Call OI 2,057 + extended target confluence" },
-        { "weight": "MEDIUM", "price": "$425",      "sources": "Call OI 1,533" },
-        { "weight": "MEDIUM", "price": "$420",      "sources": "Call OI 3,941 + round number" },
-        { "weight": "CURRENT","price": "$417.41",   "sources": "After-hours print" },
-        { "weight": "MEDIUM", "price": "$415",      "sources": "Call OI 2,514" },
-        { "weight": "CURRENT","price": "$411.22",   "sources": "Regular session close" },
-        { "weight": "MEDIUM", "price": "$410",      "sources": "Call OI 4,775" },
-        { "weight": "MEDIUM", "price": "$405",      "sources": "Call OI 4,024" },
-        { "weight": "HEAVY",  "price": "$400",      "sources": "Call wall 10,879 OI — breakout flip level" },
-        { "weight": "MEDIUM", "price": "$395",      "sources": "Call OI 4,584" },
-        { "weight": "MEDIUM", "price": "$391.91",   "sources": "Daily 50 SMA" },
-        { "weight": "HEAVY",  "price": "$375–$385", "sources": "Put walls $375+$380+$385 + Weekly 200 SMA" }
+        {
+          "weight": "MEDIUM",
+          "price": "$472.69",
+          "sources": "Daily 200 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$450",
+          "sources": "Call OI 1,892"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$430–$435",
+          "sources": "4h 200 SMA + Call OI 2,057 + extended target confluence"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$425",
+          "sources": "Call OI 1,533"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$420",
+          "sources": "Call OI 3,941 + round number"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$417.41",
+          "sources": "After-hours print"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$415",
+          "sources": "Call OI 2,514"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$411.22",
+          "sources": "Regular session close"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$410",
+          "sources": "Call OI 4,775"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$405",
+          "sources": "Call OI 4,024"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$400",
+          "sources": "Call wall 10,879 OI — breakout flip level"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$395",
+          "sources": "Call OI 4,584"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$391.91",
+          "sources": "Daily 50 SMA"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$375–$385",
+          "sources": "Put walls $375+$380+$385 + Weekly 200 SMA"
+        }
       ]
     }
   ]

@@ -1,0 +1,28 @@
+{
+  "type": "ta",
+  "file": "ETHUSD_2026-04-19_2115.html",
+  "ticker": "ETHUSD",
+  "tvSymbol": "COINBASE:ETHUSD",
+  "date": "2026-04-19T21:15:00-05:00",
+  "bias": "SHORT tactical",
+  "confidence": "LOW",
+  "bullScore": 2,
+  "bearScore": 4,
+  "scoreMax": 6,
+  "invalidation": "$2,400 short-term / $2,503 structural",
+  "entryZone": "$2,310–$2,345",
+  "exitZone": "$2,180–$2,200",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$2,845",          "sources": "Daily 200 SMA (overhead wall)" },
+    { "weight": "HEAVY",   "price": "$2,469–$2,503",   "sources": "Daily upper VWAP band + 4H upper band + descending TL + rejection high" },
+    { "weight": "MEDIUM",  "price": "$2,451",          "sources": "Weekly 200 SMA" },
+    { "weight": "HEAVY",   "price": "$2,343–$2,373",   "sources": "Weekly VWAP center + 4H VWAP center + 4H 50 SMA (retest zone)" },
+    { "weight": "CURRENT", "price": "$2,280",          "sources": "Regular session close 2026-04-19" },
+    { "weight": "MEDIUM",  "price": "$2,243",          "sources": "4H lower VWAP band (−2.5σ)" },
+    { "weight": "HEAVY",   "price": "$2,180–$2,200",   "sources": "Daily VWAP center + prior resistance-turned-support HVN + breakout retest" },
+    { "weight": "MEDIUM",  "price": "$2,167",          "sources": "4H 200 SMA" },
+    { "weight": "MEDIUM",  "price": "$2,143",          "sources": "Daily 50 SMA" },
+    { "weight": "HEAVY",   "price": "$1,896–$1,925",   "sources": "Daily lower VWAP band + prior consolidation low (structural invalidation)" },
+    { "weight": "MEDIUM",  "price": "$1,250",          "sources": "Weekly lower VWAP band (macro tail)" }
+  ]
+}

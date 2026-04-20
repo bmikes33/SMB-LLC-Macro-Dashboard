@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETHUSD TA Report — 2026-04-19</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #0a0e17; --bg-1: #0f1420; --bg-2: #141926; --border: #1e2a3a;
+    --text-0: #e2e8f0; --text-1: #8b9ab5; --text-2: #4a5976;
+    --cyan: #00e5ff; --green: #00e676; --red: #ff3d57; --amber: #ffab00;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg-0); color: var(--text-0); font-family: var(--sans); line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 28px 64px; }
+  .hdr { display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 24px; }
+  .hdr-top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .ticker { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--cyan); letter-spacing: 0.04em; }
+  .tf { font-family: var(--mono); font-size: 13px; color: var(--text-1); text-transform: uppercase; letter-spacing: 0.12em; }
+  .ts { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-left: auto; }
+  .hdr-meta { display: flex; gap: 20px; font-family: var(--mono); font-size: 13px; margin-top: 8px; flex-wrap: wrap; }
+  .meta-item { display: flex; gap: 6px; align-items: center; }
+  .meta-label { color: var(--text-2); text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; }
+  .meta-val-score { color: var(--text-0); }
+  h2.sec { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.14em; margin: 32px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h3.sub { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--text-1); text-transform: uppercase; letter-spacing: 0.12em; margin: 20px 0 8px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; font-size: 14px; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--bg-2); font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--text-1); text-transform: uppercase; letter-spacing: 0.1em; }
+  td { background: var(--bg-1); color: var(--text-0); }
+  td.mono, th.mono { font-family: var(--mono); }
+  td.price { font-family: var(--mono); font-weight: 500; }
+  tr.heavy td { background: rgba(255, 61, 87, 0.08); border-left: 2px solid var(--red); }
+  tr.heavy td.price, tr.heavy td.weight { color: var(--red); font-weight: 700; }
+  tr.heavy-support td { background: rgba(0, 230, 118, 0.08); border-left: 2px solid var(--green); }
+  tr.heavy-support td.price, tr.heavy-support td.weight { color: var(--green); font-weight: 700; }
+  tr.medium td { background: rgba(255, 171, 0, 0.06); border-left: 2px solid var(--amber); }
+  tr.medium td.weight { color: var(--amber); font-weight: 600; }
+  tr.light td { color: var(--text-1); }
+  tr.current td { background: var(--bg-2); border-left: 2px solid var(--cyan); }
+  tr.current td.price { color: var(--cyan); font-weight: 700; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 3px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .pill.short { background: rgba(255, 61, 87, 0.15); color: var(--red); border: 1px solid rgba(255, 61, 87, 0.35); }
+  .pill.long { background: rgba(0, 230, 118, 0.15); color: var(--green); border: 1px solid rgba(0, 230, 118, 0.35); }
+  .pill.neutral { background: rgba(139, 154, 181, 0.12); color: var(--text-1); border: 1px solid var(--border); }
+  .pill.med { background: rgba(255, 171, 0, 0.15); color: var(--amber); border: 1px solid rgba(255, 171, 0, 0.35); }
+  .pill.low { background: rgba(255, 61, 87, 0.12); color: var(--red); border: 1px solid rgba(255, 61, 87, 0.3); }
+  .pill.high { background: rgba(0, 230, 118, 0.15); color: var(--green); border: 1px solid rgba(0, 230, 118, 0.35); }
+  .exec td:first-child { color: var(--text-2); font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; width: 180px; }
+  p, li { color: var(--text-0); font-size: 14.5px; }
+  p { margin: 8px 0 12px; }
+  ul { margin: 8px 0 12px; padding-left: 22px; }
+  li { margin: 4px 0; }
+  strong { color: var(--text-0); font-weight: 600; }
+  em { color: var(--text-1); font-style: normal; font-family: var(--mono); font-size: 13px; }
+  code { font-family: var(--mono); font-size: 13px; background: var(--bg-2); padding: 1px 6px; border-radius: 2px; color: var(--cyan); }
+  .callout { background: var(--bg-2); border-left: 3px solid var(--amber); padding: 12px 16px; margin: 12px 0; font-size: 13.5px; }
+  .callout.warn { border-color: var(--red); }
+  .callout.info { border-color: var(--cyan); }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 11px; color: var(--text-2); letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div class="hdr-top">
+      <div class="ticker">ETHUSD</div>
+      <div class="tf">Weekly · Daily · 4H · 30M</div>
+      <div class="ts">2026-04-19 · 21:15 CT</div>
+    </div>
+    <div class="hdr-meta">
+      <div class="meta-item"><span class="meta-label">Bias:</span> <span class="pill short">SHORT tactical</span></div>
+      <div class="meta-item"><span class="meta-label">Confidence:</span> <span class="pill low">LOW</span></div>
+      <div class="meta-item"><span class="meta-label">Tool agreement:</span> <span class="meta-val-score">4/6 bear · 33%/67% · 4H</span></div>
+      <div class="meta-item"><span class="meta-label">Close:</span> <span class="meta-val-score">$2,280.52</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">§1 — Decision Summary</h2>
+
+  <h3 class="sub">1A · Executive Summary</h3>
+  <table class="exec">
+    <tr><td>Bias</td><td><span class="pill short">SHORT tactical</span> — fade-the-rally into 4H cooling, but HTF is developing bullishly; this is a reversion trade, not a structural short</td></tr>
+    <tr><td>Final Confidence</td><td><span class="pill low">LOW</span> — 4H setup fights the weekly TL reclaim + daily MACD cross; capped by missing HTF Fibs</td></tr>
+    <tr><td>Tool Agreement</td><td>2/6 bull · 4/6 bear (33% bull on 4H) — less conviction than BTC</td></tr>
+    <tr><td>Invalidation</td><td><strong>$2,400</strong> short-term (4H 50 SMA + descending TL reclaim) · <strong>$2,503</strong> structural (upper VWAP band)</td></tr>
+    <tr><td>Entry Zone</td><td><strong>$2,310 – $2,345</strong> — 4H 50 SMA retest + Weekly VWAP center — fade failed reclaim</td></tr>
+    <tr><td>Exit Zone</td><td><strong>$2,180 – $2,200</strong> — Daily VWAP center + HVN reclaim level · partial at $2,140 (Daily 50 SMA)</td></tr>
+    <tr><td>Macro Watch</td><td><span class="pill med">TIER-SHIFTED HIGH</span> — <strong>Warsh Fed chair hearing Tue 4/21 10:00 ET</strong> · rate-sensitive +1 for ETH · ~36h out · elevated gap risk</td></tr>
+  </table>
+
+  <h3 class="sub">1B · Key Levels (weighted)</h3>
+  <table>
+    <tr><th class="mono">Weight</th><th class="mono">Price</th><th class="mono">Sources</th></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$2,845</td><td>Daily 200 SMA — overhead structural wall (far)</td></tr>
+    <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$2,469 – $2,503</td><td>Daily upper VWAP band ($2,469) + 4H upper band ($2,503) + descending TL from late-2025 highs + recent rejection high</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$2,451</td><td>Weekly 200 SMA — nearby structural resistance</td></tr>
+    <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$2,343 – $2,373</td><td>Weekly VWAP center ($2,343) + 4H VWAP center ($2,373) + 4H 50 SMA ($2,317) — three-tool retest zone</td></tr>
+    <tr class="light"><td class="weight">LIGHT</td><td class="price">$2,305 / $2,353</td><td>30M VWAP center / 30M 200 SMA cluster</td></tr>
+    <tr class="current"><td>—</td><td class="price">$2,280 ← CURRENT</td><td>Regular session close 2026-04-19</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$2,243</td><td>4H lower VWAP band (−2.5σ) — statistical support</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$2,180 – $2,200</td><td>Daily VWAP center ($2,182) + prior resistance-turned-support HVN + recent breakout retest level</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$2,167</td><td>4H 200 SMA</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$2,143</td><td>Daily 50 SMA</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$1,896 – $1,925</td><td>Daily lower VWAP band (−2.5σ) + 4H horizontal magenta + prior consolidation low</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$1,250</td><td>Weekly lower VWAP band — macro tail</td></tr>
+  </table>
+
+  <div class="callout info"><strong>CSP Strike Zones:</strong> not applicable — ETHUSD spot has no equity-style listed chain and no Deribit/CME OI was provided. Section skipped.</div>
+
+  <h2 class="sec">§2 — Confidence Breakdown</h2>
+  <table>
+    <tr><th class="mono">Stage</th><th class="mono">Value</th></tr>
+    <tr><td>TA Confidence</td><td><span class="pill low">LOW</span> — 4H rejection + MACD bear cross supports tactical short, BUT weekly reclaimed ascending TL from 2022 lows and daily just printed MACD bull cross — LTF fights improving HTF. No HTF Fibs drawn (caps anyway at MEDIUM).</td></tr>
+    <tr><td>Fundamental Context</td><td>not provided</td></tr>
+    <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+    <tr><td>Macro Calendar</td><td>Warsh Fed chair hearing Tue 4/21 10:00 ET · tier-shifted HIGH (ETH rate-sensitive +1) · ~36h out · CPI 0.9% MoM prior · Iran-conflict overhang</td></tr>
+    <tr><td>Macro Modifier</td><td>No hard cap (&gt;24h) — note elevated IV/gap risk; widen invalidation tolerance around event</td></tr>
+    <tr><td><strong>Final Confidence</strong></td><td><strong><span class="pill low">LOW</span></strong></td></tr>
+  </table>
+
+  <h2 class="sec">§3 — Supporting Analysis</h2>
+
+  <h3 class="sub">3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>Weekly:</strong> Major downtrend from 2024 ATH ~$4,800; price has basing-pattern behavior with <em>key structural development: just reclaimed the ascending trendline from 2022 lows</em>. 50 SMA ($3,086) and 200 SMA ($2,451) both above price — long-term structure still bearish on SMA stack, but the TL reclaim is the first meaningful bullish signal in months. Weekly VWAP center $2,344 just overhead. RSI 35.95 below midline but curling up. MACD histogram less negative (early improvement). <em>No Fibs drawn.</em></li>
+    <li><strong>Daily:</strong> Recovering structure. Price ($2,280) above 50 SMA ($2,143) — bullish on this TF. 200 SMA ($2,845) still a wall overhead. Daily has legitimately broken out from the ~$2,000–$2,180 consolidation and retested the breakout. RVWAP center $2,182 (just below price), upper band $2,469 (just hit on the recent push). RSI 59.28 rising, MACD bullish cross with histogram expanding modestly. <em>No Fibs drawn.</em></li>
+  </ul>
+
+  <h3 class="sub">3B · Current Timeframe Read (4H primary)</h3>
+  <ul>
+    <li><strong>Regime:</strong> Trending down intraday after tagging the upper band near $2,500 and rolling over. Within a larger ascending structure on the daily.</li>
+    <li><strong>VWAP:</strong> Price ($2,280) below 4H VWAP center ($2,373) — lost the VWAP on the rollover. Band width wide; slope flattening.</li>
+    <li><strong>MAs:</strong> 50 SMA ($2,318) just above price, 200 SMA ($2,168) well below — 50&gt;200 means 4H structure still bullish. This frames the short as counter-structure tactical, not trend entry.</li>
+    <li><strong>Momentum:</strong> RSI 49.32 (MA 39.41) — just lost the midline and falling. MACD below zero with histogram barely positive (early bull-cross reading by the numbers, but price structure is rolling — treat as weak / non-confirming).</li>
+    <li><strong>Fib reference:</strong> <em>not drawn</em> — structural retracement unknown. Primary confidence cap.</li>
+  </ul>
+
+  <h3 class="sub">3C · Confluence Zones</h3>
+  <p>Two HEAVY zones bracket the working range. Overhead, <strong>$2,469–$2,503</strong> stacks the daily upper VWAP band, 4H upper band, descending trendline from late-2025 highs, and the recent rejection. The weekly 200 SMA sits just below at $2,451 — this entire $2,450–$2,503 stack is a formidable resistance shelf; ETH would need to reclaim and hold above here to structurally flip bullish. Below, <strong>$2,180–$2,200</strong> is the first defended support — daily VWAP center plus the prior resistance-turned-support HVN from the breakout retest. A flush through this opens the path to the secondary HEAVY zone at <strong>$1,896–$1,925</strong>, which is the structural invalidation for the weekly TL reclaim thesis. The mid-zone <strong>$2,343–$2,373</strong> (weekly VWAP center + 4H VWAP center + 4H 50 SMA) is the likely first retest area on any bounce — <em>this is where to fade</em>.</p>
+
+  <h3 class="sub">3D · Divergences</h3>
+  <p>Weekly MACD is still below zero but showing histogram improvement — consistent with the TL reclaim, suggests weekly is in bottoming process. Daily momentum is clean bullish (RSI rising, MACD crossed up) without divergence yet. No high-quality 4H divergence on this leg — just a standard rollover from resistance. The key tell: <em>if the 30M prints a bullish RSI divergence at the lower band ($2,243) and holds, that's the early signal the daily uptrend is intact and the tactical short is done</em>.</p>
+
+  <h3 class="sub">3E · Notes</h3>
+  <ul>
+    <li><strong>ETH is structurally weaker than BTC but setting up a potentially cleaner bullish base.</strong> BTC's weekly 50 SMA is above 200 SMA (intact); ETH's weekly SMA stack has price below both — but the ascending TL reclaim from 2022 lows is a more meaningful weekly pivot than BTC's equivalent.</li>
+    <li><strong>This is a low-conviction tactical call.</strong> The 4H short thesis works for a pullback to $2,180–$2,200, but the HTF improvement means this is a <em>fade the rejection, cover at prior breakout retest</em> trade — not a structural short. If weekly continues building and breaks above $2,450, the setup flips to long on any subsequent retest of $2,200.</li>
+    <li><strong>ETH is more leveraged to Warsh hearing than BTC</strong> in the sense that ETH has more room to re-rate both ways. A dovish signal could break the $2,450 wall; a hawkish one could flush the $2,000–$2,050 support shelf.</li>
+    <li><strong>30M oversold bounce attempt</strong> (RSI 31.90, MACD curling up) — same setup as BTC. Fade the bounce into the $2,310–$2,345 retest if it prints.</li>
+    <li><strong>Daily MACD bull cross is real</strong> and argues against pressing the short below $2,200. Structural invalidation for the short thesis is above $2,503 (upper band reclaim). Bullish thesis invalidation is below $2,050 (loss of daily 50 SMA + lower HVN).</li>
+  </ul>
+
+  <h2 class="sec">Appendix — Data Snapshot</h2>
+  <table>
+    <tr><th class="mono">TF</th><th class="mono">Close</th><th class="mono">VWAP C / U / L</th><th class="mono">50 / 200 SMA</th><th class="mono">RSI</th><th class="mono">MACD state</th></tr>
+    <tr><td class="mono">Weekly</td><td class="price">$2,282.60</td><td class="price">$2,343.86 / $3,438.05 / $1,249.67</td><td class="price">$3,085.87 / $2,450.61</td><td class="mono">35.95</td><td>Histogram &lt;0, curling up; signal-line cross forming</td></tr>
+    <tr><td class="mono">Daily</td><td class="price">$2,280.52</td><td class="price">$2,182.63 / $2,469.08 / $1,896.17</td><td class="price">$2,142.83 / $2,845.09</td><td class="mono">59.28</td><td>Above zero, bull cross, histogram expanding modestly</td></tr>
+    <tr><td class="mono">4H</td><td class="price">$2,280.23</td><td class="price">$2,373.35 / $2,503.48 / $2,243.22</td><td class="price">$2,317.64 / $2,167.61</td><td class="mono">49.32</td><td>Below zero, rolling over after test of resistance</td></tr>
+    <tr><td class="mono">30M</td><td class="price">$2,280.20</td><td class="price">$2,305.96 / $2,373.54 / $2,238.38</td><td class="price">$2,312.60 / $2,353.74</td><td class="mono">31.90</td><td>Deep negative, curling up (LTF oversold bounce)</td></tr>
+  </table>
+
+  <p style="color: var(--text-2); font-size: 12px; margin-top: 24px;"><em>Reports follow the confluence-first TA framework: structure tools (VWAP ±2.5σ, VPVR, 50/200 SMA, Fib) define where; momentum tools (RSI, MACD) define whether the move has force. Confidence is weighted by tool agreement and capped by missing inputs or imminent macro risk. Position sizing, expiry selection, and delta are user-decided.</em></p>
+
+  <footer>
+    SMB LLC Macro Dashboard · TA Chart Analysis · ETHUSD · 2026-04-19 · Built from /ta-chart-analysis
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WULF — TA Report — 2026-04-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-1: #0a0e17;
+    --bg-2: #0f1420;
+    --bg-3: #141926;
+    --text-1: #e2e8f0;
+    --text-2: #8b9ab5;
+    --text-3: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --heavy-bg: rgba(255,61,87,0.08);
+    --heavy-border: rgba(255,61,87,0.28);
+    --medium-bg: rgba(255,171,0,0.06);
+    --medium-border: rgba(255,171,0,0.22);
+    --tier1-bg: rgba(0,230,118,0.07);
+    --tier1-border: rgba(0,230,118,0.25);
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg-1);
+    color: var(--text-1);
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    margin: 0;
+    padding: 28px 20px;
+    line-height: 1.55;
+    font-size: 14px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  /* Header */
+  .hdr {
+    background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .hdr-left { min-width: 260px; }
+  .ticker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 1px;
+    margin: 0 0 6px;
+  }
+  .sub {
+    color: var(--text-2);
+    font-size: 13px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.5px;
+  }
+  .hdr-right { text-align: right; font-family: 'JetBrains Mono', monospace; }
+  .badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-left: 6px;
+  }
+  .badge.long { background: rgba(0,230,118,0.15); color: var(--green); border: 1px solid rgba(0,230,118,0.3); }
+  .badge.medium { background: rgba(255,171,0,0.15); color: var(--amber); border: 1px solid rgba(255,171,0,0.3); }
+  .price-line { font-size: 15px; color: var(--text-1); margin-top: 10px; }
+  .pct-up { color: var(--green); }
+
+  /* Section */
+  .sec {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .sec-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cyan);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .subsec-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-2);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 18px 0 10px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--bg-3);
+  }
+  td { color: var(--text-1); }
+  td.mono, th.mono { font-family: 'JetBrains Mono', monospace; }
+  tr.heavy { background: var(--heavy-bg); }
+  tr.heavy td:first-child { color: var(--red); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  tr.heavy td.price { color: var(--red); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  tr.medium { background: var(--medium-bg); }
+  tr.medium td:first-child { color: var(--amber); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  tr.medium td.price { font-family: 'JetBrains Mono', monospace; color: var(--amber); }
+  tr.light td:first-child { color: var(--text-3); font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  tr.light td.price { font-family: 'JetBrains Mono', monospace; color: var(--text-2); }
+  tr.current { background: rgba(0,229,255,0.08); }
+  tr.current td { color: var(--cyan); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  tr.tier1 { background: var(--tier1-bg); }
+  tr.tier1 td:first-child { color: var(--green); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  tr.tier2 td:first-child { color: var(--amber); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  tr.stretch td:first-child { color: var(--text-2); font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+  tr.avoid td:first-child { color: var(--red); font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  tr.avoid td { color: var(--text-3); }
+
+  /* Exec summary 2-col */
+  .exec-grid { width: 100%; }
+  .exec-grid td:first-child {
+    width: 34%;
+    color: var(--text-2);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .exec-grid td:last-child { font-weight: 500; }
+
+  /* Bold utility */
+  .bold { font-weight: 600; }
+  .cy { color: var(--cyan); }
+  .gr { color: var(--green); }
+  .rd { color: var(--red); }
+  .am { color: var(--amber); }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* Analysis blocks */
+  .bullet-block p { margin: 6px 0 6px; color: var(--text-1); }
+  .bullet-block .lbl {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--cyan);
+    margin-right: 8px;
+    letter-spacing: 0.5px;
+  }
+  .prose p { color: var(--text-1); margin: 10px 0; }
+
+  /* Footer */
+  .foot {
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="ticker">WULF</div>
+      <div class="sub">TERAWULF INC · NASDAQ · W / D / 4H / 30m</div>
+      <div class="price-line">$20.64 · <span class="pct-up">+9.38% W</span> · <span class="pct-up">+6.89% D</span></div>
+    </div>
+    <div class="hdr-right">
+      <div><span class="badge long">LONG TACTICAL</span><span class="badge medium">MEDIUM CONF</span></div>
+      <div style="margin-top: 10px; font-size: 11px; color: var(--text-2); letter-spacing: 1px;">2026-04-19 · 21:50 CT</div>
+      <div style="margin-top: 4px; font-size: 11px; color: var(--text-3); letter-spacing: 1px;">TOOL AGREEMENT · 6/6 BULL · 100%</div>
+    </div>
+  </div>
+
+  <!-- SECTION 1A - EXECUTIVE SUMMARY -->
+  <div class="sec">
+    <h2 class="sec-title">1A · Executive Summary</h2>
+    <table class="exec-grid">
+      <tr><td>Bias</td><td><span class="gr bold">LONG tactical</span> — at overhead resistance, structurally extended</td></tr>
+      <tr><td>Final Confidence</td><td><span class="am bold">MEDIUM</span> (TA HIGH capped by Apr 24 OPEX pin risk at $20 call wall)</td></tr>
+      <tr><td>Tool Agreement</td><td class="mono">6/6 bull · 0/6 bear — 100% (4H)</td></tr>
+      <tr><td>Invalidation</td><td><span class="rd mono bold">$18.00</span> short-term · <span class="rd mono bold">$16.50</span> structural</td></tr>
+      <tr><td>Entry Zone</td><td class="mono"><span class="gr bold">$17.50 – $18.50</span> pullback · put-wall + 4H 50 SMA + HVN confluence</td></tr>
+      <tr><td>Exit Zone</td><td class="mono"><span class="am bold">$22.00 – $22.50</span> first · $24 – $25.60 extended</td></tr>
+      <tr><td>Macro Watch</td><td>FOMC Apr 29 · PCE / Q1 GDP Apr 30 — <span class="gr">outside</span> Apr 24 expiry · relevant for May book</td></tr>
+    </table>
+  </div>
+
+  <!-- SECTION 1B - KEY LEVELS -->
+  <div class="sec">
+    <h2 class="sec-title">1B · Key Levels</h2>
+    <table>
+      <thead><tr><th>Weight</th><th class="mono">Price</th><th>Sources</th></tr></thead>
+      <tbody>
+        <tr class="medium"><td>MEDIUM</td><td class="price">$25.60</td><td>Weekly 1.618 Fib extension</td></tr>
+        <tr class="medium"><td>MEDIUM</td><td class="price">$24.00</td><td>Apr 24 call OI 4,205 + round-number supply</td></tr>
+        <tr class="medium"><td>MEDIUM</td><td class="price">$22.00 – $22.50</td><td>Upper daily VWAP $22.48 + upper 4H VWAP $22.21 + $22 call OI 2,137</td></tr>
+        <tr class="heavy"><td>HEAVY</td><td class="price">$20.00 – $20.20</td><td>Apr 24 $20 call wall 9,575 OI (MAX) + upper weekly VWAP 2.5σ band $20.20 + round number + weekly 1.0 Fib breakout zone</td></tr>
+        <tr class="current"><td>—</td><td>$20.65 ← CURRENT</td><td>Regular / after-hours close</td></tr>
+        <tr class="medium"><td>MEDIUM</td><td class="price">$19.00</td><td>Apr 24 $19 put wall 7,035 OI (2nd largest in chain)</td></tr>
+        <tr class="medium"><td>MEDIUM</td><td class="price">$18.00</td><td>$18 put OI 3,097 + prior April swing low + 30m 200 SMA $17.14 proximity</td></tr>
+        <tr class="heavy"><td>HEAVY</td><td class="price">$16.50 – $17.00</td><td>Weekly 1.0 Fib $16.61 + Daily 50 SMA $16.13 + 4H 50 SMA $16.66 + $17 put/call OI stack + weekly breakout retest + VPVR HVN</td></tr>
+        <tr class="light"><td>LIGHT</td><td class="price">$14.79</td><td>4H 200 SMA</td></tr>
+        <tr class="light"><td>LIGHT</td><td class="price">$13.50</td><td>Weekly 0.786 Fib</td></tr>
+        <tr class="light"><td>LIGHT</td><td class="price">$12.32</td><td>Daily 200 SMA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 1C - CSP STRIKE ZONES -->
+  <div class="sec">
+    <h2 class="sec-title">1C · CSP Strike Zones · Apr 24 Expiry (5 DTE)</h2>
+    <table>
+      <thead><tr><th>Tier</th><th class="mono">Strike Zone</th><th>Confluence</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="tier1"><td>Tier 1</td><td class="mono bold">$17.00 – $17.50</td><td>$17 put OI 2,218 + $17.50 put OI 1,754 + Daily/4H 50 SMA cluster + weekly breakout support + VPVR HVN</td><td class="mono">Δ -0.07 to -0.09 · $0.08–$0.13 · HEAVY structural floor if assigned</td></tr>
+        <tr class="tier2"><td>Tier 2</td><td class="mono">$18.00 – $18.50</td><td>$18 put OI 3,097 + prior consolidation support</td><td class="mono">Δ -0.13 to -0.18 · $0.17–$0.26 · At short-term invalidation</td></tr>
+        <tr class="stretch"><td>Stretch</td><td class="mono">$19.00</td><td>$19 put wall 7,035 — largest put OI in chain</td><td class="mono">Δ -0.24 · $0.33 · AT the wall — size down; minimal cushion on BTC flush</td></tr>
+        <tr class="avoid"><td>Avoid</td><td class="mono">$19.50+</td><td>—</td><td>LVN between $19 and $20; strikes above spot are not CSPs</td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="margin-top: 14px;">
+      <p><span class="mono bold" style="color: var(--cyan);">Strike selection:</span> With Final Confidence <span class="am bold">MEDIUM</span>, prefer <span class="gr bold">Tier 1</span>. The $20 call wall (9,575 OI — massive) creates gravity at or below $20 into Friday OPEX, which favors put sellers but also raises the odds of a tactical pullback toward $18–$19 over continuation through $22. Tier 2 is defensible if assignment-neutral; the $19 stretch captures the put wall premium but offers no buffer if BTC flushes. Near-term IV at 91–100% is rich — right-size contracts.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2 - CONFIDENCE BREAKDOWN -->
+  <div class="sec">
+    <h2 class="sec-title">2 · Confidence Breakdown</h2>
+    <table>
+      <thead><tr><th>Stage</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">TA Confidence</td><td><span class="gr bold">HIGH</span> — 4+ structure tools aligned bullish (weekly 1.0 Fib broken, MA stack rising, VWAP slope up across all TFs, breakout from multi-month base), both momentum confirming, HTF aligned, no divergences</td></tr>
+        <tr><td class="mono">Fundamental Context</td><td>Not explicitly provided · Q1 2026 prelim: $30–35M rev, $0–3M EBITDA, $3.1B cash, HPC &gt;50% of revenue · treat as FAIR default</td></tr>
+        <tr><td class="mono">Fundamental Modifier</td><td>None applied</td></tr>
+        <tr><td class="mono">Macro Calendar</td><td>Apr 24 expiry: no HIGH-impact events · Apr 28–30: FOMC + PCE + Q1 GDP advance (all outside Apr 24)</td></tr>
+        <tr><td class="mono">Macro Modifier</td><td>None within Apr 24 horizon · <span class="am">May 1–8 expiry CSPs capped at MEDIUM, widen buffers</span></td></tr>
+        <tr><td class="mono">Structural Modifier</td><td><span class="rd bold">−1 tier</span> — price simultaneously at upper weekly VWAP 2.5σ band + $20 call wall (9,575 OI, chain max). Resistance cluster is MEDIUM structure → downgrades tactical confidence</td></tr>
+        <tr><td class="mono bold">Final Confidence</td><td><span class="am bold" style="font-size: 15px;">MEDIUM</span></td></tr>
+      </tbody>
+    </table>
+    <div class="prose" style="margin-top: 14px;">
+      <p><span class="mono bold" style="color: var(--cyan);">Tool agreement sanity check:</span> 6/6 bull on 4H. Final Confidence MEDIUM (not HIGH) because the immediate next move up into $22 requires absorbing a 9,575-contract call wall with 5 days to expiry — tactical base case is pullback first, continuation after OPEX clears.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 3 - SUPPORTING ANALYSIS -->
+  <div class="sec">
+    <h2 class="sec-title">3 · Supporting Analysis</h2>
+
+    <h3 class="subsec-title">3A · Higher Timeframe Context</h3>
+    <div class="bullet-block">
+      <p><span class="lbl">WEEKLY</span>Clean uptrend. Price cleared 1.0 Fib at $16.61 (prior cycle high), now riding upper VWAP 2.5σ band at $20.20. RSI 70.70 is extended but trending. 50 SMA ($10.91) well above 200 SMA ($4.68). Volume 245M vs 148M 20-wk avg. Next structural target: 1.618 extension at $25.60.</p>
+      <p><span class="lbl">DAILY</span>Multi-month base $13–$17 resolved upside this week. VWAP line $17.23 / upper band $22.48. 50 SMA $16.13 above 200 SMA $12.32; both rising. MACD positive and expanding, RSI 66.18 rising. No daily Fib drawn — weekly Fibs carry.</p>
+    </div>
+
+    <h3 class="subsec-title">3B · Current Timeframe Read (4H)</h3>
+    <div class="bullet-block">
+      <p><span class="lbl">REGIME</span>Trending up · bar-ride regime · not a fade setup</p>
+      <p><span class="lbl">VWAP</span>Price $20.65 well above line $18.78; upper band $22.21; slope rising</p>
+      <p><span class="lbl">MAs</span>50 SMA $16.66 above 200 SMA $14.79; both rising</p>
+      <p><span class="lbl">MOMENTUM</span>RSI 68.48 (overbought, sustainable in trend) · MACD above zero, histogram expanding</p>
+      <p><span class="lbl">FIB (WEEKLY)</span>Closed above 1.0 ($16.61) — now major support. Next target 1.618 at $25.60</p>
+    </div>
+
+    <h3 class="subsec-title">3C · Confluence Zones</h3>
+    <div class="prose">
+      <p>The HEAVY zone at <span class="mono gr bold">$16.50–$17.00</span> is the cleanest map read — weekly Fib, daily and 4H 50 SMAs, major OI stack, and VPVR HVN all agreeing. Any flush to that zone in the next 2–3 weeks is the premier re-entry opportunity on this move. The second HEAVY zone at <span class="mono rd bold">$20.00–$20.20</span> overhead stacks the chain-max call wall, the weekly upper VWAP 2.5σ band, and round-number supply at current price — expect chop into Apr 24 OPEX. The MEDIUM zone at $22.00–$22.50 (upper daily + 4H VWAP + $22 call OI) is the first clean target once $20 is absorbed.</p>
+    </div>
+
+    <h3 class="subsec-title">3D · Divergences</h3>
+    <div class="prose">
+      <p>None visible across any timeframe. RSI and MACD confirming trend on weekly, daily, and 4H. 30m RSI 69.96 slightly extended but no bearish divergence printed yet at these highs.</p>
+    </div>
+
+    <h3 class="subsec-title">3E · Notes</h3>
+    <div class="prose">
+      <p>Recent move underwritten by real catalysts: ~$900M April equity raise and preliminary Q1 2026 guidance (HPC now &gt;50% of revenue, balance sheet materially improved). Fundamental setup has shifted from pure crypto-miner to HPC/AI hosting pivot funded through dilution — narrative has moved from "BTC proxy" to "AI datacenter platform." However, this is still a <span class="bold">Young Growth</span> profile: -$0.28 EPS last quarter, 85%+ revenue growth needed to reach consensus fair value, dilution ongoing. Long exposure is tactical, not structural.</p>
+      <p>Crypto-sensitivity remains. BTC macro is the short-term governor — a 3%+ single-session BTC flush would take WULF with it. BMNR ladder freeze-trigger logic applies by analogy.</p>
+      <p>Next week: FOMC Apr 29, PCE Apr 30, Q1 GDP advance Apr 30 — three HIGH-impact events clustered Tue–Fri. For any May 1-dated options, IV will stay elevated into next weekend through OPEX. For Apr 24 specifically, the week is clean.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 4 - OPTIONS DETAIL -->
+  <div class="sec">
+    <h2 class="sec-title">4 · Options Chain Detail</h2>
+    <table class="exec-grid">
+      <tr><td>Source</td><td>User-provided screenshot · Robinhood Legend</td></tr>
+      <tr><td>Expiry</td><td class="mono">Apr 24, 2026 · 5 DTE</td></tr>
+      <tr><td>IV</td><td class="mono">91–100% · ±$2.55 expected move</td></tr>
+      <tr><td>Call Wall</td><td class="mono"><span class="rd bold">$20 · OI 9,575</span> — dominant, chain-max · secondary: $24 (4,205), $21 (3,562)</td></tr>
+      <tr><td>Put Wall</td><td class="mono"><span class="gr bold">$19 · OI 7,035</span> — dealer-supported floor · secondary: $20.50 (4,439, ITM hedging), $18 (3,097)</td></tr>
+      <tr><td>Max Pain</td><td class="mono">≈ $20 · gamma pin likely into Friday</td></tr>
+      <tr><td>Notable</td><td>ITM $20.50 put OI 4,439 suggests institutional put hedging against spot · $24 call OI 4,205 is a lottery concentration — if $20 clears cleanly post-OPEX, path of least resistance is $22 → $24</td></tr>
+    </table>
+  </div>
+
+  <div class="foot">SMB LLC MACRO DASHBOARD · TA REPORT · WULF 2026-04-19</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CF | TA Report | 2026-04-19 22:00 CT</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0e17;
+    color: #e2e8f0;
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    line-height: 1.6;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  h1, h2, h3, .mono, .ticker, .num, th {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .header-block {
+    background: #0f1420;
+    border: 1px solid #1e2a3a;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+  }
+  .ticker {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00e5ff;
+    letter-spacing: 2px;
+  }
+  .header-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: #8b9ab5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .header-bias {
+    font-size: 14px;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+  .conf-med { color: #ffab00; }
+  .conf-low { color: #ff3d57; }
+  .conf-high { color: #00e676; }
+  .conf-no { color: #8b9ab5; }
+  section { margin-bottom: 32px; }
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #00e5ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1e2a3a;
+  }
+  h2 {
+    font-size: 18px;
+    color: #e2e8f0;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 14px;
+    color: #e2e8f0;
+    margin: 18px 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f1420;
+    border: 1px solid #1e2a3a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  th {
+    background: #141926;
+    color: #8b9ab5;
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    border-bottom: 1px solid #1e2a3a;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #1e2a3a;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.mono, td.num { font-family: 'JetBrains Mono', monospace; }
+  .label-cell {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #8b9ab5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 220px;
+  }
+  .heavy-row { background: rgba(255, 61, 87, 0.08); }
+  .heavy-row td:first-child { color: #ff3d57; font-weight: 700; }
+  .tier1-row { background: rgba(0, 230, 118, 0.08); }
+  .tier1-row td:first-child { color: #00e676; font-weight: 700; }
+  .avoid-row { background: rgba(255, 61, 87, 0.05); color: #8b9ab5; }
+  .medium-row { background: rgba(255, 171, 0, 0.05); }
+  .medium-row td:first-child { color: #ffab00; font-weight: 600; }
+  .current-row { background: rgba(0, 229, 255, 0.08); }
+  .current-row td { color: #00e5ff; font-weight: 600; }
+  .bold-num { color: #e2e8f0; font-weight: 700; }
+  .callout {
+    background: rgba(255, 171, 0, 0.08);
+    border-left: 3px solid #ffab00;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 16px 0;
+    color: #e2e8f0;
+  }
+  .callout strong { color: #ffab00; }
+  p { margin-bottom: 12px; }
+  p.muted { color: #8b9ab5; font-size: 13px; }
+  .tool-agreement {
+    display: inline-block;
+    background: #141926;
+    border: 1px solid #1e2a3a;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #e2e8f0;
+  }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  li strong { color: #00e5ff; font-family: 'JetBrains Mono', monospace; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #1e2a3a;
+    font-size: 11px;
+    color: #4a5976;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-block">
+  <div>
+    <div class="ticker">CF</div>
+    <div class="header-bias">NEUTRAL TACTICAL · NO DIRECTIONAL EDGE · REACTION ZONE</div>
+  </div>
+  <div class="header-meta">
+    <div>Timeframes: Weekly / Daily / 4h / 30m</div>
+    <div>Timestamp: 2026-04-19 22:00 CT</div>
+    <div>Final Confidence: <span class="conf-low">LOW</span> (directional) · <span class="conf-med">MEDIUM</span> (CSP Tier 1)</div>
+    <div>Regular Close: $112.68</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<section>
+  <div class="section-label">Section 1 — Decision Summary</div>
+
+  <h2>1A. Executive Summary</h2>
+  <table>
+    <tr><td class="label-cell">Bias</td><td>NEUTRAL tactical — no directional edge at $112.68; reaction zone, not trend trade</td></tr>
+    <tr><td class="label-cell">Final Confidence</td><td><span class="conf-low">LOW</span> for directional · <span class="conf-med">MEDIUM</span> for CSP at Tier 1 support</td></tr>
+    <tr><td class="label-cell">Tool Agreement</td><td><span class="tool-agreement">2/6 bull · 4/6 bear · 33%</span></td></tr>
+    <tr><td class="label-cell">Invalidation</td><td class="mono">$106.62 short-term (weekly 0.5 Fib) / $99.40 structural (weekly 0.382 Fib)</td></tr>
+    <tr><td class="label-cell">Entry Zone</td><td class="mono">$106–$110 on stabilization (daily MACD histogram curl + RSI &gt; 45 required)</td></tr>
+    <tr><td class="label-cell">Exit Zone</td><td class="mono">$121–$126 (daily RVWAP + weekly 0.786 Fib + $125 call OI)</td></tr>
+    <tr><td class="label-cell">Macro Watch</td><td>Tue 4/21: Retail Sales 8:30am + Warsh Fed-chair Senate testimony 10am (HIGH); Thu 4/23 PMI Flash (MED); Fri 4/24 UMich Sentiment (MED); FOMC Apr 28–29 beyond expiry; CF earnings May 6 AMC beyond 4/24 expiry — no cap</td></tr>
+  </table>
+
+  <h2>1B. Key Levels</h2>
+  <table>
+    <thead>
+      <tr><th style="width:110px;">Weight</th><th style="width:180px;">Price</th><th>Sources</th></tr>
+    </thead>
+    <tbody>
+      <tr class="heavy-row"><td>HEAVY</td><td class="mono bold-num">$130</td><td>$130 call wall (1,684 OI, April 24 expiry) + weekly prior rejection zone</td></tr>
+      <tr class="medium-row"><td>MEDIUM</td><td class="mono">$124–$126</td><td>Daily RVWAP $125.77 + weekly 0.786 Fib $124.13 + $125 call OI (238)</td></tr>
+      <tr class="medium-row"><td>MEDIUM</td><td class="mono">$121–$122</td><td>4h RVWAP $121.83 + $122 put OI (365, now ITM — weakening as support, now effectively resistance on bounces)</td></tr>
+      <tr class="medium-row"><td>MEDIUM</td><td class="mono">$113–$114</td><td>Weekly 0.618 Fib $113.85 + daily 50 SMA $114.06 (just broken — now overhead)</td></tr>
+      <tr class="current-row"><td>—</td><td class="mono">$112.68 ← CURRENT</td><td>Regular session close; options chain snapshot referenced $116.51 pre-drop (stale)</td></tr>
+      <tr class="heavy-row"><td>HEAVY</td><td class="mono bold-num">$106–$110</td><td>Weekly RVWAP $108.62 + daily lower RVWAP band $110.47 + weekly 0.5 Fib $106.62 + 4h lower RVWAP band $105.75 — 4-tool stack</td></tr>
+      <tr class="medium-row"><td>MEDIUM</td><td class="mono">$99.40</td><td>Weekly 0.382 Fib — structural invalidation for the weekly uptrend thesis</td></tr>
+      <tr><td style="color:#4a5976;">LIGHT</td><td class="mono" style="color:#8b9ab5;">$92.98</td><td style="color:#8b9ab5;">Weekly 50 SMA</td></tr>
+      <tr><td style="color:#4a5976;">LIGHT</td><td class="mono" style="color:#8b9ab5;">$82.94</td><td style="color:#8b9ab5;">Weekly 200 SMA (ultimate structural floor)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>1C. CSP Strike Zones — April 24 Expiry (5 DTE)</h2>
+  <div class="callout">
+    <strong>DATA QUALITY:</strong> The provided options chain referenced $116.51 (+3.40%) as current underlying, but the chart shows a regular close at $112.68. Chain snapshot appears pre-drop and is stale. <strong>Monday open will reprice puts higher and shift deltas more negative.</strong> Use strike locations, not displayed premiums or deltas, for planning.
+  </div>
+  <table>
+    <thead>
+      <tr><th style="width:170px;">Tier</th><th style="width:160px;">Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr class="tier1-row"><td>TIER 1 (best structural)</td><td class="mono bold-num">$106–$108</td><td>Weekly 0.5 Fib ($106.62) + weekly RVWAP ($108.62) + 4h lower RVWAP band ($105.75)</td><td>Assignment fills you at the heaviest support stack on the chart — assignment-neutral posture</td></tr>
+      <tr class="medium-row"><td>TIER 2 (aggressive)</td><td class="mono">$110–$112</td><td>Daily lower RVWAP band ($110.47); proximity to current price</td><td>Higher premium; sits below the freshly broken daily 50 SMA with thin cushion if selling continues Mon/Tue</td></tr>
+      <tr class="avoid-row"><td>AVOID</td><td class="mono">≥ $113</td><td>—</td><td>Sits on the break zone (weekly 0.618 Fib + broken daily 50 SMA). No cushion — closer to naked-put risk profile</td></tr>
+      <tr class="avoid-row"><td>AVOID</td><td class="mono">≤ $102</td><td>—</td><td>LVN below 0.5 Fib; next structural support is $99.40 weekly Fib. $100–$104 strikes sit in air</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Strike Selection Notes.</strong> Final Confidence is MEDIUM for CSP posture at Tier 1. Tier 2 is defensible only if being filled below the broken daily 50 SMA is acceptable. No earnings risk through 4/24 (CF AMC is May 6). Tuesday's combined event stack (Retail Sales + Warsh testimony) will keep IV supported into Tue close; consider waiting for Tuesday's response before deploying fresh strikes, especially if Tier 2 is under consideration.</p>
+</section>
+
+<!-- SECTION 2 -->
+<section>
+  <div class="section-label">Section 2 — Confidence Breakdown</div>
+  <table>
+    <tr><td class="label-cell">TA Confidence</td><td><span class="conf-low">LOW</span> — multi-TF conflict: weekly bull structure intact but daily broke 50 SMA on heavy volume; 4h/daily stretched to lower bands (reaction zone, not clean directional setup)</td></tr>
+    <tr><td class="label-cell">Fundamental Context</td><td>Not provided in this request (ambient UNDER context exists in project memory — not applied here per clean-read protocol)</td></tr>
+    <tr><td class="label-cell">Fundamental Modifier</td><td>Not applied</td></tr>
+    <tr><td class="label-cell">Macro Calendar</td><td>Tue 4/21 Retail Sales + Warsh testimony (HIGH); Thu 4/23 PMI Flash (MED); Fri 4/24 UMich Sentiment (MED). FOMC Apr 28–29 beyond expiry. CF earnings May 6 beyond expiry.</td></tr>
+    <tr><td class="label-cell">Macro Modifier</td><td>None (no HIGH event within 24h; earnings beyond expiry)</td></tr>
+    <tr><td class="label-cell">Final Confidence</td><td><strong><span class="conf-low">LOW</span> (directional) / <span class="conf-med">MEDIUM</span> (CSP at Tier 1)</strong></td></tr>
+  </table>
+</section>
+
+<!-- SECTION 3 -->
+<section>
+  <div class="section-label">Section 3 — Supporting Analysis</div>
+
+  <h3>3A. Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>Weekly:</strong> Uptrend intact but in meaningful pullback. Closed $112.68 on a -7.12% week with elevated volume (19.06M vs 17.86M avg) — impulsive rejection from the $124–$130 retest zone. Price sits right on the weekly 0.618 Fib at $113.85, with RVWAP rising at $108.62 below. 50 SMA ($92.98) and 200 SMA ($82.94) both well below — bullish structure not threatened yet. Weekly RSI 57.27 cooling from highs; MACD histogram positive but decelerating. Fibs drawn from ~$76 swing low to $137.24 high — active anchor.</li>
+    <li><strong>Daily:</strong> Trend break in progress. Price closed below daily 50 SMA ($114.06) on -9.65% session with expanding volume. Daily RVWAP rolled over at $125.77; price pushed to lower band at $110.47 = 2.5σ extreme. RSI 41.57 (below 50, falling). MACD freshly negative with histogram expanding. Daily 200 SMA way below at $92.91 — structural floor untouched.</li>
+  </ul>
+
+  <h3>3B. Current Timeframe Read</h3>
+  <ul>
+    <li><strong>Regime:</strong> Trending down short-term on 4h/daily; compressing/reacting at support on 30m.</li>
+    <li><strong>VWAP:</strong> Daily rolling over, price at lower band. 4h falling ($121.83), price mid-channel. 30m flattening at $114.31, price slightly below. Weekly RVWAP rising underneath at $108.62 — critical line.</li>
+    <li><strong>MAs:</strong> Daily 50 &gt; 200 (bullish structure intact) but 50 just broken from above. 4h 50 ($126) well above price. 30m both 50 ($118.53) and 200 ($126.09) above price — short-term bearish.</li>
+    <li><strong>Momentum:</strong> Daily RSI 41.57 falling / MACD negative expanding. 4h RSI 36.42 approaching oversold. 30m RSI 35.27 oversold with MACD histogram decelerating — bounce setup forming, not confirmed.</li>
+    <li><strong>Fib reference:</strong> Price sitting on weekly/daily 0.618 ($113.85). Next support weekly 0.5 ($106.62). Structural break at weekly 0.382 ($99.40).</li>
+  </ul>
+
+  <h3>3C. Confluence Zones</h3>
+  <p>The HEAVY $106–$110 support stack is the defining feature of this chart — four structure tools converge in a $5 window (weekly RVWAP, daily lower RVWAP band, weekly 0.5 Fib, 4h lower RVWAP band). A daily close inside that zone without further breakdown is the stabilization trigger. Overhead, the $121–$126 zone is a 3-tool resistance stack (daily RVWAP, weekly 0.786 Fib, $125 call OI) — first meaningful rally target if $113.85 reclaims.</p>
+
+  <h3>3D. Divergences</h3>
+  <p>No clean bullish divergence printed yet on daily (RSI still making new lows with price). Possible incipient 30m bullish setup (price lower low, MACD histogram higher low) but needs one more session to confirm. Weekly RSI has not yet diverged — it's cooling in step with price, not leading.</p>
+
+  <h3>3E. Notes</h3>
+  <p>Tuesday is the week's risk day: Retail Sales pre-market plus Warsh Fed-chair Senate Banking hearing at 10am ET. Rates sensitivity feeds CF via DXY / commodity complex — a hawkish Warsh tone or hot retail print tightens financial conditions and pressures the complex; a dovish/mixed outcome is a bounce catalyst. The Warsh confirmation path appears procedurally rocky (Tillis has vowed to block Fed nominations until the DOJ/Powell probe resolves), so expect headline volatility around the testimony.</p>
+  <p>Iran ceasefire context remains the structural driver for CF (urea/NatGas supply thesis). The ceasefire was announced April 7, and the Friday 4/24 UMich sentiment revised reading may show whether consumer sentiment is stabilizing post-ceasefire — an indirect read on whether the commodity complex tightens or loosens further. Multi-timeframe alignment is mixed: weekly reads "long pullback," daily reads "broken bounce setup" — the two only reconcile at the $106–$110 zone. Until confirmation there, NO EDGE directionally.</p>
+</section>
+
+<!-- SECTION 4 -->
+<section>
+  <div class="section-label">Section 4 — Options Chain Detail</div>
+  <table>
+    <tr><td class="label-cell">Source</td><td>User-provided screenshot (Robinhood Legend)</td></tr>
+    <tr><td class="label-cell">Expiry</td><td class="mono">Friday, April 24, 2026 (5 DTE)</td></tr>
+    <tr><td class="label-cell">Reference Price (snapshot)</td><td class="mono">$116.51 (+3.40%) — stale vs current regular close $112.68</td></tr>
+    <tr><td class="label-cell">Call Wall</td><td class="mono">$130 (1,684 OI) — HEAVY ceiling. Secondary: $128 (650 OI)</td></tr>
+    <tr><td class="label-cell">Put Wall (conventional)</td><td class="mono">$122 (365 OI) — but now ITM after the drop, likely to decay/roll; weakening as support</td></tr>
+    <tr><td class="label-cell">Nearest Real Put Support</td><td class="mono">$115 (153 OI), $120 (170 OI) — both above current price, now resistance on bounces</td></tr>
+    <tr><td class="label-cell">Below-price Put OI</td><td class="mono">$108 (57), $110 (49), $105 (12), $100 (10) — thin dealer-hedge cushion if $110 breaks</td></tr>
+    <tr><td class="label-cell">Max Pain (estimated)</td><td class="mono">$115–$120 zone given OI density; stock is below → small upward pin bias into Friday barring fresh downside catalyst</td></tr>
+    <tr><td class="label-cell">IV Context</td><td class="mono">50–55% ATM — moderately elevated; will decay if Tuesday events pass cleanly</td></tr>
+    <tr><td class="label-cell">Notable</td><td>$130 call OI dominance (1,684) is the structural ceiling for any rally this week. Below-price put OI is thin — implies limited dealer-hedging cushion if $110 breaks</td></tr>
+  </table>
+</section>
+
+<div class="footer">SMB LLC Macro Dashboard · TA Chart Analysis · CF 2026-04-19</div>
+
+</body>
+</html>

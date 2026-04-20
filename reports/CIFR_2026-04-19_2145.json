@@ -1,0 +1,23 @@
+{
+  "type": "ta",
+  "file": "CIFR_2026-04-19_2145.html",
+  "ticker": "CIFR",
+  "tvSymbol": "NASDAQ:CIFR",
+  "date": "2026-04-19T21:45:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 6,
+  "bearScore": 0,
+  "scoreMax": 6,
+  "invalidation": "$17.00 short-term / $15.25 structural",
+  "entryZone": "$17.00–$17.50 pullback or $20.50+ breakout",
+  "exitZone": "$22 first / $25.36 main",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$25.36",        "sources": "Weekly 1.0 Fib" },
+    { "weight": "HEAVY",   "price": "$20.16–$20.38", "sources": "Weekly + Daily 0.786 Fib + daily upper VWAP + $20 call OI 3.5K" },
+    { "weight": "CURRENT", "price": "$19.37",        "sources": "Regular session close" },
+    { "weight": "HEAVY",   "price": "$16.00–$17.50", "sources": "Daily HVN + 0.618 Fib + 4h VWAP + $17 put wall 11.7K + $16 put wall 10.3K" },
+    { "weight": "MEDIUM",  "price": "$15.07–$15.25", "sources": "Daily 50 SMA + 4h 50 SMA cluster" },
+    { "weight": "MEDIUM",  "price": "$13.72–$13.83", "sources": "Weekly 0.5 Fib + Daily 200 SMA" }
+  ]
+}

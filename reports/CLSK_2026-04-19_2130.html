@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLSK TA Report — 2026-04-19</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+
+  /* Header block */
+  .header {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    align-items: center;
+  }
+  .ticker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 2px;
+  }
+  .timeframes {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+  }
+  .timestamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+  }
+  .header-meta {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+  .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-tertiary);
+  }
+  .badge-bias { color: var(--green); border-color: var(--green); }
+  .badge-conf-med { color: var(--amber); border-color: var(--amber); }
+  .badge-score { color: var(--text-primary); }
+
+  /* Section headers */
+  h2.section {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin: 36px 0 16px 0;
+  }
+  h3.sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 24px 0 10px 0;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+  th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td.label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: 180px;
+  }
+  td.price, td.num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+  tr.heavy { background: rgba(255, 61, 87, 0.06); }
+  tr.heavy td.price { color: var(--red); font-weight: 700; }
+  tr.heavy td.weight { color: var(--red); font-weight: 700; }
+  tr.heavy-support { background: rgba(0, 230, 118, 0.06); }
+  tr.heavy-support td.price { color: var(--green); font-weight: 700; }
+  tr.heavy-support td.weight { color: var(--green); font-weight: 700; }
+  tr.medium { background: rgba(255, 171, 0, 0.04); }
+  tr.medium td.weight { color: var(--amber); }
+  tr.light td.weight { color: var(--text-muted); }
+  tr.current { background: var(--bg-tertiary); }
+  tr.current td.price { color: var(--cyan); font-weight: 700; }
+  tr.tier1 { background: rgba(0, 230, 118, 0.06); }
+  tr.tier1 td.tier { color: var(--green); font-weight: 700; }
+  tr.tier2 td.tier { color: var(--amber); }
+  tr.avoid td.tier { color: var(--red); font-weight: 600; }
+  tr.avoid { background: rgba(255, 61, 87, 0.04); }
+
+  /* Prose */
+  p { margin: 10px 0; color: var(--text-primary); }
+  .note {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-style: italic;
+  }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  li strong {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .callout {
+    background: var(--bg-tertiary);
+    border-left: 3px solid var(--amber);
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  .callout strong { color: var(--amber); }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--cyan);
+    background: var(--bg-tertiary);
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="ticker">CLSK</div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text-primary);letter-spacing:1px;">CLEANSPARK, INC.</div>
+      <div class="timeframes">30m · 4h · Daily · Weekly</div>
+    </div>
+    <div class="timestamp">
+      2026-04-19<br>
+      21:30 CT<br>
+      NASDAQ:CLSK
+    </div>
+    <div class="header-meta">
+      <span class="badge badge-bias">BIAS: LONG TACTICAL</span>
+      <span class="badge badge-conf-med">CONFIDENCE: MEDIUM</span>
+      <span class="badge badge-score">SCORE: 5 / 6 BULL · 1 / 6 BEAR (83%)</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: DECISION SUMMARY -->
+  <h2 class="section">01 · Decision Summary</h2>
+
+  <h3 class="sub">1A · Executive Summary</h3>
+  <table>
+    <tr><td class="label">Bias</td><td><strong style="color:var(--green);">LONG tactical (continuation)</strong> — arriving at HEAVY resistance, not extending away</td></tr>
+    <tr><td class="label">Final Confidence</td><td><strong style="color:var(--amber);">MEDIUM</strong></td></tr>
+    <tr><td class="label">Tool Agreement</td><td>5 / 6 bull · 1 / 6 bear (83%)</td></tr>
+    <tr><td class="label">Invalidation</td><td class="price">$11.11 short-term (4h 200 SMA) · $9.05 structural (weekly 200 SMA)</td></tr>
+    <tr><td class="label">Entry Zone</td><td><strong>Not here.</strong> Either pullback to <span class="price">$10.50–$11.00</span> (daily middle VWAP + 4h 200 SMA stack) OR breakout + retest above <span class="price">$12.80</span></td></tr>
+    <tr><td class="label">Exit Zone</td><td class="price">$12.80–$13.00 first (4h upper band + Apr 24 call wall) · $15.00–$15.75 structural (weekly upper VWAP band)</td></tr>
+    <tr><td class="label">Macro Watch</td><td>FOMC Apr 28–29 (beyond Apr 24 expiry — IV ramp into week-after cycles) · CLSK earnings May 7 AMC (outside options window)</td></tr>
+  </table>
+
+  <h3 class="sub">1B · Key Levels</h3>
+  <table>
+    <thead>
+      <tr><th style="width:90px;">Weight</th><th style="width:180px;">Price</th><th>Sources</th></tr>
+    </thead>
+    <tbody>
+      <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$15.00–$15.75</td><td>Weekly upper VWAP band (15.75) + 2024 structural supply shelf</td></tr>
+      <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$13.00</td><td>Apr 24 call wall (OI 3,317) + prior range top</td></tr>
+      <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$12.22–$12.79</td><td>Daily 200 SMA (12.22) + Daily upper VWAP band (12.25) + 4h upper VWAP band (12.79) + Apr 24 call walls $12/$13 stacked</td></tr>
+      <tr class="current"><td class="weight">—</td><td class="price">$11.94 ← CURRENT</td><td>Friday regular close (chain snapshot $11.49 AH)</td></tr>
+      <tr class="light"><td class="weight">LIGHT</td><td class="price">$11.41–$11.50</td><td>30m 50 SMA (11.41) + Apr 24 put OI $11.50 (36) — minor</td></tr>
+      <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$11.11</td><td>4h 200 SMA (11.11) + recent breakout retest level</td></tr>
+      <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$10.42</td><td>4h middle VWAP — first clean pullback magnet</td></tr>
+      <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$9.82–$10.00</td><td>Daily 50 SMA (9.82) + daily middle VWAP (9.85) + Apr 24 put OI $10 (1,777)</td></tr>
+      <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$9.00–$9.05</td><td>Apr 24 put wall (OI 4,811) + weekly 200 SMA (9.05) + daily VPVR HVN</td></tr>
+      <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$8.00</td><td>Apr 24 heaviest put wall (OI 6,584) — dealer defense floor</td></tr>
+    </tbody>
+  </table>
+
+  <h3 class="sub">1C · CSP Strike Zones (Apr 24 · 5 DTE)</h3>
+  <table>
+    <thead>
+      <tr><th style="width:180px;">Tier</th><th style="width:140px;">Strike Zone</th><th style="width:320px;">Confluence</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr class="tier1"><td class="tier">TIER 1 (best structural)</td><td class="price">$9.00</td><td>Put wall 4,811 OI + weekly 200 SMA + daily VPVR HVN</td><td>Bid ~$0.01. Premium-neutral, but assignment = cost basis at most defended price on chart. Delta ~-0.04.</td></tr>
+      <tr class="tier1"><td class="tier">TIER 1 (conservative alt)</td><td class="price">$10.00</td><td>Put OI 1,777 + daily 50 SMA proximity + round number</td><td>Bid ~$0.05, delta ~-0.08. Cleanest structure/premium balance for a single week.</td></tr>
+      <tr class="tier2"><td class="tier">TIER 2 (aggressive)</td><td class="price">$11.00</td><td>Put OI 761 + recent breakout pivot</td><td>Bid ~$0.17, delta ~-0.22. Viable only if you welcome assignment at the breakout-retest level.</td></tr>
+      <tr class="avoid"><td class="tier">AVOID</td><td class="price">$10.50</td><td>Put OI 271 only (LVN-adjacent)</td><td>No confluence — strikes through light-OI zone between $10 and $11.</td></tr>
+      <tr class="avoid"><td class="tier">AVOID</td><td class="price">$11.50+</td><td>—</td><td>Near-ATM for puts. Directional, not CSP.</td></tr>
+      <tr class="avoid"><td class="tier">AVOID</td><td class="price">&lt; $8.00</td><td>—</td><td>LVN below heaviest put wall. No structural edge, premium insignificant.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Strike Selection Notes.</strong> With Final Confidence MEDIUM and price sitting directly at a HEAVY resistance zone ($12.22–$12.79), edge for aggressive CSPs is limited this cycle. Tier 1 at $9 is structurally excellent but 5-DTE premium is essentially a rounding error — it's an "assigned happily" posture, not a premium trade. The $10 strike is the best structure-to-premium balance for the week. Tier 2 ($11) is defensible only if assignment at the breakout-retest level is acceptable. If price rejects $12.22–$12.79 and pulls back into $10.50–$11.00, CSP math improves materially — revisit next cycle with better premium at the same strikes.
+  </div>
+
+  <!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+  <h2 class="section">02 · Confidence Breakdown</h2>
+  <table>
+    <tr><td class="label">TA Confidence</td><td><strong style="color:var(--amber);">MEDIUM</strong> — Strong bull confluence across structure + momentum, but (a) price is AT heaviest resistance zone, not extending away, and (b) Fibs not drawn on daily/weekly provided charts; per skill rules, cap at MEDIUM when retracement structure is unknown.</td></tr>
+    <tr><td class="label">Fundamental Context</td><td class="note">not provided</td></tr>
+    <tr><td class="label">Fundamental Modifier</td><td class="note">not applied</td></tr>
+    <tr><td class="label">Macro Calendar</td><td>FOMC Apr 28–29 (3–4 days past Apr 24 expiry) · CLSK earnings May 7 AMC (outside expiry) · Apr 23 Initial Jobless Claims (MEDIUM)</td></tr>
+    <tr><td class="label">Macro Modifier</td><td>None within Apr 24 trade horizon. <em style="color:var(--text-secondary);">Caveat: FOMC proximity will elevate IV in May 1 cycle — consider skipping that week for short premium and resuming May 8+.</em></td></tr>
+    <tr><td class="label">Final Confidence</td><td><strong style="color:var(--amber);font-size:16px;">MEDIUM</strong></td></tr>
+  </table>
+
+  <!-- SECTION 3: SUPPORTING ANALYSIS -->
+  <h2 class="section">03 · Supporting Analysis</h2>
+
+  <h3 class="sub">3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>WEEKLY:</strong> Bullish reversal in progress. Big green engulfing candle (+19.46%) reclaiming the weekly 50 SMA ($11.69) and weekly middle VWAP ($11.40) in one session. Higher low printed in March/April around $8.50–9.00, above the weekly 200 SMA ($9.05). Weekly MACD still below zero but histogram turning — classic early-reversal posture. RSI 53 rising from 45. Weekly upper VWAP band at $15.75 is the structural ceiling. <em style="color:var(--amber);">Fibs not drawn — structural retracement anchors unknown.</em></li>
+    <li><strong>DAILY:</strong> Price arriving into the single most important level on the whole stack — daily 200 SMA at $12.22 plus daily upper VWAP band at $12.25. Daily 50 SMA ($9.82) remains below daily 200 (death cross configuration intact until confirmed reclaim + retest). RSI 68.91 stretched. MACD positive above zero. VPVR shows the heaviest volume cluster built in the $9–11 zone — that's where price will seek magnet if rejection prints at $12.22–$12.79. <em style="color:var(--amber);">Fibs not drawn on daily — cap TA at MEDIUM.</em></li>
+  </ul>
+
+  <h3 class="sub">3B · Current Timeframe Read (4h primary)</h3>
+  <ul>
+    <li><strong>REGIME:</strong> Trending up, late-stage extension into HEAVY resistance</li>
+    <li><strong>VWAP:</strong> Price ($11.94) above middle VWAP ($10.42), slope rising; upper band $12.79 pending test — band width expanding (vol regime on)</li>
+    <li><strong>MAs:</strong> 4h 50 SMA (9.79) below 4h 200 SMA (11.11); price above both — recent reclaim of 200 is bullish, but 50<200 keeps structure in repair mode, not fully bullish yet</li>
+    <li><strong>MOMENTUM:</strong> RSI 73.10 (overbought but can stay extreme in trend continuations) · MACD positive, histogram 0.4851 still expanding but watch for peak on next leg</li>
+    <li><strong>30m CAUTION:</strong> 30m MACD histogram turning slightly red (0.2148 decelerating), RSI 59.97 off highs — near-term cooling signal even as higher TFs remain bullish. Pause-at-resistance fingerprint.</li>
+    <li><strong>FIB REFERENCE:</strong> not drawn on provided charts</li>
+  </ul>
+
+  <h3 class="sub">3C · Confluence Zones</h3>
+  <p>The <strong style="color:var(--red);">$12.22–$12.79 zone is the decision level for everything on the chart.</strong> Four structural tools stacked (daily 200 SMA, daily upper VWAP band, 4h upper VWAP band, Apr 24 call wall cluster at $12/$13) make this HEAVY. Price reacts here in one of two ways: <strong>(1)</strong> clean breakout + retest converts this zone to support and opens $13 → $15.75; <strong>(2)</strong> rejection sends price back toward the daily middle VWAP / 4h 200 SMA at $10.42–$11.11 (MEDIUM confluence), with deeper flush potential to the $9.00–$9.05 HEAVY floor on a BTC-driven risk-off. Do not force new long entries into the resistance — wait for resolution.</p>
+  <p>Below, the <strong style="color:var(--green);">$9.00–$9.05 zone is a HEAVY floor</strong> — heaviest stacked support on the whole map (weekly 200 SMA + Apr 24 put wall 4,811 OI + daily VPVR HVN). Any pullback that holds that zone keeps the weekly reversal thesis intact; a weekly close below $9.05 invalidates the entire bull structure.</p>
+
+  <h3 class="sub">3D · Divergences</h3>
+  <ul>
+    <li><strong>4h RSI:</strong> At 73 with MACD histogram still expanding — no divergence yet. Watch for a lower high in RSI while price pushes toward $12.22+ as the earliest rejection tell.</li>
+    <li><strong>30m:</strong> Flat-lining momentum against continued higher prints — not a classic bearish divergence, but a cooling signal consistent with resistance arrival.</li>
+    <li><strong>Daily:</strong> No divergence; momentum and price aligned.</li>
+  </ul>
+
+  <h3 class="sub">3E · Notes</h3>
+  <ul>
+    <li><strong>BTC GOVERNS.</strong> CLSK is a pure-play BTC miner — the entire TA map lives or dies on BTC regime. A 3%+ single-session BTC drawdown would likely blow through the 4h 200 SMA ($11.11) and retest the $10 confluence quickly, regardless of what the CLSK chart in isolation suggests. This is not a CLSK-idiosyncratic setup.</li>
+    <li><strong>MACRO TIMING.</strong> The Apr 24 5-DTE window is clean — CLSK earnings (May 7) and FOMC (Apr 28–29) both sit outside. IV will ramp into FOMC, meaning May 1 weekly will price richer premium at the cost of event risk. This week's Apr 24 cycle is the calmest macro backdrop for short premium in the near term.</li>
+    <li><strong>LOCATION-POOR SETUP.</strong> HTF alignment is present but the setup is location-poor. The "right" entry for this thesis was at $9–10 two-plus weeks ago. Chasing strength into $12+ resistance is lower R:R than waiting for resolution.</li>
+  </ul>
+
+  <!-- SECTION 4: OPTIONS DETAIL -->
+  <h2 class="section">04 · Options Chain Detail</h2>
+  <table>
+    <tr><td class="label">Source</td><td>User-provided screenshot</td></tr>
+    <tr><td class="label">Expiry</td><td>Apr 24, 2026 (5 DTE)</td></tr>
+    <tr><td class="label">Call Wall</td><td class="price">$13.00 — OI 3,317 — primary resistance, stacked with daily 200 SMA just below</td></tr>
+    <tr><td class="label">Secondary Call Wall</td><td class="price">$12.00 — OI 3,251 — lower edge of $12–$13 dealer resistance cluster</td></tr>
+    <tr><td class="label">Put Wall</td><td class="price">$8.00 — OI 6,584 — heaviest single strike on the board</td></tr>
+    <tr><td class="label">Secondary Put Wall</td><td class="price">$9.00 — OI 4,811 — stacked with weekly 200 SMA, HEAVY floor</td></tr>
+    <tr><td class="label">Max Pain</td><td class="price">~$10.50–$11.00 — price would need to fall ~$1 for max pin effect by Friday</td></tr>
+    <tr><td class="label">Notable</td><td>Elevated IV across the chain (83%+ on ATM puts, 95%+ at $10, 100%+ below) — typical for BTC-miner vol but rich vs. peer miners, reflects BTC spot vol environment plus pre-FOMC positioning. Delta progression tight and orderly; no obvious gamma dislocations.</td></tr>
+  </table>
+
+  <!-- SECTION 5: APPENDIX -->
+  <h2 class="section">05 · Appendix</h2>
+  <h3 class="sub">Tool Agreement Scorecard (4h current TF)</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>VWAP slope</td><td>Rising across TFs</td><td style="color:var(--green);font-weight:700;">BULL</td></tr>
+      <tr><td>2</td><td>Price vs VWAP</td><td>$11.94 above $10.42</td><td style="color:var(--green);font-weight:700;">BULL</td></tr>
+      <tr><td>3</td><td>50 SMA vs 200 SMA (4h)</td><td>9.79 below 11.11 — death cross still intact</td><td style="color:var(--red);font-weight:700;">BEAR</td></tr>
+      <tr><td>4</td><td>RSI vs 50 midline</td><td>73.10 above 50, rising</td><td style="color:var(--green);font-weight:700;">BULL</td></tr>
+      <tr><td>5</td><td>MACD zero line</td><td>0.1485 above zero, histogram expanding</td><td style="color:var(--green);font-weight:700;">BULL</td></tr>
+      <tr><td>6</td><td>HTF alignment (W+D)</td><td>Weekly reclaim + Daily bullish trend into resistance — both supportive</td><td style="color:var(--green);font-weight:700;">BULL</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Final: 5 bull votes, 1 bear vote = <strong style="color:var(--green);">83% bull alignment</strong>. Bias confirmed LONG tactical. The single bear vote (50&lt;200 on 4h) is a lagging structural artifact that will resolve automatically if continuation holds — not a disqualifying signal.</p>
+
+  <footer>
+    SMB LLC · TA CHART ANALYSIS · GENERATED 2026-04-19 21:30 CT
+  </footer>
+</div>
+</body>
+</html>

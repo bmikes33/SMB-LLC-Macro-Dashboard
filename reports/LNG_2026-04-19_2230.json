@@ -1,0 +1,31 @@
+{
+  "type": "ta",
+  "file": "LNG_2026-04-19_2230.html",
+  "ticker": "LNG",
+  "tvSymbol": "NYSE:LNG",
+  "date": "2026-04-19T22:30:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 1,
+  "bearScore": 5,
+  "scoreMax": 6,
+  "invalidation": "$240 short-term / $227 structural",
+  "entryZone": "$244–$250",
+  "exitZone": "$258–$265 first / $275–$280 second",
+  "levels": [
+    { "weight": "HEAVY",   "price": "$280.00", "sources": "Apr 24 call wall (344 OI) + weekly stretch zone" },
+    { "weight": "HEAVY",   "price": "$277.43", "sources": "Weekly Fib 0.786 + call OI 131 + 4h 50 SMA" },
+    { "weight": "MEDIUM",  "price": "$278.36", "sources": "Daily VWAP line" },
+    { "weight": "MEDIUM",  "price": "$265.00", "sources": "Apr 24 call OI 165 + 30m upper band" },
+    { "weight": "HEAVY",   "price": "$257.94", "sources": "Weekly Fib 0.618 (just lost; flips resistance)" },
+    { "weight": "CURRENT", "price": "$251.07", "sources": "Regular session close Fri 4/17" },
+    { "weight": "HEAVY",   "price": "$250.00", "sources": "Apr 24 put wall (148 OI) + 50D SMA proximate" },
+    { "weight": "MEDIUM",  "price": "$247.54", "sources": "Daily VWAP lower band" },
+    { "weight": "HEAVY",   "price": "$244.25", "sources": "Weekly Fib 0.5 + put OI 86 at $245" },
+    { "weight": "MEDIUM",  "price": "$240.57", "sources": "4h VWAP lower band" },
+    { "weight": "HEAVY",   "price": "$229.49", "sources": "50W SMA + Weekly Fib 0.382" },
+    { "weight": "HEAVY",   "price": "$227.78", "sources": "200D SMA — major structural floor" },
+    { "weight": "MEDIUM",  "price": "$213.63", "sources": "Weekly Fib 0.236" },
+    { "weight": "HEAVY",   "price": "$186.74", "sources": "200W SMA + Weekly Fib 0.0 anchor" }
+  ]
+}

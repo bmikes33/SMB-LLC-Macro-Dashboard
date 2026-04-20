@@ -1,0 +1,24 @@
+{
+  "type": "ta",
+  "file": "CF_2026-04-19_2200.html",
+  "ticker": "CF",
+  "tvSymbol": "NYSE:CF",
+  "date": "2026-04-19T22:00:00-05:00",
+  "bias": "NEUTRAL — no edge",
+  "confidence": "LOW",
+  "bullScore": 2,
+  "bearScore": 4,
+  "scoreMax": 6,
+  "invalidation": "$106.62 short-term / $99.40 structural",
+  "entryZone": "$106–$110",
+  "exitZone": "$121–$126",
+  "levels": [
+    { "weight": "HEAVY",   "price": "$130",       "sources": "$130 call wall (1,684 OI Apr 24) + weekly rejection zone" },
+    { "weight": "MEDIUM",  "price": "$124–$126",  "sources": "Daily RVWAP $125.77 + weekly 0.786 Fib $124.13 + $125 call OI" },
+    { "weight": "MEDIUM",  "price": "$121–$122",  "sources": "4h RVWAP $121.83 + $122 put OI (365, now ITM)" },
+    { "weight": "MEDIUM",  "price": "$113–$114",  "sources": "Weekly 0.618 Fib $113.85 + daily 50 SMA $114.06 (just broken)" },
+    { "weight": "CURRENT", "price": "$112.68",    "sources": "Regular session close" },
+    { "weight": "HEAVY",   "price": "$106–$110",  "sources": "Weekly RVWAP $108.62 + daily lower RVWAP band $110.47 + weekly 0.5 Fib $106.62 + 4h lower RVWAP band $105.75" },
+    { "weight": "MEDIUM",  "price": "$99.40",     "sources": "Weekly 0.382 Fib — structural invalidation" }
+  ]
+}

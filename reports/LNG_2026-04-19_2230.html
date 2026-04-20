@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LNG | TA Report | 2026-04-19</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --accent-cyan: #00e5ff;
+    --accent-green: #00e676;
+    --accent-red: #ff3d57;
+    --accent-amber: #ffab00;
+    --heavy-bg: rgba(255, 61, 87, 0.07);
+    --medium-bg: rgba(255, 171, 0, 0.06);
+    --tier1-bg: rgba(0, 230, 118, 0.06);
+    --current-bg: rgba(0, 229, 255, 0.07);
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 32px 28px 64px; }
+
+  /* Header block */
+  .hero {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-cyan);
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+  }
+  .hero-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 12px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: var(--accent-cyan);
+  }
+  .ticker .name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 14px;
+    letter-spacing: 0;
+  }
+  .timestamp {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+  }
+  .hero-meta {
+    display: flex; gap: 32px; flex-wrap: wrap;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--text-muted);
+    display: block; margin-bottom: 4px;
+  }
+  .meta-item .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .bias-long { color: var(--accent-green); }
+  .bias-short { color: var(--accent-red); }
+  .bias-neutral { color: var(--accent-amber); }
+  .conf-high { color: var(--accent-green); }
+  .conf-medium { color: var(--accent-amber); }
+  .conf-low { color: var(--accent-red); }
+  .conf-noedge { color: var(--text-muted); }
+
+  /* Section headers */
+  h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-cyan);
+    margin: 36px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+  }
+  h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 24px 0 10px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    margin: 8px 0 18px;
+    font-size: 13px;
+  }
+  th {
+    background: var(--bg-tertiary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-secondary);
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    font-weight: 500;
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-primary);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  td.mono, .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  td.num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+
+  /* Row tints */
+  tr.heavy { background: var(--heavy-bg); }
+  tr.heavy td:first-child { color: var(--accent-red); font-weight: 600; }
+  tr.medium { background: var(--medium-bg); }
+  tr.medium td:first-child { color: var(--accent-amber); font-weight: 500; }
+  tr.tier1 { background: var(--tier1-bg); }
+  tr.tier1 td:first-child { color: var(--accent-green); font-weight: 600; }
+  tr.tier2 td:first-child { color: var(--accent-amber); font-weight: 500; }
+  tr.avoid td:first-child { color: var(--text-muted); font-weight: 500; }
+  tr.current { background: var(--current-bg); }
+  tr.current td:first-child { color: var(--accent-cyan); font-weight: 500; }
+
+  .price-heavy { color: var(--accent-red); font-weight: 700; }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-right: 6px;
+  }
+  .tag-bull { background: rgba(0,230,118,0.15); color: var(--accent-green); }
+  .tag-bear { background: rgba(255,61,87,0.15); color: var(--accent-red); }
+  .tag-neutral { background: rgba(255,171,0,0.15); color: var(--accent-amber); }
+
+  /* Body content */
+  p { margin: 8px 0 14px; color: var(--text-primary); }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 8px 0 14px;
+  }
+  ul li {
+    padding: 6px 0 6px 16px;
+    border-left: 1px solid var(--border);
+    margin-bottom: 4px;
+    color: var(--text-primary);
+  }
+  ul li strong {
+    color: var(--accent-cyan);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+  }
+
+  /* Callouts */
+  .callout {
+    background: var(--bg-tertiary);
+    border-left: 2px solid var(--accent-amber);
+    padding: 12px 18px;
+    margin: 14px 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .callout.bull { border-left-color: var(--accent-green); }
+  .callout.bear { border-left-color: var(--accent-red); }
+  .callout strong { color: var(--text-primary); }
+
+  /* Footer */
+  .footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="hero">
+    <div class="hero-top">
+      <div class="ticker">LNG <span class="name">Cheniere Energy, Inc. · NYSE</span></div>
+      <div class="timestamp">2026-04-19 · 22:30 CT · Weekly · Daily · 4h · 30m</div>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-item">
+        <span class="label">Bias</span>
+        <span class="value bias-long">LONG TACTICAL</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Final Confidence</span>
+        <span class="value conf-medium">MEDIUM</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Tool Agreement</span>
+        <span class="value">1/6 BULL · 5/6 BEAR</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Last Close</span>
+        <span class="value">$251.07</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Setup</span>
+        <span class="value">Fade test of HEAVY support</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: DECISION SUMMARY -->
+  <h2>§ 1 — Decision Summary</h2>
+
+  <h3>1A · Executive</h3>
+  <table>
+    <tbody>
+      <tr><th style="width:200px">Bias</th><td><span class="tag tag-bull">LONG TACTICAL</span> Fade into HEAVY support test; <strong>do not chase short</strong> at current price.</td></tr>
+      <tr><th>Final Confidence</th><td class="num conf-medium">MEDIUM</td></tr>
+      <tr><th>Tool Agreement (Daily)</th><td class="num">1/6 bull · 5/6 bear · 17% bull</td></tr>
+      <tr><th>Invalidation</th><td class="mono"><span class="conf-medium">$240</span> short-term (loss of 4h lower VWAP band + slip beneath put wall) / <span class="conf-low">$227</span> structural (loss of 200D SMA + 50W SMA)</td></tr>
+      <tr><th>Entry Zone</th><td class="mono"><strong>$244–$250</strong> — put wall + daily lower VWAP band + weekly Fib 0.5 + 50D SMA cluster</td></tr>
+      <tr><th>Exit Zone</th><td class="mono"><strong>$258–$265</strong> first (reclaim broken Fib 0.618 + call OI 165) → <strong>$275–$280</strong> second (Fib 0.786 + call wall)</td></tr>
+      <tr><th>Macro Watch</th><td>EIA NatGas Storage <strong>Thu 4/24 10:30 ET</strong> (MEDIUM, energy-relevant) · Flash PMIs Wed 4/23 · No FOMC/CPI/NFP/earnings within Apr 24 expiry · LNG earnings <strong>May 7 BMO</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>1B · Key Levels</h3>
+  <table>
+    <thead>
+      <tr><th style="width:100px">Weight</th><th style="width:140px">Price</th><th>Sources</th></tr>
+    </thead>
+    <tbody>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$280.00</span></td><td>Apr 24 call wall (344 OI) + weekly stretch zone</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$277.43</span></td><td>Weekly Fib 0.786 + Apr 24 call OI 131 + 4h 50 SMA proximate</td></tr>
+      <tr class="medium"><td>MEDIUM</td><td class="num">$278.36</td><td>Daily VWAP line</td></tr>
+      <tr class="medium"><td>MEDIUM</td><td class="num">$265.00</td><td>Apr 24 call OI 165 + 30m upper band</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$257.94</span></td><td>Weekly Fib 0.618 (just lost — flips to resistance)</td></tr>
+      <tr><td>LIGHT</td><td class="num">$252.66</td><td>50D SMA (just lost; weak above)</td></tr>
+      <tr class="current"><td>—</td><td class="num">$251.07 ← CURRENT</td><td>RTH close Fri 4/17 · Options snap was $256 intraday</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$250.00</span></td><td>Apr 24 put wall (148 OI) + 50D SMA proximate + psychological round</td></tr>
+      <tr class="medium"><td>MEDIUM</td><td class="num">$247.54</td><td>Daily VWAP lower band — statistically rare touch</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$244.25</span></td><td>Weekly Fib 0.5 + Apr 24 put OI 86 at $245</td></tr>
+      <tr class="medium"><td>MEDIUM</td><td class="num">$240.57</td><td>4h VWAP lower band</td></tr>
+      <tr><td>LIGHT</td><td class="num">$230.56</td><td>Weekly Fib 0.382</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$229.49</span></td><td>50W SMA + Weekly Fib 0.382 confluence</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$227.78</span></td><td>200D SMA — major structural floor</td></tr>
+      <tr class="medium"><td>MEDIUM</td><td class="num">$213.63</td><td>Weekly Fib 0.236</td></tr>
+      <tr class="heavy"><td>HEAVY</td><td class="num"><span class="price-heavy">$186.74</span></td><td>200W SMA + Weekly Fib 0.0 anchor</td></tr>
+    </tbody>
+  </table>
+
+  <h3>1C · CSP Strike Zones — Apr 24 Expiry (5 DTE)</h3>
+  <div class="callout">
+    <strong>Snap caveat:</strong> Chain captured intraday at <span class="mono">$256</span>; RTH close was <span class="mono">$251.07</span>. Premiums on $245–$250 strikes will be ~15–25% richer at the open.
+  </div>
+  <table>
+    <thead>
+      <tr><th style="width:120px">Tier</th><th style="width:90px">Strike</th><th>Confluence</th><th style="width:200px">Snap Greeks / Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr class="tier1"><td>TIER 1</td><td class="num">$245</td><td>Weekly Fib 0.5 ($244.25) + below put wall + above 4h lower band</td><td class="mono">Δ −0.279 · IV 32.4% · mid ~$2.07. Cleanest assignment-neutral cost basis.</td></tr>
+      <tr class="tier1"><td>TIER 1 (deeper)</td><td class="num">$240</td><td>4h VWAP lower band ($240.57) + below all near-term tools</td><td class="mono">Δ −0.168 · IV 35.5% · mid ~$1.17. Safer; lighter premium.</td></tr>
+      <tr><td>TIER 2</td><td class="num">$247.50</td><td>Daily lower VWAP band ($247.54) — single structural tool</td><td class="mono">Δ −0.356 · IV 31.3% · mid ~$2.80. Likely tested if downtrend continues.</td></tr>
+      <tr><td>TIER 2</td><td class="num">$250</td><td>Put wall (148 OI) — single OI tool, no confluence below</td><td class="mono">Δ −0.448 · IV 29.5% · mid ~$3.65. Coin-flip assignment; richest premium.</td></tr>
+      <tr class="avoid"><td>AVOID</td><td class="num">$252.50+</td><td>ITM — naked exposure, not CSP setup</td><td>—</td></tr>
+      <tr class="avoid"><td>AVOID</td><td class="num">≤ $230</td><td>Below structural floor; premium too thin to justify</td><td class="mono">$230 mid ~$0.38, Δ −0.049</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:14px;">
+    <strong style="color:var(--accent-cyan);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1px;">STRIKE SELECTION NOTES —</strong>
+    Final Confidence is MEDIUM and the setup is a fade-the-test long, not a momentum long. <strong>Tier 1 is the right posture.</strong>
+    The <span class="mono">$245</span> strike is the standout: heaviest sub-$250 confluence (weekly Fib 0.5 + put OI 86 at $245 + above the 4h lower band), and assignment lands where the structural read says buyers should be active.
+    Tier 2 strikes ($247.50, $250) are defensible only if you are genuinely indifferent to assignment in the $247–$250 zone, which is closer to current price than the heaviest confluence.
+  </p>
+
+  <!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+  <h2>§ 2 — Confidence Breakdown</h2>
+  <table>
+    <thead><tr><th style="width:220px">Stage</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>TA Confidence</td><td><span class="conf-medium mono">MEDIUM</span> — bearish momentum unanimous on daily/4h, but price is approaching HEAVY confluence support ($244–$250) and weekly structure remains intact (price well above 50W $229 and 200W $187). Pullback inside a weekly uptrend, not a structural break.</td></tr>
+      <tr><td>Fundamental Context</td><td class="mono">not provided</td></tr>
+      <tr><td>Fundamental Modifier</td><td class="mono">not applied</td></tr>
+      <tr><td>Macro Calendar</td><td>EIA NatGas Storage Thu 4/24 (MEDIUM, energy) · Flash PMIs Wed · No HIGH-impact in horizon · LNG earnings May 7 (outside Apr 24 expiry)</td></tr>
+      <tr><td>Macro Modifier</td><td class="mono">none — earnings clear of weekly expiry</td></tr>
+      <tr><td><strong>Final Confidence</strong></td><td><strong class="conf-medium mono" style="font-size:15px;">MEDIUM</strong></td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 3: SUPPORTING ANALYSIS -->
+  <h2>§ 3 — Supporting Analysis</h2>
+
+  <h3>3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>WEEKLY</strong> — Uptrend structurally intact: price ($251) above 50W SMA ($229) and 200W SMA ($187) by a wide margin. Most recent leg ran $186 → ~$326 (above visible Fib 1.0 anchor at $302.25), tagging weekly upper VWAP band ($326.32). This week's −5.45% candle is the first meaningful rejection of that extreme. RSI 60.94 rolling down from ~70; MACD positive but histogram contracting. Volume 12.5M vs 13.2M 20-MA — average, not climactic. <strong style="color:var(--text-primary);font-family:inherit;font-size:13px;letter-spacing:0;">Read: extended-trend cool-off, not regime change.</strong></li>
+    <li><strong>DAILY</strong> — Just lost 50D SMA ($252.66) and weekly Fib 0.618 ($257.94) on Friday's −4.44% close. Now between Fib 0.5 ($244.25) and 0.618 ($257.94), approaching daily lower VWAP band ($247.54) — statistically rare touch. RSI 40 broke 50. MACD deeply below zero, expanding. Volume 3.65M vs 4.37M 20-MA — below average on the breakdown bar (capitulation not in). 200D SMA $227.78 remains far below; structural uptrend intact.</li>
+  </ul>
+
+  <h3>3B · Current Timeframe Read (4h Active)</h3>
+  <ul>
+    <li><strong>REGIME</strong> — Trending down hard on 4h, with 30m beginning to compress at the lows.</li>
+    <li><strong>VWAP (4h)</strong> — Price ($251) below VWAP line ($266.85), heading toward lower band ($240.57). Slope negative.</li>
+    <li><strong>MAs (4h)</strong> — 50/4h ($273.54) above 200/4h ($226.59) — bullish structure preserved, but price has flipped under both proximally; 50/4h slope rolled negative.</li>
+    <li><strong>MOMENTUM (4h)</strong> — RSI 32.79 oversold. MACD −1.42, histogram −4.43 expanding. <span style="color:var(--accent-green);">30m showing first momentum stabilization</span> — RSI 38.80 climbing, MACD histogram turning at zero line.</li>
+    <li><strong>FIB REFERENCE (HTF)</strong> — Nearest weekly Fib = 0.5 at $244.25 (target/support), 0.618 at $257.94 (just-broken resistance).</li>
+  </ul>
+
+  <h3>3C · Confluence Zones</h3>
+  <p>The dominant structural feature on this chart is the <strong style="color:var(--accent-red);">$244–$250 super-confluence support zone</strong>: Apr 24 put wall ($250, 148 OI), daily VWAP lower band ($247.54), weekly Fib 0.5 ($244.25), put OI 86 at $245, and 50D SMA ($252.66) just above as the upper boundary. Five tools across structural and dealer-positioning categories converging within a $6 band makes this a HEAVY zone for fade reactions. Below it, the next HEAVY support doesn't appear until <strong style="color:var(--accent-red);">$227–$230</strong> (200D SMA + 50W SMA + weekly Fib 0.382), which would require the daily uptrend to fully break. On the upside, the <strong>$257–$265 zone</strong> is the first resistance test (just-broken Fib 0.618 + call OI 165), and <strong>$277–$280</strong> is the heavy structural cap (Fib 0.786 + 344-OI call wall).</p>
+
+  <h3>3D · Divergences</h3>
+  <ul>
+    <li><strong>30m</strong> — Mild bullish RSI/MACD turn at recent lows while price prints roughly equal lows. Early divergence, not yet confirmed.</li>
+    <li><strong>4h</strong> — No clean divergence. RSI oversold but extending with price.</li>
+    <li><strong>DAILY</strong> — No divergence; price and momentum broke down together.</li>
+    <li><strong>WEEKLY</strong> — Classic late-trend pattern: price made higher high to $326, RSI made lower high vs. prior peak. <span style="color:var(--accent-red);">Bearish divergence at the weekly degree</span> — strongest single warning that upside is exhausted for now.</li>
+  </ul>
+
+  <h3>3E · Notes</h3>
+  <div class="callout">
+    <strong>Volume note —</strong> Breakdown is on below-average daily AND weekly volume. Argues against structural break, in favor of a swept-low pattern at the support test. A high-volume capitulation print with a long lower wick into $244–$250 would be the cleanest exhaustion signal and a stronger long trigger than reaching the zone on a slow drift.
+  </div>
+  <div class="callout bull">
+    <strong>Alignment —</strong> Weekly bullish intact / Daily newly bearish / 4h bearish-extending / 30m stabilizing. Divergence between weekly and daily is the textbook setup for a tactical long off support — not a chase short. Per the framework, taking a 30m short here fights the weekly: <strong>NO EDGE for new shorts at this price</strong>.
+  </div>
+  <div class="callout">
+    <strong>Options snapshot caveat —</strong> Chain captured intraday at $256, RTH close $251.07. Premiums on $245–$250 strikes will be ~15–25% richer when Monday opens, all else equal.
+  </div>
+  <div class="callout">
+    <strong>Macro —</strong> No HIGH-impact event within the Apr 24 expiry window. EIA NatGas Storage Thursday is the only ticker-relevant catalyst. LNG earnings May 7 BMO are well outside the weekly expiry — no earnings cap on this read, but anything May 7+ expiry needs the earnings handling protocol (not part of this analysis).
+  </div>
+  <div class="callout">
+    <strong>Tool agreement vs. confidence sanity check —</strong> 5/6 bear tools but Final Confidence = MEDIUM (not HIGH bear). Intentional. The bear vote count reflects momentum/trend on the active TF, but the trade setup is a long fade at HEAVY support, not a chase short. The bear count tells you the tape is hostile; the level map tells you why fading the test is the higher-quality side.
+  </div>
+
+  <!-- SECTION 4: OPTIONS DETAIL -->
+  <h2>§ 4 — Options Chain Detail</h2>
+  <ul>
+    <li><strong>SOURCE</strong> — User-provided screenshot</li>
+    <li><strong>EXPIRY</strong> — Apr 24, 2026 (5 DTE from Mon open)</li>
+    <li><strong>SNAP REFERENCE</strong> — $256 intraday Friday; RTH close $251.07</li>
+    <li><strong>CALL WALL</strong> — <span class="price-heavy mono">$280</span> (344 OI) — far OTM, dealer hedge anchor</li>
+    <li><strong>SECONDARY CALL CLUSTERS</strong> — $265 (165), $275 (131), $260 (65) — stacked overhead resistance ladder</li>
+    <li><strong>PUT WALL</strong> — <span class="price-heavy mono">$250</span> (148 OI) — closest meaningful support, near current price</li>
+    <li><strong>SECONDARY PUT CLUSTERS</strong> — $252.50 (133), $245 (86), $230 (69), $260 (78 ITM), $265 (131 ITM)</li>
+    <li><strong>MAX PAIN (visual estimate)</strong> — ~$260–$265 zone — gravitational pull modestly above current price into Friday expiry as ITM puts at $260+ decay</li>
+    <li><strong>NOTABLE</strong> — 1,082 volume on $260 calls + 344 OI on $280 calls = dealers short upside; any ramp into $260+ should see hedging flows producing mechanical resistance. Put side: $250 put wall is the cleanest single dealer-positioning anchor on the chart.</li>
+  </ul>
+
+  <div class="footer">
+    SMB LLC · TA-CHART-ANALYSIS · LNG · 2026-04-19 22:30 CT · Skill output — user sizes the trade
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CIFR TA Report — 2026-04-19 21:45 CDT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 24px 32px;
+    line-height: 1.55;
+    font-size: 14px;
+  }
+  h1, h2, h3, .mono, .ticker, table {
+    font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  }
+  .header-block {
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header-left h1 {
+    margin: 0 0 6px 0;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .header-left .subtitle {
+    color: var(--text-secondary);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .bias-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid;
+    margin-left: 6px;
+  }
+  .bias-long { color: var(--green); border-color: var(--green); }
+  .bias-short { color: var(--red); border-color: var(--red); }
+  .bias-neutral { color: var(--amber); border-color: var(--amber); }
+  .conf-high { color: var(--green); }
+  .conf-med { color: var(--amber); }
+  .conf-low { color: var(--red); }
+  .section {
+    margin-bottom: 28px;
+  }
+  .section-header {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 18px 0;
+    font-size: 13px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  tr.heavy td {
+    background: rgba(255, 61, 87, 0.08);
+  }
+  tr.heavy td:first-child { color: var(--red); font-weight: 700; }
+  tr.medium td {
+    background: rgba(255, 171, 0, 0.06);
+  }
+  tr.medium td:first-child { color: var(--amber); font-weight: 700; }
+  tr.light td:first-child { color: var(--text-muted); }
+  tr.current td {
+    background: rgba(0, 229, 255, 0.1);
+    color: var(--cyan);
+    font-weight: 700;
+  }
+  tr.tier1 td:first-child { color: var(--green); font-weight: 700; }
+  tr.tier1 td { background: rgba(0, 230, 118, 0.06); }
+  tr.tier2 td:first-child { color: var(--amber); font-weight: 700; }
+  tr.avoid td:first-child { color: var(--red); font-weight: 700; }
+  tr.avoid td { background: rgba(255, 61, 87, 0.06); }
+  ul { padding-left: 18px; margin: 10px 0; }
+  ul li { margin-bottom: 6px; }
+  .label {
+    color: var(--cyan);
+    font-weight: 600;
+  }
+  .muted { color: var(--text-secondary); }
+  .dim { color: var(--text-muted); }
+  p { margin: 10px 0; }
+  code, .ticker {
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    border: 1px solid var(--border);
+    font-size: 12px;
+  }
+  .meta-line {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+  .footer {
+    margin-top: 36px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-block">
+  <div class="header-left">
+    <h1>CIFR <span class="muted" style="font-size:16px;">· Cipher Mining</span></h1>
+    <div class="subtitle">30m · 4h · 1D · 1W &nbsp;|&nbsp; NASDAQ:CIFR &nbsp;|&nbsp; 2026-04-19 21:45 CDT</div>
+  </div>
+  <div class="header-right">
+    <div class="meta-line">BIAS</div>
+    <div class="bias-tag bias-long">LONG TACTICAL</div>
+    <div class="meta-line" style="margin-top:10px;">FINAL CONFIDENCE</div>
+    <div class="conf-med mono" style="font-size:18px; font-weight:700;">MEDIUM</div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section">
+  <div class="section-header">§1 — Decision Summary</div>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin-bottom:8px;">1A · Executive Summary</h3>
+  <table>
+    <tr><th style="width:30%;">Field</th><th>Value</th></tr>
+    <tr><td>Bias</td><td><strong style="color:var(--green);">LONG tactical</strong> — trend confirmed, pressing HEAVY resistance</td></tr>
+    <tr><td>Final Confidence</td><td><strong class="conf-med">MEDIUM</strong></td></tr>
+    <tr><td>Tool Agreement</td><td>6/6 bull · 0/6 bear — 100%</td></tr>
+    <tr><td>Invalidation</td><td>$17.00 short-term close / $15.25 structural (daily 50 SMA)</td></tr>
+    <tr><td>Entry Zone</td><td>$17.00–$17.50 pullback (HEAVY support retest) OR $20.50+ breakout on volume</td></tr>
+    <tr><td>Exit Zone</td><td>First: $22 (call OI) · Main: $25.36 (weekly 1.0 Fib)</td></tr>
+    <tr><td>Macro Watch</td><td>Warsh Senate testimony this week (MEDIUM); FOMC Apr 28–29 <strong>post</strong> Apr 24 expiry</td></tr>
+  </table>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">1B · Key Levels</h3>
+  <table>
+    <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+    <tr class="medium"><td>MEDIUM</td><td>$25.36</td><td>Weekly 1.0 Fib (HTF upside anchor)</td></tr>
+    <tr class="light"><td>LIGHT</td><td>$22.00</td><td>Call OI speculative strike, 14K Apr 24 volume on 1K OI</td></tr>
+    <tr class="heavy"><td>HEAVY</td><td><strong>$20.16–$20.38</strong></td><td>Weekly + Daily 0.786 Fib stack + daily upper VWAP band + $20 call OI (3.5K)</td></tr>
+    <tr class="current"><td>—</td><td>$19.37 ← CURRENT</td><td>Regular close · +17.18% weekly · +11.71% daily</td></tr>
+    <tr class="heavy"><td>HEAVY</td><td><strong>$16.00–$17.50</strong></td><td>Daily HVN + 0.618 Fib + 4h VWAP ($16.41) + $17 put wall (11.7K) + $16 put wall (10.3K)</td></tr>
+    <tr class="medium"><td>MEDIUM</td><td>$15.07–$15.25</td><td>Daily 50 SMA + 4h 50 SMA cluster</td></tr>
+    <tr class="medium"><td>MEDIUM</td><td>$13.72–$13.83</td><td>Weekly 0.5 Fib + Daily 200 SMA (structural floor)</td></tr>
+    <tr class="light"><td>LIGHT</td><td>$10.98</td><td>Weekly 0.382 Fib</td></tr>
+  </table>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">1C · CSP Strike Zones — Apr 24 Exp (5 DTE, IV ~100–125%)</h3>
+  <table>
+    <tr><th>Tier</th><th>Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+    <tr class="tier1">
+      <td>Tier 1 (safest)</td>
+      <td><strong>$16–$17</strong></td>
+      <td>$17 put wall (11.7K) + $16 put wall (10.3K) + 0.618 Fib + 4h VWAP + daily HVN</td>
+      <td>$17P $0.25/$0.28 Δ -0.16 · $16P $0.11/$0.13 Δ -0.08 · Assignment drops shares at the most defended level on the chart.</td>
+    </tr>
+    <tr class="tier2">
+      <td>Tier 2 (aggressive)</td>
+      <td>$17.50–$18</td>
+      <td>$17.50 OI (1.9K) + edge of daily HVN</td>
+      <td>$17.50P $0.32/$0.43 Δ -0.22 · $18P $0.47/$0.54 Δ -0.27 · Above the heaviest OI; higher premium.</td>
+    </tr>
+    <tr class="avoid">
+      <td>AVOID</td>
+      <td>≤$15 / ≥$19</td>
+      <td>—</td>
+      <td>Sub-$15 = LVN below structural floor, thin premium · $19+ = ATM/ITM, not a CSP setup.</td>
+    </tr>
+  </table>
+  <p class="muted" style="font-size:12px;"><strong>Strike Selection Notes.</strong> IV at ~105% across puts is outsized. With Final Confidence MEDIUM and price pressing HEAVY resistance (elevated near-term pullback odds), Tier 1 is the cleaner posture — $16–$17 is the single strongest support cluster on the chart and collects meaningful premium at 5 DTE. Tier 2 only if cost basis at $17.50–$18 on assignment is acceptable.</p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section">
+  <div class="section-header">§2 — Confidence Breakdown</div>
+  <table>
+    <tr><th>Stage</th><th>Value</th></tr>
+    <tr><td>TA Confidence</td><td><strong class="conf-high">HIGH</strong> — 6/6 tool alignment, daily structure bullish, weekly momentum turning</td></tr>
+    <tr><td>Fundamental Context</td><td>not provided</td></tr>
+    <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+    <tr><td>Macro Calendar</td><td>Warsh testimony (MED) this week · FOMC Apr 28–29 beyond expiry · CIFR earnings ~May 5 beyond expiry</td></tr>
+    <tr><td>Macro Modifier</td><td>cap at MEDIUM — price at HEAVY resistance + 30m overbought raises pullback odds even with clean alignment</td></tr>
+    <tr><td><strong>Final Confidence</strong></td><td><strong class="conf-med">MEDIUM</strong></td></tr>
+  </table>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section">
+  <div class="section-header">§3 — Supporting Analysis</div>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin-bottom:8px;">3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><span class="label">Weekly:</span> Explosive reclaim week (+17.18%) back above the 0.618 Fib at $16.47. Price re-entered the $16.47–$20.38 Fib band and is testing the 0.786 at $20.38. VWAP rising, price well above line ($16.17). Weekly MACD still below zero but histogram curling positive — momentum shifting, not yet confirmed. Volume 162M vs 20wk avg 138M supports the move.</li>
+    <li><span class="label">Daily:</span> Cleanly bullish structure. 50 SMA ($15.25) above 200 SMA ($13.83), both sloping up. Price above both. RSI 67 — elevated but not extreme. MACD firmly above zero with rising histogram. Daily upper VWAP band at $20.16 is the immediate ceiling. Active Fib anchor identical to weekly; clean 0.618 reclaim.</li>
+  </ul>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">3B · Current Timeframe Read (4h primary + 30m trigger)</h3>
+  <ul>
+    <li><span class="label">Regime:</span> Trending up on all four timeframes; 30m extended.</li>
+    <li><span class="label">VWAP (4h):</span> Price above line ($16.41), rising slope, pressing upper band (~$20.80).</li>
+    <li><span class="label">MAs (4h):</span> 50 SMA ($15.07) crossed above 200 SMA ($16.14) — fresh near-term golden cross; 4h 200 now acts as flip-support.</li>
+    <li><span class="label">Momentum:</span> 4h RSI 67, 30m RSI <strong>77.22</strong> (overbought). 4h MACD above zero but histogram flattening; 30m MACD positive.</li>
+    <li><span class="label">Fib reference (HTF):</span> Pressing daily/weekly 0.786 at $20.38 — primary decision point.</li>
+  </ul>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">3C · Confluence Zones</h3>
+  <p>The <strong style="color:var(--red);">$20.16–$20.38</strong> zone is the cleanest HEAVY resistance on the whole map: weekly 0.786 Fib, daily 0.786 Fib, and daily upper VWAP band all cluster inside 25 cents, with $20 call OI adding dealer-hedge friction. A close and hold above opens the path to the weekly 1.0 Fib at $25.36 with the $22 call strike as the only intermediate drag. On the downside, the <strong style="color:var(--green);">$16–$17.50</strong> zone is an even heavier stack — 22K combined put OI between the $16 and $17 strikes for Apr 24, anchored by the daily HVN and the weekly/daily 0.618 Fib. This is where put sellers have placed real money and where dealer hedging behavior should defend price. Below $15.25 the 50 SMA breaks and structure moves to the $13.72–$13.83 floor (200 SMA + weekly 0.5 Fib).</p>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">3D · Divergences</h3>
+  <p>No bearish RSI or MACD divergence on daily or 4h — price, RSI, and MACD are making higher highs in sync. 30m RSI at 77 is a near-term stretch signal, not a confirmed divergence. Clean momentum profile.</p>
+
+  <h3 style="font-size:13px; letter-spacing:0.1em; color:var(--text-secondary); text-transform:uppercase; margin:18px 0 8px;">3E · Notes</h3>
+  <p>BTC context is the governor on this read: BTC held the $75–78K zone with Hormuz reopening and Israel–Lebanon ceasefire as catalysts. CIFR has moved from a pure BTC-miner proxy toward a contracted-HPC infrastructure story (AWS 300MW / $5.5B, Google-Fluidstack 168MW / $3–7B) — reducing but not eliminating BTC sensitivity. Cantor Fitzgerald on 4/9/2026 lowered CIFR PT to $22 from $24 while maintaining Overweight, which sits between current price and the weekly 1.0 Fib target. Within the 5-day Apr 24 expiry window: no HIGH-impact data releases; Fed chair nominee Warsh's Senate testimony is the tape-mover. FOMC Apr 28–29 falls <strong>after</strong> Apr 24 expiry, so Apr 24 short puts don't carry direct FOMC gap risk, but IV is likely to hold elevated into that meeting, benefiting the premium side of the trade.</p>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section">
+  <div class="section-header">§4 — Options Chain Detail</div>
+  <ul>
+    <li><span class="label">Source:</span> user-provided screenshot</li>
+    <li><span class="label">Expiry:</span> April 24, 2026 (5 DTE)</li>
+    <li><span class="label">Underlying shown:</span> $18.80 (screenshot); chart close $19.37 — screenshot appears slightly stale</li>
+    <li><span class="label">Call wall:</span> $17 (4,474 OI — ITM now) and $20 (3,459 OI) — resistance stack at $20</li>
+    <li><span class="label">Put wall:</span> <strong style="color:var(--green);">$17 (11,767 OI)</strong> primary, <strong style="color:var(--green);">$16 (10,323 OI)</strong> secondary — massive support stack</li>
+    <li><span class="label">Max pain estimate:</span> ~$17–$18 (pin effect into Friday)</li>
+    <li><span class="label">IV:</span> 100–125% across strikes — extremely elevated, reflects crypto-adjacent beta and recent move</li>
+    <li><span class="label">Notable:</span> $22 call has 14,349 day volume on only 1,088 OI — aggressive speculative call buying just above current resistance. Watch for OI conversion by Monday.</li>
+    <li><span class="label">Expected move:</span> ±$2.79 from $18.80 → $16.01–$21.59 range for Apr 24</li>
+  </ul>
+</div>
+
+<!-- APPENDIX -->
+<div class="section">
+  <div class="section-header">§5 — Appendix · 6-Tool Agreement (Daily TF)</div>
+  <table>
+    <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+    <tr><td>1</td><td>VWAP slope</td><td>Rising ($15.27, steepening)</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td>2</td><td>Price vs VWAP line</td><td>Above ($19.37 vs $15.27)</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td>3</td><td>50 SMA vs 200 SMA</td><td>50 ($15.25) above 200 ($13.83)</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td>4</td><td>RSI vs 50 midline</td><td>67.21, rising</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td>5</td><td>MACD zero line</td><td>Above zero, histogram rising (0.5743 / 0.3491)</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td>6</td><td>HTF alignment</td><td>Weekly recovering, daily bullish, aligned</td><td style="color:var(--green);">BULL</td></tr>
+    <tr><td colspan="3" style="text-align:right; font-weight:700;">Bull / Bear</td><td style="color:var(--green); font-weight:700;">6 / 0</td></tr>
+  </table>
+  <p class="muted" style="font-size:12px;">Note: 6/6 clean alignment but Final Confidence capped at MEDIUM because price is entering the HEAVY $20.16–$20.38 zone and 30m RSI at 77 flags near-term stretch. Clean bull structure with poor entry timing.</p>
+</div>
+
+<div class="footer">
+  SMB LLC · TA-Chart-Analysis Framework · Confluence-Based Multi-Timeframe Read · Generated 2026-04-19 21:45 CDT
+</div>
+
+</body>
+</html>

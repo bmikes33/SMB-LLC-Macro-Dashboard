@@ -1,0 +1,25 @@
+{
+  "type": "ta",
+  "file": "WULF_2026-04-19_2150.html",
+  "ticker": "WULF",
+  "tvSymbol": "NASDAQ:WULF",
+  "date": "2026-04-19T21:50:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 6,
+  "bearScore": 0,
+  "scoreMax": 6,
+  "invalidation": "$18 short-term / $16.50 structural",
+  "entryZone": "$17.50–$18.50",
+  "exitZone": "$22.00–$22.50",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$25.60",        "sources": "Weekly 1.618 Fib extension" },
+    { "weight": "MEDIUM",  "price": "$24.00",        "sources": "Apr 24 call OI 4,205 + round number" },
+    { "weight": "MEDIUM",  "price": "$22.00–$22.50", "sources": "Upper daily VWAP $22.48 + upper 4H VWAP $22.21 + $22 call OI 2,137" },
+    { "weight": "HEAVY",   "price": "$20.00–$20.20", "sources": "$20 call wall 9,575 OI (chain max) + upper weekly VWAP 2.5σ band + round number + weekly 1.0 Fib breakout zone" },
+    { "weight": "CURRENT", "price": "$20.65",        "sources": "Regular / after-hours close" },
+    { "weight": "MEDIUM",  "price": "$19.00",        "sources": "$19 put wall 7,035 OI (2nd largest in chain)" },
+    { "weight": "MEDIUM",  "price": "$18.00",        "sources": "$18 put OI 3,097 + prior April swing low + 30m 200 SMA proximity" },
+    { "weight": "HEAVY",   "price": "$16.50–$17.00", "sources": "Weekly 1.0 Fib $16.61 + Daily 50 SMA $16.13 + 4H 50 SMA $16.66 + put/call OI stack + VPVR HVN" }
+  ]
+}

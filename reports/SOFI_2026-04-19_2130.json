@@ -1,0 +1,30 @@
+{
+  "type": "ta",
+  "file": "SOFI_2026-04-19_2130.html",
+  "ticker": "SOFI",
+  "tvSymbol": "NASDAQ:SOFI",
+  "date": "2026-04-19T21:30:00-05:00",
+  "bias": "LONG structural",
+  "confidence": "HIGH",
+  "bullScore": 5,
+  "bearScore": 1,
+  "scoreMax": 6,
+  "invalidation": "$17.50 short-term / $16.50 structural",
+  "entryZone": "$17.72–$18.50",
+  "exitZone": "$20.47 → $22.17–$23.22",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$32.12",         "sources": "Weekly Fib 1.0 (ATH)" },
+    { "weight": "MEDIUM",  "price": "$27.14",         "sources": "Weekly Fib 0.786" },
+    { "weight": "HEAVY",   "price": "$22.17–$23.86",  "sources": "Weekly 50 SMA + Weekly Fib 0.618 + Daily 200 SMA — structural wall" },
+    { "weight": "HEAVY",   "price": "$21.00",         "sources": "Apr 24 Call OI 12,492 — major resistance stop" },
+    { "weight": "HEAVY",   "price": "$20.00–$20.47",  "sources": "Weekly Fib 0.5 + Daily upper VWAP band + $20 Call OI 17,024" },
+    { "weight": "HEAVY",   "price": "$19.00",         "sources": "Apr 24 Call OI 29,191 (massive gamma pin)" },
+    { "weight": "CURRENT", "price": "$19.13",         "sources": "Regular session close 2026-04-19" },
+    { "weight": "HEAVY",   "price": "$17.72–$18.03",  "sources": "Weekly Fib 0.382 + Daily 50 SMA + 4H VWAP center + Put OI 3,338 — primary entry" },
+    { "weight": "MEDIUM",  "price": "$17.00",         "sources": "Put OI 3,243 + horizontal support" },
+    { "weight": "MEDIUM",  "price": "$16.93",         "sources": "Daily VWAP center" },
+    { "weight": "HEAVY",   "price": "$15.00",         "sources": "Put OI 30,455 (massive) — magnetic floor / tail-risk support" },
+    { "weight": "MEDIUM",  "price": "$14.32",         "sources": "Weekly Fib 0.236 + recent low" },
+    { "weight": "MEDIUM",  "price": "$11.76",         "sources": "Weekly 200 SMA" }
+  ]
+}

@@ -1,56 +1,211 @@
 {
-  "lastUpdated": "2026-04-20T12:58:23.523729+00:00",
-  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 12:58 PM UTC",
+  "lastUpdated": "2026-04-20T14:46:36.337439+00:00",
+  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 02:46 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Headlines show significant crypto institutional buying with Strategy's $2.5B Bitcoin purchase and BMNR's ETH holdings reaching $12.9B, while geopolitical tensions around US-Iran talks create uncertainty in oil and broader markets. Dollar holds modest gains amid low FX volatility, though Iran tensions are causing some risk-off pressure in equities.",
+    "macroSummary": "Markets are navigating heightened uncertainty around U.S.-Iran peace talks with oil volatility rising while the dollar retreats on optimism for a breakthrough. Major crypto buying continues with Bitmine purchasing 101,627 ETH and Strategy acquiring $2.5B in Bitcoin, while Canadian inflation data came in slightly below expectations.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Strong crypto flows support risk-on thesis, but Iran tensions causing oil spikes and stock pullbacks suggest emerging risk-off crosscurrents that could pressure the regime.",
+    "regimePressureReason": "Iran ceasefire uncertainty is creating geopolitical tension and oil volatility, but dollar weakness and continued aggressive crypto institutional buying suggest risk appetite remains intact.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar holding around one-week highs on Iran uncertainty - watching for sustained break above 100"
-      },
-      {
-        "indicator": "Oil volatility",
-        "level": "Geopolitical premium",
-        "signal": "Oil jumping on US-Iran ceasefire uncertainty introduces stagflation risk vector"
+        "signal": "Dollar fluctuating around one-week high amid Iran tensions but paring gains on peace talk optimism"
       }
     ],
     "keySignals": [
       {
-        "signal": "Strategy drops $2.5B on Bitcoin in largest buy of year, total crypto fund inflows hit $1.4B weekly",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "BMNR reaches $12.9B in crypto/cash holdings with 4.976M ETH tokens",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Oil jumps and stocks ease/pull back as US-Iran ceasefire hangs in the balance",
+        "signal": "Oil futures rising and markets 'on edge' due to Iran ceasefire expiration risk and geopolitical uncertainty",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar fluctuates around one-week high as Iran tensions cause uncertainty",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Dollar retreating despite one-week highs as traders remain optimistic on Iran peace breakthrough",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin ETFs see $996M inflows despite Iran tensions, suggesting crypto decoupling from traditional risk-off",
+        "signal": "Massive institutional crypto buying continues with Bitmine's $2.5B ETH purchase and Strategy's $2.5B Bitcoin acquisition",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "10-Year Treasury yield holding at one-month lows despite geopolitical tensions",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin maintaining 'fragile equilibrium' near $75K with ETF demand cushioning despite Hormuz tensions",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR trust premium/discount as institutional crypto buying may tighten NAV spreads",
-      "Watch for oil spillover into broader inflation expectations that could pressure growth sectors",
-      "Prepare for potential crypto-equity decoupling if Iran tensions escalate while institutional crypto flows remain strong"
+      "Monitor DXY closely as it approaches 100 threshold amid Iran uncertainty",
+      "BMNR ladder benefiting from continued institutional ETH accumulation - consider position sizing given 4.976M token holdings",
+      "Watch oil volatility spillover into broader risk assets if Iran talks fail"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Markets on Edge as Traders Await Breakthrough in U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:34:00+00:00",
+      "timeDisplay": "2:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004932:0/"
+    },
+    {
+      "title": "Trump Warns \u2018Lots Of Bombs\u2019 Will Start Going Off If Iran Ceasefire Expires, Reveals What He Wants From Iranian Negotiators",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:29:47+00:00",
+      "timeDisplay": "2:29 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:b707c1675094b:0/"
+    },
+    {
+      "title": "US dollar drops as traders remain optimistic on Iran peace breakthrough",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T14:27:43+00:00",
+      "timeDisplay": "2:27 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4130EE:0-us-dollar-drops-as-traders-remain-optimistic-on-iran-peace-breakthrough/"
+    },
+    {
+      "title": "Inflation Data Should Help Keep Bank of Canada on Sidelines \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:21:00+00:00",
+      "timeDisplay": "2:21 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004838:0/"
+    },
+    {
+      "title": "Retreat from records with ceasefire at risk",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T14:20:13+00:00",
+      "timeDisplay": "2:20 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4130X3:0-retreat-from-records-with-ceasefire-at-risk/"
+    },
+    {
+      "title": "Energy Shock Not Seen Running Into Canadian Underlying Inflation \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:18:00+00:00",
+      "timeDisplay": "2:18 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004809:0/"
+    },
+    {
+      "title": "Bitmine buys 101,627 ETH in largest purchase since December 2025",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:15:12+00:00",
+      "timeDisplay": "2:15 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3e8d50c34094b:0-bitmine-buys-101-627-eth-in-largest-purchase-since-december-2025/"
+    },
+    {
+      "title": "10-Year Treasury Yield Little Changed at One-Month Lows",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:12:27+00:00",
+      "timeDisplay": "2:12 PM",
+      "link": "https://www.tradingview.com/news/te_news:543211:0-10-year-treasury-yield-little-changed-at-one-month-lows/"
+    },
+    {
+      "title": "Canadian Inflation Pass Through From Commodities Seen Modest \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T14:11:00+00:00",
+      "timeDisplay": "2:11 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004742:0/"
+    },
+    {
+      "title": "Dollar Pares Most Gains",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:55:50+00:00",
+      "timeDisplay": "1:55 PM",
+      "link": "https://www.tradingview.com/news/te_news:543206:0-dollar-pares-most-gains/"
+    },
+    {
+      "title": "Tom Lee says \u2018crypto winter is much closer to ending\u2019 as Bitmine buys another 101,627 ETH",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:55:00+00:00",
+      "timeDisplay": "1:55 PM",
+      "link": "https://www.tradingview.com/news/the_block:d9f99a58b094b:0-tom-lee-says-crypto-winter-is-much-closer-to-ending-as-bitmine-buys-another-101-627-eth/"
+    },
+    {
+      "title": "If Not For Iran, Talk in Canada Would Be Focused on Rates Cuts \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:40:00+00:00",
+      "timeDisplay": "1:40 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004490:0/"
+    },
+    {
+      "title": "Adam Back says current demand is \u2018almost\u2019 enough to send Bitcoin to $1M",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:20:00+00:00",
+      "timeDisplay": "1:20 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8cb26a7f2094b:0-adam-back-says-current-demand-is-almost-enough-to-send-bitcoin-to-1m/"
+    },
+    {
+      "title": "Crypto adoption shows signs of recovery",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T13:18:55+00:00",
+      "timeDisplay": "1:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4130WI:0-crypto-adoption-shows-signs-of-recovery/"
+    },
+    {
+      "title": "Hassett: Supply Constraints to Ease, Oil Seen Lower in Long Run \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:16:00+00:00",
+      "timeDisplay": "1:16 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004227:0/"
+    },
+    {
+      "title": "UK gas firm downplays bitcoin mining plans after report suggested pivot",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:15:08+00:00",
+      "timeDisplay": "1:15 PM",
+      "link": "https://www.tradingview.com/news/the_block:f20b0abe2094b:0-uk-gas-firm-downplays-bitcoin-mining-plans-after-report-suggested-pivot/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - Apr 20",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T13:12:00+00:00",
+      "timeDisplay": "1:12 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420004163:0/"
+    },
+    {
+      "title": "Records all around, but the Dow RSVP's 'No'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T13:05:13+00:00",
+      "timeDisplay": "1:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4130KJ:0-records-all-around-but-the-dow-rsvp-s-no/"
+    },
+    {
+      "title": "Canada CPI Excluding Gasoline Decelerates in March \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T12:58:00+00:00",
+      "timeDisplay": "12:58 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420003933:0/"
+    },
+    {
+      "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 4.976 Million Tokens, and Total Crypto and Total Cash Holdings of $12.9 Billion",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T12:57:35+00:00",
+      "timeDisplay": "12:57 PM",
+      "link": "https://www.tradingview.com/news/chainwire:6eaf8f48f094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-4-976-million-tokens-and-total-crypto-and-total-cash-holdings-of-12-9-billion/"
+    },
     {
       "title": "Bitmine Immersion Technologies (Bmnr) Announces Eth Holdings Reach 4.976 Million Tokens, And Total Crypto And Total Cash Holdings Of $12.9 Billion",
       "source": "reuters",
@@ -58,6 +213,14 @@
       "timestamp": "2026-04-20T12:56:46+00:00",
       "timeDisplay": "12:56 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUA77TC5J:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-4-976-million-tokens-and-total-crypto-and-total-cash-holdings-of-12-9-billion/"
+    },
+    {
+      "title": "Bitcoin holds \u2018fragile equilibrium\u2019 near $75K as ETF demand cushions crypto market despite Hormuz tensions: analysts",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T12:52:17+00:00",
+      "timeDisplay": "12:52 PM",
+      "link": "https://www.tradingview.com/news/the_block:5f84d8f85094b:0-bitcoin-holds-fragile-equilibrium-near-75k-as-etf-demand-cushions-crypto-market-despite-hormuz-tensions-analysts/"
     },
     {
       "title": "Tom Lee's BMNR Nears $13B After Year\u2019s Largest Ethereum Buy \u2013 Now Owns 4% Of All ETH",
@@ -98,14 +261,6 @@
       "timestamp": "2026-04-20T12:44:00+00:00",
       "timeDisplay": "12:44 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260420003802:0/"
-    },
-    {
-      "title": "Hassett Just Said Oil Will Go \u2018Down Down Down\u2019 \u2013 What\u2019s The Deal?",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T12:42:08+00:00",
-      "timeDisplay": "12:42 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:e58cba4e5094b:0/"
     },
     {
       "title": "Dollar's Gains Are Modest as FX Volatility is Low \u2014 Market Talk",
@@ -156,12 +311,20 @@
       "link": "https://www.tradingview.com/news/the_block:c1072d9c4094b:0-think-even-bigger-michael-saylor-s-strategy-buys-34-164-bitcoin-for-2-5-billion-as-total-holdings-top-800-000-btc/"
     },
     {
+      "title": "Top-Performing ETFs of Last Week ",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T12:00:00+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:7b9f5b309094b:0-top-performing-etfs-of-last-week/"
+    },
+    {
       "title": "Bitcoin Edges Higher as Investors Brush Aside Iran War Uncertainty \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-04-20T11:42:00+00:00",
       "timeDisplay": "11:42 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420002970:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260420002971:0/"
     },
     {
       "title": "Crypto Adoption Rises in U.S., Falls in U.K. in March: Deutsche Bank Survey \u2014 Market Talk",
@@ -169,7 +332,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-20T11:33:00+00:00",
       "timeDisplay": "11:33 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420002904:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260420002903:0/"
     },
     {
       "title": "Bitcoin ETFs log $996M inflows even as Iran tensions resurface",
@@ -244,15 +407,7 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4130KB:0-green-light-red-light/"
     },
     {
-      "title": "Why Strategy Stock Is Falling When Bitcoin Isn't \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T10:27:00+00:00",
-      "timeDisplay": "10:27 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420001430:0/"
-    },
-    {
-      "title": "BTC price due 'new highs:' Five things to know in Bitcoin this week",
+      "title": "BTC price due new highs: Five things to know in Bitcoin this week",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-04-20T10:18:21+00:00",
@@ -268,20 +423,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:29c3c82c3094b:0/"
     },
     {
-      "title": "Bitcoin Hodlers Add 10% as BTC Lines Up a Run to $90,000",
-      "source": "beincrypto",
+      "title": "5 Reasons Why Ethereum Could Hit $1,000: Top Trader Highlights DeFi Exploits and Weakening 'Bull Thesis'",
+      "source": "u_today",
       "color": "#00e5ff",
-      "timestamp": "2026-04-20T09:55:18+00:00",
-      "timeDisplay": "9:55 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:e7bd4c295094b:0-bitcoin-hodlers-add-10-as-btc-lines-up-a-run-to-90-000/"
-    },
-    {
-      "title": "What is Anthony Scaramucci\u2019s Reasoning Behind Bold $1M Bitcoin Prediction?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T09:50:11+00:00",
-      "timeDisplay": "9:50 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:1d1de2e28094b:0-what-is-anthony-scaramucci-s-reasoning-behind-bold-1m-bitcoin-prediction/"
+      "timestamp": "2026-04-20T09:41:00+00:00",
+      "timeDisplay": "9:41 AM",
+      "link": "https://www.tradingview.com/news/u_today:1eb2b0e32094b:0-5-reasons-why-ethereum-could-hit-1-000-top-trader-highlights-defi-exploits-and-weakening-bull-thesis/"
     },
     {
       "title": "U.S. Treasury Yields, Dollar Rise Slightly Amid Fresh Tension Over Hormuz \u2014 Market Talk",
@@ -290,14 +437,6 @@
       "timestamp": "2026-04-20T09:31:00+00:00",
       "timeDisplay": "9:31 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260420001632:0/"
-    },
-    {
-      "title": "Bitcoin Pulls Back Below $74K As Iran Tensions Rise Again",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T09:30:21+00:00",
-      "timeDisplay": "9:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:cdd477d72094b:0-bitcoin-pulls-back-below-74k-as-iran-tensions-rise-again/"
     },
     {
       "title": "HashKey Cloud Partners with EAG to Support the Ethereum Application Ecosystem through ETH Staking",
@@ -506,150 +645,6 @@
       "timestamp": "2026-04-20T02:19:24+00:00",
       "timeDisplay": "2:19 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300X:0-us-oil-may-fall-into-84-07-86-26-range-downtrend-intact/"
-    },
-    {
-      "title": "Strait of Hormuz Developments Cast 'Worrying Shadow' Over U.S.-Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T01:56:00+00:00",
-      "timeDisplay": "1:56 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260419000995:0/"
-    },
-    {
-      "title": "Dollar Advances on Middle East Escalation",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T01:55:00+00:00",
-      "timeDisplay": "1:55 AM",
-      "link": "https://www.tradingview.com/news/te_news:543008:0-dollar-advances-on-middle-east-escalation/"
-    },
-    {
-      "title": "Gold falls as renewed Hormuz disruption stokes inflation concern",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T01:52:54+00:00",
-      "timeDisplay": "1:52 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:4a6ea877f094b:0-gold-falls-as-renewed-hormuz-disruption-stokes-inflation-concern/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-20T01:46:00+00:00",
-      "timeDisplay": "1:46 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300M:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Dollar hits one-week high as Middle East tensions reignite",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-20T01:19:57+00:00",
-      "timeDisplay": "1:19 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N412072:0-dollar-hits-one-week-high-as-middle-east-tensions-reignite/"
-    },
-    {
-      "title": "Key facts: Ethereum Tops $2,385; $2,900 Target, Binance Netflow Low",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T00:03:07+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:6fbdda1434011:0-key-facts-ethereum-tops-2-385-2-900-target-binance-netflow-low/"
-    },
-    {
-      "title": "Oil Surges on Hormuz Escalations",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T23:56:48+00:00",
-      "timeDisplay": "11:56 PM",
-      "link": "https://www.tradingview.com/news/te_news:542969:0-oil-surges-on-hormuz-escalations/"
-    },
-    {
-      "title": "Gold, Silver Decline Amid Renewed Inflation Concerns \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T23:49:00+00:00",
-      "timeDisplay": "11:49 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260419000791:0/"
-    },
-    {
-      "title": "Gold Slides on Renewed Hormuz Tensions",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T23:37:43+00:00",
-      "timeDisplay": "11:37 PM",
-      "link": "https://www.tradingview.com/news/te_news:542966:0-gold-slides-on-renewed-hormuz-tensions/"
-    },
-    {
-      "title": "Oil Climbs on Renewed Tensions Over Strait of Hormuz \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T23:36:00+00:00",
-      "timeDisplay": "11:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260419000758:0/"
-    },
-    {
-      "title": "Spot Gold Falls 1.2%, Spot Silver Drops 1.6% on Renewed Middle East Tensions",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T23:12:00+00:00",
-      "timeDisplay": "11:12 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260419000736_20260419000736:0/"
-    },
-    {
-      "title": "Dollar rebounds as Middle East tensions reignite, Hormuz closed",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-19T22:36:10+00:00",
-      "timeDisplay": "10:36 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N412084:0-dollar-rebounds-as-middle-east-tensions-reignite-hormuz-closed/"
-    },
-    {
-      "title": "WTI Crude Oil 7% Higher",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T22:13:41+00:00",
-      "timeDisplay": "10:13 PM",
-      "link": "https://www.tradingview.com/news/te_news:542956:0-wti-crude-oil-7-higher/"
-    },
-    {
-      "title": "Oil jumps and stock futures slip as Iran tensions unsettle markets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-19T22:12:51+00:00",
-      "timeDisplay": "10:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41208S:0-oil-jumps-and-stock-futures-slip-as-iran-tensions-unsettle-markets/"
-    },
-    {
-      "title": "Oil prices rebound 7% as Strait of Hormuz is closed again",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-19T22:05:11+00:00",
-      "timeDisplay": "10:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41206N:0-oil-prices-rebound-7-as-strait-of-hormuz-is-closed-again/"
-    },
-    {
-      "title": "PRES TRUMP POSTS IRANIAN SHIP TAKEN INTO US CUSTODY UNDER FIRE; VP VANCE, KUSHNER, WITKOFF TO PAKISTAN BUT UNSURE IRAN WILL SHOW UP FOR MEETING",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T20:22:00+00:00",
-      "timeDisplay": "8:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:c8286e630094b:0-pres-trump-posts-iranian-ship-taken-into-us-custody-under-fire-vp-vance-kushner-witkoff-to-pakistan-but-unsure-iran-will-show-up-for-meeting/"
-    },
-    {
-      "title": "Ethereum Flips Key Resistance, ETF Demand Returns, Analysts Eye Next Leg Higher",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T18:00:17+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:acbe10895094b:0-ethereum-flips-key-resistance-etf-demand-returns-analysts-eye-next-leg-higher/"
-    },
-    {
-      "title": "'All Banks Will Use Ethereum,' Pro-Crypto Lawyer Sparks Debate",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T13:56:00+00:00",
-      "timeDisplay": "1:56 PM",
-      "link": "https://www.tradingview.com/news/u_today:86cd54f85094b:0-all-banks-will-use-ethereum-pro-crypto-lawyer-sparks-debate/"
     }
   ]
 }

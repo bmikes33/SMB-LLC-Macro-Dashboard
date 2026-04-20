@@ -2,6 +2,68 @@
   "reports": [
     {
       "type": "ta",
+      "file": "BMNR_2026-04-20_1300.html",
+      "ticker": "BMNR",
+      "tvSymbol": "NYSE:BMNR",
+      "date": "2026-04-20T13:00:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 5,
+      "bearScore": 1,
+      "scoreMax": 6,
+      "invalidation": "$20.50 short-term / $18.00 structural",
+      "entryZone": "$20.75–$21.50",
+      "exitZone": "$24.00–$25.00",
+      "levels": [
+        {
+          "weight": "HEAVY",
+          "price": "$25.00",
+          "sources": "$25 call wall OI 11,249 (biggest on chain) + upper expected move + round #"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$24.00",
+          "sources": "$24 call wall OI 9,410 + upper VWAP band + weekly/daily resistance"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$23.00–23.50",
+          "sources": "$23/$23.50 call OI stack + recent daily swing highs + 4H horizontal"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$22.36",
+          "sources": "Regular session — at 30M VWAP mid + 30M 50 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$22.00",
+          "sources": "$22 put OI 2,266 + $22 call OI 4,750 (max-pain zone) + round #"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$20.75–21.00",
+          "sources": "Daily 50 SMA (20.64) + daily VWAP mid + 4H 50 SMA (21.01) + $21 put OI 2,174 — 4-tool stack"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$20.00",
+          "sources": "$20 put OI 3,365 + round # + Mar horizontal + VPVR HVN edge"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$19.00–19.50",
+          "sources": "$19 put OI 2,866 + weekly 200 SMA proximate (19.93) + VPVR HVN"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$18.00",
+          "sources": "$18 put wall OI 9,214 (massive) + recent swing low + structural invalidation"
+        }
+      ]
+    },
+    {
+      "type": "ta",
       "file": "META_2026-04-20_0146.html",
       "ticker": "META",
       "tvSymbol": "NASDAQ:META",

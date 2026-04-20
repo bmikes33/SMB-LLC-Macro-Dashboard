@@ -1,0 +1,32 @@
+{
+  "type": "ta",
+  "file": "META_2026-04-20_0146.html",
+  "ticker": "META",
+  "tvSymbol": "NASDAQ:META",
+  "date": "2026-04-20T01:46:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 5,
+  "bearScore": 1,
+  "scoreMax": 6,
+  "invalidation": "$670 short-term / $638 structural",
+  "entryZone": "$670–675 tactical · $638–650 structural",
+  "exitZone": "$700–703 first · $716 stretch · $741 weekly band",
+  "levels": [
+    { "weight": "HEAVY",   "price": "$788",      "sources": "Weekly swing high · 1.0 Fib" },
+    { "weight": "HEAVY",   "price": "$741",      "sources": "Weekly RVWAP upper band (+2.5σ)" },
+    { "weight": "MEDIUM",  "price": "$717",      "sources": "4H RVWAP upper band" },
+    { "weight": "HEAVY",   "price": "$700–703",  "sources": "Call wall $700 (4,026 OI) + Daily RVWAP upper band + round number" },
+    { "weight": "MEDIUM",  "price": "$694",      "sources": "30m RVWAP upper band" },
+    { "weight": "MEDIUM",  "price": "$690",      "sources": "Secondary call wall (3,165 OI)" },
+    { "weight": "CURRENT", "price": "$688.55",   "sources": "Regular session close" },
+    { "weight": "CURRENT", "price": "$680.46",   "sources": "Options chain reference snapshot" },
+    { "weight": "HEAVY",   "price": "$681",      "sources": "Daily 200 SMA (just reclaimed) + weekly 0.786 Fib proximity" },
+    { "weight": "MEDIUM",  "price": "$660",      "sources": "Largest put OI (715) — modest put wall" },
+    { "weight": "HEAVY",   "price": "$638",      "sources": "Weekly 0.786 Fib + weekly RVWAP center" },
+    { "weight": "MEDIUM",  "price": "$636",      "sources": "4H RVWAP center + 4H 200 SMA proximity" },
+    { "weight": "HEAVY",   "price": "$630",      "sources": "Daily 50 SMA (major anchor)" },
+    { "weight": "MEDIUM",  "price": "$541",      "sources": "Weekly RVWAP lower band (−2.5σ)" },
+    { "weight": "HEAVY",   "price": "$521",      "sources": "Weekly 0.618 Fib (recent low held here)" }
+  ]
+}

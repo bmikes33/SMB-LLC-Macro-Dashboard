@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>META | TA Report | 2026-04-20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0e17;
+    color: #e2e8f0;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 28px 36px 60px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid #1e2a3a;
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+  }
+  header .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #00e5ff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    font-weight: 700;
+    color: #e2e8f0;
+    letter-spacing: 1px;
+  }
+  header h1 .ticker { color: #00e5ff; }
+  header .meta-row {
+    margin-top: 10px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #8b9ab5;
+  }
+  header .meta-row span strong { color: #e2e8f0; margin-left: 6px; }
+
+  /* Section headers */
+  h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00e5ff;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-top: 32px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #1e2a3a;
+  }
+  h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: #8b9ab5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14px;
+    background: #0f1420;
+    border: 1px solid #1e2a3a;
+    font-size: 13px;
+  }
+  th {
+    background: #141926;
+    color: #8b9ab5;
+    text-align: left;
+    padding: 9px 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #1e2a3a;
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #1e2a3a;
+    vertical-align: top;
+  }
+  td.num, td.price { font-family: 'JetBrains Mono', monospace; }
+  tr:last-child td { border-bottom: none; }
+
+  /* Row tints */
+  tr.heavy { background: rgba(255, 61, 87, 0.08); }
+  tr.heavy td.price { color: #ff3d57; font-weight: 700; }
+  tr.medium { background: rgba(255, 171, 0, 0.06); }
+  tr.medium td.price { color: #ffab00; }
+  tr.light td.price { color: #8b9ab5; }
+  tr.current { background: rgba(0, 229, 255, 0.07); }
+  tr.current td.price { color: #00e5ff; font-weight: 700; }
+  tr.tier1 { background: rgba(0, 230, 118, 0.08); }
+  tr.tier1 td.price { color: #00e676; font-weight: 600; }
+  tr.tier2 { background: rgba(255, 171, 0, 0.05); }
+  tr.tier2 td.price { color: #ffab00; }
+  tr.avoid { background: rgba(255, 61, 87, 0.06); }
+  tr.avoid td.price { color: #ff3d57; }
+
+  /* Weight pills */
+  .pill {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .pill.heavy { background: #ff3d57; color: #0a0e17; }
+  .pill.medium { background: #ffab00; color: #0a0e17; }
+  .pill.light { background: #4a5976; color: #e2e8f0; }
+  .pill.current { background: #00e5ff; color: #0a0e17; }
+  .pill.tier1 { background: #00e676; color: #0a0e17; }
+  .pill.tier2 { background: #ffab00; color: #0a0e17; }
+  .pill.avoid { background: #ff3d57; color: #0a0e17; }
+  .pill.bull { background: #00e676; color: #0a0e17; }
+  .pill.bear { background: #ff3d57; color: #0a0e17; }
+  .pill.neutral { background: #4a5976; color: #e2e8f0; }
+
+  /* Bias banner */
+  .banner {
+    background: linear-gradient(90deg, rgba(255,171,0,0.08) 0%, rgba(255,171,0,0.02) 100%);
+    border-left: 3px solid #ffab00;
+    padding: 14px 18px;
+    margin: 8px 0 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+  }
+  .banner .label {
+    font-size: 10px;
+    color: #8b9ab5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .banner .value { font-size: 18px; font-weight: 600; color: #ffab00; }
+
+  /* Bullets */
+  ul { list-style: none; padding-left: 0; }
+  ul li {
+    padding-left: 18px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  ul li::before {
+    content: "▸";
+    color: #00e5ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+  }
+  ul li strong {
+    color: #e2e8f0;
+    font-weight: 600;
+  }
+
+  /* Prose */
+  p { margin-bottom: 12px; color: #c9d3e4; }
+  p.note {
+    background: #0f1420;
+    border-left: 2px solid #4a5976;
+    padding: 10px 14px;
+    color: #8b9ab5;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid #1e2a3a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #4a5976;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="tag">SMB LLC · Technical Analysis Report</div>
+  <h1><span class="ticker">META</span> · Meta Platforms, Inc.</h1>
+  <div class="meta-row">
+    <span>TIMEFRAMES <strong>W / D / 4H / 30M</strong></span>
+    <span>AS OF <strong>2026-04-20 01:46 CT</strong></span>
+    <span>LAST CLOSE <strong>$688.55</strong></span>
+    <span>OPTIONS REF <strong>$680.46</strong></span>
+    <span>BIAS <strong style="color:#ffab00">LONG — TACTICAL, DO NOT CHASE</strong></span>
+    <span>FINAL CONFIDENCE <strong style="color:#ffab00">MEDIUM</strong></span>
+  </div>
+</header>
+
+<!-- ================ SECTION 1: DECISION SUMMARY ================ -->
+<h2>1 · Decision Summary</h2>
+
+<div class="banner">
+  <span class="label">Headline</span>
+  <span class="value">Long-term weekly uptrend intact · tactical reclaim of daily 200 SMA + weekly 0.786 Fib · now pressing the $700 call wall</span>
+</div>
+
+<h3>1A · Executive Summary</h3>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Bias</td><td><span class="pill neutral">LONG — TACTICAL</span> (existing longs: trail stops; fresh longs: wait for pullback)</td></tr>
+  <tr><td>Final Confidence</td><td><span class="pill medium">MEDIUM</span></td></tr>
+  <tr><td>Tool Agreement</td><td class="mono">5 / 6 bull · 1 / 6 bear · <strong>83%</strong></td></tr>
+  <tr><td>Invalidation</td><td class="mono"><strong>$670</strong> short-term (30m structure) · <strong>$638</strong> structural (weekly 0.786 Fib + W-VWAP center)</td></tr>
+  <tr><td>Entry Zone</td><td class="mono">$670–675 tactical pullback · <strong>$638–650 ideal structural</strong></td></tr>
+  <tr><td>Exit Zone</td><td class="mono">$700–703 (call wall + D-VWAP upper band) · $716 stretch · $741 weekly upper band</td></tr>
+  <tr><td>Macro Watch</td><td class="mono">Flash PMIs Thu Apr 23 (MED) · Durable Goods + Mich. Final Fri Apr 24 (LOW-MED) · <strong>META earnings Wed Apr 29 AMC (outside expiry)</strong></td></tr>
+</table>
+
+<h3>1B · Key Levels</h3>
+<table>
+  <tr><th>Weight</th><th style="width:110px">Price</th><th>Sources</th></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$788.24</td><td>Weekly swing high · 1.0 Fib (far above, reference only)</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$741.50</td><td>Weekly RVWAP upper band (+2.5σ)</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$716.60</td><td>4H RVWAP upper band</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$700–703</td><td><strong>Call wall $700 (4,026 OI)</strong> + Daily RVWAP upper band $703.27 + psychological — prime reaction zone</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$693.84</td><td>30m RVWAP upper band</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$690</td><td>Secondary call wall (3,165 OI)</td></tr>
+  <tr class="current"><td><span class="pill current">CURRENT</span></td><td class="price">$688.55</td><td>Regular session close (Fri Apr 17)</td></tr>
+  <tr class="current"><td><span class="pill current">CURRENT</span></td><td class="price">$680.46</td><td>Options chain reference snapshot</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$682.93</td><td>30m RVWAP center · price-pivot</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$681.26</td><td><strong>Daily 200 SMA</strong> (just reclaimed) + weekly 0.786 Fib proximity — primary structural floor near-term</td></tr>
+  <tr class="light"><td><span class="pill light">LIGHT</span></td><td class="price">$673.91</td><td>30m 50 SMA</td></tr>
+  <tr class="light"><td><span class="pill light">LIGHT</span></td><td class="price">$672.02</td><td>30m RVWAP lower band</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$660</td><td>Largest put OI (715) — modest put wall; call OI also present at $670 (2,515)</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$638.58</td><td><strong>Weekly 0.786 Fib</strong> + weekly RVWAP center $641.18 proximity — structural support</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$636.38</td><td>4H RVWAP center + 4H 200 SMA ($634.29) proximity</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$629.85</td><td><strong>Daily 50 SMA</strong> (major anchor — reclaimed on the rally)</td></tr>
+  <tr class="light"><td><span class="pill light">LIGHT</span></td><td class="price">$606.66</td><td>4H 50 SMA + 30m 200 SMA ($606.30) proximity</td></tr>
+  <tr class="light"><td><span class="pill light">LIGHT</span></td><td class="price">$595.82</td><td>Daily RVWAP center</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$556.14</td><td>4H RVWAP lower band</td></tr>
+  <tr class="medium"><td><span class="pill medium">MEDIUM</span></td><td class="price">$540.86</td><td>Weekly RVWAP lower band (−2.5σ)</td></tr>
+  <tr class="heavy"><td><span class="pill heavy">HEAVY</span></td><td class="price">$521.09</td><td><strong>Weekly 0.618 Fib</strong> — recent low held here (structural bull confirmation)</td></tr>
+</table>
+
+<h3>1C · CSP Strike Zones (Apr 24 expiry · 4 DTE · IV 33.76%)</h3>
+<table>
+  <tr><th>Tier</th><th style="width:140px">Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+  <tr class="tier1">
+    <td><span class="pill tier1">TIER 1</span></td>
+    <td class="price">$637.50–640</td>
+    <td>Weekly 0.786 Fib + W-VWAP center — HEAVY structural</td>
+    <td class="mono">Δ ≈ −0.06 to −0.07 · bid $0.86–$0.96 · safest cost basis if assigned; thin premium</td>
+  </tr>
+  <tr class="tier1">
+    <td><span class="pill tier1">TIER 1</span></td>
+    <td class="price">$650</td>
+    <td>Single put OI (595) + below daily 50 SMA ($629) adjacency</td>
+    <td class="mono">Δ ≈ −0.11 · bid $1.56 · 5.5% below spot · below implied ±1σ move ($651)</td>
+  </tr>
+  <tr class="tier2">
+    <td><span class="pill tier2">TIER 2</span></td>
+    <td class="price">$660</td>
+    <td>Largest put OI (715) — modest put wall; no technical stack directly here</td>
+    <td class="mono">Δ ≈ −0.18 · bid $2.66 · MEDIUM confidence floor; take only if assignment at $660 cost basis is acceptable</td>
+  </tr>
+  <tr class="tier2">
+    <td><span class="pill tier2">TIER 2</span></td>
+    <td class="price">$665–670</td>
+    <td>30m RVWAP lower band ($672) + put OI $665 (295) / $670 (678)</td>
+    <td class="mono">Δ ≈ −0.22 to −0.27 · bid $3.50–$4.55 · aggressive; thin structural cushion to $660</td>
+  </tr>
+  <tr class="avoid">
+    <td><span class="pill avoid">AVOID</span></td>
+    <td class="price">$675–687.50</td>
+    <td>—</td>
+    <td class="mono">ATM / near-money — effectively synthetic-long exposure, not a CSP structure</td>
+  </tr>
+  <tr class="avoid">
+    <td><span class="pill avoid">AVOID</span></td>
+    <td class="price">$645–657.50</td>
+    <td>—</td>
+    <td class="mono">LVN-like zone between $660 put-OI cluster and $640 structural — thin confluence, premium not compensating</td>
+  </tr>
+</table>
+
+<h3>Strike Selection Notes</h3>
+<p>At MEDIUM Final Confidence with price pressing a HEAVY resistance zone and 4H RSI at 76, <strong>Tier 1 is the defensible posture.</strong> The $637.50–$640 strike zone is the strongest structural floor on the board — weekly 0.786 Fib + weekly VWAP center — and sits well below the implied ±1σ move of $651. Assignment there would put shares at the most defended price on the chart.</p>
+<p>Tier 2 ($660 and above) collects meaningfully more premium but has significantly thinner structural cushion; the $660 put wall is modest (715 OI) and there is no technical stack between $660 and the $638 zone. If price rejects from $700 and starts working lower, Tier 2 strikes assume quickly.</p>
+<p><strong>IV context:</strong> 33.76% on a 4DTE is elevated — the market is pricing pre-earnings uncertainty even though Apr 24 expiry clears Apr 29 earnings. This is favorable for put sellers: elevated premium, but no earnings gap inside the contract window. Avoid rolling into May expiries which contain earnings.</p>
+
+<!-- ================ SECTION 2: CONFIDENCE BREAKDOWN ================ -->
+<h2>2 · Confidence Breakdown</h2>
+
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr>
+    <td>TA Confidence</td>
+    <td><span class="pill medium">MEDIUM</span> — 2+ structure tools aligned (daily 200 SMA reclaim, weekly 0.786 Fib reclaim, weekly uptrend intact), MACD confirming bull, but price pinned against HEAVY $700 resistance confluence with daily 50-below-200 death-cross still in effect</td>
+  </tr>
+  <tr><td>Fundamental Context</td><td>Not provided — skipped</td></tr>
+  <tr><td>Fundamental Modifier</td><td>Not applied</td></tr>
+  <tr><td>Macro Calendar</td><td class="mono">Apr 23 Flash PMIs (MED) · Apr 24 Durable Goods + Mich Final (LOW-MED) · Apr 29 META earnings AMC (outside expiry)</td></tr>
+  <tr><td>Macro Modifier</td><td>No cap — earnings outside expiry; no HIGH-impact macro inside horizon. Note: forward IV into May expiries will include earnings binary risk</td></tr>
+  <tr><td><strong>Final Confidence</strong></td><td><span class="pill medium">MEDIUM</span></td></tr>
+</table>
+
+<h3>Tool Agreement (6-Tool Score · Daily TF basis)</h3>
+<table>
+  <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+  <tr><td>1</td><td>VWAP slope (daily)</td><td class="mono">Rising — curled up off recent low</td><td><span class="pill bull">BULL</span></td></tr>
+  <tr><td>2</td><td>Price vs VWAP line (daily)</td><td class="mono">$688 vs $595.82 — price well above</td><td><span class="pill bull">BULL</span></td></tr>
+  <tr><td>3</td><td>50 SMA vs 200 SMA (daily)</td><td class="mono">$629.85 vs $681.26 — 50 still below 200 (active death cross)</td><td><span class="pill bear">BEAR</span></td></tr>
+  <tr><td>4</td><td>RSI vs 50 midline (daily)</td><td class="mono">69.80, rising — approaching overbought</td><td><span class="pill bull">BULL</span></td></tr>
+  <tr><td>5</td><td>MACD zero line (daily)</td><td class="mono">14.25 above zero, above signal line</td><td><span class="pill bull">BULL</span></td></tr>
+  <tr><td>6</td><td>HTF alignment (W + D)</td><td class="mono">Weekly bullish engulfing +9.32%, daily rising</td><td><span class="pill bull">BULL</span></td></tr>
+</table>
+
+<p class="note">5 of 6 bull votes. The single bear vote (daily 50/200 death cross) is a real structural drag — it keeps this from being HIGH confidence. Price reclaimed 200 SMA before the moving averages re-crossed, which is the classic "early in a recovery" signature. If the daily 50 curls up and re-crosses 200, TA confidence upgrades to HIGH.</p>
+
+<!-- ================ SECTION 3: SUPPORTING ANALYSIS ================ -->
+<h2>3 · Supporting Analysis</h2>
+
+<h3>3A · Higher Timeframe Context</h3>
+<ul>
+  <li><strong>Weekly:</strong> Uptrend intact from 2023. Major correction off $788 swing high tested and held the <strong>0.618 weekly Fib at $521.09</strong> — that is the structural bull confirmation. The most recent weekly candle closed +9.32% ($688.55), reclaiming both the 50 SMA ($675.86) and the 0.786 weekly Fib ($638.58). Weekly MACD has a fresh bullish crossover; weekly RSI at 55 with rising MA. Weekly 50 SMA above 200 SMA ($444.86) — long-term structure bullish. Active Fib anchors: swing high $788.24 to swing low zone; key retracements 0.786 $638, 0.618 $521, 0.5 $438.</li>
+  <li><strong>Daily:</strong> Strong V-reversal from the April low near $525. Price has reclaimed the 50 SMA ($629.85) and — critically — just reclaimed the <strong>200 SMA ($681.26)</strong> on the rally. Price is now sitting near the upper daily RVWAP band ($703.27) — approaching a statistically rare +2.5σ extension. Daily RSI 69.80 with rising MA, daily MACD positive and above signal. <strong>The structural flag: daily 50 SMA is still below daily 200 SMA — the death cross from the correction has not resolved.</strong> Price is ahead of the moving-average structure.</li>
+</ul>
+
+<h3>3B · Current Timeframe Read</h3>
+<ul>
+  <li><strong>Regime:</strong> Trending up across all four timeframes; strongest trend on 4H and daily. 30m showing first signs of compression/deceleration at highs.</li>
+  <li><strong>VWAP:</strong> Weekly, daily, and 4H RVWAP slopes all rising. Price is near the <strong>daily upper RVWAP band ($703)</strong> — statistical extension territory. 30m RVWAP bands narrowing.</li>
+  <li><strong>MAs:</strong> Weekly 50 above 200 (bull structure). <strong>Daily 50 below 200</strong> (death cross still active). 4H 50 above 200 (recovered). 30m 50 above 200.</li>
+  <li><strong>Momentum:</strong> Daily RSI 69.80 (rising but near overbought). <strong>4H RSI 76.44 — clearly overbought.</strong> 30m RSI 68.64, with 30m MACD showing the line slipping below signal — short-term momentum cooling. MACD zero-line positive on daily and 4H.</li>
+  <li><strong>Fib reference (HTF):</strong> Weekly 0.786 at $638.58 (reclaimed, now support), weekly 0.618 at $521.09 (structural low defense), weekly 1.0 at $788.24 (ultimate upside reference).</li>
+</ul>
+
+<h3>3C · Confluence Zones</h3>
+<p><strong>Primary resistance at $700–703 is a HEAVY zone:</strong> the $700 call wall (4,026 OI) stacks directly with the daily RVWAP upper band at $703.27 and round-number psychology. Dealers short the $700 calls will hedge by selling into strength as price approaches — expect supply here. The $716 4H upper band is the next upside reference if $700 clears on volume, and $741 is the weekly upper band beyond that.</p>
+<p><strong>Primary near-term support at $681 is HEAVY:</strong> the daily 200 SMA ($681.26) is the single most respected level in liquid equities — a clean reclaim is the entire bull case. Losing it re-opens the door to the $638 structural zone.</p>
+<p><strong>Primary structural support at $629–641 is HEAVY:</strong> daily 50 SMA at $629.85, 4H RVWAP center at $636.38, 4H 200 SMA at $634.29, weekly RVWAP center at $641.18, and weekly 0.786 Fib at $638.58 all cluster inside a $12 band. If price pulls back to this zone and holds, it's an A+ entry for continuation.</p>
+
+<h3>3D · Divergences</h3>
+<p>No clean RSI or MACD divergence on the weekly or daily at the current read — momentum is confirming price. The 4H RSI at 76 without a higher high in price yet is a mild early signal to watch; if META pushes to $695–700 on a lower 4H RSI print, that would be a proper bearish divergence at the HEAVY resistance zone and would argue for a reject.</p>
+
+<h3>3E · Notes</h3>
+<p><strong>Multi-timeframe alignment:</strong> Weekly and daily are both bullish — this is the primary tailwind. But the tension is short-term overbought meeting HEAVY resistance. The clean read: trend up, but the reward-to-risk on fresh entries at $688 is poor. Either wait for a pullback to $670–675 (tactical) or to $638–650 (structural), or let price close above $703 on volume (breakout confirmation — the skill's two-day confirmation rule applies here).</p>
+<p><strong>Options/gamma context:</strong> The call OI profile is heavily dominated above $680 ($700 > $690 > $680 > $670 > $675 all stacked 2K–4K OI) vs. sparse put OI (largest $660 at 715). Max pain for Apr 24 likely sits in the $670–680 range; magnetic pull toward max pain into Friday close is a realistic pin. Above $685–690, dealer gamma positioning turns more negative — dealer hedging buys on rallies, which explains the sharpness of this recovery but also sets up for reflexive unwind if price rejects from $700.</p>
+<p><strong>Macro / event path:</strong> Light economic calendar this week. Thursday Flash PMIs are MEDIUM impact and can move mega-cap tech on growth-leading data. META earnings Apr 29 AMC sits <em>outside</em> the Apr 24 expiry — CSPs at this expiry are clean from a binary-event standpoint, and the elevated 33.76% IV reflects pre-earnings premium that benefits put sellers without taking the earnings risk. FOMC Apr 28–29 is also outside the expiry.</p>
+<p><strong>Volume:</strong> Weekly volume on the +9.32% candle is above the 20-week average — recovery is being supported by participation, not a thin-tape squeeze. Daily volume on the reclaim of $681 also printed above average.</p>
+
+<!-- ================ SECTION 4: OPTIONS DETAIL ================ -->
+<h2>4 · Options Chain Detail</h2>
+
+<ul>
+  <li><strong>Source:</strong> User-provided screenshot (primary)</li>
+  <li><strong>Expiry:</strong> Friday, April 24, 2026 — 4 DTE</li>
+  <li><strong>IV (ATM):</strong> 33.76% · Implied ±1σ move: <strong>±$29.10</strong> (range ≈ $651–$710)</li>
+  <li><strong>Call wall:</strong> <strong>$700 (4,026 OI)</strong> — dominant resistance</li>
+  <li><strong>Secondary call clusters:</strong> $690 (3,165), $680 (3,576), $670 (2,515), $675 (2,182), $682.50 (1,674), $695 (1,820), $710 (1,858)</li>
+  <li><strong>Put wall:</strong> <strong>$660 (715 OI)</strong> — modest put wall (call-heavy chain overall)</li>
+  <li><strong>Secondary put clusters:</strong> $670 (678), $650 (595), $640 (535), $655 (532), $645 (344), $665 (295)</li>
+  <li><strong>Max pain estimate:</strong> ~$670–$680 zone (call OI dominance above spot pulls max pain below spot)</li>
+  <li><strong>Notable:</strong> Call OI dominance above $680 sets up a negative-gamma dealer regime between $685–$710 — reflexive hedging can amplify moves in both directions inside that window. The $700 strike is the pin magnet for any Friday close near that level.</li>
+</ul>
+
+<footer>SMB LLC · Macro Research Dashboard · Generated 2026-04-20 · CSP-structuring edition</footer>
+
+</body>
+</html>

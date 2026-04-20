@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMNR — TA Report — 2026-04-20</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-1:#0a0e17; --bg-2:#0f1420; --bg-3:#141926;
+    --text-1:#e2e8f0; --text-2:#8b9ab5; --text-3:#4a5976;
+    --border:#1e2a3a;
+    --cyan:#00e5ff; --green:#00e676; --red:#ff3d57; --amber:#ffab00;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    --sans:'IBM Plex Sans', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg-1);color:var(--text-1);font-family:var(--sans);line-height:1.55;font-size:14px}
+  .container{max-width:1100px;margin:0 auto;padding:28px 24px 64px}
+
+  /* Header */
+  .header{border:1px solid var(--border);background:var(--bg-2);padding:20px 24px;margin-bottom:24px;border-left:3px solid var(--cyan)}
+  .header .ticker-line{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .ticker{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--cyan);letter-spacing:1px}
+  .exchange{font-family:var(--mono);font-size:12px;color:var(--text-3);letter-spacing:1px}
+  .timeframes{font-family:var(--mono);font-size:11px;color:var(--text-2);letter-spacing:1.5px;text-transform:uppercase}
+  .timestamp{font-family:var(--mono);font-size:11px;color:var(--text-3);margin-top:6px}
+  .header-meta{display:flex;gap:24px;margin-top:12px;flex-wrap:wrap}
+  .meta-item{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase}
+  .meta-item .label{color:var(--text-3);margin-right:8px}
+  .meta-item .val{color:var(--text-1);font-weight:700}
+  .meta-item .val.long{color:var(--green)}
+  .meta-item .val.short{color:var(--red)}
+  .meta-item .val.neutral{color:var(--amber)}
+  .meta-item .val.med{color:var(--amber)}
+
+  /* Section */
+  h2{font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:2.5px;text-transform:uppercase;margin:36px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border);font-weight:500}
+  h3{font-family:var(--mono);font-size:11px;color:var(--text-2);letter-spacing:1.5px;text-transform:uppercase;margin:22px 0 10px;font-weight:500}
+  p{margin:8px 0 12px;color:var(--text-1)}
+  ul{margin:8px 0 14px;padding-left:18px}
+  li{margin:4px 0;color:var(--text-1)}
+  li strong{color:var(--text-1)}
+  .muted{color:var(--text-2)}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;background:var(--bg-2);border:1px solid var(--border);margin:10px 0 16px;font-size:13px}
+  th{background:var(--bg-3);color:var(--text-2);text-align:left;padding:10px 12px;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--border)}
+  td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text-1);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.mono{font-family:var(--mono)}
+  td.price{font-family:var(--mono);font-weight:600}
+
+  /* Row tints */
+  tr.heavy td{background:rgba(255,61,87,0.07)}
+  tr.heavy td.weight{color:var(--red);font-weight:700}
+  tr.heavy td.price{color:var(--red);font-weight:700}
+  tr.heavy-support td{background:rgba(0,230,118,0.07)}
+  tr.heavy-support td.weight{color:var(--green);font-weight:700}
+  tr.heavy-support td.price{color:var(--green);font-weight:700}
+  tr.medium td{background:rgba(255,171,0,0.05)}
+  tr.medium td.weight{color:var(--amber);font-weight:600}
+  tr.tier1 td{background:rgba(0,230,118,0.08)}
+  tr.tier1 td.tier{color:var(--green);font-weight:700}
+  tr.tier2 td{background:rgba(255,171,0,0.06)}
+  tr.tier2 td.tier{color:var(--amber);font-weight:700}
+  tr.avoid td{background:rgba(255,61,87,0.07)}
+  tr.avoid td.tier{color:var(--red);font-weight:700}
+  tr.current td{background:rgba(0,229,255,0.08)}
+  tr.current td.weight{color:var(--cyan);font-weight:700}
+  tr.current td.price{color:var(--cyan);font-weight:700}
+
+  /* Confidence cell */
+  .final-row td{background:var(--bg-3);font-weight:600}
+  .final-row td:last-child{color:var(--amber)}
+
+  /* Callouts */
+  .callout{border:1px solid var(--border);background:var(--bg-2);padding:14px 16px;margin:14px 0;border-left:3px solid var(--amber);font-size:13px}
+  .callout.warn{border-left-color:var(--red)}
+  .callout.good{border-left-color:var(--green)}
+  .callout.info{border-left-color:var(--cyan)}
+  .callout .tag{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:4px}
+  .callout.warn .tag{color:var(--red)}
+  .callout.good .tag{color:var(--green)}
+  .callout.info .tag{color:var(--cyan)}
+
+  /* Footer */
+  .footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--text-3);text-align:center;text-transform:uppercase}
+
+  strong{color:var(--text-1);font-weight:600}
+  .kbd{font-family:var(--mono);background:var(--bg-3);padding:1px 6px;border:1px solid var(--border);border-radius:2px;font-size:12px;color:var(--cyan)}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="ticker-line">
+      <span class="ticker">BMNR</span>
+      <span class="exchange">NYSE · BITMINE IMMERSION TECHNOLOGIES</span>
+    </div>
+    <div class="timeframes">Timeframes: Weekly / Daily / 4H / 30M · Options: 4/24 chain · Spot: $22.36</div>
+    <div class="timestamp">Generated: 2026-04-20 13:00 CDT</div>
+    <div class="header-meta">
+      <div class="meta-item"><span class="label">Bias</span><span class="val long">LONG tactical</span></div>
+      <div class="meta-item"><span class="label">Final Confidence</span><span class="val med">MEDIUM</span></div>
+      <div class="meta-item"><span class="label">Tool Agreement</span><span class="val">5/6 bull · 1/6 bear (83%)</span></div>
+      <div class="meta-item"><span class="label">Horizon</span><span class="val">4/24 expiry · swing 2-3 wk</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: DECISION SUMMARY -->
+  <h2>1 · Decision Summary</h2>
+
+  <h3>1A · Executive Summary</h3>
+  <table>
+    <tr><th>Field</th><th>Value</th></tr>
+    <tr><td>Bias</td><td><strong style="color:var(--green)">LONG tactical</strong> — daily breakout holding, capped by $24-25 overhead supply</td></tr>
+    <tr><td>Final Confidence</td><td><strong style="color:var(--amber)">MEDIUM</strong> (Fib absence cap + HTF dissonance)</td></tr>
+    <tr><td>Tool Agreement</td><td>5/6 bull · 1/6 bear (83%)</td></tr>
+    <tr><td>Invalidation</td><td class="mono"><strong>$20.50 short-term</strong> / <strong>$18.00 structural</strong></td></tr>
+    <tr><td>Entry Zone</td><td class="mono"><strong>$20.75–$21.50</strong> (50 SMA + VWAP mid + $21 put OI)</td></tr>
+    <tr><td>Exit Zone</td><td class="mono"><strong>$24.00–$25.00</strong> (upper VWAP + $24/$25 call wall stack)</td></tr>
+    <tr><td>Macro Watch</td><td><strong>Warsh testimony Tue 4/21</strong> (HIGH-impact, rate-sensitive adj); <strong>FOMC 4/28-29</strong> outside 4/24 expiry</td></tr>
+  </table>
+
+  <h3>1B · Key Levels</h3>
+  <table>
+    <tr><th style="width:80px">Weight</th><th style="width:110px">Price</th><th>Sources</th></tr>
+    <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$25.00</td><td>$25 call wall (OI 11,249 — biggest wall on chain) + upper edge of expected move band + round-number magnet</td></tr>
+    <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$24.00</td><td>$24 call wall (OI 9,410) + weekly/daily confluence resistance + upper VWAP band approach zone</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$23.00–23.50</td><td>$23 call OI 5,742 + $23.50 OI 3,770 + recent daily swing-high cluster + 4H purple horizontal</td></tr>
+    <tr class="current"><td class="weight">→ CURRENT</td><td class="price">$22.36</td><td>Regular session — at 30M VWAP mid + 30M 50 SMA (22.31), momentum fading LTF</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$22.00</td><td>$22 put OI 2,266 + $22 call OI 4,750 (pin/max-pain zone) + round-number</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$20.75–21.00</td><td><strong>Daily 50 SMA (20.64)</strong> + daily VWAP mid (~$21) + $21 put OI 2,174 + 4H 50 SMA (21.01) — 4-tool stack</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$20.00</td><td>$20 put OI 3,365 + round-number + horizontal from Mar consolidation + VPVR HVN edge</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$19.00–19.50</td><td>$19 put OI 2,866 + weekly 200 SMA proximate (19.93) + VPVR HVN</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$18.00</td><td><strong>$18 put wall (OI 9,214 — massive)</strong> + recent swing low + ultimate structural invalidation</td></tr>
+  </table>
+
+  <div class="callout info">
+    <span class="tag">Level-Map TL;DR</span>
+    Market is pinned between a <strong>massive $18 put wall</strong> and a <strong>massive $25 call wall</strong>. Current price sits in the upper half of that range. Heaviest actionable support is the $20.75-21.00 cluster (4-tool stack); heaviest actionable resistance is the $24-25 stack.
+  </div>
+
+  <h3>1C · CSP Strike Zones (4/24 Expiry, ±$2.24 expected move)</h3>
+  <table>
+    <tr><th style="width:110px">Tier</th><th style="width:130px">Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+    <tr class="tier1"><td class="tier">TIER 1<br><span style="font-size:10px;opacity:0.7">structural</span></td><td class="mono">$20.00</td><td>Put OI 3,365 + round # + horizontal from Mar + VPVR HVN edge — sits ~-$2.38 from spot (just outside expected move)</td><td>Cleanest Tier 1 if assigned — lands on round-number HVN cluster. Premium modest at ~-0.13 delta but structurally bulletproof.</td></tr>
+    <tr class="tier1"><td class="tier">TIER 1</td><td class="mono">$21.00</td><td><strong>Daily 50 SMA (20.64)</strong> + daily VWAP mid + 4H 50 SMA (21.01) + $21 put OI 2,174 — 4-tool stack</td><td>Best-in-class structural strike. -0.25 delta, bid $0.34 / ask $0.36. Assignment here = cost basis at the trend-line.</td></tr>
+    <tr class="tier2"><td class="tier">TIER 2<br><span style="font-size:10px;opacity:0.7">aggressive</span></td><td class="mono">$21.50</td><td>Single-tool (between 50 SMAs) + $21.50 put OI 829 — marginal confluence</td><td>~-0.33 delta, bid $0.49. Premium bump vs $21 modest — not favored vs the $21 stack.</td></tr>
+    <tr class="tier2"><td class="tier">TIER 2</td><td class="mono">$22.00</td><td>$22 put OI 2,266 + round-number + at/near max-pain zone</td><td>~-0.41 delta, bid $0.67. High premium but ~coin-flip assignment. Use only if cost-basis at $22 is acceptable.</td></tr>
+    <tr class="avoid"><td class="tier">AVOID</td><td class="mono">$16.50–$17.50</td><td>LVN gap zone — thin volume, poor support</td><td>Price moves through this area quickly if breached. Premium insufficient vs gap-fill risk.</td></tr>
+    <tr class="avoid"><td class="tier">AVOID</td><td class="mono">&lt; $18.00</td><td>Below put wall / below structural invalidation</td><td>Structural thesis broken; deteriorating chart means accelerating downside, not support.</td></tr>
+  </table>
+
+  <div class="callout">
+    <span class="tag">Strike Selection Notes</span>
+    With <strong>Final Confidence = MEDIUM</strong>, Tier 1 is preferred. The $21 strike carries the heaviest structural stack on the entire chart (4 tools at one zone) and is the cleanest single-strike CSP location. $20 adds a larger buffer with meaningfully lower premium. Tier 2 strikes ($21.50, $22) are defensible only if an assignment at those levels is explicitly acceptable — the 4-day IV of ~101% reflects real event risk (Warsh testimony 4/21), not just crypto vol.
+  </div>
+
+  <!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+  <h2>2 · Confidence Breakdown</h2>
+  <table>
+    <tr><th>Stage</th><th>Value</th></tr>
+    <tr><td>TA Confidence</td><td><strong>MEDIUM</strong> — daily structure bullish (3-tool stack: 50&gt;200, price above both, VWAP rising) + momentum confirming (RSI 56.4, MACD above zero). <strong>Capped at MEDIUM: Fibs not drawn on daily or weekly charts provided.</strong></td></tr>
+    <tr><td>HTF Dissonance</td><td><strong>Yes</strong> — weekly still below 50 SMA (33.33); 4H has 50 below 200 (bearish structure). Lower timeframes aligned bull, HTFs not confirming strongly.</td></tr>
+    <tr><td>Fundamental Context</td><td>Not provided. (BMNR is an ETH DAT — intrinsic value tracks ETH; ETH currently ~$2,300, range-bound $2,100-$2,400 for 6 weeks.)</td></tr>
+    <tr><td>Fundamental Modifier</td><td>Not applied</td></tr>
+    <tr><td>Macro Calendar</td><td>Warsh Senate testimony Tue 4/21 (Fed chair nominee — MEDIUM tier shifted to HIGH for rate-sensitive). FOMC 4/28-29 (HIGH, outside 4/24 expiry). No CPI/PCE/NFP this week.</td></tr>
+    <tr><td>Macro Modifier</td><td>No cap for 4/24 expiry (FOMC outside horizon). Flag elevated IV (101%+) reflects event premium, not just vol regime. For any expiry &gt; 4/24: cap at MEDIUM.</td></tr>
+    <tr class="final-row"><td><strong>Final Confidence</strong></td><td><strong>MEDIUM</strong></td></tr>
+  </table>
+
+  <!-- SECTION 3: SUPPORTING ANALYSIS -->
+  <h2>3 · Supporting Analysis</h2>
+
+  <h3>3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>Weekly:</strong> Post-mega-pump drawdown, now consolidating $18-24 range for ~8-10 weeks. Price ~$22.36 sits below 50 SMA ($33.33, flattening-to-down) and above 200 SMA ($19.93). Weekly RSI 45.1 below midline but rising off lows. Weekly MACD below zero but histogram compressing toward zero — potential basing behavior, not a confirmed reversal. <strong>Fibs not drawn — structural retracement anchors unknown.</strong></li>
+    <li><strong>Daily:</strong> <em>This is the strongest timeframe in the stack.</em> Broken the descending trendline from Feb/Mar highs (clean break ~Apr 4-8). 50 SMA ($20.64) above 200 SMA ($17.23) — bullish structure. Price above both MAs. Daily VWAP mid ~$21, price holding above it. RSI 56.4, MACD positive. Overhead supply at $23-24 (purple horizontal + recent failed highs). <strong>Fibs not drawn on daily.</strong></li>
+  </ul>
+
+  <h3>3B · Current Timeframe Read</h3>
+  <ul>
+    <li><strong>Regime:</strong> Daily = trending up from April low. 4H = ranging within a bullish drift. 30M = compressing / consolidating at the 50 SMA.</li>
+    <li><strong>VWAP (daily):</strong> Price above VWAP line, slope rising after April bottom, upper band ~$24, lower band ~$18. Band width healthy (not compressed, not stretched).</li>
+    <li><strong>VWAP (4H):</strong> Price near mid-to-upper, approaching red upper band at ~$24. Has ridden the mid-band area for the past 5-6 sessions.</li>
+    <li><strong>VWAP (30M):</strong> Price at mid, momentum fading — RSI below 50, MACD below zero with histogram barely curling positive.</li>
+    <li><strong>MAs (daily):</strong> 50 ($20.64) above 200 ($17.23). Both rising. Bullish structure intact.</li>
+    <li><strong>MAs (4H):</strong> 50 ($21.01) below 200 ($25.40). <em>Bearish structure on 4H</em> — price above 50 but still below 200, so 4H has not confirmed daily's bullish break.</li>
+    <li><strong>Momentum (daily):</strong> RSI 56.4 (rising, above midline), MACD 0.32 above zero, histogram 0.05 (positive but shallow). Confirmation, not exhaustion.</li>
+    <li><strong>Momentum (30M):</strong> Fading. RSI 48, below midline. MACD below zero, histogram marginally positive. Signals short-term exhaustion within the broader uptrend.</li>
+    <li><strong>Fib reference from HTF:</strong> Not drawn on the charts provided. Flagged — caps TA confidence at MEDIUM per skill rules.</li>
+  </ul>
+
+  <h3>3C · Confluence Zones</h3>
+  <p>The cleanest confluence on the entire chart is the <strong>$20.75-$21.00 support cluster</strong>: daily 50 SMA (20.64), daily VWAP mid (~$21), 4H 50 SMA (21.01), and the $21 put OI (2,174 contracts) all land inside a $0.40 window. This is the primary support defense zone and the strongest-conviction CSP strike location on the chain. Secondary support at <strong>$20.00</strong> adds $20 put OI 3,365 + round-number + VPVR HVN edge — a cleaner assignment zone if the $21 level breaks.</p>
+  <p>Overhead, the <strong>$24.00-$25.00 stack</strong> is the heaviest resistance: $24 call wall (OI 9,410) + $25 call wall (OI 11,249, biggest on the chain) + upper VWAP bands across timeframes + recent daily/4H swing-high cluster. Any push toward $24 is likely to encounter dealer hedging flows that cap upside — this is the Exit Zone for long tactical positioning.</p>
+  <p>Max-pain zone appears to be $22-23 given the near-balanced OI weighting around current price. Expect a gravitational pull toward this zone into Friday's close, especially if no macro surprise from Warsh Tuesday.</p>
+
+  <h3>3D · Divergences</h3>
+  <p><strong>30M bearish short-term divergence forming:</strong> Price has held $22.30-22.50 for 3+ sessions while 30M RSI has declined from ~65 to 48 and MACD has crossed below zero. This is a <em>loss-of-momentum</em> signal within the still-intact daily uptrend — suggests a pullback to the $21 support cluster is more likely than an immediate push through $23-24. Not a reversal signal by itself.</p>
+  <p><strong>No meaningful divergence on daily or weekly.</strong> Daily MACD and RSI are confirming price action, weekly MACD is compressing toward zero which is supportive rather than divergent.</p>
+
+  <h3>3E · Notes</h3>
+  <ul>
+    <li><strong>ETH backdrop:</strong> ETH trading ~$2,290-$2,320, range-bound $2,100-$2,400 for 6 weeks, below its 200-day MA. BMNR is an ETH Digital Asset Treasury — NAV tracks ETH. ETH's range-bound behavior is consistent with BMNR's range-bound behavior, and any decisive ETH break (either direction) will drive BMNR through its own corresponding levels.</li>
+    <li><strong>Macro this week:</strong> Tue 4/21 — Kevin Warsh Senate Banking testimony (Fed chair nominee). Warsh's views on monetary policy, crypto, and bank regulation can meaningfully move rate-sensitive and crypto-adjacent names. Treat as HIGH-impact for BMNR specifically. No CPI/PCE/NFP this week. FOMC 4/28-29 is outside the 4/24 expiry window but is a cap on anything further out.</li>
+    <li><strong>Geopolitical:</strong> US-Iran ceasefire declared Apr 8 currently holding; crypto and equities have been in risk-on mode since. A breakdown of the ceasefire would be the single largest out-of-distribution risk to any crypto-adjacent long thesis.</li>
+    <li><strong>IV note:</strong> 4/24 IV at 101% is elevated but roughly in line with BMNR's baseline — not a flashing overbought signal, but the Warsh event premium is embedded. Selling premium into this is reasonable at structural strikes; buying premium here is expensive.</li>
+    <li><strong>HTF alignment caveat:</strong> The 5/6 bull tool-agreement score is on the daily timeframe. Weekly is mixed-to-neutral and 4H structurally bearish (50&lt;200). A clean HIGH-confidence long read would require the weekly to reclaim its 50 SMA ($33.33 is far) or the 4H 200 SMA ($25.40) to be reclaimed. Until then, this remains a <em>tactical</em> long, not a structural long.</li>
+  </ul>
+
+  <!-- SECTION 4: OPTIONS DETAIL -->
+  <h2>4 · Options Chain Detail</h2>
+  <ul>
+    <li><strong>Source:</strong> User-provided screenshots (broker chain)</li>
+    <li><strong>Expiry:</strong> Friday April 24, 2026 (4 days)</li>
+    <li><strong>IV (ATM):</strong> ~101.23% — expected move ±$2.24-$2.27</li>
+    <li><strong>Biggest call wall:</strong> $25 (OI 11,249) — HEAVY resistance</li>
+    <li><strong>Secondary call walls:</strong> $24 (OI 9,410), $27 (OI 9,803), $23 (OI 5,742), $26 (OI 6,975)</li>
+    <li><strong>Biggest put wall:</strong> $18 (OI 9,214) — HEAVY support / ultimate structural floor</li>
+    <li><strong>Secondary put walls:</strong> $20 (OI 3,365), $17 (OI 3,347), $19 (OI 2,866), $22 (OI 2,266), $21 (OI 2,174)</li>
+    <li><strong>Approximate max pain:</strong> $22.00-$23.00 (OI balance point)</li>
+    <li><strong>Gamma concentration:</strong> Heavy OI cluster $23-$25 call side (5K+ strikes at $22, $23, $24, $25) — dealer short-gamma hedging likely caps upside into expiry unless a catalyst forces repricing</li>
+    <li><strong>Notable:</strong> $30 call OI 2,656 and $27 call OI 9,803 suggest some speculative upside positioning well above spot. Not relevant to 4/24 action but flags that the book is not purely defensive.</li>
+  </ul>
+
+  <div class="callout warn">
+    <span class="tag">Dealer Positioning Read</span>
+    With the biggest OI concentrations being $25 call wall (11,249) and $18 put wall (9,214), and price sitting at $22.36, dealer positioning suggests a <strong>pin toward $22-23 into expiry</strong> absent a macro shock. This favors short-premium strategies centered on the $20-22 put range where structural support and OI concentration both reside.
+  </div>
+
+  <!-- APPENDIX -->
+  <h2>5 · Appendix · Tool Vote Breakdown</h2>
+  <table>
+    <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+    <tr><td>1</td><td>VWAP slope (daily)</td><td>Rising off April bottom</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td>2</td><td>Price vs VWAP line (daily)</td><td>$22.36 above ~$21 VWAP</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td>3</td><td>50 SMA vs 200 SMA (daily)</td><td>20.64 &gt; 17.23</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td>4</td><td>RSI vs 50 midline (daily)</td><td>56.4, above and rising</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td>5</td><td>MACD zero line (daily)</td><td>0.32, above zero</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td>6</td><td>HTF alignment (weekly + daily)</td><td>Weekly below 50 SMA + 4H 50&lt;200 — HTFs not confirming</td><td style="color:var(--red)">BEAR</td></tr>
+    <tr class="final-row"><td></td><td><strong>Total</strong></td><td><strong>Daily TF alignment is clean; HTF stack is the single bear vote.</strong></td><td><strong>5/6 BULL · 1/6 BEAR (83%)</strong></td></tr>
+  </table>
+
+  <div class="footer">
+    SMB LLC · TA Chart Analysis Framework · Confluence-based multi-timeframe TA · Not trade advice · User sizes the trade
+  </div>
+
+</div>
+</body>
+</html>

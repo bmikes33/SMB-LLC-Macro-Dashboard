@@ -63,6 +63,78 @@
       ]
     },
     {
+      "type": "ta",
+      "file": "BTCUSD_2026-04-19_2100.html",
+      "ticker": "BTCUSD",
+      "tvSymbol": "COINBASE:BTCUSD",
+      "date": "2026-04-19T21:00:00-05:00",
+      "bias": "SHORT tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 1,
+      "bearScore": 5,
+      "scoreMax": 6,
+      "invalidation": "$76,400 short-term / $79,500 structural",
+      "entryZone": "$75,900–$76,400",
+      "exitZone": "$70,500–$71,100",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$86,900",
+          "sources": "Daily 200 SMA (overhead anchor)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$78,800–$79,500",
+          "sources": "Descending TL + Daily upper VWAP band + 4H upper band + rejection high"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$76,349",
+          "sources": "4H VWAP center (break point)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$75,959",
+          "sources": "Weekly VWAP center"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$74,550",
+          "sources": "Regular session close 2026-04-19"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$73,296",
+          "sources": "4H lower VWAP band (−2.5σ)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$70,500–$71,100",
+          "sources": "Daily 50 SMA + Daily VWAP center + 4H 200 SMA — channel support"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$66,000–$68,000",
+          "sources": "Prior consolidation HVN"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$63,150",
+          "sources": "Daily lower VWAP band (−2.5σ)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$60,195",
+          "sources": "Weekly 200 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$52,040",
+          "sources": "Weekly lower VWAP band (macro tail)"
+        }
+      ]
+    },
+    {
       "type": "macro",
       "file": "MACRO_2026-04-18_1200.html",
       "ticker": "MACRO",

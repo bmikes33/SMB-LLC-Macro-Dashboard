@@ -1,51 +1,168 @@
 {
-  "lastUpdated": "2026-04-20T07:08:00.237517+00:00",
-  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 07:08 AM UTC",
-  "articleCount": 56,
+  "lastUpdated": "2026-04-20T09:29:32.109162+00:00",
+  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 09:29 AM UTC",
+  "articleCount": 64,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing renewed volatility as US-Iran tensions escalate over the Strait of Hormuz, driving oil prices up 5% and pushing the dollar to one-week highs. Risk assets including Bitcoin and gold are retreating from recent gains as geopolitical uncertainty returns, while commodities markets show classic flight-to-safety patterns.",
+    "macroSummary": "US-Iran tensions escalated over the weekend with ceasefire uncertainty and oil jumping 5% on Strait of Hormuz concerns, sending the dollar to one-week highs while stocks pulled back. Bitcoin and crypto saw strong institutional inflows but gave back weekend gains amid the geopolitical volatility, while bond yields rose on renewed inflation concerns from higher oil prices.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The geopolitical shock is creating classic risk-off asset movements - dollar strength, oil volatility spikes, and risk asset retreats - that contradict the high-confidence Risk-On regime call.",
+    "regimePressureReason": "Classic risk-off rotation emerging with dollar strength, stock pullbacks, rising bond yields on inflation fears, and safe-haven flows - directly contradicting the high-confidence Risk-On regime classification.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar hitting one-week highs on safe-haven demand from Iran tensions"
+        "signal": "Dollar pushing to one-week highs on Iran tensions, approaching risk-off threshold"
+      },
+      {
+        "indicator": "Oil inflation impact",
+        "level": "Bond yield rises",
+        "signal": "Eurozone and UK bond yields rising on oil-driven inflation concerns"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar advancing to one-week highs on Middle East escalation represents safe-haven bid emergence",
+        "signal": "Dollar rises to one-week high on Middle East tensions, approaching DXY risk-off threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil jumps 5% on Hormuz tensions while stocks pull back in classic risk-off rotation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil surging 5% on Hormuz tensions indicates geopolitical risk premium returning to markets",
+        "signal": "Bond yields rising across regions on renewed inflation concerns from higher oil prices",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin erasing weekend gains and falling below $74K shows risk asset vulnerability",
+        "signal": "Bitcoin erases weekend gains and slips below $74K on geopolitical uncertainty",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold initially dropping on inflation concerns rather than rallying on safe-haven demand shows complex cross-currents",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Markets described as volatile with light volume suggests fragile risk appetite",
-        "tag": "CONTRADICTS"
+        "signal": "Spot Bitcoin ETFs logged nearly $1 billion in weekly inflows, highest since mid-January",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY approach to 100 level closely as potential regime invalidation threshold",
-      "Prepare to tighten BMNR put ladder strikes if crypto weakness accelerates on risk-off flows",
-      "Watch for VIX and VVIX spikes if geopolitical tensions continue escalating"
+      "Monitor DXY closely for breach above 100 level which would invalidate Risk-On regime",
+      "Consider tightening BMNR put ladder strikes if crypto volatility increases from geopolitical uncertainty",
+      "Watch oil-driven inflation impact on rates positioning as bond yields rise globally"
     ]
   },
   "articles": [
+    {
+      "title": "MemDex Launches Interactive Dashboard Showcasing Automated Crypto Portfolio System",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T09:13:54+00:00",
+      "timeDisplay": "9:13 AM",
+      "link": "https://www.tradingview.com/news/chainwire:736648604094b:0-memdex-launches-interactive-dashboard-showcasing-automated-crypto-portfolio-system/"
+    },
+    {
+      "title": "HashKey Cloud Partners with EAG to Support the Ethereum Application Ecosystem through ETH Staking",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T09:12:12+00:00",
+      "timeDisplay": "9:12 AM",
+      "link": "https://www.tradingview.com/news/chainwire:57280d285094b:0-hashkey-cloud-partners-with-eag-to-support-the-ethereum-application-ecosystem-through-eth-staking/"
+    },
+    {
+      "title": "ZAWYA: OKX launches Event Contracts, providing a simpler way to trade BTC and ETH price movements",
+      "source": "zawya",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T08:38:48+00:00",
+      "timeDisplay": "8:38 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026-04-20:newsml_Zaw2xjGYN:0-zawya-okx-launches-event-contracts-providing-a-simpler-way-to-trade-btc-and-eth-price-movements/"
+    },
+    {
+      "title": "Oil jumps, stocks pull back as Mideast ceasefire hangs in the balance",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T08:37:58+00:00",
+      "timeDisplay": "8:37 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4130F7:0-oil-jumps-stocks-pull-back-as-mideast-ceasefire-hangs-in-the-balance/"
+    },
+    {
+      "title": "Ethereum Just Saw Its Strongest Buy Pressure Since The 2022 Bear Market",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T08:30:45+00:00",
+      "timeDisplay": "8:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:b909d05cc094b:0-ethereum-just-saw-its-strongest-buy-pressure-since-the-2022-bear-market/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Fall, Oil Risk Back In Focus After Trump\u2019s Iran Escalation: Why PBM, FRMI, ASTS, BATL Are Keeping Traders Engaged Today",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T08:27:16+00:00",
+      "timeDisplay": "8:27 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:cd2967099094b:0/"
+    },
+    {
+      "title": "Dollar pushes to one-week high as US-Iran tensions reignite",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T08:16:56+00:00",
+      "timeDisplay": "8:16 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41306E:0-dollar-pushes-to-one-week-high-as-us-iran-tensions-reignite/"
+    },
+    {
+      "title": "Spot bitcoin ETFs log nearly $1 billion in weekly inflows, highest since mid-January",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:57:48+00:00",
+      "timeDisplay": "7:57 AM",
+      "link": "https://www.tradingview.com/news/the_block:441f53369094b:0-spot-bitcoin-etfs-log-nearly-1-billion-in-weekly-inflows-highest-since-mid-january/"
+    },
+    {
+      "title": "Eurozone Bond Yields Rise Amid Renewed Uncertainty Over Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:40:00+00:00",
+      "timeDisplay": "7:40 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420000957:0/"
+    },
+    {
+      "title": "Gilt Yields Rise Given Higher Oil Prices and Renewed Inflation Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:24:00+00:00",
+      "timeDisplay": "7:24 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420000886:0/"
+    },
+    {
+      "title": "Gold Falls as Hormuz Tensions Send Oil Higher \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:22:00+00:00",
+      "timeDisplay": "7:22 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420000877:0/"
+    },
+    {
+      "title": "Bitcoin Rises Slightly as Investors Weigh Latest Iran War Developments \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:12:00+00:00",
+      "timeDisplay": "7:12 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420000848:0/"
+    },
+    {
+      "title": "Oil Gains 5% on Hormuz Tensions, U.S. Seizure of Iranian Ship \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:07:00+00:00",
+      "timeDisplay": "7:07 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420000823:0/"
+    },
+    {
+      "title": "Analyst Says Ethereum Just Confirmed A \u2018Turtle Soup\u2019, Here\u2019s What It Means",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T07:00:03+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:4b96f5f7d094b:0-analyst-says-ethereum-just-confirmed-a-turtle-soup-here-s-what-it-means/"
+    },
     {
       "title": "Reabold Resources Explores Bitcoin Mining Using Gas At West Newton A Site",
       "source": "reuters",
@@ -93,14 +210,6 @@
       "timestamp": "2026-04-20T05:57:00+00:00",
       "timeDisplay": "5:57 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260420000277:0/"
-    },
-    {
-      "title": "Dollar pushes to one-week high as US-Iran tensions reignite",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-20T05:46:00+00:00",
-      "timeDisplay": "5:46 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41302J:0-dollar-pushes-to-one-week-high-as-us-iran-tensions-reignite/"
     },
     {
       "title": "Bitcoin slips below $74K as US-Iran clash derails weekend rally",
@@ -199,12 +308,12 @@
       "link": "https://www.tradingview.com/news/te_news:543029:0-us-10-year-yield-climbs-on-middle-east-escalation/"
     },
     {
-      "title": "Top reasons why Bitcoin and the crypto market are going down today (April 20)",
+      "title": "Top reasons why Bitcoin and the crypto market are going down today",
       "source": "invezz",
       "color": "#00e5ff",
       "timestamp": "2026-04-20T02:41:21+00:00",
       "timeDisplay": "2:41 AM",
-      "link": "https://www.tradingview.com/news/invezz:7ed56d9d2094b:0-top-reasons-why-bitcoin-and-the-crypto-market-are-going-down-today-april-20/"
+      "link": "https://www.tradingview.com/news/invezz:7ed56d9d2094b:0-top-reasons-why-bitcoin-and-the-crypto-market-are-going-down-today/"
     },
     {
       "title": "Bitcoin Price Gives Back Gains, But Structure Remains Bullish",
@@ -309,14 +418,6 @@
       "timestamp": "2026-04-19T23:37:43+00:00",
       "timeDisplay": "11:37 PM",
       "link": "https://www.tradingview.com/news/te_news:542966:0-gold-slides-on-renewed-hormuz-tensions/"
-    },
-    {
-      "title": "Oil rises 5% on renewed US-Iran tension",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-19T23:36:10+00:00",
-      "timeDisplay": "11:36 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41206J:0-oil-rises-5-on-renewed-us-iran-tension/"
     },
     {
       "title": "Oil Climbs on Renewed Tensions Over Strait of Hormuz \u2014 Market Talk",
@@ -439,22 +540,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:4284d2bcb094b:0/"
     },
     {
-      "title": "Tether CEO Issues Bullish Bitcoin Post as Price Stabilizes at $75,000",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T14:56:00+00:00",
-      "timeDisplay": "2:56 PM",
-      "link": "https://www.tradingview.com/news/u_today:420e83f54094b:0-tether-ceo-issues-bullish-bitcoin-post-as-price-stabilizes-at-75-000/"
-    },
-    {
-      "title": "'Think Even Bigger': Michael Saylor Teases Strategy's 800,000 BTC Milestone After $2 Billion Bitcoin Buy This Week",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T14:45:00+00:00",
-      "timeDisplay": "2:45 PM",
-      "link": "https://www.tradingview.com/news/u_today:4bffa0ec5094b:0-think-even-bigger-michael-saylor-teases-strategy-s-800-000-btc-milestone-after-2-billion-bitcoin-buy-this-week/"
-    },
-    {
       "title": "'All Banks Will Use Ethereum,' Pro-Crypto Lawyer Sparks Debate",
       "source": "u_today",
       "color": "#00e5ff",
@@ -469,22 +554,6 @@
       "timestamp": "2026-04-19T13:00:10+00:00",
       "timeDisplay": "1:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:a6fe6c513094b:0-this-pattern-suggests-ethereum-is-in-accumulation-phase-what-s-next/"
-    },
-    {
-      "title": "Bitcoin price drops to $75K as new Hormuz closure puts focus on oil",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T12:27:28+00:00",
-      "timeDisplay": "12:27 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a431ac6bc094b:0-bitcoin-price-drops-to-75k-as-new-hormuz-closure-puts-focus-on-oil/"
-    },
-    {
-      "title": "Bitcoin Rejected Again \u2014 Is BTC Setting Up for a Sharp Drop Below $70K?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T12:18:34+00:00",
-      "timeDisplay": "12:18 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:e415f09ff094b:0-bitcoin-rejected-again-is-btc-setting-up-for-a-sharp-drop-below-70k/"
     },
     {
       "title": "Brevis (BREV) - HK ETH Hub Opening - 21 April 2026",

@@ -1,58 +1,186 @@
 {
-  "lastUpdated": "2026-04-20T01:16:02.469184+00:00",
-  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 01:16 AM UTC",
-  "articleCount": 33,
+  "lastUpdated": "2026-04-20T04:46:57.508309+00:00",
+  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 04:46 AM UTC",
+  "articleCount": 48,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Middle East tensions escalated sharply with Iran closing the Strait of Hormuz, driving oil prices up 7% and causing equity futures to slip. Gold and silver declined on renewed inflation concerns despite the geopolitical risk, while crypto markets showed mixed signals with Bitcoin stabilizing around $75K and Ethereum breaking above $2,385.",
+    "macroSummary": "Middle East tensions have reignited with the Strait of Hormuz reportedly closed again, driving oil prices up 7% and pushing the dollar to one-week highs. Risk assets including Bitcoin and equities are under pressure as geopolitical uncertainty weighs on markets, while gold is falling on renewed inflation concerns from higher oil prices.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Geopolitical shock is causing classic risk-off asset rotation with oil spiking, equities wobbling, and safe-haven flows showing unusual patterns that could pressure risk-on positioning.",
+    "regimePressureReason": "Multiple headlines show risk-off behavior emerging with stocks wobbling, crypto giving back gains, and safe-haven dollar strength - contradicting the high-confidence Risk-On regime call.",
     "thresholdWatches": [
       {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "Stock futures slipping and markets wobbling on Hormuz closure suggests volatility likely rising"
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar hitting one-week highs on Middle East escalation, approaching potential risk-off threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Strait of Hormuz closure driving 7% oil spike creates inflationary pressure that could force hawkish Fed pivot",
+        "signal": "Dollar rebounds to one-week high as Middle East tensions drive safe-haven demand",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Stock futures slipping and equities wobbling on geopolitical shock suggests risk-off rotation beginning",
+        "signal": "Oil jumps 7% and stock futures slip as Iran tensions unsettle markets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold declining despite major geopolitical risk shows unusual safe-haven dynamics and inflation fear dominance",
+        "signal": "Bitcoin erases weekend gains and Ethereum loses $2,350 level on geopolitical pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar rebounding on Middle East tensions indicates flight-to-quality bid emerging",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Gold falls on renewed inflation concerns from Hormuz disruption rather than safe-haven buying",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Bitcoin holding $75K level with institutional buying continuing shows crypto resilience to macro shocks",
-        "tag": "SUPPORTS"
+        "signal": "Markets described as light on volume and high on hopes, suggesting fragile sentiment",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor VIX closely for break above 22 as equity volatility likely spiking on geopolitical shock",
-      "Watch DXY for sustained strength above 100 as dollar rebound on Hormuz tensions could flip rates group",
-      "Consider tightening BMNR put ladder strikes as crypto showing relative strength but macro headwinds building"
+      "Monitor DXY closely for break above 100 which would trigger regime invalidation threshold",
+      "Consider tightening BMNR ladder strikes if crypto weakness accelerates on risk-off flows",
+      "Prepare for potential regime flip if geopolitical tensions persist and drive sustained risk-off behavior"
     ]
   },
   "articles": [
     {
+      "title": "Markets light on volume and high on hopes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41302D:0-markets-light-on-volume-and-high-on-hopes/"
+    },
+    {
+      "title": "Bitcoin erases weekend gains as US-Iran ceasefire falls under pressure",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T04:15:27+00:00",
+      "timeDisplay": "4:15 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:6a6935605094b:0-bitcoin-erases-weekend-gains-as-us-iran-ceasefire-falls-under-pressure/"
+    },
+    {
+      "title": "MONDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T04:00:00+00:00",
+      "timeDisplay": "4:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:f5eeed9fd094b:0-monday-white-house-schedule-subject-to-additions-during-the-day/"
+    },
+    {
+      "title": "Dollar pushes to one-week high as Middle East tensions reignite",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T03:59:39+00:00",
+      "timeDisplay": "3:59 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300F:0-dollar-pushes-to-one-week-high-as-middle-east-tensions-reignite/"
+    },
+    {
+      "title": "China's yuan steady against dollar amid Iran ceasefire uncertainty",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T03:52:38+00:00",
+      "timeDisplay": "3:52 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N413020:0-china-s-yuan-steady-against-dollar-amid-iran-ceasefire-uncertainty/"
+    },
+    {
+      "title": "Commodity Corner: Crude remains volatile near $95/bbl as Middle East tensions resurface; gold slips",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T03:42:44+00:00",
+      "timeDisplay": "3:42 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:e082bc435094b:0-commodity-corner-crude-remains-volatile-near-95-bbl-as-middle-east-tensions-resurface-gold-slips/"
+    },
+    {
+      "title": "Ethereum Price Loses $2,350 Level, Traders Eye Rebound Signals",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T03:08:25+00:00",
+      "timeDisplay": "3:08 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:a7c22b6bd094b:0-ethereum-price-loses-2-350-level-traders-eye-rebound-signals/"
+    },
+    {
       "title": "Oil jumps, stocks wobble as Mideast ceasefire hangs in the balance",
       "source": "reuters",
       "color": "#ff6d00",
-      "timestamp": "2026-04-20T00:54:03+00:00",
-      "timeDisplay": "12:54 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41206Y:0-oil-jumps-stocks-wobble-as-mideast-ceasefire-hangs-in-the-balance/"
+      "timestamp": "2026-04-20T03:03:37+00:00",
+      "timeDisplay": "3:03 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300J:0-oil-jumps-stocks-wobble-as-mideast-ceasefire-hangs-in-the-balance/"
+    },
+    {
+      "title": "US 10-Year Yield Climbs on Middle East Escalation",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T02:49:22+00:00",
+      "timeDisplay": "2:49 AM",
+      "link": "https://www.tradingview.com/news/te_news:543029:0-us-10-year-yield-climbs-on-middle-east-escalation/"
+    },
+    {
+      "title": "Top reasons why Bitcoin and the crypto market are going down today (April 20)",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T02:41:21+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/invezz:7ed56d9d2094b:0-top-reasons-why-bitcoin-and-the-crypto-market-are-going-down-today-april-20/"
+    },
+    {
+      "title": "Bitcoin Price Gives Back Gains, But Structure Remains Bullish",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T02:32:59+00:00",
+      "timeDisplay": "2:32 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:1a05bdbac094b:0-bitcoin-price-gives-back-gains-but-structure-remains-bullish/"
+    },
+    {
+      "title": "US oil may fall into $84.07-$86.26 range, downtrend intact",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T02:19:24+00:00",
+      "timeDisplay": "2:19 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300X:0-us-oil-may-fall-into-84-07-86-26-range-downtrend-intact/"
+    },
+    {
+      "title": "Strait of Hormuz Developments Cast 'Worrying Shadow' Over U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T01:56:00+00:00",
+      "timeDisplay": "1:56 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260419000995:0/"
+    },
+    {
+      "title": "Dollar Advances on Middle East Escalation",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T01:55:00+00:00",
+      "timeDisplay": "1:55 AM",
+      "link": "https://www.tradingview.com/news/te_news:543008:0-dollar-advances-on-middle-east-escalation/"
+    },
+    {
+      "title": "Gold falls as renewed Hormuz disruption stokes inflation concern",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T01:52:54+00:00",
+      "timeDisplay": "1:52 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:4a6ea877f094b:0-gold-falls-as-renewed-hormuz-disruption-stokes-inflation-concern/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T01:46:00+00:00",
+      "timeDisplay": "1:46 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41300M:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Dollar hits one-week high as Middle East tensions reignite",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T01:19:57+00:00",
+      "timeDisplay": "1:19 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N412072:0-dollar-hits-one-week-high-as-middle-east-tensions-reignite/"
     },
     {
       "title": "Key facts: BTC SOPR\u2191; miners stressed; weak 2024; Saylor buys; dominance\u2191; $68K risk; $500K\u2013$1M back; quantum not imminent",
@@ -301,14 +429,6 @@
       "timestamp": "2026-04-19T06:15:46+00:00",
       "timeDisplay": "6:15 AM",
       "link": "https://www.tradingview.com/news/invezz:0d1ac9684094b:0-crypto-market-crash-today-here-s-why-altcoins-and-btc-are-going-down/"
-    },
-    {
-      "title": "Ethereum Foundation Veteran Josh Stark Is Stepping Down",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T04:14:28+00:00",
-      "timeDisplay": "4:14 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:881fbde73094b:0-ethereum-foundation-veteran-josh-stark-is-stepping-down/"
     }
   ]
 }

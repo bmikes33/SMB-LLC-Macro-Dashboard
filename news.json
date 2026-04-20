@@ -1,45 +1,195 @@
 {
-  "lastUpdated": "2026-04-19T17:34:47.572611+00:00",
-  "lastUpdatedDisplay": "Apr 19, 2026 \u2014 05:34 PM UTC",
-  "articleCount": 22,
+  "lastUpdated": "2026-04-20T01:16:02.469184+00:00",
+  "lastUpdatedDisplay": "Apr 20, 2026 \u2014 01:16 AM UTC",
+  "articleCount": 33,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin headlines show mixed technical signals with breakout confirmation debates, price rejection at $75K amid oil concerns, and institutional buying continuing via MicroStrategy while retail remains sidelined. Ethereum shows accumulation patterns with $2,900 targets discussed, though broader crypto markets experienced selling pressure. Mining difficulty adjustments and supply dynamics remain in focus alongside geopolitical tensions affecting oil markets.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show conflicting signals with Bitcoin breaking downtrends and institutional buying continuing, but price rejections, crash concerns, and oil-driven safe-haven flows suggest cross-currents to the risk-on thesis.",
-    "thresholdWatches": [],
+    "macroSummary": "Middle East tensions escalated sharply with Iran closing the Strait of Hormuz, driving oil prices up 7% and causing equity futures to slip. Gold and silver declined on renewed inflation concerns despite the geopolitical risk, while crypto markets showed mixed signals with Bitcoin stabilizing around $75K and Ethereum breaking above $2,385.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Geopolitical shock is causing classic risk-off asset rotation with oil spiking, equities wobbling, and safe-haven flows showing unusual patterns that could pressure risk-on positioning.",
+    "thresholdWatches": [
+      {
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "Stock futures slipping and markets wobbling on Hormuz closure suggests volatility likely rising"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin rejected at $75K with analysts questioning if breakout is real or bull trap amid broader crypto market selling",
+        "signal": "Strait of Hormuz closure driving 7% oil spike creates inflationary pressure that could force hawkish Fed pivot",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil concerns from Hormuz closure putting pressure on Bitcoin price, suggesting safe-haven flows into traditional assets",
+        "signal": "Stock futures slipping and equities wobbling on geopolitical shock suggests risk-off rotation beginning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "MicroStrategy's continued Bitcoin buying and $18B volume spike indicating institutional demand remains strong",
-        "tag": "SUPPORTS"
+        "signal": "Gold declining despite major geopolitical risk shows unusual safe-haven dynamics and inflation fear dominance",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Ethereum showing accumulation phase with breakout holding and $2,900 target levels discussed by analysts",
-        "tag": "SUPPORTS"
+        "signal": "Dollar rebounding on Middle East tensions indicates flight-to-quality bid emerging",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Retail investors still lagging behind in crypto rally, showing classic 'wall of worry' pattern that typically supports further gains",
-        "tag": "NEUTRAL"
+        "signal": "Bitcoin holding $75K level with institutional buying continuing shows crypto resilience to macro shocks",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance against ETH accumulation thesis - consider adjusting strike spacing if $2,900 target materializes",
-      "Watch for oil volatility spillover effects on crypto correlations that could pressure ETH-linked strategies",
-      "Assess whether Bitcoin's $75K rejection and potential drop below $70K creates better BMNR entry points"
+      "Monitor VIX closely for break above 22 as equity volatility likely spiking on geopolitical shock",
+      "Watch DXY for sustained strength above 100 as dollar rebound on Hormuz tensions could flip rates group",
+      "Consider tightening BMNR put ladder strikes as crypto showing relative strength but macro headwinds building"
     ]
   },
   "articles": [
+    {
+      "title": "Oil jumps, stocks wobble as Mideast ceasefire hangs in the balance",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-20T00:54:03+00:00",
+      "timeDisplay": "12:54 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41206Y:0-oil-jumps-stocks-wobble-as-mideast-ceasefire-hangs-in-the-balance/"
+    },
+    {
+      "title": "Key facts: BTC SOPR\u2191; miners stressed; weak 2024; Saylor buys; dominance\u2191; $68K risk; $500K\u2013$1M back; quantum not imminent",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T00:03:29+00:00",
+      "timeDisplay": "12:03 AM",
+      "link": "https://www.tradingview.com/news/tradingview:00435ba5b93e9:0-key-facts-btc-sopr-miners-stressed-weak-2024-saylor-buys-dominance-68k-risk-500k-1m-back-quantum-not-imminent/"
+    },
+    {
+      "title": "Key facts: Ethereum Tops $2,385; $2,900 Target, Binance Netflow Low",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T00:03:07+00:00",
+      "timeDisplay": "12:03 AM",
+      "link": "https://www.tradingview.com/news/tradingview:6fbdda1434011:0-key-facts-ethereum-tops-2-385-2-900-target-binance-netflow-low/"
+    },
+    {
+      "title": "Oil Surges on Hormuz Escalations",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T23:56:48+00:00",
+      "timeDisplay": "11:56 PM",
+      "link": "https://www.tradingview.com/news/te_news:542969:0-oil-surges-on-hormuz-escalations/"
+    },
+    {
+      "title": "Gold, Silver Decline Amid Renewed Inflation Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T23:49:00+00:00",
+      "timeDisplay": "11:49 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260419000791:0/"
+    },
+    {
+      "title": "Gold Slides on Renewed Hormuz Tensions",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T23:37:43+00:00",
+      "timeDisplay": "11:37 PM",
+      "link": "https://www.tradingview.com/news/te_news:542966:0-gold-slides-on-renewed-hormuz-tensions/"
+    },
+    {
+      "title": "Oil Climbs on Renewed Tensions Over Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T23:36:00+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260419000758:0/"
+    },
+    {
+      "title": "Spot Gold Falls 1.2%, Spot Silver Drops 1.6% on Renewed Middle East Tensions",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T23:12:00+00:00",
+      "timeDisplay": "11:12 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260419000736_20260419000736:0/"
+    },
+    {
+      "title": "Dollar rebounds as Middle East tensions reignite, Hormuz closed",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-19T22:36:10+00:00",
+      "timeDisplay": "10:36 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N412084:0-dollar-rebounds-as-middle-east-tensions-reignite-hormuz-closed/"
+    },
+    {
+      "title": "WTI Crude Oil 7% Higher",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T22:13:41+00:00",
+      "timeDisplay": "10:13 PM",
+      "link": "https://www.tradingview.com/news/te_news:542956:0-wti-crude-oil-7-higher/"
+    },
+    {
+      "title": "Oil jumps and stock futures slip as Iran tensions unsettle markets",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-19T22:12:51+00:00",
+      "timeDisplay": "10:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41208S:0-oil-jumps-and-stock-futures-slip-as-iran-tensions-unsettle-markets/"
+    },
+    {
+      "title": "Oil prices rebound 7% as Strait of Hormuz is closed again",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-19T22:05:11+00:00",
+      "timeDisplay": "10:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41206N:0-oil-prices-rebound-7-as-strait-of-hormuz-is-closed-again/"
+    },
+    {
+      "title": "The President Who Pushed Bitcoin the Hardest Is Now the Most Popular Leader on Earth",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T20:47:49+00:00",
+      "timeDisplay": "8:47 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:e94c9b6d3094b:0-the-president-who-pushed-bitcoin-the-hardest-is-now-the-most-popular-leader-on-earth/"
+    },
+    {
+      "title": "PRES TRUMP POSTS IRANIAN SHIP TAKEN INTO US CUSTODY UNDER FIRE; VP VANCE, KUSHNER, WITKOFF TO PAKISTAN BUT UNSURE IRAN WILL SHOW UP FOR MEETING",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T20:22:00+00:00",
+      "timeDisplay": "8:22 PM",
+      "link": "https://www.tradingview.com/news/macenews:c8286e630094b:0-pres-trump-posts-iranian-ship-taken-into-us-custody-under-fire-vp-vance-kushner-witkoff-to-pakistan-but-unsure-iran-will-show-up-for-meeting/"
+    },
+    {
+      "title": "Scaramucci: Bitcoin Market Cap Might Reach $21 Trillion",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T19:13:41+00:00",
+      "timeDisplay": "7:13 PM",
+      "link": "https://www.tradingview.com/news/u_today:24660d297094b:0-scaramucci-bitcoin-market-cap-might-reach-21-trillion/"
+    },
+    {
+      "title": "Strategy Raises $1.76B War Chest As Saylor Signals Bigger Bitcoin Buy",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T19:00:57+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:4b05ef298094b:0-strategy-raises-1-76b-war-chest-as-saylor-signals-bigger-bitcoin-buy/"
+    },
+    {
+      "title": "2024 BTC cycle 'dramatically' underperforming previous halvings: Analyst",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T18:48:06+00:00",
+      "timeDisplay": "6:48 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:a91e5c156094b:0-2024-btc-cycle-dramatically-underperforming-previous-halvings-analyst/"
+    },
+    {
+      "title": "Ethereum Flips Key Resistance, ETF Demand Returns, Analysts Eye Next Leg Higher",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T18:00:17+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:acbe10895094b:0-ethereum-flips-key-resistance-etf-demand-returns-analysts-eye-next-leg-higher/"
+    },
     {
       "title": "$1M Bitcoin Is \u2018Closer Than You Think\u2019: Adam Back On The Next Demand Shock",
       "source": "stocktwits",
@@ -63,6 +213,30 @@
       "timestamp": "2026-04-19T16:26:58+00:00",
       "timeDisplay": "4:26 PM",
       "link": "https://www.tradingview.com/news/stocktwits:4284d2bcb094b:0/"
+    },
+    {
+      "title": "Tether CEO Issues Bullish Bitcoin Post as Price Stabilizes at $75,000",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T14:56:00+00:00",
+      "timeDisplay": "2:56 PM",
+      "link": "https://www.tradingview.com/news/u_today:420e83f54094b:0-tether-ceo-issues-bullish-bitcoin-post-as-price-stabilizes-at-75-000/"
+    },
+    {
+      "title": "'Think Even Bigger': Michael Saylor Teases Strategy's 800,000 BTC Milestone After $2 Billion Bitcoin Buy This Week",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T14:45:00+00:00",
+      "timeDisplay": "2:45 PM",
+      "link": "https://www.tradingview.com/news/u_today:4bffa0ec5094b:0-think-even-bigger-michael-saylor-teases-strategy-s-800-000-btc-milestone-after-2-billion-bitcoin-buy-this-week/"
+    },
+    {
+      "title": "'All Banks Will Use Ethereum,' Pro-Crypto Lawyer Sparks Debate",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-19T13:56:00+00:00",
+      "timeDisplay": "1:56 PM",
+      "link": "https://www.tradingview.com/news/u_today:86cd54f85094b:0-all-banks-will-use-ethereum-pro-crypto-lawyer-sparks-debate/"
     },
     {
       "title": "This Pattern Suggests Ethereum Is In Accumulation Phase \u2014 What\u2019s Next?",
@@ -135,86 +309,6 @@
       "timestamp": "2026-04-19T04:14:28+00:00",
       "timeDisplay": "4:14 AM",
       "link": "https://www.tradingview.com/news/99Bitcoins:881fbde73094b:0-ethereum-foundation-veteran-josh-stark-is-stepping-down/"
-    },
-    {
-      "title": "ETH to $2,900? Ethereum Price Chart Signals Key Structural Shift",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T00:05:00+00:00",
-      "timeDisplay": "12:05 AM",
-      "link": "https://www.tradingview.com/news/u_today:37d66420e094b:0-eth-to-2-900-ethereum-price-chart-signals-key-structural-shift/"
-    },
-    {
-      "title": "Key facts: ETF $996M, $101B assets; BTC breaks downtrend; 36,383 BTC buy; Coinbase premium negative",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T00:04:29+00:00",
-      "timeDisplay": "12:04 AM",
-      "link": "https://www.tradingview.com/news/tradingview:b06662800ec96:0-key-facts-etf-996m-101b-assets-btc-breaks-downtrend-36-383-btc-buy-coinbase-premium-negative/"
-    },
-    {
-      "title": "Key facts: ETH Breakout Holds; 32,007 ETH Off Binance; Model Sees Gains",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-19T00:03:01+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:ef4a07603cb10:0-key-facts-eth-breakout-holds-32-007-eth-off-binance-model-sees-gains/"
-    },
-    {
-      "title": "Bitcoin Breakout Confirmed, But Is It Real Or A Bull Trap?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T23:30:44+00:00",
-      "timeDisplay": "11:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:c53ad072c094b:0-bitcoin-breakout-confirmed-but-is-it-real-or-a-bull-trap/"
-    },
-    {
-      "title": "Ethereum Signals Major Reversal \u2013 $2,900 Target Back In Focus",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T20:30:10+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:9d76f784a094b:0-ethereum-signals-major-reversal-2-900-target-back-in-focus/"
-    },
-    {
-      "title": "Coinbase Says MicroStrategy\u2019s Bitcoin Buying Tightens Supply More Than Market Expects",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T20:15:02+00:00",
-      "timeDisplay": "8:15 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:ed93f19f5094b:0-coinbase-says-microstrategy-s-bitcoin-buying-tightens-supply-more-than-market-expects/"
-    },
-    {
-      "title": "Bitcoin mining difficulty falls, but projected to rise in next adjustment",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T20:02:42+00:00",
-      "timeDisplay": "8:02 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:f55fea186094b:0-bitcoin-mining-difficulty-falls-but-projected-to-rise-in-next-adjustment/"
-    },
-    {
-      "title": "KelpDAO Loses $292 Million in DeFi Wallet Drain Across Ethereum, Arbitrum",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T19:05:03+00:00",
-      "timeDisplay": "7:05 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:dd100c55c094b:0-kelpdao-loses-292-million-in-defi-wallet-drain-across-ethereum-arbitrum/"
-    },
-    {
-      "title": "Can Bitcoin Buyers Join The Breakout Party? Analyst Says Not Yet",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T19:00:38+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:5c4ec5e95094b:0-can-bitcoin-buyers-join-the-breakout-party-analyst-says-not-yet/"
-    },
-    {
-      "title": "Iran views BTC as a strategic asset, but USDt still dominates oil tolls: BPI",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-18T18:27:35+00:00",
-      "timeDisplay": "6:27 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:4ff6bb33a094b:0-iran-views-btc-as-a-strategic-asset-but-usdt-still-dominates-oil-tolls-bpi/"
     }
   ]
 }

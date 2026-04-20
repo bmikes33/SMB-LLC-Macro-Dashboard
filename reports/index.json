@@ -64,6 +64,465 @@
     },
     {
       "type": "ta",
+      "file": "LNG_2026-04-19_2230.html",
+      "ticker": "LNG",
+      "tvSymbol": "NYSE:LNG",
+      "date": "2026-04-19T22:30:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 1,
+      "bearScore": 5,
+      "scoreMax": 6,
+      "invalidation": "$240 short-term / $227 structural",
+      "entryZone": "$244–$250",
+      "exitZone": "$258–$265 first / $275–$280 second",
+      "levels": [
+        {
+          "weight": "HEAVY",
+          "price": "$280.00",
+          "sources": "Apr 24 call wall (344 OI) + weekly stretch zone"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$277.43",
+          "sources": "Weekly Fib 0.786 + call OI 131 + 4h 50 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$278.36",
+          "sources": "Daily VWAP line"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$265.00",
+          "sources": "Apr 24 call OI 165 + 30m upper band"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$257.94",
+          "sources": "Weekly Fib 0.618 (just lost; flips resistance)"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$251.07",
+          "sources": "Regular session close Fri 4/17"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$250.00",
+          "sources": "Apr 24 put wall (148 OI) + 50D SMA proximate"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$247.54",
+          "sources": "Daily VWAP lower band"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$244.25",
+          "sources": "Weekly Fib 0.5 + put OI 86 at $245"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$240.57",
+          "sources": "4h VWAP lower band"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$229.49",
+          "sources": "50W SMA + Weekly Fib 0.382"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$227.78",
+          "sources": "200D SMA — major structural floor"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$213.63",
+          "sources": "Weekly Fib 0.236"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$186.74",
+          "sources": "200W SMA + Weekly Fib 0.0 anchor"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "CF_2026-04-19_2200.html",
+      "ticker": "CF",
+      "tvSymbol": "NYSE:CF",
+      "date": "2026-04-19T22:00:00-05:00",
+      "bias": "NEUTRAL — no edge",
+      "confidence": "LOW",
+      "bullScore": 2,
+      "bearScore": 4,
+      "scoreMax": 6,
+      "invalidation": "$106.62 short-term / $99.40 structural",
+      "entryZone": "$106–$110",
+      "exitZone": "$121–$126",
+      "levels": [
+        {
+          "weight": "HEAVY",
+          "price": "$130",
+          "sources": "$130 call wall (1,684 OI Apr 24) + weekly rejection zone"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$124–$126",
+          "sources": "Daily RVWAP $125.77 + weekly 0.786 Fib $124.13 + $125 call OI"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$121–$122",
+          "sources": "4h RVWAP $121.83 + $122 put OI (365, now ITM)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$113–$114",
+          "sources": "Weekly 0.618 Fib $113.85 + daily 50 SMA $114.06 (just broken)"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$112.68",
+          "sources": "Regular session close"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$106–$110",
+          "sources": "Weekly RVWAP $108.62 + daily lower RVWAP band $110.47 + weekly 0.5 Fib $106.62 + 4h lower RVWAP band $105.75"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$99.40",
+          "sources": "Weekly 0.382 Fib — structural invalidation"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "WULF_2026-04-19_2150.html",
+      "ticker": "WULF",
+      "tvSymbol": "NASDAQ:WULF",
+      "date": "2026-04-19T21:50:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 6,
+      "bearScore": 0,
+      "scoreMax": 6,
+      "invalidation": "$18 short-term / $16.50 structural",
+      "entryZone": "$17.50–$18.50",
+      "exitZone": "$22.00–$22.50",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$25.60",
+          "sources": "Weekly 1.618 Fib extension"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$24.00",
+          "sources": "Apr 24 call OI 4,205 + round number"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$22.00–$22.50",
+          "sources": "Upper daily VWAP $22.48 + upper 4H VWAP $22.21 + $22 call OI 2,137"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$20.00–$20.20",
+          "sources": "$20 call wall 9,575 OI (chain max) + upper weekly VWAP 2.5σ band + round number + weekly 1.0 Fib breakout zone"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$20.65",
+          "sources": "Regular / after-hours close"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$19.00",
+          "sources": "$19 put wall 7,035 OI (2nd largest in chain)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$18.00",
+          "sources": "$18 put OI 3,097 + prior April swing low + 30m 200 SMA proximity"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$16.50–$17.00",
+          "sources": "Weekly 1.0 Fib $16.61 + Daily 50 SMA $16.13 + 4H 50 SMA $16.66 + put/call OI stack + VPVR HVN"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "CIFR_2026-04-19_2145.html",
+      "ticker": "CIFR",
+      "tvSymbol": "NASDAQ:CIFR",
+      "date": "2026-04-19T21:45:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 6,
+      "bearScore": 0,
+      "scoreMax": 6,
+      "invalidation": "$17.00 short-term / $15.25 structural",
+      "entryZone": "$17.00–$17.50 pullback or $20.50+ breakout",
+      "exitZone": "$22 first / $25.36 main",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$25.36",
+          "sources": "Weekly 1.0 Fib"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$20.16–$20.38",
+          "sources": "Weekly + Daily 0.786 Fib + daily upper VWAP + $20 call OI 3.5K"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$19.37",
+          "sources": "Regular session close"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$16.00–$17.50",
+          "sources": "Daily HVN + 0.618 Fib + 4h VWAP + $17 put wall 11.7K + $16 put wall 10.3K"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$15.07–$15.25",
+          "sources": "Daily 50 SMA + 4h 50 SMA cluster"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$13.72–$13.83",
+          "sources": "Weekly 0.5 Fib + Daily 200 SMA"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "CLSK_2026-04-19_2130.html",
+      "ticker": "CLSK",
+      "tvSymbol": "NASDAQ:CLSK",
+      "date": "2026-04-19T21:30:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 5,
+      "bearScore": 1,
+      "scoreMax": 6,
+      "invalidation": "$11.11 short-term / $9.05 structural",
+      "entryZone": "$10.50–$11.00 (pullback) or >$12.80 (breakout retest)",
+      "exitZone": "$12.80–$13.00 first, $15.00–$15.75 structural",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$15.00–$15.75",
+          "sources": "Weekly upper VWAP band + 2024 supply shelf"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$13.00",
+          "sources": "Apr 24 call wall (OI 3,317) + prior range top"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$12.22–$12.79",
+          "sources": "Daily 200 SMA + Daily upper VWAP + 4h upper VWAP + Apr 24 $12/$13 call walls"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$11.94",
+          "sources": "Regular session close (chain AH $11.49)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$11.11",
+          "sources": "4h 200 SMA + breakout retest"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$10.42",
+          "sources": "4h middle VWAP — first pullback magnet"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$9.82–$10.00",
+          "sources": "Daily 50 SMA + daily middle VWAP + Apr 24 $10 put OI"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$9.00–$9.05",
+          "sources": "Apr 24 put wall (OI 4,811) + Weekly 200 SMA + Daily VPVR HVN"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$8.00",
+          "sources": "Apr 24 heaviest put wall (OI 6,584) — dealer floor"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "SOFI_2026-04-19_2130.html",
+      "ticker": "SOFI",
+      "tvSymbol": "NASDAQ:SOFI",
+      "date": "2026-04-19T21:30:00-05:00",
+      "bias": "LONG structural",
+      "confidence": "HIGH",
+      "bullScore": 5,
+      "bearScore": 1,
+      "scoreMax": 6,
+      "invalidation": "$17.50 short-term / $16.50 structural",
+      "entryZone": "$17.72–$18.50",
+      "exitZone": "$20.47 → $22.17–$23.22",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$32.12",
+          "sources": "Weekly Fib 1.0 (ATH)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$27.14",
+          "sources": "Weekly Fib 0.786"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$22.17–$23.86",
+          "sources": "Weekly 50 SMA + Weekly Fib 0.618 + Daily 200 SMA — structural wall"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$21.00",
+          "sources": "Apr 24 Call OI 12,492 — major resistance stop"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$20.00–$20.47",
+          "sources": "Weekly Fib 0.5 + Daily upper VWAP band + $20 Call OI 17,024"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$19.00",
+          "sources": "Apr 24 Call OI 29,191 (massive gamma pin)"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$19.13",
+          "sources": "Regular session close 2026-04-19"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$17.72–$18.03",
+          "sources": "Weekly Fib 0.382 + Daily 50 SMA + 4H VWAP center + Put OI 3,338 — primary entry"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$17.00",
+          "sources": "Put OI 3,243 + horizontal support"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$16.93",
+          "sources": "Daily VWAP center"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$15.00",
+          "sources": "Put OI 30,455 (massive) — magnetic floor / tail-risk support"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$14.32",
+          "sources": "Weekly Fib 0.236 + recent low"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$11.76",
+          "sources": "Weekly 200 SMA"
+        }
+      ]
+    },
+    {
+      "type": "ta",
+      "file": "ETHUSD_2026-04-19_2115.html",
+      "ticker": "ETHUSD",
+      "tvSymbol": "COINBASE:ETHUSD",
+      "date": "2026-04-19T21:15:00-05:00",
+      "bias": "SHORT tactical",
+      "confidence": "LOW",
+      "bullScore": 2,
+      "bearScore": 4,
+      "scoreMax": 6,
+      "invalidation": "$2,400 short-term / $2,503 structural",
+      "entryZone": "$2,310–$2,345",
+      "exitZone": "$2,180–$2,200",
+      "levels": [
+        {
+          "weight": "MEDIUM",
+          "price": "$2,845",
+          "sources": "Daily 200 SMA (overhead wall)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$2,469–$2,503",
+          "sources": "Daily upper VWAP band + 4H upper band + descending TL + rejection high"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$2,451",
+          "sources": "Weekly 200 SMA"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$2,343–$2,373",
+          "sources": "Weekly VWAP center + 4H VWAP center + 4H 50 SMA (retest zone)"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$2,280",
+          "sources": "Regular session close 2026-04-19"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$2,243",
+          "sources": "4H lower VWAP band (−2.5σ)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$2,180–$2,200",
+          "sources": "Daily VWAP center + prior resistance-turned-support HVN + breakout retest"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$2,167",
+          "sources": "4H 200 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$2,143",
+          "sources": "Daily 50 SMA"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$1,896–$1,925",
+          "sources": "Daily lower VWAP band + prior consolidation low (structural invalidation)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$1,250",
+          "sources": "Weekly lower VWAP band (macro tail)"
+        }
+      ]
+    },
+    {
+      "type": "ta",
       "file": "BTCUSD_2026-04-19_2100.html",
       "ticker": "BTCUSD",
       "tvSymbol": "COINBASE:BTCUSD",

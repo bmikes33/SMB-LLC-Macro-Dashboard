@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTCUSD TA Report — 2026-04-19</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #0a0e17;
+    --bg-1: #0f1420;
+    --bg-2: #141926;
+    --border: #1e2a3a;
+    --text-0: #e2e8f0;
+    --text-1: #8b9ab5;
+    --text-2: #4a5976;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg-0); color: var(--text-0); font-family: var(--sans); line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 28px 64px; }
+
+  /* Header */
+  .hdr { display: flex; flex-direction: column; gap: 4px; border-bottom: 1px solid var(--border); padding-bottom: 18px; margin-bottom: 24px; }
+  .hdr-top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .ticker { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--cyan); letter-spacing: 0.04em; }
+  .tf { font-family: var(--mono); font-size: 13px; color: var(--text-1); text-transform: uppercase; letter-spacing: 0.12em; }
+  .ts { font-family: var(--mono); font-size: 12px; color: var(--text-2); margin-left: auto; }
+  .hdr-meta { display: flex; gap: 20px; font-family: var(--mono); font-size: 13px; margin-top: 8px; flex-wrap: wrap; }
+  .meta-item { display: flex; gap: 6px; align-items: center; }
+  .meta-label { color: var(--text-2); text-transform: uppercase; letter-spacing: 0.1em; font-size: 11px; }
+  .meta-val-short { color: var(--amber); font-weight: 600; }
+  .meta-val-conf { color: var(--amber); font-weight: 600; }
+  .meta-val-score { color: var(--text-0); }
+
+  /* Sections */
+  h2.sec {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 32px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3.sub {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin: 20px 0 8px;
+  }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 18px; font-size: 14px; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th {
+    background: var(--bg-2);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  td { background: var(--bg-1); color: var(--text-0); }
+  td.mono, th.mono { font-family: var(--mono); }
+  td.price { font-family: var(--mono); font-weight: 500; }
+
+  /* Row tints */
+  tr.heavy td { background: rgba(255, 61, 87, 0.08); border-left: 2px solid var(--red); }
+  tr.heavy td.price, tr.heavy td.weight { color: var(--red); font-weight: 700; }
+  tr.heavy-support td { background: rgba(0, 230, 118, 0.08); border-left: 2px solid var(--green); }
+  tr.heavy-support td.price, tr.heavy-support td.weight { color: var(--green); font-weight: 700; }
+  tr.medium td { background: rgba(255, 171, 0, 0.06); border-left: 2px solid var(--amber); }
+  tr.medium td.weight { color: var(--amber); font-weight: 600; }
+  tr.light td { color: var(--text-1); }
+  tr.current td { background: var(--bg-2); border-left: 2px solid var(--cyan); }
+  tr.current td.price { color: var(--cyan); font-weight: 700; }
+  tr.tier1 td { background: rgba(0, 230, 118, 0.08); border-left: 2px solid var(--green); }
+  tr.tier1 td.tier { color: var(--green); font-weight: 700; }
+  tr.avoid td { background: rgba(255, 61, 87, 0.08); border-left: 2px solid var(--red); }
+  tr.avoid td.tier { color: var(--red); font-weight: 700; }
+
+  /* Label pills */
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 3px;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .pill.short { background: rgba(255, 61, 87, 0.15); color: var(--red); border: 1px solid rgba(255, 61, 87, 0.35); }
+  .pill.long { background: rgba(0, 230, 118, 0.15); color: var(--green); border: 1px solid rgba(0, 230, 118, 0.35); }
+  .pill.neutral { background: rgba(139, 154, 181, 0.12); color: var(--text-1); border: 1px solid var(--border); }
+  .pill.med { background: rgba(255, 171, 0, 0.15); color: var(--amber); border: 1px solid rgba(255, 171, 0, 0.35); }
+  .pill.low { background: rgba(255, 61, 87, 0.12); color: var(--red); border: 1px solid rgba(255, 61, 87, 0.3); }
+  .pill.high { background: rgba(0, 230, 118, 0.15); color: var(--green); border: 1px solid rgba(0, 230, 118, 0.35); }
+
+  /* Exec summary table */
+  .exec td:first-child { color: var(--text-2); font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; width: 180px; }
+
+  /* Prose */
+  p, li { color: var(--text-0); font-size: 14.5px; }
+  p { margin: 8px 0 12px; }
+  ul { margin: 8px 0 12px; padding-left: 22px; }
+  li { margin: 4px 0; }
+  strong { color: var(--text-0); font-weight: 600; }
+  em { color: var(--text-1); font-style: normal; font-family: var(--mono); font-size: 13px; }
+  code {
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--bg-2);
+    padding: 1px 6px;
+    border-radius: 2px;
+    color: var(--cyan);
+  }
+  .callout {
+    background: var(--bg-2);
+    border-left: 3px solid var(--amber);
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 13.5px;
+  }
+  .callout.warn { border-color: var(--red); }
+  .callout.info { border-color: var(--cyan); }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-2);
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-top">
+      <div class="ticker">BTCUSD</div>
+      <div class="tf">Weekly · Daily · 4H · 30M</div>
+      <div class="ts">2026-04-19 · 21:00 CT</div>
+    </div>
+    <div class="hdr-meta">
+      <div class="meta-item"><span class="meta-label">Bias:</span> <span class="pill short">SHORT tactical</span></div>
+      <div class="meta-item"><span class="meta-label">Confidence:</span> <span class="pill med">MEDIUM</span></div>
+      <div class="meta-item"><span class="meta-label">Tool agreement:</span> <span class="meta-val-score">5/6 bear (83%) · 4H</span></div>
+      <div class="meta-item"><span class="meta-label">Close:</span> <span class="meta-val-score">$74,550</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 class="sec">§1 — Decision Summary</h2>
+
+  <h3 class="sub">1A · Executive Summary</h3>
+  <table class="exec">
+    <tr><td>Bias</td><td><span class="pill short">SHORT tactical</span> — mean-reversion down to daily ascending-channel support after upper-band rejection</td></tr>
+    <tr><td>Final Confidence</td><td><span class="pill med">MEDIUM</span> (capped: no Fibs drawn on HTF)</td></tr>
+    <tr><td>Tool Agreement</td><td>5/6 bear · 1/6 bull (83% bear · 4H primary)</td></tr>
+    <tr><td>Invalidation</td><td><strong>$76,400</strong> short-term (4H VWAP reclaim) · <strong>$79,500</strong> structural (upper band + descending-TL retake)</td></tr>
+    <tr><td>Entry Zone</td><td><strong>$75,900 – $76,400</strong> — fade of 4H VWAP center retest (failed reclaim)</td></tr>
+    <tr><td>Exit Zone</td><td><strong>$70,500 – $71,100</strong> — Daily 50 SMA + Daily VWAP center + 4H 200 SMA confluence</td></tr>
+    <tr><td>Macro Watch</td><td><span class="pill med">TIER-SHIFTED HIGH</span> — <strong>Warsh Fed chair nomination hearing Tue 4/21 10:00 ET</strong> · elevated gap/IV risk · CPI ran 0.9% MoM last print</td></tr>
+  </table>
+
+  <h3 class="sub">1B · Key Levels (weighted)</h3>
+  <table>
+    <tr><th class="mono">Weight</th><th class="mono">Price</th><th class="mono">Sources</th></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$86,900</td><td>Daily 200 SMA — overhead structural resistance (far)</td></tr>
+    <tr class="heavy"><td class="weight">HEAVY</td><td class="price">$78,800 – $79,500</td><td>Descending TL from 2025 ATH + Daily upper VWAP band ($78,870) + 4H upper band ($79,043) + recent rejection high</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$76,349</td><td>4H VWAP center line — break point; acceptance/rejection here defines next leg</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$75,959</td><td>Weekly VWAP center line</td></tr>
+    <tr class="light"><td class="weight">LIGHT</td><td class="price">$75,162 / $75,619</td><td>30M 50 SMA / 30M 200 SMA — intraday magnet cluster</td></tr>
+    <tr class="current"><td>—</td><td class="price">$74,550 ← CURRENT</td><td>Regular session close 2026-04-19</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$73,296</td><td>4H lower VWAP band (−2.5σ) — statistical rare extreme · first bounce candidate</td></tr>
+    <tr class="heavy-support"><td class="weight">HEAVY</td><td class="price">$70,500 – $71,100</td><td>Daily 50 SMA ($70,542) + Daily VWAP center ($71,010) + 4H 200 SMA ($70,511) — three-tool confluence, channel support</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$66,000 – $68,000</td><td>Prior consolidation HVN / pre-breakout value area</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$63,150</td><td>Daily lower VWAP band (−2.5σ) — tail-risk support</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$60,195</td><td>Weekly 200 SMA — long-horizon structural anchor</td></tr>
+    <tr class="medium"><td class="weight">MEDIUM</td><td class="price">$52,040</td><td>Weekly lower VWAP band — macro tail</td></tr>
+  </table>
+
+  <div class="callout info"><strong>CSP Strike Zones:</strong> not applicable — BTCUSD spot has no equity-style listed options chain, and no CFE/Deribit OI was provided. Skipping §4 Options Chain and CSP Tier tables per skill rules.</div>
+
+  <!-- SECTION 2 -->
+  <h2 class="sec">§2 — Confidence Breakdown</h2>
+  <table>
+    <tr><th class="mono">Stage</th><th class="mono">Value</th></tr>
+    <tr><td>TA Confidence</td><td><span class="pill med">MEDIUM</span> — 3 structure tools (4H VWAP break, 4H upper-band rejection, descending-TL confluence) + MACD bear cross confirm; weekly still mixed; no HTF Fibs drawn caps at MEDIUM</td></tr>
+    <tr><td>Fundamental Context</td><td>not provided for BTC</td></tr>
+    <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+    <tr><td>Macro Calendar</td><td>Warsh Fed chair hearing Tue 4/21 10:00 ET (tier-shifted HIGH for BTC via +1 rate-sensitivity bump) · ~36h out · CPI ran 0.9% MoM prior print · Iran-conflict commodity overhang</td></tr>
+    <tr><td>Macro Modifier</td><td>No hard cap (event &gt;24h out) — but note elevated IV/gap risk; widen invalidation tolerance around event open</td></tr>
+    <tr><td><strong>Final Confidence</strong></td><td><strong><span class="pill med">MEDIUM</span></strong></td></tr>
+  </table>
+
+  <!-- SECTION 3 -->
+  <h2 class="sec">§3 — Supporting Analysis</h2>
+
+  <h3 class="sub">3A · Higher Timeframe Context</h3>
+  <ul>
+    <li><strong>Weekly:</strong> Downtrend from late-2025 ATH but consolidating — price bounced off the $56–60k zone (weekly 200 SMA) and has worked back up to test the descending trendline drawn off the ATH. Current candle <em>just tagged</em> the TL from underneath and closed back below. RVWAP center at $75,959 (just above price). RSI 33.57 still below midline — weekly momentum weak but curling. MACD histogram less negative each print (early divergence). 50 SMA ($96.2k) well above 200 SMA ($60.2k) — long-term structure still bullish. <em>No Fibs drawn</em> — capping TA at MEDIUM.</li>
+    <li><strong>Daily:</strong> Ascending channel from March low, price recently pushed to upper channel / upper VWAP band near $79k and was <em>decisively rejected</em>. RVWAP center $71,010 · upper band $78,870 (just hit). 50 SMA $70,542 now below price and acts as next target on a flush. 200 SMA $86,925 remains the dominant overhead wall. RSI 60.12 rolling over from 65+. MACD positive but histogram contracting — classic post-extension cooling. No Fibs drawn.</li>
+  </ul>
+
+  <h3 class="sub">3B · Current Timeframe Read (4H primary)</h3>
+  <ul>
+    <li><strong>Regime:</strong> Trending down intraday, inside a larger ascending channel on the daily. Compression broke in the sellers' favor at the upper band.</li>
+    <li><strong>VWAP:</strong> Price ($74,538) closed below VWAP center ($76,349) on the most recent 4H bar after being rejected at the upper band ($79,043). Slope is flattening. Band width still wide → volatility regime intact.</li>
+    <li><strong>MAs:</strong> 50 SMA ($74,346) right at price — pivotal; 200 SMA ($70,511) below. 50&gt;200 on 4H = bullish structure, so this is a <em>counter-structure tactical short</em>, not a trend entry.</li>
+    <li><strong>Momentum:</strong> RSI 54.14 and declining from ~62. MACD just crossed the signal line to the downside, histogram turning red on last bar.</li>
+    <li><strong>Fib reference:</strong> <em>Not drawn</em> on weekly or daily — structural retracement unknown. This is the binding constraint on confidence.</li>
+  </ul>
+
+  <h3 class="sub">3C · Confluence Zones</h3>
+  <p>The two HEAVY zones bracket the likely working range. Overhead, <strong>$78,800 – $79,500</strong> stacks the Weekly descending trendline, the Daily upper VWAP band, the 4H upper band, and the rejection high — price would need to reclaim and hold above here to flip the read bullish. Below, <strong>$70,500 – $71,100</strong> stacks the Daily 50 SMA, Daily VWAP center, and 4H 200 SMA — this is the best-defended support on the chart and the logical target for a mean-reversion short. The 4H lower band at <strong>$73,296</strong> is a MEDIUM-weight bounce candidate on the way down where a long scalp would be defensible if the HTF held; below $73k, the path opens to the HEAVY support zone.</p>
+
+  <h3 class="sub">3D · Divergences</h3>
+  <p>Weekly MACD is showing early <em>bullish</em> divergence (price basing, histogram less negative each print). This is structural long-horizon tailwind — <strong>it argues against pressing shorts below the HEAVY support zone</strong>. On the 4H, no clean divergence on this leg; the rollover is clean momentum loss after a test of resistance. On the daily, RSI rolled from 65 without a higher high vs. recent peak — consistent with the rejection but not a fully formed bearish divergence.</p>
+
+  <h3 class="sub">3E · Notes</h3>
+  <ul>
+    <li><strong>Macro overlay is the defining variable this week.</strong> Warsh hearing Tue 10:00 ET will reprice Fed path expectations. Hawkish read = USD up, real rates up, BTC down; dovish-leaning read = inverse. BTC is rate-sensitive, so the +1 event-tier bump applies — treat this as effectively HIGH-impact even though it's not an FOMC decision.</li>
+    <li><strong>Timeframe conflict is real.</strong> Weekly is neutral-to-improving; 4H is bearish. This is why the call is <em>tactical</em> short, not <em>structural</em> short. If price flushes to the HEAVY support zone and the weekly prints a clean higher-low with momentum expansion, the read flips to long-setup.</li>
+    <li><strong>Iran/Middle East conflict + hot CPI</strong> keep the stagflationary backdrop intact — real rates biased higher absent a dovish Warsh pivot, which is a structural headwind for BTC.</li>
+    <li><strong>30M shows an oversold bounce attempt</strong> (RSI 34, MACD crossing up from below). This is the kind of LTF bounce that offers the <em>entry retest</em> for the tactical short — fade the bounce back into $75.9k–$76.4k if it prints.</li>
+    <li><strong>Volume confirms the rejection:</strong> the push to $79k was on above-average 4H volume but failed to extend — classic exhaustion signature at resistance.</li>
+  </ul>
+
+  <!-- APPENDIX -->
+  <h2 class="sec">Appendix — Data Snapshot</h2>
+  <table>
+    <tr><th class="mono">TF</th><th class="mono">Close</th><th class="mono">VWAP C / U / L</th><th class="mono">50 / 200 SMA</th><th class="mono">RSI</th><th class="mono">MACD state</th></tr>
+    <tr><td class="mono">Weekly</td><td class="price">$74,552</td><td class="price">$75,960 / $99,879 / $52,040</td><td class="price">$96,199 / $60,195</td><td class="mono">33.57</td><td>Histogram &lt;0, curling up</td></tr>
+    <tr><td class="mono">Daily</td><td class="price">$74,568</td><td class="price">$71,010 / $78,870 / $63,150</td><td class="price">$70,542 / $86,925</td><td class="mono">60.12</td><td>Above zero, histogram contracting (rolling)</td></tr>
+    <tr><td class="mono">4H</td><td class="price">$74,539</td><td class="price">$76,349 / $79,043 / $73,655</td><td class="price">$74,346 / $70,512</td><td class="mono">54.14</td><td>Bear cross, histogram red latest bar</td></tr>
+    <tr><td class="mono">30M</td><td class="price">$74,550</td><td class="price">$74,992 / $76,687 / $73,296</td><td class="price">$75,162 / $75,619</td><td class="mono">34.36</td><td>Bull cross from deep negative (LTF bounce)</td></tr>
+  </table>
+
+  <p style="color: var(--text-2); font-size: 12px; margin-top: 24px;"><em>Reports follow the confluence-first TA framework: structure tools (VWAP ±2.5σ, VPVR, 50/200 SMA, Fib) define where; momentum tools (RSI, MACD) define whether the move has force. Confidence is weighted by tool agreement and capped by missing inputs or imminent macro risk. Position sizing, expiry selection, and delta are user-decided.</em></p>
+
+  <footer>
+    SMB LLC Macro Dashboard · TA Chart Analysis · BTCUSD · 2026-04-19 · Built from /ta-chart-analysis
+  </footer>
+
+</div>
+</body>
+</html>

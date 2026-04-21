@@ -1,45 +1,107 @@
 {
-  "lastUpdated": "2026-04-21T20:26:54.763010+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 08:26 PM UTC",
+  "lastUpdated": "2026-04-21T21:11:34.953297+00:00",
+  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 09:11 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed risk sentiment with oil surging over 5% on Iran deal uncertainty while bonds slump on strong economic data and dollar strength. Bitcoin exhibits resilience with institutional flows and sentiment improving, though traditional risk assets face headwinds from geopolitical tensions.",
+    "macroSummary": "Markets showed mixed signals as Iran rejected peace talks, driving oil up 5% and pressuring equities lower in choppy trading. Fed nominee Warsh cooled rate cut expectations while emphasizing Fed independence, contributing to bond weakness and dollar strength.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength, bond selling, and oil volatility from Iran tensions create cross-currents that challenge the clean Risk-On narrative, even as crypto shows relative strength.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Dollar strength, bond weakness, and geopolitical risk premium building through oil rally create headwinds against the Risk-On regime thesis.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar climbing on Iran uncertainty approaches risk-off threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "US dollar climbs on Iran uncertainty, approaching levels that historically coincide with risk-off conditions",
+        "signal": "US dollar climbs on Iran ceasefire uncertainty, approaching DXY risk-off threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bond slump on strong data suggests rates volatility building, which could pressure the MOVE threshold",
+        "signal": "Oil surges 5%+ as Iran rejects peace talks, introducing geopolitical risk premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil surge over 5% on geopolitical tensions indicates flight to commodities amid uncertainty",
+        "signal": "US bonds slump on strong data and Iran uncertainty, suggesting rates volatility building",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin sentiment hits highest since mid-January with institutional demand sustaining recovery",
+        "signal": "Wall Street closes lower in choppy session with Middle East focus overriding risk appetite",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin maintains $75K+ levels with positive sentiment and institutional accumulation continuing",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Gold falls for second session despite geopolitical tensions, unusual for typical risk-off environments",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - dollar strength on Iran tensions could approach 100 threshold that flips regime",
-      "Watch MOVE index as bond volatility from strong data and geopolitical uncertainty builds",
-      "Consider tightening BMNR put strikes if crypto divergence from traditional risk assets continues"
+      "Monitor DXY closely - approaching 100 threshold that would signal regime flip to Risk-Off",
+      "Watch for MOVE index breaking above 100 as bond volatility increases with Iran uncertainty",
+      "Consider tightening BMNR put ladder strikes if crypto volatility increases with broader risk-off pressure"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Clings to $75,000 as Warsh Cools Rate Bets and Strategy Eclipses BlackRock",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T21:00:38+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:f1be5f67d094b:0/"
+    },
+    {
+      "title": "TEXT: Pres Trump, in reverse. extends ceasefire 'until such time (Iran's) proposal is submitted and discussions are concluded, one way or the other'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:51:00+00:00",
+      "timeDisplay": "8:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:2ecf50d1f094b:0-text-pres-trump-in-reverse-extends-ceasefire-until-such-time-iran-s-proposal-is-submitted-and-discussions-are-concluded-one-way-or-the-other/"
+    },
+    {
+      "title": "EQT Corporation Q1 Profit Rises",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:47:33+00:00",
+      "timeDisplay": "8:47 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:ba6674fa1e3ae:0-eqt-corporation-q1-profit-rises/"
+    },
+    {
+      "title": "\u00a0Wall Street closes choppy session lower with Middle East in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T20:45:41+00:00",
+      "timeDisplay": "8:45 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4141EU:0-wall-street-closes-choppy-session-lower-with-middle-east-in-focus/"
+    },
+    {
+      "title": "Etherealize updates long-term ETH price prediction to $250,000",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:40:33+00:00",
+      "timeDisplay": "8:40 PM",
+      "link": "https://www.tradingview.com/news/the_block:9cde82f44094b:0-etherealize-updates-long-term-eth-price-prediction-to-250-000/"
+    },
+    {
+      "title": "Crude Oil Cuts Gains",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:38:36+00:00",
+      "timeDisplay": "8:38 PM",
+      "link": "https://www.tradingview.com/news/te_news:543654:0-crude-oil-cuts-gains/"
+    },
+    {
+      "title": "US stocks end lower, oil gains as Iran rejects peace talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T20:36:05+00:00",
+      "timeDisplay": "8:36 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4141CD:0-us-stocks-end-lower-oil-gains-as-iran-rejects-peace-talks/"
+    },
     {
       "title": "Evening digest: Trump eyes Iran deal, Warsh pledges Fed independence",
       "source": "invezz",
@@ -433,14 +495,6 @@
       "link": "https://www.tradingview.com/news/macenews:416c8267a094b:0-fed-nominee-warsh-q-a-want-to-improve-inflation-measurement-when-get-to-fed-think-underlying-inflation-improving/"
     },
     {
-      "title": "FED NOMINEE WARSH Q&A: DON'T AGREE THAT HIGHER INFLATION DUE TO TARIFFS; INFLATION MEASURES IMPERFECT; MOST INTERESTED IN UNDERLYING INFL RATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:19:00+00:00",
-      "timeDisplay": "3:19 PM",
-      "link": "https://www.tradingview.com/news/macenews:61830db50094b:0-fed-nominee-warsh-q-a-don-t-agree-that-higher-inflation-due-to-tariffs-inflation-measures-imperfect-most-interested-in-underlying-infl-rate/"
-    },
-    {
       "title": "Coin Center Says Crypto Code Is Protected Crypto Free Speech",
       "source": "99Bitcoins",
       "color": "#00e5ff",
@@ -455,14 +509,6 @@
       "timestamp": "2026-04-21T15:17:00+00:00",
       "timeDisplay": "3:17 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260421006543:0/"
-    },
-    {
-      "title": "5 Most Powerful AI Models Predict Bitcoin\u2019s Price for 2026-27 \u2013 One Says $210K",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:04:27+00:00",
-      "timeDisplay": "3:04 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:952402b05094b:0-5-most-powerful-ai-models-predict-bitcoin-s-price-for-2026-27-one-says-210k/"
     },
     {
       "title": "Higher Oil Prices More An Inflation Than a Growth Issue \u2014 Market Talk",
@@ -599,46 +645,6 @@
       "timestamp": "2026-04-21T11:12:09+00:00",
       "timeDisplay": "11:12 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:c79c82279094b:0-kelp-dao-attacker-moves-175m-in-ether-after-exploit-arkham/"
-    },
-    {
-      "title": "Crypto Market Shrugs Off DeFi Hacks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T10:57:00+00:00",
-      "timeDisplay": "10:57 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421003071:0/"
-    },
-    {
-      "title": "Arbitrum Freeze Sparks $175 Million Laundering Frenzy on Ethereum",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T10:25:40+00:00",
-      "timeDisplay": "10:25 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:77f3ae794094b:0-arbitrum-freeze-sparks-175-million-laundering-frenzy-on-ethereum/"
-    },
-    {
-      "title": "KelpDAO Exploiter Moves 75,700 ETH Across Two New Wallets Minutes After Arbitrum\u2019s Freeze",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T09:30:05+00:00",
-      "timeDisplay": "9:30 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:1b3fb798e094b:0-kelpdao-exploiter-moves-75-700-eth-across-two-new-wallets-minutes-after-arbitrum-s-freeze/"
-    },
-    {
-      "title": "Ethereum rips past $2,300 as ETF inflows ignite fresh investor rush",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T09:15:39+00:00",
-      "timeDisplay": "9:15 AM",
-      "link": "https://www.tradingview.com/news/invezz:0d66e6d5a094b:0-ethereum-rips-past-2-300-as-etf-inflows-ignite-fresh-investor-rush/"
-    },
-    {
-      "title": "Stocks stall as doubts emerge over Iran/US talks; AI mania back in vogue\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T08:50:43+00:00",
-      "timeDisplay": "8:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140GR:0-stocks-stall-as-doubts-emerge-over-iran-us-talks-ai-mania-back-in-vogue/"
     }
   ]
 }

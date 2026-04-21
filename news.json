@@ -1,45 +1,61 @@
 {
-  "lastUpdated": "2026-04-21T00:04:47.272013+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 12:04 AM UTC",
+  "lastUpdated": "2026-04-21T01:13:34.152146+00:00",
+  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 01:13 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as US-Iran ceasefire tensions drive oil surges and stock volatility, while crypto sees massive institutional inflows with Bitcoin ETFs hitting record territory and major corporate purchases. Earnings remain strong but concentrated, with Fed nominee Warsh emphasizing price stability independence ahead of Senate hearings.",
+    "macroSummary": "Markets are navigating heightened geopolitical tensions around US-Iran ceasefire negotiations, with oil surging on supply concerns while equities pulled back from record highs. Crypto markets showed resilience with major institutional Bitcoin and Ethereum purchases, while Fed Chair nominee Warsh emphasized independence and price stability commitment.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Iran ceasefire tensions are driving oil surges, stock declines from record highs, and safe-haven flows that contradict the clean Risk-On thesis, though crypto strength provides partial offset.",
+    "regimePressureReason": "Geopolitical tensions are driving risk-off behavior in traditional markets with oil surging and stocks retreating from highs, while safe-haven dynamics appear to be emerging despite ongoing ETF inflows.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Oil surging on Iran ceasefire tensions while stocks ease from record highs suggests geopolitical risk premium emerging",
+        "signal": "Oil surging on US-Iran ceasefire tensions and Hormuz escalation concerns indicates risk-off positioning in commodities",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US dollar dropping as traders remain optimistic on Iran peace breakthrough supports risk-on sentiment",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin ETFs hitting record inflows of $39.6B with institutional buying surge reinforces risk asset appetite",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Gold and silver dropping as war tensions ratchet up shows unusual safe-haven behavior contradicting typical flight-to-quality patterns",
+        "signal": "Stocks ending lower and easing from record highs on Iran worries suggests diminishing risk appetite",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US bonds little changed despite Iran turmoil suggests rates market dismissing geopolitical risks",
+        "signal": "US dollar dropping as traders remain optimistic on Iran peace breakthrough shows mixed safe-haven demand",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "ETF inflows hitting $39.6B with US stocks at record highs supports continued institutional risk-taking",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Major crypto institutional buying with MicroStrategy adding $2.54B Bitcoin and Bitmine purchasing 101,627 ETH shows risk asset appetite",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil volatility impact on broader risk sentiment as Iran tensions could pressure equity positions",
-      "BMNR ladder benefits from continued crypto institutional flows but watch for geopolitical spillover effects",
-      "Consider defensive positioning if Iran tensions escalate beyond current ceasefire uncertainty"
+      "Monitor oil price action closely as sustained energy rally could signal broader risk-off transition",
+      "Watch equity momentum for signs of sustained retreat from highs versus temporary geopolitical pause",
+      "Consider tightening BMNR put ladder strikes if crypto volatility increases with traditional market uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "Oil falls on expectations US-Iran talks likely to proceed, opening supply",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T00:53:25+00:00",
+      "timeDisplay": "12:53 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N413120:0-oil-falls-on-expectations-us-iran-talks-likely-to-proceed-opening-supply/"
+    },
+    {
+      "title": "Key facts: MicroStrategy +34k BTC; ETFs $996M; SEC: Bitcoin Not Security",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T00:06:59+00:00",
+      "timeDisplay": "12:06 AM",
+      "link": "https://www.tradingview.com/news/tradingview:9f117eec6ffee:0-key-facts-microstrategy-34k-btc-etfs-996m-sec-bitcoin-not-security/"
+    },
     {
       "title": "Key facts: Bitmine buys 101,627 ETH; inflows, roadmap, mixed outlook",
       "source": "tradingview",
@@ -47,6 +63,14 @@
       "timestamp": "2026-04-21T00:04:04+00:00",
       "timeDisplay": "12:04 AM",
       "link": "https://www.tradingview.com/news/tradingview:652f303a09412:0-key-facts-bitmine-buys-101-627-eth-inflows-roadmap-mixed-outlook/"
+    },
+    {
+      "title": "Oil Falls Amid Prospects of U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T00:04:00+00:00",
+      "timeDisplay": "12:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260420009448:0/"
     },
     {
       "title": "Gold Steadies as US-Iran Talks Eyed",
@@ -143,6 +167,14 @@
       "timestamp": "2026-04-20T20:21:50+00:00",
       "timeDisplay": "8:21 PM",
       "link": "https://www.tradingview.com/news/te_news:543269:0-oil-rises-again-on-monday-on-hormuz-escalations/"
+    },
+    {
+      "title": "Early Uber Investor Questions Current Bitcoin Price",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-20T20:02:47+00:00",
+      "timeDisplay": "8:02 PM",
+      "link": "https://www.tradingview.com/news/u_today:4a5fbe7ba094b:0-early-uber-investor-questions-current-bitcoin-price/"
     },
     {
       "title": "Strategy Crosses 815,000 BTC as Markets Navigate Iran Fears and a Quantum Reckoning",
@@ -529,22 +561,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:bdb29668c094b:0-vitalik-buterin-on-ethereum-s-roadmap-zkevm-quantum-resistance-and-10-second-finality/"
     },
     {
-      "title": "If Not For Iran, Talk in Canada Would Be Focused on Rates Cuts \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T13:40:00+00:00",
-      "timeDisplay": "1:40 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420004490:0/"
-    },
-    {
-      "title": "Adam Back says current demand is \u2018almost\u2019 enough to send Bitcoin to $1M",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T13:20:00+00:00",
-      "timeDisplay": "1:20 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8cb26a7f2094b:0-adam-back-says-current-demand-is-almost-enough-to-send-bitcoin-to-1m/"
-    },
-    {
       "title": "Crypto adoption shows signs of recovery",
       "source": "reuters",
       "color": "#ff6d00",
@@ -623,22 +639,6 @@
       "timestamp": "2026-04-20T12:47:00+00:00",
       "timeDisplay": "12:47 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260420003838:0/"
-    },
-    {
-      "title": "Oil Futures Rise on Uncertainty Over U.S.-Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T12:44:00+00:00",
-      "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420003802:0/"
-    },
-    {
-      "title": "Dollar's Gains Are Modest as FX Volatility is Low \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T12:38:00+00:00",
-      "timeDisplay": "12:38 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420003755:0/"
     }
   ]
 }

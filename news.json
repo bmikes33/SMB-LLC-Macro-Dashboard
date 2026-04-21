@@ -1,51 +1,283 @@
 {
-  "lastUpdated": "2026-04-21T12:53:06.545863+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 12:53 PM UTC",
+  "lastUpdated": "2026-04-21T14:46:07.346229+00:00",
+  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 02:46 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "March retail sales significantly beat expectations at +1.7% M/M driven by strong gasoline spending, while President Trump signals military action expectations and ongoing Iran negotiations. Bitcoin crosses $76K amid declining VIX and renewed risk appetite in crypto and equities.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Strong consumer spending data, VIX decline, Bitcoin strength, and improving geopolitical sentiment all support the Risk-On regime classification.",
+    "macroSummary": "Markets showed mixed momentum with equities gaining despite Middle East tensions while Fed nominee Warsh signals major policy changes ahead including new inflation targeting regime. Trump escalated Iran rhetoric promising military action while strong retail sales data pushed dollar and yields higher.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Warsh's hawkish Fed pivot signals and rising yields from strong economic data create early reflation pressure, while Trump's Iran escalation threatens the geopolitical stability underpinning current risk-on conditions.",
     "thresholdWatches": [
       {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "VIX drops 45% in three weeks, moving further away from regime invalidation threshold"
+        "indicator": "MOVE",
+        "level": "> 100",
+        "signal": "Rising yields after retail sales data suggests increasing rates volatility risk"
       }
     ],
     "keySignals": [
       {
-        "signal": "March retail sales +1.7% M/M vs +1.4% expected shows robust consumer demand supporting growth momentum",
+        "signal": "Fed nominee Warsh calls for 'big changes' and new inflation regime, signaling hawkish policy shift ahead",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US yields rise after strong retail sales data, adding to reflation pressure in rates complex",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Trump escalates Iran threats promising bombing campaign, raising geopolitical risk premium",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Wall Street indexes gain and small caps lead 2026 performance supporting equity momentum",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "VIX declining 45% over three weeks indicates continued volatility compression in risk-on environment",
+        "signal": "Bitcoin up 20% from February lows with whale accumulation accelerating",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin breaking above $76K with crypto stocks rallying suggests risk asset appetite remains strong",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Trump's military rhetoric about 'expecting to be bombing' introduces potential geopolitical volatility risk",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Gasoline sales surge +15.5% M/M could signal early inflationary pressures building in energy complex",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance as Bitcoin holds $76K level with improving crypto sentiment",
-      "Consider reducing short book exposure given strengthening risk-on signals across equities and crypto",
-      "Watch for any VIX bounce from current low levels as geopolitical rhetoric escalates"
+      "Monitor MOVE index closely - rates volatility building from Warsh hawkish signals and strong data",
+      "Consider reducing BMNR ladder size if geopolitical premium rises on Iran escalation",
+      "Watch for credit market reaction to Fed policy uncertainty - HYG key level 79.00 support test possible"
     ]
   },
   "articles": [
+    {
+      "title": "FED NOMINEE WARSH Q&A: NEED NEW 'INFLATION REGIME,' NEW COMMUNICATIONS; 'BIG CHANGES ARE NEEDED'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:38:00+00:00",
+      "timeDisplay": "2:38 PM",
+      "link": "https://www.tradingview.com/news/macenews:d082e77f7094b:0-fed-nominee-warsh-q-a-need-new-inflation-regime-new-communications-big-changes-are-needed/"
+    },
+    {
+      "title": "Wall Street indexes gain even with ceasefire in question",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T14:36:26+00:00",
+      "timeDisplay": "2:36 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N414117:0-wall-street-indexes-gain-even-with-ceasefire-in-question/"
+    },
+    {
+      "title": "FED NOMINEE WARSH Q&A 'NO MORE PRESSING QUESTION THAN THE COST OF LIVING;' STILL LIVING WITH INFLATION ERRORS OF 2021 AND 2022",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:36:00+00:00",
+      "timeDisplay": "2:36 PM",
+      "link": "https://www.tradingview.com/news/macenews:67e5f141a094b:0-fed-nominee-warsh-q-a-no-more-pressing-question-than-the-cost-of-living-still-living-with-inflation-errors-of-2021-and-2022/"
+    },
+    {
+      "title": "US dollar gains on Iran peace optimism and upbeat retail sales",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T14:35:44+00:00",
+      "timeDisplay": "2:35 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4140LX:0-us-dollar-gains-on-iran-peace-optimism-and-upbeat-retail-sales/"
+    },
+    {
+      "title": "U.K. Inflation Data Likely to Show Effects of Middle East Conflict \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:30:00+00:00",
+      "timeDisplay": "2:30 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421006124:0/"
+    },
+    {
+      "title": "Bitcoin Up Over 20% From February Bottom \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:17:00+00:00",
+      "timeDisplay": "2:17 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421006030:0/"
+    },
+    {
+      "title": "FEB US BUSINESS INVENTORIES: INVENTORY/SALES RATIO 1.33 VS FEB 2025 1.39; SALES +1.7% AND Y/Y +5.5%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:03:00+00:00",
+      "timeDisplay": "2:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:1ebee220d094b:0-feb-us-business-inventories-inventory-sales-ratio-1-33-vs-feb-2025-1-39-sales-1-7-and-y-y-5-5/"
+    },
+    {
+      "title": "FEB US BUSINESS INVENTORIES:; +0.4%; JAN REVISED TO  0.0 VS ORIGINAL -0.1%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:d8e33ab3b094b:0-feb-us-business-inventories-0-4-jan-revised-to-0-0-vs-original-0-1/"
+    },
+    {
+      "title": "U.K.'s Stablecoin Plans Mark Positive Step \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421005863:0/"
+    },
+    {
+      "title": "FED NOMINEE KEVIN WARSH PREPARED REMARKS BEFORE SENATE BANKING COMMITTEE PUBLISHED YESTERDAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:8ffed1b62094b:0-fed-nominee-kevin-warsh-prepared-remarks-before-senate-banking-committee-published-yesterday/"
+    },
+    {
+      "title": "US NAR PENDING HOME SALES +1.5% IN MARCH FROM FEB. VS. +1.0% MARKETS EXPECTED; SALES -1.1% IN MARCH FROM YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:0bd09e91d094b:0-us-nar-pending-home-sales-1-5-in-march-from-feb-vs-1-0-markets-expected-sales-1-1-in-march-from-year-ago/"
+    },
+    {
+      "title": "US NAR PENDING HOME SALES: SALES REVISED TO +2.5% IN FEB. FROM JAN. VS. +1.8% PREVIOUSLY REPORTED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:16edbf626094b:0-us-nar-pending-home-sales-sales-revised-to-2-5-in-feb-from-jan-vs-1-8-previously-reported/"
+    },
+    {
+      "title": "US NAR PENDING HOME SALES: SALES UP IN NORTHEAST (+4.4%), SOUTH (+3.9%) IN MARCH FROM FEB.; SALES DOWN IN MIDWEST (-1.3%), WEST (-2.6%)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:d04b45753094b:0-us-nar-pending-home-sales-sales-up-in-northeast-4-4-south-3-9-in-march-from-feb-sales-down-in-midwest-1-3-west-2-6/"
+    },
+    {
+      "title": "US NAR PENDING HOME SALES: SOUTH LIKELY TO SEE BETTER SALES THIS YEAR BECAUSE JOB GAINS STRONGEST IN REGION WHILE HOME PRICES HAVE BEEN CUT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:c2203d291094b:0-us-nar-pending-home-sales-south-likely-to-see-better-sales-this-year-because-job-gains-strongest-in-region-while-home-prices-have-been-cut/"
+    },
+    {
+      "title": "US NAR'S YUN: PENDING HOME SALES RISE IN MARCH DESPITE HIGHER MORTGAGE RATES SHOWS PENT-UP DEMAND, SUGGESTS SALES TO RISE AS HOUSING INVENTORY GAINS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:f2cf0cbcb094b:0-us-nar-s-yun-pending-home-sales-rise-in-march-despite-higher-mortgage-rates-shows-pent-up-demand-suggests-sales-to-rise-as-housing-inventory-gains/"
+    },
+    {
+      "title": "Gold Stalls Below $4,800 Amid Trump\u2019s Iran Threats and Strong US Data",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:54:22+00:00",
+      "timeDisplay": "1:54 PM",
+      "link": "https://www.tradingview.com/news/te_news:543561:0-gold-stalls-below-4-800-amid-trump-s-iran-threats-and-strong-us-data/"
+    },
+    {
+      "title": "Bitcoin Whales Buy at the Fastest Rate in a Year \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:53:00+00:00",
+      "timeDisplay": "1:53 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421005737:0/"
+    },
+    {
+      "title": "Bitcoin Bear Flag Tightens Grip as Altcoins Risk 50% Crash",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:42:59+00:00",
+      "timeDisplay": "1:42 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:a9782b587094b:0-bitcoin-bear-flag-tightens-grip-as-altcoins-risk-50-crash/"
+    },
+    {
+      "title": "Kevin Warsh Could Be The First Fed Chair With Crypto Exposure \u2014 If Senate Doesn\u2019t Block His Nomination Over Powell Investigation Feud",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:36:47+00:00",
+      "timeDisplay": "1:36 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:68ec978c3094b:0/"
+    },
+    {
+      "title": "Canton, ZKsync clash over how blockchains enforce rules",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:30:10+00:00",
+      "timeDisplay": "1:30 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3dd8d586b094b:0-canton-zksync-clash-over-how-blockchains-enforce-rules/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - Apr 21",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:13:00+00:00",
+      "timeDisplay": "1:13 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421005296:0/"
+    },
+    {
+      "title": "PRES TRUMP Q&A/CNBC: USA 'WOULD HAVE FAILED IF HADN'T BEEN ELECTED;' SAUDIS DIDN'T ASK FOR ANYTHING WHEN TALKED TO THEM YESTERDAY; NATO'PAPER TIGER'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:09:00+00:00",
+      "timeDisplay": "1:09 PM",
+      "link": "https://www.tradingview.com/news/macenews:13abb2cf2094b:0-pres-trump-q-a-cnbc-usa-would-have-failed-if-hadn-t-been-elected-saudis-didn-t-ask-for-anything-when-talked-to-them-yesterday-nato-paper-tiger/"
+    },
+    {
+      "title": "PRES TRUMP/PRESS CONF: DEFENSE FIRMS FORCED TO BE 'BUILDING PLANTS ALL OVER THE COUNTRY;' FX SWAP WITH UAE UNDER CONSIDERATION; GOT HIT HARD BY IRAN",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:06:00+00:00",
+      "timeDisplay": "1:06 PM",
+      "link": "https://www.tradingview.com/news/macenews:86365de24094b:0-pres-trump-press-conf-defense-firms-forced-to-be-building-plants-all-over-the-country-fx-swap-with-uae-under-consideration-got-hit-hard-by-iran/"
+    },
+    {
+      "title": "PRES TRUMP/PRESS CONF: RE UNITED/AMERICAN AIRLINES; WOULD LIKE SOMEONE TO BUY SPIRIT AIRLINES BUT UNITED AND AMERICAN 'DOING VERY FINE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:03:00+00:00",
+      "timeDisplay": "1:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:887d3b6c0094b:0-pres-trump-press-conf-re-united-american-airlines-would-like-someone-to-buy-spirit-airlines-but-united-and-american-doing-very-fine/"
+    },
+    {
+      "title": "Small names, big gains: Small caps take the lead in 2026",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T13:01:39+00:00",
+      "timeDisplay": "1:01 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140MQ:0-small-names-big-gains-small-caps-take-the-lead-in-2026/"
+    },
+    {
+      "title": "Onramp Launches Onramp Finance, a Unified Money Platform Built for Long-Term Wealth with Up to 5% on Cash Management",
+      "source": "financewire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:00:01+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/financewire:0b065ef98094b:0-onramp-launches-onramp-finance-a-unified-money-platform-built-for-long-term-wealth-with-up-to-5-on-cash-management/"
+    },
+    {
+      "title": "PRES TRUMP/PRESS CONF: IF OTHER COUNTRIES DON'T COLLECT TARIFF REFUNDS 'I'LL REMEMBER THAT;' COLLEGE SPORTS 'IS A DISASTER NOW' THANKS TO COURT RULING",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T13:00:00+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:6cd9055a1094b:0-pres-trump-press-conf-if-other-countries-don-t-collect-tariff-refunds-i-ll-remember-that-college-sports-is-a-disaster-now-thanks-to-court-ruling/"
+    },
+    {
+      "title": "PRES TRUMP Q&A/CNBC: THINK WARSH 'WILL DO A GREAT JOB;' COULD HAVE LOWEST INTEREST RATES IN THE WORLD; SUPREME CT SHOULD HAVE PREVENTED TARIFF PAYBACK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T12:57:00+00:00",
+      "timeDisplay": "12:57 PM",
+      "link": "https://www.tradingview.com/news/macenews:8b5c9ef65094b:0-pres-trump-q-a-cnbc-think-warsh-will-do-a-great-job-could-have-lowest-interest-rates-in-the-world-supreme-ct-should-have-prevented-tariff-payback/"
+    },
+    {
+      "title": "PRES TRUMP Q&A/CNBC: 'NOT GOING TO BE RUSHED' ON IRAN; DEMOCRATS 'TREASONOUS;' RE ANTHROPIC, 'TEND TO BE ON THE RADICAL LEFT;' THINK WILL 'GET ALONG'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T12:52:00+00:00",
+      "timeDisplay": "12:52 PM",
+      "link": "https://www.tradingview.com/news/macenews:80de76bdd094b:0-pres-trump-q-a-cnbc-not-going-to-be-rushed-on-iran-democrats-treasonous-re-anthropic-tend-to-be-on-the-radical-left-think-will-get-along/"
+    },
     {
       "title": "A Tiny Miner With $100M Bitcoin Ambition Is Back At The \u2018Halfway\u2019 Mark",
       "source": "stocktwits",
@@ -79,6 +311,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421004580:0/"
     },
     {
+      "title": "US yields rise after retail sales data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T12:38:23+00:00",
+      "timeDisplay": "12:38 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N40P0RP:0-us-yields-rise-after-retail-sales-data/"
+    },
+    {
       "title": "PRES TRUMP Q&A/CNBC: USA IN 'TOTAL CONTROL' OF STRAIT; WON'T NECESSARILY EXTEND CEASE FIRE; IRAN COULD BE A 'WONDERFUL COUNTRY",
       "source": "macenews",
       "color": "#00e5ff",
@@ -95,124 +335,28 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421004297:0/"
     },
     {
-      "title": "MORE U.S. MARCH RETAIL SALES: FOOD & BEVERAGE STORES +0.7% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:e6463d237094b:0-more-u-s-march-retail-sales-food-beverage-stores-0-7-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: MOTOR VEHICLE & PARTS DEALERS +0.5% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:102c9a9a0094b:0-more-u-s-march-retail-sales-motor-vehicle-parts-dealers-0-5-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: DEPARMENT STORES +4.2% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:27feb4c3d094b:0-more-u-s-march-retail-sales-deparment-stores-4-2-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: FOOD & DRINKING PLACES +0.1% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:0d243bdd0094b:0-more-u-s-march-retail-sales-food-drinking-places-0-1-m-m/"
-    },
-    {
-      "title": "PRES TRUMP Q&A/CNBC: THINK IRAN WILL COME BACK TO NEGOTIATING TABLE; THINK US IN GOOD NEGOTIATING POSITION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:ddf4d4e1b094b:0-pres-trump-q-a-cnbc-think-iran-will-come-back-to-negotiating-table-think-us-in-good-negotiating-position/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: ELECTRONICS & APPLIANCES +0.9% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:d069d0ab8094b:0-more-u-s-march-retail-sales-electronics-appliances-0-9-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: NON-STORE RETAILERS +1.0% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:26e8c8374094b:0-more-u-s-march-retail-sales-non-store-retailers-1-0-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: FEB REVISED TO +0.7% M/M (VS +0.6% PREVIOUS REPORT)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:ac7d59f3b094b:0-more-u-s-march-retail-sales-feb-revised-to-0-7-m-m-vs-0-6-previous-report/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: FURNITURE & HOME STORIES +2.2% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:66a53009a094b:0-more-u-s-march-retail-sales-furniture-home-stories-2-2-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: EX-GAS +0.6% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:288c42692094b:0-more-u-s-march-retail-sales-ex-gas-0-6-m-m/"
-    },
-    {
-      "title": "MORE U.S. MARCH RETAIL SALES: GASOLINE +15.5% M/M",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:877f53e12094b:0-more-u-s-march-retail-sales-gasoline-15-5-m-m/"
-    },
-    {
-      "title": "U.S. MARCH RETAIL SALES +1.7% M/M (VS +1.4% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:f82f519c1094b:0-u-s-march-retail-sales-1-7-m-m-vs-1-4-expected/"
-    },
-    {
-      "title": "U.S. MARCH RETAIL SALES EX-VEHICLES & GAS +0.6% M/M (VS +0.2% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:047ef31c8094b:0-u-s-march-retail-sales-ex-vehicles-gas-0-6-m-m-vs-0-2-expected/"
-    },
-    {
-      "title": "U.S. MARCH RETAIL SALES EX-VEHICLES +1.9% M/M (VS +1.3% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:df370d053094b:0-u-s-march-retail-sales-ex-vehicles-1-9-m-m-vs-1-3-expected/"
-    },
-    {
       "title": "Kevin Warsh Is 'Battle Tested' And Ready For The Job, Says Senate Banking Committee Chairman Tim Scott Ahead Of Confirmation Hearing",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-04-21T12:29:31+00:00",
       "timeDisplay": "12:29 PM",
       "link": "https://www.tradingview.com/news/stocktwits:f0cf230c1094b:0/"
+    },
+    {
+      "title": "DDC Enterprise 2025 Rev $39.2M >DDC",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T12:28:00+00:00",
+      "timeDisplay": "12:28 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421004297_20260421004300:0/"
+    },
+    {
+      "title": "DDC Enterprise Reached 2,383 Bitcoin as of April 21, 2026 >DDC",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T12:27:00+00:00",
+      "timeDisplay": "12:27 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421004297_20260421004297:0/"
     },
     {
       "title": "VIX drops 45% in three weeks: Is Bitcoin price ready to retake $80K?",
@@ -223,14 +367,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:6d77e0af9094b:0-vix-drops-45-in-three-weeks-is-bitcoin-price-ready-to-retake-80k/"
     },
     {
-      "title": "HEADS UP: PRESIDENT TRUMP Q&A ON CNBC AFTER 8:30A ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:25:00+00:00",
-      "timeDisplay": "12:25 PM",
-      "link": "https://www.tradingview.com/news/macenews:c7b89c68e094b:0-heads-up-president-trump-q-a-on-cnbc-after-8-30a-et/"
-    },
-    {
       "title": "GLXY CEO Mike Novogratz Says \u2018Drop The Powell Witch Hunt\u2019 Ahead Of Kevin Warsh Confirmation \u2013 BMNR\u2019s Tom Lee Predicts Bull Run",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -239,20 +375,28 @@
       "link": "https://www.tradingview.com/news/stocktwits:5f82c0cdc094b:0/"
     },
     {
-      "title": "US ADP PRIVATE PAYROLLS UP AVG. 40,250 PER WEEK IN 4 WEEKS ENDED IN PREVIOUS WEEK ENDED MARCH 28, REVISED FROM 39,250 PREVIOUSL Y REPORTED",
-      "source": "macenews",
+      "title": "While Retail Panic Sold, Bitcoin\u2019s Wealthiest Investors Added 18.5% More in Q1 2026",
+      "source": "coinpedia",
       "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:16:00+00:00",
-      "timeDisplay": "12:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:71412cde7094b:0-us-adp-private-payrolls-up-avg-40-250-per-week-in-4-weeks-ended-in-previous-week-ended-march-28-revised-from-39-250-previousl-y-reported/"
+      "timestamp": "2026-04-21T12:14:02+00:00",
+      "timeDisplay": "12:14 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:31bf9aaf8094b:0-while-retail-panic-sold-bitcoin-s-wealthiest-investors-added-18-5-more-in-q1-2026/"
     },
     {
-      "title": "US ADP PRIVATE PAYROLLS UP AVG. 54,750 PER WEEK IN 4 WEEKS ENDED IN LATEST WEEK ENDED APRIL 4",
-      "source": "macenews",
+      "title": "Strategy Overtakes BlackRock, Holds 4% of Bitcoin Overall Supply",
+      "source": "coinpedia",
       "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:16:00+00:00",
-      "timeDisplay": "12:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:bc7a71c07094b:0-us-adp-private-payrolls-up-avg-54-750-per-week-in-4-weeks-ended-in-latest-week-ended-april-4/"
+      "timestamp": "2026-04-21T12:12:44+00:00",
+      "timeDisplay": "12:12 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:1e8f2e6e0094b:0-strategy-overtakes-blackrock-holds-4-of-bitcoin-overall-supply/"
+    },
+    {
+      "title": "Is Altcoin Momentum Fading: Why LINK, SOL, ALGO, SEI, and TAO Can\u2019t Break Out Above Consolidation?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T12:02:13+00:00",
+      "timeDisplay": "12:02 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:ca9e055b1094b:0-is-altcoin-momentum-fading-why-link-sol-algo-sei-and-tao-can-t-break-out-above-consolidation/"
     },
     {
       "title": "Stocks rise as mood improves over Iran/US talks; AI mania back in vogue",
@@ -292,7 +436,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-21T10:59:00+00:00",
       "timeDisplay": "10:59 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421003101:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260421003100:0/"
     },
     {
       "title": "Bitcoin Price Jumps Above $76,000. Huge Strategy Purchase Fuels Crypto Gains. \u2014 Barrons.com",
@@ -308,31 +452,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-21T10:57:00+00:00",
       "timeDisplay": "10:57 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421003072:0/"
-    },
-    {
-      "title": "Hyperscale Data Inc - Exceeds $50 Million In Bitcoin Holdings, Surpasses Halfway To $100 Million Goal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T10:33:56+00:00",
-      "timeDisplay": "10:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41404C:0-hyperscale-data-inc-exceeds-50-million-in-bitcoin-holdings-surpasses-halfway-to-100-million-goal/"
-    },
-    {
-      "title": "Hyperscale Data Exceeds $50M in Bitcoin Holdings for Second Time, Surpassing Halfway Mark Toward $100 M Bitcoin Treasury Goal",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T10:30:00+00:00",
-      "timeDisplay": "10:30 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421002480_20260421002513:0/"
-    },
-    {
-      "title": "Top Altcoins April 2026: Analysts Flag Eight Names as Bitcoin Season Keeps Most Tokens Down",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T10:30:00+00:00",
-      "timeDisplay": "10:30 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:383e78d5f094b:0-top-altcoins-april-2026-analysts-flag-eight-names-as-bitcoin-season-keeps-most-tokens-down/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260421003071:0/"
     },
     {
       "title": "Arbitrum Freeze Sparks $175 Million Laundering Frenzy on Ethereum",
@@ -341,14 +461,6 @@
       "timestamp": "2026-04-21T10:25:40+00:00",
       "timeDisplay": "10:25 AM",
       "link": "https://www.tradingview.com/news/beincrypto:77f3ae794094b:0-arbitrum-freeze-sparks-175-million-laundering-frenzy-on-ethereum/"
-    },
-    {
-      "title": "Scammers demand crypto from stranded ships in Strait of Hormuz: Report",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T09:53:55+00:00",
-      "timeDisplay": "9:53 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e7b36a05e094b:0-scammers-demand-crypto-from-stranded-ships-in-strait-of-hormuz-report/"
     },
     {
       "title": "KelpDAO Exploiter Moves 75,700 ETH Across Two New Wallets Minutes After Arbitrum\u2019s Freeze",
@@ -367,14 +479,6 @@
       "link": "https://www.tradingview.com/news/invezz:0d66e6d5a094b:0-ethereum-rips-past-2-300-as-etf-inflows-ignite-fresh-investor-rush/"
     },
     {
-      "title": "Scammers demand crypto \u2018clearance\u2019 fees from ships near Strait of Hormuz: report",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T09:11:35+00:00",
-      "timeDisplay": "9:11 AM",
-      "link": "https://www.tradingview.com/news/the_block:c2d525eb3094b:0-scammers-demand-crypto-clearance-fees-from-ships-near-strait-of-hormuz-report/"
-    },
-    {
       "title": "Stocks stall as doubts emerge over Iran/US talks; AI mania back in vogue\u00a0",
       "source": "reuters",
       "color": "#ff6d00",
@@ -383,36 +487,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140GR:0-stocks-stall-as-doubts-emerge-over-iran-us-talks-ai-mania-back-in-vogue/"
     },
     {
-      "title": "Bitcoin risks losing $70K as Strategy's STRC slips below $100",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T08:25:10+00:00",
-      "timeDisplay": "8:25 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a4c89ca06094b:0-bitcoin-risks-losing-70k-as-strategy-s-strc-slips-below-100/"
-    },
-    {
       "title": "Arbitrum Security Council Freezes 30,766 ETH Linked to KelpDAO Exploit",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-04-21T08:17:09+00:00",
       "timeDisplay": "8:17 AM",
       "link": "https://www.tradingview.com/news/coinpedia:9f1614a1b094b:0-arbitrum-security-council-freezes-30-766-eth-linked-to-kelpdao-exploit/"
-    },
-    {
-      "title": "Bitcoin price prediction ahead of Kevin Warsh Senate hearings",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T08:06:36+00:00",
-      "timeDisplay": "8:06 AM",
-      "link": "https://www.tradingview.com/news/invezz:62e242101094b:0-bitcoin-price-prediction-ahead-of-kevin-warsh-senate-hearings/"
-    },
-    {
-      "title": "Crypto rally today: Why Bitcoin, Venice Token, Zcash, and altcoins are going up",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T08:06:11+00:00",
-      "timeDisplay": "8:06 AM",
-      "link": "https://www.tradingview.com/news/invezz:b1cbd9188094b:0-crypto-rally-today-why-bitcoin-venice-token-zcash-and-altcoins-are-going-up/"
     },
     {
       "title": "Oil Market Stabilizing Despite Volatility in Middle East \u2014 Market Talk",
@@ -445,14 +525,6 @@
       "timestamp": "2026-04-21T07:21:00+00:00",
       "timeDisplay": "7:21 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260421001159:0/"
-    },
-    {
-      "title": "Inside the \u2018fake police raid\u2019 that forced a $1M Bitcoin transfer",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T06:59:51+00:00",
-      "timeDisplay": "6:59 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:2511a039c094b:0-inside-the-fake-police-raid-that-forced-a-1m-bitcoin-transfer/"
     },
     {
       "title": "Bitcoin Edges Lower But Stays Range-Bound Amid Iran War Uncertainty \u2014 Market Talk",
@@ -543,12 +615,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N414019:0-stocks-rebound-as-iran-peace-talks-in-focus-warsh-hearing-looms/"
     },
     {
-      "title": "Oil falls on expectations US-Iran talks likely, opening of supply",
+      "title": "Oil prices dip as markets await possible US-Iran talks",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-21T00:53:25+00:00",
       "timeDisplay": "12:53 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N413120:0-oil-falls-on-expectations-us-iran-talks-likely-opening-of-supply/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N413120:0-oil-prices-dip-as-markets-await-possible-us-iran-talks/"
     },
     {
       "title": "Follow the Money: The 5 Cryptos Favored by US Congress Members",
@@ -573,78 +645,6 @@
       "timestamp": "2026-04-21T00:04:00+00:00",
       "timeDisplay": "12:04 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260420009448:0/"
-    },
-    {
-      "title": "XRP Might Not Hit $2 Now Because of This, Will Hyperliquid (HYPE) Hit $50 on Next Run? Ethereum's (ETH) Time to Shine: Crypto Market Review",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T00:01:00+00:00",
-      "timeDisplay": "12:01 AM",
-      "link": "https://www.tradingview.com/news/u_today:beef22241094b:0-xrp-might-not-hit-2-now-because-of-this-will-hyperliquid-hype-hit-50-on-next-run-ethereum-s-eth-time-to-shine-crypto-market-review/"
-    },
-    {
-      "title": "Gold Steadies as US-Iran Talks Eyed",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T23:45:39+00:00",
-      "timeDisplay": "11:45 PM",
-      "link": "https://www.tradingview.com/news/te_news:543293:0-gold-steadies-as-us-iran-talks-eyed/"
-    },
-    {
-      "title": "Gold Consolidates as End of Cease-Fire Looms \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T23:44:00+00:00",
-      "timeDisplay": "11:44 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260420009379:0/"
-    },
-    {
-      "title": "Oil Eases Ahead of US-Iran Talks",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T23:24:47+00:00",
-      "timeDisplay": "11:24 PM",
-      "link": "https://www.tradingview.com/news/te_news:543286:0-oil-eases-ahead-of-us-iran-talks/"
-    },
-    {
-      "title": "US crude futures fall as investors reassess US-Iran risks ahead of ceasefire deadline",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-20T22:05:53+00:00",
-      "timeDisplay": "10:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN4130U0:0-us-crude-futures-fall-as-investors-reassess-us-iran-risks-ahead-of-ceasefire-deadline/"
-    },
-    {
-      "title": "ETF Inflows Hit $39.6B as US Stocks Roar to Record Highs",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T21:00:16+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:5fab3f42d094b:0-etf-inflows-hit-39-6b-as-us-stocks-roar-to-record-highs/"
-    },
-    {
-      "title": "ETF League Tables: ProShares Sheds $786M",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T21:00:05+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:c03c120b0094b:0-etf-league-tables-proshares-sheds-786m/"
-    },
-    {
-      "title": "Oil Rises Again on Monday on Hormuz Escalations",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-20T20:21:50+00:00",
-      "timeDisplay": "8:21 PM",
-      "link": "https://www.tradingview.com/news/te_news:543269:0-oil-rises-again-on-monday-on-hormuz-escalations/"
-    },
-    {
-      "title": "US bonds little changed, as markets brush off Iran turmoil",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-20T19:32:50+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4130NP:0-us-bonds-little-changed-as-markets-brush-off-iran-turmoil/"
     }
   ]
 }

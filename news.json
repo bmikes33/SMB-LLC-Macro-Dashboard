@@ -1,53 +1,103 @@
 {
-  "lastUpdated": "2026-04-21T17:33:36.263618+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 05:33 PM UTC",
+  "lastUpdated": "2026-04-21T19:06:54.161551+00:00",
+  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 07:06 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Fed nominee Warsh's confirmation hearings dominated headlines, emphasizing hawkish Fed reform, balance sheet reduction, and dollar strength support. Bitcoin showed mixed signals around $76-78K with funding negativity, while geopolitical uncertainty around US-Iran ceasefire talks drove dollar strength and oil volatility.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Warsh's dollar-supportive stance and geopolitical uncertainty create cross-currents against risk-on positioning, though crypto recovery and equity stability provide some support.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar moving higher on US-Iran talks uncertainty, approaching safe-haven bid territory"
-      }
-    ],
+    "macroSummary": "Bitcoin sentiment improves with fear indicators at multi-month highs and BTC reclaiming $76K, while Fed nominee Warsh signals hawkish balance sheet reduction preferences and opposition to CBDCs. Gold falls for second session amid mixed commodity moves, with geopolitical uncertainty from Iran ceasefire talks providing cross-currents.",
+    "regimePressure": "REINFORCING",
+    "regimePressureReason": "Bitcoin recovery momentum and improving crypto sentiment align with risk-on conditions, while gold weakness removes safe-haven bid pressure.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Dollar strengthening on geopolitical uncertainty over Iran talks and ceasefire expiration",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Bitcoin sentiment hits highest since mid-January with BTC reclaiming $76K and Coinbase-driven demand",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Fed nominee Warsh emphasizes dollar as 'linchpin' of global economy and supports aggressive balance sheet reduction",
-        "tag": "CONTRADICTS"
+        "signal": "Gold falls for second consecutive session, reducing safe-haven asset appeal",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin funding remains negative at $78K despite price recovery, indicating persistent short positioning",
+        "signal": "Fed nominee Warsh favors aggressive balance sheet reduction and opposes rate-cutting pressures",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Gold falling for second session amid dollar strength and rate uncertainty",
-        "tag": "CONTRADICTS"
+        "signal": "Oil futures move higher on Iran ceasefire talk uncertainty, adding geopolitical risk premium",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Oil futures rising on geopolitical uncertainty, suggesting flight-to-real-assets dynamic",
-        "tag": "NEUTRAL"
+        "signal": "Bitcoin funding rates remain negative at $78K suggesting short squeeze potential building",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for breach of 100 threshold given Iran talks uncertainty",
-      "Consider reducing BMNR ladder exposure if dollar strength accelerates on geopolitical risk",
-      "Watch for vol spike if ceasefire expiration triggers broader risk-off move"
+      "BMNR ladder: Consider tightening strikes given crypto momentum building",
+      "Monitor Wednesday data (retail sales, pending home sales) for consumption strength confirmation",
+      "Watch for any DXY strength if Iran talks deteriorate further"
     ]
   },
   "articles": [
     {
-      "title": "Fed Nominee Kevin Warsh Says Crypto Already In \u2018Fabric\u2019 Of US Financial System",
+      "title": "Bitcoin Fear Fading? Sentiment Hits Highest Since Mid-January",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T18:30:36+00:00",
+      "timeDisplay": "6:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:830a3d81b094b:0-bitcoin-fear-fading-sentiment-hits-highest-since-mid-january/"
+    },
+    {
+      "title": "Aave Token Attempts Rebound Following Kelp DAO Hack \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T18:09:00+00:00",
+      "timeDisplay": "6:09 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421007810:0/"
+    },
+    {
+      "title": "The CAR that's driving the Dow Transports\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T18:05:20+00:00",
+      "timeDisplay": "6:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41418Z:0-the-car-that-s-driving-the-dow-transports/"
+    },
+    {
+      "title": "Bitcoin inflows to Binance fall to 2023 low as BTC bulls set target on $80K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T18:00:00+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:c18bf18ba094b:0-bitcoin-inflows-to-binance-fall-to-2023-low-as-btc-bulls-set-target-on-80k/"
+    },
+    {
+      "title": "ASST Stock Edges Up After \u2018Buy\u2019 Rating \u2013 Fidelity, Capital Group Emerge As Top Holders",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T17:57:24+00:00",
+      "timeDisplay": "5:57 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:5341de4ae094b:0/"
+    },
+    {
+      "title": "Marvel Drops Bitcoin Mention in Daredevil Season 2",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T17:44:34+00:00",
+      "timeDisplay": "5:44 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:886e476ec094b:0-marvel-drops-bitcoin-mention-in-daredevil-season-2/"
+    },
+    {
+      "title": "Now the Largest Institutional Bitcoin Holder, Strategy Is Turning BTC Exposure Into a One-Stock Trade",
+      "source": "financemagnates",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T17:13:21+00:00",
+      "timeDisplay": "5:13 PM",
+      "link": "https://www.tradingview.com/news/financemagnates:f31a0c0a7094b:0-now-the-largest-institutional-bitcoin-holder-strategy-is-turning-btc-exposure-into-a-one-stock-trade/"
+    },
+    {
+      "title": "Kevin Warsh Says Crypto Already Part Of US Financial System \u2013 Calls CBDC A \u2018Bad Policy Choice\u2019",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-04-21T17:06:26+00:00",
@@ -455,22 +505,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421005737:0/"
     },
     {
-      "title": "Bitcoin Bear Flag Tightens Grip as Altcoins Risk 50% Crash",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:42:59+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:a9782b587094b:0-bitcoin-bear-flag-tightens-grip-as-altcoins-risk-50-crash/"
-    },
-    {
-      "title": "Kevin Warsh Could Be The First Fed Chair With Crypto Exposure \u2014 If Senate Doesn\u2019t Block His Nomination Over Powell Investigation Feud",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:36:47+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:68ec978c3094b:0/"
-    },
-    {
       "title": "Canton, ZKsync clash over how blockchains enforce rules",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -493,30 +527,6 @@
       "timestamp": "2026-04-21T13:01:39+00:00",
       "timeDisplay": "1:01 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140MQ:0-small-names-big-gains-small-caps-take-the-lead-in-2026/"
-    },
-    {
-      "title": "Onramp Launches Onramp Finance, a Unified Money Platform Built for Long-Term Wealth with Up to 5% on Cash Management",
-      "source": "financewire",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:00:01+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/financewire:0b065ef98094b:0-onramp-launches-onramp-finance-a-unified-money-platform-built-for-long-term-wealth-with-up-to-5-on-cash-management/"
-    },
-    {
-      "title": "Wall Street Giant Morgan Stanley Tops $100 Million in Bitcoin Stack",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:58:45+00:00",
-      "timeDisplay": "12:58 PM",
-      "link": "https://www.tradingview.com/news/u_today:da2f93445094b:0-wall-street-giant-morgan-stanley-tops-100-million-in-bitcoin-stack/"
-    },
-    {
-      "title": "A Tiny Miner With $100M Bitcoin Ambition Is Back At The \u2018Halfway\u2019 Mark",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T12:51:43+00:00",
-      "timeDisplay": "12:51 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:726601808094b:0/"
     },
     {
       "title": "US yields rise after retail sales data",
@@ -629,22 +639,6 @@
       "timestamp": "2026-04-21T07:21:00+00:00",
       "timeDisplay": "7:21 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260421001159:0/"
-    },
-    {
-      "title": "Bitcoin Edges Lower But Stays Range-Bound Amid Iran War Uncertainty \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T06:56:00+00:00",
-      "timeDisplay": "6:56 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421001025:0/"
-    },
-    {
-      "title": "Stocks rebound on AI boost as Iran talks, Warsh hearing in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T06:49:12+00:00",
-      "timeDisplay": "6:49 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140D2:0-stocks-rebound-on-ai-boost-as-iran-talks-warsh-hearing-in-focus/"
     }
   ]
 }

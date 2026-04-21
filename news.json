@@ -1,45 +1,109 @@
 {
-  "lastUpdated": "2026-04-21T19:06:54.161551+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 07:06 PM UTC",
+  "lastUpdated": "2026-04-21T20:26:54.763010+00:00",
+  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 08:26 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin sentiment improves with fear indicators at multi-month highs and BTC reclaiming $76K, while Fed nominee Warsh signals hawkish balance sheet reduction preferences and opposition to CBDCs. Gold falls for second session amid mixed commodity moves, with geopolitical uncertainty from Iran ceasefire talks providing cross-currents.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Bitcoin recovery momentum and improving crypto sentiment align with risk-on conditions, while gold weakness removes safe-haven bid pressure.",
+    "macroSummary": "Markets show mixed risk sentiment with oil surging over 5% on Iran deal uncertainty while bonds slump on strong economic data and dollar strength. Bitcoin exhibits resilience with institutional flows and sentiment improving, though traditional risk assets face headwinds from geopolitical tensions.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Dollar strength, bond selling, and oil volatility from Iran tensions create cross-currents that challenge the clean Risk-On narrative, even as crypto shows relative strength.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Bitcoin sentiment hits highest since mid-January with BTC reclaiming $76K and Coinbase-driven demand",
+        "signal": "US dollar climbs on Iran uncertainty, approaching levels that historically coincide with risk-off conditions",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bond slump on strong data suggests rates volatility building, which could pressure the MOVE threshold",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil surge over 5% on geopolitical tensions indicates flight to commodities amid uncertainty",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin sentiment hits highest since mid-January with institutional demand sustaining recovery",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold falls for second consecutive session, reducing safe-haven asset appeal",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Fed nominee Warsh favors aggressive balance sheet reduction and opposes rate-cutting pressures",
+        "signal": "Gold falls for second session despite geopolitical tensions, unusual for typical risk-off environments",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Oil futures move higher on Iran ceasefire talk uncertainty, adding geopolitical risk premium",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Bitcoin funding rates remain negative at $78K suggesting short squeeze potential building",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "BMNR ladder: Consider tightening strikes given crypto momentum building",
-      "Monitor Wednesday data (retail sales, pending home sales) for consumption strength confirmation",
-      "Watch for any DXY strength if Iran talks deteriorate further"
+      "Monitor DXY closely - dollar strength on Iran tensions could approach 100 threshold that flips regime",
+      "Watch MOVE index as bond volatility from strong data and geopolitical uncertainty builds",
+      "Consider tightening BMNR put strikes if crypto divergence from traditional risk assets continues"
     ]
   },
   "articles": [
+    {
+      "title": "Evening digest: Trump eyes Iran deal, Warsh pledges Fed independence",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:12:00+00:00",
+      "timeDisplay": "8:12 PM",
+      "link": "https://www.tradingview.com/news/invezz:360d7238a094b:0-evening-digest-trump-eyes-iran-deal-warsh-pledges-fed-independence/"
+    },
+    {
+      "title": "Arbitrum Freezes KelpDAO Hack Funds, Exposing Crypto\u2019s Biggest Lie",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:00:48+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:86e80bd46094b:0-arbitrum-freezes-kelpdao-hack-funds-exposing-crypto-s-biggest-lie/"
+    },
+    {
+      "title": "Crude Oil Rises More Than 5%",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T20:00:20+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/te_news:543645:0-crude-oil-rises-more-than-5/"
+    },
+    {
+      "title": "Blockchain.com adds perpetual futures trading to self-custody wallets",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T19:48:14+00:00",
+      "timeDisplay": "7:48 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:590312590094b:0-blockchain-com-adds-perpetual-futures-trading-to-self-custody-wallets/"
+    },
+    {
+      "title": "US bonds slump on strong data, uncertain talks with Iran",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T19:41:29+00:00",
+      "timeDisplay": "7:41 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4140RA:0-us-bonds-slump-on-strong-data-uncertain-talks-with-iran/"
+    },
+    {
+      "title": "Oil Futures Settle Higher With U.S.-Iran Talks Undecided \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T19:32:00+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421008203:0/"
+    },
+    {
+      "title": "Stocks fall, oil gains on growing doubts over Iran peace talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T19:09:38+00:00",
+      "timeDisplay": "7:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N414192:0-stocks-fall-oil-gains-on-growing-doubts-over-iran-peace-talks/"
+    },
+    {
+      "title": "US dollar climbs as uncertainty grows over Iran ceasefire",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-21T19:07:06+00:00",
+      "timeDisplay": "7:07 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4140P6:0-us-dollar-climbs-as-uncertainty-grows-over-iran-ceasefire/"
+    },
     {
       "title": "Bitcoin Fear Fading? Sentiment Hits Highest Since Mid-January",
       "source": "newsbtc",
@@ -87,6 +151,14 @@
       "timestamp": "2026-04-21T17:44:34+00:00",
       "timeDisplay": "5:44 PM",
       "link": "https://www.tradingview.com/news/beincrypto:886e476ec094b:0-marvel-drops-bitcoin-mention-in-daredevil-season-2/"
+    },
+    {
+      "title": "Ethereum Price Rises, But On-Chain Data Signals Weak Demand \u2014What\u2019s Next for ETH?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T17:23:33+00:00",
+      "timeDisplay": "5:23 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:01a10a8ea094b:0-ethereum-price-rises-but-on-chain-data-signals-weak-demand-what-s-next-for-eth/"
     },
     {
       "title": "Now the Largest Institutional Bitcoin Holder, Strategy Is Turning BTC Exposure Into a One-Stock Trade",
@@ -201,6 +273,14 @@
       "link": "https://www.tradingview.com/news/macenews:f8f7a0e6f094b:0-fed-nominee-warsh-q-a-outside-of-monetary-policy-fed-can-work-with-federal-government-to-support-dollar-need-improved-payments-system/"
     },
     {
+      "title": "Liz Truss: Bitcoin is Ultimate Weapon Against Central Banks",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T16:10:21+00:00",
+      "timeDisplay": "4:10 PM",
+      "link": "https://www.tradingview.com/news/u_today:48dea2ba8094b:0-liz-truss-bitcoin-is-ultimate-weapon-against-central-banks/"
+    },
+    {
       "title": "FED NOMINEE WARSH Q&A: TAKE PERSONAL INTEGRITY VERY SERIOUSLY, STAND BY STATEMENT TRUMP NEVER ASKED TO LOWER RATES; DOLLAR 'LINCHPIN' OF GLOBAL ECON",
       "source": "macenews",
       "color": "#00e5ff",
@@ -223,6 +303,14 @@
       "timestamp": "2026-04-21T15:56:00+00:00",
       "timeDisplay": "3:56 PM",
       "link": "https://www.tradingview.com/news/macenews:5c53661f6094b:0-nominee-warsh-q-a-affordability-trending-in-right-direction-affordability-struggle-legacy-of-past-policy-error-balance-sheet-policy-needs-debate/"
+    },
+    {
+      "title": "Saylor\u2019s Strategy Scoops $3.6 Billion Bitcoin Gains in April Alone",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T15:55:06+00:00",
+      "timeDisplay": "3:55 PM",
+      "link": "https://www.tradingview.com/news/u_today:7bef71242094b:0-saylor-s-strategy-scoops-3-6-billion-bitcoin-gains-in-april-alone/"
     },
     {
       "title": "NOMINEE WARSH Q&A: CENTRAL BANK NEEDS TO 'GO BACK TO FIRST PRINCIPLES;' LEARNED WHEN FED NEEDS 'EXTRAORDINARY MEASURES;' NEED REFORM IN NORMAL TIMES",
@@ -255,6 +343,14 @@
       "timestamp": "2026-04-21T15:46:00+00:00",
       "timeDisplay": "3:46 PM",
       "link": "https://www.tradingview.com/news/macenews:3a4dd4ee8094b:0-fed-nominee-warsh-q-a-fed-not-blameless-for-gap-between-rich-and-not-rich-smaller-balance-sheet-could-mean-lower-interest-rates/"
+    },
+    {
+      "title": "$96,600 Bitcoin Outlook: Breaking Down the Bullish Case Above the Bollinger Mid-Band",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T15:45:00+00:00",
+      "timeDisplay": "3:45 PM",
+      "link": "https://www.tradingview.com/news/u_today:8f02ba5ab094b:0-96-600-bitcoin-outlook-breaking-down-the-bullish-case-above-the-bollinger-mid-band/"
     },
     {
       "title": "FED NOMINEE WARSH Q&A 'TEND TO FAVOR MESSIER (FOMC) MEETINGS ... WHERE PEOPLE DON'T SHOW UP WITH REHEARSED SCRIPTS;' NEED 'GOOD FAMILY FIGHT'",
@@ -361,36 +457,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421006543:0/"
     },
     {
-      "title": "FED NOMINEE WARSH Q&A: PRES TRUMP NEVER ASKED TO PREDETERMINE INTEREST RATES, WOULDN'T HAVE AGREED; TRUMP VIEWS ON RATES SIMILAR TO OTHER PRESIDENTS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:16:00+00:00",
-      "timeDisplay": "3:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:fc767b2b0094b:0-fed-nominee-warsh-q-a-pres-trump-never-asked-to-predetermine-interest-rates-wouldn-t-have-agreed-trump-views-on-rates-similar-to-other-presidents/"
-    },
-    {
-      "title": "Dollar Moves Higher on Uncertainty About US-Iran Talks",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:15:29+00:00",
-      "timeDisplay": "3:15 PM",
-      "link": "https://www.tradingview.com/news/te_news:543586:0-dollar-moves-higher-on-uncertainty-about-us-iran-talks/"
-    },
-    {
       "title": "5 Most Powerful AI Models Predict Bitcoin\u2019s Price for 2026-27 \u2013 One Says $210K",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-04-21T15:04:27+00:00",
       "timeDisplay": "3:04 PM",
       "link": "https://www.tradingview.com/news/coinpedia:952402b05094b:0-5-most-powerful-ai-models-predict-bitcoin-s-price-for-2026-27-one-says-210k/"
-    },
-    {
-      "title": "MemeMax Officially Launches, Introducing a Meme-Native Perpetual Trading Infrastructure",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:03:33+00:00",
-      "timeDisplay": "3:03 PM",
-      "link": "https://www.tradingview.com/news/chainwire:725ce0c3a094b:0-mememax-officially-launches-introducing-a-meme-native-perpetual-trading-infrastructure/"
     },
     {
       "title": "Higher Oil Prices More An Inflation Than a Growth Issue \u2014 Market Talk",
@@ -457,14 +529,6 @@
       "link": "https://www.tradingview.com/news/te_news:543576:0-gold-is-down-by-2-02/"
     },
     {
-      "title": "Fake delivery driver targets French crypto worker in armed home invasion",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:39:18+00:00",
-      "timeDisplay": "2:39 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:d03c31805094b:0-fake-delivery-driver-targets-french-crypto-worker-in-armed-home-invasion/"
-    },
-    {
       "title": "U.K. Inflation Data Likely to Show Effects of Middle East Conflict \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -473,36 +537,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421006124:0/"
     },
     {
-      "title": "Bitcoin Up Over 20% From February Bottom \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:17:00+00:00",
-      "timeDisplay": "2:17 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421006030:0/"
-    },
-    {
-      "title": "U.K.'s Stablecoin Plans Mark Positive Step \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421005863:0/"
-    },
-    {
       "title": "Gold Stalls Below $4,800 Amid Trump\u2019s Iran Threats and Strong US Data",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-04-21T13:54:22+00:00",
       "timeDisplay": "1:54 PM",
       "link": "https://www.tradingview.com/news/te_news:543561:0-gold-stalls-below-4-800-amid-trump-s-iran-threats-and-strong-us-data/"
-    },
-    {
-      "title": "Bitcoin Whales Buy at the Fastest Rate in a Year \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:53:00+00:00",
-      "timeDisplay": "1:53 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421005737:0/"
     },
     {
       "title": "Canton, ZKsync clash over how blockchains enforce rules",
@@ -599,46 +639,6 @@
       "timestamp": "2026-04-21T08:50:43+00:00",
       "timeDisplay": "8:50 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140GR:0-stocks-stall-as-doubts-emerge-over-iran-us-talks-ai-mania-back-in-vogue/"
-    },
-    {
-      "title": "Arbitrum Security Council Freezes 30,766 ETH Linked to KelpDAO Exploit",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T08:17:09+00:00",
-      "timeDisplay": "8:17 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:9f1614a1b094b:0-arbitrum-security-council-freezes-30-766-eth-linked-to-kelpdao-exploit/"
-    },
-    {
-      "title": "Oil Market Stabilizing Despite Volatility in Middle East \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T07:51:00+00:00",
-      "timeDisplay": "7:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421001264:0/"
-    },
-    {
-      "title": "Ethereum\u2019s Next Rally May Have Started: But No One Is Talking About It",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T07:47:28+00:00",
-      "timeDisplay": "7:47 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:c91bfb115094b:0-ethereum-s-next-rally-may-have-started-but-no-one-is-talking-about-it/"
-    },
-    {
-      "title": "Gold Falls as Investors Weigh U.S.-Iran Peace Talks Prospects, Inflation Concerns \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T07:34:00+00:00",
-      "timeDisplay": "7:34 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421001213:0/"
-    },
-    {
-      "title": "Oil Falls on Expectations of U.S.-Iran Talks as Deadline Looms \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T07:21:00+00:00",
-      "timeDisplay": "7:21 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421001159:0/"
     }
   ]
 }

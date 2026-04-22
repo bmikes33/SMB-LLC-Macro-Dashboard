@@ -1,51 +1,53 @@
 {
-  "lastUpdated": "2026-04-22T22:12:57.402096+00:00",
-  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 10:12 PM UTC",
+  "lastUpdated": "2026-04-22T23:13:06.444942+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 11:13 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets rose on ceasefire relief while Iran escalated tensions by attacking ships and closing the Strait of Hormuz, driving oil above $100/barrel. Bitcoin surged toward $80,000 amid institutional buying and claims of safe-haven status, while the dollar gained on geopolitical uncertainty keeping central banks cautious.",
+    "macroSummary": "Markets rose on ceasefire relief while Bitcoin surged toward $80,000 with institutional buying and technical breakouts. However, Iran seized ships in Hormuz Strait causing oil supply disruptions, and the dollar gained as central banks remain cautious amid ongoing Middle East tensions.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "While stocks and Bitcoin rallied supporting risk-on sentiment, dollar strength and geopolitical tensions created cross-currents that complicate the clean risk-on narrative.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar gains reported as Iran war keeps central banks in wait-and-see mode"
-      }
-    ],
+    "regimePressureReason": "While equities and Bitcoin rally support Risk-On, dollar strength amid geopolitical tensions and central bank caution create cross-currents that muddy the regime signal.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Bitcoin surges toward $80,000 with institutional buying and safe-haven narrative being tested by actual war",
+        "signal": "Dollar gains as Iran tensions keep central banks in wait-and-see mode, testing DXY threshold dynamics",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin breaks six-month pattern approaching $80,000 with institutional flows and technical momentum",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar strengthening amid geopolitical uncertainty and central bank caution",
+        "signal": "Stocks rise on ceasefire relief but Iran ship seizures in Hormuz create ongoing supply disruption risks",
+        "tag": "MIXED"
+      },
+      {
+        "signal": "Oil futures climb as Strait of Hormuz closure disrupts global supply, recovery expected to take months",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil above $100 with Strait of Hormuz closed and supply recovery taking months",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Stocks rise on ceasefire relief and investor optimism despite Middle East escalation",
+        "signal": "US bonds remain steady despite geopolitical tensions, suggesting limited safe-haven demand",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "US bonds steady to higher as Iran tensions fail to significantly unsettle fixed income markets",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would signal regime challenge",
-      "BMNR ladder benefits from Bitcoin surge but watch for volatility if safe-haven narrative breaks",
-      "Consider energy sector exposure given oil supply disruption and $100+ crude"
+      "Monitor DXY closely - dollar strength amid geopolitical uncertainty could pressure risk assets and challenge regime",
+      "Consider reducing BMNR ladder exposure if Bitcoin momentum stalls near $80k resistance",
+      "Watch oil volatility spillover effects on broader risk sentiment"
     ]
   },
   "articles": [
+    {
+      "title": "Ethereum Coinbase Premium Flips Bullish: Discover What Happens When US Whales Are Long",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T23:00:07+00:00",
+      "timeDisplay": "11:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:ecbe77907094b:0-ethereum-coinbase-premium-flips-bullish-discover-what-happens-when-us-whales-are-long/"
+    },
     {
       "title": "Bitcoin And XRP Need Relief From Capital Drain, Says John Bollinger",
       "source": "newsbtc",
@@ -228,7 +230,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-22T16:37:00+00:00",
       "timeDisplay": "4:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422007676:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260422007677:0/"
     },
     {
       "title": "Ethereum risks 10% decline versus Bitcoin despite record ETH staking",
@@ -244,7 +246,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-22T16:18:00+00:00",
       "timeDisplay": "4:18 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422007516:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260422007515:0/"
     },
     {
       "title": "40-Year Market Veteran Says Current Market Chaos Is Completely Predictable \u2014 If You Know What Day Of The Week It Is",
@@ -277,6 +279,14 @@
       "timestamp": "2026-04-22T15:58:11+00:00",
       "timeDisplay": "3:58 PM",
       "link": "https://www.tradingview.com/news/stocktwits:ad43cc2b7094b:0/"
+    },
+    {
+      "title": "Crude Oil Prices Climb as Global Oil Supplies Disrupted",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T15:36:45+00:00",
+      "timeDisplay": "3:36 PM",
+      "link": "https://www.tradingview.com/news/barchart:084b907cc094b:0-crude-oil-prices-climb-as-global-oil-supplies-disrupted/"
     },
     {
       "title": "US bonds inch higher with Iran still the main focus",
@@ -629,22 +639,6 @@
       "timestamp": "2026-04-22T05:50:00+00:00",
       "timeDisplay": "5:50 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260422000997:0/"
-    },
-    {
-      "title": "Gold Rises as Trump Extends Iran Ceasefire",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T04:05:24+00:00",
-      "timeDisplay": "4:05 AM",
-      "link": "https://www.tradingview.com/news/te_news:543756:0-gold-rises-as-trump-extends-iran-ceasefire/"
-    },
-    {
-      "title": "Ethereum Sees First SuperTrend Bullish Flip In Over A Year",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T04:00:19+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:1231d2aa3094b:0-ethereum-sees-first-supertrend-bullish-flip-in-over-a-year/"
     }
   ]
 }

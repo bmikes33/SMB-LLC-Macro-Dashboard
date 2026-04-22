@@ -1,45 +1,259 @@
 {
-  "lastUpdated": "2026-04-22T12:53:34.190772+00:00",
-  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 12:53 PM UTC",
+  "lastUpdated": "2026-04-22T14:44:43.033163+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 02:44 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin surged above $78,000 following Trump's Iran ceasefire extension, driving broader crypto rallies and renewed speculation in risk assets. Housing market shows strength with mortgage applications up 7.9% weekly amid falling rates, while geopolitical uncertainty around Iran persists despite temporary ceasefire. Treasury yields and dollar edged lower as markets digest mixed signals from continued Middle East tensions and risk-on positioning.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Bitcoin breakout to new highs, speculative stock outperformance, housing market strength, and lower yields/dollar all confirm risk-on conditions remain intact.",
-    "thresholdWatches": [],
+    "macroSummary": "Iran attacked three ships in the Strait of Hormuz, pushing Brent crude above $100/barrel and causing dollar strength as central banks adopt wait-and-see mode amid geopolitical tensions. US manufacturing conditions weakened significantly (Chicago Fed index fell from 46 to 22), while business inflation expectations ticked higher to 2.3% from 2.1%.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Geopolitical escalation is driving dollar strength and safe-haven flows, while manufacturing weakness and rising inflation expectations create early stagflation signals that pressure the Risk-On regime.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar gains as Iran war keeps central banks in wait-and-see mode"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin breaks above $78,000 as speculative assets rally hard on ceasefire news",
+        "signal": "Dollar strengthening on Iran geopolitical tensions as central banks pause policy moves",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Brent crude above $100/barrel after Iran attacks ships in Hormuz Strait",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Chicago Fed manufacturing index collapsed from 46 to 22 while business inflation expectations rose to 2.3%",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US stocks rise despite geopolitical tensions as investors choose optimism",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Investors rediscovering appetite for extremely speculative stocks as markets rip higher in April",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Treasury yields and dollar edge lower despite ongoing Iran war uncertainty",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Oil prices remain jittery and rupee extends losses as Iran war jitters persist despite ceasefire",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Housing demand supported by strong job market with mortgage applications up 7.9% weekly",
+        "signal": "BlackRock accumulated nearly $1 billion in Bitcoin while crypto markets turn higher",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance as crypto rally accelerates - consider rolling strikes higher on strong ETH momentum",
-      "Evaluate adding short exposure to late-cycle Maturity names if speculative excess becomes extreme",
-      "Watch for any oil price spikes that could challenge the risk-on narrative if Middle East tensions re-escalate"
+      "Monitor DXY closely for break above 100 threshold which would flip rates group hard",
+      "Watch for oil price spillover into broader inflation expectations and MOVE index",
+      "BMNR ladder may benefit from crypto strength but geopolitical volatility could create better entry points"
     ]
   },
   "articles": [
+    {
+      "title": "US stocks rise as investors choose optimism regarding Iran",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T14:44:01+00:00",
+      "timeDisplay": "2:44 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41511C:0-us-stocks-rise-as-investors-choose-optimism-regarding-iran/"
+    },
+    {
+      "title": "Brent Above $100 a Barrel After Iran Attacks Three Ships in Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:35:00+00:00",
+      "timeDisplay": "2:35 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422006508:0/"
+    },
+    {
+      "title": "US EIA CRUDE OIL INVENTORIES +1.9 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -1.9 MLN MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:30:00+00:00",
+      "timeDisplay": "2:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:c3de308c5094b:0-us-eia-crude-oil-inventories-1-9-mln-barrels-in-latest-week-from-previous-week-vs-1-9-mln-markets-expected/"
+    },
+    {
+      "title": "US EIA DISTILLATES INVENTORIES -3.4 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -2.5 MLN MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:30:00+00:00",
+      "timeDisplay": "2:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:578f01ce6094b:0-us-eia-distillates-inventories-3-4-mln-barrels-in-latest-week-from-previous-week-vs-2-5-mln-markets-expected/"
+    },
+    {
+      "title": "US EIA GASOLINE INVENTORIES -4.6 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -1.5 MLN MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:30:00+00:00",
+      "timeDisplay": "2:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:ff67805f6094b:0-us-eia-gasoline-inventories-4-6-mln-barrels-in-latest-week-from-previous-week-vs-1-5-mln-markets-expected/"
+    },
+    {
+      "title": "BlackRock Silently Scoops Nearly $1 Billion Of Bitcoin, Outpacing Weekly BTC Supply",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:29:17+00:00",
+      "timeDisplay": "2:29 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:0fde40b34094b:0/"
+    },
+    {
+      "title": "Documentary Claims to Solve $80 Billion Mystery at Heart of Bitcoin \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:28:00+00:00",
+      "timeDisplay": "2:28 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422006422:0/"
+    },
+    {
+      "title": "US CHICAGO FED DISTRICT MANUFACTURING BUSINESS CONDITIONS INDEX 22 IN APRIL VS. 46 IN MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:05:00+00:00",
+      "timeDisplay": "2:05 PM",
+      "link": "https://www.tradingview.com/news/macenews:4f41c42b0094b:0-us-chicago-fed-district-manufacturing-business-conditions-index-22-in-april-vs-46-in-march/"
+    },
+    {
+      "title": "US CHICAGO FED DISTRICT NON-MANUFACTURING BUSINESS CONDITIONS INDEX 13 IN APRIL VS 11 IN MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:05:00+00:00",
+      "timeDisplay": "2:05 PM",
+      "link": "https://www.tradingview.com/news/macenews:4c4f9ae0e094b:0-us-chicago-fed-district-non-manufacturing-business-conditions-index-13-in-april-vs-11-in-march/"
+    },
+    {
+      "title": "Crypto Turns Higher as Legislators Chew on the CLARITY Act \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:04:00+00:00",
+      "timeDisplay": "2:04 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422006239:0/"
+    },
+    {
+      "title": "US CHICAGO FED DISTRICT BUSINESS CONDITIONS INDEX 17 IN APRIL VS. 22 IN MARCH, SUGGESTS GROWTH REMAINS ABOVE TREND",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:04:00+00:00",
+      "timeDisplay": "2:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:fbb5352f0094b:0-us-chicago-fed-district-business-conditions-index-17-in-april-vs-22-in-march-suggests-growth-remains-above-trend/"
+    },
+    {
+      "title": "US ATLANTA FED: BUSINESS INPUT PRICES UP 2.4% IN LAST YEAR IN APRIL VS. 2.0% IN MARCH, 2.2% IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:02:00+00:00",
+      "timeDisplay": "2:02 PM",
+      "link": "https://www.tradingview.com/news/macenews:6251992fd094b:0-us-atlanta-fed-business-input-prices-up-2-4-in-last-year-in-april-vs-2-0-in-march-2-2-in-april-2025/"
+    },
+    {
+      "title": "US ATLANTA FED: 1-YEAR BUSINESS INFLATION EXPECTATIONS 2.3% IN APRIL VS. 2.1% IN MARCH, 2.8% IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:e209abedc094b:0-us-atlanta-fed-1-year-business-inflation-expectations-2-3-in-april-vs-2-1-in-march-2-8-in-april-2025/"
+    },
+    {
+      "title": "Dollar gains as Iran war keeps central banks in wait-and-see mode",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T14:00:46+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150KC:0-dollar-gains-as-iran-war-keeps-central-banks-in-wait-and-see-mode/"
+    },
+    {
+      "title": "Bitcoin Set For Stronger Week, Eyes $88K On Stable Macro Backdrop: Analyst",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T14:00:09+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:70d267d26094b:0-bitcoin-set-for-stronger-week-eyes-88k-on-stable-macro-backdrop-analyst/"
+    },
+    {
+      "title": "Armed intruders force French family to transfer $820,000 in crypto: report",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:45:39+00:00",
+      "timeDisplay": "1:45 PM",
+      "link": "https://www.tradingview.com/news/the_block:29dc9acf6094b:0-armed-intruders-force-french-family-to-transfer-820-000-in-crypto-report/"
+    },
+    {
+      "title": "Trump's Desire For Weaker Dollar, Rate Cuts Hold Back Currency \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:29:00+00:00",
+      "timeDisplay": "1:29 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422005941:0/"
+    },
+    {
+      "title": "Dollar Turns Higher as Ships Attacked in Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:23:00+00:00",
+      "timeDisplay": "1:23 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422005877:0/"
+    },
+    {
+      "title": "Investors are yet to notice AI efficiency in emerging markets, says HSBC",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T13:20:13+00:00",
+      "timeDisplay": "1:20 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4151GA:0-investors-are-yet-to-notice-ai-efficiency-in-emerging-markets-says-hsbc/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - Apr 22",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:14:00+00:00",
+      "timeDisplay": "1:14 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422005791:0/"
+    },
+    {
+      "title": "Too far, too fast? SOX stretch raises red flags\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T13:09:55+00:00",
+      "timeDisplay": "1:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4150PR:0-too-far-too-fast-sox-stretch-raises-red-flags/"
+    },
+    {
+      "title": "Selloff in Rates Market Seen as Opportunity to Add Duration, Keep Overweight \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:04:00+00:00",
+      "timeDisplay": "1:04 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422005686:0/"
+    },
+    {
+      "title": "\u2018I suspect you got to the right answer\u2019: New Satoshi documentary makes the case Hal Finney and Len Sassaman were Bitcoin\u2019s co-creators",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:01:02+00:00",
+      "timeDisplay": "1:01 PM",
+      "link": "https://www.tradingview.com/news/the_block:3797e9748094b:0-i-suspect-you-got-to-the-right-answer-new-satoshi-documentary-makes-the-case-hal-finney-and-len-sassaman-were-bitcoin-s-co-creators/"
+    },
+    {
+      "title": "Bitcoin Bull Score Index Turns Neutral For First Time This Bear Market",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:00:17+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:3bd5d6fc8094b:0-bitcoin-bull-score-index-turns-neutral-for-first-time-this-bear-market/"
+    },
+    {
+      "title": "Will a Ceasefire Extension Provide Relief to Wall Street ETFs?",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:00:00+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:cd4e0ca0e094b:0-will-a-ceasefire-extension-provide-relief-to-wall-street-etfs/"
+    },
+    {
+      "title": "GSR enters crypto ETF field with actively managed multi-asset fund tracking Bitcoin, Ethereum and Solana",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T13:00:00+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/the_block:2f1d33549094b:0-gsr-enters-crypto-etf-field-with-actively-managed-multi-asset-fund-tracking-bitcoin-ethereum-and-solana/"
+    },
     {
       "title": "Kevin Warsh Did An 'Outstanding' Job At Senate Hearing, Says Bill Hagerty: \u2018He Was Asked Some Very Disrespectful Questions\u2019",
       "source": "stocktwits",
@@ -95,6 +309,14 @@
       "timestamp": "2026-04-22T12:00:05+00:00",
       "timeDisplay": "12:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:72092b3a6094b:0-bitcoin-power-laws-predicts-when-price-will-hit-1-000-000/"
+    },
+    {
+      "title": "Goldman's Playbook Amid Iran War: ETFs to Follow",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T12:00:00+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:880bde099094b:0-goldman-s-playbook-amid-iran-war-etfs-to-follow/"
     },
     {
       "title": "Russia Locks in July 1 Crypto Payments Regime to Bypass Sanctions",
@@ -233,22 +455,6 @@
       "link": "https://www.tradingview.com/news/macenews:698c29af7094b:0-us-mba-adjustable-rate-mortgages-8-0-of-total-applications-in-april-17-week-vs-8-4-in-prior-week/"
     },
     {
-      "title": "US MBA: REFINANCINGS AT 44.2% OF TOTAL MORTGAGE APPLICATIONS IN APRIL 17 WEEK VS 45.5% IN PRIOR WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:7f49b40c3094b:0-us-mba-refinancings-at-44-2-of-total-mortgage-applications-in-april-17-week-vs-45-5-in-prior-week/"
-    },
-    {
-      "title": "US MORTGAGE BANKERS ASSN MORTGAGE APPLICATIONS INDEX +7.9% IN APRIL 17 WEEK; -2.4% VS 4 WEEKS AGO; +29.9% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:bac272a4b094b:0-us-mortgage-bankers-assn-mortgage-applications-index-7-9-in-april-17-week-2-4-vs-4-weeks-ago-29-9-vs-1-year-ago/"
-    },
-    {
       "title": "Bitcoin Tops $78,000 After Trump\u2019s Ceasefire Extension \u2013 Analyst Sees \u2018Heavier\u2019 Breakouts For Altcoins",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -263,14 +469,6 @@
       "timestamp": "2026-04-22T10:49:38+00:00",
       "timeDisplay": "10:49 AM",
       "link": "https://www.tradingview.com/news/beincrypto:c4c5a0e65094b:0-eth-to-250-000-new-thesis-calls-bitcoin-and-gold-dead-capital/"
-    },
-    {
-      "title": "Another deadline dodged",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T10:45:52+00:00",
-      "timeDisplay": "10:45 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4150OR:0-another-deadline-dodged/"
     },
     {
       "title": "MSTR Stock Reportedly Draws Fresh $747M Bet From Capital Group Amid Bitcoin Rally",
@@ -289,52 +487,12 @@
       "link": "https://www.tradingview.com/news/the_block:725bf3710094b:0-uk-investors-regain-tax-free-access-to-crypto-etns-via-innovative-finance-isa-route/"
     },
     {
-      "title": "Bitcoin 'Bull Score' hits six-month high as 2022 bear-market fears linger",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T10:10:02+00:00",
-      "timeDisplay": "10:10 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:658f1a483094b:0-bitcoin-bull-score-hits-six-month-high-as-2022-bear-market-fears-linger/"
-    },
-    {
-      "title": "Rupee extends losing streak as Iran war jitters lift oil to $100",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T10:07:08+00:00",
-      "timeDisplay": "10:07 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4150Q0:0-rupee-extends-losing-streak-as-iran-war-jitters-lift-oil-to-100/"
-    },
-    {
       "title": "Can Ethereum hit $2,746 as whales accumulate 700K tokens this week?",
       "source": "invezz",
       "color": "#00e5ff",
       "timestamp": "2026-04-22T10:06:30+00:00",
       "timeDisplay": "10:06 AM",
       "link": "https://www.tradingview.com/news/invezz:f2a213e3a094b:0-can-ethereum-hit-2-746-as-whales-accumulate-700k-tokens-this-week/"
-    },
-    {
-      "title": "ADA eyes breakout as Bitcoin hits $78K and crypto rally gains pace",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T09:53:53+00:00",
-      "timeDisplay": "9:53 AM",
-      "link": "https://www.tradingview.com/news/invezz:1f3a0f28f094b:0-ada-eyes-breakout-as-bitcoin-hits-78k-and-crypto-rally-gains-pace/"
-    },
-    {
-      "title": "MicroStrategy\u2019s STRC Preferred Stock Buys 10X More Bitcoin Than All ETFs in 2026",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T09:38:04+00:00",
-      "timeDisplay": "9:38 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:226f6e6c7094b:0-microstrategy-s-strc-preferred-stock-buys-10x-more-bitcoin-than-all-etfs-in-2026/"
-    },
-    {
-      "title": "Bitcoin rises above $78,000, Fear & Greed Index exits \u2018extreme fear\u2019 zone",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T09:09:38+00:00",
-      "timeDisplay": "9:09 AM",
-      "link": "https://www.tradingview.com/news/the_block:75a39d054094b:0-bitcoin-rises-above-78-000-fear-greed-index-exits-extreme-fear-zone/"
     },
     {
       "title": "Oil Rises After Attack on Two Ships in Strait of Hormuz \u2014 Market Talk",
@@ -353,54 +511,6 @@
       "link": "https://www.tradingview.com/news/te_news:543886:0-wti-rises-for-3rd-session/"
     },
     {
-      "title": "Bitcoin News: Why is Bitcoin Price up Today?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T08:32:27+00:00",
-      "timeDisplay": "8:32 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d60ea5626094b:0-bitcoin-news-why-is-bitcoin-price-up-today/"
-    },
-    {
-      "title": "Exclusive: Arthur Hayes Sets $500K Bitcoin Target For End Of 2026, Backs HYPE At $200",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T08:32:18+00:00",
-      "timeDisplay": "8:32 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d740dff26094b:0-exclusive-arthur-hayes-sets-500k-bitcoin-target-for-end-of-2026-backs-hype-at-200/"
-    },
-    {
-      "title": "Why Is Crypto Going Up Today? BTC Tops $77K on Peace, Followed by Ethereum, XRP and Dogecoin",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T08:25:57+00:00",
-      "timeDisplay": "8:25 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:144df810d094b:0-why-is-crypto-going-up-today-btc-tops-77k-on-peace-followed-by-ethereum-xrp-and-dogecoin/"
-    },
-    {
-      "title": "Bitcoin Price Surges Past $78,000 to 11-Week High. Why Cryptos Are Surging. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T08:20:00+00:00",
-      "timeDisplay": "8:20 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422001940:0/"
-    },
-    {
-      "title": "Dollar steady as markets navigate Iran ceasefire uncertainty\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T08:07:20+00:00",
-      "timeDisplay": "8:07 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4150IV:0-dollar-steady-as-markets-navigate-iran-ceasefire-uncertainty/"
-    },
-    {
-      "title": "Dollar Trades Sideways Near Pre-War Levels",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T08:05:50+00:00",
-      "timeDisplay": "8:05 AM",
-      "link": "https://www.tradingview.com/news/te_news:543857:0-dollar-trades-sideways-near-pre-war-levels/"
-    },
-    {
       "title": "Gold Rises as Oil Prices Ease After U.S. Cease-Fire Extension \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -417,14 +527,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260422001499:0/"
     },
     {
-      "title": "Dollar Edges Lower After Trump Announces Cease-Fire Extension \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T06:49:00+00:00",
-      "timeDisplay": "6:49 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422001477:0/"
-    },
-    {
       "title": "Oil Slips as Trump Extends Ceasefire",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -439,30 +541,6 @@
       "timestamp": "2026-04-22T05:50:00+00:00",
       "timeDisplay": "5:50 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260422000997:0/"
-    },
-    {
-      "title": "Rupee falls with oil-sensitive Asia FX, central bank likely steps in",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T05:19:57+00:00",
-      "timeDisplay": "5:19 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4150AM:0-rupee-falls-with-oil-sensitive-asia-fx-central-bank-likely-steps-in/"
-    },
-    {
-      "title": "Indefinite ceasefire, markets unbothered",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T04:36:13+00:00",
-      "timeDisplay": "4:36 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4150A8:0-indefinite-ceasefire-markets-unbothered/"
-    },
-    {
-      "title": "WEDNESDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T04:24:00+00:00",
-      "timeDisplay": "4:24 AM",
-      "link": "https://www.tradingview.com/news/macenews:b8fb5dba2094b:0-wednesday-white-house-schedule-subject-to-additions-during-the-day/"
     },
     {
       "title": "Gold Rises as Trump Extends Iran Ceasefire",
@@ -545,14 +623,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260421011437:0/"
     },
     {
-      "title": "Oil prices rise after reports container ships in Hormuz hit by gunfire",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T01:13:22+00:00",
-      "timeDisplay": "1:13 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4141C8:0-oil-prices-rise-after-reports-container-ships-in-hormuz-hit-by-gunfire/"
-    },
-    {
       "title": "Stocks gain, dollar wobbles as Trump extends Iran ceasefire",
       "source": "reuters",
       "color": "#ff6d00",
@@ -575,70 +645,6 @@
       "timestamp": "2026-04-22T00:10:00+00:00",
       "timeDisplay": "12:10 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260421011206:0/"
-    },
-    {
-      "title": "Key facts: Arbitrum freezes 30,766 ETH; exploiter moves 75,700 ETH",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T00:05:02+00:00",
-      "timeDisplay": "12:05 AM",
-      "link": "https://www.tradingview.com/news/tradingview:04987e329bb74:0-key-facts-arbitrum-freezes-30-766-eth-exploiter-moves-75-700-eth/"
-    },
-    {
-      "title": "Gold Holds Decline as Peace Talks Stall",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T23:47:31+00:00",
-      "timeDisplay": "11:47 PM",
-      "link": "https://www.tradingview.com/news/te_news:543669:0-gold-holds-decline-as-peace-talks-stall/"
-    },
-    {
-      "title": "Gold Edges Higher After Trump Says U.S. Will Extend Cease-Fire Deadline \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T23:36:00+00:00",
-      "timeDisplay": "11:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421011077:0/"
-    },
-    {
-      "title": "Oil Holds Gains as Peace Talks Break Down",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T23:30:11+00:00",
-      "timeDisplay": "11:30 PM",
-      "link": "https://www.tradingview.com/news/te_news:543667:0-oil-holds-gains-as-peace-talks-break-down/"
-    },
-    {
-      "title": "Coinbase Council: Preparing the Blockchain for the Quantum Era",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T23:11:41+00:00",
-      "timeDisplay": "11:11 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:d1704a197094b:0-coinbase-council-preparing-the-blockchain-for-the-quantum-era/"
-    },
-    {
-      "title": "US oil prices rise as US-Iran peace talks remain uncertain",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T22:47:22+00:00",
-      "timeDisplay": "10:47 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4141B7:0-us-oil-prices-rise-as-us-iran-peace-talks-remain-uncertain/"
-    },
-    {
-      "title": "BBG: ANTHOPIC'S POWERFUL 'CLAUDE MYTHOS' A.I., THE DISTRIBUTION OF WHICH HAS BEEN TIGHTLY RESTRICTED, HAS BEEN ACCESSED BY UNAUTHORIZED PERSONS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T21:47:00+00:00",
-      "timeDisplay": "9:47 PM",
-      "link": "https://www.tradingview.com/news/macenews:3c095be69094b:0-bbg-anthopic-s-powerful-claude-mythos-a-i-the-distribution-of-which-has-been-tightly-restricted-has-been-accessed-by-unauthorized-persons/"
-    },
-    {
-      "title": "US Crude Oil Inventories Post Surprise Draw",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T21:44:53+00:00",
-      "timeDisplay": "9:44 PM",
-      "link": "https://www.tradingview.com/news/te_news:543657:0-us-crude-oil-inventories-post-surprise-draw/"
     }
   ]
 }

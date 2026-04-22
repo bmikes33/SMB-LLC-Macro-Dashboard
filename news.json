@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-04-22T04:35:15.601726+00:00",
-  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 04:35 AM UTC",
+  "lastUpdated": "2026-04-22T06:27:26.872812+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 06:27 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are reacting to volatile US-Iran ceasefire developments, with Trump extending the deadline amid stalled peace talks and VP Vance's Pakistan trip canceled. The dollar is strengthening to one-week highs on geopolitical uncertainty, while oil prices are rising as the Strait of Hormuz remains closed and peace talks collapse.",
+    "macroSummary": "Markets are reacting to mixed signals around Middle East ceasefire dynamics, with Trump extending Iran ceasefire deadlines while peace talks face uncertainty and potential breakdown. Dollar strength is emerging on ceasefire doubts, while Bitcoin shows volatile action with miner sell-offs followed by rebounds to $77,500, and oil prices rise on geopolitical tensions.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength to one-week highs and rising geopolitical risk premium contradict the Risk-On regime, though equity markets are still gaining despite the uncertainty.",
+    "regimePressureReason": "Dollar strengthening to week highs and rising oil prices on geopolitical uncertainty directly contradict the Risk-On regime's core assumptions.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar at one-week highs amid Iran ceasefire doubts - approaching safe-haven bid territory"
+        "signal": "Dollar at one-week highs as markets raise doubts over Iran ceasefire"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar strengthening to one-week highs as Iran peace talks collapse and ceasefire doubts mount",
+        "signal": "Dollar firming to week highs on peace talk doubts challenges risk-on dollar weakness assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Geopolitical risk premium rising with Strait of Hormuz remaining closed and oil prices gaining on uncertainty",
+        "signal": "Oil rising on Strait of Hormuz closure concerns and geopolitical tensions contradict risk-on energy dynamics",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Stocks still gaining despite geopolitical tensions, suggesting risk appetite persists in equity markets",
+        "signal": "Dollar strength near threshold levels as ceasefire uncertainty grows",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin volatility with miner sell-offs followed by sharp rebounds suggests unstable risk appetite",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bond markets see ceasefire extension as moderately bullish, supporting lower volatility environment",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Ethereum sees $2 billion in leverage evaporation while struggling to gain pace in recovery",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Oil inventories post surprise draw while prices rise on peace talk breakdown",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would signal regime flip to Risk-Off",
-      "Consider tightening BMNR put ladder strikes if geopolitical premium continues building",
-      "Watch for equity market divergence from strengthening dollar - current gains may be fragile"
+      "Monitor DXY closely - approaching 100 threshold that would invalidate Risk-On regime",
+      "Consider defensive positioning in BMNR ladder as crypto showing high volatility amid geopolitical uncertainty",
+      "Watch oil-sensitive positions as energy prices rising on supply disruption fears"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin\u2019s Record Miner Sell-Off Casts Shadow Over Ceasefire-Fueled Rebound",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T06:00:32+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3c6f25524094b:0-bitcoin-s-record-miner-sell-off-casts-shadow-over-ceasefire-fueled-rebound/"
+    },
+    {
+      "title": "Why did Bitcoin suddenly jump to $77,500?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T05:57:01+00:00",
+      "timeDisplay": "5:57 AM",
+      "link": "https://www.tradingview.com/news/invezz:9a748eb7a094b:0-why-did-bitcoin-suddenly-jump-to-77-500/"
+    },
+    {
+      "title": "Middle East Cease-Fire Extension Seen as 'Moderately Bullish' for Bond Markets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T05:50:00+00:00",
+      "timeDisplay": "5:50 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422000997:0/"
+    },
+    {
+      "title": "Grayscale Research Calls Bitcoin Bottom, Sees Early Bull Market Signals",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T05:25:23+00:00",
+      "timeDisplay": "5:25 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:6cf31596e094b:0-grayscale-research-calls-bitcoin-bottom-sees-early-bull-market-signals/"
+    },
+    {
+      "title": "Rupee falls with oil-sensitive Asia FX, central bank likely steps in",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T05:19:57+00:00",
+      "timeDisplay": "5:19 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4150AM:0-rupee-falls-with-oil-sensitive-asia-fx-central-bank-likely-steps-in/"
+    },
+    {
+      "title": "Indefinite ceasefire, markets unbothered",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T04:36:13+00:00",
+      "timeDisplay": "4:36 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4150A8:0-indefinite-ceasefire-markets-unbothered/"
+    },
     {
       "title": "Dollar around one-week highs on doubts about Iran war ceasefire",
       "source": "reuters",
@@ -181,14 +229,6 @@
       "timestamp": "2026-04-22T01:49:30+00:00",
       "timeDisplay": "1:49 AM",
       "link": "https://www.tradingview.com/news/te_news:543724:0-dollar-firms-up-as-peace-talks-collapse/"
-    },
-    {
-      "title": "Oil prices turn lower as investors assess outlook for US-Iran peace talks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T01:13:22+00:00",
-      "timeDisplay": "1:13 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4141C8:0-oil-prices-turn-lower-as-investors-assess-outlook-for-us-iran-peace-talks/"
     },
     {
       "title": "Stocks gain, dollar wobbles as Trump extends Iran ceasefire",
@@ -543,36 +583,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:c1a990df9094b:0/"
     },
     {
-      "title": "John Bollinger Signals \"Return to Business\" That Could Change the Outlook for Bitcoin and XRP",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T17:00:30+00:00",
-      "timeDisplay": "5:00 PM",
-      "link": "https://www.tradingview.com/news/u_today:ebf7ddc28094b:0-john-bollinger-signals-return-to-business-that-could-change-the-outlook-for-bitcoin-and-xrp/"
-    },
-    {
-      "title": "Bitcoin price rally 'in progress' but upside could be capped at $84K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T16:55:37+00:00",
-      "timeDisplay": "4:55 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5cee4c989094b:0-bitcoin-price-rally-in-progress-but-upside-could-be-capped-at-84k/"
-    },
-    {
       "title": "Less boom, less bust: AI tames the memory cycle",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-21T16:53:30+00:00",
       "timeDisplay": "4:53 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41411S:0-less-boom-less-bust-ai-tames-the-memory-cycle/"
-    },
-    {
-      "title": "Bitcoin funding stays negative at $78K as short squeeze expectations grow",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T16:48:54+00:00",
-      "timeDisplay": "4:48 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e82a34f06094b:0-bitcoin-funding-stays-negative-at-78k-as-short-squeeze-expectations-grow/"
     },
     {
       "title": "FED NOMINEE WARSH Q&A: OPPOSE CENBANK DIGITAL CURRENCY; WON'T COMMENT ON IMMIGRATION POLICY; ENDS Q&A",
@@ -629,22 +645,6 @@
       "timestamp": "2026-04-21T16:13:00+00:00",
       "timeDisplay": "4:13 PM",
       "link": "https://www.tradingview.com/news/macenews:f8f7a0e6f094b:0-fed-nominee-warsh-q-a-outside-of-monetary-policy-fed-can-work-with-federal-government-to-support-dollar-need-improved-payments-system/"
-    },
-    {
-      "title": "FED NOMINEE WARSH Q&A: TAKE PERSONAL INTEGRITY VERY SERIOUSLY, STAND BY STATEMENT TRUMP NEVER ASKED TO LOWER RATES; DOLLAR 'LINCHPIN' OF GLOBAL ECON",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T16:10:00+00:00",
-      "timeDisplay": "4:10 PM",
-      "link": "https://www.tradingview.com/news/macenews:37578bde1094b:0-fed-nominee-warsh-q-a-take-personal-integrity-very-seriously-stand-by-statement-trump-never-asked-to-lower-rates-dollar-linchpin-of-global-econ/"
-    },
-    {
-      "title": "FED NOMINEE WARSH Q&A: INFLATION HAPPENS WHEN CENBANK 'PRINTS TOO MUCH' MONEY AND GOVERNMENT 'SPENDS TOO MUCH'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:59:00+00:00",
-      "timeDisplay": "3:59 PM",
-      "link": "https://www.tradingview.com/news/macenews:b9602354b094b:0-fed-nominee-warsh-q-a-inflation-happens-when-cenbank-prints-too-much-money-and-government-spends-too-much/"
     }
   ]
 }

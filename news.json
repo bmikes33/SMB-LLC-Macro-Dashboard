@@ -1,45 +1,107 @@
 {
-  "lastUpdated": "2026-04-22T17:32:41.885028+00:00",
-  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 05:32 PM UTC",
+  "lastUpdated": "2026-04-22T19:08:31.902588+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 07:08 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied on extended US-Iran ceasefire news with Bitcoin surging near $80K and stocks rising as investors chose optimism over geopolitical risks. Energy markets remained volatile with Brent above $100 after Iran attacked ships in Hormuz, while US economic data showed mixed signals with Chicago Fed conditions declining but business inflation expectations ticking higher.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Risk assets broadly rallied on ceasefire extension with Bitcoin, stocks, and crypto-linked equities advancing while investors displayed clear risk appetite despite ongoing geopolitical tensions.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets are whipsawing between Middle East conflict escalation (Iran attacking ships, Strait of Hormuz closed, oil above $100) and ceasefire extension relief, with Bitcoin surging toward $80,000 on institutional buying while crude inventories unexpectedly built despite supply disruptions. Manufacturing conditions in Chicago Fed district collapsed from 46 to 22 in April, signaling potential economic softening.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Geopolitical oil shock and manufacturing weakness create cross-currents against the risk-on call, though Bitcoin institutional flows and ceasefire relief support risk appetite.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil/MOVE",
+        "level": "> 100",
+        "signal": "Brent above $100 due to Iran attacks could spike rates volatility toward MOVE > 100 threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin surged 10% near $80K on ceasefire extension with institutional flows continuing via BlackRock's ~$1B accumulation",
+        "signal": "Chicago Fed manufacturing index crashed from 46 to 22, suggesting economic deceleration that could pressure risk assets",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Iran attacking ships in Strait of Hormuz with oil supply disruptions lasting months creates stagflation risk",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin institutional flows ($1B BlackRock buying, MSTR rallying) and approach toward $80,000 supports risk-on thesis",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US stocks rose as investors chose optimism regarding Iran despite ongoing Hormuz shipping attacks",
+        "signal": "Crude inventories unexpectedly rose +1.9M vs -1.9M expected despite supply disruptions, suggesting demand weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US stocks rising on ceasefire extension optimism with bond yields stable supports current risk-on positioning",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "MSTR and crypto-linked equities led rallies suggesting risk-on appetite in speculative growth",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar gained as Iran war keeps central banks in wait-and-see mode, showing some safe-haven demand",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Atlanta Fed business inflation expectations rose to 2.3% from 2.1% suggesting early reflation pressures",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "BMNR ladder: Consider rolling up strikes as crypto momentum builds with institutional flows",
-      "Monitor oil volatility impact on broader risk sentiment given Hormuz shipping disruptions",
-      "Watch for any DXY strength above key levels despite current risk-on flows"
+      "Monitor MOVE index closely as oil shock above $100 historically triggers rates volatility spikes toward invalidation threshold",
+      "Consider tightening BMNR put ladder strikes given Bitcoin institutional momentum but manufacturing weakness cross-current",
+      "Watch for any VIX move above 22 if geopolitical tensions override ceasefire relief in coming sessions"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar gains as Iran war keeps central banks in wait-and-see mode",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T19:04:29+00:00",
+      "timeDisplay": "7:04 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150PF:0-dollar-gains-as-iran-war-keeps-central-banks-in-wait-and-see-mode/"
+    },
+    {
+      "title": "Bitcoin Rides Tech Sector Gains. Is $100,000 Back in the Cards? \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T19:01:00+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422008322:0/"
+    },
+    {
+      "title": "Oil Futures Rise As Strait of Hormuz Stays Closed \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T18:55:00+00:00",
+      "timeDisplay": "6:55 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422008268:0/"
+    },
+    {
+      "title": "Crypto repackages age-old jeweler wisdom to give gold a yield",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T18:45:38+00:00",
+      "timeDisplay": "6:45 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:597c3f2ab094b:0-crypto-repackages-age-old-jeweler-wisdom-to-give-gold-a-yield/"
+    },
+    {
+      "title": "Analyst Predicts Bitcoin Price Is Going To $200,000, Reveals When To Buy",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T18:00:07+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:91f621508094b:0-analyst-predicts-bitcoin-price-is-going-to-200-000-reveals-when-to-buy/"
+    },
+    {
+      "title": "Could record capital gains taxes save the US budget?\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T17:54:13+00:00",
+      "timeDisplay": "5:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41518W:0-could-record-capital-gains-taxes-save-the-us-budget/"
+    },
+    {
+      "title": "Middle East Oil Supply to Take Months to Recover \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T17:41:00+00:00",
+      "timeDisplay": "5:41 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260422007985:0/"
+    },
     {
       "title": "Bitcoin\u2019s \u2018Safe Haven\u2019 Narrative Faces Real War Test While Iran Clock Ticks, Pompliano Doubles Down: Report",
       "source": "stocktwits",
@@ -86,7 +148,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-22T16:37:00+00:00",
       "timeDisplay": "4:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422007677:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260422007676:0/"
     },
     {
       "title": "Ethereum risks 10% decline versus Bitcoin despite record ETH staking",
@@ -182,7 +244,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-22T14:54:00+00:00",
       "timeDisplay": "2:54 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422006647:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260422006646:0/"
     },
     {
       "title": "US Crude Oil Stocks Unexpectedly Rise: EIA",
@@ -305,36 +367,12 @@
       "link": "https://www.tradingview.com/news/macenews:e209abedc094b:0-us-atlanta-fed-1-year-business-inflation-expectations-2-3-in-april-vs-2-1-in-march-2-8-in-april-2025/"
     },
     {
-      "title": "Dollar gains as Iran war keeps central banks in wait-and-see mode",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T14:00:46+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150KC:0-dollar-gains-as-iran-war-keeps-central-banks-in-wait-and-see-mode/"
-    },
-    {
       "title": "Bitcoin Set For Stronger Week, Eyes $88K On Stable Macro Backdrop: Analyst",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-04-22T14:00:09+00:00",
       "timeDisplay": "2:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:70d267d26094b:0-bitcoin-set-for-stronger-week-eyes-88k-on-stable-macro-backdrop-analyst/"
-    },
-    {
-      "title": "Armed intruders force French family to transfer $820,000 in crypto: report",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T13:45:39+00:00",
-      "timeDisplay": "1:45 PM",
-      "link": "https://www.tradingview.com/news/the_block:29dc9acf6094b:0-armed-intruders-force-french-family-to-transfer-820-000-in-crypto-report/"
-    },
-    {
-      "title": "Trump's Desire For Weaker Dollar, Rate Cuts Hold Back Currency \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T13:29:00+00:00",
-      "timeDisplay": "1:29 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422005941:0/"
     },
     {
       "title": "Dollar Turns Higher as Ships Attacked in Strait of Hormuz \u2014 Market Talk",
@@ -367,14 +405,6 @@
       "timestamp": "2026-04-22T13:09:55+00:00",
       "timeDisplay": "1:09 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4150PR:0-too-far-too-fast-sox-stretch-raises-red-flags/"
-    },
-    {
-      "title": "Selloff in Rates Market Seen as Opportunity to Add Duration, Keep Overweight \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T13:04:00+00:00",
-      "timeDisplay": "1:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422005686:0/"
     },
     {
       "title": "Will a Ceasefire Extension Provide Relief to Wall Street ETFs?",
@@ -497,14 +527,6 @@
       "link": "https://www.tradingview.com/news/macenews:593bec4e0094b:0-us-mba-frantantoni-homebuyers-are-experiencing-a-buiyer-s-market-iin-most-of-the-country-due-to-higher-inventory/"
     },
     {
-      "title": "US MBA MORTGAGE PURCHASE INDEX +10.1% IN APRIL 17 WEEK; +7.3% VS 4 WEEKS AGO; +14.5% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:5ea20ead2094b:0-us-mba-mortgage-purchase-index-10-1-in-april-17-week-7-3-vs-4-weeks-ago-14-5-vs-1-year-ago/"
-    },
-    {
       "title": "ETH to $250,000 \u2014 New Thesis Calls Bitcoin and Gold Dead Capital",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -623,22 +645,6 @@
       "timestamp": "2026-04-22T02:52:50+00:00",
       "timeDisplay": "2:52 AM",
       "link": "https://www.tradingview.com/news/stocktwits:9c8bc3763094b:0/"
-    },
-    {
-      "title": "Kelp DAO exploiter launders $80 million worth of ETH, mostly through THORChain: onchain analyst",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T02:24:02+00:00",
-      "timeDisplay": "2:24 AM",
-      "link": "https://www.tradingview.com/news/the_block:660188ba8094b:0-kelp-dao-exploiter-launders-80-million-worth-of-eth-mostly-through-thorchain-onchain-analyst/"
-    },
-    {
-      "title": "US oil harami cross bullish, retests resistance at $88.45",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T02:11:25+00:00",
-      "timeDisplay": "2:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41501W:0-us-oil-harami-cross-bullish-retests-resistance-at-88-45/"
     }
   ]
 }

@@ -1,51 +1,67 @@
 {
-  "lastUpdated": "2026-04-21T23:06:06.795675+00:00",
-  "lastUpdatedDisplay": "Apr 21, 2026 \u2014 11:06 PM UTC",
+  "lastUpdated": "2026-04-22T00:00:22.879826+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 12:00 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed performance with stocks closing lower amid heightened geopolitical uncertainty as Iran rejected peace talks and the US extended ceasefire contingent on Iranian proposals. Oil prices surged over 5% on Middle East tensions while the US dollar strengthened on geopolitical risk premiums and uncertainty.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength and oil surge on geopolitical tensions contradict risk-on conditions, while stocks closing lower suggests defensive positioning emerging despite crypto resilience.",
+    "macroSummary": "Markets show mixed signals with stocks closing lower amid geopolitical uncertainty as US-Iran peace talks break down and oil rises over 5%. The dollar climbs on cease-fire uncertainties while crypto sees continued institutional adoption despite some cooling in rate cut expectations.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Equities declining and dollar strengthening on geopolitical tensions creates cross-currents against the Risk-On thesis, though no clear threshold breaches yet.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar climbing on Iran ceasefire uncertainty and geopolitical risk premium"
+        "signal": "Dollar climbing on Iran cease-fire uncertainty but no specific level mentioned in headlines"
       }
     ],
     "keySignals": [
       {
-        "signal": "US dollar climbs as uncertainty grows over Iran ceasefire",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Crude oil rises more than 5% on Iran rejecting peace talks",
+        "signal": "Wall Street closes lower in choppy session with Middle East geopolitical focus",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Wall Street closes choppy session lower with Middle East in focus",
+        "signal": "US dollar climbs as uncertainty grows over Iran cease-fire breakdown",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US bonds slump on strong data and uncertain Iran talks",
+        "signal": "Oil rises more than 5% as US-Iran peace talks collapse",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Bitcoin Fear Fading with sentiment hitting highest since mid-January",
+        "signal": "US bonds slump on strong data and uncertain Iran talks",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin sentiment hits highest since mid-January with fear fading",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 threshold - dollar strength on geopolitical risk challenges risk-on thesis",
-      "Consider tightening BMNR put ladder strikes if crypto correlation with traditional risk assets increases",
-      "Watch oil-dollar correlation as energy surge could fuel reflation concerns and pressure growth assets"
+      "Monitor DXY levels closely - dollar strength on geopolitical uncertainty could approach 100 threshold",
+      "Watch for VIX reaction to continued Middle East tension escalation",
+      "Consider tightening BMNR put strikes if equity weakness persists amid geopolitical overhang"
     ]
   },
   "articles": [
+    {
+      "title": "Gold Edges Higher After Trump Says U.S. Will Extend Cease-Fire Deadline \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T23:36:00+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421011077:0/"
+    },
+    {
+      "title": "Oil Holds Gains as Peace Talks Break Down",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T23:30:11+00:00",
+      "timeDisplay": "11:30 PM",
+      "link": "https://www.tradingview.com/news/te_news:543667:0-oil-holds-gains-as-peace-talks-break-down/"
+    },
     {
       "title": "US oil prices rise as US-Iran peace talks remain uncertain",
       "source": "reuters",
@@ -479,6 +495,14 @@
       "link": "https://www.tradingview.com/news/macenews:539962317094b:0-fed-nominee-warsh-q-a-have-to-find-a-way-working-with-treasury-to-shrink-fed-balance-sheet-rates-a-better-fed-tool-than-balance-sheet-purchases/"
     },
     {
+      "title": "Crude Oil Prices Climb as US-Iran Ceasefire Set to Expire on Wednesday",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T15:38:56+00:00",
+      "timeDisplay": "3:38 PM",
+      "link": "https://www.tradingview.com/news/barchart:6b6aea5e8094b:0-crude-oil-prices-climb-as-us-iran-ceasefire-set-to-expire-on-wednesday/"
+    },
+    {
       "title": "Tuesday data jamboree: Retail sales, pending home sales, business inventories",
       "source": "reuters",
       "color": "#ff6d00",
@@ -621,30 +645,6 @@
       "timestamp": "2026-04-21T13:30:10+00:00",
       "timeDisplay": "1:30 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:3dd8d586b094b:0-canton-zksync-clash-over-how-blockchains-enforce-rules/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Apr 21",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:13:00+00:00",
-      "timeDisplay": "1:13 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421005296:0/"
-    },
-    {
-      "title": "Small names, big gains: Small caps take the lead in 2026",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T13:01:39+00:00",
-      "timeDisplay": "1:01 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4140MQ:0-small-names-big-gains-small-caps-take-the-lead-in-2026/"
-    },
-    {
-      "title": "US yields rise after retail sales data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-21T12:38:23+00:00",
-      "timeDisplay": "12:38 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N40P0RP:0-us-yields-rise-after-retail-sales-data/"
     }
   ]
 }

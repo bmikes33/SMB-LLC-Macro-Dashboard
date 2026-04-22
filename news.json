@@ -1,51 +1,101 @@
 {
-  "lastUpdated": "2026-04-22T00:00:22.879826+00:00",
-  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 12:00 AM UTC",
+  "lastUpdated": "2026-04-22T01:11:43.428804+00:00",
+  "lastUpdatedDisplay": "Apr 22, 2026 \u2014 01:11 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with stocks closing lower amid geopolitical uncertainty as US-Iran peace talks break down and oil rises over 5%. The dollar climbs on cease-fire uncertainties while crypto sees continued institutional adoption despite some cooling in rate cut expectations.",
+    "macroSummary": "Markets showed mixed performance as US-Iran ceasefire talks remained uncertain with Trump extending the deadline while Iran reportedly rejected proposals. Oil gained over 5% on geopolitical tensions and inventory draws, while stocks closed lower and the dollar strengthened amid uncertainty.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Equities declining and dollar strengthening on geopolitical tensions creates cross-currents against the Risk-On thesis, though no clear threshold breaches yet.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar climbing on Iran cease-fire uncertainty but no specific level mentioned in headlines"
-      }
-    ],
+    "regimePressureReason": "Geopolitical uncertainty is driving dollar strength and oil gains while pressuring equities, creating cross-currents that don't clearly support or challenge the risk-on thesis.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Wall Street closes lower in choppy session with Middle East geopolitical focus",
+        "signal": "US dollar climbs on Iran ceasefire uncertainty, approaching potential DXY threshold levels",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil rises 5%+ on geopolitical tensions and Strait of Hormuz concerns, supporting commodity reflation narrative",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Wall Street closes lower in choppy session with Middle East focus contradicting broad risk-on appetite",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US dollar climbs as uncertainty grows over Iran cease-fire breakdown",
-        "tag": "CONTRADICTS"
+        "signal": "US bonds slump on strong data and uncertain Iran talks, suggesting rates volatility may be building",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil rises more than 5% as US-Iran peace talks collapse",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "US bonds slump on strong data and uncertain Iran talks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin sentiment hits highest since mid-January with fear fading",
+        "signal": "Bitcoin sentiment hits highest since mid-January with support holding at $75k level",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY levels closely - dollar strength on geopolitical uncertainty could approach 100 threshold",
-      "Watch for VIX reaction to continued Middle East tension escalation",
-      "Consider tightening BMNR put strikes if equity weakness persists amid geopolitical overhang"
+      "Monitor DXY closely - dollar strength on geopolitical uncertainty could approach 100 threshold",
+      "Watch MOVE indicator as bond volatility appears to be building on Iran uncertainty",
+      "BMNR ladder remains appropriate given crypto sentiment improvement and ETH technical support"
     ]
   },
   "articles": [
+    {
+      "title": "Stocks gain, dollar wobbles as Trump extends Iran ceasefire",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T00:43:23+00:00",
+      "timeDisplay": "12:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41500J:0-stocks-gain-dollar-wobbles-as-trump-extends-iran-ceasefire/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T00:39:44+00:00",
+      "timeDisplay": "12:39 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41500A:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Dollar at week high as markets raise doubts over Iran ceasefire",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-22T00:32:31+00:00",
+      "timeDisplay": "12:32 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N415005:0-dollar-at-week-high-as-markets-raise-doubts-over-iran-ceasefire/"
+    },
+    {
+      "title": "Oil Rises on Strait of Hormuz Likely Remaining Closed \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T00:10:00+00:00",
+      "timeDisplay": "12:10 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260421011206:0/"
+    },
+    {
+      "title": "Key facts: MicroStrategy 815k BTC; Exchanges -98k; ETPs $1.12B; LTH +345k; Support ~$75k",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T00:05:02+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:c2521636547e7:0-key-facts-microstrategy-815k-btc-exchanges-98k-etps-1-12b-lth-345k-support-75k/"
+    },
+    {
+      "title": "Key facts: Arbitrum freezes 30,766 ETH; exploiter moves 75,700 ETH",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-22T00:05:02+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:04987e329bb74:0-key-facts-arbitrum-freezes-30-766-eth-exploiter-moves-75-700-eth/"
+    },
+    {
+      "title": "Gold Holds Decline as Peace Talks Stall",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-21T23:47:31+00:00",
+      "timeDisplay": "11:47 PM",
+      "link": "https://www.tradingview.com/news/te_news:543669:0-gold-holds-decline-as-peace-talks-stall/"
+    },
     {
       "title": "Gold Edges Higher After Trump Says U.S. Will Extend Cease-Fire Deadline \u2014 Market Talk",
       "source": "dow-jones",
@@ -463,14 +513,6 @@
       "link": "https://www.tradingview.com/news/the_block:021e3f1a7094b:0-proposed-strc-upgrade-seen-as-shared-upside-lever-for-strategy-and-strive-shareholders-td-cowen/"
     },
     {
-      "title": "Bitcoin Theft: A Fake Policeman\u2019s Guide to Stealing $1M BTC",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T15:48:32+00:00",
-      "timeDisplay": "3:48 PM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:227f0ff71094b:0-bitcoin-theft-a-fake-policeman-s-guide-to-stealing-1m-btc/"
-    },
-    {
       "title": "FED NOMINEE WARSH Q&A: FED 'NOT BLAMELESS' FOR GAP BETWEEN RICH AND NOT RICH; SMALLER BALANCE SHEET COULD MEAN LOWER INTEREST RATES",
       "source": "macenews",
       "color": "#00e5ff",
@@ -597,54 +639,6 @@
       "timestamp": "2026-04-21T14:58:54+00:00",
       "timeDisplay": "2:58 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4140I6:0-us-bonds-fall-as-retail-sales-data-backs-fed-rate-cut-pause/"
-    },
-    {
-      "title": "Kevin Warsh Calls For 'Regime Change' In Inflation Framework, Says Fed Missed Its Mark As Prices Soared 25% To 35% Post COVID-19",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:56:30+00:00",
-      "timeDisplay": "2:56 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:52ede3669094b:0/"
-    },
-    {
-      "title": "Oil Rises With U.S.-Iran Talks Under Spotlight \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:54:00+00:00",
-      "timeDisplay": "2:54 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421006366:0/"
-    },
-    {
-      "title": "Gold is down by 2.02%",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:50:55+00:00",
-      "timeDisplay": "2:50 PM",
-      "link": "https://www.tradingview.com/news/te_news:543576:0-gold-is-down-by-2-02/"
-    },
-    {
-      "title": "U.K. Inflation Data Likely to Show Effects of Middle East Conflict \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260421006124:0/"
-    },
-    {
-      "title": "Gold Stalls Below $4,800 Amid Trump\u2019s Iran Threats and Strong US Data",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:54:22+00:00",
-      "timeDisplay": "1:54 PM",
-      "link": "https://www.tradingview.com/news/te_news:543561:0-gold-stalls-below-4-800-amid-trump-s-iran-threats-and-strong-us-data/"
-    },
-    {
-      "title": "Canton, ZKsync clash over how blockchains enforce rules",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-21T13:30:10+00:00",
-      "timeDisplay": "1:30 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3dd8d586b094b:0-canton-zksync-clash-over-how-blockchains-enforce-rules/"
     }
   ]
 }

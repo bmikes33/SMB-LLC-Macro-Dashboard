@@ -1,58 +1,114 @@
 {
-  "lastUpdated": "2026-04-23T08:26:32.427295+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 08:26 AM UTC",
+  "lastUpdated": "2026-04-23T10:11:54.640795+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 10:11 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing dual pressures from Iran-US tensions driving safe-haven flows into USD and oil above $100, while Bitcoin rallies to $78-79k with significant short liquidations and crypto sentiment reaching 3-month highs. Traditional risk assets like Asian equities are pulling back from record highs amid geopolitical uncertainty.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Safe-haven dollar strength and risk-off moves in traditional assets contradict the Risk-On regime, though crypto resilience provides mixed signals.",
+    "macroSummary": "Markets are showing classic risk-off behavior with oil surging above $100 on Iran-US tensions, dollar strengthening as safe-haven demand emerges, and Asian equities pulling back from record highs. Bitcoin is experiencing volatile swings between $77K-$79K amid the geopolitical uncertainty, while traditional safe-haven flows are driving treasury yields higher and gold lower on dollar strength.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "Headlines show clear risk-off dynamics with dollar strength, oil spike above $100, safe-haven demand, and equity pullbacks - directly contradicting the Risk-On regime classification.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar holding near 1.5-week highs with multiple headlines citing firmer dollar on Iran tensions"
+        "signal": "Multiple headlines confirm dollar holding firm and rising on safe-haven demand from Iran tensions"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar rises and holds near 1.5-week highs on Iran war tensions driving safe-haven demand",
+        "signal": "Dollar strengthening on safe-haven demand as Iran-US tensions escalate",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian shares pull back from record highs as oil gains on Iran risk premium",
+        "signal": "Oil above $100 with Brent spiking on lack of progress in US-Iran talks and Hormuz shipping disruptions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US Treasury yields rising amid Strait of Hormuz standoff and geopolitical tensions",
+        "signal": "Asian shares pulling back from record highs as geopolitical risk premium returns",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin rallies to $78-79k with $200M in short liquidations despite traditional risk-off moves",
-        "tag": "NEUTRAL"
+        "signal": "Gold falling despite geopolitical tensions due to firmer dollar dynamics",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices above $100 on Iran tensions and disrupted Hormuz shipping",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Bitcoin showing resilience above $77K with strong institutional accumulation despite macro headwinds",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 invalidation threshold that would flip rates group hard",
-      "Assess BMNR ladder timing as crypto shows resilience while traditional risk assets weaken",
-      "Consider reducing Maturity overweight if safe-haven flows accelerate into bonds"
+      "Monitor DXY closely - approaching 100 threshold that would flip rates group and confirm regime break",
+      "BMNR ladder strategy may face headwinds if safe-haven flows continue pressuring risk assets",
+      "Consider reducing risk exposure as multiple safe-haven indicators contradict Risk-On thesis"
     ]
   },
   "articles": [
     {
-      "title": "Bitcoin Price Rises, Defying Iran Tensions Hitting Stocks. Ethereum, XRP Fall. \u2014 Barrons.com",
+      "title": "Bitcoin Price Falls From 11-Week High. Why, Ethereum, XRP, Cryptos Are Dropping. \u2014 Barrons.com",
       "source": "dow-jones",
       "color": "#00e5ff",
-      "timestamp": "2026-04-23T08:09:00+00:00",
-      "timeDisplay": "8:09 AM",
+      "timestamp": "2026-04-23T10:02:00+00:00",
+      "timeDisplay": "10:02 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423002588:0/"
+    },
+    {
+      "title": "Next Big Bitcoin Move May Defy Everything Traders Expect, Says Expert",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T10:00:40+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:38f289adc094b:0-next-big-bitcoin-move-may-defy-everything-traders-expect-says-expert/"
+    },
+    {
+      "title": "Shares stumble as war worries drive oil back above $100",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T09:28:06+00:00",
+      "timeDisplay": "9:28 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4160BL:0-shares-stumble-as-war-worries-drive-oil-back-above-100/"
+    },
+    {
+      "title": "Fresh Iran War Concerns Trigger Profit-Taking in Bitcoin \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T09:18:00+00:00",
+      "timeDisplay": "9:18 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423003319:0/"
+    },
+    {
+      "title": "Dollar holds firm as angst over Iran-US stand-off drives safe-haven demand",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T08:58:52+00:00",
+      "timeDisplay": "8:58 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4160KR:0-dollar-holds-firm-as-angst-over-iran-us-stand-off-drives-safe-haven-demand/"
+    },
+    {
+      "title": "Bitcoin Bull Cycle Is Right On Schedule: Analyst Reveals When The Bull Run Will Begin",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T08:30:19+00:00",
+      "timeDisplay": "8:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:41cb5da6d094b:0-bitcoin-bull-cycle-is-right-on-schedule-analyst-reveals-when-the-bull-run-will-begin/"
+    },
+    {
+      "title": "Bitcoin Price Jumps Above $78K as Strong Demand Returns: Breakout Ahead?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T08:18:51+00:00",
+      "timeDisplay": "8:18 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:9bbfde684094b:0-bitcoin-price-jumps-above-78k-as-strong-demand-returns-breakout-ahead/"
+    },
+    {
+      "title": "Bitmine Ramps Accumulation Toward 5 Million ETH as Whales Join In",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:52:30+00:00",
+      "timeDisplay": "7:52 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:319e71dc4094b:0-bitmine-ramps-accumulation-toward-5-million-eth-as-whales-join-in/"
     },
     {
       "title": "Gold Falls on Higher Oil Prices, Firmer Dollar \u2014 Market Talk",
@@ -167,6 +223,14 @@
       "link": "https://www.tradingview.com/news/modular_finance:f5488d91a1da6:0-h100-signs-binding-agreement-to-increase-bitcoin-holdings-to-approximately-3-500-bitcoin/"
     },
     {
+      "title": "Fundstrat Boss Backs $250,000 Target for ETH",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T05:48:46+00:00",
+      "timeDisplay": "5:48 AM",
+      "link": "https://www.tradingview.com/news/u_today:0220b90df094b:0-fundstrat-boss-backs-250-000-target-for-eth/"
+    },
+    {
       "title": "U.S. Treasury Yields Rise Amid Standoff Over Strait of Hormuz \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -239,12 +303,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604G:0-how-much-risk-can-markets-swallow/"
     },
     {
-      "title": "Oil gains on lack of progress on US-Iran talks, Hormuz shipping still disrupted",
+      "title": "Oil gains as US-Iran talks stall, Hormuz shipping still disrupted",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-23T04:28:21+00:00",
       "timeDisplay": "4:28 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604L:0-oil-gains-on-lack-of-progress-on-us-iran-talks-hormuz-shipping-still-disrupted/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604L:0-oil-gains-as-us-iran-talks-stall-hormuz-shipping-still-disrupted/"
     },
     {
       "title": "THURSDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
@@ -335,14 +399,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:cf0612fd8094b:0-bitcoin-price-rally-nears-80k-dips-may-draw-fresh-buyers/"
     },
     {
-      "title": "Bitcoin Bulls Rebuild As Futures Metric Hits 4-Month High",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T02:00:19+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:534118ee3094b:0-bitcoin-bulls-rebuild-as-futures-metric-hits-4-month-high/"
-    },
-    {
       "title": "Dollar Holds Firm on US-Iran Jitters",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -413,14 +469,6 @@
       "timestamp": "2026-04-23T00:16:04+00:00",
       "timeDisplay": "12:16 AM",
       "link": "https://www.tradingview.com/news/te_news:544103:0-crude-oil-wti-is-up-by-4-02/"
-    },
-    {
-      "title": "Key facts: MicroStrategy 34,160 BTC to 815,061; ETFs > Mining; BTC $79K",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T00:07:13+00:00",
-      "timeDisplay": "12:07 AM",
-      "link": "https://www.tradingview.com/news/tradingview:9c1a6ecf74fea:0-key-facts-microstrategy-34-160-btc-to-815-061-etfs-mining-btc-79k/"
     },
     {
       "title": "Key facts: Attacker Laundered $175M; ETH Near $2,400, 32% Staked",
@@ -575,14 +623,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41515N:0-hedge-funds-zigged-while-everyone-else-zagged-bofa-says/"
     },
     {
-      "title": "Crude Oil Strength Prompts Short Covering in Sugar Futures",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T16:25:18+00:00",
-      "timeDisplay": "4:25 PM",
-      "link": "https://www.tradingview.com/news/barchart:7604714b6094b:0-crude-oil-strength-prompts-short-covering-in-sugar-futures/"
-    },
-    {
       "title": "Ethereum risks 10% decline versus Bitcoin despite record ETH staking",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -605,46 +645,6 @@
       "timestamp": "2026-04-22T15:29:52+00:00",
       "timeDisplay": "3:29 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150MP:0-us-bonds-inch-higher-with-iran-still-the-main-focus/"
-    },
-    {
-      "title": "Home improvement: Mortgage rates dip, applications pick up",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T15:15:19+00:00",
-      "timeDisplay": "3:15 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41512U:0-home-improvement-mortgage-rates-dip-applications-pick-up/"
-    },
-    {
-      "title": "US stocks rise as investors choose optimism regarding Iran",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T14:44:01+00:00",
-      "timeDisplay": "2:44 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41511C:0-us-stocks-rise-as-investors-choose-optimism-regarding-iran/"
-    },
-    {
-      "title": "Dollar Slips as Strength in Stocks Curbs Liquidity Demand",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:38:26+00:00",
-      "timeDisplay": "2:38 PM",
-      "link": "https://www.tradingview.com/news/barchart:5d59ea573094b:0-dollar-slips-as-strength-in-stocks-curbs-liquidity-demand/"
-    },
-    {
-      "title": "US EIA CRUDE OIL INVENTORIES +1.9 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -1.9 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:c3de308c5094b:0-us-eia-crude-oil-inventories-1-9-mln-barrels-in-latest-week-from-previous-week-vs-1-9-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA DISTILLATES INVENTORIES -3.4 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -2.5 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:578f01ce6094b:0-us-eia-distillates-inventories-3-4-mln-barrels-in-latest-week-from-previous-week-vs-2-5-mln-markets-expected/"
     }
   ]
 }

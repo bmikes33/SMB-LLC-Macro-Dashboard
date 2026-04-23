@@ -1,58 +1,111 @@
 {
-  "lastUpdated": "2026-04-23T10:11:54.640795+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 10:11 AM UTC",
+  "lastUpdated": "2026-04-23T11:50:32.449059+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 11:50 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are showing classic risk-off behavior with oil surging above $100 on Iran-US tensions, dollar strengthening as safe-haven demand emerges, and Asian equities pulling back from record highs. Bitcoin is experiencing volatile swings between $77K-$79K amid the geopolitical uncertainty, while traditional safe-haven flows are driving treasury yields higher and gold lower on dollar strength.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Headlines show clear risk-off dynamics with dollar strength, oil spike above $100, safe-haven demand, and equity pullbacks - directly contradicting the Risk-On regime classification.",
+    "macroSummary": "Iran-US tensions over the Strait of Hormuz have driven oil prices above $100/barrel, triggering safe-haven demand for the dollar and Treasury yields while pressuring equities and risk assets. Bitcoin and crypto markets are showing mixed signals with some profit-taking amid the geopolitical uncertainty, though underlying demand remains relatively strong. Asian shares pulled back from record highs as the oil spike creates new inflation concerns.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Strong safe-haven dollar demand and Treasury yield rises signal early risk-off positioning, while oil above $100 reintroduces stagflation risks that challenge the clean Risk-On regime call.",
     "thresholdWatches": [
+      {
+        "indicator": "Oil",
+        "level": "> $100",
+        "signal": "Brent crude above $100 on Iran tensions reintroduces stagflation dynamics not captured in current thresholds"
+      },
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Multiple headlines confirm dollar holding firm and rising on safe-haven demand from Iran tensions"
+        "signal": "Dollar gains on safe-haven demand approach the 100 level invalidation threshold for Risk-On regime"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar strengthening on safe-haven demand as Iran-US tensions escalate",
+        "signal": "Oil above $100 on Iran-US standoff triggers safe-haven flows into dollar and Treasuries",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil above $100 with Brent spiking on lack of progress in US-Iran talks and Hormuz shipping disruptions",
+        "signal": "Equities under pressure as war worries drive profit-taking across risk assets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian shares pulling back from record highs as geopolitical risk premium returns",
-        "tag": "CONTRADICTS"
+        "signal": "Dollar strength approaching DXY 100 threshold that would flip regime assessment",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold falling despite geopolitical tensions due to firmer dollar dynamics",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin showing resilience above $77K with strong institutional accumulation despite macro headwinds",
+        "signal": "Bitcoin showing resilience with short squeezes despite geopolitical headwinds",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Treasury yields rising on oil-driven inflation concerns rather than growth optimism",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would flip rates group and confirm regime break",
-      "BMNR ladder strategy may face headwinds if safe-haven flows continue pressuring risk assets",
-      "Consider reducing risk exposure as multiple safe-haven indicators contradict Risk-On thesis"
+      "Monitor DXY closely - approaching 100 invalidation level for Risk-On regime",
+      "Consider tightening BMNR put ladder strikes given crypto volatility from geopolitical uncertainty",
+      "Prepare for potential regime flip to Risk-Off if oil-driven stagflation fears persist"
     ]
   },
   "articles": [
     {
+      "title": "Dollar Extends Gains on Strait of Hormuz Conflict \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:27:00+00:00",
+      "timeDisplay": "11:27 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423005750:0/"
+    },
+    {
+      "title": "Dollar gains as angst over Iran-US stand-off drives safe-haven demand",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T11:22:19+00:00",
+      "timeDisplay": "11:22 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4160TM:0-dollar-gains-as-angst-over-iran-us-stand-off-drives-safe-haven-demand/"
+    },
+    {
+      "title": "Tesla Held Onto Its Bitcoin Stash In Q1 Despite Taking A $178M Tax Hit \u2013 TSLA Stock Slides Pre-Market",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:05:06+00:00",
+      "timeDisplay": "11:05 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:aaa2c5f68094b:0/"
+    },
+    {
       "title": "Bitcoin Price Falls From 11-Week High. Why, Ethereum, XRP, Cryptos Are Dropping. \u2014 Barrons.com",
       "source": "dow-jones",
       "color": "#00e5ff",
-      "timestamp": "2026-04-23T10:02:00+00:00",
-      "timeDisplay": "10:02 AM",
+      "timestamp": "2026-04-23T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423002588:0/"
+    },
+    {
+      "title": "Tech checked as oil boils",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T10:39:33+00:00",
+      "timeDisplay": "10:39 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4160P2:0-tech-checked-as-oil-boils/"
+    },
+    {
+      "title": "U.S. Treasury Yields, Dollar Rise as Oil Prices Move Higher \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T10:13:00+00:00",
+      "timeDisplay": "10:13 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423004117:0/"
+    },
+    {
+      "title": "Why Bitcoin Price Stuck at $79K, Michael van de Poppe Explains",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T10:02:57+00:00",
+      "timeDisplay": "10:02 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:0a2bca86b094b:0-why-bitcoin-price-stuck-at-79k-michael-van-de-poppe-explains/"
     },
     {
       "title": "Next Big Bitcoin Move May Defy Everything Traders Expect, Says Expert",
@@ -61,6 +114,14 @@
       "timestamp": "2026-04-23T10:00:40+00:00",
       "timeDisplay": "10:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:38f289adc094b:0-next-big-bitcoin-move-may-defy-everything-traders-expect-says-expert/"
+    },
+    {
+      "title": "Adam Back Calls \u2018Finding Satoshi\u2019 Documentary\u2019s Finney-Sassaman Theory \u2018Odd\u2019",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T09:35:05+00:00",
+      "timeDisplay": "9:35 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:abb392b46094b:0-adam-back-calls-finding-satoshi-documentary-s-finney-sassaman-theory-odd/"
     },
     {
       "title": "Shares stumble as war worries drive oil back above $100",
@@ -143,6 +204,14 @@
       "link": "https://www.tradingview.com/news/stocktwits:c267881a6094b:0/"
     },
     {
+      "title": "MetaMask Co-Founder Quits After 10 Years",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:06:04+00:00",
+      "timeDisplay": "7:06 AM",
+      "link": "https://www.tradingview.com/news/u_today:d98b68923094b:0-metamask-co-founder-quits-after-10-years/"
+    },
+    {
       "title": "Bitcoin Rally Catches Shorts Offside\u2014$200M Liquidated As Price Hits $79,000",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -196,7 +265,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-23T06:11:00+00:00",
       "timeDisplay": "6:11 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423001823:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260423001824:0/"
     },
     {
       "title": "Crypto sentiment index soars to a 3-month high as Bitcoin holds $77K",
@@ -335,14 +404,6 @@
       "link": "https://www.tradingview.com/news/chainwire:268cf57dc094b:0-hashkey-group-announces-strategic-partnership-with-anap-holdings-to-expand-bitcoin-treasury-and-institutional-asset-management-in-japan/"
     },
     {
-      "title": "Bitcoin Hits $78,000\u2014All Eyes On $80,700 Cost Basis?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:00:57+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:d070147b3094b:0-bitcoin-hits-78-000-all-eyes-on-80-700-cost-basis/"
-    },
-    {
       "title": "Yuan edges down as firmer dollar, Middle East tensions weigh",
       "source": "reuters",
       "color": "#ff6d00",
@@ -357,14 +418,6 @@
       "timestamp": "2026-04-23T03:18:47+00:00",
       "timeDisplay": "3:18 AM",
       "link": "https://www.tradingview.com/news/newsbtc:ef84280c7094b:0-ethereum-price-rejected-above-2-400-upside-momentum-starts-to-fade/"
-    },
-    {
-      "title": "Consistent XRP Buys Could Deliver Outsized Gains By 2030: Finance Expert",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T03:00:13+00:00",
-      "timeDisplay": "3:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f9e3dece8094b:0-consistent-xrp-buys-could-deliver-outsized-gains-by-2030-finance-expert/"
     },
     {
       "title": "Which Crypto Tokens Benefit Most From the RWA Supercycle?\u00a0",
@@ -389,14 +442,6 @@
       "timestamp": "2026-04-23T02:37:45+00:00",
       "timeDisplay": "2:37 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N416038:0-us-oil-may-retest-support-at-92-28-bounce-temporarily-over/"
-    },
-    {
-      "title": "Bitcoin Price Rally Nears $80K, Dips May Draw Fresh Buyers",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T02:33:29+00:00",
-      "timeDisplay": "2:33 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:cf0612fd8094b:0-bitcoin-price-rally-nears-80k-dips-may-draw-fresh-buyers/"
     },
     {
       "title": "Dollar Holds Firm on US-Iran Jitters",
@@ -605,46 +650,6 @@
       "timestamp": "2026-04-22T17:54:13+00:00",
       "timeDisplay": "5:54 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41518W:0-could-record-capital-gains-taxes-save-the-us-budget/"
-    },
-    {
-      "title": "Middle East Oil Supply to Take Months to Recover \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T17:41:00+00:00",
-      "timeDisplay": "5:41 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422007985:0/"
-    },
-    {
-      "title": "Hedge funds zigged while everyone else zagged, BofA says\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T16:49:06+00:00",
-      "timeDisplay": "4:49 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41515N:0-hedge-funds-zigged-while-everyone-else-zagged-bofa-says/"
-    },
-    {
-      "title": "Ethereum risks 10% decline versus Bitcoin despite record ETH staking",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T16:19:07+00:00",
-      "timeDisplay": "4:19 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3d5e0fa33094b:0-ethereum-risks-10-decline-versus-bitcoin-despite-record-eth-staking/"
-    },
-    {
-      "title": "40-Year Market Veteran Says Current Market Chaos Is Completely Predictable \u2014 If You Know What Day Of The Week It Is",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T16:02:25+00:00",
-      "timeDisplay": "4:02 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:801ed1e09094b:0/"
-    },
-    {
-      "title": "US bonds inch higher with Iran still the main focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T15:29:52+00:00",
-      "timeDisplay": "3:29 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150MP:0-us-bonds-inch-higher-with-iran-still-the-main-focus/"
     }
   ]
 }

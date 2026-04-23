@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-04-23T20:48:45.121823+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 08:48 PM UTC",
+  "lastUpdated": "2026-04-23T21:42:14.609039+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 09:42 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed performance with US stocks declining while oil surged amid escalating US-Iran tensions and concerns over Strait of Hormuz disruptions. Economic data presented a mixed picture with manufacturing activity hitting 3-month highs but geopolitical risks weighing on investor sentiment, while crypto markets faced headwinds from both Middle East tensions and regulatory uncertainties.",
+    "macroSummary": "Middle East tensions between US and Iran are driving oil prices up over 4% while weighing on US equity markets, with specific concerns about Strait of Hormuz standoff. Crypto markets show mixed signals with ETH ETF inflows hitting 10-day streaks and Bitcoin approaching $80K, though geopolitical tensions are creating headwinds for digital assets.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Geopolitical tensions are driving flight-to-quality dynamics with dollar strength and oil spikes, while equity weakness and crypto selloffs suggest risk-off positioning emerging despite some positive economic data.",
+    "regimePressureReason": "Geopolitical risk escalation is driving classic risk-off behavior with oil spiking, equities falling, and dollar strengthening - directly contradicting the current Risk-On regime classification.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar heads for weekly gains as Iran tensions undermine risk appetite"
+        "signal": "Dollar heads for weekly gain as Iran-US tensions undermine ceasefire hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "US stocks ending lower across sessions as Iran-US tensions escalate",
+        "signal": "Oil surges 4%+ on Middle East tensions while US stocks fall, classic risk-off rotation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar gaining weekly strength on safe-haven flows from Middle East standoff",
+        "signal": "Dollar strengthening weekly on geopolitical tensions, approaching risk-off threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil futures surging on Strait of Hormuz disruption concerns",
+        "signal": "US stocks end lower with Iran-US standoff creating market anxiety",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Cryptocurrencies declining as Middle East tensions persist",
-        "tag": "CONTRADICTS"
+        "signal": "ETH ETF inflows hit 10-day streak with bullish technical setup toward $3K",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "US manufacturing activity hits 3-month high with business activity surging",
+        "signal": "Manufacturing PMI hits 3-month high showing underlying economic strength",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for breach of 100 level which would signal regime invalidation",
-      "Consider reducing BMNR ladder exposure given crypto weakness from geopolitical tensions",
-      "Watch for VIX spike above 22 if Middle East tensions escalate further"
+      "Monitor DXY closely for break above 100 which would trigger risk-off invalidation threshold",
+      "Consider tightening BMNR put ladder strikes given crypto volatility from geopolitical tensions",
+      "Reassess regime classification if oil continues climbing and equities remain pressured"
     ]
   },
   "articles": [
+    {
+      "title": "The Ethereum \u2018Bank Run\u2019: What\u2019s Happening Between ETH And The Financial Systems?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T21:30:05+00:00",
+      "timeDisplay": "9:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:23742a4f0094b:0-the-ethereum-bank-run-what-s-happening-between-eth-and-the-financial-systems/"
+    },
+    {
+      "title": "Spot ETH ETF inflows hit 10-day streak: Will Ether rally to $3K next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T21:25:30+00:00",
+      "timeDisplay": "9:25 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e528b8657094b:0-spot-eth-etf-inflows-hit-10-day-streak-will-ether-rally-to-3k-next/"
+    },
+    {
+      "title": "Global crypto adoption slumps amid macro pressures, Turkey defies downtrend",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T21:21:36+00:00",
+      "timeDisplay": "9:21 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0346666a9094b:0-global-crypto-adoption-slumps-amid-macro-pressures-turkey-defies-downtrend/"
+    },
+    {
+      "title": "Paradigm-backed Succinct launches iPhone camera app that combats AI fakes using cryptography",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T21:06:30+00:00",
+      "timeDisplay": "9:06 PM",
+      "link": "https://www.tradingview.com/news/the_block:cfe6a02b4094b:0-paradigm-backed-succinct-launches-iphone-camera-app-that-combats-ai-fakes-using-cryptography/"
+    },
+    {
+      "title": "Crude Oil Up More Than 4%",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T20:52:34+00:00",
+      "timeDisplay": "8:52 PM",
+      "link": "https://www.tradingview.com/news/te_news:544516:0-crude-oil-up-more-than-4/"
+    },
+    {
+      "title": "US indexes fall with angst about Iran and software countering chip boost",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T20:48:21+00:00",
+      "timeDisplay": "8:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4161G7:0-us-indexes-fall-with-angst-about-iran-and-software-countering-chip-boost/"
+    },
     {
       "title": "US stocks end lower, oil climbs as cracks appear in fragile US-Iran truce\u00a0",
       "source": "reuters",
@@ -495,14 +543,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260423008058:0/"
     },
     {
-      "title": "Bitcoin Price Battle for $87,000: Peter Brandt Identifies the Final Hurdle in Current Rally",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:35:00+00:00",
-      "timeDisplay": "1:35 PM",
-      "link": "https://www.tradingview.com/news/u_today:612e2ccce094b:0-bitcoin-price-battle-for-87-000-peter-brandt-identifies-the-final-hurdle-in-current-rally/"
-    },
-    {
       "title": "WTI Crude Rises for 4th Session",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -575,14 +615,6 @@
       "link": "https://www.tradingview.com/news/macenews:a59a689b5094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-claims-205-306-9-736-unadjusted-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
     },
     {
-      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1.821 MLN, +12,000",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:5a4769112094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-821-mln-12-000/"
-    },
-    {
       "title": "MetaMask co-founder Dan Finlay leaves Consensys after 10 years",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -613,38 +645,6 @@
       "timestamp": "2026-04-23T07:47:00+00:00",
       "timeDisplay": "7:47 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423002505:0/"
-    },
-    {
-      "title": "Brent Above $100 a Barrel on Lack of Progress in U.S.-Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T07:22:00+00:00",
-      "timeDisplay": "7:22 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423002373:0/"
-    },
-    {
-      "title": "US Dollar Dominance Strengthens As Iran War Drives Safe-Haven Demand \u2014 SWIFT Data Confirms The Shift",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T07:21:58+00:00",
-      "timeDisplay": "7:21 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:c267881a6094b:0/"
-    },
-    {
-      "title": "MetaMask Co-Founder Quits After 10 Years",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T07:06:04+00:00",
-      "timeDisplay": "7:06 AM",
-      "link": "https://www.tradingview.com/news/u_today:d98b68923094b:0-metamask-co-founder-quits-after-10-years/"
-    },
-    {
-      "title": "Is Ethereum set for a breakout as Open Interest and bulls rise?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T06:52:44+00:00",
-      "timeDisplay": "6:52 AM",
-      "link": "https://www.tradingview.com/news/invezz:514273167094b:0-is-ethereum-set-for-a-breakout-as-open-interest-and-bulls-rise/"
     }
   ]
 }

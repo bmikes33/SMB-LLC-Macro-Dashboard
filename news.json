@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-04-23T15:11:15.392963+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 03:11 PM UTC",
+  "lastUpdated": "2026-04-23T16:58:42.766487+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 04:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets face mixed signals as geopolitical tensions drive oil above $100 and strengthen the dollar near 2-week highs, while US manufacturing PMI hits a 47-month high and services activity rebounds. Bitcoin retreats from 11-week highs amid broader crypto weakness and industry pessimism.",
+    "macroSummary": "Mixed economic data shows manufacturing hitting 47-month highs while mortgage rates decline slightly, but geopolitical tensions around Iran and Hormuz Strait are driving dollar strength and oil above $100. Bitcoin failed to hold $80K levels amid broader crypto weakness, while Fed policy uncertainty persists under potential new leadership.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength near 2-week highs and sustained geopolitical risk premium contradict the clean Risk-On regime, despite strong PMI data supporting growth momentum.",
+    "regimePressureReason": "Dollar strengthening toward multi-week highs and sustained geopolitical risk premium contradict the clean Risk-On narrative, while crypto weakness suggests risk appetite is more fragile than the regime implies.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar near 2-week highs driven by Iran-US tensions undermining ceasefire hopes"
+        "signal": "Dollar near 2-week highs with weekly gains as Iran tensions undermine risk sentiment"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar gaining for the week on geopolitical tensions, approaching DXY > 100 threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Oil back above $100 with Strait of Hormuz standstill creating sustained risk premium",
+        "signal": "Dollar hitting 2-week highs with weekly gains as geopolitical tensions persist",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US manufacturing PMI surges to 47-month high at 54.0, services rebounds to 51.3",
+        "signal": "Bitcoin fails $80K retest with crypto markets showing broad weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil holding above $100 on Hormuz concerns maintaining risk premium",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US manufacturing PMI surges to 47-month high at 54.0 vs 52.3 prior",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin falls from 11-week high with crypto weakness and industry insider predicting inevitable collapse",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Kansas City Fed shows transport cost inflation surge with 93% of firms reporting rising costs",
-        "tag": "NEUTRAL"
+        "signal": "Mortgage rates declining with 30-year dropping to 6.23% from 6.30%",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would signal regime shift to Risk-Off",
-      "Consider scaling back BMNR ladder given crypto sector weakness and Bitcoin retreat from highs",
-      "Reassess equity bullish bias if geopolitical premium persists despite strong economic data"
+      "Monitor DXY closely - approaching 100 threshold that would signal regime flip",
+      "Consider reducing BMNR ladder exposure given crypto weakness and Bitcoin's $80K failure",
+      "Watch for oil price action if Hormuz tensions escalate further"
     ]
   },
   "articles": [
+    {
+      "title": "Stablecoins Enter Third Stage of Evolution, Says CoinDesk \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T16:47:00+00:00",
+      "timeDisplay": "4:47 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423010149:0/"
+    },
+    {
+      "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.58% IN LATEST WEEK VS. 5.65% LAST WEEK, 5.94% A YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T16:28:00+00:00",
+      "timeDisplay": "4:28 PM",
+      "link": "https://www.tradingview.com/news/macenews:99b675eb6094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-58-in-latest-week-vs-5-65-last-week-5-94-a-year-ago/"
+    },
+    {
+      "title": "US FREDDIE MAC 30-YEAR MORTGAGE RATE 6.23% IN LATEST WEEK VS. 6.30% LAST WEEK, 6.81% A YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T16:27:00+00:00",
+      "timeDisplay": "4:27 PM",
+      "link": "https://www.tradingview.com/news/macenews:5a4d06df7094b:0-us-freddie-mac-30-year-mortgage-rate-6-23-in-latest-week-vs-6-30-last-week-6-81-a-year-ago/"
+    },
+    {
+      "title": "Factory Survey Shows Limited Pass-Through of Rising Energy Costs \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T16:08:00+00:00",
+      "timeDisplay": "4:08 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423009682:0/"
+    },
+    {
+      "title": "Data duet: Jobless claims, Flash PMI",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T15:43:41+00:00",
+      "timeDisplay": "3:43 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41615K:0-data-duet-jobless-claims-flash-pmi/"
+    },
+    {
+      "title": "CLARITY Act Seen Critical in Maturation of Blockchain Tech \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:42:00+00:00",
+      "timeDisplay": "3:42 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423009175:0/"
+    },
+    {
+      "title": "Bitcoin weekly close in focus after BTC price fails to revisit $80K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:26:33+00:00",
+      "timeDisplay": "3:26 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e6bed636f094b:0-bitcoin-weekly-close-in-focus-after-btc-price-fails-to-revisit-80k/"
+    },
+    {
+      "title": "Bitwise Strategist Says XRP Is No Longer a Crypto Bet, It Is Fintech Infrastructure Now",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:26:15+00:00",
+      "timeDisplay": "3:26 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:395582f6a094b:0-bitwise-strategist-says-xrp-is-no-longer-a-crypto-bet-it-is-fintech-infrastructure-now/"
+    },
+    {
+      "title": "\u2018Rally on trial\u2019: Bitcoin breakout faces key $80,000 test as whales, ETF investors buy into volatility",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:24:16+00:00",
+      "timeDisplay": "3:24 PM",
+      "link": "https://www.tradingview.com/news/the_block:a9efdea2b094b:0-rally-on-trial-bitcoin-breakout-faces-key-80-000-test-as-whales-etf-investors-buy-into-volatility/"
+    },
+    {
+      "title": "US, world shares ease, oil climbs as investors juggle war worries, mixed earnings",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T15:12:21+00:00",
+      "timeDisplay": "3:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4160YV:0-us-world-shares-ease-oil-climbs-as-investors-juggle-war-worries-mixed-earnings/"
+    },
     {
       "title": "US KANSAS CITY FED MANUF REPORT: 93% OF FIRMS REPORT RISING TRANSPORT COSTS IN APRIL;TWO-THIRDS OF FIRMS SAY THEY WILL PASS ON 0-20% OF HIGHER COST TO",
       "source": "macenews",
@@ -447,60 +527,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:4fe1c76d5094b:0-bitcoin-buyers-show-renewed-conviction-with-btc-price-push-toward-79k/"
     },
     {
-      "title": "Tesla Held Onto Its Bitcoin Stash In Q1 Despite Taking A $178M Tax Hit \u2013 TSLA Stock Slides Pre-Market",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T11:05:06+00:00",
-      "timeDisplay": "11:05 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:aaa2c5f68094b:0/"
-    },
-    {
-      "title": "Tech checked as oil boils",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-23T10:39:33+00:00",
-      "timeDisplay": "10:39 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4160P2:0-tech-checked-as-oil-boils/"
-    },
-    {
       "title": "U.S. Treasury Yields, Dollar Rise as Oil Prices Move Higher \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-04-23T10:13:00+00:00",
       "timeDisplay": "10:13 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423004117:0/"
-    },
-    {
-      "title": "Why Bitcoin Price Stuck at $79K, Michael van de Poppe Explains",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T10:02:57+00:00",
-      "timeDisplay": "10:02 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:0a2bca86b094b:0-why-bitcoin-price-stuck-at-79k-michael-van-de-poppe-explains/"
-    },
-    {
-      "title": "Next Big Bitcoin Move May Defy Everything Traders Expect, Says Expert",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T10:00:40+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:38f289adc094b:0-next-big-bitcoin-move-may-defy-everything-traders-expect-says-expert/"
-    },
-    {
-      "title": "Adam Back Calls \u2018Finding Satoshi\u2019 Documentary\u2019s Finney-Sassaman Theory \u2018Odd\u2019",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T09:35:05+00:00",
-      "timeDisplay": "9:35 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:abb392b46094b:0-adam-back-calls-finding-satoshi-documentary-s-finney-sassaman-theory-odd/"
-    },
-    {
-      "title": "Fresh Iran War Concerns Trigger Profit-Taking in Bitcoin \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T09:18:00+00:00",
-      "timeDisplay": "9:18 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423003319:0/"
     },
     {
       "title": "Bitmine Ramps Accumulation Toward 5 Million ETH as Whales Join In",
@@ -607,44 +639,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260423000478:0/"
     },
     {
-      "title": "THURSDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:17:00+00:00",
-      "timeDisplay": "4:17 AM",
-      "link": "https://www.tradingview.com/news/macenews:89e2220d3094b:0-thursday-white-house-schedule-subject-to-additions-during-the-day/"
-    },
-    {
       "title": "Ethereum Price Rejected Above $2,400, Upside Momentum Starts To Fade",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-04-23T03:18:47+00:00",
       "timeDisplay": "3:18 AM",
       "link": "https://www.tradingview.com/news/newsbtc:ef84280c7094b:0-ethereum-price-rejected-above-2-400-upside-momentum-starts-to-fade/"
-    },
-    {
-      "title": "Which Crypto Tokens Benefit Most From the RWA Supercycle?\u00a0",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T02:55:51+00:00",
-      "timeDisplay": "2:55 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:5757bdbfc094b:0-which-crypto-tokens-benefit-most-from-the-rwa-supercycle/"
-    },
-    {
-      "title": "US 10-Year Yield Edges Higher",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T02:44:16+00:00",
-      "timeDisplay": "2:44 AM",
-      "link": "https://www.tradingview.com/news/te_news:544156:0-us-10-year-yield-edges-higher/"
-    },
-    {
-      "title": "US oil may retest support at $92.28, bounce temporarily over",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-23T02:37:45+00:00",
-      "timeDisplay": "2:37 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N416038:0-us-oil-may-retest-support-at-92-28-bounce-temporarily-over/"
     }
   ]
 }

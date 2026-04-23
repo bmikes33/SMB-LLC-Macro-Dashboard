@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-04-23T06:30:26.170649+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 06:30 AM UTC",
+  "lastUpdated": "2026-04-23T08:26:32.427295+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 08:26 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin rallying toward $80K and crypto sentiment hitting 3-month highs, while escalating US-Iran tensions drive dollar strength and oil price volatility. Asian equities pulled back from record highs as geopolitical risks offset crypto momentum, with oil gaining over 4% on Strait of Hormuz shipping disruptions.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Strong crypto momentum supports risk-on thesis, but dollar strength near 1.5-week highs and oil volatility from Iran tensions introduce defensive positioning that could challenge risk appetite.",
+    "macroSummary": "Markets are experiencing dual pressures from Iran-US tensions driving safe-haven flows into USD and oil above $100, while Bitcoin rallies to $78-79k with significant short liquidations and crypto sentiment reaching 3-month highs. Traditional risk assets like Asian equities are pulling back from record highs amid geopolitical uncertainty.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Safe-haven dollar strength and risk-off moves in traditional assets contradict the Risk-On regime, though crypto resilience provides mixed signals.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar holding near 1.5-week highs on Iran-US standoff tensions"
+        "signal": "Dollar holding near 1.5-week highs with multiple headlines citing firmer dollar on Iran tensions"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin hitting $78K with bulls targeting $80K-$86K suggests strong risk asset appetite",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar strength near 1.5-week highs on geopolitical tensions approaches DXY > 100 threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Oil up 4% on Iran tensions and Hormuz shipping disruptions introduces stagflationary pressure",
+        "signal": "Dollar rises and holds near 1.5-week highs on Iran war tensions driving safe-haven demand",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian shares pulling back from record highs despite crypto rally shows risk asset divergence",
+        "signal": "Asian shares pull back from record highs as oil gains on Iran risk premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Ethereum facing resistance at $2,400-$2,450 with upside momentum fading",
+        "signal": "US Treasury yields rising amid Strait of Hormuz standoff and geopolitical tensions",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin rallies to $78-79k with $200M in short liquidations despite traditional risk-off moves",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Oil prices above $100 on Iran tensions and disrupted Hormuz shipping",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 level that would flip rates group and challenge risk-on regime",
-      "BMNR ladder: Consider tightening strikes if ETH stalls at $2,450 resistance as momentum fades",
-      "Watch oil volatility impact on broader risk appetite given 4% spike on Iran tensions"
+      "Monitor DXY closely - approaching 100 invalidation threshold that would flip rates group hard",
+      "Assess BMNR ladder timing as crypto shows resilience while traditional risk assets weaken",
+      "Consider reducing Maturity overweight if safe-haven flows accelerate into bonds"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Price Rises, Defying Iran Tensions Hitting Stocks. Ethereum, XRP Fall. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T08:09:00+00:00",
+      "timeDisplay": "8:09 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002588:0/"
+    },
+    {
+      "title": "Gold Falls on Higher Oil Prices, Firmer Dollar \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:47:00+00:00",
+      "timeDisplay": "7:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002505:0/"
+    },
+    {
+      "title": "Bitcoin Consolidating Gains in Range-Compression Phase \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:43:00+00:00",
+      "timeDisplay": "7:43 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002488:0/"
+    },
+    {
+      "title": "Brent Above $100 a Barrel on Lack of Progress in U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:22:00+00:00",
+      "timeDisplay": "7:22 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002373:0/"
+    },
+    {
+      "title": "US Dollar Dominance Strengthens As Iran War Drives Safe-Haven Demand \u2014 SWIFT Data Confirms The Shift",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:21:58+00:00",
+      "timeDisplay": "7:21 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:c267881a6094b:0/"
+    },
+    {
+      "title": "Bitcoin Rally Catches Shorts Offside\u2014$200M Liquidated As Price Hits $79,000",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:00:50+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:185c5e928094b:0-bitcoin-rally-catches-shorts-offside-200m-liquidated-as-price-hits-79-000/"
+    },
+    {
+      "title": "Bitcoin Turns Lower as Hopes For Iran War De-escalation Fade \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:00:00+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002162:0/"
+    },
+    {
+      "title": "Is Ethereum set for a breakout as Open Interest and bulls rise?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T06:52:44+00:00",
+      "timeDisplay": "6:52 AM",
+      "link": "https://www.tradingview.com/news/invezz:514273167094b:0-is-ethereum-set-for-a-breakout-as-open-interest-and-bulls-rise/"
+    },
+    {
+      "title": "The much-hyped great rotation out of tech for 2026 may be over already",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T06:52:09+00:00",
+      "timeDisplay": "6:52 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:e2380d018094b:0/"
+    },
+    {
+      "title": "Dollar Rises on Signs of Continued Iran War Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T06:52:00+00:00",
+      "timeDisplay": "6:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423002106:0/"
+    },
     {
       "title": "Bluebird Mining Ventures To Invest In 4.8MW Bitcoin Mining Project In Texas",
       "source": "reuters",
@@ -85,6 +165,14 @@
       "timestamp": "2026-04-23T06:00:00+00:00",
       "timeDisplay": "6:00 AM",
       "link": "https://www.tradingview.com/news/modular_finance:f5488d91a1da6:0-h100-signs-binding-agreement-to-increase-bitcoin-holdings-to-approximately-3-500-bitcoin/"
+    },
+    {
+      "title": "U.S. Treasury Yields Rise Amid Standoff Over Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T05:32:00+00:00",
+      "timeDisplay": "5:32 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423001406:0/"
     },
     {
       "title": "Dollar holds near 1-1/2-week high as Iran-US stand-off\u00a0persists",
@@ -375,44 +463,12 @@
       "link": "https://www.tradingview.com/news/te_news:544095:0-oil-holds-three-day-advance/"
     },
     {
-      "title": "Bitcoin chases monthly high above $80K as nearly all BTC price metrics turn bullish",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T23:30:00+00:00",
-      "timeDisplay": "11:30 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:f54713a0e094b:0-bitcoin-chases-monthly-high-above-80k-as-nearly-all-btc-price-metrics-turn-bullish/"
-    },
-    {
       "title": "Ethereum Coinbase Premium Flips Bullish: Discover What Happens When US Whales Are Long",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-04-22T23:00:07+00:00",
       "timeDisplay": "11:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:ecbe77907094b:0-ethereum-coinbase-premium-flips-bullish-discover-what-happens-when-us-whales-are-long/"
-    },
-    {
-      "title": "Bitcoin And XRP Need Relief From Capital Drain, Says John Bollinger",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T22:00:17+00:00",
-      "timeDisplay": "10:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:52f8eafb1094b:0-bitcoin-and-xrp-need-relief-from-capital-drain-says-john-bollinger/"
-    },
-    {
-      "title": "Ripple Sends $108 Million XRP to Coinbase, Shiba Inu (SHIB) Sees April's Biggest Bullish Sign,Saylor\u2019s Strategy Scoops $3.6 Billion Bitcoin Gains \u2014 U.Today Crypto Digest",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T21:44:56+00:00",
-      "timeDisplay": "9:44 PM",
-      "link": "https://www.tradingview.com/news/u_today:278592f31094b:0-ripple-sends-108-million-xrp-to-coinbase-shiba-inu-shib-sees-april-s-biggest-bullish-sign-saylor-s-strategy-scoops-3-6-billion-bitcoin-gains-u-today-crypto-digest/"
-    },
-    {
-      "title": "$60,000 Is The Bottom: Bitcoin Analyst Predicts Lowest Level Before Run To $200,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T21:00:11+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:3c55261b0094b:0-60-000-is-the-bottom-bitcoin-analyst-predicts-lowest-level-before-run-to-200-000/"
     },
     {
       "title": "Stocks end higher on ceasefire relief, oil gains as truce is tested",
@@ -543,14 +599,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:801ed1e09094b:0/"
     },
     {
-      "title": "Crude Oil Prices Climb as Global Oil Supplies Disrupted",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T15:36:45+00:00",
-      "timeDisplay": "3:36 PM",
-      "link": "https://www.tradingview.com/news/barchart:084b907cc094b:0-crude-oil-prices-climb-as-global-oil-supplies-disrupted/"
-    },
-    {
       "title": "US bonds inch higher with Iran still the main focus",
       "source": "reuters",
       "color": "#ff6d00",
@@ -565,14 +613,6 @@
       "timestamp": "2026-04-22T15:15:19+00:00",
       "timeDisplay": "3:15 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41512U:0-home-improvement-mortgage-rates-dip-applications-pick-up/"
-    },
-    {
-      "title": "US Crude Oil Stocks Unexpectedly Rise: EIA",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:44:47+00:00",
-      "timeDisplay": "2:44 PM",
-      "link": "https://www.tradingview.com/news/te_news:544000:0-us-crude-oil-stocks-unexpectedly-rise-eia/"
     },
     {
       "title": "US stocks rise as investors choose optimism regarding Iran",
@@ -605,46 +645,6 @@
       "timestamp": "2026-04-22T14:30:00+00:00",
       "timeDisplay": "2:30 PM",
       "link": "https://www.tradingview.com/news/macenews:578f01ce6094b:0-us-eia-distillates-inventories-3-4-mln-barrels-in-latest-week-from-previous-week-vs-2-5-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA GASOLINE INVENTORIES -4.6 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -1.5 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:ff67805f6094b:0-us-eia-gasoline-inventories-4-6-mln-barrels-in-latest-week-from-previous-week-vs-1-5-mln-markets-expected/"
-    },
-    {
-      "title": "ONDO Price Eyes Breakout as Tokenized Stocks Narrative Heats Up",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:25:51+00:00",
-      "timeDisplay": "2:25 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:210238bc4094b:0-ondo-price-eyes-breakout-as-tokenized-stocks-narrative-heats-up/"
-    },
-    {
-      "title": "US CHICAGO FED DISTRICT MANUFACTURING BUSINESS CONDITIONS INDEX 22 IN APRIL VS. 46 IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:05:00+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:4f41c42b0094b:0-us-chicago-fed-district-manufacturing-business-conditions-index-22-in-april-vs-46-in-march/"
-    },
-    {
-      "title": "US CHICAGO FED DISTRICT NON-MANUFACTURING BUSINESS CONDITIONS INDEX 13 IN APRIL VS 11 IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:05:00+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:4c4f9ae0e094b:0-us-chicago-fed-district-non-manufacturing-business-conditions-index-13-in-april-vs-11-in-march/"
-    },
-    {
-      "title": "Crypto Turns Higher as Legislators Chew on the CLARITY Act \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T14:04:00+00:00",
-      "timeDisplay": "2:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422006239:0/"
     }
   ]
 }

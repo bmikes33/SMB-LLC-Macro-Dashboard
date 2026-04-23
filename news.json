@@ -1,56 +1,155 @@
 {
-  "lastUpdated": "2026-04-23T11:50:32.449059+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 11:50 AM UTC",
+  "lastUpdated": "2026-04-23T12:52:55.094109+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 12:52 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Iran-US tensions over the Strait of Hormuz have driven oil prices above $100/barrel, triggering safe-haven demand for the dollar and Treasury yields while pressuring equities and risk assets. Bitcoin and crypto markets are showing mixed signals with some profit-taking amid the geopolitical uncertainty, though underlying demand remains relatively strong. Asian shares pulled back from record highs as the oil spike creates new inflation concerns.",
+    "macroSummary": "Iran-US tensions are driving oil prices above $100/barrel and strengthening dollar safe-haven demand, while US economic data shows mixed signals with Chicago Fed activity declining and jobless claims rising modestly. Bitcoin consolidates near $79K amid the geopolitical uncertainty, with crypto sentiment remaining elevated despite some profit-taking.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Strong safe-haven dollar demand and Treasury yield rises signal early risk-off positioning, while oil above $100 reintroduces stagflation risks that challenge the clean Risk-On regime call.",
+    "regimePressureReason": "Dollar strength and safe-haven flows driven by Iran war concerns directly contradict the Risk-On regime, while oil spike above $100 introduces stagflation risks.",
     "thresholdWatches": [
-      {
-        "indicator": "Oil",
-        "level": "> $100",
-        "signal": "Brent crude above $100 on Iran tensions reintroduces stagflation dynamics not captured in current thresholds"
-      },
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar gains on safe-haven demand approach the 100 level invalidation threshold for Risk-On regime"
+        "signal": "Dollar extending gains on Iran-US standoff safe-haven demand"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil above $100 on Iran-US standoff triggers safe-haven flows into dollar and Treasuries",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Equities under pressure as war worries drive profit-taking across risk assets",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar strength approaching DXY 100 threshold that would flip regime assessment",
+        "signal": "Dollar gains on Iran-US standoff driving safe-haven demand, approaching DXY > 100 threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin showing resilience with short squeezes despite geopolitical headwinds",
-        "tag": "SUPPORTS"
+        "signal": "Oil prices moving back above $100/barrel on Iran war concerns introduces stagflation risk",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields rising on oil-driven inflation concerns rather than growth optimism",
+        "signal": "Fresh Iran war concerns triggering profit-taking across risk assets including Bitcoin",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US economic data mixed with Chicago Fed activity declining and jobless claims rising",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Crypto sentiment index hits 3-month high despite geopolitical headwinds",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 invalidation level for Risk-On regime",
-      "Consider tightening BMNR put ladder strikes given crypto volatility from geopolitical uncertainty",
-      "Prepare for potential regime flip to Risk-Off if oil-driven stagflation fears persist"
+      "Monitor DXY closely - approaching 100 threshold that would signal regime flip",
+      "Consider reducing BMNR ladder exposure if oil-driven stagflation fears persist",
+      "Watch for credit stress signals (HYG) as safe-haven flows intensify"
     ]
   },
   "articles": [
+    {
+      "title": "RECAPPING:  US CHICAGO FED NATL ACTIVITY INDEX 3-MONTH MOVING AVERAGE -0.03 IN MARCH VS +0.03 IN FEBRUARY (PREV -0.01); +0.05 IN MARCH 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:40:00+00:00",
+      "timeDisplay": "12:40 PM",
+      "link": "https://www.tradingview.com/news/macenews:ec2be5321094b:0-recapping-us-chicago-fed-natl-activity-index-3-month-moving-average-0-03-in-march-vs-0-03-in-february-prev-0-01-0-05-in-march-2025/"
+    },
+    {
+      "title": "RECAPPING: US CHICAGO FED NATIONAL ACTIVITY INDEX -0.20 IN MARCH VS +0.03 IN FEBRUARY (PREV -0.11); +0.03 IN MARCH 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:40:00+00:00",
+      "timeDisplay": "12:40 PM",
+      "link": "https://www.tradingview.com/news/macenews:93ef90e96094b:0-recapping-us-chicago-fed-national-activity-index-0-20-in-march-vs-0-03-in-february-prev-0-11-0-03-in-march-2025/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED WKLY CLAIMS 205,306, -9,736; UNADJUSTED INSURED UNEMP RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:39:00+00:00",
+      "timeDisplay": "12:39 PM",
+      "link": "https://www.tradingview.com/news/macenews:a59a689b5094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-claims-205-306-9-736-unadjusted-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1.821 MLN, +12,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:36:00+00:00",
+      "timeDisplay": "12:36 PM",
+      "link": "https://www.tradingview.com/news/macenews:5a4769112094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-821-mln-12-000/"
+    },
+    {
+      "title": "REPEATING: INITIAL CLAIMS: 4-WK MOVING AVG 210,750, +750 ; INSURED UNEMP RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:dc91da943094b:0-repeating-initial-claims-4-wk-moving-avg-210-750-750-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "BENEFITS:  4-WK MOVING AVG 210,750, +750 ; INSURED UNEMP  RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:9804334fd094b:0-benefits-4-wk-moving-avg-210-750-750-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "Bitcoin To $140,000 And XRP To $7? Here\u2019s When It Will Happen",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:30:05+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:8c1185c38094b:0-bitcoin-to-140-000-and-xrp-to-7-here-s-when-it-will-happen/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: 214,000, +6,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:ac98ad43a094b:0-us-initial-claims-for-jobless-benefits-214-000-6-000/"
+    },
+    {
+      "title": "Bitcoin\u2019s $80K Problem Ahead: Over Half Of Short-Term BTC Holders Are About To Hit A Profit Zone",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:03:23+00:00",
+      "timeDisplay": "12:03 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:1d388e52b094b:0/"
+    },
+    {
+      "title": "Bitcoin Eases Further as Iran War Tensions Weigh \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T12:03:00+00:00",
+      "timeDisplay": "12:03 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260423006464:0/"
+    },
+    {
+      "title": "BlackRock drives 7-day Bitcoin ETF inflow streak as BTC nears $80,000",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:55:43+00:00",
+      "timeDisplay": "11:55 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:242f37c09094b:0-blackrock-drives-7-day-bitcoin-etf-inflow-streak-as-btc-nears-80-000/"
+    },
+    {
+      "title": "MetaMask co-founder Dan Finlay leaves Consensys after 10 years",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:46:06+00:00",
+      "timeDisplay": "11:46 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8400c0795094b:0-metamask-co-founder-dan-finlay-leaves-consensys-after-10-years/"
+    },
+    {
+      "title": "Tesla Holds 11,509 BTC Untouched While Injecting $2 Billion Into SpaceX",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:42:45+00:00",
+      "timeDisplay": "11:42 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:49590876e094b:0-tesla-holds-11-509-btc-untouched-while-injecting-2-billion-into-spacex/"
+    },
     {
       "title": "Dollar Extends Gains on Strait of Hormuz Conflict \u2014 Market Talk",
       "source": "dow-jones",
@@ -66,6 +165,14 @@
       "timestamp": "2026-04-23T11:22:19+00:00",
       "timeDisplay": "11:22 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4160TM:0-dollar-gains-as-angst-over-iran-us-stand-off-drives-safe-haven-demand/"
+    },
+    {
+      "title": "Bitcoin buyers show \u2018renewed conviction\u2019 with BTC price push toward $79K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T11:16:01+00:00",
+      "timeDisplay": "11:16 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:4fe1c76d5094b:0-bitcoin-buyers-show-renewed-conviction-with-btc-price-push-toward-79k/"
     },
     {
       "title": "Tesla Held Onto Its Bitcoin Stash In Q1 Despite Taking A $178M Tax Hit \u2013 TSLA Stock Slides Pre-Market",
@@ -164,6 +271,14 @@
       "link": "https://www.tradingview.com/news/coinpedia:9bbfde684094b:0-bitcoin-price-jumps-above-78k-as-strong-demand-returns-breakout-ahead/"
     },
     {
+      "title": "Why Satoshi\u2019s Identity No Longer Matters: Strategy and Coinbase CEOs Signal the End of the Hunt",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T08:14:15+00:00",
+      "timeDisplay": "8:14 AM",
+      "link": "https://www.tradingview.com/news/u_today:878bc4819094b:0-why-satoshi-s-identity-no-longer-matters-strategy-and-coinbase-ceos-signal-the-end-of-the-hunt/"
+    },
+    {
       "title": "Bitmine Ramps Accumulation Toward 5 Million ETH as Whales Join In",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -202,6 +317,14 @@
       "timestamp": "2026-04-23T07:21:58+00:00",
       "timeDisplay": "7:21 AM",
       "link": "https://www.tradingview.com/news/stocktwits:c267881a6094b:0/"
+    },
+    {
+      "title": "Crypto sentiment index soars to a 3-month high as Bitcoin holds $77K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T07:07:11+00:00",
+      "timeDisplay": "7:07 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0417ada63094b:0-crypto-sentiment-index-soars-to-a-3-month-high-as-bitcoin-holds-77k/"
     },
     {
       "title": "MetaMask Co-Founder Quits After 10 Years",
@@ -260,22 +383,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUCBQMP78:0-bluebird-mining-ventures-to-invest-in-4-8mw-bitcoin-mining-project-in-texas/"
     },
     {
-      "title": "Bitcoin in Uptrend That May Test $80,000, Technical Analysis Shows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T06:11:00+00:00",
-      "timeDisplay": "6:11 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423001824:0/"
-    },
-    {
-      "title": "Crypto sentiment index soars to a 3-month high as Bitcoin holds $77K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T06:07:11+00:00",
-      "timeDisplay": "6:07 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e51e1fe34094b:0-crypto-sentiment-index-soars-to-a-3-month-high-as-bitcoin-holds-77k/"
-    },
-    {
       "title": "Ethereum Faces \u2018Moment Of Truth\u2019 As Price Eyes $2,450 Resistance \u2013 Breakout Loading?",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -284,20 +391,20 @@
       "link": "https://www.tradingview.com/news/newsbtc:2b87f8fab094b:0-ethereum-faces-moment-of-truth-as-price-eyes-2-450-resistance-breakout-loading/"
     },
     {
-      "title": "H100 signs binding agreement to increase bitcoin holdings to approximately 3,500 bitcoin",
-      "source": "modular_finance",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T06:00:00+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/modular_finance:f5488d91a1da6:0-h100-signs-binding-agreement-to-increase-bitcoin-holdings-to-approximately-3-500-bitcoin/"
-    },
-    {
       "title": "Fundstrat Boss Backs $250,000 Target for ETH",
       "source": "u_today",
       "color": "#00e5ff",
       "timestamp": "2026-04-23T05:48:46+00:00",
       "timeDisplay": "5:48 AM",
       "link": "https://www.tradingview.com/news/u_today:0220b90df094b:0-fundstrat-boss-backs-250-000-target-for-eth/"
+    },
+    {
+      "title": "Ether taker volume rises by 72% as traders target ETH liquidity gap at $2.6K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T05:47:21+00:00",
+      "timeDisplay": "5:47 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:f1dcab709094b:0-ether-taker-volume-rises-by-72-as-traders-target-eth-liquidity-gap-at-2-6k/"
     },
     {
       "title": "U.S. Treasury Yields Rise Amid Standoff Over Strait of Hormuz \u2014 Market Talk",
@@ -316,14 +423,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N416059:0-dollar-holds-near-1-1-2-week-high-as-iran-us-stand-off-persists/"
     },
     {
-      "title": "Thailand SEC proposes simpler licensing for crypto derivatives market",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T05:12:32+00:00",
-      "timeDisplay": "5:12 AM",
-      "link": "https://www.tradingview.com/news/invezz:60e5d796c094b:0-thailand-sec-proposes-simpler-licensing-for-crypto-derivatives-market/"
-    },
-    {
       "title": "Asian shares pull back from record highs as oil gains on Iran risk",
       "source": "reuters",
       "color": "#ff6d00",
@@ -340,30 +439,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260423000478:0/"
     },
     {
-      "title": "Bitcoin Watch: All Eyes On $86,000\u2014What Could Fuel The Next Bullish Breakout",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T05:00:51+00:00",
-      "timeDisplay": "5:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:3c19c4ee9094b:0-bitcoin-watch-all-eyes-on-86-000-what-could-fuel-the-next-bullish-breakout/"
-    },
-    {
-      "title": "Traders Bet on $100K Bitcoin Price as Breakout Rally Erases Weeks of Sideways Pain",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:59:11+00:00",
-      "timeDisplay": "4:59 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:7e1c1f0c7094b:0-traders-bet-on-100k-bitcoin-price-as-breakout-rally-erases-weeks-of-sideways-pain/"
-    },
-    {
-      "title": "Ether taker volume rises by 72% as traders target ETH liquidity gap at $2.6K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:47:21+00:00",
-      "timeDisplay": "4:47 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:67147b8dc094b:0-ether-taker-volume-rises-by-72-as-traders-target-eth-liquidity-gap-at-2-6k/"
-    },
-    {
       "title": "How much risk can markets swallow?",
       "source": "reuters",
       "color": "#ff6d00",
@@ -372,12 +447,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604G:0-how-much-risk-can-markets-swallow/"
     },
     {
-      "title": "Oil gains as US-Iran talks stall, Hormuz shipping still disrupted",
+      "title": "Oil steadies as US-Iran talks stall, Hormuz shipping still disrupted",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-23T04:28:21+00:00",
       "timeDisplay": "4:28 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604L:0-oil-gains-as-us-iran-talks-stall-hormuz-shipping-still-disrupted/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41604L:0-oil-steadies-as-us-iran-talks-stall-hormuz-shipping-still-disrupted/"
     },
     {
       "title": "THURSDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
@@ -386,22 +461,6 @@
       "timestamp": "2026-04-23T04:17:00+00:00",
       "timeDisplay": "4:17 AM",
       "link": "https://www.tradingview.com/news/macenews:89e2220d3094b:0-thursday-white-house-schedule-subject-to-additions-during-the-day/"
-    },
-    {
-      "title": "Tesla confirms no Bitcoin sales in Q1 despite market selloff",
-      "source": "cryptobriefing",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:04:13+00:00",
-      "timeDisplay": "4:04 AM",
-      "link": "https://www.tradingview.com/news/cryptobriefing:f733c7471094b:0-tesla-confirms-no-bitcoin-sales-in-q1-despite-market-selloff/"
-    },
-    {
-      "title": "HashKey Group Announces Strategic Partnership with ANAP Holdings to Expand Bitcoin Treasury and Institutional Asset Management in Japan",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T04:02:38+00:00",
-      "timeDisplay": "4:02 AM",
-      "link": "https://www.tradingview.com/news/chainwire:268cf57dc094b:0-hashkey-group-announces-strategic-partnership-with-anap-holdings-to-expand-bitcoin-treasury-and-institutional-asset-management-in-japan/"
     },
     {
       "title": "Yuan edges down as firmer dollar, Middle East tensions weigh",
@@ -460,12 +519,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N4152SR:0-asian-shares-track-wall-street-to-record-highs-but-higher-oil-prices-a-risk/"
     },
     {
-      "title": "Dollar holds near 1-1/2-week high as Iran-US standoff persists",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-23T01:16:37+00:00",
-      "timeDisplay": "1:16 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N416014:0-dollar-holds-near-1-1-2-week-high-as-iran-us-standoff-persists/"
+      "title": "Four reasons why the crypto market is rallying today: Will bulls maintain control?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T01:30:00+00:00",
+      "timeDisplay": "1:30 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:31ec7b922094b:0-four-reasons-why-the-crypto-market-is-rallying-today-will-bulls-maintain-control/"
     },
     {
       "title": "Another $142M Staked \u2013 Bitmine Tightens Its Grip on Ethereum Supply",
@@ -490,14 +549,6 @@
       "timestamp": "2026-04-23T00:45:25+00:00",
       "timeDisplay": "12:45 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41600L:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Four reasons why the crypto market is rallying today: Will bulls maintain control?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T00:30:00+00:00",
-      "timeDisplay": "12:30 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:51a39a096094b:0-four-reasons-why-the-crypto-market-is-rallying-today-will-bulls-maintain-control/"
     },
     {
       "title": "Gold Retreats Amid Middle East Uncertainty",
@@ -580,14 +631,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150V2:0-us-bonds-steady-as-iran-ship-seizures-fail-to-unsettle-markets/"
     },
     {
-      "title": "Dollar Recovers on Rising Tensions Over the Strait of Hormuz",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T19:36:17+00:00",
-      "timeDisplay": "7:36 PM",
-      "link": "https://www.tradingview.com/news/barchart:f21275901094b:0-dollar-recovers-on-rising-tensions-over-the-strait-of-hormuz/"
-    },
-    {
       "title": "Bitcoin Stability During War Underlies Longer-Term Shift \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -602,54 +645,6 @@
       "timestamp": "2026-04-22T19:19:28+00:00",
       "timeDisplay": "7:19 PM",
       "link": "https://www.tradingview.com/news/barchart:72006bfff094b:0-crude-oil-prices-surge-as-closure-of-hormuz-threatens-supply-shortages/"
-    },
-    {
-      "title": "Stocks rise on ceasefire relief, oil gains as truce is tested",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T19:08:57+00:00",
-      "timeDisplay": "7:08 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41518N:0-stocks-rise-on-ceasefire-relief-oil-gains-as-truce-is-tested/"
-    },
-    {
-      "title": "Dollar gains as Iran war keeps central banks in wait-and-see mode",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T19:04:29+00:00",
-      "timeDisplay": "7:04 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4150PF:0-dollar-gains-as-iran-war-keeps-central-banks-in-wait-and-see-mode/"
-    },
-    {
-      "title": "Oil Futures Rise As Strait of Hormuz Stays Closed \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T18:55:00+00:00",
-      "timeDisplay": "6:55 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260422008268:0/"
-    },
-    {
-      "title": "Crypto repackages age-old jeweler wisdom to give gold a yield",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T18:45:38+00:00",
-      "timeDisplay": "6:45 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:597c3f2ab094b:0-crypto-repackages-age-old-jeweler-wisdom-to-give-gold-a-yield/"
-    },
-    {
-      "title": "Soaring Crude Oil Prices Support Sugar Prices",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-22T18:28:56+00:00",
-      "timeDisplay": "6:28 PM",
-      "link": "https://www.tradingview.com/news/barchart:b73ae622a094b:0-soaring-crude-oil-prices-support-sugar-prices/"
-    },
-    {
-      "title": "Could record capital gains taxes save the US budget?\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-22T17:54:13+00:00",
-      "timeDisplay": "5:54 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41518W:0-could-record-capital-gains-taxes-save-the-us-budget/"
     }
   ]
 }

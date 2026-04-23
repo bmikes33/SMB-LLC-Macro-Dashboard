@@ -1,51 +1,59 @@
 {
-  "lastUpdated": "2026-04-23T22:40:30.657764+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 10:40 PM UTC",
+  "lastUpdated": "2026-04-23T23:41:42.419993+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 11:41 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed signals with escalating US-Iran tensions driving oil up 4%+ and pressuring equities, while crypto assets demonstrated resilience with sustained ETH ETF inflows and institutional accumulation. Geopolitical risk premiums emerged amid Strait of Hormuz standoff concerns, though underlying business activity hit 3-month highs and corporate earnings remained supportive.",
+    "macroSummary": "Markets showed mixed signals with US stocks declining amid rising Middle East tensions and Iran-US standoff concerns, while oil surged over 4% on geopolitical risks. Dollar strengthened for the week while crypto markets displayed resilience with positive ETF flows and continued institutional adoption despite some headwinds.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Escalating Iran-US tensions are driving classic risk-off flows with oil spiking, dollar strengthening for weekly gains, and equities under pressure despite strong fundamentals.",
+    "regimePressureReason": "Geopolitical tensions driving oil surge and dollar strength while pressuring equities suggests emerging risk-off dynamics that contradict the current risk-on regime call.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar heading for weekly gain as Iran-US tensions undermine ceasefire hopes"
+        "signal": "Dollar heads for weekly gain as Iran-US tensions undermine ceasefire hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil surging 4%+ on Iran-US tensions and Strait of Hormuz standoff creating geopolitical risk premium",
+        "signal": "Oil up over 4% on Middle East tensions and Strait of Hormuz standoff concerns",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening for weekly gain as safe-haven demand emerges from Middle East tensions",
+        "signal": "US stocks fall with Iran tensions countering tech gains",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strengthening weekly on geopolitical risk premium",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US equities falling with investor angst about Iran despite strong earnings and 3-month high business activity",
+        "signal": "Bitcoin ETF flows turned positive for the year with continued institutional adoption",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Manufacturing PMI hits 3-month high but equity markets ignore positive data",
         "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "ETH ETF inflows hit 10-day streak with institutional staking acceleration showing crypto resilience",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Manufacturing surges driving business activity higher while factory survey shows limited energy cost pass-through",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as weekly gain approaches 100 threshold that would flip dollar stance to risk-off",
-      "BMNR ladder strategy benefits from crypto institutional flows but watch for geopolitical contagion effects",
-      "Consider reducing equity exposure if oil continues climbing and geopolitical tensions escalate further"
+      "Monitor DXY closely - approaching 100 threshold that would signal regime flip",
+      "Consider reducing BMNR ladder size if geopolitical tensions persist and risk-off sentiment builds",
+      "Watch for VIX breach above 22 as next confirmation of regime change"
     ]
   },
   "articles": [
+    {
+      "title": "Galaxy Research Has A Timeline for MicroStrategy Bitcoin Stash To Overtake Satoshi\u2019s",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:5eea9a775094b:0-galaxy-research-has-a-timeline-for-microstrategy-bitcoin-stash-to-overtake-satoshi-s/"
+    },
     {
       "title": "The Ethereum \u2018Bank Run\u2019: What\u2019s Happening Between ETH And The Financial Systems?",
       "source": "newsbtc",
@@ -319,6 +327,14 @@
       "link": "https://www.tradingview.com/news/u_today:94fee4aa6094b:0-bitmine-tops-up-ethereum-staking-with-218-million/"
     },
     {
+      "title": "Crude Oil Prices Underpinned as Iran War Tightens Global Oil Supplies",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:30:16+00:00",
+      "timeDisplay": "3:30 PM",
+      "link": "https://www.tradingview.com/news/barchart:629811600094b:0-crude-oil-prices-underpinned-as-iran-war-tightens-global-oil-supplies/"
+    },
+    {
       "title": "Bitcoin weekly close in focus after BTC price fails to revisit $80K",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -503,14 +519,6 @@
       "link": "https://www.tradingview.com/news/macenews:7a52feb3d094b:0-recapping-us-s-p-pmi-manufacturing-index-54-0-in-april-flash-vs-52-3-in-march-final-reaches-47-monh-high/"
     },
     {
-      "title": "CoinEx Founder Yang Haipo Says Crypto\u2019s Collapse Is Inevitable, And Numbers to Back It Up",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:48:17+00:00",
-      "timeDisplay": "1:48 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:445ebe98d094b:0-coinex-founder-yang-haipo-says-crypto-s-collapse-is-inevitable-and-numbers-to-back-it-up/"
-    },
-    {
       "title": "Dollar Selling Could Resume if Iran War Ends \u2014 Interview",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -637,14 +645,6 @@
       "timestamp": "2026-04-23T07:52:30+00:00",
       "timeDisplay": "7:52 AM",
       "link": "https://www.tradingview.com/news/beincrypto:319e71dc4094b:0-bitmine-ramps-accumulation-toward-5-million-eth-as-whales-join-in/"
-    },
-    {
-      "title": "Gold Falls on Higher Oil Prices, Firmer Dollar \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T07:47:00+00:00",
-      "timeDisplay": "7:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423002505:0/"
     }
   ]
 }

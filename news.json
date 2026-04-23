@@ -1,51 +1,83 @@
 {
-  "lastUpdated": "2026-04-23T19:49:10.710637+00:00",
-  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 07:49 PM UTC",
+  "lastUpdated": "2026-04-23T20:48:45.121823+00:00",
+  "lastUpdatedDisplay": "Apr 23, 2026 \u2014 08:48 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as Middle East tensions escalate with Iran-US standoff in Strait of Hormuz, driving oil higher and pressuring risk assets. US economic data remains constructive with business activity hitting 3-month highs, while crypto markets pull back from recent highs amid geopolitical uncertainty.",
+    "macroSummary": "Markets showed mixed performance with US stocks declining while oil surged amid escalating US-Iran tensions and concerns over Strait of Hormuz disruptions. Economic data presented a mixed picture with manufacturing activity hitting 3-month highs but geopolitical risks weighing on investor sentiment, while crypto markets faced headwinds from both Middle East tensions and regulatory uncertainties.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Escalating Iran-US tensions are creating classic risk-off dynamics with oil spiking, bonds catching safety bids, dollar strengthening, and risk assets including crypto pulling back from highs.",
+    "regimePressureReason": "Geopolitical tensions are driving flight-to-quality dynamics with dollar strength and oil spikes, while equity weakness and crypto selloffs suggest risk-off positioning emerging despite some positive economic data.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar heads for weekly gain on Iran-US tensions and safe-haven demand"
+        "signal": "Dollar heads for weekly gains as Iran tensions undermine risk appetite"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar strengthening on Iran-US tensions undermining ceasefire hopes, approaching risk-off threshold",
+        "signal": "US stocks ending lower across sessions as Iran-US tensions escalate",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar gaining weekly strength on safe-haven flows from Middle East standoff",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil climbing sharply on Strait of Hormuz standoff creating energy price shock concerns",
+        "signal": "Oil futures surging on Strait of Hormuz disruption concerns",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks easing and crypto pulling back from highs as geopolitical risk weighs on risk assets",
+        "signal": "Cryptocurrencies declining as Middle East tensions persist",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US bonds catching safety bids despite mixed risk signals from Hormuz uncertainty",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US business activity hits 3-month high with manufacturing surge supporting economic momentum",
+        "signal": "US manufacturing activity hits 3-month high with business activity surging",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 which would flip dollar dynamics and challenge risk-on regime",
-      "Consider reducing BMNR put ladder exposure if crypto weakness accelerates on continued geopolitical stress",
-      "Watch oil price spillover effects on broader inflation expectations and Fed policy assumptions"
+      "Monitor DXY closely for breach of 100 level which would signal regime invalidation",
+      "Consider reducing BMNR ladder exposure given crypto weakness from geopolitical tensions",
+      "Watch for VIX spike above 22 if Middle East tensions escalate further"
     ]
   },
   "articles": [
+    {
+      "title": "US stocks end lower, oil climbs as cracks appear in fragile US-Iran truce\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-23T20:28:04+00:00",
+      "timeDisplay": "8:28 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4161C3:0-us-stocks-end-lower-oil-climbs-as-cracks-appear-in-fragile-us-iran-truce/"
+    },
+    {
+      "title": "Evening digest: Tech companies layoffs, oil surge rattle markets",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T20:08:49+00:00",
+      "timeDisplay": "8:08 PM",
+      "link": "https://www.tradingview.com/news/invezz:b2136cc37094b:0-evening-digest-tech-companies-layoffs-oil-surge-rattle-markets/"
+    },
+    {
+      "title": "Bitcoin ETF \u2018flows turned positive for the year\u2019: BNY\u2019s global head of ETFs",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T20:00:23+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/the_block:9119d42ff094b:0-bitcoin-etf-flows-turned-positive-for-the-year-bny-s-global-head-of-etfs/"
+    },
+    {
+      "title": "Ethereum Near Key Zone After 36% Gain \u2013 What\u2019s Next?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T20:00:14+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:998bd5d5b094b:0-ethereum-near-key-zone-after-36-gain-what-s-next/"
+    },
     {
       "title": "Dollar heads for weekly gain as Iran-US tensions undermine ceasefire hopes",
       "source": "reuters",
@@ -55,20 +87,20 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4160YK:0-dollar-heads-for-weekly-gain-as-iran-us-tensions-undermine-ceasefire-hopes/"
     },
     {
+      "title": "Bitcoin enters disbelief phase as USDC exchange reserves push above $7.5B",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T19:26:46+00:00",
+      "timeDisplay": "7:26 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:1b0dd53b2094b:0-bitcoin-enters-disbelief-phase-as-usdc-exchange-reserves-push-above-7-5b/"
+    },
+    {
       "title": "US stocks ease, oil climbs as investors assess Strait of Hormuz stand-off, mixed earnings",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-23T19:19:05+00:00",
       "timeDisplay": "7:19 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41612A:0-us-stocks-ease-oil-climbs-as-investors-assess-strait-of-hormuz-stand-off-mixed-earnings/"
-    },
-    {
-      "title": "US bonds dip on Iran escalation fears, Hormuz uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-23T19:15:25+00:00",
-      "timeDisplay": "7:15 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4160ZU:0-us-bonds-dip-on-iran-escalation-fears-hormuz-uncertainty/"
     },
     {
       "title": "Oil Futures Rise As Middle East Jitters Pick Up \u2014 Market Talk",
@@ -229,6 +261,14 @@
       "timestamp": "2026-04-23T15:42:00+00:00",
       "timeDisplay": "3:42 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423009175:0/"
+    },
+    {
+      "title": "BitMine Tops Up Ethereum Staking With $218 Million",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-23T15:41:42+00:00",
+      "timeDisplay": "3:41 PM",
+      "link": "https://www.tradingview.com/news/u_today:94fee4aa6094b:0-bitmine-tops-up-ethereum-staking-with-218-million/"
     },
     {
       "title": "Bitcoin weekly close in focus after BTC price fails to revisit $80K",
@@ -439,14 +479,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260423008079_20260423008081:0/"
     },
     {
-      "title": "U.S. Trade Policy Uncertainty Hasn't Gone Away: MUFG's Halpenny",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:43:00+00:00",
-      "timeDisplay": "1:43 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260423008079_20260423008079:0/"
-    },
-    {
       "title": "Brent Expected to Hold Above $100 Unless Hormuz Reopens \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -479,22 +511,6 @@
       "link": "https://www.tradingview.com/news/te_news:544441:0-wti-crude-rises-for-4th-session/"
     },
     {
-      "title": "3 Warning Signs That Bitcoin\u2019s Rally May Be At Risk",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:28:32+00:00",
-      "timeDisplay": "1:28 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:09e67d264094b:0-3-warning-signs-that-bitcoin-s-rally-may-be-at-risk/"
-    },
-    {
-      "title": "Crypto Is A Casino \u2013 Bitcoin's Collapse Is \u2018Inevitable\u2019 As Transfusions Run Out, Says Industry Insider",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:15:29+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:a12909fb9094b:0/"
-    },
-    {
       "title": "Apollo To Buy 40% Stake In Pembina Gas Infrastructure From KKR",
       "source": "dpa_afx",
       "color": "#00e5ff",
@@ -509,14 +525,6 @@
       "timestamp": "2026-04-23T13:14:00+00:00",
       "timeDisplay": "1:14 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260423007752:0/"
-    },
-    {
-      "title": "US military running Bitcoin node to test national security applications, admiral tells Congress",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T13:09:01+00:00",
-      "timeDisplay": "1:09 PM",
-      "link": "https://www.tradingview.com/news/the_block:597b33696094b:0-us-military-running-bitcoin-node-to-test-national-security-applications-admiral-tells-congress/"
     },
     {
       "title": "BMNR stock analysis: Why Tom Lee\u2019s BitMine is set to surge",
@@ -637,14 +645,6 @@
       "timestamp": "2026-04-23T06:52:44+00:00",
       "timeDisplay": "6:52 AM",
       "link": "https://www.tradingview.com/news/invezz:514273167094b:0-is-ethereum-set-for-a-breakout-as-open-interest-and-bulls-rise/"
-    },
-    {
-      "title": "The much-hyped great rotation out of tech for 2026 may be over already",
-      "source": "cnbctv",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-23T06:52:09+00:00",
-      "timeDisplay": "6:52 AM",
-      "link": "https://www.tradingview.com/news/cnbctv:e2380d018094b:0/"
     }
   ]
 }

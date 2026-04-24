@@ -1,51 +1,69 @@
 {
-  "lastUpdated": "2026-04-24T18:07:22.979762+00:00",
-  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 06:07 PM UTC",
+  "lastUpdated": "2026-04-24T19:27:36.215683+00:00",
+  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 07:27 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed performance with tech leading on Iran diplomatic progress and the end of Fed Chair Powell's DOJ probe, while oil declined on ceasefire hopes. Consumer sentiment improved modestly but long-term inflation expectations rose to highest levels since October, and crypto markets showed consolidation with Bitcoin stalling near $78K.",
+    "macroSummary": "Markets rallied on news that DOJ dropped the Jerome Powell probe (clearing path for Kevin Warsh) and potential Iran-US diplomatic talks, with NASDAQ up 1.5% and VIX falling to 18.6. However, consumer inflation expectations rose to highest levels since October 2025, and oil continued declining on diplomatic hopes.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran diplomatic progress supports risk-on sentiment in equities, but rising 5-year inflation expectations and crypto Fear & Greed sliding to neutral suggest underlying concerns about sustainability.",
-    "thresholdWatches": [
-      {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "VIX currently at 18.6, well below threshold but worth monitoring given mixed market signals"
-      }
-    ],
+    "regimePressureReason": "Strong risk-on equity response and VIX compression support the regime, but rising long-term inflation expectations and continued oil weakness introduce reflationary cross-currents.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "5-year inflation expectations rose to 3.5%, highest since October 2025, potentially pressuring rates higher",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Crypto Fear and Greed Index slides back to neutral from previous greed levels, suggesting risk appetite cooling",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Iran diplomatic talks progress reducing geopolitical risk premium, supporting equities rally",
+        "signal": "VIX dropped to 18.6 amid NASDAQ surge on Iran talks and Powell probe resolution",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin stalling at $78K despite ETF inflows suggests consolidation phase rather than continued momentum",
+        "signal": "5-year inflation expectations hit highest since October 2025 despite dovish sentiment backdrop",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil futures extend losses on Iran diplomatic progress, pressuring energy and commodity complex",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Tech surge on Powell probe resolution removes regulatory uncertainty overhang",
+        "signal": "Dollar slips as Powell probe ends, removing political uncertainty premium",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin stalled at $78K with crypto fear/greed index sliding back to neutral from recent highs",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto sentiment shows signs of cooling with Fear & Greed at neutral",
-      "Watch for any rates volatility increase given rising long-term inflation expectations approaching reflation concerns",
-      "Consider taking profits on risk-on positions if VIX begins moving toward 22 threshold"
+      "Monitor BMNR ladder performance given Ethereum Foundation's $24M OTC sale to Tom Lee creating supply pressure",
+      "Watch for oil weakness spillover into broader commodity complex given Wells Fargo rotation call",
+      "Track if rising 5-year inflation expectations begin pressuring long-end rates despite diplomatic rally"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Is Existing Exchanges At An Alarming Rate, But How Are BTC Investors Faring In Terms Of Profit?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:00:30+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:70ade440d094b:0-bitcoin-is-existing-exchanges-at-an-alarming-rate-but-how-are-btc-investors-faring-in-terms-of-profit/"
+    },
+    {
+      "title": "Dollar slips as DOJ drops Powell probe, clearing path for Warsh",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-24T18:54:18+00:00",
+      "timeDisplay": "6:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170U1:0-dollar-slips-as-doj-drops-powell-probe-clearing-path-for-warsh/"
+    },
+    {
+      "title": "Quantum computer breaks 15-bit elliptic curve cryptographic key",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T18:53:58+00:00",
+      "timeDisplay": "6:53 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:1ee744ddb094b:0-quantum-computer-breaks-15-bit-elliptic-curve-cryptographic-key/"
+    },
     {
       "title": "Oil Futures Extend Losses on Plans for U.S.-Iran Talks \u2014 Market Talk",
       "source": "dow-jones",
@@ -61,6 +79,14 @@
       "timestamp": "2026-04-24T18:04:08+00:00",
       "timeDisplay": "6:04 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170ZD:0-big-week-for-us-earnings-ahead/"
+    },
+    {
+      "title": "Tom Lee and BitMine\u2019s Latest Ethereum Purchase Faces Community Backlash",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T17:45:34+00:00",
+      "timeDisplay": "5:45 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:6bd8c869f094b:0-tom-lee-and-bitmine-s-latest-ethereum-purchase-faces-community-backlash/"
     },
     {
       "title": "Brave new retail world: fewer stores, bigger winners, AI influence",
@@ -95,6 +121,14 @@
       "link": "https://www.tradingview.com/news/macenews:4d939200f094b:0-white-house-s-leavtt-tells-fox-news-witkoff-will-leave-for-islamabad-talks-with-iran-vp-vance-not-to-participate-at-first/"
     },
     {
+      "title": "Ethereum Foundation Sells 10,000 ETH at $2,387 in Disclosed OTC Transaction",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T17:03:14+00:00",
+      "timeDisplay": "5:03 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:d4e57a49b094b:0-ethereum-foundation-sells-10-000-eth-at-2-387-in-disclosed-otc-transaction/"
+    },
+    {
       "title": "US BAKER HUGHES RIG COUNT UP 1 RIG IN LATEST WEEK FROM PREVIOUS WEEK AT 544",
       "source": "macenews",
       "color": "#00e5ff",
@@ -117,6 +151,14 @@
       "timestamp": "2026-04-24T16:55:44+00:00",
       "timeDisplay": "4:55 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:8e452f5a0094b:0-bitcoin-stays-stalled-at-78k-as-oil-threatens-new-risk-asset-squeeze/"
+    },
+    {
+      "title": "Bitcoin Price Today: BTC Up 30% From February Lows, iS $100K Next?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T16:53:10+00:00",
+      "timeDisplay": "4:53 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:d149b0104094b:0-bitcoin-price-today-btc-up-30-from-february-lows-is-100k-next/"
     },
     {
       "title": "Wells Fargo sees a rotation opportunity inside commodities\u00a0",
@@ -476,7 +518,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-24T11:39:00+00:00",
       "timeDisplay": "11:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424004227:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260424004226:0/"
     },
     {
       "title": "Metaplanet raises $50M in zero-interest bonds to buy more Bitcoin",
@@ -551,38 +593,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:fea7dc1d1094b:0-bitcoin-recovery-may-not-arrive-until-october-scaramucci-says/"
     },
     {
-      "title": "Spot bitcoin ETFs draw $2 billion in net inflows over 8-day positive streak",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T09:32:30+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/the_block:be385a198094b:0-spot-bitcoin-etfs-draw-2-billion-in-net-inflows-over-8-day-positive-streak/"
-    },
-    {
-      "title": "Are Bitcoin Whales Opportunists? On-Chain Data Reveals the Truth",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T09:24:25+00:00",
-      "timeDisplay": "9:24 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:6f7948461094b:0-are-bitcoin-whales-opportunists-on-chain-data-reveals-the-truth/"
-    },
-    {
-      "title": "Dollar set for weekly gain on stalled US-Iran talks and Middle East uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-24T09:00:26+00:00",
-      "timeDisplay": "9:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N417093:0-dollar-set-for-weekly-gain-on-stalled-us-iran-talks-and-middle-east-uncertainty/"
-    },
-    {
-      "title": "Major Bitcoin Miner Keeps Cashing Out Bitcoin (BTC)",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:56:47+00:00",
-      "timeDisplay": "7:56 AM",
-      "link": "https://www.tradingview.com/news/u_today:1c6f667e9094b:0-major-bitcoin-miner-keeps-cashing-out-bitcoin-btc/"
-    },
-    {
       "title": "AI Trade Risk: What Happens When One Theme Dominates Markets Like Never Before?",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -629,22 +639,6 @@
       "timestamp": "2026-04-24T07:28:30+00:00",
       "timeDisplay": "7:28 AM",
       "link": "https://www.tradingview.com/news/invezz:877dc2ce6094b:0-crypto-market-steady-as-etf-inflows-rise-despite-soaring-crude-oil-prices/"
-    },
-    {
-      "title": "Comex Gold Futures' Bearish Momentum Picking up Pace Again, Chart Shows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:16:00+00:00",
-      "timeDisplay": "7:16 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424001801:0/"
-    },
-    {
-      "title": "Eni Q1 Profit Drops, Production Rises; Lifts Share Buyback To EUR 2.8 Bln",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T06:41:29+00:00",
-      "timeDisplay": "6:41 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:05011606fe8e1:0-eni-q1-profit-drops-production-rises-lifts-share-buyback-to-eur-2-8-bln/"
     }
   ]
 }

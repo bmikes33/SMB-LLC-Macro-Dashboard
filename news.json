@@ -1,45 +1,59 @@
 {
-  "lastUpdated": "2026-04-24T22:07:41.952835+00:00",
-  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 10:07 PM UTC",
+  "lastUpdated": "2026-04-24T23:05:53.795870+00:00",
+  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 11:05 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are rallying on geopolitical de-escalation as the US moves toward Iran peace talks while the DOJ drops its criminal probe of Fed Chair Powell, clearing the path for Warsh nomination. Oil prices are falling despite continued Hormuz Strait closure as diplomatic progress emerges, while equity markets hit new records with Nasdaq leading gains.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Clear risk-on signals with Nasdaq surging +1.5%, VIX dropping to 18.6, oil falling on diplomatic progress, and bonds rallying on reduced political uncertainty.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets showed mixed dynamics with Nasdaq and S&P 500 hitting records on news of Iran peace talks and the end of the DOJ probe into Fed Chair Powell, while oil fell on diplomatic progress. Bitcoin approached $80K with strong ETF inflows, though crypto sentiment retreated to neutral, and broader risk assets showed divergent performance amid geopolitical developments.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "While equity indices hit records supporting Risk-On, oil's decline on Iran talks and crypto sentiment retreating to neutral create cross-currents that don't uniformly confirm the regime.",
+    "thresholdWatches": [
+      {
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "VIX reported at 18.6 in midday update, well below threshold but worth monitoring"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "VIX at 18.6 well below the 22 regime invalidation threshold as geopolitical tensions ease",
+        "signal": "Nasdaq surged 1.5% and S&P 500 hit records on Iran peace talks and end of Powell probe",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Nasdaq +1.5% and S&P hitting records on Iran diplomatic progress and Powell probe resolution",
-        "tag": "SUPPORTS"
+        "signal": "Crypto Fear and Greed Index slides back to neutral territory despite Bitcoin near $80K",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil futures extending losses despite Hormuz closure as US-Iran talks gain momentum",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Crypto Fear and Greed Index slides back to neutral from previous bullish extremes",
+        "signal": "Oil futures extend losses on U.S.-Iran diplomatic progress, reducing geopolitical premium",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "US bonds rallying on reduced political uncertainty and geopolitical de-escalation",
+        "signal": "US bonds boosted by Iran news and Powell probe resolution, suggesting flight-to-quality dynamics",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar slips as DOJ drops Powell probe, clearing path for Warsh nomination",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "BMNR ladder remains attractive as ETH-linked assets benefit from continued risk-on environment",
-      "Monitor oil volatility closely as Hormuz situation could reverse quickly if talks fail",
-      "Consider reducing hedges as VIX compression and diplomatic progress support continued equity upside"
+      "Monitor crypto sentiment divergence from price action - neutral Fear/Greed despite BTC strength may signal momentum loss",
+      "Watch for oil's impact on broader risk assets if Iran talks progress further and energy prices decline",
+      "Consider BMNR ladder adjustments if crypto sentiment continues weakening despite ETF inflows"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin developer Paul Sztorc announces BTC hard fork called eCash",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T21:55:00+00:00",
+      "timeDisplay": "9:55 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ecd9e1072094b:0-bitcoin-developer-paul-sztorc-announces-btc-hard-fork-called-ecash/"
+    },
     {
       "title": "Will Bitcoin Fill The $82K CME Gap? $10B Could Be Liquidated\u2014But Bulls May Hate What Follows",
       "source": "newsbtc",
@@ -361,6 +375,14 @@
       "link": "https://www.tradingview.com/news/stocktwits:92f6967b8094b:0/"
     },
     {
+      "title": "Dollar Declines on Iran Peace Optimism",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T14:32:45+00:00",
+      "timeDisplay": "2:32 PM",
+      "link": "https://www.tradingview.com/news/barchart:8970a7a55094b:0-dollar-declines-on-iran-peace-optimism/"
+    },
+    {
       "title": "Fed Decision Could Have Little Dollar Impact \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -590,7 +612,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-24T11:39:00+00:00",
       "timeDisplay": "11:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424004227:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260424004226:0/"
     },
     {
       "title": "Metaplanet raises $50M in zero-interest bonds to buy more Bitcoin",
@@ -617,28 +639,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170EU:0-world-stocks-oil-on-edge-as-us-iran-deadlock-weighs/"
     },
     {
-      "title": "MSTR Vs BTC \u2013 Michael Saylor-Backed Strategy Rises In Early Trade, But Bitcoin Holds Weekly Edge",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T11:10:55+00:00",
-      "timeDisplay": "11:10 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:a0fe56900094b:0/"
-    },
-    {
       "title": "Ethereum Outperforms Solana in Daily Fees by Nearly 40x",
       "source": "u_today",
       "color": "#00e5ff",
       "timestamp": "2026-04-24T11:04:01+00:00",
       "timeDisplay": "11:04 AM",
       "link": "https://www.tradingview.com/news/u_today:ebea0ed04094b:0-ethereum-outperforms-solana-in-daily-fees-by-nearly-40x/"
-    },
-    {
-      "title": "Schr\u00f6dinger\u2019s ceasefire",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-24T10:45:06+00:00",
-      "timeDisplay": "10:45 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4170OH:0-schr-dinger-s-ceasefire/"
     }
   ]
 }

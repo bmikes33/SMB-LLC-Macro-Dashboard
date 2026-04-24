@@ -1,45 +1,99 @@
 {
-  "lastUpdated": "2026-04-24T19:27:36.215683+00:00",
-  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 07:27 PM UTC",
+  "lastUpdated": "2026-04-24T20:07:38.928983+00:00",
+  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 08:07 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied on news that DOJ dropped the Jerome Powell probe (clearing path for Kevin Warsh) and potential Iran-US diplomatic talks, with NASDAQ up 1.5% and VIX falling to 18.6. However, consumer inflation expectations rose to highest levels since October 2025, and oil continued declining on diplomatic hopes.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Strong risk-on equity response and VIX compression support the regime, but rising long-term inflation expectations and continued oil weakness introduce reflationary cross-currents.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets are responding positively to diplomatic progress with Iran peace talks and the DOJ dropping its criminal probe of Fed Chair Powell, clearing the path for potential Warsh nomination. Oil is declining on the diplomatic developments despite continued Hormuz closure, while tech stocks surge and crypto markets show mixed signals with Bitcoin near $80K but sentiment cooling to neutral.",
+    "regimePressure": "REINFORCING",
+    "regimePressureReason": "Risk-on signals are strengthening with NASDAQ surging +1.5%, VIX falling to 18.6, and geopolitical risk premium unwinding on Iran diplomatic progress.",
+    "thresholdWatches": [
+      {
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "VIX dropped to 18.6, moving further away from the 22 risk-off threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "VIX dropped to 18.6 amid NASDAQ surge on Iran talks and Powell probe resolution",
+        "signal": "NASDAQ surging +358 points (+1.5%) on Iran talks and Powell probe resolution",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "5-year inflation expectations hit highest since October 2025 despite dovish sentiment backdrop",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil futures extend losses on Iran diplomatic progress, pressuring energy and commodity complex",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Dollar slips as Powell probe ends, removing political uncertainty premium",
+        "signal": "VIX at 18.6, well below risk-off threshold of 22",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin stalled at $78K with crypto fear/greed index sliding back to neutral from recent highs",
+        "signal": "Oil falling despite Hormuz closure as diplomatic progress reduces risk premium",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Crypto Fear and Greed Index slides back to neutral from previous bullish readings",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Dollar slipping as DOJ drops Powell probe, reducing safe-haven demand",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance given Ethereum Foundation's $24M OTC sale to Tom Lee creating supply pressure",
-      "Watch for oil weakness spillover into broader commodity complex given Wells Fargo rotation call",
-      "Track if rising 5-year inflation expectations begin pressuring long-end rates despite diplomatic rally"
+      "BMNR ladder: Consider adding strikes as ETH volatility may compress with improving risk sentiment",
+      "Monitor oil complex for further unwinding of geopolitical premium that could benefit broader risk assets",
+      "Watch for Warsh nomination timeline as Powell probe resolution removes key political uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "US bonds bolstered by Iran peace talks, closure of Fed probe",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-24T19:48:41+00:00",
+      "timeDisplay": "7:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170YQ:0-us-bonds-bolstered-by-iran-peace-talks-closure-of-fed-probe/"
+    },
+    {
+      "title": "Oil Posts Weekly Gains on Continued Hormuz Closure \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:48:00+00:00",
+      "timeDisplay": "7:48 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260424008119:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:33:00+00:00",
+      "timeDisplay": "7:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260424008023:0/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures - Apr 24",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:31:00+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260424007960:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futures",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:31:00+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260424007968:0/"
+    },
+    {
+      "title": "WTI Falls as US Heads to Talks, Hormuz Still Blocked",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T19:30:27+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/te_news:544908:0-wti-falls-as-us-heads-to-talks-hormuz-still-blocked/"
+    },
     {
       "title": "Bitcoin Is Existing Exchanges At An Alarming Rate, But How Are BTC Investors Faring In Terms Of Profit?",
       "source": "newsbtc",
@@ -518,7 +572,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-24T11:39:00+00:00",
       "timeDisplay": "11:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424004226:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260424004227:0/"
     },
     {
       "title": "Metaplanet raises $50M in zero-interest bonds to buy more Bitcoin",
@@ -591,54 +645,6 @@
       "timestamp": "2026-04-24T10:00:24+00:00",
       "timeDisplay": "10:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:fea7dc1d1094b:0-bitcoin-recovery-may-not-arrive-until-october-scaramucci-says/"
-    },
-    {
-      "title": "AI Trade Risk: What Happens When One Theme Dominates Markets Like Never Before?",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:55:50+00:00",
-      "timeDisplay": "7:55 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:72deda1fa094b:0/"
-    },
-    {
-      "title": "Ethereum (ETH) Panic? Not So Fast: Ethena Data Shows Demand Holding",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:51:00+00:00",
-      "timeDisplay": "7:51 AM",
-      "link": "https://www.tradingview.com/news/u_today:d12550b1a094b:0-ethereum-eth-panic-not-so-fast-ethena-data-shows-demand-holding/"
-    },
-    {
-      "title": "Ethereum above $2,300: will DeFi turmoil derail the next rally?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:47:20+00:00",
-      "timeDisplay": "7:47 AM",
-      "link": "https://www.tradingview.com/news/invezz:699c860a7094b:0-ethereum-above-2-300-will-defi-turmoil-derail-the-next-rally/"
-    },
-    {
-      "title": "Gold Falls as Lack of Progress in Iran War Fuels Inflation Fears \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:43:00+00:00",
-      "timeDisplay": "7:43 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424001883:0/"
-    },
-    {
-      "title": "Nearly $10 Billion April Options Expiry Puts Bitcoin and Ethereum Direction in Focus",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:41:45+00:00",
-      "timeDisplay": "7:41 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:333b1627f094b:0-nearly-10-billion-april-options-expiry-puts-bitcoin-and-ethereum-direction-in-focus/"
-    },
-    {
-      "title": "Crypto market steady as ETF inflows rise despite soaring crude oil prices",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T07:28:30+00:00",
-      "timeDisplay": "7:28 AM",
-      "link": "https://www.tradingview.com/news/invezz:877dc2ce6094b:0-crypto-market-steady-as-etf-inflows-rise-despite-soaring-crude-oil-prices/"
     }
   ]
 }

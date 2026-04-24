@@ -1,45 +1,75 @@
 {
-  "lastUpdated": "2026-04-24T17:29:12.241268+00:00",
-  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 05:29 PM UTC",
+  "lastUpdated": "2026-04-24T18:07:22.979762+00:00",
+  "lastUpdatedDisplay": "Apr 24, 2026 \u2014 06:07 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied on hopes of Iran ceasefire talks and the DOJ ending its probe of Fed Chair Powell, clearing the path for Kevin Warsh's confirmation. Consumer sentiment improved modestly but 5-year inflation expectations rose to highest since October 2025, while crypto markets showed mixed signals with Bitcoin near $80K but Fear & Greed Index sliding to neutral.",
+    "macroSummary": "Markets showed mixed performance with tech leading on Iran diplomatic progress and the end of Fed Chair Powell's DOJ probe, while oil declined on ceasefire hopes. Consumer sentiment improved modestly but long-term inflation expectations rose to highest levels since October, and crypto markets showed consolidation with Bitcoin stalling near $78K.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Risk-on sentiment from geopolitical de-escalation and Powell probe resolution is offset by rising long-term inflation expectations and crypto momentum stalling.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Iran diplomatic progress supports risk-on sentiment in equities, but rising 5-year inflation expectations and crypto Fear & Greed sliding to neutral suggest underlying concerns about sustainability.",
+    "thresholdWatches": [
+      {
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "VIX currently at 18.6, well below threshold but worth monitoring given mixed market signals"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "VIX at 18.6 remains well below 22 threshold, supporting risk-on positioning",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "5-year inflation expectations hit highest since October 2025, potentially pressuring rates higher",
+        "signal": "5-year inflation expectations rose to 3.5%, highest since October 2025, potentially pressuring rates higher",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin stalled at $78K despite ETF inflows, crypto Fear & Greed Index slides to neutral from risk-on positioning",
+        "signal": "Crypto Fear and Greed Index slides back to neutral from previous greed levels, suggesting risk appetite cooling",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Iran ceasefire talks and Powell probe resolution drove Nasdaq surge +1.5%, classic risk-on rotation",
+        "signal": "Iran diplomatic talks progress reducing geopolitical risk premium, supporting equities rally",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Treasury yields described as 'coiled like a spring' with traders bracing for breakout, suggesting rate volatility building",
+        "signal": "Bitcoin stalling at $78K despite ETF inflows suggests consolidation phase rather than continued momentum",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Tech surge on Powell probe resolution removes regulatory uncertainty overhang",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes as crypto momentum shows signs of stalling despite positive flows",
-      "Watch for rate volatility pickup given inflation expectation rise and 'coiled spring' Treasury dynamics",
-      "Consider taking profits on recent risk-on positioning if crypto weakness spreads to broader risk assets"
+      "Monitor BMNR ladder closely as crypto sentiment shows signs of cooling with Fear & Greed at neutral",
+      "Watch for any rates volatility increase given rising long-term inflation expectations approaching reflation concerns",
+      "Consider taking profits on risk-on positions if VIX begins moving toward 22 threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Futures Extend Losses on Plans for U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T18:06:00+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260424007547:0/"
+    },
+    {
+      "title": "Big week for US earnings ahead",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-24T18:04:08+00:00",
+      "timeDisplay": "6:04 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170ZD:0-big-week-for-us-earnings-ahead/"
+    },
+    {
+      "title": "Brave new retail world: fewer stores, bigger winners, AI influence",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-24T17:42:33+00:00",
+      "timeDisplay": "5:42 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41716N:0-brave-new-retail-world-fewer-stores-bigger-winners-ai-influence/"
+    },
     {
       "title": "Crypto Fear and Greed Index Slides Back to Neutral \u2014 Market Talk",
       "source": "dow-jones",
@@ -287,6 +317,14 @@
       "timestamp": "2026-04-24T13:58:50+00:00",
       "timeDisplay": "1:58 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4170LP:0-dollar-holds-weekly-gains-as-war-uncertainty-keeps-markets-on-edge/"
+    },
+    {
+      "title": "Adam Back Breaks Silence on 'Finding Satoshi' Doc, Says Timezone Gaps Debunk the Latest Bitcoin Creator Theory",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-24T13:48:00+00:00",
+      "timeDisplay": "1:48 PM",
+      "link": "https://www.tradingview.com/news/u_today:2579dd2ae094b:0-adam-back-breaks-silence-on-finding-satoshi-doc-says-timezone-gaps-debunk-the-latest-bitcoin-creator-theory/"
     },
     {
       "title": "Project Eleven Awards 1 BTC Q-Day Prize for Largest Quantum Attack on Elliptic Curve Cryptography to Date",
@@ -607,38 +645,6 @@
       "timestamp": "2026-04-24T06:41:29+00:00",
       "timeDisplay": "6:41 AM",
       "link": "https://www.tradingview.com/news/dpa_afx:05011606fe8e1:0-eni-q1-profit-drops-production-rises-lifts-share-buyback-to-eur-2-8-bln/"
-    },
-    {
-      "title": "XAU/USD: Gold Exits Rising Channel After 1.3% Drop Sinks Prices to $4,650",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T06:30:34+00:00",
-      "timeDisplay": "6:30 AM",
-      "link": "https://www.tradingview.com/news/tradingview:c98c1eeb5094b:0-xau-usd-gold-exits-rising-channel-after-1-3-drop-sinks-prices-to-4-650/"
-    },
-    {
-      "title": "Shares jittery, oil advances on US-Iran deadlock",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-24T05:29:43+00:00",
-      "timeDisplay": "5:29 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41704O:0-shares-jittery-oil-advances-on-us-iran-deadlock/"
-    },
-    {
-      "title": "U.S. Treasury Yields Edge Up as Oil Price Remain High \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T05:29:00+00:00",
-      "timeDisplay": "5:29 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260424000925:0/"
-    },
-    {
-      "title": "Crypto protocols pledge 43K ETH to restore rsETH backing",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-24T04:49:19+00:00",
-      "timeDisplay": "4:49 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:0dd41a170094b:0-crypto-protocols-pledge-43k-eth-to-restore-rseth-backing/"
     }
   ]
 }

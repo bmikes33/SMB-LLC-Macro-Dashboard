@@ -1,51 +1,176 @@
 {
-  "lastUpdated": "2026-04-27T01:19:59.738433+00:00",
-  "lastUpdatedDisplay": "Apr 27, 2026 \u2014 01:19 AM UTC",
-  "articleCount": 32,
+  "lastUpdated": "2026-04-27T04:56:21.255933+00:00",
+  "lastUpdatedDisplay": "Apr 27, 2026 \u2014 04:56 AM UTC",
+  "articleCount": 46,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "US-Iran diplomatic talks have stalled, driving dollar strength and weighing on equity futures while boosting oil and pressuring gold. Crypto markets show mixed signals with Bitcoin stalling near $80K resistance amid institutional interest but rising leverage concerns. Big Tech earnings this week are viewed as a key catalyst for broader market direction.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength from geopolitical tensions and falling equity futures contradict the Risk-On regime, while oil rallies suggest defensive positioning is emerging.",
+    "macroSummary": "Markets are whipsawing on Iran-US diplomatic developments, with initial hopes for a deal driving dollar weakness and safe-haven unwinding, followed by talks stalling and reversing those moves. Oil volatility is elevated with prices pushing above $100 on supply concerns, while crypto assets continue grinding higher with Bitcoin approaching $80K and institutional demand persisting.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Geopolitical volatility is creating cross-currents with dollar strength on failed talks contradicting risk-on flows, while oil above $100 introduces stagflationary pressures that could complicate the regime thesis.",
     "thresholdWatches": [
+      {
+        "indicator": "MOVE",
+        "level": "> 100",
+        "signal": "Oil volatility and geopolitical uncertainty could spill into rates volatility"
+      },
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar advancing on US-Iran talks breakdown, approaching safe-haven bid territory"
+        "signal": "Dollar strength on failed Iran talks suggests risk-off bid emerging"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar strength from geopolitical tensions pressures risk assets and equity futures",
+        "signal": "Dollar strengthening as US-Iran talks break down suggests safe-haven demand inconsistent with pure risk-on regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil rally amid Middle East tensions suggests defensive positioning over risk appetite",
+        "signal": "Oil above $100 on supply stress introduces stagflationary pressures that historically pressure risk assets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stock futures falling ahead of key earnings week shows caution displacing optimism",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Gold falling despite geopolitical tensions indicates dollar strength overriding safe-haven demand",
+        "signal": "Gold initially rising then falling on diplomatic developments shows classic safe-haven flow patterns",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Bitcoin institutional demand continues but leverage building near resistance suggests fragility",
-        "tag": "NEUTRAL"
+        "signal": "Bitcoin institutional demand and approach to $80K supports risk asset momentum",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Geopolitical volatility creating intraday reversals in FX and commodities suggests regime instability",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for move above 100 which would trigger regime invalidation threshold",
-      "Consider reducing BMNR ladder exposure if dollar strength continues pressuring risk assets",
-      "Watch Big Tech earnings reactions this week as potential regime confirmation or break catalyst"
+      "Monitor MOVE index closely as oil volatility and geopolitical uncertainty could trigger rates volatility above 100 threshold",
+      "Watch DXY for sustained moves above 100 as failed diplomacy could accelerate safe-haven dollar demand",
+      "Consider tightening BMNR put ladder strikes if ETH momentum stalls on broader macro uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "Hormuz and hyperscalers",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41A024:0-hormuz-and-hyperscalers/"
+    },
+    {
+      "title": "Dollar Turns Lower on Iran Deal Hopes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T04:27:47+00:00",
+      "timeDisplay": "4:27 AM",
+      "link": "https://www.tradingview.com/news/te_news:545050:0-dollar-turns-lower-on-iran-deal-hopes/"
+    },
+    {
+      "title": "Oil Above $100 Signals Supply Stress \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T04:16:00+00:00",
+      "timeDisplay": "4:16 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260427000041:0/"
+    },
+    {
+      "title": "Gold Rises on Reports of Iran Proposal",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T04:12:44+00:00",
+      "timeDisplay": "4:12 AM",
+      "link": "https://www.tradingview.com/news/te_news:545045:0-gold-rises-on-reports-of-iran-proposal/"
+    },
+    {
+      "title": "Oil Pares Gains in Reports of Iran Proposal",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T04:06:09+00:00",
+      "timeDisplay": "4:06 AM",
+      "link": "https://www.tradingview.com/news/te_news:545042:0-oil-pares-gains-in-reports-of-iran-proposal/"
+    },
+    {
+      "title": "Ethereum Price Climbs Gradually, Can Bulls Break $2,400 Barrier?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T03:48:11+00:00",
+      "timeDisplay": "3:48 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:29e669aac094b:0-ethereum-price-climbs-gradually-can-bulls-break-2-400-barrier/"
+    },
+    {
+      "title": "US 10-Year Yield Holds Firm",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T03:18:56+00:00",
+      "timeDisplay": "3:18 AM",
+      "link": "https://www.tradingview.com/news/te_news:545032:0-us-10-year-yield-holds-firm/"
+    },
+    {
+      "title": "MONDAY WHITE HOUSE SCHEDULE - President Trump hosts the King and Queen of England",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T03:17:00+00:00",
+      "timeDisplay": "3:17 AM",
+      "link": "https://www.tradingview.com/news/macenews:4aae0acff094b:0-monday-white-house-schedule-president-trump-hosts-the-king-and-queen-of-england/"
+    },
+    {
+      "title": "Bitcoin climbs above $79,000, Asian equities rise amid \u2018subdued\u2019 geopolitical tensions",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T03:12:10+00:00",
+      "timeDisplay": "3:12 AM",
+      "link": "https://www.tradingview.com/news/the_block:76fbfe058094b:0-bitcoin-climbs-above-79-000-asian-equities-rise-amid-subdued-geopolitical-tensions/"
+    },
+    {
+      "title": "Bitcoin Price Advances Toward $80K, Upside Break Now In Focus",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T03:12:03+00:00",
+      "timeDisplay": "3:12 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:03d8fed00094b:0-bitcoin-price-advances-toward-80k-upside-break-now-in-focus/"
+    },
+    {
+      "title": "Dollar steady as traders assess stuttering US-Iran talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T03:03:24+00:00",
+      "timeDisplay": "3:03 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41A01R:0-dollar-steady-as-traders-assess-stuttering-us-iran-talks/"
+    },
+    {
+      "title": "Upward Risks for Oil Prices Expected for Longer \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T02:54:00+00:00",
+      "timeDisplay": "2:54 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260426001023:0/"
+    },
+    {
+      "title": "Chips carry stocks higher; Oil jumps on stalled peace talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T02:48:09+00:00",
+      "timeDisplay": "2:48 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41A01D:0-chips-carry-stocks-higher-oil-jumps-on-stalled-peace-talks/"
+    },
+    {
+      "title": "Dollar Jumps as Peace Talks Falter",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T01:49:59+00:00",
+      "timeDisplay": "1:49 AM",
+      "link": "https://www.tradingview.com/news/te_news:544985:0-dollar-jumps-as-peace-talks-falter/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T01:48:00+00:00",
+      "timeDisplay": "1:48 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41A011:0-commodities-intraday-targets-key-levels/"
+    },
     {
       "title": "Dollar advances as US-Iran talks suffer setback",
       "source": "reuters",
@@ -53,14 +178,6 @@
       "timestamp": "2026-04-27T01:13:57+00:00",
       "timeDisplay": "1:13 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41A01C:0-dollar-advances-as-us-iran-talks-suffer-setback/"
-    },
-    {
-      "title": "U.S. stock futures fall, oil rises ahead of a busy week for Wall Street",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T01:08:00+00:00",
-      "timeDisplay": "1:08 AM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260426000729:0/"
     },
     {
       "title": "Pressure on Yen to Depreciate Could Build \u2014 Market Talk",
@@ -93,6 +210,14 @@
       "timestamp": "2026-04-27T00:02:59+00:00",
       "timeDisplay": "12:02 AM",
       "link": "https://www.tradingview.com/news/tradingview:d0503178845bd:0-key-facts-43-5k-eth-backed-after-293m-kelp-hack-targets-4-3k-56k/"
+    },
+    {
+      "title": "XRP's Price Recovery Pattern Finally Finished, Ethereum (ETH) $3,000 Breakout Attempt Invalidated, Minor Shiba Inu (SHIB) Uptrend Continues: Crypto Market Review",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T00:01:00+00:00",
+      "timeDisplay": "12:01 AM",
+      "link": "https://www.tradingview.com/news/u_today:c0dd159ec094b:0-xrp-s-price-recovery-pattern-finally-finished-ethereum-eth-3-000-breakout-attempt-invalidated-minor-shiba-inu-shib-uptrend-continues-crypto-market-review/"
     },
     {
       "title": "Gold Falls as US-Iran Talks Break Down",
@@ -149,6 +274,14 @@
       "timestamp": "2026-04-26T22:00:36+00:00",
       "timeDisplay": "10:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:fb8480b28094b:0-bitcoin-sees-renewed-demand-from-us-institutional-players-what-s-changing/"
+    },
+    {
+      "title": "Powell's Final Fed Meeting vs Bitcoin's $86,852 Target: Top Analyst Aksel Kibar Updates BTC Price Outlook for New Week",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T21:13:00+00:00",
+      "timeDisplay": "9:13 PM",
+      "link": "https://www.tradingview.com/news/u_today:7ceb3cc5e094b:0-powell-s-final-fed-meeting-vs-bitcoin-s-86-852-target-top-analyst-aksel-kibar-updates-btc-price-outlook-for-new-week/"
     },
     {
       "title": "Strategy's Michael Saylor again hints at impending BTC purchase",
@@ -285,22 +418,6 @@
       "timestamp": "2026-04-26T06:00:02+00:00",
       "timeDisplay": "6:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:58c36a5d9094b:0-bitcoin-stalls-at-77k-as-major-on-chain-resistance-kicks-in-details/"
-    },
-    {
-      "title": "The Ethereum Golden Triangle That Has Predicted Every Move Shows Where Price Is Headed",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-26T04:00:25+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:c9959d61f094b:0-the-ethereum-golden-triangle-that-has-predicted-every-move-shows-where-price-is-headed/"
-    },
-    {
-      "title": "Bitcoin Price Wave Down To $40,000 Shows When The Bottom Will Begin",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-26T02:00:54+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6e878a888094b:0-bitcoin-price-wave-down-to-40-000-shows-when-the-bottom-will-begin/"
     }
   ]
 }

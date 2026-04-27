@@ -1,45 +1,171 @@
 {
-  "lastUpdated": "2026-04-26T17:37:22.510066+00:00",
-  "lastUpdatedDisplay": "Apr 26, 2026 \u2014 05:37 PM UTC",
-  "articleCount": 22,
+  "lastUpdated": "2026-04-27T01:19:59.738433+00:00",
+  "lastUpdatedDisplay": "Apr 27, 2026 \u2014 01:19 AM UTC",
+  "articleCount": 32,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin stalls near $77-80k with rising leverage and on-chain resistance, while Ethereum Foundation unstakes significant ETH holdings. Big Tech earnings this week could drive crypto direction, with analysts split on whether current weakness represents cyclical downturn or deeper correction.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Crypto leverage buildup at stall levels and foundation selling creates risk-off undertones, while crude oil strength and continued institutional flows maintain risk-on elements.",
-    "thresholdWatches": [],
+    "macroSummary": "US-Iran diplomatic talks have stalled, driving dollar strength and weighing on equity futures while boosting oil and pressuring gold. Crypto markets show mixed signals with Bitcoin stalling near $80K resistance amid institutional interest but rising leverage concerns. Big Tech earnings this week are viewed as a key catalyst for broader market direction.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Dollar strength from geopolitical tensions and falling equity futures contradict the Risk-On regime, while oil rallies suggest defensive positioning is emerging.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar advancing on US-Iran talks breakdown, approaching safe-haven bid territory"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin stalling at $77k with major on-chain resistance and rising leverage suggests momentum loss in risk asset leader",
+        "signal": "Dollar strength from geopolitical tensions pressures risk assets and equity futures",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Ethereum Foundation unstaking $50 million ETH signals potential supply pressure from key network stakeholder",
+        "signal": "Oil rally amid Middle East tensions suggests defensive positioning over risk appetite",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "One-third of crypto traders cutting everyday spending indicates retail stress and potential demand destruction",
+        "signal": "US stock futures falling ahead of key earnings week shows caution displacing optimism",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crude oil extending gains supports broader risk-on commodity complex",
-        "tag": "SUPPORTS"
+        "signal": "Gold falling despite geopolitical tensions indicates dollar strength overriding safe-haven demand",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Big Tech earnings week creates binary outcome risk for tech-correlated crypto markets",
+        "signal": "Bitcoin institutional demand continues but leverage building near resistance suggests fragility",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes closely - ETH foundation selling could pressure ETH-linked instruments",
-      "Consider tightening stops on risk-on positions given crypto momentum stall at key levels",
-      "Watch for tech earnings impact on crypto correlation - potential cascade risk if tech disappoints"
+      "Monitor DXY closely for move above 100 which would trigger regime invalidation threshold",
+      "Consider reducing BMNR ladder exposure if dollar strength continues pressuring risk assets",
+      "Watch Big Tech earnings reactions this week as potential regime confirmation or break catalyst"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar advances as US-Iran talks suffer setback",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T01:13:57+00:00",
+      "timeDisplay": "1:13 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41A01C:0-dollar-advances-as-us-iran-talks-suffer-setback/"
+    },
+    {
+      "title": "U.S. stock futures fall, oil rises ahead of a busy week for Wall Street",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T01:08:00+00:00",
+      "timeDisplay": "1:08 AM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260426000729:0/"
+    },
+    {
+      "title": "Pressure on Yen to Depreciate Could Build \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T01:04:00+00:00",
+      "timeDisplay": "1:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260426000855:0/"
+    },
+    {
+      "title": "Oil jumps, stock futures slip as US-Iran talks stall",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-27T00:40:32+00:00",
+      "timeDisplay": "12:40 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41906M:0-oil-jumps-stock-futures-slip-as-us-iran-talks-stall/"
+    },
+    {
+      "title": "Key facts: MicroStrategy Expands STRC Preferred; BTC Targets $80k\u2013$92k",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T00:02:59+00:00",
+      "timeDisplay": "12:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:eb1c7b6bffc77:0-key-facts-microstrategy-expands-strc-preferred-btc-targets-80k-92k/"
+    },
+    {
+      "title": "Key facts: 43.5K ETH Backed After $293M Kelp Hack; Targets 4.3K\u201356K",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-27T00:02:59+00:00",
+      "timeDisplay": "12:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:d0503178845bd:0-key-facts-43-5k-eth-backed-after-293m-kelp-hack-targets-4-3k-56k/"
+    },
+    {
+      "title": "Gold Falls as US-Iran Talks Break Down",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T23:54:24+00:00",
+      "timeDisplay": "11:54 PM",
+      "link": "https://www.tradingview.com/news/te_news:544963:0-gold-falls-as-us-iran-talks-break-down/"
+    },
+    {
+      "title": "Gold Falls Amid Dollar's Strength \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T23:36:00+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260426000713:0/"
+    },
+    {
+      "title": "Oil Rises Amid Ongoing Middle East Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T23:33:00+00:00",
+      "timeDisplay": "11:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260426000707:0/"
+    },
+    {
+      "title": "Oil Gains as Mideast Disruptions Persist",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T23:31:03+00:00",
+      "timeDisplay": "11:31 PM",
+      "link": "https://www.tradingview.com/news/te_news:544961:0-oil-gains-as-mideast-disruptions-persist/"
+    },
+    {
+      "title": "Powell\u2019s Final FOMC: Grading His Wins, Losses, and the Mixed Bag He Leaves for Trump\u2019s Fed Pick Kevin Warsh",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T22:31:45+00:00",
+      "timeDisplay": "10:31 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:1eede4ad0094b:0-powell-s-final-fomc-grading-his-wins-losses-and-the-mixed-bag-he-leaves-for-trump-s-fed-pick-kevin-warsh/"
+    },
+    {
+      "title": "'Historical average' could push Bitcoin bottom at $57K level: Analyst",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T22:30:37+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:311781fee094b:0-historical-average-could-push-bitcoin-bottom-at-57k-level-analyst/"
+    },
+    {
+      "title": "Bitcoin Sees Renewed Demand From US Institutional Players \u2014 What\u2019s Changing?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T22:00:36+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:fb8480b28094b:0-bitcoin-sees-renewed-demand-from-us-institutional-players-what-s-changing/"
+    },
+    {
+      "title": "Strategy's Michael Saylor again hints at impending BTC purchase",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T20:09:09+00:00",
+      "timeDisplay": "8:09 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:2e1c911ba094b:0-strategy-s-michael-saylor-again-hints-at-impending-btc-purchase/"
+    },
+    {
+      "title": "US Treasury Adds Venmo for Debt Donations as Strategic Bitcoin Reserve Bill Stalls",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T18:52:03+00:00",
+      "timeDisplay": "6:52 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:b77eaec6f094b:0-us-treasury-adds-venmo-for-debt-donations-as-strategic-bitcoin-reserve-bill-stalls/"
+    },
     {
       "title": "Crude Oil Set to Extend Gains",
       "source": "trading-economics",
@@ -63,6 +189,14 @@
       "timestamp": "2026-04-26T15:54:25+00:00",
       "timeDisplay": "3:54 PM",
       "link": "https://www.tradingview.com/news/stocktwits:d80145d1a094b:0/"
+    },
+    {
+      "title": "'Beat Goes On': Michael Saylor Hints at Buying More Bitcoin, but Don't Expect Billions This Time",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-26T15:14:01+00:00",
+      "timeDisplay": "3:14 PM",
+      "link": "https://www.tradingview.com/news/u_today:ac07b22a0094b:0-beat-goes-on-michael-saylor-hints-at-buying-more-bitcoin-but-don-t-expect-billions-this-time/"
     },
     {
       "title": "Five Big Tech Earnings Could Decide Bitcoin\u2019s Next Move This Week",
@@ -167,54 +301,6 @@
       "timestamp": "2026-04-26T02:00:54+00:00",
       "timeDisplay": "2:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:6e878a888094b:0-bitcoin-price-wave-down-to-40-000-shows-when-the-bottom-will-begin/"
-    },
-    {
-      "title": "Bitcoin Setup Suggests Liquidity Hunt Before Next Directional Move",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-26T01:00:18+00:00",
-      "timeDisplay": "1:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f30adc0bd094b:0-bitcoin-setup-suggests-liquidity-hunt-before-next-directional-move/"
-    },
-    {
-      "title": "Key facts: MicroStrategy Buy, ETF Inflows, CFTC Shift; Iran Accepts BTC",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-26T00:03:00+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:64a1157a0db50:0-key-facts-microstrategy-buy-etf-inflows-cftc-shift-iran-accepts-btc/"
-    },
-    {
-      "title": "California Man Gets 70 Months in Prison for $260 Million Crypto Scam",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-25T21:41:12+00:00",
-      "timeDisplay": "9:41 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:740688040094b:0-california-man-gets-70-months-in-prison-for-260-million-crypto-scam/"
-    },
-    {
-      "title": "Bitcoiners cast doubt on the US military's understanding of the network",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-25T19:36:29+00:00",
-      "timeDisplay": "7:36 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:d620b6497094b:0-bitcoiners-cast-doubt-on-the-us-military-s-understanding-of-the-network/"
-    },
-    {
-      "title": "PRES TRUMP TO REPORTERS AT ROPELINE: 'ON IRAN, GOT ANOTHER FRESH OFFER 10 MINUTES AFTER CANCELING PAKISTAN MEETING'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-25T18:50:00+00:00",
-      "timeDisplay": "6:50 PM",
-      "link": "https://www.tradingview.com/news/macenews:eff1ec915094b:0-pres-trump-to-reporters-at-ropeline-on-iran-got-another-fresh-offer-10-minutes-after-canceling-pakistan-meeting/"
-    },
-    {
-      "title": "PRES TRUMP POST: 'I JUST CANCELLED TRIP OF MY REPRESENTATIVES GOING TO ISLAMABAD;' 'TOO MUCH TIME WASTED ON TRAVELING;' 'NOBODY KNOWS WHO'S IN CHARGE'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-25T18:41:00+00:00",
-      "timeDisplay": "6:41 PM",
-      "link": "https://www.tradingview.com/news/macenews:de7944c72094b:0-pres-trump-post-i-just-cancelled-trip-of-my-representatives-going-to-islamabad-too-much-time-wasted-on-traveling-nobody-knows-who-s-in-charge/"
     }
   ]
 }

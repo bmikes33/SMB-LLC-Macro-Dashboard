@@ -1,0 +1,26 @@
+{
+  "type": "ta",
+  "file": "BMNR_2026-04-27_1109.html",
+  "ticker": "BMNR",
+  "tvSymbol": "NYSE:BMNR",
+  "date": "2026-04-27T11:09:00-05:00",
+  "bias": "NEUTRAL bearish lean",
+  "confidence": "MEDIUM-LOW",
+  "bullScore": 3,
+  "bearScore": 3,
+  "scoreMax": 6,
+  "invalidation": "$20.50 daily close (bear) / $22.50 4h close (bull)",
+  "entryZone": "CSP context — $19/$19.50 strikes intact, $21 strike under pressure",
+  "exitZone": "$23.41 (HEAVY resistance) / $19.40-$19.80 / $18.30 floor",
+  "levels": [
+    { "weight": "HEAVY",   "price": "$23.41",          "sources": "Daily red dashed major + 4h purple horizontal — primary resistance" },
+    { "weight": "MEDIUM",  "price": "$22.36",          "sources": "30m 50 SMA + Daily 50 SMA proxy" },
+    { "weight": "MEDIUM",  "price": "$22.00–$22.30",   "sources": "4h 21 EMA + recent consolidation midline" },
+    { "weight": "CURRENT", "price": "$21.55",          "sources": "Live (Mon 11:09 CT) — below 30m 200 SMA" },
+    { "weight": "HEAVY",   "price": "$20.83–$21.02",   "sources": "Daily 50 SMA + 4h 50 SMA + 4h horizontal + 30m purple — 4 tools, TESTING NOW" },
+    { "weight": "MEDIUM",  "price": "$20.50",          "sources": "4h orange horizontal — recent base structure" },
+    { "weight": "HEAVY",   "price": "$19.40–$19.80",   "sources": "4h purple + Daily horizontal + ascending blue trendline — $19.50 CSP strike zone" },
+    { "weight": "MEDIUM",  "price": "$19.00",          "sources": "$19 CSP strike — prior consolidation low" },
+    { "weight": "HEAVY",   "price": "$18.30",          "sources": "Recent multi-week low + lower bound of weekly ascending wedge — structural floor" }
+  ]
+}

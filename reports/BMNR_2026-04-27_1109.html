@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMNR TA Report — 2026-04-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 32px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 28px; }
+  .ticker-line { font-family: var(--mono); font-size: 28px; font-weight: 700; color: var(--cyan); letter-spacing: 0.5px; }
+  .meta-line { font-family: var(--mono); font-size: 12px; color: var(--text-muted); margin-top: 6px; letter-spacing: 0.5px; }
+  h2 { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; margin: 32px 0 14px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  h3 { font-family: var(--mono); font-size: 11px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; margin: 20px 0 10px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 16px 0; background: var(--bg-secondary); border: 1px solid var(--border); font-size: 13px; }
+  th { font-family: var(--mono); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); text-align: left; padding: 10px 14px; background: var(--bg-tertiary); border-bottom: 1px solid var(--border); }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td.mono, .num { font-family: var(--mono); }
+  tr:last-child td { border-bottom: none; }
+  tr.heavy { background: rgba(255, 61, 87, 0.06); }
+  tr.heavy td:first-child { color: var(--red); font-weight: 700; }
+  tr.heavy td:nth-child(2) { color: var(--red); font-weight: 700; font-family: var(--mono); }
+  tr.medium { background: rgba(255, 171, 0, 0.04); }
+  tr.medium td:first-child { color: var(--amber); }
+  tr.current td { color: var(--cyan); font-style: italic; background: rgba(0, 229, 255, 0.04); }
+  tr.current td:first-child { color: var(--cyan); }
+  tr.testing { background: rgba(255, 61, 87, 0.18); }
+  tr.testing td:first-child { color: var(--red); font-weight: 700; }
+  tr.testing td:first-child::after { content: ' [TESTING NOW]'; font-size: 9px; color: var(--cyan); }
+  .bias-long { color: var(--green); font-weight: 700; }
+  .bias-short { color: var(--red); font-weight: 700; }
+  .bias-neutral { color: var(--amber); font-weight: 700; }
+  .conf-high { color: var(--green); font-weight: 700; }
+  .conf-med { color: var(--amber); font-weight: 700; }
+  .conf-low { color: var(--text-secondary); }
+  ul { list-style: none; padding-left: 0; }
+  ul li { padding: 5px 0 5px 18px; position: relative; }
+  ul li::before { content: '▸'; position: absolute; left: 0; color: var(--cyan); font-family: var(--mono); }
+  ul li strong { color: var(--text-primary); font-weight: 600; }
+  p { margin: 8px 0 12px 0; color: var(--text-primary); }
+  .label { font-family: var(--mono); color: var(--text-muted); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+  .callout { background: var(--bg-secondary); border-left: 3px solid var(--amber); padding: 14px 16px; margin: 14px 0; font-size: 13px; }
+  .callout strong { color: var(--amber); font-family: var(--mono); }
+  .callout-cyan { background: var(--bg-secondary); border-left: 3px solid var(--cyan); padding: 14px 16px; margin: 14px 0; font-size: 13px; }
+  .callout-cyan strong { color: var(--cyan); font-family: var(--mono); }
+  .callout-red { background: var(--bg-secondary); border-left: 3px solid var(--red); padding: 14px 16px; margin: 14px 0; font-size: 13px; }
+  .callout-red strong { color: var(--red); font-family: var(--mono); }
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 11px; font-family: var(--mono); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ticker-line">BMNR · NYSE</div>
+  <div class="meta-line">BITMINE IMMERSION TECHNOLOGIES · ETH DAT &nbsp; | &nbsp; 30m / 4h / 1D / 1W &nbsp; | &nbsp; 2026-04-27 11:09 CT &nbsp; | &nbsp; BIAS: <span class="bias-neutral">NEUTRAL / BEARISH LEAN</span> &nbsp; | &nbsp; CONFIDENCE: <span class="conf-low">MEDIUM-LOW</span></div>
+</header>
+
+<div class="callout-red"><strong>CRITICAL CONTEXT.</strong> BMNR is at a 4-tool HEAVY support cluster ($20.83–$21.02) being TESTED NOW. ETH (the governing asset for BMNR's NAV) broke through Daily Fib 0.786 today. BTC remains in counter-trend rally — but BMNR is correctly tracking ETH, not BTC, today. <strong>For CSP ladder management, ETH is governing today's action, not BTC.</strong> Your $21 strike is under acute pressure; $19.50/$19 strikes sit inside the next HEAVY support zone.</div>
+
+<div class="callout-cyan"><strong>FRESH FUNDAMENTAL DATA.</strong> BMNR Apr 27 PR: 5.078M ETH (4.21% of supply, world record), $13.3B total holdings, $940M cash, $4B buyback authorization. Last NAV calc used ETH @ $2,369; current ETH $2,304 = NAV ~3% lower intraday. Market sold the news today — the ETH accumulation narrative is no longer sufficient to defend the stock when ETH is breaking down.</div>
+
+<h2>Section 1 — Decision Summary</h2>
+
+<h3>1A. Executive Summary</h3>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Bias</td><td><span class="bias-neutral">NEUTRAL with bearish lean</span> — at HEAVY support, defending; needs ETH to confirm direction</td></tr>
+  <tr><td>Final Confidence</td><td><span class="conf-low">MEDIUM-LOW</span> — chart at decision point, ETH governor breaking down, macro-capped by FOMC</td></tr>
+  <tr><td>Tool Agreement</td><td class="num">3 / 6 bull · 3 / 6 bear (50%)</td></tr>
+  <tr><td>Invalidation</td><td class="num"><strong>Bearish:</strong> $20.50 daily close (loses HEAVY) → $19/$18.30. <strong>Bullish:</strong> 4h close above $22.50 (reclaims MA cluster)</td></tr>
+  <tr><td>Entry Zone</td><td class="num">CSP context: $19–$19.50 ladder strikes on track; $21 strike under pressure</td></tr>
+  <tr><td>Exit Zone</td><td class="num">Upside: $23.41 (HEAVY resistance) · Downside: $19.40–$19.80 / $18.30 prior low</td></tr>
+  <tr><td>Macro Watch</td><td>FOMC Apr 28-29 · GDP/PCE Apr 30 · <strong style="color:var(--red)">BMNR is leveraged ETH proxy</strong> — ETH breakdown today is direct driver</td></tr>
+</table>
+
+<h3>1B. Key Levels</h3>
+<table>
+  <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$23.41</td><td>Daily red dashed major horizontal + 4h purple horizontal + recent rejection — primary resistance</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$22.36</td><td>30m 50 SMA + Daily 50 SMA proxy — first overhead resistance</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$22.00–$22.30</td><td>4h 21 EMA + recent consolidation midline + 30m descending intraday structure</td></tr>
+  <tr class="current"><td>—</td><td class="num">$21.55 ← CURRENT</td><td>Live (Mon 11:09 CT) — sitting just below 30m 200 SMA ($21.80)</td></tr>
+  <tr class="testing"><td>HEAVY</td><td class="num">$20.83–$21.02</td><td><strong>4h 50 SMA ($21.02) + Daily 50 SMA ($20.83) + 4h horizontal + 30m purple horizontal</strong> — 4-tool primary support</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$20.50</td><td>4h orange horizontal — single 4h anchor (recent base structure)</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$19.40–$19.80</td><td>4h purple horizontal + Daily horizontal + ascending blue trendline (weekly) — <strong>$19.50 CSP strike zone</strong></td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$19.00</td><td>$19 CSP strike — sits at prior consolidation low</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$18.30</td><td>Recent multi-week low + lower bound of weekly ascending wedge — <strong>structural floor</strong></td></tr>
+</table>
+
+<h3>1C. CSP Ladder Status</h3>
+<table>
+  <tr><th>Strike</th><th>Distance</th><th>Status</th><th>Notes</th></tr>
+  <tr style="background: rgba(255, 61, 87, 0.18);">
+    <td class="num" style="color: var(--red); font-weight: 700;">$21</td>
+    <td class="num">−2.6% (ITM-bias)</td>
+    <td style="color: var(--red); font-weight: 700;">HIGHEST RISK</td>
+    <td>Originally flagged as highest-risk in your ladder; now confirmed under pressure. Watch delta — if approaching −0.80, roll trigger active</td>
+  </tr>
+  <tr>
+    <td class="num">$19.50</td>
+    <td class="num">−9.5% OTM</td>
+    <td>Holding</td>
+    <td>Sits inside $19.40–$19.80 HEAVY support zone — defendable</td>
+  </tr>
+  <tr>
+    <td class="num">$19.00</td>
+    <td class="num">−11.8% OTM</td>
+    <td>Holding</td>
+    <td>Sits at prior consolidation low — defendable unless wedge breaks down</td>
+  </tr>
+</table>
+
+<h2>Section 2 — Confidence Breakdown</h2>
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr><td>TA Confidence</td><td><span class="conf-low">MEDIUM-LOW</span> — split tool agreement (3/3), weekly ascending wedge at apex (binary resolution coming), price testing major HEAVY support but not yet broken</td></tr>
+  <tr><td>Fundamental Context</td><td>BMNR Apr 27: 5.078M ETH ($13.3B), $940M cash, $4B buyback. NAV calc used ETH @ $2,369; current ETH $2,304 → NAV ~3% lower today vs yesterday. Earnings already reported Apr 14 (Q1 EPS −$15.98 mark-to-market).</td></tr>
+  <tr><td>Fundamental Modifier</td><td><span style="color: var(--amber);">NEUTRAL-NEGATIVE near-term</span> — fundamentals are ETH-derivative; ETH broke its Daily Fib 0.786 today, so BMNR NAV under direct downward pressure. Buyback authorization is bullish floor over time but not actionable today.</td></tr>
+  <tr><td>Macro Calendar</td><td>FOMC Apr 28-29 + GDP/PCE Apr 30 (HIGH-impact)</td></tr>
+  <tr><td>Macro Modifier</td><td>HIGH-impact imminent → cap at MEDIUM. <strong>BMNR is double-rate-sensitive</strong> (rate-sensitive growth equity + ETH-derivative → BTC governor). Apply full +1 tier weight.</td></tr>
+  <tr><td><strong>Final Confidence</strong></td><td><strong><span class="conf-low">MEDIUM-LOW</span></strong> — TA can't justify directional bet without ETH confirming, and ETH is at its own binary inflection</td></tr>
+</table>
+
+<h2>Section 3 — Supporting Analysis</h2>
+
+<h3>3A. Higher Timeframe Context</h3>
+<ul>
+  <li><strong>Weekly:</strong> Counter-trend rally off $18.30 base intact but at apex of ascending wedge. Price $21.55 below the $23.41 horizontal rejection level. RSI 42 (still bearish absolute, improved). <strong>Weekly MACD just crossed positive (+0.34 from −3.53)</strong> — major momentum shift, but freshly turned. Wedge resolution within 1-2 weeks regardless of macro.</li>
+  <li><strong>Daily:</strong> Price at 50 SMA ($20.83) being defended. Daily MACD positive (+0.07 hist, line 0.35 above signal 0.29) and rising — bullish. RSI 54.75 above midline. Today's −2.71% candle is testing the recent breakout zone from below. Death cross (50 below 200) intact but distance closing — 200 SMA at $35.45 is far overhead, not in play. Daily structure shows higher lows since Feb base ($18 area).</li>
+</ul>
+
+<h3>3B. Current Timeframe Read (4h primary)</h3>
+<ul>
+  <li><strong>Regime:</strong> Pulling back within a counter-trend rally. Price testing the 4h MA cluster from above.</li>
+  <li><strong>VWAP (4h):</strong> Price $21.55 vs RVWAP line $22.31 — below. Lower band $20.86 is the next intraday test. Slope was rising, now flattening.</li>
+  <li><strong>MAs (4h):</strong> 50 SMA ($21.02) above 200 SMA ($25.05 — high reading reflects post-IPO peak inclusion in lookback) — distorted; the actionable MA is the 50 at $21.02.</li>
+  <li><strong>Momentum (4h):</strong> RSI 47.64 (just below midline, falling). MACD line 0.25 above zero, signal 0.39 — line below signal, histogram −0.14 (bearish cross within bullish absolute regime).</li>
+  <li><strong>30m:</strong> RSI 36.56 — oversold-stretched. MACD histogram −0.03 (just negative, absolute level shallow). Price closed below 30m 200 SMA ($21.80) on the latest bar.</li>
+</ul>
+
+<h3>3C. Confluence Zones</h3>
+<p>The dominant near-term battle is at <strong>$20.83–$21.02</strong> — a 4-tool HEAVY support stack (Daily 50 SMA + 4h 50 SMA + 4h horizontal + 30m purple). This is being TESTED NOW. A daily close below $20.50 breaks the structure and opens the path to your $19.50 ladder strike. The next HEAVY downside is <strong>$19.40–$19.80</strong> — multi-tool, includes your $19.50 strike — and the structural floor is <strong>$18.30</strong>, which would break the weekly ascending wedge to the downside.</p>
+<p>Upside: $22.36 (50 SMA) → $22.50 (4h 21 EMA) → $23.41 (HEAVY resistance). The $23.41 level has rejected price multiple times — this is the BMNR-equivalent of ETH's $2,440 ceiling. Reclaim of $22.50 on 4h close would reset the bullish thesis.</p>
+
+<h3>3D. Divergences</h3>
+<p><strong>Weekly bullish MACD divergence is fresh</strong> (just crossed positive after weeks below zero) — this is the strongest single bullish signal on any chart shared today. <strong>Same setup as ETH had, BUT BMNR's hasn't been rejected yet.</strong> However: BMNR is structurally tied to ETH, and ETH's identical setup just failed. This creates significant tension — BMNR's weekly says "early bull recovery," but the underlying asset (ETH) just rejected its own version of this signal. <strong>Resolution likely lower</strong> if ETH continues breakdown, despite BMNR's clean weekly read.</p>
+
+<h3>3E. Notes & CSP Implications</h3>
+<p><strong>Cross-asset signal of the day:</strong></p>
+<ul>
+  <li>BTC: counter-trend rally intact, hasn't been rejected, showing relative strength</li>
+  <li>ETH: rejected at structural ceiling, breaking through Daily Fib 0.786 ($2,293 zone)</li>
+  <li>BMNR: tracking ETH (correctly — DAT exposure), NOT BTC — down −2.71% on the day mirroring ETH's −2.50%</li>
+</ul>
+<p>This confirms BMNR is appropriately functioning as an ETH-leveraged proxy. <strong>For your CSP ladder, ETH is the governor today, NOT BTC.</strong> Your existing rule has BTC as macro governor for safety — but on an intraday ETH-divergence-from-BTC day like this, ETH is doing the actual work.</p>
+<p><strong>On today's announcement:</strong> BMNR announced 5.078M ETH holdings ($13.3B) — and the stock SOLD OFF anyway. This is meaningful: the ETH accumulation narrative is no longer sufficient by itself to defend the stock when ETH is breaking. The market is saying "we know you have more ETH; we care that ETH is going down."</p>
+<p><strong>Macro/CSP framework alignment:</strong></p>
+<ul>
+  <li>$21 strike is your highest-risk position per your records — confirmed risk today</li>
+  <li>Watch delta on the $21 strike — if it breaches −0.80 on a daily close below $20.50, your roll rule activates</li>
+  <li>The $19.50/$19 strikes are inside the next HEAVY support zone — defendable</li>
+  <li><strong>No freeze trigger:</strong> BTC has not dropped 3%+ today (BTC near flat). Per your rules, ladder operations continue normally — but that rule's protective intent assumes BTC governs ETH; today ETH is moving independently</li>
+</ul>
+<p><strong>Specific watch list for next 48 hours:</strong></p>
+<ul>
+  <li>If ETH closes daily below $2,293 AND BMNR closes daily below $20.50 → both confirm breakdown → consider preemptive roll on $21 strike before delta forces it</li>
+  <li>If BTC fails $80,500 trendline test on Wednesday FOMC → likely accelerates ETH breakdown → likely tags $19.40–$19.80 BMNR support → $19.50 strike approaches ITM</li>
+  <li>If BTC clears $80,500 on dovish Powell → likely pulls ETH back to retest $2,440 → BMNR likely reclaims $22.50 → entire ladder safer</li>
+</ul>
+<p><strong>Rule consideration:</strong> Today's ETH-vs-BTC divergence is exactly the scenario where the BTC-as-governor rule may need a secondary ETH governor for ladder safety, since BMNR is an ETH DAT and BTC sometimes leads/lags ETH by days. Worth thinking about whether to add an ETH-specific freeze trigger (e.g., ETH 3%+ single-session decline) parallel to the existing BTC trigger.</p>
+
+<h2>Section 4 — Options Chain Detail</h2>
+<p style="color: var(--text-muted); font-style: italic;">Options chain not provided for this analysis. Section omitted per skill protocol. Existing CSP ladder positions reflected in 1C above based on user-supplied position state.</p>
+
+<h2>Section 5 — Appendix</h2>
+
+<h3>Tool Agreement Detail (4h primary)</h3>
+<table>
+  <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+  <tr><td>1</td><td>VWAP slope (4h)</td><td>Was rising, now flattening — neutral-bearish tilt</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>2</td><td>Price vs VWAP line (4h)</td><td>$21.55 vs $22.31 — below</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>3</td><td>50 vs 200 SMA (4h)</td><td>$21.02 below $25.05 (200 SMA distorted by post-IPO peak)</td><td style="color:var(--green)">BULL*</td></tr>
+  <tr><td>4</td><td>RSI vs 50 (4h)</td><td>47.64 — below midline, falling</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>5</td><td>MACD zero line (4h)</td><td>Line 0.25 above zero — bullish absolute, bearish cross</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>6</td><td>HTF alignment (W+D)</td><td>Daily MACD positive + Weekly MACD just crossed positive</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td colspan="3"><strong>Score</strong></td><td><strong>3 BULL / 3 BEAR (50% — neutral)</strong></td></tr>
+</table>
+<p style="font-size: 11px; color: var(--text-muted);">*4h 200 SMA reading inflated by post-IPO peak; treat with reduced weight. True LTF stack interpretation: bearish given price below 50.</p>
+
+<h3>Indicator Snapshot</h3>
+<table>
+  <tr><th>TF</th><th>RVWAP</th><th>Lower Band</th><th>Upper Band</th><th>50 SMA</th><th>200 SMA</th><th>RSI</th><th>MACD (hist / line / sig)</th></tr>
+  <tr><td>30m</td><td class="num">$21.97</td><td class="num">$21.51</td><td class="num">$22.43</td><td class="num">$22.36</td><td class="num">$21.80</td><td class="num">36.56</td><td class="num">−0.03 / −0.17 / −0.14</td></tr>
+  <tr><td>4h</td><td class="num">$22.31</td><td class="num">$20.86</td><td class="num">$23.76</td><td class="num">$21.02</td><td class="num">$25.05</td><td class="num">47.64</td><td class="num">−0.14 / 0.25 / 0.39</td></tr>
+  <tr><td>1D</td><td class="num">$21.22</td><td class="num">$17.73</td><td class="num">$24.70</td><td class="num">$20.83</td><td class="num">$35.45</td><td class="num">54.75</td><td class="num">+0.06 / 0.35 / 0.29</td></tr>
+  <tr><td>1W</td><td class="num">$23.89</td><td class="num">$12.37</td><td class="num">$35.42</td><td class="num">$33.61</td><td class="num">$19.84</td><td class="num">42.18</td><td class="num">+0.34 / −3.53 / −3.87</td></tr>
+</table>
+
+<h3>Fundamental Snapshot (Apr 27 PR)</h3>
+<table>
+  <tr><th>Metric</th><th>Value</th></tr>
+  <tr><td>ETH holdings</td><td class="num">5,078,386 (4.21% of total ETH supply)</td></tr>
+  <tr><td>Staked ETH</td><td class="num">3,701,589 (73% of holdings)</td></tr>
+  <tr><td>Annualized staking revenue</td><td class="num">$264M (3.033% 7-day yield)</td></tr>
+  <tr><td>Total cash</td><td class="num">$940M</td></tr>
+  <tr><td>Total holdings (crypto + cash + moonshots)</td><td class="num">$13.3B</td></tr>
+  <tr><td>BTC holdings</td><td class="num">200 BTC</td></tr>
+  <tr><td>"Moonshots"</td><td>$200M Beast Industries + $91M Eightco (ORBS)</td></tr>
+  <tr><td>Buyback authorization</td><td class="num">$4B (expanded from $1B)</td></tr>
+  <tr><td>NAV reference ETH price</td><td class="num">$2,369 (Apr 26 close)</td></tr>
+  <tr><td>Current ETH price</td><td class="num">$2,304 (~3% NAV decline since announcement)</td></tr>
+  <tr><td>Last earnings</td><td class="num">Apr 14 (Q1 EPS −$15.98 mark-to-market)</td></tr>
+</table>
+
+<div class="footer">
+  Generated 2026-04-27 11:09 CT &nbsp; · &nbsp; SMB LLC Trading Research &nbsp; · &nbsp; ta-chart-analysis skill &nbsp; · &nbsp; Source: TradingView (NYSE BMNR) + BMNR PRNewswire Apr 27 2026 + Yahoo Finance + Seeking Alpha &nbsp; · &nbsp; Macro calendar via web_search
+</div>
+
+</body>
+</html>

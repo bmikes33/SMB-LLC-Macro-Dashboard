@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IREN | 30m·4h·1D·1W | 2026-04-24</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-primary:#0a0e17;
+    --bg-secondary:#0f1420;
+    --bg-tertiary:#141926;
+    --text-primary:#e2e8f0;
+    --text-secondary:#8b9ab5;
+    --text-muted:#4a5976;
+    --border:#1e2a3a;
+    --cyan:#00e5ff;
+    --green:#00e676;
+    --red:#ff3d57;
+    --amber:#ffab00;
+    --heavy-tint:rgba(255,61,87,.10);
+    --medium-tint:rgba(255,171,0,.08);
+    --tier1-tint:rgba(0,230,118,.08);
+    --current-tint:rgba(0,229,255,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg-primary);color:var(--text-primary);font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 28px 80px}
+  .mono{font-family:'JetBrains Mono',monospace}
+
+  header.top{border-bottom:1px solid var(--border);padding-bottom:22px;margin-bottom:28px}
+  .ticker-row{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .ticker{font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:700;letter-spacing:1px;color:var(--cyan)}
+  .tf-chip{font-family:'JetBrains Mono',monospace;font-size:12px;padding:4px 10px;border:1px solid var(--border);border-radius:3px;color:var(--text-secondary);background:var(--bg-secondary)}
+  .timestamp{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-muted);margin-left:auto}
+  .sub-badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .badge{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;padding:6px 12px;border-radius:3px;border:1px solid var(--border)}
+  .badge-bias-long{background:rgba(0,230,118,.12);color:var(--green);border-color:rgba(0,230,118,.4)}
+  .badge-conf-high{background:rgba(0,230,118,.12);color:var(--green);border-color:rgba(0,230,118,.4)}
+  .badge-conf-low{background:rgba(255,61,87,.12);color:var(--red);border-color:rgba(255,61,87,.4)}
+  .badge-warn{background:rgba(255,61,87,.12);color:var(--red);border-color:rgba(255,61,87,.4)}
+
+  h2.section{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--cyan);margin:36px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  h3.sub{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:var(--text-secondary);margin:22px 0 10px}
+
+  table{width:100%;border-collapse:collapse;margin:10px 0 8px;font-size:13.5px;background:var(--bg-secondary);border:1px solid var(--border)}
+  th{text-align:left;padding:10px 12px;background:var(--bg-tertiary);font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-secondary);border-bottom:1px solid var(--border)}
+  td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  td.label{color:var(--text-secondary);font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;width:200px}
+  td.mono{font-family:'JetBrains Mono',monospace}
+  tr.heavy{background:var(--heavy-tint)}
+  tr.heavy td:nth-child(2){color:var(--red);font-weight:700}
+  tr.medium{background:var(--medium-tint)}
+  tr.medium td:nth-child(2){color:var(--amber)}
+  tr.light td:nth-child(2){color:var(--text-secondary)}
+  tr.current{background:var(--current-tint)}
+  tr.current td:nth-child(2){color:var(--cyan);font-weight:700}
+  tr.tier1{background:var(--tier1-tint)}
+  tr.tier1 td:first-child{color:var(--green);font-weight:700}
+  tr.tier2 td:first-child{color:var(--amber)}
+  tr.avoid td:first-child{color:var(--red)}
+  .weight-tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:1.5px}
+  .w-heavy{color:var(--red)}
+  .w-med{color:var(--amber)}
+  .w-light{color:var(--text-muted)}
+
+  p{margin:8px 0 10px}
+  .callout{background:var(--bg-secondary);border-left:3px solid var(--cyan);padding:12px 16px;margin:14px 0;font-size:13.5px}
+  .callout.warn{border-left-color:var(--amber)}
+  .callout.danger{border-left-color:var(--red)}
+  .callout.good{border-left-color:var(--green)}
+  .bullets{margin:6px 0 12px;padding-left:0;list-style:none}
+  .bullets li{padding:4px 0 4px 18px;position:relative}
+  .bullets li::before{content:'▸';position:absolute;left:0;color:var(--cyan);font-size:11px;top:6px}
+  .bold-label{font-weight:600;color:var(--text-primary);font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:1px;margin-right:6px}
+
+  footer{margin-top:42px;padding-top:20px;border-top:1px solid var(--border);font-size:11px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="ticker-row">
+    <div class="ticker">IREN</div>
+    <span class="tf-chip">30M</span>
+    <span class="tf-chip">4H</span>
+    <span class="tf-chip">1D</span>
+    <span class="tf-chip">1W</span>
+    <span class="timestamp">2026-04-24 · 15:45 CDT</span>
+  </div>
+  <div class="sub-badges">
+    <span class="badge badge-bias-long">DIRECTIONAL · LONG TACTICAL</span>
+    <span class="badge badge-conf-high">CHART CONF · HIGH</span>
+    <span class="badge badge-conf-low">CSP CONF · LOW (earnings in expiry)</span>
+    <span class="badge badge-warn">EARNINGS MAY 7 AMC</span>
+  </div>
+</header>
+
+<div class="callout danger">
+<strong>Two separate confidence reads this cycle.</strong> The chart is cleanly bullish — weekly descending-trendline break, daily golden cross, 0.618 Fib golden-pocket reclaim, 6/6 bull tool agreement. But May 8 options expiry has <strong>IREN Q3 FY26 earnings AMC Thursday May 7</strong>, one trading day before expiry. Per the framework's earnings rule, short-premium confidence on this expiry is capped at <strong>LOW</strong> regardless of how clean the chart looks. The 141% ATM IV (±$13.34 expected move, ~25%) is almost entirely earnings premium. <strong>The correct read is: bullish bias on the equity, stand aside on May 8 CSPs, roll any put-selling intent to May 15 or later for post-earnings IV crush.</strong>
+</div>
+
+<!-- ============================================================ -->
+<h2 class="section">§1 — Decision Summary</h2>
+
+<h3 class="sub">1A · Executive Summary</h3>
+<table>
+  <tbody>
+    <tr><td class="label">Directional Bias</td><td class="mono" style="color:var(--green)">LONG tactical — weekly TL break + golden-pocket reclaim + daily golden cross</td></tr>
+    <tr><td class="label">Chart Confidence</td><td class="mono" style="color:var(--green)">HIGH</td></tr>
+    <tr><td class="label">CSP Confidence (May 8)</td><td class="mono" style="color:var(--red)">LOW — capped by earnings May 7 AMC</td></tr>
+    <tr><td class="label">Tool Agreement</td><td class="mono">6/6 bull · 0/6 bear — 100%</td></tr>
+    <tr><td class="label">Invalidation</td><td class="mono">$49.00 short-term (loss of golden pocket) / <span style="color:var(--red)">$41.00–41.58 structural (daily 50/200 SMA stack)</span></td></tr>
+    <tr><td class="label">Entry Zone (long)</td><td class="mono">$48.50–49.50 · 0.618 weekly Fib ($49.27) retest + broken descending TL retest</td></tr>
+    <tr><td class="label">Exit Zone</td><td class="mono">$54–55 (call-wall stack, first resistance) · $61.19 extension (0.786 weekly Fib)</td></tr>
+    <tr><td class="label">Macro Watch</td><td class="mono" style="color:var(--red)">IREN earnings Thu May 7 AMC · FOMC Apr 29 · PCE/GDP Apr 30 — all inside May 8 expiry</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub">1B · Key Levels (price-sorted)</h3>
+<table>
+  <thead><tr><th style="width:95px">Weight</th><th style="width:130px">Price</th><th>Sources</th></tr></thead>
+  <tbody>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$61.19</td><td>0.786 weekly Fib — next extension target</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$60.00</td><td>$60 call OI (2,077) — gamma landmark + round number</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$57.95</td><td>Daily upper RVWAP band — 2.5σ statistical ceiling</td></tr>
+    <tr class="heavy"><td><span class="weight-tag w-heavy">HEAVY</span></td><td class="mono">$54.00–55.00</td><td><strong>$55 call wall (5,136 OI) + $54 call OI (3,293) + 4H upper RVWAP band ($54.97) + this week's high ($54.14)</strong></td></tr>
+    <tr class="current"><td>—</td><td class="mono">$51.87 ← CURRENT</td><td>Regular-session mark · above 30m RVWAP ($51.29), just below 30m upper band ($54.40)</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$50.00</td><td>$50 call OI (4,322) — secondary call wall, now broken + retest pivot</td></tr>
+    <tr class="heavy"><td><span class="weight-tag w-heavy">HEAVY</span></td><td class="mono">$49.27</td><td><strong>0.618 weekly Fib (golden pocket)</strong> — just reclaimed this week after months below; primary retest zone</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$44.52</td><td>Weekly RVWAP line — flat, currently sits inside structural chop zone</td></tr>
+    <tr class="heavy"><td><span class="weight-tag w-heavy">HEAVY</span></td><td class="mono">$41.00–41.58</td><td><strong>Daily 50 SMA ($41.58) + Daily 200 SMA ($41.23) + fresh golden cross + recent consolidation shelf</strong></td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$40.89</td><td>0.5 weekly Fib — aligns with 50/200 cluster as reinforcement</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$35.80</td><td>Weekly 50 SMA</td></tr>
+    <tr class="medium"><td><span class="weight-tag w-med">MEDIUM</span></td><td class="mono">$32.52</td><td>0.382 weekly Fib</td></tr>
+    <tr class="light"><td><span class="weight-tag w-light">LIGHT</span></td><td class="mono">$29.19</td><td>Weekly lower RVWAP band</td></tr>
+    <tr class="light"><td><span class="weight-tag w-light">LIGHT</span></td><td class="mono">$22.16</td><td>0.236 weekly Fib</td></tr>
+  </tbody>
+</table>
+
+<h3 class="sub">1C · CSP Strike Zones (May 8 expiry · EARNINGS-THROUGH)</h3>
+<div class="callout danger">
+<strong>This expiry is structurally inadvisable for short premium.</strong> Earnings AMC Thursday May 7 → options expire 4PM Friday May 8. Any CSP open at Thursday close carries the full earnings gap. Framework rule: <em>"Selling calls or puts through earnings expiries is flagged as structurally inadvisable due to asymmetric gap risk."</em> The table below is shown for completeness, but the primary recommendation is to stand aside on this expiry.
+</div>
+
+<table>
+  <thead><tr><th style="width:210px">Tier</th><th style="width:140px">Strike Zone</th><th>Confluence</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr class="avoid"><td>AVOID — all strikes on May 8</td><td class="mono">any</td><td>Earnings-through expiry</td><td>Stand aside. Roll premium-collection intent to May 15 or later for post-earnings IV crush.</td></tr>
+    <tr><td colspan="4" style="padding-top:16px;border-top:2px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;color:var(--text-secondary);text-transform:uppercase">If absolutely required on May 8, only the following would have structural cushion:</td></tr>
+    <tr class="tier1"><td>TIER 1 (if forced)</td><td class="mono">$38.00–40.00</td><td>Below expected move floor ($38.53) + below 0.5 Fib ($40.89) + deep OTM</td><td>Premium thin ($0.50 area), δ &lt; −0.10. Only acceptable if willing to own shares after a −25% earnings gap. Historical avg earnings move ±19.58% = −$9 from $51.87 = $42.87 — so $40 sits just below the historical downside average.</td></tr>
+    <tr class="avoid"><td>AVOID</td><td class="mono">$41.00–45.00</td><td>Inside expected move</td><td>Sits in the earnings-gap crater zone. HEAVY daily 50/200 cluster at $41 is high-quality <em>structural</em> support but offers no protection against a gap that blows straight through it.</td></tr>
+    <tr class="avoid"><td>AVOID</td><td class="mono">$45.00+</td><td>Inside expected move, closer to ATM</td><td>Expected-move math implies these strikes have elevated assignment probability. Even if price stays above, IV crush benefits are offset by gap risk.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+<strong>Strike Selection Notes (re-expiry approach).</strong> The right play for monetizing a bullish IREN chart via short puts is to let earnings print, then open Tier 1 strikes on a later expiry (May 15, May 22) once IV has crushed from ~141% back to its base rate. At that point, strikes at $41 (daily 50/200 HEAVY stack) or $49 (golden pocket HEAVY retest) become legitimate Tier 1 zones with genuine structural cushion. If the print is bad and price drops into the $41–45 zone, that's the higher-conviction CSP setup — and the framework would support it.
+</div>
+
+<!-- ============================================================ -->
+<h2 class="section">§2 — Confidence Breakdown</h2>
+<table>
+  <thead><tr><th style="width:230px">Stage</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td class="label">TA Confidence</td><td>HIGH — 4 structure tools aligned bullish (weekly descending-TL break, daily golden cross, 0.618 golden-pocket reclaim, price above weekly RVWAP), both momentum tools confirming (daily MACD+/RSI 66, weekly MACD turning up/RSI 60), weekly and daily both aligned bullish. No conflicting divergence.</td></tr>
+    <tr><td class="label">Fundamental Context</td><td>Not provided this session</td></tr>
+    <tr><td class="label">Fundamental Modifier</td><td>Not applied</td></tr>
+    <tr><td class="label">Macro Calendar</td><td>FOMC Apr 29 · Q1 GDP + Core PCE + ECI Apr 30 · <strong>IREN Q3 FY26 earnings Thu May 7 AMC (confirmed)</strong> · all within May 8 expiry</td></tr>
+    <tr><td class="label">Macro Modifier (directional)</td><td>Macro events &gt;24h out — no cap on the directional read. Elevated IV/pin risk noted.</td></tr>
+    <tr><td class="label">Earnings Cap (short premium)</td><td style="color:var(--red);font-weight:700">CAP AT LOW — ticker earnings inside options expiry window</td></tr>
+    <tr><td class="label"><strong>Final Confidence (directional)</strong></td><td style="color:var(--green);font-weight:700">HIGH</td></tr>
+    <tr><td class="label"><strong>Final Confidence (CSP on May 8)</strong></td><td style="color:var(--red);font-weight:700">LOW</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================ -->
+<h2 class="section">§3 — Supporting Analysis</h2>
+
+<h3 class="sub">3A · Higher Timeframe Context</h3>
+<ul class="bullets">
+  <li><span class="bold-label">Weekly:</span> Bullish inflection in progress. This week's candle is an 8% advance (O 48.11, H 54.14, C 51.97) closing near the highs and crossing back above the red descending trendline from the 2024 $76 high. Price sits at $51.97, above weekly 50 SMA ($35.80), above weekly RVWAP line ($44.52). Weekly 200 SMA at $13.43 — irrelevant for current setup. Fib anchored from multi-year low to the $76.38 swing high shows price just reclaimed the <strong>0.618 ($49.27) golden pocket</strong> — next target 0.786 at $61.19. Weekly RSI 59.98 rising, MACD −0.20 / 1.32 / 1.52 with histogram inflecting positive. Volume this week (185M+) is near the 20-wk average (177M) on the breakout — adequate confirmation.</li>
+  <li><span class="bold-label">Daily:</span> Clean trend. Price ($51.87) well above daily 50 SMA ($41.58), and the 50 has just crossed above the daily 200 SMA ($41.23) — <strong>fresh golden cross forming right at today's consolidation shelf</strong>. Daily RVWAP at $41.95 rising. RSI 66.38 — overbought territory but not yet divergent. MACD 1.27/2.80/1.53 clean positive. Price cleared the descending channel that's been in effect since the November $76 high.</li>
+</ul>
+
+<h3 class="sub">3B · Current Timeframe Read (4H / 30m)</h3>
+<ul class="bullets">
+  <li><span class="bold-label">Regime:</span> Trending up with short-term stretch. Clear breakout above the 4H descending channel; 30m starting to consolidate under this week's high.</li>
+  <li><span class="bold-label">VWAP:</span> 4H RVWAP at $47.32 rising, price well above. Upper band $54.97 tagged this week at the $54.14 high. 30m RVWAP $51.29, price $51.81 — just above the line but showing signs of pullback. 30m upper band $54.40.</li>
+  <li><span class="bold-label">MAs:</span> 4H 50 ($41.14) below 4H 200 ($43.93) — lagging bear structure but price is above both. 30m 50 ($49.00) above 30m 200 ($43.13) — bullish short-term structure intact.</li>
+  <li><span class="bold-label">Momentum:</span> 4H RSI 70.37 — overbought and should cool. 4H MACD 0.27/2.88/2.60 still positive but histogram could roll. 30m RSI 58.48 already coming off 70+ earlier this week, MACD histogram ticking down. Short-term momentum is digesting the rally — this is normal consolidation behavior, not reversal.</li>
+  <li><span class="bold-label">Fib reference:</span> Weekly Fib anchors (0.618 at $49.27 · 0.786 at $61.19 · 0.5 at $40.89) are the governing retracement map. Golden pocket reclaim is the dominant bullish tell.</li>
+</ul>
+
+<h3 class="sub">3C · Confluence Zones</h3>
+<p>The setup is textbook golden-pocket reclaim. Price spent months below the 0.618 weekly Fib at <strong>$49.27</strong>, broke above this week on volume, and is now holding above. That level, combined with the broken descending trendline retest zone, is the primary support for any pullback entry. Above, <strong>$54–55</strong> is a HEAVY resistance zone — the $55 call wall (5,136 OI) stacks with $54 call OI (3,293), the 4H upper RVWAP band at $54.97, and this week's actual high at $54.14. That's four tools clustered in a $1 range. Below the golden pocket, the <strong>$41–41.58</strong> HEAVY zone is where the daily 50/200 SMA golden cross is forming — any rejection from $54–55 that breaks $49 would find real structural support there.</p>
+
+<h3 class="sub">3D · Divergences</h3>
+<p>None high-conviction. 4H RSI at 70 with price at highs is not a divergence (yet) — it's just overbought. Weekly MACD histogram curling up from below zero is a bullish decelerator, consistent with the breakout. Watch for potential bearish RSI divergence if price pushes toward $55 on weakening RSI — but that's a theoretical future signal, not present.</p>
+
+<h3 class="sub">3E · Notes</h3>
+<p><strong>The earnings timing dominates this cycle.</strong> IREN announced on April 23 that Q3 FY26 results will release Thursday, May 7, 2026 AMC with a 5:00 PM ET conference call. That's one trading day before May 8 options expiry. The 141.36% ATM IV on the chain is pricing a ±$13.34 (~25%) expected move. Historical IREN earnings moves average ±19.58% per Unusual Whales — so the market is pricing slightly hotter than the historical base rate. The April 23 announcement itself produced a 7.13% single-day gain — investors are positioning into the print, which is a double-edged signal: it can fuel further momentum or create a crowded long that unwinds on any miss.</p>
+
+<p><strong>Macro cluster layers on top.</strong> FOMC Wed Apr 29 + Q1 GDP advance + Core PCE + ECI all on Thu Apr 30 — all inside the May 8 expiry. For a crypto/AI hybrid like IREN, these are +1 tier sensitivity. The adverse scenario (weak GDP + hot PCE) hits crypto-adjacent names hard and would set a weaker tape going into the May 7 earnings print.</p>
+
+<p><strong>Alignment check.</strong> Every timeframe is bullish: weekly breaking out, daily golden-crossing, 4H above structure (though overbought), 30m consolidating. 6/6 bull agreement on the daily. This is the cleanest directional setup the chart has offered in months. The problem is purely the options cycle timing — not the chart.</p>
+
+<p><strong>Macro news flow tailwind.</strong> IREN guided to deliver 140,000 GPUs by end-2026 and reach a $3.4 billion ARR target, with about $2.3 billion of ARR already under contract and a $3.6 billion delayed-draw GPU financing package that together with Microsoft's $1.9 billion in prepayments covers ~95% of the $5.8 billion GPU CapEx supporting the $9.7 billion five-year Microsoft contract. That narrative is the structural tailwind behind the chart breakout. Whether the May 7 print extends it or unwinds it is the coin-flip sitting inside the expiry.</p>
+
+<!-- ============================================================ -->
+<h2 class="section">§4 — Options Chain Detail</h2>
+<ul class="bullets">
+  <li><span class="bold-label">Source:</span> User-provided screenshot (Robinhood)</li>
+  <li><span class="bold-label">Expiry:</span> Friday, May 8, 2026 (14 days out) · <strong>ATM IV 141.36%</strong> · expected move ±$13.34 (~25%)</li>
+  <li><span class="bold-label">Earnings inside window:</span> Thursday, May 7, 2026 AMC (confirmed)</li>
+  <li><span class="bold-label">Call wall (primary):</span> $55.00 — 5,136 OI</li>
+  <li><span class="bold-label">Call wall (secondary):</span> $54 (3,293 OI) + $50 (4,322 OI, below current price = broken wall)</li>
+  <li><span class="bold-label">Gamma landmarks (OTM calls):</span> $60 (2,077 OI) · $65 (1,098 OI) · $52 (1,169 OI)</li>
+  <li><span class="bold-label">Put wall (nominal):</span> $45 — only 577 OI — <strong>put OI is notably sparse across the chain</strong></li>
+  <li><span class="bold-label">Structural put OI:</span> $43 (552) · $51 (454) · $44 (433) · $49 (340) · $50 (294) · $46 (272) · $48 (247) — all small relative to the call side</li>
+  <li><span class="bold-label">Max pain (approx):</span> $48–50 zone based on OI distribution</li>
+  <li><span class="bold-label">IV skew:</span> Flat-to-slightly-downside skew ($42.50P 133.7% vs ATM 141.4% vs $55C 133.1%). Unusually flat for an earnings chain — reflects market pricing two-way risk rather than one-sided downside.</li>
+  <li><span class="bold-label">Notable:</span> Heavy call-side positioning with light put-side positioning is a speculative-long signature. That's consistent with the 7.13% pop on the April 23 earnings-date announcement — market is positioned for an upside beat.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 class="section">§5 — Appendix</h2>
+
+<h3 class="sub">Bull / Bear Tool Agreement (Daily TF)</h3>
+<table>
+  <thead><tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr></thead>
+  <tbody>
+    <tr><td class="mono">1</td><td>Daily RVWAP slope</td><td>Line at $41.95 rising from March trough</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td class="mono">2</td><td>Price vs Daily RVWAP</td><td>$51.87 vs $41.95 — ~24% above</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td class="mono">3</td><td>Daily 50 SMA vs 200 SMA</td><td>$41.58 above $41.23 — fresh golden cross forming</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td class="mono">4</td><td>Daily RSI vs 50</td><td>66.38 above midline, rising toward overbought</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td class="mono">5</td><td>Daily MACD</td><td>1.27 above zero, histogram 1.53 positive</td><td style="color:var(--green)">BULL</td></tr>
+    <tr><td class="mono">6</td><td>HTF alignment (W + D)</td><td>Weekly RSI 60 rising · MACD turning up · above weekly 50 SMA · TL break confirmed</td><td style="color:var(--green)">BULL</td></tr>
+  </tbody>
+</table>
+<p class="mono" style="font-size:12.5px;color:var(--text-secondary);margin-top:4px">Total: 6/6 BULL · 0/6 BEAR — 100% agreement. Strongest directional setup on the name since the November high rolled over.</p>
+
+<h3 class="sub">Data-Gap Flags</h3>
+<ul class="bullets">
+  <li>Weekly Fib anchored and drawn (0.236 → 1.618 all visible) — primary structural retracement map is in place.</li>
+  <li>No fundamental valuation context provided this session — TA-only read, no modifier applied.</li>
+  <li>IREN is crypto-miner-to-AI-hosting pivot — lifecycle stage and regime-fit context not factored into this chart read per framework principle 5 (clean, independent reads).</li>
+</ul>
+
+<h3 class="sub">Confidence Sanity Check</h3>
+<p>Bullscore is 6/6 — maximum — but CSP Final Confidence is LOW. This is not a contradiction inside the framework; it's the earnings cap doing its job. The directional equity read (HIGH) and the short-premium options read (LOW) are two distinct outputs in an earnings-through-expiry scenario, and they should diverge. Resolution: directional long setup on the equity or a later-dated options expiry is clean; premium selling on May 8 is structurally inadvisable.</p>
+
+<footer>
+  SMB LLC · TA Chart Analysis · Framework: confluence-based, multi-timeframe, macro-modified · Skill v2026.04<br>
+  This is an independent chart read; existing portfolio positions were not factored in. User sizes and selects delta/expiry.
+</footer>
+
+</div>
+</body>
+</html>

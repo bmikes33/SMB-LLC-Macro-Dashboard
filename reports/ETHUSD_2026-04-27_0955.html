@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ETHUSD TA Report — 2026-04-27 (Fibs Update)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 32px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .ticker-line {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.5px;
+  }
+  .meta-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+  .update-tag {
+    display: inline-block;
+    background: rgba(0, 229, 255, 0.12);
+    border: 1px solid var(--cyan);
+    color: var(--cyan);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: var(--mono);
+    letter-spacing: 1px;
+    margin-left: 8px;
+  }
+  h2 {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 32px 0 14px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 20px 0 10px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    font-size: 13px;
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.mono, .num { font-family: var(--mono); }
+  tr:last-child td { border-bottom: none; }
+  tr.heavy { background: rgba(255, 61, 87, 0.06); }
+  tr.heavy td:first-child { color: var(--red); font-weight: 700; }
+  tr.heavy td:nth-child(2) { color: var(--red); font-weight: 700; font-family: var(--mono); }
+  tr.heavyplus { background: rgba(255, 61, 87, 0.12); }
+  tr.heavyplus td:first-child { color: var(--red); font-weight: 700; }
+  tr.heavyplus td:nth-child(2) { color: var(--red); font-weight: 700; font-family: var(--mono); }
+  tr.medium { background: rgba(255, 171, 0, 0.04); }
+  tr.medium td:first-child { color: var(--amber); }
+  tr.upgraded td:first-child::after { content: ' ↑'; color: var(--green); }
+  tr.current td { color: var(--cyan); font-style: italic; background: rgba(0, 229, 255, 0.04); }
+  tr.current td:first-child { color: var(--cyan); }
+  .bias-long { color: var(--green); font-weight: 700; }
+  .bias-short { color: var(--red); font-weight: 700; }
+  .bias-neutral { color: var(--amber); font-weight: 700; }
+  .conf-high { color: var(--green); font-weight: 700; }
+  .conf-med { color: var(--amber); font-weight: 700; }
+  .conf-low { color: var(--text-secondary); }
+  .upgrade { color: var(--green); }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+  }
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-family: var(--mono);
+  }
+  ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  p { margin: 8px 0 12px 0; color: var(--text-primary); }
+  .label {
+    font-family: var(--mono);
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .callout {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--amber);
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  .callout strong { color: var(--amber); font-family: var(--mono); }
+  .callout-cyan {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--cyan);
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  .callout-cyan strong { color: var(--cyan); font-family: var(--mono); }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-family: var(--mono);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ticker-line">ETHUSD · COINBASE <span class="update-tag">FIBS UPDATE</span></div>
+  <div class="meta-line">TIMEFRAMES: 30m / 4h / 1D / 1W &nbsp; | &nbsp; 2026-04-27 09:55 CT &nbsp; | &nbsp; BIAS: <span class="bias-short">SHORT TACTICAL</span> &nbsp; | &nbsp; CONFIDENCE: <span class="conf-med">MEDIUM</span> (TA: HIGH, macro-capped)</div>
+</header>
+
+<div class="callout-cyan"><strong>UPDATE NOTE.</strong> User has drawn Daily and Weekly Fibonacci retracements. The "Fibs not drawn" cap on TA confidence is removed — TA confidence lifts from MEDIUM to <span class="upgrade">HIGH</span>. However, the imminent FOMC (April 28–29) cap holds independently, so <strong>Final Confidence remains MEDIUM</strong>. The technical case is meaningfully stronger; macro is the only constraint on a HIGH-conviction short.</div>
+
+<h2>Section 1 — Decision Summary</h2>
+
+<h3>1A. Executive Summary</h3>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Bias</td><td><span class="bias-short">SHORT tactical — fade rallies into MA cluster, or short on $2,293 daily close break</span></td></tr>
+  <tr><td>Final Confidence</td><td><span class="conf-med">MEDIUM</span> (TA: <span class="upgrade">HIGH</span>; macro-cap from imminent FOMC holds)</td></tr>
+  <tr><td>Tool Agreement</td><td class="num">4 / 6 bear · 2 / 6 bull (67%)</td></tr>
+  <tr><td>Invalidation</td><td class="num">$2,440 short-term (6-tool HEAVY+ stack) / $2,460 structural (Weekly 200 SMA + Weekly Fib 0.786)</td></tr>
+  <tr><td>Entry Zone</td><td class="num">$2,330–$2,360 (4h MA cluster) <strong>OR</strong> aggressive: short on daily close below $2,293 (failed 0.786 Fib)</td></tr>
+  <tr><td>Exit Zone</td><td class="num">T1: $2,275–$2,295 · T2: $2,180–$2,195 (golden pocket) · T3: $2,050–$2,070 · Stretch: $1,900–$1,965</td></tr>
+  <tr><td>Macro Watch</td><td><strong style="color:var(--red)">FOMC Apr 28–29 (decision Wed 2 PM ET)</strong> · Q1 GDP advance + Core PCE + ECI Thu Apr 30 8:30 AM · MSFT/GOOGL/META/AMZN earnings Wed PM</td></tr>
+</table>
+
+<h3>1B. Key Levels (Updated with Fib Confluences)</h3>
+<table>
+  <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$2,793</td><td>Daily Fib 1.618 extension ($2,793) + Daily 200 SMA ($2,769) — bull-squeeze target if invalidation triggers</td></tr>
+  <tr class="heavyplus"><td>HEAVY+</td><td class="num">$2,420–$2,460</td><td>Daily descending trendline + recent swing high + Daily upper RVWAP + Weekly 200 SMA ($2,457) + <strong>Daily Fib 1.0 ($2,421.69)</strong> + <strong>Weekly Fib 0.786 ($2,429.29)</strong> — <span class="upgrade">6-tool stack</span></td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$2,330–$2,360</td><td>4h 50 SMA ($2,330) + 4h 21 EMA + 30m 200 SMA ($2,327) + 30m 50 SMA ($2,349)</td></tr>
+  <tr class="current"><td>—</td><td class="num">$2,311 ← CURRENT</td><td>Live (Mon 09:55 CT) — sitting at 0.786 Fib trigger</td></tr>
+  <tr class="heavy upgraded"><td>HEAVY</td><td class="num">$2,275–$2,295</td><td><strong>Daily Fib 0.786 ($2,292.98)</strong> + 4h lower RVWAP ($2,276) + 30m lower RVWAP ($2,285) — <span class="upgrade">UPGRADED from MEDIUM</span></td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$2,180–$2,195</td><td><strong>Daily Fib 0.618 (golden pocket, $2,191.94)</strong> + Daily horizontal + 4h horizontal + prior consolidation HVN — 4 tools</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$2,121</td><td><strong>Daily Fib 0.5 ($2,120.96)</strong> — fills prior gap between $2,180 and $2,070</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$2,050–$2,070</td><td><strong>Daily Fib 0.382 ($2,049.99)</strong> + 4h horizontal + Daily horizontal + VPVR major HVN (recent base) — 4 tools</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$1,900–$1,965</td><td><strong>Daily Fib 0.236 ($1,962.18)</strong> + Daily magenta horizontal + VPVR heaviest HVN + Weekly horizontal — 4 tools</td></tr>
+</table>
+
+<div class="callout"><strong>NO CSP STRIKE ZONES OUTPUT.</strong> Options chain data was not provided for ETH and ETH spot does not have liquid listed options on standard equity venues. If a CSP framework is desired, supply ETHA / FETH / ETH-tracking equity options chain data.</div>
+
+<h2>Section 2 — Confidence Breakdown</h2>
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr><td>TA Confidence</td><td><span class="conf-high">HIGH</span> ↑ — 4-6 structure tools stacked at major zones (resistance + each support tier), momentum aligned bearish, no conflicting divergence at active levels, HTF aligned. <em>Was MEDIUM in prior report; cap removed because Fibs are now drawn.</em></td></tr>
+  <tr><td>Fundamental Context</td><td>not provided</td></tr>
+  <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+  <tr><td>Macro Calendar</td><td>FOMC Apr 28–29 (IMMINENT, &lt;24h) · GDP+PCE+ECI Apr 30 · 4 mega-cap earnings Wed PM</td></tr>
+  <tr><td>Macro Modifier</td><td>HIGH-impact imminent → cap at MEDIUM. ETH rate-sensitive (+1 tier weight applies to FOMC and inflation data).</td></tr>
+  <tr><td><strong>Final Confidence</strong></td><td><strong><span class="conf-med">MEDIUM</span></strong> — TA upgrade absorbed by macro cap. Ex-macro this would be a HIGH-confidence short.</td></tr>
+</table>
+
+<h2>Section 3 — Supporting Analysis</h2>
+
+<h3>3A. Higher Timeframe Context</h3>
+<ul>
+  <li><strong>Weekly:</strong> Bearish structure intact. Price $2,311 below weekly 50 SMA ($3,084) and weekly 200 SMA ($2,457). Weekly Fib (drawn from cycle peak $4,933 to $1,748 low) places <strong>0.786 at $2,429</strong> — directly stacking with Weekly 200 SMA at $2,457. This is the dominant overhead resistance: a confluence of weekly retracement-from-peak failure point plus the 200 SMA. Weekly RSI 36, MACD deeply negative absolute (−267 / −314) but histogram +47 — early bullish-divergence attempt that <strong>stalled at exactly this Fib + 200 SMA confluence</strong>.</li>
+  <li><strong>Daily:</strong> Death cross intact (50 SMA $2,189 below 200 SMA $2,769). Daily Fib drawn from $1,820 swing low to $2,422 swing high. Current price $2,311 is at the <strong>0.786 retracement ($2,293)</strong>, the first Fib level below the swing high. Today's −2.50% candle is testing this level. Daily 200 SMA at $2,769 stacks with Daily Fib 1.618 extension ($2,793) — that's the bull-squeeze invalidation target if $2,440 is reclaimed.</li>
+</ul>
+
+<h3>3B. Current Timeframe Read (4h primary swing TF — unchanged from prior)</h3>
+<ul>
+  <li><strong>Regime:</strong> Trending down — clean rejection at descending trendline + swing high, now testing first Fib support at 0.786.</li>
+  <li><strong>VWAP (4h):</strong> Price below VWAP line, slope flattened from rising and tilting down.</li>
+  <li><strong>MAs (4h):</strong> 50 SMA above 200 SMA — still bullish absolute structure on 4h, but price below both 21 EMA and 50 SMA.</li>
+  <li><strong>Momentum (4h):</strong> RSI 51 falling through midline. MACD line just barely above zero with bearish signal cross and negative histogram.</li>
+  <li><strong>30m:</strong> Stretched oversold (RSI ~33) — chasing here is poor R:R.</li>
+  <li><strong>Fib reference:</strong> <span class="upgrade">Now drawn — both daily and weekly</span>. Daily 0.786 at $2,293 is the immediate trigger; golden pocket at $2,192 is the primary downside magnet.</li>
+</ul>
+
+<h3>3C. Confluence Zones (Updated)</h3>
+<p>The Fibs reinforce every prior structural zone and add one new level. The upside resistance stack at <strong>$2,420–$2,460 is now a 6-tool HEAVY+</strong>: descending trendline + swing high + Daily upper RVWAP + Weekly 200 SMA + Daily Fib 1.0 + Weekly Fib 0.786. Daily close above $2,440 invalidates with extreme conviction — that's a ceiling backed by both retracement frameworks (daily rally retrace and weekly cycle-top retrace).</p>
+
+<p>On the downside, the layering is now stepwise and exceptionally clean: <strong>$2,275–$2,295 (Fib 0.786 + lower RVWAP bands) is now HEAVY</strong> — upgraded from MEDIUM in the prior report. This is the immediate trigger zone. <strong>$2,180–$2,195 (Daily golden pocket + horizontals + HVN) is the primary downside magnet</strong> — historically the highest-probability mean-reversion zone after a 0.786 break. <strong>$2,050–$2,070 (Fib 0.382 + base + HVN) is the higher-conviction target</strong> if the broader stagflation thesis pushes through. <strong>$1,900–$1,965 (Fib 0.236 + heaviest VPVR HVN + weekly anchor) is the structural floor.</strong></p>
+
+<p>The new MEDIUM at $2,121 (Daily Fib 0.5) fills a prior level-map gap and offers a transit reference between the golden pocket and the base.</p>
+
+<h3>3D. Divergences</h3>
+<p>Weekly MACD histogram improved from deeply negative toward zero over the past 6 weeks while price made a higher low — bullish histogram divergence in progress. <strong>This divergence stalled at the 6-tool HEAVY+ resistance</strong> (Weekly 200 SMA + Weekly Fib 0.786 + Daily trendline). The Fibs make this rejection more significant: it's the failure of the bullish recovery attempt at the most defended level on the chart. No active divergence on daily, 4h, or 30m. The 30m oversold print is not a divergence yet.</p>
+
+<h3>3E. Notes</h3>
+<p>The Fib update produces two specific actionable triggers that didn't exist in the prior report:</p>
+<ul>
+  <li><strong>Aggressive short trigger:</strong> Daily close below $2,293 (failed 0.786 hold). Confirms the 0.786 → 0.618 → 0.382 sequence is in motion. Use this as an alternative entry to the $2,330–$2,360 MA-cluster fade.</li>
+  <li><strong>Bull-squeeze trap zone:</strong> If price reclaims $2,440, the bull-thesis target is $2,769–$2,793 (Daily 200 SMA + Daily Fib 1.618 extension). That's the only cleanly defined upside target. Treat any move into that zone as the next major fade location.</li>
+</ul>
+<p>The macro calendar context remains the dominant near-term uncertainty:</p>
+<ul>
+  <li><strong>Tue Apr 28 (PM):</strong> Conference Board Consumer Confidence + FOMC begins (no decision). BTC monthly options expiry — elevated crypto vol around the print.</li>
+  <li><strong>Wed Apr 29:</strong> FOMC decision 2 PM ET, Powell presser 2:30 PM ET. Market pricing ~94% hold. <em>The decision isn't the focus — language is.</em> Powell's framing of recent oil-driven inflation as transitory vs. sticky is the binary swing variable. AFTER CLOSE: MSFT, GOOGL, META, AMZN — broad equity tape risk.</li>
+  <li><strong>Thu Apr 30 (8:30 AM ET):</strong> Q1 GDP advance + Core PCE + Employment Cost Index — all simultaneous. Q4 was 0.5% on third estimate. Stagflation print combination would be ETH-bearish and would push price toward the Fib 0.618 golden pocket.</li>
+</ul>
+<p><strong>Hold the bias but widen the entry buffer</strong> — single-day intraday reversals around the FOMC statement and Thursday data are likely. Avoid initiating positions in the 4 hours before each release. Counter-bias risk: dovish Powell + soft GDP would pop price back toward $2,440; respect the invalidation.</p>
+
+<h2>Section 4 — Options Chain Detail</h2>
+<p style="color: var(--text-muted); font-style: italic;">No options chain data provided. Section omitted per skill protocol.</p>
+
+<h2>Section 5 — Appendix</h2>
+
+<h3>Tool Agreement Detail (4h primary)</h3>
+<table>
+  <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+  <tr><td>1</td><td>VWAP slope (4h)</td><td>Flat-with-downward-bias after rejection at trendline</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>2</td><td>Price vs VWAP line (4h)</td><td>$2,311 vs $2,334 line — below</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>3</td><td>50 vs 200 SMA (4h)</td><td>$2,330 above $2,208</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>4</td><td>RSI vs 50 (4h)</td><td>~51 — falling through midline from ~70</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>5</td><td>MACD zero line (4h)</td><td>Line ~0.5 above zero, histogram negative</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>6</td><td>HTF alignment (W+D)</td><td>Weekly bearish + Daily rejection at 6-tool HEAVY+</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td colspan="3"><strong>Score</strong></td><td><strong>4 BEAR / 2 BULL (67% bear)</strong></td></tr>
+</table>
+
+<h3>Fib Anchors</h3>
+<table>
+  <tr><th>TF</th><th>Anchor Low</th><th>Anchor High</th><th>0.236</th><th>0.382</th><th>0.5</th><th>0.618</th><th>0.786</th><th>1.0 / 1.618</th></tr>
+  <tr><td>Daily</td><td class="num">$1,820.23</td><td class="num">$2,421.69</td><td class="num">$1,962.18</td><td class="num">$2,049.99</td><td class="num">$2,120.96</td><td class="num">$2,191.94</td><td class="num">$2,292.98</td><td class="num">$2,421.69 / $2,793.40</td></tr>
+  <tr><td>Weekly</td><td class="num">$1,747.62</td><td class="num">$4,932.97</td><td class="num">$4,181.23</td><td class="num">$3,716.17</td><td class="num">$3,340.30</td><td class="num">$2,964.43</td><td class="num">$2,429.29</td><td class="num">$4,932.97 / —</td></tr>
+</table>
+<p style="font-size: 12px; color: var(--text-muted);">Daily: anchored from Feb low to Apr swing high (rally retracement). Weekly: anchored from cycle peak to recent low (peak retracement). The Weekly 0.786 ($2,429) and Daily 1.0 ($2,422) cluster within $7 of each other — the dominant overhead confluence.</p>
+
+<div class="footer">
+  Generated 2026-04-27 09:55 CT &nbsp; · &nbsp; SMB LLC Trading Research &nbsp; · &nbsp; ta-chart-analysis skill (Fibs update) &nbsp; · &nbsp; Source: TradingView (Coinbase ETHUSD) &nbsp; · &nbsp; Macro calendar via web_search (Federal Reserve, BEA, Kraken Economic Brief)
+</div>
+
+</body>
+</html>

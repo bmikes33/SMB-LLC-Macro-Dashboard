@@ -1,0 +1,26 @@
+{
+  "type": "ta",
+  "file": "ETHUSD_2026-04-27_0955.html",
+  "ticker": "ETHUSD",
+  "tvSymbol": "COINBASE:ETHUSD",
+  "date": "2026-04-27T09:55:00-05:00",
+  "bias": "SHORT tactical",
+  "confidence": "MEDIUM",
+  "bullScore": 2,
+  "bearScore": 4,
+  "scoreMax": 6,
+  "invalidation": "$2,440 short-term / $2,460 structural",
+  "entryZone": "$2,330–$2,360 or close <$2,293",
+  "exitZone": "$2,180–$2,195 (golden pocket) / $2,050–$2,070",
+  "levels": [
+    { "weight": "MEDIUM",  "price": "$2,793",         "sources": "Daily Fib 1.618 ext + Daily 200 SMA ($2,769) — bull-squeeze target" },
+    { "weight": "HEAVY",   "price": "$2,420–$2,460",  "sources": "Trendline + swing high + Weekly 200 SMA + Daily upper RVWAP + Daily Fib 1.0 + Weekly Fib 0.786 (6 tools)" },
+    { "weight": "MEDIUM",  "price": "$2,330–$2,360",  "sources": "4h 50 SMA + 4h 21 EMA + 30m 200 SMA + 30m 50 SMA cluster" },
+    { "weight": "CURRENT", "price": "$2,311",         "sources": "Live (Mon 09:55 CT) — at Daily Fib 0.786 trigger" },
+    { "weight": "HEAVY",   "price": "$2,275–$2,295",  "sources": "Daily Fib 0.786 ($2,293) + 4h lower RVWAP + 30m lower RVWAP — UPGRADED from MEDIUM" },
+    { "weight": "HEAVY",   "price": "$2,180–$2,195",  "sources": "Daily Fib 0.618 golden pocket + Daily horizontal + 4h horizontal + prior HVN (4 tools)" },
+    { "weight": "MEDIUM",  "price": "$2,121",         "sources": "Daily Fib 0.5 — fills prior gap" },
+    { "weight": "HEAVY",   "price": "$2,050–$2,070",  "sources": "Daily Fib 0.382 + 4h horizontal + Daily horizontal + VPVR major HVN (4 tools)" },
+    { "weight": "HEAVY",   "price": "$1,900–$1,965",  "sources": "Daily Fib 0.236 + Daily horizontal + VPVR heaviest HVN + Weekly horizontal (4 tools)" }
+  ]
+}

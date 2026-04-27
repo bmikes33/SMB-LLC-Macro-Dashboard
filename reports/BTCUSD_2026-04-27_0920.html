@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BTCUSD TA Report — 2026-04-27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 32px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .ticker-line {
+    font-family: var(--mono);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.5px;
+  }
+  .meta-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 32px 0 14px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 20px 0 10px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 16px 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    font-size: 13px;
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td.mono, .num { font-family: var(--mono); }
+  tr:last-child td { border-bottom: none; }
+  tr.heavy { background: rgba(255, 61, 87, 0.06); }
+  tr.heavy td:first-child { color: var(--red); font-weight: 700; }
+  tr.heavy td:nth-child(2) { color: var(--red); font-weight: 700; font-family: var(--mono); }
+  tr.medium { background: rgba(255, 171, 0, 0.04); }
+  tr.medium td:first-child { color: var(--amber); }
+  tr.tier1 { background: rgba(0, 230, 118, 0.05); }
+  tr.tier1 td:first-child { color: var(--green); font-weight: 700; }
+  tr.current td { color: var(--cyan); font-style: italic; background: rgba(0, 229, 255, 0.04); }
+  tr.current td:first-child { color: var(--cyan); }
+  .bias-long { color: var(--green); font-weight: 700; }
+  .bias-short { color: var(--red); font-weight: 700; }
+  .bias-neutral { color: var(--amber); font-weight: 700; }
+  .conf-high { color: var(--green); font-weight: 700; }
+  .conf-med { color: var(--amber); font-weight: 700; }
+  .conf-low { color: var(--text-secondary); }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+  }
+  ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-family: var(--mono);
+  }
+  ul li strong {
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+  p { margin: 8px 0 12px 0; color: var(--text-primary); }
+  .label {
+    font-family: var(--mono);
+    color: var(--text-muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .callout {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--amber);
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  .callout strong { color: var(--amber); font-family: var(--mono); }
+  .callout-cyan {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--cyan);
+    padding: 14px 16px;
+    margin: 14px 0;
+    font-size: 13px;
+  }
+  .callout-cyan strong { color: var(--cyan); font-family: var(--mono); }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-family: var(--mono);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="ticker-line">BTCUSD · COINBASE</div>
+  <div class="meta-line">TIMEFRAMES: 30m / 4h / 1D / 1W &nbsp; | &nbsp; 2026-04-27 09:20 CT &nbsp; | &nbsp; BIAS: <span class="bias-long">LONG TACTICAL</span> &nbsp; | &nbsp; CONFIDENCE: <span class="conf-med">MEDIUM</span></div>
+</header>
+
+<div class="callout-cyan"><strong>CROSS-ASSET CONTEXT.</strong> Today: BTC −1.0% / ETH −2.5%. BTC showing relative strength. In counter-trend rallies BTC typically leads — a BTC trendline breakout would likely pull ETH back to $2,440 retest, while a BTC rejection here likely accelerates ETH downside through Daily Fib 0.786.</div>
+
+<h2>Section 1 — Decision Summary</h2>
+
+<h3>1A. Executive Summary</h3>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Bias</td><td><span class="bias-long">LONG tactical — counter-trend rally intact; await trigger</span></td></tr>
+  <tr><td>Final Confidence</td><td><span class="conf-med">MEDIUM</span> (TA clean, macro-capped by imminent FOMC)</td></tr>
+  <tr><td>Tool Agreement</td><td class="num">5 / 6 bull · 1 / 6 bear (83%)</td></tr>
+  <tr><td>Invalidation</td><td class="num">$75,500 short-term (loss of recent structure) / $72,000 structural (Weekly Fib 0.5 break)</td></tr>
+  <tr><td>Entry Zone</td><td class="num">Continuation: 4h close above $80,500 (clears descending trendline). Pullback: $72,000–$73,000 (Weekly Fib 0.5 + horizontal + HVN)</td></tr>
+  <tr><td>Exit Zone</td><td class="num">T1: $80,000 (resistance test) · T2: $84,000–$84,800 (HEAVY) · Stretch: $90,000</td></tr>
+  <tr><td>Macro Watch</td><td><strong style="color:var(--red)">FOMC Apr 28–29 (decision Wed 2 PM ET)</strong> · Q1 GDP advance + Core PCE + ECI Thu Apr 30 8:30 AM · MSFT/GOOGL/META/AMZN earnings Wed PM</td></tr>
+</table>
+
+<h3>1B. Key Levels</h3>
+<table>
+  <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$90,000+</td><td>Prior consolidation zone — stretch target if momentum extends through $84K</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$84,000–$84,800</td><td><strong>Weekly Fib 0.618 ($84,099)</strong> + Daily 200 SMA ($84,757) + Daily green horizontal ($84,000) — 3 tools, primary upside target</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$82,500</td><td>Daily purple horizontal — single daily anchor</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$79,500–$80,500</td><td>4h descending trendline (cycle peak resistance) + recent local high cluster + 30m upper RVWAP — proximate test</td></tr>
+  <tr class="current"><td>—</td><td class="num">$77,900 ← CURRENT</td><td>Live (Mon 09:20 CT)</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$76,500–$77,500</td><td>30m 200 SMA ($77,880) + 30m lower RVWAP + recent consolidation HVN</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$71,000–$73,000</td><td><strong>Weekly Fib 0.5 ($71,026)</strong> + Daily green horizontal + 4h horizontal + prior consolidation HVN — 4 tools, primary pullback support</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td class="num">$66,000–$67,000</td><td>Daily orange horizontal + 4h orange horizontal + recent rally base + VPVR HVN — 4 tools, structural floor</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$65,000–$65,500</td><td>Daily purple horizontal — single daily anchor below recent base</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$61,000</td><td>Cycle low — single anchor</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td class="num">$57,953</td><td>Weekly Fib 0.382 — major weekly anchor (below cycle low)</td></tr>
+</table>
+
+<div class="callout"><strong>NO CSP STRIKE ZONES OUTPUT.</strong> Options chain data was not provided for BTC, and BTC spot does not have liquid listed options on standard equity venues. If a CSP framework is desired, supply IBIT, FBTC, or other BTC-tracking equity options chain data.</div>
+
+<h2>Section 2 — Confidence Breakdown</h2>
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr><td>TA Confidence</td><td><span class="conf-med">MEDIUM</span> — clean uptrend across timeframes (5/6 bull on 4h, daily MACD positive and rising, weekly histogram improving), but price is at a binary inflection point at the descending trendline with no fresh entry trigger from current spot</td></tr>
+  <tr><td>Fundamental Context</td><td>not provided</td></tr>
+  <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+  <tr><td>Macro Calendar</td><td>FOMC Apr 28–29 (IMMINENT, &lt;24h) · GDP+PCE+ECI Apr 30 · Mega-cap earnings Wed PM · BTC monthly options expiry Tue</td></tr>
+  <tr><td>Macro Modifier</td><td>HIGH-impact imminent → cap at MEDIUM. BTC rate-sensitive (+1 tier weight for FOMC and inflation prints).</td></tr>
+  <tr><td><strong>Final Confidence</strong></td><td><strong><span class="conf-med">MEDIUM</span></strong></td></tr>
+</table>
+
+<h2>Section 3 — Supporting Analysis</h2>
+
+<h3>3A. Higher Timeframe Context</h3>
+<ul>
+  <li><strong>Weekly:</strong> Counter-trend rally off cycle lows ($61K) is intact and structurally meaningful — broke above Weekly Fib 0.5 ($71,026) and is now testing the multi-month descending trendline from cycle peak ($126K). Weekly Fib drawn from peak: 0.786 = $102,711, 0.618 = $84,099, 0.5 = $71,026, 0.382 = $57,953. Current $77,871 sits between 0.5 and 0.618. RSI 34.47 still bearish absolute (rally has room before getting overbought on weekly). MACD deeply negative (−6,106 / −7,731) but histogram +1,625 — bullish cross from extreme oversold. Price below weekly 50 SMA ($95,709), above weekly 200 SMA ($60,509).</li>
+  <li><strong>Daily:</strong> Death cross intact (50 SMA $71,817 below 200 SMA $84,757) but price has reclaimed the 50 SMA decisively and is climbing toward the 200 SMA. Today's −0.99% candle is a healthy pullback, not a reversal. Daily descending blue trendline appears reclaimed. RSI 62.66 (bullish, room to upper bound). MACD positive and rising (+182 histogram, line above signal). Both momentum tools bullish on daily — strongest setup of all timeframes.</li>
+</ul>
+
+<h3>3B. Current Timeframe Read (4h primary swing TF)</h3>
+<ul>
+  <li><strong>Regime:</strong> Trending up — rally intact since early-April $66-67K base; testing descending trendline resistance.</li>
+  <li><strong>VWAP (4h):</strong> Price $77,902 vs RVWAP line $78,013 — slightly below, but slope has been rising sharply through April. Lower band $76,939 is the next downside test; upper band $79,087 is overhead.</li>
+  <li><strong>MAs (4h):</strong> Bullish stack — 50 SMA ($77,204) above 200 SMA ($72,098). Price above both. Spread widening, supportive of trend continuation.</li>
+  <li><strong>Momentum (4h):</strong> RSI 54 — above midline but not stretched. MACD line 215.70 above zero (signal 260.39, line below signal — bearish cross in absolute bullish regime, histogram −44 indicating near-term momentum deceleration).</li>
+  <li><strong>30m:</strong> RSI 40 just bounced from oversold. MACD histogram +7.47 with bullish line/signal cross from below. Pullback finding support at the 30m MA cluster ($77,880 200 SMA + $78,214 50 SMA).</li>
+  <li><strong>Fib reference:</strong> Weekly Fib drawn — current price between 0.5 and 0.618. <em>Recommend drawing daily Fib from $61K cycle low to $84K Feb breakdown gap-down high</em> to fully validate retracement structure on the rally.</li>
+</ul>
+
+<h3>3C. Confluence Zones</h3>
+<p>The dominant overhead structure is <strong>$84,000–$84,800</strong> — Weekly Fib 0.618 ($84,099), Daily 200 SMA ($84,757), and Daily green horizontal ($84,000) all converge there. That's the BTC-equivalent of ETH's $2,440 ceiling. The proximate test is the <strong>$79,500–$80,500 descending trendline zone</strong> — the local high cluster from this rally. A clean 4h close above $80,500 opens the path to $84K; rejection means a deeper pullback toward $73K is likely.</p>
+
+<p>Below current, <strong>$71,000–$73,000 is the primary downside support</strong> — Weekly Fib 0.5 + Daily horizontal + 4h horizontal + prior HVN. A pullback into this zone within an intact uptrend would be the higher-conviction long entry. <strong>$66,000–$67,000 is the structural floor</strong> — recent rally base, daily/4h horizontals, and major VPVR HVN. Loss of $66K invalidates the entire counter-trend rally thesis.</p>
+
+<h3>3D. Divergences</h3>
+<p>Weekly MACD histogram improvement from deeply negative (−7,731 area) toward zero while price made a higher low ($61K → $66K → $77K progression) — clean bullish divergence in progress. <strong>This divergence has NOT yet failed</strong> — unlike ETH, which stalled at trendline rejection. BTC is approaching the same structural test but hasn't been decisively rejected yet — this is the critical distinction between the two reads. 4h MACD bearish histogram cross at the local high is a near-term deceleration warning, not a divergence.</p>
+
+<h3>3E. Notes</h3>
+<p><strong>BTC vs ETH cross-asset divergence is significant.</strong> BTC −1.0% vs ETH −2.5% on the same news flow. BTC is showing relative strength. In counter-trend rallies, BTC typically leads. A BTC breakout above $80.5K would likely pull ETH back toward $2,440 trendline test. Conversely, a BTC rejection at the trendline + daily close below $75K would likely accelerate the ETH breakdown thesis through the Daily Fib 0.786.</p>
+<p>Macro calendar exposure is the same as ETH — three HIGH-impact events in the trade horizon:</p>
+<ul>
+  <li><strong>Tue Apr 28 (PM):</strong> Conference Board Consumer Confidence + FOMC begins. <strong>BTC monthly options expiry</strong> — direct vol catalyst for BTC specifically.</li>
+  <li><strong>Wed Apr 29:</strong> FOMC decision 2 PM ET, Powell presser 2:30 PM ET. ~94% market priced for hold; language is the variable. Mega-cap earnings (MSFT/GOOGL/META/AMZN) after close.</li>
+  <li><strong>Thu Apr 30 (8:30 AM ET):</strong> Q1 GDP advance + Core PCE + ECI simultaneous.</li>
+</ul>
+<p>A dovish-leaning Powell with soft GDP would likely propel BTC through the $80.5K trendline toward $84K. Hawkish Powell + sticky core PCE would likely push BTC back into the $72-73K HEAVY support zone for re-entry. <strong>The setup is binary on Wednesday afternoon.</strong></p>
+<p><strong>Risk to bull thesis:</strong> Weekly is still bearish absolute (RSI 34, MACD deeply negative). A failed test at the descending trendline could resume the broader downtrend. The counter-trend rally remains "innocent until proven guilty" — but $75K loss is the proof of failure.</p>
+
+<h2>Section 4 — Options Chain Detail</h2>
+<p style="color: var(--text-muted); font-style: italic;">No options chain data provided. Section omitted per skill protocol.</p>
+
+<h2>Section 5 — Appendix</h2>
+
+<h3>Tool Agreement Detail (4h primary)</h3>
+<table>
+  <tr><th>#</th><th>Tool</th><th>Reading</th><th>Vote</th></tr>
+  <tr><td>1</td><td>VWAP slope (4h)</td><td>Rising sharply through April, recently flattening at top</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>2</td><td>Price vs VWAP line (4h)</td><td>$77,902 vs $78,013 — marginally below</td><td style="color:var(--red)">BEAR</td></tr>
+  <tr><td>3</td><td>50 vs 200 SMA (4h)</td><td>$77,204 above $72,098 — bullish stack widening</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>4</td><td>RSI vs 50 (4h)</td><td>54.01 — holding above midline</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>5</td><td>MACD zero line (4h)</td><td>Line 215.70 above zero (bearish cross within bull regime)</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td>6</td><td>HTF alignment (W+D)</td><td>Weekly improving from oversold + Daily strongly bullish</td><td style="color:var(--green)">BULL</td></tr>
+  <tr><td colspan="3"><strong>Score</strong></td><td><strong>5 BULL / 1 BEAR (83% bull)</strong></td></tr>
+</table>
+
+<h3>Indicator Snapshot</h3>
+<table>
+  <tr><th>TF</th><th>RVWAP</th><th>Lower Band</th><th>Upper Band</th><th>50 SMA</th><th>200 SMA</th><th>RSI</th><th>MACD (hist / line / sig)</th></tr>
+  <tr><td>30m</td><td class="num">$78,314</td><td class="num">$77,008</td><td class="num">$79,619</td><td class="num">$78,214</td><td class="num">$77,880</td><td class="num">40.39</td><td class="num">+7.47 / −155.63 / −163.10</td></tr>
+  <tr><td>4h</td><td class="num">$78,013</td><td class="num">$76,939</td><td class="num">$79,087</td><td class="num">$77,204</td><td class="num">$72,098</td><td class="num">54.01</td><td class="num">−44.69 / 215.70 / 260.39</td></tr>
+  <tr><td>1D</td><td class="num">$72,779</td><td class="num">$63,245</td><td class="num">$82,313</td><td class="num">$71,817</td><td class="num">$84,757</td><td class="num">62.66</td><td class="num">+182.62 / 2,059.69 / 1,877.06</td></tr>
+  <tr><td>1W</td><td class="num">$75,517</td><td class="num">$52,671</td><td class="num">$98,363</td><td class="num">$95,709</td><td class="num">$60,509</td><td class="num">34.47</td><td class="num">+1,625.30 / −6,105.99 / −7,731.29</td></tr>
+</table>
+
+<h3>Weekly Fib Anchors</h3>
+<table>
+  <tr><th>Level</th><th>Price</th><th>Notes</th></tr>
+  <tr><td>1.0 (high)</td><td class="num">$126,420.30</td><td>Cycle peak anchor</td></tr>
+  <tr><td>0.786</td><td class="num">$102,711.45</td><td>Distant resistance — bull-cycle reclamation level</td></tr>
+  <tr><td>0.618</td><td class="num">$84,098.89</td><td>Stacks with Daily 200 SMA — primary upside target</td></tr>
+  <tr><td>0.5</td><td class="num">$71,025.78</td><td>Recently broken to upside — now primary support</td></tr>
+  <tr><td>0.382</td><td class="num">$57,952.68</td><td>Below cycle low — structural floor reference</td></tr>
+</table>
+
+<div class="footer">
+  Generated 2026-04-27 09:20 CT &nbsp; · &nbsp; SMB LLC Trading Research &nbsp; · &nbsp; ta-chart-analysis skill &nbsp; · &nbsp; Source: TradingView (Coinbase BTCUSD) &nbsp; · &nbsp; Macro calendar via web_search (Federal Reserve, BEA, Kraken Economic Brief)
+</div>
+
+</body>
+</html>

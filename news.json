@@ -1,56 +1,112 @@
 {
-  "lastUpdated": "2026-04-28T07:59:48.891157+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 07:59 AM UTC",
+  "lastUpdated": "2026-04-28T10:12:39.409640+00:00",
+  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 10:12 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are showing mixed signals with geopolitical tensions driving commodity volatility as U.S.-Iran disputes over the Strait of Hormuz push oil higher and gold lower on inflation fears. Central bank activity intensifies with BOJ holding rates in a split vote while markets await Fed decisions, as breakeven inflation rates approach concerning levels.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil-driven inflation fears, rising 10-year breakevens approaching problematic levels, and dollar strength on geopolitical tensions are creating headwinds for the risk-on thesis.",
+    "macroSummary": "Oil prices surge to $110 on U.S.-Iran tensions and potential Strait of Hormuz closure concerns, driving inflation fears and pushing 10-year breakeven rates toward problematic levels. Dollar and Treasury yields rise amid geopolitical stress while crypto markets weaken, with Bitcoin falling despite some bullish analyst forecasts.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "Oil-driven inflation spike and rising geopolitical tensions are creating classic risk-off dynamics that contradict the current Risk-On regime classification.",
     "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar rises on Trump skepticism of Iran proposal, approaching risk-off threshold"
-      },
       {
         "indicator": "MOVE",
         "level": "> 100",
-        "signal": "10-year breakeven inflation rates seen approaching problematic levels ahead of Fed decision"
+        "signal": "Rising Treasury yields and oil-driven inflation fears suggest rates volatility may be re-engaging"
+      },
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar rising on geopolitical tensions and Iran skepticism, approaching potential risk-off threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "U.S. 10-year breakeven inflation rates approaching problematic levels with oil rallying on Middle East tensions",
+        "signal": "Oil hits $110 on Iran impasse, driving breakeven inflation rates toward problematic levels",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening on geopolitical uncertainty and Trump's Iran skepticism",
+        "signal": "Dollar rises as Trump remains skeptical of Iran proposal to reopen Strait of Hormuz",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold falling 1.2% on oil-driven inflation fears ahead of Fed rate decision",
+        "signal": "Bitcoin and crypto prices fall despite ongoing institutional adoption news",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin Fear & Greed turns neutral for first time since January indicating weakening risk appetite",
+        "signal": "Treasury yields rising alongside dollar in classic flight-to-quality pattern",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "BOJ holds rates in split vote while yen firms, kicking off big week for central banks",
-        "tag": "NEUTRAL"
+        "signal": "Stocks wavering ahead of Fed decision amid oil-driven inflation concerns",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as it approaches 100 threshold on geopolitical dollar bid",
-      "Watch MOVE index and breakeven spreads for rates volatility spike above 100",
-      "Consider reducing BMNR ladder exposure if oil-driven inflation fears persist and Fed turns more hawkish"
+      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trust valuations",
+      "Consider reducing Risk-On positioning as oil shock creates stagflation risk scenario",
+      "Watch for VIX breakout above 22 as geopolitical premium builds in options markets"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Treasury Yields, Dollar Rise \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T09:52:00+00:00",
+      "timeDisplay": "9:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428003513:0/"
+    },
+    {
+      "title": "Yen steady, dollar edges higher as central banks in focus after BOJ holds",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T09:13:31+00:00",
+      "timeDisplay": "9:13 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B0JC:0-yen-steady-dollar-edges-higher-as-central-banks-in-focus-after-boj-holds/"
+    },
+    {
+      "title": "Oil Production Slumps Despite Higher Prices \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T09:06:00+00:00",
+      "timeDisplay": "9:06 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428002959:0/"
+    },
+    {
+      "title": "Bitcoin, XRP Prices Fall. What's Holding Cryptos Back. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T08:59:00+00:00",
+      "timeDisplay": "8:59 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428002820:0/"
+    },
+    {
+      "title": "Oil prices hit $110 while stocks waver on Iran impasse",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T08:51:07+00:00",
+      "timeDisplay": "8:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B0AX:0-oil-prices-hit-110-while-stocks-waver-on-iran-impasse/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Edge Lower Before Fed Call, Earnings Rush: Why POET, MRVL, NVDA, ORCL, SLS Are In Focus",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T08:31:12+00:00",
+      "timeDisplay": "8:31 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:8ffb2b6a1094b:0/"
+    },
+    {
+      "title": "Equity Market Resilience, Month-End Flows Limit Dollar's Rise \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T08:02:00+00:00",
+      "timeDisplay": "8:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428002149:0/"
+    },
     {
       "title": "Gold Slips Below $4,700 On Oil-Driven Inflation Fears \u2014 Market Talk",
       "source": "dow-jones",
@@ -244,12 +300,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B015:0-stocks-steady-yen-firms-after-boj-holds-rates/"
     },
     {
-      "title": "Bitcoin support resistance flip in play as longs to shorts delta highlights bullish bias",
+      "title": "Bitcoin support resistance flip in play as long-to-short delta highlights bullish bias",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-04-28T03:48:14+00:00",
       "timeDisplay": "3:48 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:57d325347094b:0-bitcoin-support-resistance-flip-in-play-as-longs-to-shorts-delta-highlights-bullish-bias/"
+      "link": "https://www.tradingview.com/news/cointelegraph:57d325347094b:0-bitcoin-support-resistance-flip-in-play-as-long-to-short-delta-highlights-bullish-bias/"
     },
     {
       "title": "Japan\u2019s Bitbank rolls out crypto-linked credit card that pays bills in bitcoin",
@@ -340,14 +396,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:4e489ae09094b:0-from-seizures-to-strategy-begich-revives-bitcoin-reserve-bill-as-arma/"
     },
     {
-      "title": "Bitcoin shorts create $1.4B liquidation risk: Is price squeeze to $80K next?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T01:26:36+00:00",
-      "timeDisplay": "1:26 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6e1d265b9094b:0-bitcoin-shorts-create-1-4b-liquidation-risk-is-price-squeeze-to-80k-next/"
-    },
-    {
       "title": "Dollar Holds Decline on Diplomatic Push",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -378,14 +426,6 @@
       "timestamp": "2026-04-28T00:30:36+00:00",
       "timeDisplay": "12:30 AM",
       "link": "https://www.tradingview.com/news/newsbtc:fea8963c4094b:0-ethereum-buyers-stepping-in-right-now-are-the-most-aggressive-since-early-2023-is-the-bottom-in/"
-    },
-    {
-      "title": "Key facts: BTC Rallies, $2.5B Inflows; Begich Reserve Bill; $79K Test",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T00:06:50+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/tradingview:b2135e8462746:0-key-facts-btc-rallies-2-5b-inflows-begich-reserve-bill-79k-test/"
     },
     {
       "title": "Key facts: BitMine Buys 101,901 ETH; DeFi Seeks Unfreeze 30,766 ETH",
@@ -545,7 +585,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-27T18:11:00+00:00",
       "timeDisplay": "6:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260427007802:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260427007801:0/"
     },
     {
       "title": "Crypto Market Creeps Back Towards 'Fear' \u2014 Market Talk",
@@ -553,7 +593,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-27T18:03:00+00:00",
       "timeDisplay": "6:03 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260427007758:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260427007757:0/"
     },
     {
       "title": "WHITE HOUSE'S LEAVITT Q&A: WAY NOW CLEARED FOR FED NOMINEE WARSH'S CONFIRMATION; PRES TRUMP 'SATISFIED' FED INSPECTOR GENERAL NOW PROBING FED HQ REHAB",
@@ -610,46 +650,6 @@
       "timestamp": "2026-04-27T16:06:31+00:00",
       "timeDisplay": "4:06 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41A0UU:0-dollar-slips-as-us-iran-talks-stall-traders-eye-powell-s-final-fed-meeting/"
-    },
-    {
-      "title": "Oil rises on stalled peace talks while Wall Street stocks slip",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-27T15:40:43+00:00",
-      "timeDisplay": "3:40 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41A0TC:0-oil-rises-on-stalled-peace-talks-while-wall-street-stocks-slip/"
-    },
-    {
-      "title": "Calm before the storm",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-27T15:35:09+00:00",
-      "timeDisplay": "3:35 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41A0YU:0-calm-before-the-storm/"
-    },
-    {
-      "title": "US bonds slide ahead of heavy supply; FOMC in focus this week",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-27T15:33:09+00:00",
-      "timeDisplay": "3:33 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41A0IC:0-us-bonds-slide-ahead-of-heavy-supply-fomc-in-focus-this-week/"
-    },
-    {
-      "title": "Crude Oil Prices Rally on Stalled US-Iran Peace Talks",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T15:31:59+00:00",
-      "timeDisplay": "3:31 PM",
-      "link": "https://www.tradingview.com/news/barchart:6cd993e09094b:0-crude-oil-prices-rally-on-stalled-us-iran-peace-talks/"
-    },
-    {
-      "title": "Crude Extends Gains as Hormuz Tensions Keep Flows Constrained \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T15:23:00+00:00",
-      "timeDisplay": "3:23 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260427006433:0/"
     }
   ]
 }

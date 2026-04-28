@@ -1,48 +1,48 @@
 {
-  "lastUpdated": "2026-04-28T21:54:29.476273+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 09:54 PM UTC",
+  "lastUpdated": "2026-04-28T22:54:25.947142+00:00",
+  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 10:54 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed risk-off behavior with tech stocks weighing on equities, oil prices rising on Iran-UAE tensions, and the dollar gaining strength amid dimming geopolitical hopes. Bitcoin dropped below $76K with ETF inflow streaks ending and short interest building, while Treasury yields rose alongside oil prices.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines point to risk-off mood with dollar gains, tech weakness weighing on stocks, and rising oil/Treasury yields on geopolitical tensions - contradicting the high-confidence Risk-On regime call.",
+    "macroSummary": "Markets are showing clear risk-off behavior with oil prices rising on Iran/UAE tensions, tech stocks weighing down equities, and the dollar gaining strength. Bitcoin has dropped below $76K with negative Coinbase premiums and rising short interest, while Treasury yields are climbing alongside oil prices.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "Multiple headlines directly contradict the Risk-On regime call, with explicit mentions of 'risk-off mood,' tech weakness dragging stocks lower, dollar strength, and crypto selling pressure.",
     "thresholdWatches": [
       {
-        "indicator": "Oil",
-        "level": "Approaching $100",
-        "signal": "Headlines mention '$100 oil sparks fresh Asia crisis fears' suggesting proximity to psychologically important level"
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar gains on risk-off mood mentioned in multiple Reuters headlines"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar gains explicitly attributed to 'risk-off mood' in multiple Reuters headlines",
+        "signal": "Reuters explicitly reports 'risk-off mood' driving dollar gains",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks closed lower with tech weakness, contradicting bullish equity bias",
+        "signal": "US stocks closed lower with tech sector weakness weighing on markets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETF inflow streak ends with price dropping below $76K and short bets stacking up",
+        "signal": "Bitcoin drops below $76K with negative Coinbase premium and rising short interest",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices rising on Iran-UAE tensions with Treasury yields following higher",
+        "signal": "Oil prices rising on Iran/UAE tensions driving Treasury yields higher",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Emerging markets outpacing S&P 500 by wide margin, up 16% in 2026",
-        "tag": "SUPPORTS"
+        "signal": "Crypto equities hitting 52-week lows amid broader crypto correction",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trust pricing",
-      "Consider reducing equity exposure given broad risk-off signals contradicting regime call",
-      "Watch for VIX and HYG threshold breaks as risk-off mood appears to be gaining traction"
+      "Monitor DXY closely for break above 100 threshold signaling regime flip",
+      "Consider tightening BMNR put ladder strikes given crypto weakness",
+      "Reassess Risk-On positioning given multiple contradictory signals"
     ]
   },
   "articles": [
@@ -220,7 +220,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-28T16:23:00+00:00",
       "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428010352:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260428010351:0/"
     },
     {
       "title": "Dollar firms, yen steady as markets weigh Iran war, split BOJ decision",
@@ -357,6 +357,14 @@
       "timestamp": "2026-04-28T14:39:00+00:00",
       "timeDisplay": "2:39 PM",
       "link": "https://www.tradingview.com/news/macenews:6e247d51a094b:0-us-dallas-fed-texas-service-sector-business-activity-index-9-9-in-april-vs-13-3-in-march/"
+    },
+    {
+      "title": "Dollar Gains on Weak Stocks and Soaring Crude Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T14:36:10+00:00",
+      "timeDisplay": "2:36 PM",
+      "link": "https://www.tradingview.com/news/barchart:625b883de094b:0-dollar-gains-on-weak-stocks-and-soaring-crude-prices/"
     },
     {
       "title": "US stocks weaker as tech weighs",
@@ -581,14 +589,6 @@
       "timestamp": "2026-04-28T12:54:50+00:00",
       "timeDisplay": "12:54 PM",
       "link": "https://www.tradingview.com/news/te_news:545612:0-oil-rises-for-7th-session/"
-    },
-    {
-      "title": "Fed Decision Could Limit Dollar's Potential to Fall \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T12:44:00+00:00",
-      "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428007506:0/"
     },
     {
       "title": "Oil prices hit $110 and stocks fall on Iran impasse and AI",

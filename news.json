@@ -1,45 +1,75 @@
 {
-  "lastUpdated": "2026-04-28T20:47:13.632507+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 08:47 PM UTC",
+  "lastUpdated": "2026-04-28T21:54:29.476273+00:00",
+  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 09:54 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing a risk-off tone with US stocks closing lower, tech weighing on performance, and the dollar gaining strength. Oil prices are rising on geopolitical tensions from US-Iran stalemate and UAE's OPEC departure, while Bitcoin dropped below $76K with crypto markets shedding $40 billion ahead of Powell's final FOMC decision.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Multiple headlines explicitly describe 'risk-off mood' and widespread de-risking behavior, directly contradicting the current Risk-On regime classification.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets showed risk-off behavior with tech stocks weighing on equities, oil prices rising on Iran-UAE tensions, and the dollar gaining strength amid dimming geopolitical hopes. Bitcoin dropped below $76K with ETF inflow streaks ending and short interest building, while Treasury yields rose alongside oil prices.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Multiple headlines point to risk-off mood with dollar gains, tech weakness weighing on stocks, and rising oil/Treasury yields on geopolitical tensions - contradicting the high-confidence Risk-On regime call.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil",
+        "level": "Approaching $100",
+        "signal": "Headlines mention '$100 oil sparks fresh Asia crisis fears' suggesting proximity to psychologically important level"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Reuters explicitly reports 'risk-off mood' driving dollar gains, directly contradicting Risk-On regime",
+        "signal": "Dollar gains explicitly attributed to 'risk-off mood' in multiple Reuters headlines",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crypto markets shed $40 billion in 'de-risking' ahead of Fed decision, indicating widespread risk aversion",
+        "signal": "US stocks closed lower with tech weakness, contradicting bullish equity bias",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks close lower with tech sector weighing on performance, showing equity weakness",
+        "signal": "Bitcoin ETF inflow streak ends with price dropping below $76K and short bets stacking up",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices rising on geopolitical tensions (US-Iran stalemate, UAE OPEC departure) creating inflationary pressures",
+        "signal": "Oil prices rising on Iran-UAE tensions with Treasury yields following higher",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin drops below $76K with negative Coinbase premium and short interest building",
-        "tag": "CONTRADICTS"
+        "signal": "Emerging markets outpacing S&P 500 by wide margin, up 16% in 2026",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Reassess BMNR cash-secured put ladder strikes given crypto weakness and risk-off conditions",
-      "Monitor for regime flip confirmation as multiple signals contradict current Risk-On classification",
-      "Consider reducing risk exposure given widespread de-risking behavior across asset classes"
+      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trust pricing",
+      "Consider reducing equity exposure given broad risk-off signals contradicting regime call",
+      "Watch for VIX and HYG threshold breaks as risk-off mood appears to be gaining traction"
     ]
   },
   "articles": [
+    {
+      "title": "Ethereum Price To Rally 100% In 2026: Here\u2019s Where It Will Start And End",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T21:30:27+00:00",
+      "timeDisplay": "9:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:9e8764676094b:0-ethereum-price-to-rally-100-in-2026-here-s-where-it-will-start-and-end/"
+    },
+    {
+      "title": "The government is meddling with earnings reporting - but Tesla, Amazon and other market superstars prove there's no problem",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T21:06:00+00:00",
+      "timeDisplay": "9:06 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260427005967:0/"
+    },
+    {
+      "title": "Oil prices rise with eyes on Iran, UAE; AI concerns weigh on stocks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T20:51:59+00:00",
+      "timeDisplay": "8:51 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B1CV:0-oil-prices-rise-with-eyes-on-iran-uae-ai-concerns-weigh-on-stocks/"
+    },
     {
       "title": "US stocks close lower as tech weighs",
       "source": "reuters",
@@ -615,30 +645,6 @@
       "timestamp": "2026-04-28T10:45:50+00:00",
       "timeDisplay": "10:45 AM",
       "link": "https://www.tradingview.com/news/te_news:545573:0-us-10-year-treasury-yield-near-1-month-high/"
-    },
-    {
-      "title": "Oil Production Slumps Despite Higher Prices \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T09:06:00+00:00",
-      "timeDisplay": "9:06 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428002959:0/"
-    },
-    {
-      "title": "Oil prices hit $110 while stocks waver on Iran impasse",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T08:51:07+00:00",
-      "timeDisplay": "8:51 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B0AX:0-oil-prices-hit-110-while-stocks-waver-on-iran-impasse/"
-    },
-    {
-      "title": "Nasdaq, S&P 500 Futures Edge Lower Before Fed Call, Earnings Rush: Why POET, MRVL, NVDA, ORCL, SLS Are In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T08:31:12+00:00",
-      "timeDisplay": "8:31 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:8ffb2b6a1094b:0/"
     }
   ]
 }

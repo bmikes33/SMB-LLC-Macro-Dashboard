@@ -1,51 +1,101 @@
 {
-  "lastUpdated": "2026-04-28T19:05:27.921663+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 07:05 PM UTC",
+  "lastUpdated": "2026-04-28T20:47:13.632507+00:00",
+  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 08:47 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing risk-off positioning ahead of the Fed decision, with Bitcoin falling below $76K amid $40B crypto outflows, oil spiking on UAE OPEC exit and Iran tensions, and tech stocks weighing on equities. Dallas Fed services data showed sharp deterioration while Treasury yields rose alongside oil prices.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple risk-off signals emerging with crypto de-risking, oil volatility from geopolitical tensions, tech weakness dragging equities, and deteriorating Dallas Fed services data.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil",
-        "level": "approaching $100",
-        "signal": "Bitcoin article mentions $100 oil sparking Asia crisis fears"
-      }
-    ],
+    "macroSummary": "Markets are experiencing a risk-off tone with US stocks closing lower, tech weighing on performance, and the dollar gaining strength. Oil prices are rising on geopolitical tensions from US-Iran stalemate and UAE's OPEC departure, while Bitcoin dropped below $76K with crypto markets shedding $40 billion ahead of Powell's final FOMC decision.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "Multiple headlines explicitly describe 'risk-off mood' and widespread de-risking behavior, directly contradicting the current Risk-On regime classification.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Crypto markets shed $40 billion in de-risking ahead of Powell's final FOMC decision",
+        "signal": "Reuters explicitly reports 'risk-off mood' driving dollar gains, directly contradicting Risk-On regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin drops below $76K with short bets stacking up and mixed onchain signals",
+        "signal": "Crypto markets shed $40 billion in 'de-risking' ahead of Fed decision, indicating widespread risk aversion",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dallas Fed Texas service sector activity index crashed to -9.9 from 13.3",
+        "signal": "US stocks close lower with tech sector weighing on performance, showing equity weakness",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices rising on UAE OPEC exit and Iran tensions, with $100 oil fears emerging",
+        "signal": "Oil prices rising on geopolitical tensions (US-Iran stalemate, UAE OPEC departure) creating inflationary pressures",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks weaker as tech weighs, with Treasury yields rising alongside oil",
+        "signal": "Bitcoin drops below $76K with negative Coinbase premium and short interest building",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trust pricing",
-      "Prepare to reassess Risk-On regime call if current risk-off positioning accelerates",
-      "Watch for VIX breach above 22 and oil sustained above $100 as regime invalidation triggers"
+      "Reassess BMNR cash-secured put ladder strikes given crypto weakness and risk-off conditions",
+      "Monitor for regime flip confirmation as multiple signals contradict current Risk-On classification",
+      "Consider reducing risk exposure given widespread de-risking behavior across asset classes"
     ]
   },
   "articles": [
+    {
+      "title": "US stocks close lower as tech weighs",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T20:23:00+00:00",
+      "timeDisplay": "8:23 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B1FI:0-us-stocks-close-lower-as-tech-weighs/"
+    },
+    {
+      "title": "Dollar gains on risk-off mood; BOJ split vote gives yen brief lift",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T20:17:17+00:00",
+      "timeDisplay": "8:17 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B183:0-dollar-gains-on-risk-off-mood-boj-split-vote-gives-yen-brief-lift/"
+    },
+    {
+      "title": "Bitcoin Coinbase Premium turns negative as BTC price drops, weekly losses top $829M",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T19:56:21+00:00",
+      "timeDisplay": "7:56 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:566ee5a36094b:0-bitcoin-coinbase-premium-turns-negative-as-btc-price-drops-weekly-losses-top-829m/"
+    },
+    {
+      "title": "Bitcoin may need more time before another run higher",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T19:37:15+00:00",
+      "timeDisplay": "7:37 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:5e35e6466094b:0-bitcoin-may-need-more-time-before-another-run-higher/"
+    },
+    {
+      "title": "Treasury yields rise with oil on dimming hopes for Iran resolution",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T19:18:49+00:00",
+      "timeDisplay": "7:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B13T:0-treasury-yields-rise-with-oil-on-dimming-hopes-for-iran-resolution/"
+    },
+    {
+      "title": "Crude Futures Extend Gains on U.S.-Iran Stalemate \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T19:15:00+00:00",
+      "timeDisplay": "7:15 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428011118:0/"
+    },
+    {
+      "title": "Expert Says $1 Million Bitcoin and \u201cOmega Candle\u201d Is Just Around the Corner",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T18:52:51+00:00",
+      "timeDisplay": "6:52 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:74cff57cb094b:0-expert-says-1-million-bitcoin-and-omega-candle-is-just-around-the-corner/"
+    },
     {
       "title": "Strategy-fueled bitcoin rally could last \u2018for some time to come,\u2019 Bitwise CIO says",
       "source": "the_block",
@@ -140,7 +190,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-28T16:23:00+00:00",
       "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428010351:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260428010352:0/"
     },
     {
       "title": "Dollar firms, yen steady as markets weigh Iran war, split BOJ decision",
@@ -189,6 +239,14 @@
       "timestamp": "2026-04-28T16:00:00+00:00",
       "timeDisplay": "4:00 PM",
       "link": "https://www.tradingview.com/news/the_block:b0cb5eb29094b:0-amboss-launches-railsx-for-self-custodial-bitcoin-and-stablecoin-trading-on-lightning/"
+    },
+    {
+      "title": "Canadian Billionaire Ridicules Saylor's Quest for 1 Million BTC",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T15:56:26+00:00",
+      "timeDisplay": "3:56 PM",
+      "link": "https://www.tradingview.com/news/u_today:3ff94c503094b:0-canadian-billionaire-ridicules-saylor-s-quest-for-1-million-btc/"
     },
     {
       "title": "Bitcoin price drops below $76K as onchain data sends mixed signals",
@@ -271,14 +329,6 @@
       "link": "https://www.tradingview.com/news/macenews:6e247d51a094b:0-us-dallas-fed-texas-service-sector-business-activity-index-9-9-in-april-vs-13-3-in-march/"
     },
     {
-      "title": "Celestica Share Drop Likely Profit-Taking Despite Big Outlook Upgrade \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:36:00+00:00",
-      "timeDisplay": "2:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428009250:0/"
-    },
-    {
       "title": "US stocks weaker as tech weighs",
       "source": "reuters",
       "color": "#ff6d00",
@@ -293,14 +343,6 @@
       "timestamp": "2026-04-28T14:23:00+00:00",
       "timeDisplay": "2:23 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260428009090:0/"
-    },
-    {
-      "title": "Treasury yields rise with oil on dimming hopes for Iran resolution",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T14:21:11+00:00",
-      "timeDisplay": "2:21 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B0SL:0-treasury-yields-rise-with-oil-on-dimming-hopes-for-iran-resolution/"
     },
     {
       "title": "U.A.E. Exit From OPEC Seen as Break From Group Think in Favor of National Control \u2014 Market Talk",
@@ -444,7 +486,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-28T13:37:00+00:00",
       "timeDisplay": "1:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428008592:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260428008591:0/"
     },
     {
       "title": "Comex Gold Delivery Intentions Breakdown - Apr 28",
@@ -527,14 +569,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B0IY:0-oil-prices-hit-110-and-stocks-fall-on-iran-impasse-and-ai/"
     },
     {
-      "title": "US ADP PRIVATE PAYROLLS UP AVG. 40,250 PER WEEK IN PREVIOUS 4-WEEK PERIOD ENDED APRIL 4 VS. 54,750 PREVIOUSLY REPORTED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T12:16:00+00:00",
-      "timeDisplay": "12:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:949365239094b:0-us-adp-private-payrolls-up-avg-40-250-per-week-in-previous-4-week-period-ended-april-4-vs-54-750-previously-reported/"
-    },
-    {
       "title": "US SEC seeks comment on NYSE Arca proposal for 85% eligible-asset rule in crypto ETF listings",
       "source": "the_block",
       "color": "#00e5ff",
@@ -605,46 +639,6 @@
       "timestamp": "2026-04-28T08:31:12+00:00",
       "timeDisplay": "8:31 AM",
       "link": "https://www.tradingview.com/news/stocktwits:8ffb2b6a1094b:0/"
-    },
-    {
-      "title": "Gold Slips Below $4,700 On Oil-Driven Inflation Fears \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T07:47:00+00:00",
-      "timeDisplay": "7:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428002083:0/"
-    },
-    {
-      "title": "XAU/USD: Gold Sheds 1.2% as Support Gives In Ahead of Fed\u2019s Rate Decision",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T07:05:40+00:00",
-      "timeDisplay": "7:05 AM",
-      "link": "https://www.tradingview.com/news/tradingview:cc3c109d9094b:0-xau-usd-gold-sheds-1-2-as-support-gives-in-ahead-of-fed-s-rate-decision/"
-    },
-    {
-      "title": "BP Q1 RC Profit Rises On Sales Growth; Warns On FY26 Upstream Production",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T06:41:19+00:00",
-      "timeDisplay": "6:41 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:ada7f6858d967:0-bp-q1-rc-profit-rises-on-sales-growth-warns-on-fy26-upstream-production/"
-    },
-    {
-      "title": "WTI Rallies on US\u2013Iran Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T06:14:36+00:00",
-      "timeDisplay": "6:14 AM",
-      "link": "https://www.tradingview.com/news/te_news:545431:0-wti-rallies-on-us-iran-uncertainty/"
-    },
-    {
-      "title": "U.S. 10-Year Breakeven Inflation Rate Seen Approaching Problematic Levels \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T06:03:00+00:00",
-      "timeDisplay": "6:03 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428001163:0/"
     }
   ]
 }

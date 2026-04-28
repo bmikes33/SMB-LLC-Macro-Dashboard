@@ -1,51 +1,200 @@
 {
-  "lastUpdated": "2026-04-28T05:18:28.260378+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 05:18 AM UTC",
+  "lastUpdated": "2026-04-28T07:59:48.891157+00:00",
+  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 07:59 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "BOJ held rates in a split vote, causing yen firmness and steady Asian stocks ahead of Fed decision. Bitcoin faces rejection pressure with Fear & Greed turning neutral, while Ethereum drops below $2,350 with recovery hopes fading. US yields rise ahead of Fed meeting while diplomatic developments with Iran keep commodities steady.",
+    "macroSummary": "Markets are showing mixed signals with geopolitical tensions driving commodity volatility as U.S.-Iran disputes over the Strait of Hormuz push oil higher and gold lower on inflation fears. Central bank activity intensifies with BOJ holding rates in a split vote while markets await Fed decisions, as breakeven inflation rates approach concerning levels.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple crypto weakness signals, BOJ split vote causing yen strength, and rising US yields ahead of Fed decision create cross-currents against the risk-on regime.",
+    "regimePressureReason": "Oil-driven inflation fears, rising 10-year breakevens approaching problematic levels, and dollar strength on geopolitical tensions are creating headwinds for the risk-on thesis.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "< 155",
-        "signal": "Yen firmness from BOJ hawkish hold suggests potential carry trade unwind pressure"
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar rises on Trump skepticism of Iran proposal, approaching risk-off threshold"
+      },
+      {
+        "indicator": "MOVE",
+        "level": "> 100",
+        "signal": "10-year breakeven inflation rates seen approaching problematic levels ahead of Fed decision"
       }
     ],
     "keySignals": [
       {
-        "signal": "BOJ split vote and hawkish hold causes yen firmness, potentially pressuring carry trades",
+        "signal": "U.S. 10-year breakeven inflation rates approaching problematic levels with oil rallying on Middle East tensions",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strengthening on geopolitical uncertainty and Trump's Iran skepticism",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin Fear & Greed turns neutral for first time since January, indicating sentiment deterioration",
+        "signal": "Gold falling 1.2% on oil-driven inflation fears ahead of Fed rate decision",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Ethereum drops below $2,350 with recovery hopes fading despite whale accumulation",
+        "signal": "Bitcoin Fear & Greed turns neutral for first time since January indicating weakening risk appetite",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US 10Y yields rising ahead of Fed decision suggests rate uncertainty remains",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Asian stocks meander rather than rally despite supposed risk-on environment",
+        "signal": "BOJ holds rates in split vote while yen firms, kicking off big week for central banks",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY levels closely - yen strength from BOJ hawkish hold approaches carry unwind threshold",
-      "Consider tightening BMNR put ladder strikes given Ethereum weakness below $2,350",
-      "Watch for VIX movement if crypto weakness spills into broader risk assets"
+      "Monitor DXY closely as it approaches 100 threshold on geopolitical dollar bid",
+      "Watch MOVE index and breakeven spreads for rates volatility spike above 100",
+      "Consider reducing BMNR ladder exposure if oil-driven inflation fears persist and Fed turns more hawkish"
     ]
   },
   "articles": [
+    {
+      "title": "Gold Slips Below $4,700 On Oil-Driven Inflation Fears \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T07:47:00+00:00",
+      "timeDisplay": "7:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428002083:0/"
+    },
+    {
+      "title": "Jack Dorsey\u2019s Block reveals $2.2 billion in bitcoin holdings in Q1",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T07:45:39+00:00",
+      "timeDisplay": "7:45 AM",
+      "link": "https://www.tradingview.com/news/the_block:fd8a4c806094b:0-jack-dorsey-s-block-reveals-2-2-billion-in-bitcoin-holdings-in-q1/"
+    },
+    {
+      "title": "Woman Who Claimed Bitcoin Riches to Befriend Elderly Victims Sentenced to Prison",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T07:23:44+00:00",
+      "timeDisplay": "7:23 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:de0454a3f094b:0-woman-who-claimed-bitcoin-riches-to-befriend-elderly-victims-sentenced-to-prison/"
+    },
+    {
+      "title": "XAU/USD: Gold Sheds 1.2% as Support Gives In Ahead of Fed\u2019s Rate Decision",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T07:05:40+00:00",
+      "timeDisplay": "7:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:cc3c109d9094b:0-xau-usd-gold-sheds-1-2-as-support-gives-in-ahead-of-fed-s-rate-decision/"
+    },
+    {
+      "title": "Bitcoin Set For $88,000? Analysts Forecast May Breakout After Key Weekly Close",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T07:00:40+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:a605dbe37094b:0-bitcoin-set-for-88-000-analysts-forecast-may-breakout-after-key-weekly-close/"
+    },
+    {
+      "title": "Three Bitcoin charts say BTC price may rally toward $82K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:57:26+00:00",
+      "timeDisplay": "6:57 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:aea57cadb094b:0-three-bitcoin-charts-say-btc-price-may-rally-toward-82k/"
+    },
+    {
+      "title": "Bitcoin Falls as Ongoing U.S.-Iran Tensions Weigh \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:53:00+00:00",
+      "timeDisplay": "6:53 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428001698:0/"
+    },
+    {
+      "title": "BP Q1 RC Profit Rises On Sales Growth; Warns On FY26 Upstream Production",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:41:19+00:00",
+      "timeDisplay": "6:41 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:ada7f6858d967:0-bp-q1-rc-profit-rises-on-sales-growth-warns-on-fy26-upstream-production/"
+    },
+    {
+      "title": "Dollar Rises as Trump Skeptical of Iran Proposal to Reopen Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:39:00+00:00",
+      "timeDisplay": "6:39 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428001603:0/"
+    },
+    {
+      "title": "WTI Rallies on US\u2013Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:14:36+00:00",
+      "timeDisplay": "6:14 AM",
+      "link": "https://www.tradingview.com/news/te_news:545431:0-wti-rallies-on-us-iran-uncertainty/"
+    },
+    {
+      "title": "Acting AG Todd Blanche confirms \u2018code is not a crime\u2019 in DOJ pivot",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:08:37+00:00",
+      "timeDisplay": "6:08 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:86c7df835094b:0-acting-ag-todd-blanche-confirms-code-is-not-a-crime-in-doj-pivot/"
+    },
+    {
+      "title": "Dorsey's Block unveils Bitcoin proof-of-reserves in transparency move",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:05:15+00:00",
+      "timeDisplay": "6:05 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ef175e404094b:0-dorsey-s-block-unveils-bitcoin-proof-of-reserves-in-transparency-move/"
+    },
+    {
+      "title": "U.S. 10-Year Breakeven Inflation Rate Seen Approaching Problematic Levels \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:03:00+00:00",
+      "timeDisplay": "6:03 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428001163:0/"
+    },
+    {
+      "title": "Bitmine\u2019s Ethereum Holdings Reach Record 5 Million Tokens\u2013CEO\u2019s Bullish Outlook",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T06:00:22+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:a1ffdbb23094b:0-bitmine-s-ethereum-holdings-reach-record-5-million-tokens-ceo-s-bullish-outlook/"
+    },
+    {
+      "title": "Oil rises on Middle East tumult, yen firms after BOJ hold",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-28T05:58:29+00:00",
+      "timeDisplay": "5:58 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B043:0-oil-rises-on-middle-east-tumult-yen-firms-after-boj-hold/"
+    },
+    {
+      "title": "Oil May Rise Further With No Signs Yet of Strait of Hormuz Reopening \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T05:47:00+00:00",
+      "timeDisplay": "5:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428000788:0/"
+    },
+    {
+      "title": "White House Teases Big Bitcoin Announcement as Analyst Says New All-Time Highs Are Coming This Year",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T05:33:47+00:00",
+      "timeDisplay": "5:33 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:8ef76322e094b:0-white-house-teases-big-bitcoin-announcement-as-analyst-says-new-all-time-highs-are-coming-this-year/"
+    },
+    {
+      "title": "MBitmine Immersion Technologies Reports ETH Holdings of 5.078M Tokens, Total Assets at $13.3B",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T05:09:32+00:00",
+      "timeDisplay": "5:09 AM",
+      "link": "https://www.tradingview.com/news/chainwire:73ee19d6a094b:0-mbitmine-immersion-technologies-reports-eth-holdings-of-5-078m-tokens-total-assets-at-13-3b/"
+    },
     {
       "title": "Yen firms as BOJ holds in split vote, kicking off big week for central banks",
       "source": "reuters",
@@ -77,6 +226,14 @@
       "timestamp": "2026-04-28T04:35:38+00:00",
       "timeDisplay": "4:35 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41B0CO:0-boj-s-hawkish-hold/"
+    },
+    {
+      "title": "Clarity Act News Today: Senator Lummis Confirms Markup in May, Calls Bitcoin \u2018Freedom Money\u2019",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T04:00:00+00:00",
+      "timeDisplay": "4:00 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:d9f34e778094b:0-clarity-act-news-today-senator-lummis-confirms-markup-in-may-calls-bitcoin-freedom-money/"
     },
     {
       "title": "Stocks steady, yen firms after BOJ holds rates",
@@ -183,12 +340,12 @@
       "link": "https://www.tradingview.com/news/coinpedia:4e489ae09094b:0-from-seizures-to-strategy-begich-revives-bitcoin-reserve-bill-as-arma/"
     },
     {
-      "title": "Bitcoin shorts create $1.4B liquidation risk: Is a price squeeze to $80K next?",
+      "title": "Bitcoin shorts create $1.4B liquidation risk: Is price squeeze to $80K next?",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-04-28T01:26:36+00:00",
       "timeDisplay": "1:26 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6e1d265b9094b:0-bitcoin-shorts-create-1-4b-liquidation-risk-is-a-price-squeeze-to-80k-next/"
+      "link": "https://www.tradingview.com/news/cointelegraph:6e1d265b9094b:0-bitcoin-shorts-create-1-4b-liquidation-risk-is-price-squeeze-to-80k-next/"
     },
     {
       "title": "Dollar Holds Decline on Diplomatic Push",
@@ -287,30 +444,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:b466ead47094b:0-ethereum-tracks-bitcoin-rally-why-a-surge-to-3-400-could-be-the-beginning/"
     },
     {
-      "title": "MicroStrategy vs Tom Lee\u2019s BitMine: Who Hits Target First?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T23:00:00+00:00",
-      "timeDisplay": "11:00 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:f05bd8dbd094b:0-microstrategy-vs-tom-lee-s-bitmine-who-hits-target-first/"
-    },
-    {
-      "title": "Bitcoin\u2019s Rally Hits a Wall But There\u2019s Finally Movement in the Strategic Bitcoin Reserve",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T22:05:58+00:00",
-      "timeDisplay": "10:05 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:bd5a63dff094b:0/"
-    },
-    {
-      "title": "Bitcoin whale holdings hit five-month high: Is BTC headed to $80K next?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T21:44:05+00:00",
-      "timeDisplay": "9:44 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8a62134c1094b:0-bitcoin-whale-holdings-hit-five-month-high-is-btc-headed-to-80k-next/"
-    },
-    {
       "title": "Ethereum Price Faces a New Risk and Potential Dip \u2013 Here\u2019s Why",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -325,30 +458,6 @@
       "timestamp": "2026-04-27T21:34:11+00:00",
       "timeDisplay": "9:34 PM",
       "link": "https://www.tradingview.com/news/u_today:3bb170780094b:0-ethereum-nears-190-million-holders-what-about-xrp/"
-    },
-    {
-      "title": "Bitcoin Las Vegas Faces Cypherpunk Revolt Over Regulator-Heavy Lineup",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T21:28:12+00:00",
-      "timeDisplay": "9:28 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:70a0f42da094b:0-bitcoin-las-vegas-faces-cypherpunk-revolt-over-regulator-heavy-lineup/"
-    },
-    {
-      "title": "White House crypto advisor hints at  \u2018big announcement\u2019 on Trump\u2019s strategic bitcoin reserve in coming weeks",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T21:25:23+00:00",
-      "timeDisplay": "9:25 PM",
-      "link": "https://www.tradingview.com/news/the_block:d3d066089094b:0-white-house-crypto-advisor-hints-at-big-announcement-on-trump-s-strategic-bitcoin-reserve-in-coming-weeks/"
-    },
-    {
-      "title": "\u2018We don\u2019t take Satoshi\u2019s bitcoin\u2019: eCash fork sparks backlash over \u2018reassigned\u2019 coins",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T20:48:07+00:00",
-      "timeDisplay": "8:48 PM",
-      "link": "https://www.tradingview.com/news/the_block:9f0fb1f3c094b:0-we-don-t-take-satoshi-s-bitcoin-ecash-fork-sparks-backlash-over-reassigned-coins/"
     },
     {
       "title": "Dollar eases as US-Iran talks stall, traders eye Powell's final Fed meeting",
@@ -407,28 +516,12 @@
       "link": "https://www.tradingview.com/news/barchart:6c4d85dd3094b:0-dollar-slips-on-hopes-for-us-iran-peace-talks-to-resume/"
     },
     {
-      "title": "MARA Foundation to foster long-term adoption of Bitcoin, including resilience against quantum and security budget risks",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T19:22:48+00:00",
-      "timeDisplay": "7:22 PM",
-      "link": "https://www.tradingview.com/news/the_block:5765fa691094b:0-mara-foundation-to-foster-long-term-adoption-of-bitcoin-including-resilience-against-quantum-and-security-budget-risks/"
-    },
-    {
       "title": "Strait of Hormuz Closure Limits Energy Supplies and Supports Crude Oil Prices",
       "source": "barchart",
       "color": "#00e5ff",
       "timestamp": "2026-04-27T19:19:47+00:00",
       "timeDisplay": "7:19 PM",
       "link": "https://www.tradingview.com/news/barchart:e423e1ba5094b:0-strait-of-hormuz-closure-limits-energy-supplies-and-supports-crude-oil-prices/"
-    },
-    {
-      "title": "Strategy Buys $255 Million Bitcoin, April Total Reaches $4.1 Billion",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T19:15:19+00:00",
-      "timeDisplay": "7:15 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:d5d6dfc5c094b:0-strategy-buys-255-million-bitcoin-april-total-reaches-4-1-billion/"
     },
     {
       "title": "Crude Futures Extend Gains With No U.S.-Iran Deal in Sight \u2014 Market Talk",
@@ -557,94 +650,6 @@
       "timestamp": "2026-04-27T15:23:00+00:00",
       "timeDisplay": "3:23 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260427006433:0/"
-    },
-    {
-      "title": "US DALLAS FED MANUFACTURING EMPLOYMENT INDEX -0.9 IN APRIL VS. -1.0 IN MARCH, 7.5 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:eb2c76d96094b:0-us-dallas-fed-manufacturing-employment-index-0-9-in-april-vs-1-0-in-march-7-5-in-feb/"
-    },
-    {
-      "title": "US DALLAS FED MANUFACTURING NEW ORDERS INDEX 9.9 IN APRIL VS. 6.1  IN MARCH, 11.1 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:1d11578d1094b:0-us-dallas-fed-manufacturing-new-orders-index-9-9-in-april-vs-6-1-in-march-11-1-in-feb/"
-    },
-    {
-      "title": "US DALLAS FED MANUFACTURING PRICES PAID INDEX 37.0 IN APRIL VS. 32.7 IN MARCH, 31.7 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:1ff018918094b:0-us-dallas-fed-manufacturing-prices-paid-index-37-0-in-april-vs-32-7-in-march-31-7-in-feb/"
-    },
-    {
-      "title": "US DALLAS FED MANUFACTURING PRODUCTION INDEX 19.0 IN APRIL VS. 6.8 IN MARCH, 12.5 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:b7a51ad59094b:0-us-dallas-fed-manufacturing-production-index-19-0-in-april-vs-6-8-in-march-12-5-in-feb/"
-    },
-    {
-      "title": "Dollar Weakens and Gold Falls on New Iran Proposal to End War",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:31:09+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/barchart:07719d04f094b:0-dollar-weakens-and-gold-falls-on-new-iran-proposal-to-end-war/"
-    },
-    {
-      "title": "US DALLAS FED MANUFACTURING BUSINESS ACTIVITY INDEX -2.3 IN APRIL VS. -0.2 IN MARCH, 0.2 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:8840a5cf7094b:0-us-dallas-fed-manufacturing-business-activity-index-2-3-in-april-vs-0-2-in-march-0-2-in-feb/"
-    },
-    {
-      "title": "Cryptocurrency Weakness Seen as Profit-Taking to Start Week \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:18:00+00:00",
-      "timeDisplay": "2:18 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260427005846:0/"
-    },
-    {
-      "title": "Beer stocks eye a billion-pint World Cup lift - Jefferies",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-27T14:11:54+00:00",
-      "timeDisplay": "2:11 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41A1E3:0-beer-stocks-eye-a-billion-pint-world-cup-lift-jefferies/"
-    },
-    {
-      "title": "Arbitrum price outlook amid push for unfreezing of Kelp DAO exploit funds",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:05:09+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/invezz:ce4acbef6094b:0-arbitrum-price-outlook-amid-push-for-unfreezing-of-kelp-dao-exploit-funds/"
-    },
-    {
-      "title": "CFTC Commitments: Comex Gold Futures/Options - Apr 27",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260427005708:0/"
-    },
-    {
-      "title": "Ethereum\u2019s EEZ could pull other blockchains into its orbit",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-27T13:55:32+00:00",
-      "timeDisplay": "1:55 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:43d1cc040094b:0-ethereum-s-eez-could-pull-other-blockchains-into-its-orbit/"
     }
   ]
 }

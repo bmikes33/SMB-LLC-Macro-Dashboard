@@ -1,51 +1,96 @@
 {
-  "lastUpdated": "2026-04-29T21:13:45.110989+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 09:13 PM UTC",
+  "lastUpdated": "2026-04-29T22:29:34.442243+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 10:29 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "The Fed held rates unchanged but delivered a hawkish shift with the most divided board vote since 1992, sending Treasury yields to 4-week highs and strengthening the dollar past key levels. Oil surged 7% on Middle East tensions while risk assets including Bitcoin, equities, and gold declined as markets reassessed the monetary policy outlook.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The hawkish Fed pivot with rising yields, dollar strength, and broad risk asset selloffs directly contradicts the Risk-On regime classification.",
+    "macroSummary": "Fed held rates unchanged but delivered most divided board vote since 1992, with Powell signaling policy is near neutral and acknowledging some wanted to remove easing bias. Oil surged on Iran tensions while stocks ended muted, dollar strengthened, and yields hit one-month highs on hawkish Fed shift.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Fed's hawkish pivot with divided board, dollar strength, and rising yields directly contradict the risk-on thesis and approach several invalidation thresholds.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "< 155",
-        "signal": "Yen weakened past 160 according to Reuters, moving further from the carry unwind trigger threshold"
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar gains reported after Fed holds rates and signals hawkish shift"
+      },
+      {
+        "indicator": "MOVE",
+        "level": "> 100",
+        "signal": "Yields hit one-month high on hawkish Fed shift suggests rates volatility increasing"
       }
     ],
     "keySignals": [
       {
-        "signal": "Fed delivered most divided board vote since 1992 with hawkish shift sending yields to 4-week highs",
+        "signal": "Fed delivers most divided board vote since 1992 with hawkish shift sending yields to one-month high",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar gains after Fed decision while yen weakens past 160, moving away from carry unwind risks",
+        "signal": "Dollar gains after Fed decision while yen weakens past 160",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Powell signals policy near neutral with some Fed members wanting to remove easing bias",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Risk assets broadly decline with Bitcoin falling to $75K, S&P/Nasdaq flat after choppy session",
+        "signal": "Oil soars on Iran tensions while stocks end muted in choppy session",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold drops to 1-month low as hawkish Fed repricing drives real yields higher",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil surges 7% on Middle East tensions, adding stagflationary pressure alongside hawkish Fed",
+        "signal": "Gold drops to 1-month low amid dollar strength and hawkish Fed",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor credit (HYG) closely for break below 79.00 as risk assets weaken following hawkish Fed",
-      "Consider reducing BMNR ladder exposure given crypto weakness and broader risk-off rotation",
-      "Watch for VIX > 22 break as equity volatility may follow hawkish Fed repricing"
+      "Monitor DXY closely for break above 100 which would trigger regime invalidation",
+      "Prepare to adjust BMNR ladder strikes higher if dollar continues strengthening",
+      "Consider reducing risk exposure given hawkish Fed pivot and geopolitical oil spike"
     ]
   },
   "articles": [
+    {
+      "title": "Powell\u2019s Last Pause: A Divided Fed, a Frozen Bill, and Bitcoin\u2019s $250K Bull Case in Retreat",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T22:17:30+00:00",
+      "timeDisplay": "10:17 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:1444abb15094b:0/"
+    },
+    {
+      "title": "Oil soars, US stocks end muted on Iran worries with earnings, Fed in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T21:31:53+00:00",
+      "timeDisplay": "9:31 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C1JU:0-oil-soars-us-stocks-end-muted-on-iran-worries-with-earnings-fed-in-focus/"
+    },
+    {
+      "title": "FOMC Leaves Funds Rate In 3.5-3.75% Target Range; Keeps Easing Bias For Now",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T21:29:00+00:00",
+      "timeDisplay": "9:29 PM",
+      "link": "https://www.tradingview.com/news/macenews:1d6b7e946094b:0-fomc-leaves-funds-rate-in-3-5-3-75-target-range-keeps-easing-bias-for-now/"
+    },
+    {
+      "title": "Bitcoin is having its best month in a year - but the retail crowd is looking elsewhere",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T21:22:00+00:00",
+      "timeDisplay": "9:22 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260429020859:0/"
+    },
+    {
+      "title": "A Stealth Force In Derivatives\u2014Why Bitcoin Can\u2019t Punch Past $80,000 Yet",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T21:18:06+00:00",
+      "timeDisplay": "9:18 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:3069f94ac094b:0-a-stealth-force-in-derivatives-why-bitcoin-can-t-punch-past-80-000-yet/"
+    },
     {
       "title": "S&P 500 ETFs Flows Surge as ARK Leads Outflows",
       "source": "etfcom",
@@ -269,14 +314,6 @@
       "timestamp": "2026-04-29T18:46:00+00:00",
       "timeDisplay": "6:46 PM",
       "link": "https://www.tradingview.com/news/macenews:2e655f3c5094b:0-fed-s-powell-q-a-easy-to-see-why-would-oppose-keeping-easing-bias-no-need-to-rush-on-that-decision/"
-    },
-    {
-      "title": "FED'S POWELL Q&A:",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:45:00+00:00",
-      "timeDisplay": "6:45 PM",
-      "link": "https://www.tradingview.com/news/macenews:e1261b429094b:0-fed-s-powell-q-a/"
     },
     {
       "title": "Bitcoin falls as traders cut risk ahead of FOMC: Will TradFi, spot ETF volumes bolster $70K support?",
@@ -567,30 +604,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260429009456:0/"
     },
     {
-      "title": "Crypto Markets Rattle As Bitcoin Sinks Under $77K Following Oil Spike",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:00:13+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:85f57fbbc094b:0-crypto-markets-rattle-as-bitcoin-sinks-under-77k-following-oil-spike/"
-    },
-    {
-      "title": "Prediction market volume tops $25 billion monthly as retail activity dominates, crypto drives onboarding: report",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:00:00+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:8ff4e2ffd094b:0-prediction-market-volume-tops-25-billion-monthly-as-retail-activity-dominates-crypto-drives-onboarding-report/"
-    },
-    {
-      "title": "GLXY Stock Rises After Goldman Price Target Hike, CEO Mike Novogratz Flags Bitcoin \u2018Decoupling\u2019",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:55:27+00:00",
-      "timeDisplay": "12:55 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:30fe08067094b:0/"
-    },
-    {
       "title": "Oil Extends Gains Amid Middle East Uncertainty",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -637,14 +650,6 @@
       "timestamp": "2026-04-29T09:50:22+00:00",
       "timeDisplay": "9:50 AM",
       "link": "https://www.tradingview.com/news/te_news:546007:0-gold-hits-4-week-low/"
-    },
-    {
-      "title": "FOMC Meeting Today: Powell Speech and Fed Interest Rate Decision Could Move BTC, ETH, XRP and Altcoins",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:46:06+00:00",
-      "timeDisplay": "9:46 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:86f7830fe094b:0-fomc-meeting-today-powell-speech-and-fed-interest-rate-decision-could-move-btc-eth-xrp-and-altcoins/"
     }
   ]
 }

@@ -1,51 +1,211 @@
 {
-  "lastUpdated": "2026-04-29T09:53:57.160720+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 09:53 AM UTC",
+  "lastUpdated": "2026-04-29T11:22:00.432957+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 11:22 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are caught between competing forces as Iran war tensions drive safe-haven flows into dollar and gold while Fed decision uncertainty looms. Energy markets show supply concerns with Brent hitting one-month highs on potential Strait of Hormuz disruptions, though stocks rally on earnings optimism and Bitcoin shows technical strength.",
+    "macroSummary": "Markets are showing defensive positioning ahead of the Fed decision, with the dollar gaining safe-haven bids amid geopolitical tensions and rate uncertainty. Housing market data shows mixed signals with purchase activity up but refinancing declining as mortgage rates tick higher, while crypto and commodities face headwinds from Fed policy expectations.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Safe-haven flows into dollar amid war tensions directly contradict the Risk-On regime, with multiple headlines emphasizing defensive positioning ahead of Fed decision.",
+    "regimePressureReason": "Multiple articles highlight dollar safe-haven strength and defensive positioning, which contradicts the Risk-On regime assumption and suggests markets are pricing increased uncertainty.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar rises and firms on Iran war tensions and safe-haven demand"
+        "signal": "Dollar gaining safe-haven tailwind ahead of Fed decision amid war uncertainties"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar gaining safe-haven bid amid Iran war tensions, pressuring risk-on thesis",
+        "signal": "Dollar getting safe-haven bids ahead of Fed decision, suggesting risk-off positioning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold squeezed between safe-haven demand and rate fears, showing defensive positioning",
+        "signal": "European stocks falling as traders await Fed meeting and tech earnings",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Energy volatility driving Treasury volatility with Hormuz disruption risks",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Stocks rally on earnings optimism despite geopolitical uncertainty",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin technical signals mixed with hash ribbons buy signal but critical retest at $76k",
+        "signal": "Gold hits 4-week low and falls as investors eye Powell remarks, showing defensive asset weakness",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin in a funk with war uncertainties limiting gains despite technical buy signals",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Mortgage rates ticking higher with refinance activity declining 4.4% week-over-week",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for breach above 100 level given safe-haven flows",
-      "Consider tightening BMNR put ladder strikes if crypto volatility increases from Fed decision",
-      "Watch MOVE index for energy-driven rates volatility approaching 100 threshold"
+      "Monitor DXY levels closely - multiple safe-haven dollar references approaching 100 threshold",
+      "Consider reducing BMNR ladder aggressiveness given crypto headwinds and defensive market tone",
+      "Watch for VIX spike if Fed decision disappoints risk-on positioning"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar gets safe-haven tailwind ahead of Fed decision\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T11:09:00+00:00",
+      "timeDisplay": "11:09 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0MX:0-dollar-gets-safe-haven-tailwind-ahead-of-fed-decision/"
+    },
+    {
+      "title": "$250K Bitcoin In 2026? Analyst Warns Bulls To \u2018Stop With The Mushrooms\u2019",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:e963297e9094b:0-250k-bitcoin-in-2026-analyst-warns-bulls-to-stop-with-the-mushrooms/"
+    },
+    {
+      "title": "US MBA 30-YEAR FIXED CONTRACT MORTGAGE RATE 6.37% IN APRIL 24 WEEK; +2 BPS VS 1 WEEK AGO, -20 BPS VS 4 WEEKS AGO, -52 BPS VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:7e3ad49fd094b:0-us-mba-30-year-fixed-contract-mortgage-rate-6-37-in-april-24-week-2-bps-vs-1-week-ago-20-bps-vs-4-weeks-ago-52-bps-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA 5-YEAR ARM CONTRACT MORTGAGE RATE 5.66% IN APRIL 24 WEEK; +18 BPS VS 1 WEEK AGO, -1 BPS VS 4 WEEKS AGO, -23 BPS VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:e44316970094b:0-us-mba-5-year-arm-contract-mortgage-rate-5-66-in-april-24-week-18-bps-vs-1-week-ago-1-bps-vs-4-weeks-ago-23-bps-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA ADJUSTABLE-RATE MORTGAGE INDEX +2.5% IN APRIL 24 WEEK; +10.9% VS 4 WEEKS AGO; +49.5% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:ca3d2cc8b094b:0-us-mba-adjustable-rate-mortgage-index-2-5-in-april-24-week-10-9-vs-4-weeks-ago-49-5-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA CHIEF ECONOMIST FRATANTONI: POTENTIAL HOMEOWNERS \u2018MOVING FORWARD THIS SPRING\u2019 WITH MORE INVENTORY OFFERED ON HOUSING MARKET",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:329f5679f094b:0-us-mba-chief-economist-fratantoni-potential-homeowners-moving-forward-this-spring-with-more-inventory-offered-on-housing-market/"
+    },
+    {
+      "title": "US MBA FIXED RATE MORTGAGE INDEX -1.9% IN APRIL 24 WEEK; +6.9% VS 4 WEEKS AGO; +32.2% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:fd28e0727094b:0-us-mba-fixed-rate-mortgage-index-1-9-in-april-24-week-6-9-vs-4-weeks-ago-32-2-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA MORTGAGE PURCHASE INDEX +1.2% IN APRIL 24 WEEK; +11.5% VS 4 WEEKS AGO; +21.2% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:3169dc11b094b:0-us-mba-mortgage-purchase-index-1-2-in-april-24-week-11-5-vs-4-weeks-ago-21-2-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA MORTGAGE REFINANCE INDEX -4.4% IN APRIL 24 WEEK; +3.3% VS 4 WEEKS AGO; +50.7% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:4b7bd5d1c094b:0-us-mba-mortgage-refinance-index-4-4-in-april-24-week-3-3-vs-4-weeks-ago-50-7-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA: ADJUSTABLE-RATE MORTGAGES 8.3% OF TOTAL MORTGAGE APPLICATIONS IN APRIL 24 WEEK VS 8.0% IN PRIOR WEEK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:dc7309fa9094b:0-us-mba-adjustable-rate-mortgages-8-3-of-total-mortgage-applications-in-april-24-week-vs-8-0-in-prior-week/"
+    },
+    {
+      "title": "US MBA: REFINANCINGS AT 42.5% OF TOTAL MORTGAGE APPLICATIONS IN APRIL 24 WEEK VS 44.2% IN PRIOR WEEK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:7c65d65d2094b:0-us-mba-refinancings-at-42-5-of-total-mortgage-applications-in-april-24-week-vs-44-2-in-prior-week/"
+    },
+    {
+      "title": "US MORTGAGE BANKERS ASSN MORTGAGE APPLICATIONS INDEX -1.6% IN APRIL 24 WEEK; +7.3% VS 4 WEEKS AGO; +33.4% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:ace1076c8094b:0-us-mortgage-bankers-assn-mortgage-applications-index-1-6-in-april-24-week-7-3-vs-4-weeks-ago-33-4-vs-1-year-ago/"
+    },
+    {
+      "title": "Bitcoin May Be \u2018Perfect Money,\u2019 But Capital Is Not Free: Jack Mallers Explains Structural Shift In Crypto Credit",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T10:41:21+00:00",
+      "timeDisplay": "10:41 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:b333d39dc094b:0/"
+    },
+    {
+      "title": "Whirlwind Wednesday",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T10:34:48+00:00",
+      "timeDisplay": "10:34 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0JH:0-whirlwind-wednesday/"
+    },
+    {
+      "title": "U.S. Treasury Yields, Dollar Edge Up Ahead of Fed Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T10:02:00+00:00",
+      "timeDisplay": "10:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429005054:0/"
+    },
+    {
+      "title": "European stocks fall as traders wait for tech earnings, Fed meeting",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T10:00:13+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0C9:0-european-stocks-fall-as-traders-wait-for-tech-earnings-fed-meeting/"
+    },
+    {
+      "title": "Gold Squeezed Between Safe-Haven Allure, Rate Fears as Underlying Demand Holds \u2014 Update",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:56:00+00:00",
+      "timeDisplay": "9:56 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429004686:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds-update/"
+    },
+    {
+      "title": "\u2018This is the future\u2019: Czech central bank governor makes case for bitcoin in sovereign reserves",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:54:50+00:00",
+      "timeDisplay": "9:54 AM",
+      "link": "https://www.tradingview.com/news/the_block:38694bd8d094b:0-this-is-the-future-czech-central-bank-governor-makes-case-for-bitcoin-in-sovereign-reserves/"
+    },
+    {
+      "title": "Gold Hits 4-week Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:50:22+00:00",
+      "timeDisplay": "9:50 AM",
+      "link": "https://www.tradingview.com/news/te_news:546007:0-gold-hits-4-week-low/"
+    },
+    {
+      "title": "Canada proposes crypto ATM ban over scams and money laundering",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:49:45+00:00",
+      "timeDisplay": "9:49 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:de32b50fc094b:0-canada-proposes-crypto-atm-ban-over-scams-and-money-laundering/"
+    },
     {
       "title": "Oil Prices More Likely to Move Canadian Dollar Than Rate Decision \u2014 Market Talk",
       "source": "dow-jones",
@@ -55,12 +215,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260429004535:0/"
     },
     {
-      "title": "Gold Squeezed Between Safe-Haven Allure, Rate Fears as Underlying Demand Holds \u2014 Update",
-      "source": "dow-jones",
+      "title": "What is Bitcoin\u2019s Endgame? MicroStrategy\u2019s Saylor Has a Prediction",
+      "source": "beincrypto",
       "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:41:00+00:00",
-      "timeDisplay": "9:41 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429004513:0/"
+      "timestamp": "2026-04-29T09:33:18+00:00",
+      "timeDisplay": "9:33 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:6a7f4afc9094b:0-what-is-bitcoin-s-endgame-microstrategy-s-saylor-has-a-prediction/"
     },
     {
       "title": "Near-Term Impact of U.A.E.'s Exit From OPEC Likely Limited \u2014 Market Talk",
@@ -319,14 +479,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260428015987:0/"
     },
     {
-      "title": "Yuan steady in thin trading ahead of holiday; focus shifts to Fed",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T03:27:55+00:00",
-      "timeDisplay": "3:27 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C02Q:0-yuan-steady-in-thin-trading-ahead-of-holiday-focus-shifts-to-fed/"
-    },
-    {
       "title": "Ethereum Price Pulls Back To $2,250, Traders Watch For Reaction",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -375,28 +527,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C01E:0-stocks-retreat-on-iran-ai-concerns-as-fed-meeting-looms/"
     },
     {
-      "title": "Dollar Steadies Ahead of Fed Policy Decision",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T01:28:20+00:00",
-      "timeDisplay": "1:28 AM",
-      "link": "https://www.tradingview.com/news/te_news:545748:0-dollar-steadies-ahead-of-fed-policy-decision/"
-    },
-    {
       "title": "Ethereum (ETH) Sell Pressure Concerns Rise, But 4 On-Chain Signals Flash Bullish",
       "source": "beincrypto",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T01:27:18+00:00",
       "timeDisplay": "1:27 AM",
       "link": "https://www.tradingview.com/news/beincrypto:9f6c6c83f094b:0-ethereum-eth-sell-pressure-concerns-rise-but-4-on-chain-signals-flash-bullish/"
-    },
-    {
-      "title": "Asian Currencies Consolidate Ahead of FOMC Decision \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T00:50:00+00:00",
-      "timeDisplay": "12:50 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428015691:0/"
     },
     {
       "title": "Ex-PayPal Chief Unveils Bitcoin-Powered \u2018Money Grid\u2019 for Global Merchant Adoption",
@@ -407,28 +543,12 @@
       "link": "https://www.tradingview.com/news/coinpedia:9a2ddaf25094b:0-ex-paypal-chief-unveils-bitcoin-powered-money-grid-for-global-merchant-adoption/"
     },
     {
-      "title": "Dollar steady as investors brace for Fed decision in face of war",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T00:44:30+00:00",
-      "timeDisplay": "12:44 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C00A:0-dollar-steady-as-investors-brace-for-fed-decision-in-face-of-war/"
-    },
-    {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-29T00:18:16+00:00",
       "timeDisplay": "12:18 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C005:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Rising Oil, 'Not-so-Hawkish' BOJ Gov. Point to Potential Dollar Breakout Above 160 Yen \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T00:11:00+00:00",
-      "timeDisplay": "12:11 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428015608:0/"
     },
     {
       "title": "Key facts: Bitcoin $79K; Strategy buys; ETFs -$273M; Novogratz cautious",
@@ -525,126 +645,6 @@
       "timestamp": "2026-04-28T20:51:59+00:00",
       "timeDisplay": "8:51 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B1CV:0-oil-prices-rise-with-eyes-on-iran-uae-ai-concerns-weigh-on-stocks/"
-    },
-    {
-      "title": "US stocks close lower as tech weighs",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T20:23:00+00:00",
-      "timeDisplay": "8:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B1FI:0-us-stocks-close-lower-as-tech-weighs/"
-    },
-    {
-      "title": "Dollar gains on risk-off mood; BOJ split vote gives yen brief lift",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T20:17:17+00:00",
-      "timeDisplay": "8:17 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B183:0-dollar-gains-on-risk-off-mood-boj-split-vote-gives-yen-brief-lift/"
-    },
-    {
-      "title": "Bitcoin Coinbase Premium turns negative as BTC price drops, weekly losses top $829M",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T19:56:21+00:00",
-      "timeDisplay": "7:56 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:566ee5a36094b:0-bitcoin-coinbase-premium-turns-negative-as-btc-price-drops-weekly-losses-top-829m/"
-    },
-    {
-      "title": "Bitcoin may need more time before another run higher",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T19:37:15+00:00",
-      "timeDisplay": "7:37 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:5e35e6466094b:0-bitcoin-may-need-more-time-before-another-run-higher/"
-    },
-    {
-      "title": "Dollar Advances as Stocks Slip and Crude Prices Surge",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T19:34:25+00:00",
-      "timeDisplay": "7:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:2bf20c7d1094b:0-dollar-advances-as-stocks-slip-and-crude-prices-surge/"
-    },
-    {
-      "title": "Tighter Global Oil Supplies Underpin Crude Prices",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T19:20:41+00:00",
-      "timeDisplay": "7:20 PM",
-      "link": "https://www.tradingview.com/news/barchart:a888f0191094b:0-tighter-global-oil-supplies-underpin-crude-prices/"
-    },
-    {
-      "title": "Treasury yields rise with oil on dimming hopes for Iran resolution",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T19:18:49+00:00",
-      "timeDisplay": "7:18 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B13T:0-treasury-yields-rise-with-oil-on-dimming-hopes-for-iran-resolution/"
-    },
-    {
-      "title": "Crude Futures Extend Gains on U.S.-Iran Stalemate \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T19:15:00+00:00",
-      "timeDisplay": "7:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428011118:0/"
-    },
-    {
-      "title": "Bitcoin Flashes Bearish Signal. Is 10% Drop Imminent?",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T18:56:22+00:00",
-      "timeDisplay": "6:56 PM",
-      "link": "https://www.tradingview.com/news/u_today:c6a32c7ca094b:0-bitcoin-flashes-bearish-signal-is-10-drop-imminent/"
-    },
-    {
-      "title": "Expert Says $1 Million Bitcoin and \u201cOmega Candle\u201d Is Just Around the Corner",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T18:52:51+00:00",
-      "timeDisplay": "6:52 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:74cff57cb094b:0-expert-says-1-million-bitcoin-and-omega-candle-is-just-around-the-corner/"
-    },
-    {
-      "title": "Strategy-fueled bitcoin rally could last \u2018for some time to come,\u2019 Bitwise CIO says",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T18:40:30+00:00",
-      "timeDisplay": "6:40 PM",
-      "link": "https://www.tradingview.com/news/the_block:d15e514f1094b:0-strategy-fueled-bitcoin-rally-could-last-for-some-time-to-come-bitwise-cio-says/"
-    },
-    {
-      "title": "Oil prices rise with eyes on UAE, AI concerns weigh on stocks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T18:25:33+00:00",
-      "timeDisplay": "6:25 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B19Z:0-oil-prices-rise-with-eyes-on-uae-ai-concerns-weigh-on-stocks/"
-    },
-    {
-      "title": "Semiconductors: Primed for a bigger fall or more room to run?",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T17:38:29+00:00",
-      "timeDisplay": "5:38 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B19R:0-semiconductors-primed-for-a-bigger-fall-or-more-room-to-run/"
-    },
-    {
-      "title": "U.A.E.'s OPEC Departure Frees It From Saudi Influence \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T17:32:00+00:00",
-      "timeDisplay": "5:32 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428010649:0/"
-    },
-    {
-      "title": "BitMine stock analysis: what next for this future free cash flow machine?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T16:59:39+00:00",
-      "timeDisplay": "4:59 PM",
-      "link": "https://www.tradingview.com/news/invezz:acaa8fd5f094b:0-bitmine-stock-analysis-what-next-for-this-future-free-cash-flow-machine/"
     }
   ]
 }

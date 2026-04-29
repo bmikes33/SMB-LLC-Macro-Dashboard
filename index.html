@@ -1030,9 +1030,12 @@ function App() {
   );
 }
 // REPORTS FEED COMPONENT — reads from reports/index.json
+// Grouped by ticker, newest-first, all collapsed by default, search filter.
 function Reports({ onSelect, activeFile }) {
   const [reports, setReports] = React.useState(null);
   const [error, setError] = React.useState(null);
+  const [expanded, setExpanded] = React.useState({}); // { TICKER: bool }
+  const [search, setSearch] = React.useState("");
 
   React.useEffect(() => {
     fetch("reports/index.json?t=" + Date.now())
@@ -1066,60 +1069,118 @@ function Reports({ onSelect, activeFile }) {
     return dt.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " " +
            dt.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",hour12:false});
   };
+  const fmtDateShort = (d) => {
+    const dt = new Date(d);
+    return dt.toLocaleDateString("en-US",{month:"numeric",day:"numeric"});
+  };
+
+  // Group by ticker (MACRO entries already use ticker:"MACRO").
+  // List is pre-sorted newest-first, so groups[k][0] is always the latest.
+  const groups = {};
+  list.forEach(r => {
+    const k = r.ticker || "UNKNOWN";
+    if (!groups[k]) groups[k] = [];
+    groups[k].push(r);
+  });
+  // Order ticker groups by their latest report's date desc.
+  const groupKeys = Object.keys(groups).sort((a,b) =>
+    new Date(groups[b][0].date) - new Date(groups[a][0].date)
+  );
+
+  const q = search.trim().toUpperCase();
+  const visibleKeys = q ? groupKeys.filter(k => k.toUpperCase().includes(q)) : groupKeys;
+
+  const regimeColors = { "Risk-On":"#00e676","Reflation":"#00e5ff","Risk-Off":"#ff3d57","Deflation":"#b388ff","Stagflation":"#ffab00" };
 
   return (
     <div className="news-manual">
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4,paddingBottom:4}}>
-        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:.5}}>{list.length} report{list.length===1?"":"s"}</div>
+      {/* Search bar — sticky so it stays visible while scrolling */}
+      <div style={{position:"sticky",top:0,background:"var(--bg-secondary)",zIndex:1,padding:"4px 0 6px",marginLeft:-8,marginRight:-8,paddingLeft:8,paddingRight:8,borderBottom:"1px solid var(--border)"}}>
+        <input
+          type="text"
+          placeholder="Filter ticker..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          style={{width:"100%",background:"var(--bg-tertiary)",border:"1px solid var(--border)",borderRadius:3,padding:"5px 8px",color:"var(--text-primary)",fontFamily:"var(--font-mono)",fontSize:11,outline:"none",boxSizing:"border-box"}}
+        />
+        <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginTop:5,letterSpacing:.5,display:"flex",justifyContent:"space-between"}}>
+          <span>{visibleKeys.length} ticker{visibleKeys.length===1?"":"s"}</span>
+          <span>{list.length} report{list.length===1?"":"s"}</span>
+        </div>
       </div>
-      {list.length === 0 && (
-        <div style={{color:"var(--text-muted)",fontSize:11,padding:"8px 0"}}>No reports yet.</div>
+
+      {visibleKeys.length === 0 && (
+        <div style={{color:"var(--text-muted)",fontSize:11,padding:"12px 0"}}>No tickers match "{search}".</div>
       )}
-      {list.map((r,i) => {
-        const isActive = activeFile === r.file;
-        const isMacro = r.type === "macro";
-        const regimeColors = { "Risk-On":"#00e676","Reflation":"#00e5ff","Risk-Off":"#ff3d57","Deflation":"#b388ff","Stagflation":"#ffab00" };
-        const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
-        const accentColor = isMacro ? regColor : "var(--accent)";
+
+      {visibleKeys.map(k => {
+        const group = groups[k];
+        const latest = group[0];
+        const isOpen = !!expanded[k];
+        const isMacroGroup = latest.type === "macro";
+        const groupAccent = isMacroGroup ? (regimeColors[latest.regime] || latest.regimeColor || "#8b9ab5") : "var(--accent)";
+        const hasActiveChild = group.some(r => r.file === activeFile);
         return (
-          <div key={i}
-               style={{padding:"8px 0 8px 8px",borderBottom:"1px solid var(--border)",cursor:"pointer",marginLeft:-8,marginRight:-8,paddingLeft:8,paddingRight:8,borderLeft:isActive?"2px solid "+accentColor:"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
-               onClick={() => onSelect && onSelect(r)}
-               onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
-               onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = "transparent"; }}>
-            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
-              <div style={{display:"flex",alignItems:"center",gap:6}}>
-                <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:isMacro?regColor+"25":"var(--accent)20",color:accentColor,textTransform:"uppercase"}}>{isMacro?"MACRO":"TA"}</span>
-                <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:accentColor,letterSpacing:.5}}>{isMacro ? r.regime : r.ticker}</span>
-              </div>
-              <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{fmtDate(r.date)}</div>
-            </div>
-            <div style={{display:"flex",gap:10,alignItems:"center",flexWrap:"wrap"}}>
-              {!isMacro && (
-                <React.Fragment>
-                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,textTransform:"uppercase",color:biasColor(r.bias)}}>{r.bias}</span>
-                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
-                  {r.bullScore !== undefined && (
-                    <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>{r.bullScore}/{r.scoreMax} bull</span>
-                  )}
-                </React.Fragment>
+          <div key={k} style={{borderBottom:"1px solid var(--border)",marginLeft:-8,marginRight:-8}}>
+            {/* Group header — click to toggle expansion */}
+            <div
+              onClick={() => setExpanded(prev => ({...prev, [k]: !prev[k]}))}
+              onMouseEnter={e => { if (!hasActiveChild) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
+              onMouseLeave={e => { if (!hasActiveChild) e.currentTarget.style.background = "transparent"; }}
+              style={{padding:"8px",cursor:"pointer",display:"flex",alignItems:"center",gap:6,background:hasActiveChild?"var(--bg-tertiary)":"transparent",borderLeft:hasActiveChild?"2px solid "+groupAccent:"2px solid transparent"}}>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",width:8,display:"inline-block"}}>{isOpen?"▼":"▶"}</span>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:isMacroGroup?groupAccent+"25":"var(--accent)20",color:groupAccent,textTransform:"uppercase"}}>{isMacroGroup?"MACRO":"TA"}</span>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:groupAccent,letterSpacing:.5}}>{k}</span>
+              {group.length > 1 && (
+                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",background:"var(--bg-tertiary)",padding:"1px 5px",borderRadius:2}}>{group.length}</span>
               )}
-              {isMacro && (
-                <React.Fragment>
-                  <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.regimeConfidence)+"20",color:confColor(r.regimeConfidence)}}>{r.regimeConfidence}</span>
-                  {r.aggregateScore !== undefined && (
-                    <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>agg {r.aggregateScore.toFixed(2)}</span>
-                  )}
-                </React.Fragment>
-              )}
+              <span style={{marginLeft:"auto",fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{fmtDateShort(latest.date)}</span>
             </div>
-            <div style={{marginTop:3}}>
-              <a href={"reports/" + r.file} target="_blank" rel="noopener noreferrer"
-                 onClick={e => e.stopPropagation()}
-                 style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",textDecoration:"none",letterSpacing:.5}}>
-                open html →
-              </a>
-            </div>
+
+            {/* Children — only rendered when group is expanded */}
+            {isOpen && group.map((r, i) => {
+              const isActive = activeFile === r.file;
+              const isMacro = r.type === "macro";
+              const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
+              const accentColor = isMacro ? regColor : "var(--accent)";
+              return (
+                <div key={i}
+                     style={{padding:"7px 8px 7px 24px",borderTop:"1px solid var(--border)",cursor:"pointer",borderLeft:isActive?"2px solid "+accentColor:"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
+                     onClick={() => onSelect && onSelect(r)}
+                     onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
+                     onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = "transparent"; }}>
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3,gap:6}}>
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:600,color:isMacro?accentColor:biasColor(r.bias),letterSpacing:.3,textTransform:"uppercase",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
+                      {isMacro ? r.regime : (r.bias || "—")}
+                    </span>
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",flexShrink:0}}>{fmtDate(r.date)}</span>
+                  </div>
+                  <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
+                    {!isMacro && (
+                      <React.Fragment>
+                        <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
+                        {r.bullScore !== undefined && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>{r.bullScore}/{r.scoreMax} bull</span>
+                        )}
+                      </React.Fragment>
+                    )}
+                    {isMacro && (
+                      <React.Fragment>
+                        <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.regimeConfidence)+"20",color:confColor(r.regimeConfidence)}}>{r.regimeConfidence}</span>
+                        {r.aggregateScore !== undefined && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>agg {r.aggregateScore.toFixed(2)}</span>
+                        )}
+                      </React.Fragment>
+                    )}
+                    <a href={"reports/" + r.file} target="_blank" rel="noopener noreferrer"
+                       onClick={e => e.stopPropagation()}
+                       style={{marginLeft:"auto",fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",textDecoration:"none",letterSpacing:.5}}>
+                      open html →
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         );
       })}

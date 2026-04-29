@@ -1,51 +1,144 @@
 {
-  "lastUpdated": "2026-04-29T16:59:31.605725+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 04:59 PM UTC",
+  "lastUpdated": "2026-04-29T18:18:20.778408+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 06:18 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with oil prices rising on Iran tensions and inventory draws, dollar strengthening ahead of Fed decision, while stocks remain mixed with BofA noting continued client selling of US equities. Treasury yields hit 4-week highs as the market awaits the Fed hold decision, with cryptocurrencies showing volatility around key levels.",
+    "macroSummary": "Fed held rates steady with an easing bias despite four dissents, while dollar strength emerged ahead of the decision with yen weakening past 160. Oil prices extended gains on larger-than-expected inventory drawdowns, and crypto markets declined following the Fed decision amid broader mixed equity performance.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength, rising yields, continued equity outflows from BofA clients, and crypto weakness challenge the Risk-On thesis despite oil gains.",
+    "regimePressureReason": "Dollar strength and yen weakness past 160 directly approach invalidation thresholds, while Fed hawkish dissents and crypto weakness suggest risk-on momentum faces headwinds.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
-        "level": "> 160",
-        "signal": "Yen weakening past 160 approaches carry unwind trigger territory"
+        "level": "< 155",
+        "signal": "Yen weakened past 160, moving further from the 155 carry unwind trigger but indicating continued carry trade strength"
+      },
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar rises ahead of Fed decision with non-US stock weakness driving dollar strength"
       }
     ],
     "keySignals": [
       {
-        "signal": "BofA clients continue selling US stocks despite market gains, indicating institutional skepticism",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar rises with Treasury yields hitting 4-week highs, showing safe-haven bid emerging",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "USDJPY breaks above 160 level, moving closer to historical carry unwind trigger",
+        "signal": "Dollar strength emerging with yen weakness past 160 approaches key invalidation thresholds for risk-off regime flip",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil inventory draws significantly exceed expectations, supporting energy complex",
+        "signal": "Four Fed dissents against easing bias shows hawkish internal pressure despite no rate change",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Cryptocurrency markets declined following Fed decision, contradicting typical risk-on asset performance",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil inventory drawdowns larger than expected support commodity strength in reflationary backdrop",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin falls below $77K with crypto markets showing weakness ahead of Fed decision",
+        "signal": "BofA clients continue selling US stocks despite market gains, showing institutional risk-off positioning",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely as break above 160 approaches carry unwind threshold of 155 reversal",
-      "Consider tightening BMNR put ladder strikes given crypto weakness and dollar strength",
-      "Watch for DXY approaching 100 level which would flip rates group assessment"
+      "Monitor DXY closely for break above 100 level which would trigger risk-off regime flip",
+      "Watch for USDJPY carry trade stability as it moves further from 155 unwind trigger",
+      "Consider tightening BMNR put ladder strikes given crypto weakness and dollar strength pressures"
     ]
   },
   "articles": [
+    {
+      "title": "Cryptocurrency Down Following Fed Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:15:00+00:00",
+      "timeDisplay": "6:15 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429012701:0/"
+    },
+    {
+      "title": "Fed Keeps Rates Steady In Possibly Powell\u2019s Last Rate Decision; All Eyes Now On Warsh",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:11:40+00:00",
+      "timeDisplay": "6:11 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:7c75bd691094b:0/"
+    },
+    {
+      "title": "FOMC: DISSENTERS WERE MIRAN, WHO WANTED QTR PT RATE CUT; HAMMACK, KASHKARI AND LOGAN DID NOT WANT INCLUSION OF AN EASING BIAS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:09:00+00:00",
+      "timeDisplay": "6:09 PM",
+      "link": "https://www.tradingview.com/news/macenews:8a58a27d9094b:0-fomc-dissenters-were-miran-who-wanted-qtr-pt-rate-cut-hammack-kashkari-and-logan-did-not-want-inclusion-of-an-easing-bias/"
+    },
+    {
+      "title": "FOMC: 'DEVELOPMENTS IN THE MIDDLE EAST ARE CONTRIBUTING TO A HIGH LEVEL OF UNCERTAINTY;' ATTENTIVE TO RISKS TO BOTH SIDES OF DUAL MANDATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:07:00+00:00",
+      "timeDisplay": "6:07 PM",
+      "link": "https://www.tradingview.com/news/macenews:2ae48794e094b:0-fomc-developments-in-the-middle-east-are-contributing-to-a-high-level-of-uncertainty-attentive-to-risks-to-both-sides-of-dual-mandate/"
+    },
+    {
+      "title": "FOMC: 'INFLATION IS ELEVATED,; NOT 'SOMEWHAT;' ECONOMIC ACTIVITY 'EXPANDING AT A SOLID PACE;' JOB GAINS 'REMAINED LOW;' SEES RECENT INCREASE IN ENERGY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:04:00+00:00",
+      "timeDisplay": "6:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:23c5ab18f094b:0-fomc-inflation-is-elevated-not-somewhat-economic-activity-expanding-at-a-solid-pace-job-gains-remained-low-sees-recent-increase-in-energy/"
+    },
+    {
+      "title": "FOMC: KEEPS EASING BIAS FROM POLICY STATEMENT; FOUR DISSENTS; NO RATE CHANGE AS EXPECTED; DISSENTS OPPOSE KEEPING EASING BIAS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:407ed5d57094b:0-fomc-keeps-easing-bias-from-policy-statement-four-dissents-no-rate-change-as-expected-dissents-oppose-keeping-easing-bias/"
+    },
+    {
+      "title": "AI investment payoffs in focus as US megacaps report this week",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T17:54:51+00:00",
+      "timeDisplay": "5:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C14P:0-ai-investment-payoffs-in-focus-as-us-megacaps-report-this-week/"
+    },
+    {
+      "title": "Oil rises, stocks dip with Iran, earnings and Fed in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T17:48:53+00:00",
+      "timeDisplay": "5:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C15K:0-oil-rises-stocks-dip-with-iran-earnings-and-fed-in-focus/"
+    },
+    {
+      "title": "El-Erian Raises Interesting Questions Ahead Of Fed Policy Outcome - 'Will Chair Powell Repeat The Defiant Tone Of His Dramatic January Video?'",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T17:44:48+00:00",
+      "timeDisplay": "5:44 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:7ea1ec490094b:0/"
+    },
+    {
+      "title": "Galaxy Digital Reports $216M Loss as Novogratz Flags Bitcoin $100K Hurdles",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T17:34:55+00:00",
+      "timeDisplay": "5:34 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:4fb5efedf094b:0-galaxy-digital-reports-216m-loss-as-novogratz-flags-bitcoin-100k-hurdles/"
+    },
+    {
+      "title": "Blockchain.com Debuts Bespoke Wealth Program For Elite Investors & High-Volume Trading Clients",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T17:33:43+00:00",
+      "timeDisplay": "5:33 PM",
+      "link": "https://www.tradingview.com/news/chainwire:08d28ff73094b:0-blockchain-com-debuts-bespoke-wealth-program-for-elite-investors-high-volume-trading-clients/"
+    },
     {
       "title": "Bank of Canada Messaging Indicates Rates Will Remain Steady For a While \u2014 Market Talk",
       "source": "dow-jones",
@@ -101,14 +194,6 @@
       "timestamp": "2026-04-29T16:00:15+00:00",
       "timeDisplay": "4:00 PM",
       "link": "https://www.tradingview.com/news/chainwire:a409c604c094b:0-mixin-launches-gasless-experience-removing-native-gas-barriers-for-cross-chain-trading-and-transfers/"
-    },
-    {
-      "title": "Oil rises, stocks dip with Iran, earnings and Fed in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T15:40:37+00:00",
-      "timeDisplay": "3:40 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0RJ:0-oil-rises-stocks-dip-with-iran-earnings-and-fed-in-focus/"
     },
     {
       "title": "Strive CEO: Bitcoin\u2019s 50% Crash Shows Why Digital Credit Is the Future",
@@ -407,38 +492,6 @@
       "link": "https://www.tradingview.com/news/macenews:54a511c94094b:0-us-core-capital-goods-durables-orders-3-3-in-march-from-feb-vs-0-5-markets-expected/"
     },
     {
-      "title": "MARCH US TRADE IN GOODS:  -$87.9 BLN ; FEB REVISED TO  $83.5 BLN VS ORIGINAL $98.5 BLN",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:6844014db094b:0-march-us-trade-in-goods-87-9-bln-feb-revised-to-83-5-bln-vs-original-98-5-bln/"
-    },
-    {
-      "title": "US DURABLE GOODS ORDERS EX-TRANSPORTATION +0.9% IN MARCH FROM FEB. (VS. +0.4% MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:797b14fd4094b:0-us-durable-goods-orders-ex-transportation-0-9-in-march-from-feb-vs-0-4-markets-expected/"
-    },
-    {
-      "title": "US MARCH BUILDING PERMITS 1.372M VS 1.398M EXPECTED AND 1.538M IN FEB",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:3a356ccc7094b:0-us-march-building-permits-1-372m-vs-1-398m-expected-and-1-538m-in-feb/"
-    },
-    {
-      "title": "US MARCH HOUSING STARTS 1.502M VS 1.40M EXPECTED AND 1.356M IN FEB",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:09d01fd0c094b:0-us-march-housing-starts-1-502m-vs-1-40m-expected-and-1-356m-in-feb/"
-    },
-    {
       "title": "Bitcoin Bottom or May Bust? Top 3 Price Predictions From Experts Highlight Crucial Cost Basis",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -501,30 +554,6 @@
       "timestamp": "2026-04-29T11:18:00+00:00",
       "timeDisplay": "11:18 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429007460:0/"
-    },
-    {
-      "title": "Bitcoin Halts Breakout Attempt After Hitting Largest Monthly Inflow",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:01:00+00:00",
-      "timeDisplay": "11:01 AM",
-      "link": "https://www.tradingview.com/news/u_today:03a5f4bc6094b:0-bitcoin-halts-breakout-attempt-after-hitting-largest-monthly-inflow/"
-    },
-    {
-      "title": "$250K Bitcoin In 2026? Analyst Warns Bulls To \u2018Stop With The Mushrooms\u2019",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:e963297e9094b:0-250k-bitcoin-in-2026-analyst-warns-bulls-to-stop-with-the-mushrooms/"
-    },
-    {
-      "title": "Bitcoin May Be \u2018Perfect Money,\u2019 But Capital Is Not Free: Jack Mallers Explains Structural Shift In Crypto Credit",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T10:41:21+00:00",
-      "timeDisplay": "10:41 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:b333d39dc094b:0/"
     },
     {
       "title": "European stocks fall as traders wait for tech earnings, Fed meeting",
@@ -621,30 +650,6 @@
       "timestamp": "2026-04-29T07:17:00+00:00",
       "timeDisplay": "7:17 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429002899:0/"
-    },
-    {
-      "title": "TotalEnergies Q1 Profit Climbs, Despite Stable Production",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T06:47:10+00:00",
-      "timeDisplay": "6:47 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:3c4019dd3340d:0-totalenergies-q1-profit-climbs-despite-stable-production/"
-    },
-    {
-      "title": "Stocks rally on earnings optimism as Fed meeting looms",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T06:27:20+00:00",
-      "timeDisplay": "6:27 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C07U:0-stocks-rally-on-earnings-optimism-as-fed-meeting-looms/"
-    },
-    {
-      "title": "Gold Squeezed Between Safe-Haven Allure, Rate Fears as Underlying Demand Holds",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T06:14:00+00:00",
-      "timeDisplay": "6:14 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429002184:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds/"
     }
   ]
 }

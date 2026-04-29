@@ -1,56 +1,261 @@
 {
-  "lastUpdated": "2026-04-29T18:18:20.778408+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 06:18 PM UTC",
+  "lastUpdated": "2026-04-29T19:59:31.561753+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 07:59 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Fed held rates steady with an easing bias despite four dissents, while dollar strength emerged ahead of the decision with yen weakening past 160. Oil prices extended gains on larger-than-expected inventory drawdowns, and crypto markets declined following the Fed decision amid broader mixed equity performance.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength and yen weakness past 160 directly approach invalidation thresholds, while Fed hawkish dissents and crypto weakness suggest risk-on momentum faces headwinds.",
-    "thresholdWatches": [
-      {
-        "indicator": "USDJPY",
-        "level": "< 155",
-        "signal": "Yen weakened past 160, moving further from the 155 carry unwind trigger but indicating continued carry trade strength"
-      },
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar rises ahead of Fed decision with non-US stock weakness driving dollar strength"
-      }
-    ],
+    "macroSummary": "The Fed held rates steady with the most divided board vote since 1992, while Powell signaled policy is near neutral with possible removal of easing bias ahead. Oil surged 7% on Middle East tensions, Treasury yields hit 4-week highs on hawkish Fed tone, and risk assets including stocks and crypto declined.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The Fed's hawkish pivot with divided board vote, surging yields, and broad risk-asset selloff directly contradict the Risk-On regime classification.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Dollar strength emerging with yen weakness past 160 approaches key invalidation thresholds for risk-off regime flip",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Four Fed dissents against easing bias shows hawkish internal pressure despite no rate change",
+        "signal": "Fed delivers most divided board vote since 1992 with hawkish statement driving Treasury yields to 4-week highs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Cryptocurrency markets declined following Fed decision, contradicting typical risk-on asset performance",
+        "signal": "Powell signals possible removal of easing bias at next meeting as policy moves toward neutral pace",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil inventory drawdowns larger than expected support commodity strength in reflationary backdrop",
-        "tag": "SUPPORTS"
+        "signal": "Oil surges 7% on Middle East geopolitical tensions while stocks and crypto decline broadly",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "BofA clients continue selling US stocks despite market gains, showing institutional risk-off positioning",
+        "signal": "Gold drops to 1-month low despite geopolitical risk, suggesting dollar strength and rate concerns",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Crypto and risk assets fall following Fed decision as traders cut risk exposure",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 level which would trigger risk-off regime flip",
-      "Watch for USDJPY carry trade stability as it moves further from 155 unwind trigger",
-      "Consider tightening BMNR put ladder strikes given crypto weakness and dollar strength pressures"
+      "Monitor BMNR ladder strikes closely as crypto weakness may accelerate put assignments",
+      "Consider reducing Maturity sector overweight given rising rate environment pressure on dividend proxies",
+      "Watch for VIX breach above 22 as multiple regime contradiction signals align"
     ]
   },
   "articles": [
+    {
+      "title": "Oil soars, stocks dip on Iran worries, earnings in focus after Fed",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T19:42:19+00:00",
+      "timeDisplay": "7:42 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C18M:0-oil-soars-stocks-dip-on-iran-worries-earnings-in-focus-after-fed/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: US ECONOMY 'HAS BEEN REMARKABLY RESILIENT; 'PEOPLE ARE STILL SPENDING;' BUT THINK LOGICALLY WILL SLOW; ENDS Q&A (APPLAUSE)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:25:00+00:00",
+      "timeDisplay": "7:25 PM",
+      "link": "https://www.tradingview.com/news/macenews:03cf150cc094b:0-fed-s-powell-q-a-us-economy-has-been-remarkably-resilient-people-are-still-spending-but-think-logically-will-slow-ends-q-a-applause/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: FED NOT BIPARTISAN, IT'S NON-PARTISAN; HAVE TO BE INDEPENDENT OF POLITICS; NO SENSE THAT CREDIBILITY IN MKTS 'HAS WEAKENED'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:22:00+00:00",
+      "timeDisplay": "7:22 PM",
+      "link": "https://www.tradingview.com/news/macenews:c40e68fbb094b:0-fed-s-powell-q-a-fed-not-bipartisan-it-s-non-partisan-have-to-be-independent-of-politics-no-sense-that-credibility-in-mkts-has-weakened/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: 'NOT LOOKING TO BE A HIGH-PROFILE DISSIDENT' ON BOARD; BEEN CHALLENGING TO DEAL WITH SIX YEARS OF SUPPLY SHOCKS; 'A DIFFERENT WORLD'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:20:00+00:00",
+      "timeDisplay": "7:20 PM",
+      "link": "https://www.tradingview.com/news/macenews:758e9225b094b:0-fed-s-powell-q-a-not-looking-to-be-a-high-profile-dissident-on-board-been-challenging-to-deal-with-six-years-of-supply-shocks-a-different-world/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: CENTER OF POLIC IS MOVING TOWARD  A MORE NEUTRAL PACE AND FOR MKTS TOO; MAJORITY DIDN'T FEEL NECESSARY TO SEND A SIGNAL 'RIGHT NOW'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:17:00+00:00",
+      "timeDisplay": "7:17 PM",
+      "link": "https://www.tradingview.com/news/macenews:b0bedd01c094b:0-fed-s-powell-q-a-center-of-polic-is-moving-toward-a-more-neutral-pace-and-for-mkts-too-majority-didn-t-feel-necessary-to-send-a-signal-right-now/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: GETTING BACK TO INFLATION GOAL TOO QUICKLY COULD BE COSTLY FOR JOBS BUT WILL GET THERE; ECON GROWING AT 2% OR BETTER; UNEMP LOW",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:15:00+00:00",
+      "timeDisplay": "7:15 PM",
+      "link": "https://www.tradingview.com/news/macenews:d31c33704094b:0-fed-s-powell-q-a-getting-back-to-inflation-goal-too-quickly-could-be-costly-for-jobs-but-will-get-there-econ-growing-at-2-or-better-unemp-low/"
+    },
+    {
+      "title": "Oil Futures Rise As Middle East Stalemate Drags On \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:13:00+00:00",
+      "timeDisplay": "7:13 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429013244:0/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: 'WIDESPREAD CONCERNS' WITHIN FED RE INDEPENDENCE; 'BACK AND FORTH' WITHIN FED ON CONSOLIDATING SOME NON POLICY REGIONAL BANK TASKS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:13:00+00:00",
+      "timeDisplay": "7:13 PM",
+      "link": "https://www.tradingview.com/news/macenews:53b7f74fa094b:0-fed-s-powell-q-a-widespread-concerns-within-fed-re-independence-back-and-forth-within-fed-on-consolidating-some-non-policy-regional-bank-tasks/"
+    },
+    {
+      "title": "Gold Drops to 1-Month Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:10:57+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/te_news:546202:0-gold-drops-to-1-month-low/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: MUCH OF FED INDEPENDENCE LEGALLY MANDATED; BUT INDEPENDENCE AT RISK; 'NONE OF THAT IS CONCLUDED YET;' 'HAVE TO FIGHT FOR IT'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:10:00+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/macenews:5a0037919094b:0-fed-s-powell-q-a-much-of-fed-independence-legally-mandated-but-independence-at-risk-none-of-that-is-concluded-yet-have-to-fight-for-it/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: HIGHER GAS PRICES MEAN 'A HIT TO GDP;' 'HAVE TO SEE HOW IT EVOLVES;' TAKE WARSH AT HIS WORD HE'LL BE INDEPENDENT OF WHITE HOUSE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:07:00+00:00",
+      "timeDisplay": "7:07 PM",
+      "link": "https://www.tradingview.com/news/macenews:c4df5725e094b:0-fed-s-powell-q-a-higher-gas-prices-mean-a-hit-to-gdp-have-to-see-how-it-evolves-take-warsh-at-his-word-he-ll-be-independent-of-white-house/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: CLOSE TO NEUTRAL RATE OF INTEREST, PERHAPS SOMEWHAT ABOVE; FAVOR 'MILDLY' ABOVE OR NEUTRAL; JOBS 'COOLING A LITTLE BIT'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:05:00+00:00",
+      "timeDisplay": "7:05 PM",
+      "link": "https://www.tradingview.com/news/macenews:198140905094b:0-fed-s-powell-q-a-close-to-neutral-rate-of-interest-perhaps-somewhat-above-favor-mildly-above-or-neutral-jobs-cooling-a-little-bit/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: THINK POLICY IS IN A GOOD PLACE AND IF NECESSARY TO HIKE OR CUT RATES, WILL SIGNAL THAT; ECON FAR LESS ENERGY DEPENDENT THAN IN PAST",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:02:00+00:00",
+      "timeDisplay": "7:02 PM",
+      "link": "https://www.tradingview.com/news/macenews:19eee4504094b:0-fed-s-powell-q-a-think-policy-is-in-a-good-place-and-if-necessary-to-hike-or-cut-rates-will-signal-that-econ-far-less-energy-dependent-than-in-past/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: FOUND IN REVIEW OF COMMUNICATIONS STRATEGY, COULDN'T COME UP WITH CHANGES THAT GOT MUCH SUPPORT SO MOVED ON; NOT A FAN OF DOT PLOT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T19:00:00+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:007aab2ee094b:0-fed-s-powell-q-a-found-in-review-of-communications-strategy-couldn-t-come-up-with-changes-that-got-much-support-so-moved-on-not-a-fan-of-dot-plot/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: PROPOSE TO SUPPORT NEW CHAIR WHENEVER POSSIBLE, BE A CONSTRUCTIVE PARTICIPANT; UNKNOWN HOW LONG STRAIT TO BE CLOSED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:58:00+00:00",
+      "timeDisplay": "6:58 PM",
+      "link": "https://www.tradingview.com/news/macenews:dd586ae53094b:0-fed-s-powell-q-a-propose-to-support-new-chair-whenever-possible-be-a-constructive-participant-unknown-how-long-strait-to-be-closed/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: WARSH SHOULD BE GOOD AT CATALYZING CONCENSUS; WOULD NEVER BE 'A SHADOW CHAIR;' WAS GOV FOR 6 YRS SO KNOW HOW THAT WORKS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:55:00+00:00",
+      "timeDisplay": "6:55 PM",
+      "link": "https://www.tradingview.com/news/macenews:108945c39094b:0-fed-s-powell-q-a-warsh-should-be-good-at-catalyzing-concensus-would-never-be-a-shadow-chair-was-gov-for-6-yrs-so-know-how-that-works/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: WILL STAY ON BOARD UNTIL LEGAL PROBES TRULY OVER WITH; REPEATS, 'GROUP OF US INCLUDING ME' WANTED TO KEEP EASING BIAS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:53:00+00:00",
+      "timeDisplay": "6:53 PM",
+      "link": "https://www.tradingview.com/news/macenews:5197262fa094b:0-fed-s-powell-q-a-will-stay-on-board-until-legal-probes-truly-over-with-repeats-group-of-us-including-me-wanted-to-keep-easing-bias/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: IN THE 20-TEENS, HAD STABLE EMPLOYMENT AND WAGE GAINS ON LOWER END; WOULD LIKE TO GET BACK TO THAT; GOT 'TO BE STRONG' ON BOTH GOALS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:51:00+00:00",
+      "timeDisplay": "6:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:5e6a3b0f4094b:0-fed-s-powell-q-a-in-the-20-teens-had-stable-employment-and-wage-gains-on-lower-end-would-like-to-get-back-to-that-got-to-be-strong-on-both-goals/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: CAN'T SPECULATE BUT POSSIBLE EASING BIAS COULD BE REMOVED AT NEXT MEETING; TO HAVE NEW HEAD OF FOMC BY THEN; SHOULD BE NORMAL CHANGE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:48:00+00:00",
+      "timeDisplay": "6:48 PM",
+      "link": "https://www.tradingview.com/news/macenews:0da001416094b:0-fed-s-powell-q-a-can-t-speculate-but-possible-easing-bias-could-be-removed-at-next-meeting-to-have-new-head-of-fomc-by-then-should-be-normal-change/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: 'EASY TO SEE WHY' WOULD OPPOSE KEEPING EASING BIAS; NO NEED TO RUSH ON THAT DECISION",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:46:00+00:00",
+      "timeDisplay": "6:46 PM",
+      "link": "https://www.tradingview.com/news/macenews:2e655f3c5094b:0-fed-s-powell-q-a-easy-to-see-why-would-oppose-keeping-easing-bias-no-need-to-rush-on-that-decision/"
+    },
+    {
+      "title": "FED'S POWELL Q&A:",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:45:00+00:00",
+      "timeDisplay": "6:45 PM",
+      "link": "https://www.tradingview.com/news/macenews:e1261b429094b:0-fed-s-powell-q-a/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: STILL EXPECT TARIFF PRESSURE ON INFLATION TO SUBSIDE IN NEXT SEVERAL QUARTERS; TO BE 'VERY CAUTIOUS;' ENERGY PRICES HAVEN'T PEAKED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:43:00+00:00",
+      "timeDisplay": "6:43 PM",
+      "link": "https://www.tradingview.com/news/macenews:d389d9f18094b:0-fed-s-powell-q-a-still-expect-tariff-pressure-on-inflation-to-subside-in-next-several-quarters-to-be-very-cautious-energy-prices-haven-t-peaked/"
+    },
+    {
+      "title": "FED'S POWELL Q&A: CONCERNED ABOUT ONGOING LEGAL ATTACKS ON FED WHICH ARE 'BATTERING' INSTITUTION; NOT CONCERNED ABOUT PERSONAL ATTACK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:40:00+00:00",
+      "timeDisplay": "6:40 PM",
+      "link": "https://www.tradingview.com/news/macenews:239e45088094b:0-fed-s-powell-q-a-concerned-about-ongoing-legal-attacks-on-fed-which-are-battering-institution-not-concerned-about-personal-attack/"
+    },
+    {
+      "title": "Bitcoin falls as traders cut risk ahead of FOMC: Will TradFi, spot ETF volumes bolster $70K support?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:38:30+00:00",
+      "timeDisplay": "6:38 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3063ef462094b:0-bitcoin-falls-as-traders-cut-risk-ahead-of-fomc-will-tradfi-spot-etf-volumes-bolster-70k-support/"
+    },
+    {
+      "title": "Fed holds rates steady, but board vote is most divided since 1992",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T18:36:15+00:00",
+      "timeDisplay": "6:36 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C170:0-fed-holds-rates-steady-but-board-vote-is-most-divided-since-1992/"
+    },
+    {
+      "title": "Treasury Yields Hit New 4-Week High After Fed",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:20:56+00:00",
+      "timeDisplay": "6:20 PM",
+      "link": "https://www.tradingview.com/news/te_news:546180:0-treasury-yields-hit-new-4-week-high-after-fed/"
+    },
+    {
+      "title": "WTI Surges 7%",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:15:42+00:00",
+      "timeDisplay": "6:15 PM",
+      "link": "https://www.tradingview.com/news/te_news:546175:0-wti-surges-7/"
+    },
     {
       "title": "Cryptocurrency Down Following Fed Decision \u2014 Market Talk",
       "source": "dow-jones",
@@ -60,44 +265,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260429012701:0/"
     },
     {
-      "title": "Fed Keeps Rates Steady In Possibly Powell\u2019s Last Rate Decision; All Eyes Now On Warsh",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:11:40+00:00",
-      "timeDisplay": "6:11 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:7c75bd691094b:0/"
-    },
-    {
-      "title": "FOMC: DISSENTERS WERE MIRAN, WHO WANTED QTR PT RATE CUT; HAMMACK, KASHKARI AND LOGAN DID NOT WANT INCLUSION OF AN EASING BIAS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:09:00+00:00",
-      "timeDisplay": "6:09 PM",
-      "link": "https://www.tradingview.com/news/macenews:8a58a27d9094b:0-fomc-dissenters-were-miran-who-wanted-qtr-pt-rate-cut-hammack-kashkari-and-logan-did-not-want-inclusion-of-an-easing-bias/"
-    },
-    {
-      "title": "FOMC: 'DEVELOPMENTS IN THE MIDDLE EAST ARE CONTRIBUTING TO A HIGH LEVEL OF UNCERTAINTY;' ATTENTIVE TO RISKS TO BOTH SIDES OF DUAL MANDATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:07:00+00:00",
-      "timeDisplay": "6:07 PM",
-      "link": "https://www.tradingview.com/news/macenews:2ae48794e094b:0-fomc-developments-in-the-middle-east-are-contributing-to-a-high-level-of-uncertainty-attentive-to-risks-to-both-sides-of-dual-mandate/"
-    },
-    {
-      "title": "FOMC: 'INFLATION IS ELEVATED,; NOT 'SOMEWHAT;' ECONOMIC ACTIVITY 'EXPANDING AT A SOLID PACE;' JOB GAINS 'REMAINED LOW;' SEES RECENT INCREASE IN ENERGY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:04:00+00:00",
-      "timeDisplay": "6:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:23c5ab18f094b:0-fomc-inflation-is-elevated-not-somewhat-economic-activity-expanding-at-a-solid-pace-job-gains-remained-low-sees-recent-increase-in-energy/"
-    },
-    {
-      "title": "FOMC: KEEPS EASING BIAS FROM POLICY STATEMENT; FOUR DISSENTS; NO RATE CHANGE AS EXPECTED; DISSENTS OPPOSE KEEPING EASING BIAS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:01:00+00:00",
-      "timeDisplay": "6:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:407ed5d57094b:0-fomc-keeps-easing-bias-from-policy-statement-four-dissents-no-rate-change-as-expected-dissents-oppose-keeping-easing-bias/"
+      "title": "Yields jump on hawkish Fed statement",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T18:13:41+00:00",
+      "timeDisplay": "6:13 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C1AI:0-yields-jump-on-hawkish-fed-statement/"
     },
     {
       "title": "AI investment payoffs in focus as US megacaps report this week",
@@ -106,6 +279,14 @@
       "timestamp": "2026-04-29T17:54:51+00:00",
       "timeDisplay": "5:54 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C14P:0-ai-investment-payoffs-in-focus-as-us-megacaps-report-this-week/"
+    },
+    {
+      "title": "Most crypto investors believe Bitcoin is undervalued: Coinbase survey",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T17:54:33+00:00",
+      "timeDisplay": "5:54 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:642dabf61094b:0-most-crypto-investors-believe-bitcoin-is-undervalued-coinbase-survey/"
     },
     {
       "title": "Oil rises, stocks dip with Iran, earnings and Fed in focus",
@@ -140,6 +321,14 @@
       "link": "https://www.tradingview.com/news/chainwire:08d28ff73094b:0-blockchain-com-debuts-bespoke-wealth-program-for-elite-investors-high-volume-trading-clients/"
     },
     {
+      "title": "Crude Futures Gain on U.S.-Iran Standstill, U.S. Stock Draws \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T17:32:00+00:00",
+      "timeDisplay": "5:32 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429012433:0/"
+    },
+    {
       "title": "Bank of Canada Messaging Indicates Rates Will Remain Steady For a While \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -154,14 +343,6 @@
       "timestamp": "2026-04-29T16:23:00+00:00",
       "timeDisplay": "4:23 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429011845:0/"
-    },
-    {
-      "title": "Treasury Yields, Dollar Rise Ahead of Expected Fed Hold \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T16:19:00+00:00",
-      "timeDisplay": "4:19 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429011788:0/"
     },
     {
       "title": "MSTR, ASST Stocks Slide Ahead Of Fed Decision \u2013 B. Riley Flags \u2018Attractive Entry Point\u2019",
@@ -196,6 +377,14 @@
       "link": "https://www.tradingview.com/news/chainwire:a409c604c094b:0-mixin-launches-gasless-experience-removing-native-gas-barriers-for-cross-chain-trading-and-transfers/"
     },
     {
+      "title": "Bitcoin Hits a 'Kiss of Death', But Fidelity's Director Timmer Says It's a Bull Market Signal This Time",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T15:48:00+00:00",
+      "timeDisplay": "3:48 PM",
+      "link": "https://www.tradingview.com/news/u_today:7ea940692094b:0-bitcoin-hits-a-kiss-of-death-but-fidelity-s-director-timmer-says-it-s-a-bull-market-signal-this-time/"
+    },
+    {
       "title": "Strive CEO: Bitcoin\u2019s 50% Crash Shows Why Digital Credit Is the Future",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -204,28 +393,12 @@
       "link": "https://www.tradingview.com/news/beincrypto:48a10f7ab094b:0-strive-ceo-bitcoin-s-50-crash-shows-why-digital-credit-is-the-future/"
     },
     {
-      "title": "Dollar rises before Fed decision and yen weakens past 160",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T15:34:13+00:00",
-      "timeDisplay": "3:34 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0T3:0-dollar-rises-before-fed-decision-and-yen-weakens-past-160/"
-    },
-    {
       "title": "First-Ever Prediction Market ETF May Launch Next Week \u2013 Analyst Says Bitwise, GraniteShares May Follow RoundHill Lead",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T15:17:50+00:00",
       "timeDisplay": "3:17 PM",
       "link": "https://www.tradingview.com/news/stocktwits:63fb18991094b:0/"
-    },
-    {
-      "title": "Fed day data: Durable goods, housing starts/building permits, et al",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T15:16:39+00:00",
-      "timeDisplay": "3:16 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0ZE:0-fed-day-data-durable-goods-housing-starts-building-permits-et-al/"
     },
     {
       "title": "Oil Prices Extend Gains",
@@ -244,30 +417,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:6562409d4094b:0/"
     },
     {
-      "title": "Falls in Non-U.S. Stocks Help Drive Dollar Strength \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:53:00+00:00",
-      "timeDisplay": "2:53 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429010779:0/"
-    },
-    {
-      "title": "US ATLANTA FED SURVEY: US BUSINESSES SEE YEAR AHEAD EMPLOYMENT GROWTH AT 4.46% IN APRIL VS. 4.43% IN MARCH, 4.48% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:53:00+00:00",
-      "timeDisplay": "2:53 PM",
-      "link": "https://www.tradingview.com/news/macenews:7e6bb01c1094b:0-us-atlanta-fed-survey-us-businesses-see-year-ahead-employment-growth-at-4-46-in-april-vs-4-43-in-march-4-48-year-ago/"
-    },
-    {
-      "title": "US ATLANTA FED SURVEY: US BUSINESSES SEE YEAR AHEAD REVENUE GROWTH AT 3.67% IN APRIL VS. 3.60% IN MARCH, 3.64% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:52:00+00:00",
-      "timeDisplay": "2:52 PM",
-      "link": "https://www.tradingview.com/news/macenews:ea830d699094b:0-us-atlanta-fed-survey-us-businesses-see-year-ahead-revenue-growth-at-3-67-in-april-vs-3-60-in-march-3-64-year-ago/"
-    },
-    {
       "title": "Ethereum News: Consensys and Joseph Lubin Add 30,000 ETH to DeFi United",
       "source": "99Bitcoins",
       "color": "#00e5ff",
@@ -276,44 +425,12 @@
       "link": "https://www.tradingview.com/news/99Bitcoins:84dc24711094b:0-ethereum-news-consensys-and-joseph-lubin-add-30-000-eth-to-defi-united/"
     },
     {
-      "title": "US stocks mixed with megacap earnings, Fed on deck",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T14:42:54+00:00",
-      "timeDisplay": "2:42 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0YA:0-us-stocks-mixed-with-megacap-earnings-fed-on-deck/"
-    },
-    {
       "title": "US Crude Oil Inventories Fall More than Expected",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T14:35:20+00:00",
       "timeDisplay": "2:35 PM",
       "link": "https://www.tradingview.com/news/te_news:546128:0-us-crude-oil-inventories-fall-more-than-expected/"
-    },
-    {
-      "title": "US EIA CRUDE OIL INVENTORIES -6.2 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. +0.3 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:87bd76fb6094b:0-us-eia-crude-oil-inventories-6-2-mln-barrels-in-latest-week-from-previous-week-vs-0-3-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA DISTILLATE INVENTORIES -4.5 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -2.2 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:9fcec84cb094b:0-us-eia-distillate-inventories-4-5-mln-barrels-in-latest-week-from-previous-week-vs-2-2-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA GASOLINE INVENTORIES -6.1 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -2.1 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:23ca67eed094b:0-us-eia-gasoline-inventories-6-1-mln-barrels-in-latest-week-from-previous-week-vs-2-1-mln-markets-expected/"
     },
     {
       "title": "Here\u2019s How The Ethereum Vs. Solana Rivalry Is Going",
@@ -329,7 +446,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-29T13:58:00+00:00",
       "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429010070:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260429010071:0/"
     },
     {
       "title": "NY Engelhard Gold Prices - Apr 29",
@@ -388,14 +505,6 @@
       "link": "https://www.tradingview.com/news/the_block:452160b51094b:0-bitcoin-holds-above-77-000-as-etf-outflows-extend-ahead-of-what-may-be-powell-s-final-fomc-meeting/"
     },
     {
-      "title": "Growth flexes again as April rally vs Value nears a dot\u2011com-era record",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T13:18:57+00:00",
-      "timeDisplay": "1:18 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0O7:0-growth-flexes-again-as-april-rally-vs-value-nears-a-dot-com-era-record/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - Apr 29",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -436,62 +545,6 @@
       "link": "https://www.tradingview.com/news/te_news:546087:0-oil-extends-gains-amid-middle-east-uncertainty/"
     },
     {
-      "title": "MARCH US TRADE IN GOODS: EXPORTS FOOD $14,953 BLN, INDUSTRIAL $85,603; BLN CAP GOODS $66,729 BLN; AUTOS $15,565 BLN; CONSUMER $21,257 BLN",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:44:00+00:00",
-      "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/macenews:b24078868094b:0-march-us-trade-in-goods-exports-food-14-953-bln-industrial-85-603-bln-cap-goods-66-729-bln-autos-15-565-bln-consumer-21-257-bln/"
-    },
-    {
-      "title": "US MARCH INT'L TRADE IN GOODS: FOOD IMPORTS $17,488 BLN; INDUSTRIAL $54,269 BLN; CAP GOODS $120,287 BLN; AUTOS $35,901 BLN; CONSUMER $57,664 BLN",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:41:00+00:00",
-      "timeDisplay": "12:41 PM",
-      "link": "https://www.tradingview.com/news/macenews:ec3612931094b:0-us-march-int-l-trade-in-goods-food-imports-17-488-bln-industrial-54-269-bln-cap-goods-120-287-bln-autos-35-901-bln-consumer-57-664-bln/"
-    },
-    {
-      "title": "US MARCH WHOLESALE INVENTORIES +1.4%; RETAIL INVENTORIES +0.7%",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:7f5f0d5b9094b:0-us-march-wholesale-inventories-1-4-retail-inventories-0-7/"
-    },
-    {
-      "title": "MARCH US TRADE IN GOODS: EXPORTS $211.5 BLN; IMPORTS $299.3 BLN",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:25303d818094b:0-march-us-trade-in-goods-exports-211-5-bln-imports-299-3-bln/"
-    },
-    {
-      "title": "US RETAIL INVENTORIES +0.7% IN MARCH FROM FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:1dfe3f7c4094b:0-us-retail-inventories-0-7-in-march-from-feb/"
-    },
-    {
-      "title": "US WHOLESALE INVENTORIES +1.4% IN MARCH FROM FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:18d7df605094b:0-us-wholesale-inventories-1-4-in-march-from-feb/"
-    },
-    {
-      "title": "US CORE CAPITAL GOODS DURABLES ORDERS +3.3% IN MARCH FROM FEB. (VS. +0.5% MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:54a511c94094b:0-us-core-capital-goods-durables-orders-3-3-in-march-from-feb-vs-0-5-markets-expected/"
-    },
-    {
       "title": "Bitcoin Bottom or May Bust? Top 3 Price Predictions From Experts Highlight Crucial Cost Basis",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -524,36 +577,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0HQ:0-stocks-fall-oil-rises-traders-wait-for-tech-earnings-and-fed/"
     },
     {
-      "title": "DL Holdings Produces 112.1900 BTC From March 1 To April 28",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T11:41:36+00:00",
-      "timeDisplay": "11:41 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41C0YH:0-dl-holdings-produces-112-1900-btc-from-march-1-to-april-28/"
-    },
-    {
-      "title": "Bitcoin, XRP and Ethereum Prices Rise. What's Lifting Cryptos. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:39:00+00:00",
-      "timeDisplay": "11:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429004166:0/"
-    },
-    {
       "title": "Oil Gains Further as Prolonged U.S.-Iran Impasse Deepens Supply Shock \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T11:35:00+00:00",
       "timeDisplay": "11:35 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429007736:0/"
-    },
-    {
-      "title": "Bitcoin Rises Modestly as U.S. Stock Futures Rise \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:18:00+00:00",
-      "timeDisplay": "11:18 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429007460:0/"
     },
     {
       "title": "European stocks fall as traders wait for tech earnings, Fed meeting",
@@ -610,46 +639,6 @@
       "timestamp": "2026-04-29T08:33:00+00:00",
       "timeDisplay": "8:33 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429003421:0/"
-    },
-    {
-      "title": "Decade-Dormant Ethereum Whale Moves $22.88 Million in ETH to New Wallet",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T07:48:59+00:00",
-      "timeDisplay": "7:48 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:ba272ef56094b:0-decade-dormant-ethereum-whale-moves-22-88-million-in-eth-to-new-wallet/"
-    },
-    {
-      "title": "Goldman Sachs Continues to See Gold at $5,400 by Year-End \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T07:45:00+00:00",
-      "timeDisplay": "7:45 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429003042:0/"
-    },
-    {
-      "title": "Global gold demand rises 2% in January-March quarter on strong bar, coin buying: WGC",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T07:40:10+00:00",
-      "timeDisplay": "7:40 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:6a1736d33094b:0-global-gold-demand-rises-2-in-january-march-quarter-on-strong-bar-coin-buying-wgc/"
-    },
-    {
-      "title": "Gold Falls as Investors Eye Powell Remarks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T07:39:00+00:00",
-      "timeDisplay": "7:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429003012:0/"
-    },
-    {
-      "title": "Gold's Underlying Demand Remains Intact Amid Broader Macro Uncertainty \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T07:17:00+00:00",
-      "timeDisplay": "7:17 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429002899:0/"
     }
   ]
 }

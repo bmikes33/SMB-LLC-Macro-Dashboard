@@ -1,56 +1,72 @@
 {
-  "lastUpdated": "2026-04-29T22:29:34.442243+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 10:29 PM UTC",
+  "lastUpdated": "2026-04-29T23:29:16.224179+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 11:29 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Fed held rates unchanged but delivered most divided board vote since 1992, with Powell signaling policy is near neutral and acknowledging some wanted to remove easing bias. Oil surged on Iran tensions while stocks ended muted, dollar strengthened, and yields hit one-month highs on hawkish Fed shift.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Fed's hawkish pivot with divided board, dollar strength, and rising yields directly contradict the risk-on thesis and approach several invalidation thresholds.",
+    "macroSummary": "The Fed held rates unchanged with Powell signaling cautious optimism about the economy while maintaining an easing bias, though some dissent emerged within the FOMC. Oil prices surged on Middle East tensions while Bitcoin stalled around $75-80k resistance levels, and yields rose to one-month highs on hawkish Fed shifts.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Fed hawkish shift pushed yields higher and strengthened the dollar, creating cross-currents against the risk-on thesis despite continued equity resilience.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar gains reported after Fed holds rates and signals hawkish shift"
+        "signal": "Dollar gains after Fed decision, though specific level not cited in articles"
       },
       {
         "indicator": "MOVE",
         "level": "> 100",
-        "signal": "Yields hit one-month high on hawkish Fed shift suggests rates volatility increasing"
+        "signal": "Yields hit one-month highs on hawkish Fed shift, suggesting rising rates volatility"
       }
     ],
     "keySignals": [
       {
-        "signal": "Fed delivers most divided board vote since 1992 with hawkish shift sending yields to one-month high",
+        "signal": "Hawkish Fed shift sends yields to one-month high, pressuring duration-sensitive assets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar gains after Fed decision while yen weakens past 160",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Powell signals policy near neutral with some Fed members wanting to remove easing bias",
+        "signal": "Dollar gains after Fed holds rates unchanged, countering risk-on FX flows",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil soars on Iran tensions while stocks end muted in choppy session",
+        "signal": "Bitcoin recovery stalls and slips to $75k on Fed uncertainty and structural resistance",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold drops to 1-month low amid dollar strength and hawkish Fed",
+        "signal": "Oil soars on Iran/Middle East tensions while stocks end muted, showing defensive rotation",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "S&P 500 ETF flows surge suggesting continued equity demand despite cross-currents",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 which would trigger regime invalidation",
-      "Prepare to adjust BMNR ladder strikes higher if dollar continues strengthening",
-      "Consider reducing risk exposure given hawkish Fed pivot and geopolitical oil spike"
+      "Monitor BMNR ladder strikes as crypto weakness may accelerate put assignment risk",
+      "Watch DXY closely for break above 100 threshold signaling potential regime shift",
+      "Consider reducing Maturity overweight exposure given rising yield environment"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Large Players Have Built A Sell Wall At $80.5K\u2013$82K \u2013 Spoofing Or Structural Supply?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T23:00:35+00:00",
+      "timeDisplay": "11:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:7ce5fadba094b:0-bitcoin-large-players-have-built-a-sell-wall-at-80-5k-82k-spoofing-or-structural-supply/"
+    },
+    {
+      "title": "Bitcoin recovery stalls after Fed holds interest rates, citing \u2018uncertainty\u2019 in Middle East",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T22:22:54+00:00",
+      "timeDisplay": "10:22 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5f55a1985094b:0-bitcoin-recovery-stalls-after-fed-holds-interest-rates-citing-uncertainty-in-middle-east/"
+    },
     {
       "title": "Powell\u2019s Last Pause: A Divided Fed, a Frozen Bill, and Bitcoin\u2019s $250K Bull Case in Retreat",
       "source": "bravenewcoin",
@@ -484,6 +500,14 @@
       "link": "https://www.tradingview.com/news/beincrypto:48a10f7ab094b:0-strive-ceo-bitcoin-s-50-crash-shows-why-digital-credit-is-the-future/"
     },
     {
+      "title": "Crude Prices Soar on Prospects for Prolonged Closure of Hormuz",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T15:31:31+00:00",
+      "timeDisplay": "3:31 PM",
+      "link": "https://www.tradingview.com/news/barchart:fb0558c6a094b:0-crude-prices-soar-on-prospects-for-prolonged-closure-of-hormuz/"
+    },
+    {
       "title": "First-Ever Prediction Market ETF May Launch Next Week \u2013 Analyst Says Bitwise, GraniteShares May Follow RoundHill Lead",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -537,7 +561,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-29T13:58:00+00:00",
       "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429010071:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260429010070:0/"
     },
     {
       "title": "NY Engelhard Gold Prices - Apr 29",
@@ -572,28 +596,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0SM:0-yields-rise-as-iran-tensions-push-oil-prices-higher-ahead-of-fed-decision/"
     },
     {
-      "title": "Paul Tudor Jones says bitcoin is \u2018unequivocally the best inflation hedge\u2019",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:36:01+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/the_block:32076f333094b:0-paul-tudor-jones-says-bitcoin-is-unequivocally-the-best-inflation-hedge/"
-    },
-    {
       "title": "US 10Y Bond Yield Hits 4-week High",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T13:35:25+00:00",
       "timeDisplay": "1:35 PM",
       "link": "https://www.tradingview.com/news/te_news:546103:0-us-10y-bond-yield-hits-4-week-high/"
-    },
-    {
-      "title": "Bitcoin holds above $77,000 as ETF outflows extend ahead of what may be Powell\u2019s final FOMC meeting",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:22:14+00:00",
-      "timeDisplay": "1:22 PM",
-      "link": "https://www.tradingview.com/news/the_block:452160b51094b:0-bitcoin-holds-above-77-000-as-etf-outflows-extend-ahead-of-what-may-be-powell-s-final-fomc-meeting/"
     },
     {
       "title": "Comex Gold Delivery Intentions Breakdown - Apr 29",
@@ -642,14 +650,6 @@
       "timestamp": "2026-04-29T09:56:00+00:00",
       "timeDisplay": "9:56 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429004686:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds-update/"
-    },
-    {
-      "title": "Gold Hits 4-week Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:50:22+00:00",
-      "timeDisplay": "9:50 AM",
-      "link": "https://www.tradingview.com/news/te_news:546007:0-gold-hits-4-week-low/"
     }
   ]
 }

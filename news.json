@@ -1,45 +1,115 @@
 {
-  "lastUpdated": "2026-04-29T19:59:31.561753+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 07:59 PM UTC",
+  "lastUpdated": "2026-04-29T21:13:45.110989+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 09:13 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "The Fed held rates steady with the most divided board vote since 1992, while Powell signaled policy is near neutral with possible removal of easing bias ahead. Oil surged 7% on Middle East tensions, Treasury yields hit 4-week highs on hawkish Fed tone, and risk assets including stocks and crypto declined.",
+    "macroSummary": "The Fed held rates unchanged but delivered a hawkish shift with the most divided board vote since 1992, sending Treasury yields to 4-week highs and strengthening the dollar past key levels. Oil surged 7% on Middle East tensions while risk assets including Bitcoin, equities, and gold declined as markets reassessed the monetary policy outlook.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Fed's hawkish pivot with divided board vote, surging yields, and broad risk-asset selloff directly contradict the Risk-On regime classification.",
-    "thresholdWatches": [],
+    "regimePressureReason": "The hawkish Fed pivot with rising yields, dollar strength, and broad risk asset selloffs directly contradicts the Risk-On regime classification.",
+    "thresholdWatches": [
+      {
+        "indicator": "USDJPY",
+        "level": "< 155",
+        "signal": "Yen weakened past 160 according to Reuters, moving further from the carry unwind trigger threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Fed delivers most divided board vote since 1992 with hawkish statement driving Treasury yields to 4-week highs",
+        "signal": "Fed delivered most divided board vote since 1992 with hawkish shift sending yields to 4-week highs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Powell signals possible removal of easing bias at next meeting as policy moves toward neutral pace",
+        "signal": "Dollar gains after Fed decision while yen weakens past 160, moving away from carry unwind risks",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil surges 7% on Middle East geopolitical tensions while stocks and crypto decline broadly",
+        "signal": "Risk assets broadly decline with Bitcoin falling to $75K, S&P/Nasdaq flat after choppy session",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold drops to 1-month low despite geopolitical risk, suggesting dollar strength and rate concerns",
+        "signal": "Gold drops to 1-month low as hawkish Fed repricing drives real yields higher",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crypto and risk assets fall following Fed decision as traders cut risk exposure",
+        "signal": "Oil surges 7% on Middle East tensions, adding stagflationary pressure alongside hawkish Fed",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes closely as crypto weakness may accelerate put assignments",
-      "Consider reducing Maturity sector overweight given rising rate environment pressure on dividend proxies",
-      "Watch for VIX breach above 22 as multiple regime contradiction signals align"
+      "Monitor credit (HYG) closely for break below 79.00 as risk assets weaken following hawkish Fed",
+      "Consider reducing BMNR ladder exposure given crypto weakness and broader risk-off rotation",
+      "Watch for VIX > 22 break as equity volatility may follow hawkish Fed repricing"
     ]
   },
   "articles": [
+    {
+      "title": "S&P 500 ETFs Flows Surge as ARK Leads Outflows",
+      "source": "etfcom",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T21:00:05+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/etfcom:fd820fa7a094b:0-s-p-500-etfs-flows-surge-as-ark-leads-outflows/"
+    },
+    {
+      "title": "Dollar gains after Fed keeps rates unchanged and yen weakens past 160",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T20:42:18+00:00",
+      "timeDisplay": "8:42 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C18N:0-dollar-gains-after-fed-keeps-rates-unchanged-and-yen-weakens-past-160/"
+    },
+    {
+      "title": "TRANSCRIPT: Fed\u2019s Powell Q&A; to Stay on Fed Board after Warsh; Could Cut or Hike Rates Depending on What Happens",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T20:35:00+00:00",
+      "timeDisplay": "8:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:c826b6345094b:0-transcript-fed-s-powell-q-a-to-stay-on-fed-board-after-warsh-could-cut-or-hike-rates-depending-on-what-happens/"
+    },
+    {
+      "title": "/C O R R E C T I O N -- Blockchain.com/",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T20:34:04+00:00",
+      "timeDisplay": "8:34 PM",
+      "link": "https://www.tradingview.com/news/chainwire:aa5d3f05f094b:0-c-o-r-r-e-c-t-i-o-n-blockchain-com/"
+    },
+    {
+      "title": "Analyst Reveals Bitcoin Big Picture, Predicts 50% Crash By EOY",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T20:30:31+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:28af90497094b:0-analyst-reveals-bitcoin-big-picture-predicts-50-crash-by-eoy/"
+    },
+    {
+      "title": "Bitcoin slips to $75,000 as Fed holds rates, dissenters chill Warsh \u2018pivot party\u2019",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T20:19:58+00:00",
+      "timeDisplay": "8:19 PM",
+      "link": "https://www.tradingview.com/news/the_block:6cd8ebe87094b:0-bitcoin-slips-to-75-000-as-fed-holds-rates-dissenters-chill-warsh-pivot-party/"
+    },
+    {
+      "title": "S&P, Nasdaq flat after choppy session; Powell signals he\u2019s not going anywhere",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T20:18:26+00:00",
+      "timeDisplay": "8:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C1B8:0-s-p-nasdaq-flat-after-choppy-session-powell-signals-he-s-not-going-anywhere/"
+    },
+    {
+      "title": "Hawkish Fed shift sends yields to one-month high",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T20:15:31+00:00",
+      "timeDisplay": "8:15 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C15S:0-hawkish-fed-shift-sends-yields-to-one-month-high/"
+    },
     {
       "title": "Oil soars, stocks dip on Iran worries, earnings in focus after Fed",
       "source": "reuters",
@@ -207,22 +277,6 @@
       "timestamp": "2026-04-29T18:45:00+00:00",
       "timeDisplay": "6:45 PM",
       "link": "https://www.tradingview.com/news/macenews:e1261b429094b:0-fed-s-powell-q-a/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: STILL EXPECT TARIFF PRESSURE ON INFLATION TO SUBSIDE IN NEXT SEVERAL QUARTERS; TO BE 'VERY CAUTIOUS;' ENERGY PRICES HAVEN'T PEAKED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:43:00+00:00",
-      "timeDisplay": "6:43 PM",
-      "link": "https://www.tradingview.com/news/macenews:d389d9f18094b:0-fed-s-powell-q-a-still-expect-tariff-pressure-on-inflation-to-subside-in-next-several-quarters-to-be-very-cautious-energy-prices-haven-t-peaked/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: CONCERNED ABOUT ONGOING LEGAL ATTACKS ON FED WHICH ARE 'BATTERING' INSTITUTION; NOT CONCERNED ABOUT PERSONAL ATTACK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:40:00+00:00",
-      "timeDisplay": "6:40 PM",
-      "link": "https://www.tradingview.com/news/macenews:239e45088094b:0-fed-s-powell-q-a-concerned-about-ongoing-legal-attacks-on-fed-which-are-battering-institution-not-concerned-about-personal-attack/"
     },
     {
       "title": "Bitcoin falls as traders cut risk ahead of FOMC: Will TradFi, spot ETF volumes bolster $70K support?",
@@ -545,30 +599,6 @@
       "link": "https://www.tradingview.com/news/te_news:546087:0-oil-extends-gains-amid-middle-east-uncertainty/"
     },
     {
-      "title": "Bitcoin Bottom or May Bust? Top 3 Price Predictions From Experts Highlight Crucial Cost Basis",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:26:00+00:00",
-      "timeDisplay": "12:26 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:eb434346f094b:0-bitcoin-bottom-or-may-bust-top-3-price-predictions-from-experts-highlight-crucial-cost-basis/"
-    },
-    {
-      "title": "Euro Could Fall if ECB Fails to Commit to Raising Rates \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:20:00+00:00",
-      "timeDisplay": "12:20 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429008661:0/"
-    },
-    {
-      "title": "Bitcoin (BTC) Price Compression Signals Imminent Move\u2014Here are the Key Levels to Watch Next",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:48:05+00:00",
-      "timeDisplay": "11:48 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:a1ea855f1094b:0-bitcoin-btc-price-compression-signals-imminent-move-here-are-the-key-levels-to-watch-next/"
-    },
-    {
       "title": "Stocks fall, oil rises, traders wait for tech earnings and Fed",
       "source": "reuters",
       "color": "#ff6d00",
@@ -615,30 +645,6 @@
       "timestamp": "2026-04-29T09:46:06+00:00",
       "timeDisplay": "9:46 AM",
       "link": "https://www.tradingview.com/news/coinpedia:86f7830fe094b:0-fomc-meeting-today-powell-speech-and-fed-interest-rate-decision-could-move-btc-eth-xrp-and-altcoins/"
-    },
-    {
-      "title": "Oil Prices More Likely to Move Canadian Dollar Than Rate Decision \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:42:00+00:00",
-      "timeDisplay": "9:42 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429004535:0/"
-    },
-    {
-      "title": "Near-Term Impact of U.A.E.'s Exit From OPEC Likely Limited \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:32:00+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429004385:0/"
-    },
-    {
-      "title": "Oil-Producing Nations to Navigate Tectonic Market Shift \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T08:33:00+00:00",
-      "timeDisplay": "8:33 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429003421:0/"
     }
   ]
 }

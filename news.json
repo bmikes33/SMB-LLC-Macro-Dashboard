@@ -1,51 +1,133 @@
 {
-  "lastUpdated": "2026-04-28T23:52:55.241273+00:00",
-  "lastUpdatedDisplay": "Apr 28, 2026 \u2014 11:52 PM UTC",
+  "lastUpdated": "2026-04-29T01:29:07.073142+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 01:29 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed risk-off behavior with tech stocks weighing on equities, dollar strengthening, and oil prices rising on Iran/UAE geopolitical tensions including Strait of Hormuz closure concerns. Bitcoin dropped below $76K amid negative Coinbase premium and bearish signals, while Treasury yields rose alongside oil prices.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Multiple headlines explicitly mention 'risk-off mood' and dollar strength, directly contradicting the current Risk-On regime classification.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil",
-        "level": "$100",
-        "signal": "Headlines reference '$100 oil sparks fresh Asia crisis fears' suggesting oil approaching critical psychological level"
-      }
-    ],
+    "macroSummary": "Headlines show mixed risk sentiment with dollar strengthening on risk-off mood, oil rising on Middle East tensions and UAE-OPEC dynamics, while tech and crypto assets face selling pressure. FOMC decision anticipation is keeping currency markets in consolidation mode, with geopolitical tensions supporting commodities but weighing on risk assets.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Multiple headlines explicitly cite 'risk-off mood' driving dollar gains, tech weakness weighing on stocks, and crypto selling pressure, contradicting the high-confidence Risk-On regime classification.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Reuters explicitly states 'Dollar gains on risk-off mood' contradicting Risk-On regime",
+        "signal": "Reuters reports dollar gains specifically driven by 'risk-off mood' with tech sector weakness weighing on stocks",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices rising on geopolitical tensions with Strait of Hormuz closed tightening global supplies",
+        "signal": "Bitcoin drops below $76K with negative Coinbase premium and over $800M in weekly losses signaling crypto risk-off",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks closed lower with tech weighing on markets",
+        "signal": "Treasury yields rising with oil on dimming Iran resolution hopes indicates geopolitical risk premium building",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin Coinbase premium turns negative with price dropping below $76K amid bearish signals",
+        "signal": "Asian currencies consolidating ahead of FOMC decision shows defensive positioning rather than risk-taking",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields rising alongside oil prices on dimming Iran resolution hopes",
-        "tag": "CONTRADICTS"
+        "signal": "Oil prices supported by Middle East tensions and OPEC dynamics providing commodity inflation backdrop",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Reassess Risk-On regime classification given explicit 'risk-off mood' references in multiple headlines",
-      "Monitor BMNR ladder for defensive adjustments if crypto weakness continues with negative Coinbase premium",
-      "Watch oil approaching $100 threshold as potential catalyst for broader risk-off rotation"
+      "Monitor BMNR ladder closely as crypto risk-off sentiment could pressure ETH-linked instruments",
+      "Consider reducing short book exposure given mixed signals and potential regime transition",
+      "Watch for VIX and HYG movement confirmation of risk-off shift in next session"
     ]
   },
   "articles": [
+    {
+      "title": "Asian Currencies Consolidate Ahead of FOMC Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:50:00+00:00",
+      "timeDisplay": "12:50 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428015691:0/"
+    },
+    {
+      "title": "Dollar steady as investors brace for Fed decision in face of war",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T00:44:30+00:00",
+      "timeDisplay": "12:44 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C00A:0-dollar-steady-as-investors-brace-for-fed-decision-in-face-of-war/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T00:18:16+00:00",
+      "timeDisplay": "12:18 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C005:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Rising Oil, 'Not-so-Hawkish' BOJ Gov. Point to Potential Dollar Breakout Above 160 Yen \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:11:00+00:00",
+      "timeDisplay": "12:11 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428015608:0/"
+    },
+    {
+      "title": "Key facts: Bitcoin $79K; Strategy buys; ETFs -$273M; Novogratz cautious",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:07:53+00:00",
+      "timeDisplay": "12:07 AM",
+      "link": "https://www.tradingview.com/news/tradingview:d7bacfdc3549a:0-key-facts-bitcoin-79k-strategy-buys-etfs-273m-novogratz-cautious/"
+    },
+    {
+      "title": "Key facts: SEC Chair Says ETH Not a Security; Whale Moves, $155M Inflows",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:07:53+00:00",
+      "timeDisplay": "12:07 AM",
+      "link": "https://www.tradingview.com/news/tradingview:322013c1764e6:0-key-facts-sec-chair-says-eth-not-a-security-whale-moves-155m-inflows/"
+    },
+    {
+      "title": "Oil Falls on UAE's Plan to Exit OPEC, But Mideast Tensions Limit Decline \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:07:00+00:00",
+      "timeDisplay": "12:07 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428015596:0/"
+    },
+    {
+      "title": "Bitmine\u2019s Ethereum Accumulation Signals A New Corporate Playbook",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:00:22+00:00",
+      "timeDisplay": "12:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:d56ac7001094b:0-bitmine-s-ethereum-accumulation-signals-a-new-corporate-playbook/"
+    },
+    {
+      "title": "Gold Holds Decline on Inflation Worries",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T23:52:45+00:00",
+      "timeDisplay": "11:52 PM",
+      "link": "https://www.tradingview.com/news/te_news:545726:0-gold-holds-decline-on-inflation-worries/"
+    },
+    {
+      "title": "Bitcoin rally falters as AI industry weakens and CLARITY Act approval odds fall",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T23:47:37+00:00",
+      "timeDisplay": "11:47 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:860bc5fd2094b:0-bitcoin-rally-falters-as-ai-industry-weakens-and-clarity-act-approval-odds-fall/"
+    },
+    {
+      "title": "Oil Holds Gains Amid Middle East Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T23:37:45+00:00",
+      "timeDisplay": "11:37 PM",
+      "link": "https://www.tradingview.com/news/te_news:545724:0-oil-holds-gains-amid-middle-east-uncertainty/"
+    },
     {
       "title": "Gold Edges Lower on Prospects of Dollar Strength \u2014 Market Talk",
       "source": "dow-jones",
@@ -335,22 +417,6 @@
       "link": "https://www.tradingview.com/news/gurufocus:8727d11c5094b:0-emerging-markets-rise-16-in-2026-outpacing-s-p-500-by-wide-margin/"
     },
     {
-      "title": "Tether develops modular bitcoin mining systems with Canaan in latest infrastructure push",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:53:58+00:00",
-      "timeDisplay": "2:53 PM",
-      "link": "https://www.tradingview.com/news/the_block:b1ae9ff17094b:0-tether-develops-modular-bitcoin-mining-systems-with-canaan-in-latest-infrastructure-push/"
-    },
-    {
-      "title": "Bitcoin Pullback May Reach to $75k, Says Bitfinex \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:52:00+00:00",
-      "timeDisplay": "2:52 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428009379:0/"
-    },
-    {
       "title": "Crypto Markets Shed $40 Billion in De-Risking Ahead of Powell\u2019s Final FOMC Decision",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -573,78 +639,6 @@
       "timestamp": "2026-04-28T13:02:56+00:00",
       "timeDisplay": "1:02 PM",
       "link": "https://www.tradingview.com/news/coinpedia:132dbae55094b:0-ethereum-price-hit-2021-levels-after-five-years-is-it-time-to-sell-eth/"
-    },
-    {
-      "title": "US CASE SHILLER 20-CITY HOUSING PRICE INDEX 0.9% IN FEB. FROM YEAR AGO (VS. +1.1% MARKETS EXPECTED) VS. 1.2% IN JAN.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:02:00+00:00",
-      "timeDisplay": "1:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:1f85ca8c5094b:0-us-case-shiller-20-city-housing-price-index-0-9-in-feb-from-year-ago-vs-1-1-markets-expected-vs-1-2-in-jan/"
-    },
-    {
-      "title": "US FHFA HOUSE PRICE INDEX (ADJUSTED) 0.0% IN FEBRUARY VS +0.2% IN JANUARY; +1.7% IN FEBRUARY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:02:00+00:00",
-      "timeDisplay": "1:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:46a500ffb094b:0-us-fhfa-house-price-index-adjusted-0-0-in-february-vs-0-2-in-january-1-7-in-february-2025/"
-    },
-    {
-      "title": "US FHFA HOUSE PRICE INDEX (UNADJUSTED) +0.9% IN FEBRUARY VS -0.1% IN JANUARY; +1.8% IN FEBRUARY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:02:00+00:00",
-      "timeDisplay": "1:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:7a9870bc8094b:0-us-fhfa-house-price-index-unadjusted-0-9-in-february-vs-0-1-in-january-1-8-in-february-2025/"
-    },
-    {
-      "title": "Oil Rises for 7th Session",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T12:54:50+00:00",
-      "timeDisplay": "12:54 PM",
-      "link": "https://www.tradingview.com/news/te_news:545612:0-oil-rises-for-7th-session/"
-    },
-    {
-      "title": "Oil prices hit $110 and stocks fall on Iran impasse and AI",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T12:24:36+00:00",
-      "timeDisplay": "12:24 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41B0IY:0-oil-prices-hit-110-and-stocks-fall-on-iran-impasse-and-ai/"
-    },
-    {
-      "title": "US SEC seeks comment on NYSE Arca proposal for 85% eligible-asset rule in crypto ETF listings",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T12:10:38+00:00",
-      "timeDisplay": "12:10 PM",
-      "link": "https://www.tradingview.com/news/the_block:93d74546b094b:0-us-sec-seeks-comment-on-nyse-arca-proposal-for-85-eligible-asset-rule-in-crypto-etf-listings/"
-    },
-    {
-      "title": "Gold Slumps to One-Month Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T11:53:41+00:00",
-      "timeDisplay": "11:53 AM",
-      "link": "https://www.tradingview.com/news/te_news:545591:0-gold-slumps-to-one-month-low/"
-    },
-    {
-      "title": "Is Ethereum safe above $2K? Traders are watching these ETH price levels",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T11:52:34+00:00",
-      "timeDisplay": "11:52 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e219e0c87094b:0-is-ethereum-safe-above-2k-traders-are-watching-these-eth-price-levels/"
-    },
-    {
-      "title": "US Crude Oil Futures Top $100",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T11:25:34+00:00",
-      "timeDisplay": "11:25 AM",
-      "link": "https://www.tradingview.com/news/te_news:545588:0-us-crude-oil-futures-top-100/"
     }
   ]
 }

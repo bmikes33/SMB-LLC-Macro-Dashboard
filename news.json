@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-04-29T07:54:19.909738+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 07:54 AM UTC",
+  "lastUpdated": "2026-04-29T09:53:57.160720+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 09:53 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are positioning cautiously ahead of the Fed decision amid escalating Iran war tensions that are driving safe-haven flows into gold and the dollar. Energy markets show supply concerns with oil inventories falling unexpectedly and potential Strait of Hormuz disruptions, while Bitcoin and equities face mixed signals between earnings optimism and geopolitical risk.",
+    "macroSummary": "Markets are caught between competing forces as Iran war tensions drive safe-haven flows into dollar and gold while Fed decision uncertainty looms. Energy markets show supply concerns with Brent hitting one-month highs on potential Strait of Hormuz disruptions, though stocks rally on earnings optimism and Bitcoin shows technical strength.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Iran war escalation is driving classic risk-off behaviors with dollar strength, gold safe-haven demand, and energy supply fears that contradict the high-confidence Risk-On regime.",
+    "regimePressureReason": "Safe-haven flows into dollar amid war tensions directly contradict the Risk-On regime, with multiple headlines emphasizing defensive positioning ahead of Fed decision.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar rising on Iran war tensions and Fed positioning"
+        "signal": "Dollar rises and firms on Iran war tensions and safe-haven demand"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran war tensions driving safe-haven dollar demand and potential energy supply disruptions",
+        "signal": "Dollar gaining safe-haven bid amid Iran war tensions, pressuring risk-on thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold maintaining safe-haven bid despite rate fears, with Goldman maintaining $5,400 target",
+        "signal": "Gold squeezed between safe-haven demand and rate fears, showing defensive positioning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Energy prices facing upward pressure from unexpected inventory draws and shipping disruption risks",
-        "tag": "CONTRADICTS"
+        "signal": "Energy volatility driving Treasury volatility with Hormuz disruption risks",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin showing mixed signals with some risk-on flow but facing critical resistance levels",
+        "signal": "Stocks rally on earnings optimism despite geopolitical uncertainty",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin technical signals mixed with hash ribbons buy signal but critical retest at $76k",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Equity markets split between earnings optimism and geopolitical/AI concerns",
-        "tag": "MIXED"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for approach to 100 threshold that would signal regime invalidation",
-      "Consider reducing BMNR ladder exposure if geopolitical tensions escalate further",
-      "Watch energy sector positioning as supply disruption risks build"
+      "Monitor DXY closely for breach above 100 level given safe-haven flows",
+      "Consider tightening BMNR put ladder strikes if crypto volatility increases from Fed decision",
+      "Watch MOVE index for energy-driven rates volatility approaching 100 threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Prices More Likely to Move Canadian Dollar Than Rate Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:42:00+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429004535:0/"
+    },
+    {
+      "title": "Gold Squeezed Between Safe-Haven Allure, Rate Fears as Underlying Demand Holds \u2014 Update",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:41:00+00:00",
+      "timeDisplay": "9:41 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429004513:0/"
+    },
+    {
+      "title": "Near-Term Impact of U.A.E.'s Exit From OPEC Likely Limited \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:32:00+00:00",
+      "timeDisplay": "9:32 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429004385:0/"
+    },
+    {
+      "title": "Bitcoin, stocks risk 'months' of losses as Kevin Warsh Becomes Fed chair",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:19:21+00:00",
+      "timeDisplay": "9:19 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8f351aeeb094b:0-bitcoin-stocks-risk-months-of-losses-as-kevin-warsh-becomes-fed-chair/"
+    },
+    {
+      "title": "Bitcoin Is in a Funk. How the Fed, Big Tech Earnings Can Boost Cryptos. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T09:17:00+00:00",
+      "timeDisplay": "9:17 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429004166:0/"
+    },
+    {
+      "title": "Dollar Could Weaken Despite Relatively Resilient U.S. Growth \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T08:57:00+00:00",
+      "timeDisplay": "8:57 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429003787:0/"
+    },
+    {
+      "title": "Oil-Producing Nations to Navigate Tectonic Market Shift \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T08:33:00+00:00",
+      "timeDisplay": "8:33 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429003421:0/"
+    },
+    {
+      "title": "Bitcoin Hash Ribbons Flash Buy Signal, But This Time Comes With A Warning",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T08:30:41+00:00",
+      "timeDisplay": "8:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:49fec28ec094b:0-bitcoin-hash-ribbons-flash-buy-signal-but-this-time-comes-with-a-warning/"
+    },
+    {
+      "title": "Dollar gets safe-haven lift ahead of Fed decision in face of war",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T08:05:29+00:00",
+      "timeDisplay": "8:05 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0BT:0-dollar-gets-safe-haven-lift-ahead-of-fed-decision-in-face-of-war/"
+    },
+    {
+      "title": "Decade-Dormant Ethereum Whale Moves $22.88 Million in ETH to New Wallet",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T07:48:59+00:00",
+      "timeDisplay": "7:48 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:ba272ef56094b:0-decade-dormant-ethereum-whale-moves-22-88-million-in-eth-to-new-wallet/"
+    },
     {
       "title": "Goldman Sachs Continues to See Gold at $5,400 by Year-End \u2014 Market Talk",
       "source": "dow-jones",
@@ -53,6 +133,14 @@
       "timestamp": "2026-04-29T07:45:00+00:00",
       "timeDisplay": "7:45 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429003042:0/"
+    },
+    {
+      "title": "Global gold demand rises 2% in January-March quarter on strong bar, coin buying: WGC",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T07:40:10+00:00",
+      "timeDisplay": "7:40 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:6a1736d33094b:0-global-gold-demand-rises-2-in-january-march-quarter-on-strong-bar-coin-buying-wgc/"
     },
     {
       "title": "Gold Falls as Investors Eye Powell Remarks \u2014 Market Talk",
@@ -173,6 +261,14 @@
       "timestamp": "2026-04-29T05:04:00+00:00",
       "timeDisplay": "5:04 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429000641:0/"
+    },
+    {
+      "title": "Brent hits one-month high over concerns about prolonged Hormuz disruption",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T04:59:39+00:00",
+      "timeDisplay": "4:59 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C03Y:0-brent-hits-one-month-high-over-concerns-about-prolonged-hormuz-disruption/"
     },
     {
       "title": "Fed sails into unchartered waters as Powell bows out",
@@ -527,30 +623,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B19Z:0-oil-prices-rise-with-eyes-on-uae-ai-concerns-weigh-on-stocks/"
     },
     {
-      "title": "Bitcoin Is The \u2018Best\u2019 Inflation Hedge, Says Veteran Macro Trader Paul Tudor Jones",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T18:10:03+00:00",
-      "timeDisplay": "6:10 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:f0ad6cac9094b:0/"
-    },
-    {
-      "title": "Michael Selig Says CFTC Will Use AI To Filter Crypto Applications, Target Fraud And Insider Trading: Report",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T18:00:40+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:3f553436b094b:0/"
-    },
-    {
-      "title": "Michael Saylor Says Strategy\u2019s STRC Push Into ETFs Signals Next Phase of Bitcoin Demand",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T17:55:54+00:00",
-      "timeDisplay": "5:55 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:0e1ca09b6094b:0/"
-    },
-    {
       "title": "Semiconductors: Primed for a bigger fall or more room to run?",
       "source": "reuters",
       "color": "#ff6d00",
@@ -573,78 +645,6 @@
       "timestamp": "2026-04-28T16:59:39+00:00",
       "timeDisplay": "4:59 PM",
       "link": "https://www.tradingview.com/news/invezz:acaa8fd5f094b:0-bitmine-stock-analysis-what-next-for-this-future-free-cash-flow-machine/"
-    },
-    {
-      "title": "Dollar firms, yen steady as markets weigh Iran war, split BOJ decision",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T16:22:51+00:00",
-      "timeDisplay": "4:22 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B13Y:0-dollar-firms-yen-steady-as-markets-weigh-iran-war-split-boj-decision/"
-    },
-    {
-      "title": "Markets start down the Warsh path\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T16:22:19+00:00",
-      "timeDisplay": "4:22 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B16B:0-markets-start-down-the-warsh-path/"
-    },
-    {
-      "title": "Why Are Bitcoin & Ethereum Prices Dropping? What\u2019s Behind Today\u2019s Crypto Market Correction?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T16:10:30+00:00",
-      "timeDisplay": "4:10 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:98fb3b976094b:0-why-are-bitcoin-ethereum-prices-dropping-what-s-behind-today-s-crypto-market-correction/"
-    },
-    {
-      "title": "Crude Prices Strengthen as Global Oil Supplies Tighten with Strait of Hormuz Closed",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T15:41:43+00:00",
-      "timeDisplay": "3:41 PM",
-      "link": "https://www.tradingview.com/news/barchart:e424cebc0094b:0-crude-prices-strengthen-as-global-oil-supplies-tighten-with-strait-of-hormuz-closed/"
-    },
-    {
-      "title": "Binance Ethereum Supply Hits 2020 Levels While Staking Locks A Third: Repricing Ahead?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T15:30:58+00:00",
-      "timeDisplay": "3:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:6a0e3fdb1094b:0-binance-ethereum-supply-hits-2020-levels-while-staking-locks-a-third-repricing-ahead/"
-    },
-    {
-      "title": "Twofer Tuesday: Sun shines on consumers, rain falls on home prices",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T15:07:46+00:00",
-      "timeDisplay": "3:07 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B14M:0-twofer-tuesday-sun-shines-on-consumers-rain-falls-on-home-prices/"
-    },
-    {
-      "title": "Emerging Markets Rise 16% in 2026, Outpacing S&P 500 by Wide Margin",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T15:00:31+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:8727d11c5094b:0-emerging-markets-rise-16-in-2026-outpacing-s-p-500-by-wide-margin/"
-    },
-    {
-      "title": "Crypto Markets Shed $40 Billion in De-Risking Ahead of Powell\u2019s Final FOMC Decision",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:43:46+00:00",
-      "timeDisplay": "2:43 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:7bf41d418094b:0-crypto-markets-shed-40-billion-in-de-risking-ahead-of-powell-s-final-fomc-decision/"
-    },
-    {
-      "title": "US DALLAS FED TEXAS SERVICE SECTOR EMPLOYMENT INDEX -1.0 IN APRIL VS. 2.5 IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:40:00+00:00",
-      "timeDisplay": "2:40 PM",
-      "link": "https://www.tradingview.com/news/macenews:b7cd58869094b:0-us-dallas-fed-texas-service-sector-employment-index-1-0-in-april-vs-2-5-in-march/"
     }
   ]
 }

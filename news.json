@@ -1,56 +1,155 @@
 {
-  "lastUpdated": "2026-04-29T15:10:01.485032+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 03:10 PM UTC",
+  "lastUpdated": "2026-04-29T16:59:31.605725+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 04:59 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Mixed US economic data shows stronger than expected durable goods orders and housing starts offsetting weaker building permits, while oil prices surge on Middle East tensions and inventory drawdowns. Dollar strengthens as non-US stocks fall, with 10-year Treasury yields hitting 4-week highs ahead of the Fed decision, creating cross-currents in risk assets.",
+    "macroSummary": "Markets show mixed signals with oil prices rising on Iran tensions and inventory draws, dollar strengthening ahead of Fed decision, while stocks remain mixed with BofA noting continued client selling of US equities. Treasury yields hit 4-week highs as the market awaits the Fed hold decision, with cryptocurrencies showing volatility around key levels.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Rising yields, dollar strength, and oil price spikes are creating early reflation/stagflation pressures that contradict the clean Risk-On narrative, while Arthur Hayes warns of potential credit cycle reversal.",
+    "regimePressureReason": "Dollar strength, rising yields, continued equity outflows from BofA clients, and crypto weakness challenge the Risk-On thesis despite oil gains.",
     "thresholdWatches": [
       {
-        "indicator": "10Y Treasury Yield",
-        "level": "4-week high",
-        "signal": "Yields rising on Iran tensions and oil spike, pressuring growth assets"
-      },
-      {
-        "indicator": "DXY",
-        "level": "Strengthening",
-        "signal": "Dollar gaining on non-US stock weakness, approaching risk-off threshold"
+        "indicator": "USDJPY",
+        "level": "> 160",
+        "signal": "Yen weakening past 160 approaches carry unwind trigger territory"
       }
     ],
     "keySignals": [
       {
-        "signal": "Arthur Hayes warns of 'Great Depression-style' bear market from credit cycle reversal",
+        "signal": "BofA clients continue selling US stocks despite market gains, indicating institutional skepticism",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "10-year Treasury yields hit 4-week highs on oil spike and Iran tensions",
+        "signal": "Dollar rises with Treasury yields hitting 4-week highs, showing safe-haven bid emerging",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthens as non-US stocks fall, suggesting early risk-off rotation",
-        "tag": "CONTRADICTS"
+        "signal": "USDJPY breaks above 160 level, moving closer to historical carry unwind trigger",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil prices extending gains on Middle East uncertainty, raising stagflation risks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US durable goods orders and housing starts beat expectations, supporting growth thesis",
+        "signal": "Oil inventory draws significantly exceed expectations, supporting energy complex",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin falls below $77K with crypto markets showing weakness ahead of Fed decision",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would flip regime to Risk-Off",
-      "Watch oil price action and 10Y yields - sustained rise could trigger MOVE > 100 threshold",
-      "Consider tightening BMNR put ladder strikes if crypto weakness accelerates with rising yields"
+      "Monitor USDJPY closely as break above 160 approaches carry unwind threshold of 155 reversal",
+      "Consider tightening BMNR put ladder strikes given crypto weakness and dollar strength",
+      "Watch for DXY approaching 100 level which would flip rates group assessment"
     ]
   },
   "articles": [
+    {
+      "title": "Bank of Canada Messaging Indicates Rates Will Remain Steady For a While \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:25:00+00:00",
+      "timeDisplay": "4:25 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429011858:0/"
+    },
+    {
+      "title": "Bank of Canada Remains on Sidelines as Uncertainty Looms \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:23:00+00:00",
+      "timeDisplay": "4:23 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429011845:0/"
+    },
+    {
+      "title": "Treasury Yields, Dollar Rise Ahead of Expected Fed Hold \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:19:00+00:00",
+      "timeDisplay": "4:19 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429011788:0/"
+    },
+    {
+      "title": "MSTR, ASST Stocks Slide Ahead Of Fed Decision \u2013 B. Riley Flags \u2018Attractive Entry Point\u2019",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:16:20+00:00",
+      "timeDisplay": "4:16 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:e479c7e67094b:0/"
+    },
+    {
+      "title": "Market up, Money out: BofA clients keep selling US stocks\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T16:10:06+00:00",
+      "timeDisplay": "4:10 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C104:0-market-up-money-out-bofa-clients-keep-selling-us-stocks/"
+    },
+    {
+      "title": "Oil Futures Extend Gains As U.S. Inventories Drop \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:01:00+00:00",
+      "timeDisplay": "4:01 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429011529:0/"
+    },
+    {
+      "title": "Mixin Launches Gasless Experience, Removing Native Gas Barriers for Cross-Chain Trading and Transfers",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T16:00:15+00:00",
+      "timeDisplay": "4:00 PM",
+      "link": "https://www.tradingview.com/news/chainwire:a409c604c094b:0-mixin-launches-gasless-experience-removing-native-gas-barriers-for-cross-chain-trading-and-transfers/"
+    },
+    {
+      "title": "Oil rises, stocks dip with Iran, earnings and Fed in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T15:40:37+00:00",
+      "timeDisplay": "3:40 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0RJ:0-oil-rises-stocks-dip-with-iran-earnings-and-fed-in-focus/"
+    },
+    {
+      "title": "Strive CEO: Bitcoin\u2019s 50% Crash Shows Why Digital Credit Is the Future",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T15:37:35+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:48a10f7ab094b:0-strive-ceo-bitcoin-s-50-crash-shows-why-digital-credit-is-the-future/"
+    },
+    {
+      "title": "Dollar rises before Fed decision and yen weakens past 160",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T15:34:13+00:00",
+      "timeDisplay": "3:34 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0T3:0-dollar-rises-before-fed-decision-and-yen-weakens-past-160/"
+    },
+    {
+      "title": "First-Ever Prediction Market ETF May Launch Next Week \u2013 Analyst Says Bitwise, GraniteShares May Follow RoundHill Lead",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T15:17:50+00:00",
+      "timeDisplay": "3:17 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:63fb18991094b:0/"
+    },
+    {
+      "title": "Fed day data: Durable goods, housing starts/building permits, et al",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T15:16:39+00:00",
+      "timeDisplay": "3:16 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0ZE:0-fed-day-data-durable-goods-housing-starts-building-permits-et-al/"
+    },
+    {
+      "title": "Oil Prices Extend Gains",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T15:15:09+00:00",
+      "timeDisplay": "3:15 PM",
+      "link": "https://www.tradingview.com/news/te_news:546139:0-oil-prices-extend-gains/"
+    },
     {
       "title": "Arthur Hayes Warns Of \u2018Great Depression-Style\u2019 Bear Market From Credit Cycle Reversal",
       "source": "stocktwits",
@@ -82,6 +181,14 @@
       "timestamp": "2026-04-29T14:52:00+00:00",
       "timeDisplay": "2:52 PM",
       "link": "https://www.tradingview.com/news/macenews:ea830d699094b:0-us-atlanta-fed-survey-us-businesses-see-year-ahead-revenue-growth-at-3-67-in-april-vs-3-60-in-march-3-64-year-ago/"
+    },
+    {
+      "title": "Ethereum News: Consensys and Joseph Lubin Add 30,000 ETH to DeFi United",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T14:42:59+00:00",
+      "timeDisplay": "2:42 PM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:84dc24711094b:0-ethereum-news-consensys-and-joseph-lubin-add-30-000-eth-to-defi-united/"
     },
     {
       "title": "US stocks mixed with megacap earnings, Fed on deck",
@@ -332,22 +439,6 @@
       "link": "https://www.tradingview.com/news/macenews:09d01fd0c094b:0-us-march-housing-starts-1-502m-vs-1-40m-expected-and-1-356m-in-feb/"
     },
     {
-      "title": "US DURABLE GOODS ORDERS +0.8% IN MARCH FROM FEB. (VS. +0.5% MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:444cf7e9f094b:0-us-durable-goods-orders-0-8-in-march-from-feb-vs-0-5-markets-expected/"
-    },
-    {
-      "title": "US DURABLE GOODS ORDERS REVISED TO -1.2% IN FEB. FROM JAN. (VS. -1.3% LAST REPORTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:bcb3eece6094b:0-us-durable-goods-orders-revised-to-1-2-in-feb-from-jan-vs-1-3-last-reported/"
-    },
-    {
       "title": "Bitcoin Bottom or May Bust? Top 3 Price Predictions From Experts Highlight Crucial Cost Basis",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -409,7 +500,15 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-29T11:18:00+00:00",
       "timeDisplay": "11:18 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429007461:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260429007460:0/"
+    },
+    {
+      "title": "Bitcoin Halts Breakout Attempt After Hitting Largest Monthly Inflow",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T11:01:00+00:00",
+      "timeDisplay": "11:01 AM",
+      "link": "https://www.tradingview.com/news/u_today:03a5f4bc6094b:0-bitcoin-halts-breakout-attempt-after-hitting-largest-monthly-inflow/"
     },
     {
       "title": "$250K Bitcoin In 2026? Analyst Warns Bulls To \u2018Stop With The Mushrooms\u2019",
@@ -444,28 +543,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260429004686:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds-update/"
     },
     {
-      "title": "\u2018This is the future\u2019: Czech central bank governor makes case for bitcoin in sovereign reserves",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:54:50+00:00",
-      "timeDisplay": "9:54 AM",
-      "link": "https://www.tradingview.com/news/the_block:38694bd8d094b:0-this-is-the-future-czech-central-bank-governor-makes-case-for-bitcoin-in-sovereign-reserves/"
-    },
-    {
       "title": "Gold Hits 4-week Low",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T09:50:22+00:00",
       "timeDisplay": "9:50 AM",
       "link": "https://www.tradingview.com/news/te_news:546007:0-gold-hits-4-week-low/"
-    },
-    {
-      "title": "Canada proposes crypto ATM ban over scams and money laundering",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:49:45+00:00",
-      "timeDisplay": "9:49 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:de32b50fc094b:0-canada-proposes-crypto-atm-ban-over-scams-and-money-laundering/"
     },
     {
       "title": "FOMC Meeting Today: Powell Speech and Fed Interest Rate Decision Could Move BTC, ETH, XRP and Altcoins",
@@ -482,14 +565,6 @@
       "timestamp": "2026-04-29T09:42:00+00:00",
       "timeDisplay": "9:42 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429004535:0/"
-    },
-    {
-      "title": "What is Bitcoin\u2019s Endgame? MicroStrategy\u2019s Saylor Has a Prediction",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:33:18+00:00",
-      "timeDisplay": "9:33 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:6a7f4afc9094b:0-what-is-bitcoin-s-endgame-microstrategy-s-saylor-has-a-prediction/"
     },
     {
       "title": "Near-Term Impact of U.A.E.'s Exit From OPEC Likely Limited \u2014 Market Talk",
@@ -570,86 +645,6 @@
       "timestamp": "2026-04-29T06:14:00+00:00",
       "timeDisplay": "6:14 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429002184:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds/"
-    },
-    {
-      "title": "Uncertain Timing of Strait of Hormuz Reopening a Serious Risk for Economy \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T05:48:00+00:00",
-      "timeDisplay": "5:48 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429001612:0/"
-    },
-    {
-      "title": "Energy Prices Key Factor in Driving Volatility in U.S. Treasurys \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T05:39:00+00:00",
-      "timeDisplay": "5:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429001527:0/"
-    },
-    {
-      "title": "Ethereum ICO whale moves $23 million in ETH after 10-year dormancy",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T05:11:11+00:00",
-      "timeDisplay": "5:11 AM",
-      "link": "https://www.tradingview.com/news/the_block:62b60b00e094b:0-ethereum-ico-whale-moves-23-million-in-eth-after-10-year-dormancy/"
-    },
-    {
-      "title": "Oil Prices Could Rise Further if Shipping Disruptions Continue \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T05:04:00+00:00",
-      "timeDisplay": "5:04 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429000641:0/"
-    },
-    {
-      "title": "US Crude Oil Inventories Unexpectedly Fall",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T03:37:10+00:00",
-      "timeDisplay": "3:37 AM",
-      "link": "https://www.tradingview.com/news/te_news:545800:0-us-crude-oil-inventories-unexpectedly-fall/"
-    },
-    {
-      "title": "U.A.E.'s OPEC Exit May Have Mixed Implications for U.S. Producers \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T03:32:00+00:00",
-      "timeDisplay": "3:32 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428015987:0/"
-    },
-    {
-      "title": "Ethereum Price Pulls Back To $2,250, Traders Watch For Reaction",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T03:18:24+00:00",
-      "timeDisplay": "3:18 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:a14c92443094b:0-ethereum-price-pulls-back-to-2-250-traders-watch-for-reaction/"
-    },
-    {
-      "title": "US 10Y Yield Holds Advance Ahead of Fed Decision",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T02:37:04+00:00",
-      "timeDisplay": "2:37 AM",
-      "link": "https://www.tradingview.com/news/te_news:545771:0-us-10y-yield-holds-advance-ahead-of-fed-decision/"
-    },
-    {
-      "title": "Stocks retreat on Iran, AI concerns as Fed meeting looms",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T01:50:27+00:00",
-      "timeDisplay": "1:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C01E:0-stocks-retreat-on-iran-ai-concerns-as-fed-meeting-looms/"
-    },
-    {
-      "title": "Ethereum (ETH) Sell Pressure Concerns Rise, But 4 On-Chain Signals Flash Bullish",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T01:27:18+00:00",
-      "timeDisplay": "1:27 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:9f6c6c83f094b:0-ethereum-eth-sell-pressure-concerns-rise-but-4-on-chain-signals-flash-bullish/"
     }
   ]
 }

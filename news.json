@@ -1,45 +1,179 @@
 {
-  "lastUpdated": "2026-04-29T01:29:07.073142+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 01:29 AM UTC",
+  "lastUpdated": "2026-04-29T05:15:18.186827+00:00",
+  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 05:15 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Headlines show mixed risk sentiment with dollar strengthening on risk-off mood, oil rising on Middle East tensions and UAE-OPEC dynamics, while tech and crypto assets face selling pressure. FOMC decision anticipation is keeping currency markets in consolidation mode, with geopolitical tensions supporting commodities but weighing on risk assets.",
+    "macroSummary": "Markets show mixed signals with stocks retreating on Iran tensions and AI concerns while Fed decision looms, oil prices rising on Middle East uncertainty despite UAE's OPEC exit plans, and dollar gaining strength on risk-off sentiment. Bitcoin and crypto markets display weakness with negative Coinbase premium and significant weekly outflows, while gold declines on inflation worries and dollar strength prospects.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines explicitly cite 'risk-off mood' driving dollar gains, tech weakness weighing on stocks, and crypto selling pressure, contradicting the high-confidence Risk-On regime classification.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Multiple headlines point to risk-off sentiment with stocks retreating, dollar gaining on risk-off mood, and geopolitical tensions rising, contradicting the high-confidence Risk-On regime call.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar gaining strength with multiple headlines citing dollar gains and potential breakout above key levels"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Reuters reports dollar gains specifically driven by 'risk-off mood' with tech sector weakness weighing on stocks",
+        "signal": "Stocks retreat on Iran and AI concerns with tech sector weakness weighing on markets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin drops below $76K with negative Coinbase premium and over $800M in weekly losses signaling crypto risk-off",
+        "signal": "Dollar gains explicitly attributed to risk-off mood in multiple headlines",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields rising with oil on dimming Iran resolution hopes indicates geopolitical risk premium building",
+        "signal": "Bitcoin showing weakness with negative Coinbase premium and weekly losses exceeding $829M",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian currencies consolidating ahead of FOMC decision shows defensive positioning rather than risk-taking",
+        "signal": "Oil rising on Middle East tensions and shipping disruption concerns supporting risk-off narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices supported by Middle East tensions and OPEC dynamics providing commodity inflation backdrop",
+        "signal": "Gold declining on inflation worries and dollar strength prospects rather than safe-haven demand",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto risk-off sentiment could pressure ETH-linked instruments",
-      "Consider reducing short book exposure given mixed signals and potential regime transition",
-      "Watch for VIX and HYG movement confirmation of risk-off shift in next session"
+      "Monitor DXY closely for approach to 100 threshold which would invalidate current regime",
+      "Consider tightening BMNR put ladder strikes if crypto weakness persists with risk-off conditions",
+      "Watch VIX levels as stock retreat and geopolitical tensions could push volatility toward 22 threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Prices Could Rise Further if Shipping Disruptions Continue \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T05:04:00+00:00",
+      "timeDisplay": "5:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429000641:0/"
+    },
+    {
+      "title": "Fed sails into unchartered waters as Powell bows out",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T04:30:48+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C04V:0-fed-sails-into-unchartered-waters-as-powell-bows-out/"
+    },
+    {
+      "title": "Bitcoin\u2019s recent rally is largely fueled by Strategy purchases: Bitwise's Hougan",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T04:01:52+00:00",
+      "timeDisplay": "4:01 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e7f5ae579094b:0-bitcoin-s-recent-rally-is-largely-fueled-by-strategy-purchases-bitwise-s-hougan/"
+    },
+    {
+      "title": "Bitcoin Market Returning To Risk-On? Flow Pulse Surges 136% From March Lows",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T04:00:45+00:00",
+      "timeDisplay": "4:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3a526f562094b:0-bitcoin-market-returning-to-risk-on-flow-pulse-surges-136-from-march-lows/"
+    },
+    {
+      "title": "WEDNESDAY WHITE HOUSE SCHEDULE - President Trump hosts the Artemis II astronauts",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T03:55:00+00:00",
+      "timeDisplay": "3:55 AM",
+      "link": "https://www.tradingview.com/news/macenews:5a4d69aca094b:0-wednesday-white-house-schedule-president-trump-hosts-the-artemis-ii-astronauts/"
+    },
+    {
+      "title": "US Crude Oil Inventories Unexpectedly Fall",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T03:37:10+00:00",
+      "timeDisplay": "3:37 AM",
+      "link": "https://www.tradingview.com/news/te_news:545800:0-us-crude-oil-inventories-unexpectedly-fall/"
+    },
+    {
+      "title": "U.A.E.'s OPEC Exit May Have Mixed Implications for U.S. Producers \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T03:32:00+00:00",
+      "timeDisplay": "3:32 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260428015987:0/"
+    },
+    {
+      "title": "Yuan steady in thin trading ahead of holiday; focus shifts to Fed",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T03:27:55+00:00",
+      "timeDisplay": "3:27 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C02Q:0-yuan-steady-in-thin-trading-ahead-of-holiday-focus-shifts-to-fed/"
+    },
+    {
+      "title": "Ethereum Price Pulls Back To $2,250, Traders Watch For Reaction",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T03:18:24+00:00",
+      "timeDisplay": "3:18 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:a14c92443094b:0-ethereum-price-pulls-back-to-2-250-traders-watch-for-reaction/"
+    },
+    {
+      "title": "BlackRock\u2019s Bitcoin Options Could Fuel A New All-Time High: Expert",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T03:00:46+00:00",
+      "timeDisplay": "3:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:4440f4cf1094b:0-blackrock-s-bitcoin-options-could-fuel-a-new-all-time-high-expert/"
+    },
+    {
+      "title": "Bitcoin Price Dips Under $76,500, Sellers Push For Deeper Pullback",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T02:44:42+00:00",
+      "timeDisplay": "2:44 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:7faa080be094b:0-bitcoin-price-dips-under-76-500-sellers-push-for-deeper-pullback/"
+    },
+    {
+      "title": "US 10Y Yield Holds Advance Ahead of Fed Decision",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T02:37:04+00:00",
+      "timeDisplay": "2:37 AM",
+      "link": "https://www.tradingview.com/news/te_news:545771:0-us-10y-yield-holds-advance-ahead-of-fed-decision/"
+    },
+    {
+      "title": "Bitcoin Bull Run Brewing: ATH In Sight By Late 2026: Analyst",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T02:00:44+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:7489c0b1f094b:0-bitcoin-bull-run-brewing-ath-in-sight-by-late-2026-analyst/"
+    },
+    {
+      "title": "Stocks retreat on Iran, AI concerns as Fed meeting looms",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-29T01:50:27+00:00",
+      "timeDisplay": "1:50 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C01E:0-stocks-retreat-on-iran-ai-concerns-as-fed-meeting-looms/"
+    },
+    {
+      "title": "Dollar Steadies Ahead of Fed Policy Decision",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T01:28:20+00:00",
+      "timeDisplay": "1:28 AM",
+      "link": "https://www.tradingview.com/news/te_news:545748:0-dollar-steadies-ahead-of-fed-policy-decision/"
+    },
+    {
+      "title": "Ethereum (ETH) Sell Pressure Concerns Rise, But 4 On-Chain Signals Flash Bullish",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T01:27:18+00:00",
+      "timeDisplay": "1:27 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:9f6c6c83f094b:0-ethereum-eth-sell-pressure-concerns-rise-but-4-on-chain-signals-flash-bullish/"
+    },
     {
       "title": "Asian Currencies Consolidate Ahead of FOMC Decision \u2014 Market Talk",
       "source": "dow-jones",
@@ -47,6 +181,14 @@
       "timestamp": "2026-04-29T00:50:00+00:00",
       "timeDisplay": "12:50 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260428015691:0/"
+    },
+    {
+      "title": "Ex-PayPal Chief Unveils Bitcoin-Powered \u2018Money Grid\u2019 for Global Merchant Adoption",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T00:44:53+00:00",
+      "timeDisplay": "12:44 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:9a2ddaf25094b:0-ex-paypal-chief-unveils-bitcoin-powered-money-grid-for-global-merchant-adoption/"
     },
     {
       "title": "Dollar steady as investors brace for Fed decision in face of war",
@@ -191,6 +333,22 @@
       "timestamp": "2026-04-28T19:37:15+00:00",
       "timeDisplay": "7:37 PM",
       "link": "https://www.tradingview.com/news/gurufocus:5e35e6466094b:0-bitcoin-may-need-more-time-before-another-run-higher/"
+    },
+    {
+      "title": "Dollar Advances as Stocks Slip and Crude Prices Surge",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T19:34:25+00:00",
+      "timeDisplay": "7:34 PM",
+      "link": "https://www.tradingview.com/news/barchart:2bf20c7d1094b:0-dollar-advances-as-stocks-slip-and-crude-prices-surge/"
+    },
+    {
+      "title": "Tighter Global Oil Supplies Underpin Crude Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-28T19:20:41+00:00",
+      "timeDisplay": "7:20 PM",
+      "link": "https://www.tradingview.com/news/barchart:a888f0191094b:0-tighter-global-oil-supplies-underpin-crude-prices/"
     },
     {
       "title": "Treasury yields rise with oil on dimming hopes for Iran resolution",
@@ -345,52 +503,12 @@
       "link": "https://www.tradingview.com/news/coinpedia:98fb3b976094b:0-why-are-bitcoin-ethereum-prices-dropping-what-s-behind-today-s-crypto-market-correction/"
     },
     {
-      "title": "Bitcoin price hits one-week low as $100 oil sparks fresh Asia crisis fears",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T16:07:44+00:00",
-      "timeDisplay": "4:07 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:f2c85b9bb094b:0-bitcoin-price-hits-one-week-low-as-100-oil-sparks-fresh-asia-crisis-fears/"
-    },
-    {
-      "title": "Bitcoin Cross-Exchange Trading Volume Spikes 136% Ahead Of Fed Rate Cut Decision",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T16:06:55+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:110e6389f094b:0/"
-    },
-    {
-      "title": "Amboss launches RailsX for self-custodial bitcoin and stablecoin trading on Lightning",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T16:00:00+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:b0cb5eb29094b:0-amboss-launches-railsx-for-self-custodial-bitcoin-and-stablecoin-trading-on-lightning/"
-    },
-    {
-      "title": "Canadian Billionaire Ridicules Saylor's Quest for 1 Million BTC",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T15:56:26+00:00",
-      "timeDisplay": "3:56 PM",
-      "link": "https://www.tradingview.com/news/u_today:3ff94c503094b:0-canadian-billionaire-ridicules-saylor-s-quest-for-1-million-btc/"
-    },
-    {
       "title": "Crude Prices Strengthen as Global Oil Supplies Tighten with Strait of Hormuz Closed",
       "source": "barchart",
       "color": "#00e5ff",
       "timestamp": "2026-04-28T15:41:43+00:00",
       "timeDisplay": "3:41 PM",
       "link": "https://www.tradingview.com/news/barchart:e424cebc0094b:0-crude-prices-strengthen-as-global-oil-supplies-tighten-with-strait-of-hormuz-closed/"
-    },
-    {
-      "title": "Bitcoin price drops below $76K as onchain data sends mixed signals",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T15:37:33+00:00",
-      "timeDisplay": "3:37 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:dada4a0c8094b:0-bitcoin-price-drops-below-76k-as-onchain-data-sends-mixed-signals/"
     },
     {
       "title": "Binance Ethereum Supply Hits 2020 Levels While Staking Locks A Third: Repricing Ahead?",
@@ -527,118 +645,6 @@
       "timestamp": "2026-04-28T14:02:00+00:00",
       "timeDisplay": "2:02 PM",
       "link": "https://www.tradingview.com/news/macenews:0bd268a76094b:0-us-consumer-current-conditions-index-123-8-in-april-vs-123-5-in-mar/"
-    },
-    {
-      "title": "CORRECT: US RICHMOND FED MANUFACTURING NEW ORDERS INDEX 8 IN APRIL VS. 4 IN MARCH, -9 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:1a5e716a1094b:0-correct-us-richmond-fed-manufacturing-new-orders-index-8-in-april-vs-4-in-march-9-in-feb/"
-    },
-    {
-      "title": "US RICHMOND FED MANUFACTURING EMPLOYMENT INDEX 0 IN APRIL VS. -2 IN MARCH, -7 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:fc3533070094b:0-us-richmond-fed-manufacturing-employment-index-0-in-april-vs-2-in-march-7-in-feb/"
-    },
-    {
-      "title": "US RICHMOND FED MANUFACTURING PRICES PAID INDEX 6.4 IN APRIL VS. 6.1 IN MARCH, 6.5 IN FEB., NOT SEASONALLY ADJUSTED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:2697d814a094b:0-us-richmond-fed-manufacturing-prices-paid-index-6-4-in-april-vs-6-1-in-march-6-5-in-feb-not-seasonally-adjusted/"
-    },
-    {
-      "title": "Here\u2019s Why The Bitcoin And Ethereum Prices Have Been Rising And Falling Sharply",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:00:51+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:7fd7b8551094b:0-here-s-why-the-bitcoin-and-ethereum-prices-have-been-rising-and-falling-sharply/"
-    },
-    {
-      "title": "Equal Asset Allocation Can Beat the Market? ETF Focus",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/zacks:502d95e49094b:0-equal-asset-allocation-can-beat-the-market-etf-focus/"
-    },
-    {
-      "title": "US RICHMOND FED MANUFACTURING INDEX 3 IN APRIL VS. 0 IN MARCH, -10 IN FEB. (VS. 2 MARKETS EXPECTED FOR APRIL)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:51aca5f90094b:0-us-richmond-fed-manufacturing-index-3-in-april-vs-0-in-march-10-in-feb-vs-2-markets-expected-for-april/"
-    },
-    {
-      "title": "TEXT: Pres Trump posts Iran says 'in a state of collapse;' They want to open Strait 'as soon as possible",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:45:00+00:00",
-      "timeDisplay": "1:45 PM",
-      "link": "https://www.tradingview.com/news/macenews:0e6b985bf094b:0-text-pres-trump-posts-iran-says-in-a-state-of-collapse-they-want-to-open-strait-as-soon-as-possible/"
-    },
-    {
-      "title": "U.A.E. Exit Raises Questions Over OPEC's Long-Term Ability to Stabilize Oil Market \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:44:00+00:00",
-      "timeDisplay": "1:44 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428008668:0/"
-    },
-    {
-      "title": "Aave-linked DeFi United unveils rsETH recovery plan after $293M Kelp exploit",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:42:31+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:757d0e11e094b:0-aave-linked-defi-united-unveils-rseth-recovery-plan-after-293m-kelp-exploit/"
-    },
-    {
-      "title": "Cryptocurrency Pares Back Gains as Fed Meets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:37:00+00:00",
-      "timeDisplay": "1:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428008591:0/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Apr 28",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:14:00+00:00",
-      "timeDisplay": "1:14 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260428008057:0/"
-    },
-    {
-      "title": "Stocks are scoring records, but the Dow is still benched",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-28T13:03:39+00:00",
-      "timeDisplay": "1:03 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41B0PL:0-stocks-are-scoring-records-but-the-dow-is-still-benched/"
-    },
-    {
-      "title": "US CASE SHILLER 20-CITY HOUSING PRICE INDEX -0.1% IN FEB. FROM JAN., SEASONALLY ADJUSTED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:03:00+00:00",
-      "timeDisplay": "1:03 PM",
-      "link": "https://www.tradingview.com/news/macenews:11894c46f094b:0-us-case-shiller-20-city-housing-price-index-0-1-in-feb-from-jan-seasonally-adjusted/"
-    },
-    {
-      "title": "Ethereum Price Hit 2021 Levels After Five Years: Is It Time to Sell ETH?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-28T13:02:56+00:00",
-      "timeDisplay": "1:02 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:132dbae55094b:0-ethereum-price-hit-2021-levels-after-five-years-is-it-time-to-sell-eth/"
     }
   ]
 }

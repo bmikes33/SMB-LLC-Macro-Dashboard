@@ -1,51 +1,67 @@
 {
-  "lastUpdated": "2026-04-30T21:59:27.511807+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 09:59 PM UTC",
+  "lastUpdated": "2026-04-30T22:58:45.314772+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 10:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed dynamics with Japanese yen intervention causing dollar weakness while US stocks ended April strongly with new S&P 500 highs. Oil prices pulled back from four-year highs amid US-Iran standstill, leading to lower bond yields, while crypto markets remained volatile with Bitcoin hovering around $76K.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Strong equity performance and lower volatility support Risk-On, but Japanese intervention driving dollar weakness and shift in sentiment indicators create cross-currents.",
+    "macroSummary": "Markets show mixed cross-asset dynamics with oil retreating from $110+ highs to $105.50, Japanese yen intervention causing dollar weakness, and US stocks hitting new highs despite rising sentiment pessimism. Economic data shows resilient GDP growth at 3.7% but mortgage rates continuing to climb, while crypto markets face headwinds from record April hacks and technical rejection signals.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Japanese intervention triggering dollar weakness and oil's sharp retreat from highs suggest emerging cracks in the risk-on thesis, while negative bull-bear sentiment spread indicates underlying caution despite equity strength.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar tumbling after Japanese intervention, approaching lower threshold that would confirm risk-on continuation"
+        "indicator": "USDJPY",
+        "level": "< 155",
+        "signal": "Japanese intervention causing yen rally and dollar slide suggests carry trade stress"
       }
     ],
     "keySignals": [
       {
-        "signal": "S&P 500 pushed to new highs as US stocks ended strong April with significant gains",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar slides significantly against yen following reported Japanese currency intervention",
+        "signal": "Japanese currency intervention drives dollar tumble and yen rally, pressuring carry trades",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bull-Bear spread turns negative as sentiment swings according to AAII survey",
+        "signal": "Oil futures retreat sharply from $110+ highs to $105.50 amid US-Iran standstill, easing inflation pressures",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond yields fall and oil retreats from four-year highs, reducing inflation pressure",
-        "tag": "SUPPORTS"
+        "signal": "AAII bull-bear sentiment spread turns negative despite equity highs, showing underlying pessimism",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin rejection at higher levels sparks caution about rally losing steam",
+        "signal": "US GDP growth tracking 3.7% for Q2 while mortgage rates climb to 6.30%, showing economic resilience with housing stress",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin faces technical rejection at $76K with record April crypto hacks undermining risk appetite",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - further weakness toward 100 threshold would confirm risk-on regime continuation",
-      "BMNR ladder may benefit from crypto volatility - consider tightening strikes if Bitcoin consolidates around $75K support",
-      "Watch for VIX moves given negative Bull-Bear spread sentiment shift"
+      "Monitor USDJPY levels closely - break below 155 could trigger broader carry unwind and regime flip",
+      "Consider tightening BMNR put ladder strikes as crypto technicals weaken and hacks spike",
+      "Watch for oil's impact on rates - sustained retreat could ease reflation pressures and clarify regime"
     ]
   },
   "articles": [
+    {
+      "title": "US crude futures rise 41 cents to $105.50/bbl after prior intraday high of $110.93/bbl",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T22:14:52+00:00",
+      "timeDisplay": "10:14 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D34F:0-us-crude-futures-rise-41-cents-to-105-50-bbl-after-prior-intraday-high-of-110-93-bbl/"
+    },
+    {
+      "title": "Bitcoin On Morgan Stanley\u2019s Balance Sheet? The Answer Is Getting Interesting",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T22:00:53+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:e54cbf942094b:0-bitcoin-on-morgan-stanley-s-balance-sheet-the-answer-is-getting-interesting/"
+    },
     {
       "title": "Dollar tumbles after Japanese intervention boosts yen",
       "source": "reuters",
@@ -58,8 +74,8 @@
       "title": "Stablecoins overtake Bitcoin in Latin America crypto purchases \u2014 Bitso",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-04-30T21:03:22+00:00",
-      "timeDisplay": "9:03 PM",
+      "timestamp": "2026-04-30T21:12:00+00:00",
+      "timeDisplay": "9:12 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:36676b013094b:0-stablecoins-overtake-bitcoin-in-latin-america-crypto-purchases-bitso/"
     },
     {
@@ -287,6 +303,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D18T:0-data-stew-gdp-pce-jobless-claims-et-al/"
     },
     {
+      "title": "Dollar Falls as the Yen Rallies on Intervention Talk",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T14:50:47+00:00",
+      "timeDisplay": "2:50 PM",
+      "link": "https://www.tradingview.com/news/barchart:d26a8e3f6094b:0-dollar-falls-as-the-yen-rallies-on-intervention-talk/"
+    },
+    {
       "title": "US stocks mixed in early trade after data flurry, big earnings",
       "source": "reuters",
       "color": "#ff6d00",
@@ -479,14 +503,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:ffeec3f58094b:0-industry-expert-samson-mow-reveals-when-the-bitcoin-price-will-hit-1m/"
     },
     {
-      "title": "US gov\u2019t sues four states, RWAs cross $30 billion: Month in Charts",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:00:00+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b762c47f7094b:0-us-gov-t-sues-four-states-rwas-cross-30-billion-month-in-charts/"
-    },
-    {
       "title": "North Korea accounts for 76% of 2026 crypto hack losses, with theft since 2017 topping $6 billion: TRM Labs",
       "source": "the_block",
       "color": "#00e5ff",
@@ -629,22 +645,6 @@
       "timestamp": "2026-04-30T07:59:14+00:00",
       "timeDisplay": "7:59 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0KE:0-us-30-year-yields-top-5-after-hawkish-fed-hold/"
-    },
-    {
-      "title": "Why Crypto Market Is Down Today? BTC, ETH, XRP Fall After FOMC Meeting",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T07:45:00+00:00",
-      "timeDisplay": "7:45 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:e0fbf2fb4094b:0-why-crypto-market-is-down-today-btc-eth-xrp-fall-after-fomc-meeting/"
-    },
-    {
-      "title": "Sterling Rises Ahead of BOE Decision \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T07:36:00+00:00",
-      "timeDisplay": "7:36 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430003098:0/"
     }
   ]
 }

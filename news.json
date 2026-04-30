@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-04-30T16:55:32.426440+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 04:55 PM UTC",
+  "lastUpdated": "2026-04-30T18:07:48.258628+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 06:07 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with oil retreating from four-year highs, yields easing, and the dollar sliding against the yen amid reported Japanese intervention. Economic data presents a contradictory picture with solid GDP growth but declining leading indicators and weaker Chicago PMI, while Bitcoin remains range-bound below key resistance.",
+    "macroSummary": "Markets showed mixed signals with S&P 500 hitting new highs while underlying data deteriorated, including Chicago PMI dropping to 49.2 vs 54.8 expected and Leading Economic Indicators falling 0.6%. Japanese yen spiked on reported intervention while oil pulled back from 4-year highs, creating cross-currents in risk sentiment.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Oil retreat from highs and yield easing provide some risk-on relief, but declining leading indicators, weak Chicago PMI miss, and Bitcoin struggling below resistance suggest underlying momentum concerns.",
+    "regimePressureReason": "Equity strength supports Risk-On but meaningful economic data misses and intervention dynamics introduce volatility that could challenge regime stability.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Dollar sliding against yen after reported Japanese currency intervention"
+        "signal": "Yen jumped sharply on reported Japanese intervention, potentially triggering carry trade unwind"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar slides against yen following reported Japanese intervention, approaching carry unwind levels",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Chicago PMI drops to 49.2 vs 54.8 expected, signaling manufacturing contraction",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Leading Economic Indicators decline 0.6% in March, reflecting weakness in permits, sentiment, and stock prices",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil retreats from four-year highs and bond yields ease, reducing immediate stagflation pressures",
+        "signal": "S&P 500 pushes to new highs supporting continued equity strength",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin trapped below $80K resistance with ETF outflows extending to three days",
+        "signal": "Chicago PMI collapsed to 49.2 vs 54.8 expected, showing manufacturing contraction",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Leading Economic Indicators fell 0.6% in March after February gains",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Japanese yen spiked on reported intervention, testing USDJPY carry trade dynamics",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil retreated from 4-year highs reducing inflationary pressure but creating energy sector headwinds",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely for break below 155 as carry unwind could trigger broader risk-off shift",
-      "Watch for credit markets reaction to mixed economic signals - HYG level key for regime confirmation",
-      "Consider tightening BMNR put ladder strikes given crypto momentum stalling and macro uncertainty"
+      "Monitor USDJPY closely for sustained break below 155 as carry unwind could flip regime",
+      "Watch for equity rotation out of cyclicals given manufacturing weakness signals",
+      "Consider tightening BMNR ladder strikes if crypto momentum continues despite macro headwinds"
     ]
   },
   "articles": [
+    {
+      "title": "S&P 500 pushes to new highs. Here is the 'line in the sand' for this bull run.",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T18:00:00+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260430019168:0/"
+    },
+    {
+      "title": "Cryptocurrency Rebounds After Fed Holds Rates Steady \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T18:00:00+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430014362:0/"
+    },
+    {
+      "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T17:56:03+00:00",
+      "timeDisplay": "5:56 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1CF:0-bond-yields-fall-stocks-rise-as-oil-prices-fall-yen-jumps-after-japan-s-reported-currency-intervention/"
+    },
+    {
+      "title": "Inflation is high but so is FOMO\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T17:47:56+00:00",
+      "timeDisplay": "5:47 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1DO:0-inflation-is-high-but-so-is-fomo/"
+    },
+    {
+      "title": "Dollar slides against yen after Japan's reported currency intervention",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T17:31:14+00:00",
+      "timeDisplay": "5:31 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1CL:0-dollar-slides-against-yen-after-japan-s-reported-currency-intervention/"
+    },
+    {
+      "title": "Bull-Bear spread turns negative as sentiment swings - AAII\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T17:05:22+00:00",
+      "timeDisplay": "5:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1C6:0-bull-bear-spread-turns-negative-as-sentiment-swings-aaii/"
+    },
     {
       "title": "Gas prices eating up tax refunds: BofA\u00a0",
       "source": "reuters",
@@ -55,20 +103,20 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1BW:0-gas-prices-eating-up-tax-refunds-bofa/"
     },
     {
-      "title": "Dollar slides against yen after Japan's reported currency intervention",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T16:36:49+00:00",
-      "timeDisplay": "4:36 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D16J:0-dollar-slides-against-yen-after-japan-s-reported-currency-intervention/"
-    },
-    {
       "title": "House Passes New Farm Bill, Without E15 \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T16:36:00+00:00",
       "timeDisplay": "4:36 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260430013791:0/"
+    },
+    {
+      "title": "Three reasons why $3K ETH price target is back for May",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T16:24:35+00:00",
+      "timeDisplay": "4:24 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5441a829b094b:0-three-reasons-why-3k-eth-price-target-is-back-for-may/"
     },
     {
       "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.64% IN LATEST WEEK VS. 5.58% IN PREVIOUS WEEK, 5.92% YEAR AGO",
@@ -391,14 +439,6 @@
       "link": "https://www.tradingview.com/news/macenews:622dfe295094b:0-us-q1-pce-annual-rate-1-6-vs-1-5-expected-and-1-9-in-q4/"
     },
     {
-      "title": "US CORE PCE PRICES +0.3% IN MARCH FROM FEB. (VS. +0.3% MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:5e1e21bb5094b:0-us-core-pce-prices-0-3-in-march-from-feb-vs-0-3-markets-expected/"
-    },
-    {
       "title": "Oil Futures Retreat After Rising to Four-Year Highs \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -605,46 +645,6 @@
       "timestamp": "2026-04-30T04:47:08+00:00",
       "timeDisplay": "4:47 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D05C:0-asian-shares-fall-as-brent-hits-4-year-high-bonds-battered-by-central-bank-hawks/"
-    },
-    {
-      "title": "Crude Oil WTI traded above 110 USD/Bbl",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T04:24:33+00:00",
-      "timeDisplay": "4:24 AM",
-      "link": "https://www.tradingview.com/news/te_news:546396:0-crude-oil-wti-traded-above-110-usd-bbl/"
-    },
-    {
-      "title": "Oil Extends Rally as Iran War Intensifies",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T04:02:05+00:00",
-      "timeDisplay": "4:02 AM",
-      "link": "https://www.tradingview.com/news/te_news:546386:0-oil-extends-rally-as-iran-war-intensifies/"
-    },
-    {
-      "title": "Ethereum Price Downtrend Gains Pace\u2014Is A Steeper Drop Ahead?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T03:08:50+00:00",
-      "timeDisplay": "3:08 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:4a9f99b55094b:0-ethereum-price-downtrend-gains-pace-is-a-steeper-drop-ahead/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Firm After Fed Decision",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T02:38:01+00:00",
-      "timeDisplay": "2:38 AM",
-      "link": "https://www.tradingview.com/news/te_news:546354:0-us-10-year-yield-holds-firm-after-fed-decision/"
-    },
-    {
-      "title": "Miko Matsumura: No More Crypto Wild West, This Cycle Will Reward Different Behavior",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T02:08:49+00:00",
-      "timeDisplay": "2:08 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:64e0535ba094b:0-miko-matsumura-no-more-crypto-wild-west-this-cycle-will-reward-different-behavior/"
     }
   ]
 }

@@ -1,51 +1,75 @@
 {
-  "lastUpdated": "2026-04-30T19:55:54.383484+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 07:55 PM UTC",
+  "lastUpdated": "2026-04-30T20:58:11.351231+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 08:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices pulled back sharply from four-year highs amid U.S.-Iran standstill, driving bond yields lower and stocks higher. Japan intervened in currency markets causing yen to spike and dollar to slide, while mixed U.S. economic data showed Atlanta Fed raising Q2 GDP estimates to 3.7% but Chicago PMI falling to contractionary 49.2.",
+    "macroSummary": "Markets showed strong April performance with stocks hitting new highs and bonds rising as oil pulled back from four-year highs. Japan intervened to support the yen causing dollar weakness, while mixed economic data showed GDP growth estimates at 3.7% but leading indicators declining 0.6% in March.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Oil pullback and falling yields support risk-on but yen intervention and dollar weakness directly contradict regime's DXY stability assumption.",
+    "regimePressureReason": "Strong equity performance and bond rallies support risk-on, but yen intervention causing dollar weakness and negative sentiment shifts create cross-currents.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar sliding against yen after Japan intervention, moving away from risk-off threshold"
+        "indicator": "USDJPY",
+        "level": "< 155",
+        "signal": "Dollar slides against yen after Japan's reported currency intervention"
       }
     ],
     "keySignals": [
       {
-        "signal": "Japan currency intervention caused yen spike and dollar slide, pressuring DXY lower",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil retreat from four-year highs driving bond yields lower and supporting equity gains",
+        "signal": "S&P 500 pushes to new highs with strong April performance supporting risk appetite",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Chicago PMI collapsed to contractionary 49.2 vs 54.8 expected, signaling Midwest manufacturing weakness",
+        "signal": "Dollar slides against yen after Japan's currency intervention, approaching carry unwind trigger",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bull-Bear spread turns negative as sentiment swings according to AAII survey",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Atlanta Fed raised Q2 GDP growth estimate to 3.7%, supporting economic resilience narrative",
+        "signal": "Leading Economic Indicators declined 0.6% in March reflecting weakness in permits, sentiment, and stock prices",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bond yields fall and stocks rise as oil retreats from four-year highs",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Leading Economic Indicators fell 0.6% in March after February gain, showing forward momentum stalling",
-        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as yen intervention could trigger sustained dollar weakness below risk-off thresholds",
-      "Watch oil stability - further energy pullback could reduce inflation pressures and support dovish Fed pivot",
-      "Consider tightening BMNR put strikes if crypto benefits from broader risk-on flow from falling yields"
+      "Monitor USDJPY levels closely as intervention effects could trigger broader carry unwind",
+      "Watch for VIX response to negative sentiment shift in AAII data",
+      "Consider tightening BMNR ladder strikes given mixed economic leading indicators"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Crash Is Coming: Pundit Says It\u2019s Time To Sell All Your BTC",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T20:30:45+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:8aee496fe094b:0-bitcoin-crash-is-coming-pundit-says-it-s-time-to-sell-all-your-btc/"
+    },
+    {
+      "title": "US stocks end strong April with a bang",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T20:25:44+00:00",
+      "timeDisplay": "8:25 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1IB:0-us-stocks-end-strong-april-with-a-bang/"
+    },
+    {
+      "title": "Elon Musk Says Most Crypto Are Scams, But X Launches New Crypto Trading Terminal",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T20:14:03+00:00",
+      "timeDisplay": "8:14 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:75b3a5e6d094b:0-elon-musk-says-most-crypto-are-scams-but-x-launches-new-crypto-trading-terminal/"
+    },
     {
       "title": "Bonds, stocks rise on oil's pullback; yen jumps after Japan's currency intervention",
       "source": "reuters",
@@ -535,22 +559,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260430008863:0/"
     },
     {
-      "title": "Bitcoin Price Near Bottom as Institutional Demand Surges, as Retail Demand Weakens",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T11:43:52+00:00",
-      "timeDisplay": "11:43 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:524ab1e6c094b:0-bitcoin-price-near-bottom-as-institutional-demand-surges-as-retail-demand-weakens/"
-    },
-    {
-      "title": "Analyst Calls Local Bitcoin Top, Reveals Why The Price Is Headed Below $60,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T11:30:47+00:00",
-      "timeDisplay": "11:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:a911233fd094b:0-analyst-calls-local-bitcoin-top-reveals-why-the-price-is-headed-below-60-000/"
-    },
-    {
       "title": "Brent Slide on Screens Friday Purely Due to Contract Rollover \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -631,20 +639,12 @@
       "link": "https://www.tradingview.com/news/te_news:546521:0-gold-edges-higher-as-middle-east-conflict-persists/"
     },
     {
-      "title": "Exclusive: Crypto CEO Breaks Down Why Bitcoin and Ethereum Prices Fell After Fed\u2019s Shock Decision",
-      "source": "coinpedia",
+      "title": "Kraken bundles crypto and tokenized stocks in pursuit of multi-asset investors",
+      "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-04-30T06:54:06+00:00",
-      "timeDisplay": "6:54 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:416b75f07094b:0-exclusive-crypto-ceo-breaks-down-why-bitcoin-and-ethereum-prices-fell-after-fed-s-shock-decision/"
-    },
-    {
-      "title": "Ten-Year Bund Yield Hits 15-Year High as Oil Prices Rise; ECB Awaited \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T06:51:00+00:00",
-      "timeDisplay": "6:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430002698:0/"
+      "timestamp": "2026-04-30T07:00:00+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:855c8fb10094b:0-kraken-bundles-crypto-and-tokenized-stocks-in-pursuit-of-multi-asset-investors/"
     }
   ]
 }

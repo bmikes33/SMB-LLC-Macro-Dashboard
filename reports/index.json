@@ -1,6 +1,68 @@
 {
   "reports": [
     {
+      "type": "ta",
+      "file": "BMNR_2026-04-30_1437.html",
+      "ticker": "BMNR",
+      "tvSymbol": "NYSE:BMNR",
+      "date": "2026-04-30T14:37:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "LOW",
+      "bullScore": 1,
+      "bearScore": 5,
+      "scoreMax": 6,
+      "invalidation": "$19.84 structural / lose weekly 200 SMA",
+      "entryZone": "$20.50–$20.88",
+      "exitZone": "$22.50–$23.41",
+      "levels": [
+        {
+          "weight": "HEAVY",
+          "price": "$23.00–$23.41",
+          "sources": "Weekly horizontal (3+ rejections) + $23 call wall (4,380 OI) + 4h RVWAP upper-band proximity"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$22.00–$22.50",
+          "sources": "$22 call OI (3,924) + $22.50 (2,916) + 4h RVWAP (22.20)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$21.50",
+          "sources": "$21.50 call OI (3,123) + 30m 200 SMA proximity"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$21.38",
+          "sources": "Daily RVWAP — daily anchor"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$21.18",
+          "sources": "Regular session price"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$20.88",
+          "sources": "Daily 50 SMA — daily anchor"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$19.84–$20.00",
+          "sources": "$20 call OI (8,106) gamma magnet + $20 put OI (2,161) + 4h/daily ascending TL + weekly 200 SMA + recent swing low"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$19.00",
+          "sources": "$19 put wall (3,081 OI) + round number"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$18.00–$18.44",
+          "sources": "$18 put wall (3,204 OI) + daily lower RVWAP band"
+        }
+      ]
+    },
+    {
       "type": "valuation",
       "file": "SOFI_VAL_2026-04-30_FINAL.html",
       "ticker": "SOFI",

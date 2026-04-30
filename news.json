@@ -1,51 +1,75 @@
 {
-  "lastUpdated": "2026-04-30T22:58:45.314772+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 10:58 PM UTC",
+  "lastUpdated": "2026-04-30T23:56:04.358850+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 11:56 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed cross-asset dynamics with oil retreating from $110+ highs to $105.50, Japanese yen intervention causing dollar weakness, and US stocks hitting new highs despite rising sentiment pessimism. Economic data shows resilient GDP growth at 3.7% but mortgage rates continuing to climb, while crypto markets face headwinds from record April hacks and technical rejection signals.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Japanese intervention triggering dollar weakness and oil's sharp retreat from highs suggest emerging cracks in the risk-on thesis, while negative bull-bear sentiment spread indicates underlying caution despite equity strength.",
+    "macroSummary": "Markets showed mixed performance with oil pulling back from four-year highs after hitting $110.93, while stocks and bonds rallied on the energy retreat. Japan conducted currency intervention boosting the yen significantly against the dollar, and crypto markets faced heavy selling pressure with Bitcoin ETFs losing nearly $500 million.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil pullback and stock gains support risk-on, but Japanese intervention driving yen strength and crypto weakness introduce cross-currents that complicate the clean risk-on narrative.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Japanese intervention causing yen rally and dollar slide suggests carry trade stress"
+        "signal": "Japanese intervention caused yen to jump significantly against dollar, potentially approaching carry unwind trigger"
       }
     ],
     "keySignals": [
       {
-        "signal": "Japanese currency intervention drives dollar tumble and yen rally, pressuring carry trades",
+        "signal": "Japanese currency intervention drove sharp yen gains against dollar, threatening carry trade dynamics",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil futures retreat sharply from $110+ highs to $105.50 amid US-Iran standstill, easing inflation pressures",
+        "signal": "Bitcoin ETFs shed nearly $500 million as crypto fear returns, contradicting typical risk-on asset behavior",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "AAII bull-bear sentiment spread turns negative despite equity highs, showing underlying pessimism",
-        "tag": "CONTRADICTS"
+        "signal": "Oil retreated from $110.93 highs to $105.50, reducing inflation pressure and supporting bond/stock rally",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "US GDP growth tracking 3.7% for Q2 while mortgage rates climb to 6.30%, showing economic resilience with housing stress",
-        "tag": "NEUTRAL"
+        "signal": "US stocks ended April strong with S&P 500 pushing to new highs despite mixed cross-asset signals",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin faces technical rejection at $76K with record April crypto hacks undermining risk appetite",
+        "signal": "Bull-Bear sentiment spread turned negative according to AAII, suggesting investor caution despite equity strength",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY levels closely - break below 155 could trigger broader carry unwind and regime flip",
-      "Consider tightening BMNR put ladder strikes as crypto technicals weaken and hacks spike",
-      "Watch for oil's impact on rates - sustained retreat could ease reflation pressures and clarify regime"
+      "Monitor USDJPY levels closely - intervention-driven yen strength could trigger broader carry unwind if < 155",
+      "Consider reducing BMNR ladder exposure given crypto sector weakness and Bitcoin ETF outflows",
+      "Watch for oil price stabilization around $105 - further retreat could cement risk-on regime confirmation"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin ETFs Lose Nearly Half A Billion Dollars As Fear Returns To Crypto",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T23:30:42+00:00",
+      "timeDisplay": "11:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:729dbfdaf094b:0-bitcoin-etfs-lose-nearly-half-a-billion-dollars-as-fear-returns-to-crypto/"
+    },
+    {
+      "title": "Oil Heads for Second Straight Weekly Gain",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T23:28:03+00:00",
+      "timeDisplay": "11:28 PM",
+      "link": "https://www.tradingview.com/news/te_news:546884:0-oil-heads-for-second-straight-weekly-gain/"
+    },
+    {
+      "title": "Bonds, stocks climb on oil's pullback; yen jumps after Japan's currency intervention",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T23:05:52+00:00",
+      "timeDisplay": "11:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1LC:0-bonds-stocks-climb-on-oil-s-pullback-yen-jumps-after-japan-s-currency-intervention/"
+    },
     {
       "title": "US crude futures rise 41 cents to $105.50/bbl after prior intraday high of $110.93/bbl",
       "source": "reuters",
@@ -295,6 +319,14 @@
       "link": "https://www.tradingview.com/news/newsbtc:849f84b9a094b:0-bitcoin-and-xrp-are-seeing-a-surge-in-adoption-here-are-the-numbers/"
     },
     {
+      "title": "Signs of Weaker Energy Demand Fuel Long Liquidation in Crude Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T15:34:00+00:00",
+      "timeDisplay": "3:34 PM",
+      "link": "https://www.tradingview.com/news/barchart:726136112094b:0-signs-of-weaker-energy-demand-fuel-long-liquidation-in-crude-prices/"
+    },
+    {
       "title": "Data stew: GDP, PCE, jobless claims, et al",
       "source": "reuters",
       "color": "#ff6d00",
@@ -495,14 +527,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0PP:0-s-p-500-hovers-near-highs-as-tech-earnings-counter-crude-and-data-crosscurrents/"
     },
     {
-      "title": "Industry Expert Samson Mow Reveals When The Bitcoin Price Will Hit $1M",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:00:28+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:ffeec3f58094b:0-industry-expert-samson-mow-reveals-when-the-bitcoin-price-will-hit-1m/"
-    },
-    {
       "title": "North Korea accounts for 76% of 2026 crypto hack losses, with theft since 2017 topping $6 billion: TRM Labs",
       "source": "the_block",
       "color": "#00e5ff",
@@ -621,30 +645,6 @@
       "timestamp": "2026-04-30T10:28:32+00:00",
       "timeDisplay": "10:28 AM",
       "link": "https://www.tradingview.com/news/te_news:546640:0-wti-steadies-as-us-considers-iran-strikes/"
-    },
-    {
-      "title": "Ethereum to $60K? It's a 'generational play' for ETH bull Tom Lee, says analyst",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T10:23:43+00:00",
-      "timeDisplay": "10:23 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e991a8f3c094b:0-ethereum-to-60k-it-s-a-generational-play-for-eth-bull-tom-lee-says-analyst/"
-    },
-    {
-      "title": "Oil worries spook European markets before ECB and BoE decisions",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T09:53:21+00:00",
-      "timeDisplay": "9:53 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D0C1:0-oil-worries-spook-european-markets-before-ecb-and-boe-decisions/"
-    },
-    {
-      "title": "US 30-year yields top 5% after hawkish Fed hold",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T07:59:14+00:00",
-      "timeDisplay": "7:59 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0KE:0-us-30-year-yields-top-5-after-hawkish-fed-hold/"
     }
   ]
 }

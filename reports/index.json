@@ -1,6 +1,59 @@
 {
   "reports": [
     {
+      "type": "valuation",
+      "file": "AMZN_VAL_2026-04-29_v2.html",
+      "ticker": "AMZN",
+      "tvSymbol": "NASDAQ:AMZN",
+      "date": "2026-04-29T23:30:00-05:00",
+      "mode": "SOTP",
+      "segmentCount": 3,
+      "currentPrice": 270.25,
+      "fairValue": {
+        "method": "2Y_discounted",
+        "bear": 222.08,
+        "base": 327.62,
+        "bull": 503.97,
+        "probWeighted": 345.32
+      },
+      "fairValueNtm": {
+        "method": "NTM_multiple",
+        "bear": 235.85,
+        "base": 336.7,
+        "bull": 504.01,
+        "probWeighted": 353.31
+      },
+      "upside": {
+        "bear": -17.8,
+        "base": 21.2,
+        "bull": 86.5,
+        "probWeighted": 27.8
+      },
+      "wacc": {
+        "method": "stage_default",
+        "perSegment": {
+          "NA": 0.09,
+          "International": 0.1,
+          "AWS": 0.1
+        }
+      },
+      "daAllocationMethod": "capex_weighted",
+      "daAllocationRationale": "AWS captures ~80% of consolidated capex vs 18% revenue share (4.4x skew). Method A revenue-share would have understated AWS EBITDA by ~$10B.",
+      "capitalStructure": "AMBER",
+      "capitalStructureFlags": [
+        "Liquidity tight: $200B 2026 capex compressed TTM FCF to $1.2B from $25.9B",
+        "Coverage = (OCF + Cash) / Obligations = 1.32x — sufficient but slim",
+        "Q1 2026 long-term debt issuance of $53B funds AI infrastructure capex cycle"
+      ],
+      "dataQuality": {
+        "disclosedPct": 72,
+        "allocatedPct": 23,
+        "userOverridePct": 5
+      },
+      "verdict": "UNDERVALUED",
+      "notes": "Primary methodology: 2Y EBITDA discounted (Method A). Base case +21.2% / prob-weighted +27.8% upside. NTM × multiple sanity check confirms thesis (+24.6% / +30.7%). Bull cases ~identical between methods because AWS 28% growth offsets 10% WACC discount. AMZN value increasingly concentrated in AWS where growth comfortably outpaces cost of capital. Capital structure AMBER caveat: aggressive 2026 AI capex consuming FCF — bull case contingent on capex ROI materializing. International and AWS multiple ranges user-overridden. 6 quarters of segment data used (vs. skill standard 8) — most recent 8-K supplemental did not include older periods. 10-Q expected mid-May 2026 will provide segment D&A footnote and full debt maturity schedule."
+    },
+    {
       "type": "ta",
       "file": "BMNR_2026-04-27_1109.html",
       "ticker": "BMNR",

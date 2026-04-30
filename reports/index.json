@@ -2,6 +2,77 @@
   "reports": [
     {
       "type": "valuation",
+      "file": "SOFI_VAL_2026-04-30_FINAL.html",
+      "ticker": "SOFI",
+      "tvSymbol": "NASDAQ:SOFI",
+      "date": "2026-04-30T05:49:11-05:00",
+      "mode": "SOTP",
+      "segmentCount": 3,
+      "currentPrice": 15.53,
+      "fairValue": {
+        "method": "2Y_discounted",
+        "bear": 5.67,
+        "base": 11.99,
+        "bull": 25.27,
+        "probWeighted": 13.73
+      },
+      "fairValueNtm": {
+        "method": "NTM_multiple",
+        "bear": 5.3,
+        "base": 10.24,
+        "bull": 20.74
+      },
+      "upside": {
+        "bear": -63.5,
+        "base": -22.8,
+        "bull": 62.7,
+        "probWeighted": -11.6
+      },
+      "wacc": {
+        "method": "user_override_with_stage_default",
+        "perSegment": {
+          "Lending": 0.09,
+          "FinancialServices": 0.11,
+          "TechnologyPlatform": 0.12
+        }
+      },
+      "daAllocationMethod": "n/a — bank holding co; segment D&A absorbed in directly attributable expenses",
+      "corpBorrowings": {
+        "total_outstanding_M": 1362,
+        "treated_as_cash_obligation_M": 500,
+        "treated_as_equity_dilution_M": 862,
+        "rationale": "2026 converts ($500M, OOTM @ $22.41 conv vs $15.53 stock) settle in cash. 2029 converts ($862M, deeply ITM @ $9.45 conv) already in 1,378M diluted share count via if-converted method."
+      },
+      "corpOverhead": {
+        "y1_baseline_actual_FY25_M": 1000,
+        "y2_bear_M": 1000,
+        "y2_base_M": 1252,
+        "y2_bull_M": 1126,
+        "rationale": "Bear (Option A): cost discipline, OH flat at FY25 baseline. Base: rev × 20% leverage ratio. Bull: rev × 15% leverage ratio (mgmt guide trajectory)."
+      },
+      "capitalStructure": "AMBER",
+      "capitalStructureFlags": [
+        "RED: Diluted share count +16% YoY (heavy dilution)",
+        "AMBER: 2026 converts $500M maturity Q3 2026 (pre-funded by Q4 25 $1.5B raise)",
+        "GREEN: CET1 21.1% — well above 10% minimum, significant excess capital",
+        "External: Active Muddy Waters short report alleging accounting issues; not modeled"
+      ],
+      "dataQuality": {
+        "disclosedPct": 60,
+        "allocatedPct": 35,
+        "userOverridePct": 5
+      },
+      "tbvCrossCheck": {
+        "tbv_per_share": 7.21,
+        "bear_p_tbv": 0.79,
+        "base_p_tbv": 1.66,
+        "bull_p_tbv": 3.5
+      },
+      "verdict": "OVERVALUED",
+      "notes": "FINAL build. Bank holdco SOTP; contribution profit = EBITDA-equivalent. Corp borrowings reduced to $500M (only OOTM 2026 converts in cash; ITM 2029 converts ride in dilution). Corp OH calibrated to revenue × leverage ratio anchored to mgmt's FY26 EBITDA guide. Bear uses Option A (cost discipline, $1.0B flat OH)."
+    },
+    {
+      "type": "valuation",
       "file": "AMZN_VAL_2026-04-29_v2.html",
       "ticker": "AMZN",
       "tvSymbol": "NASDAQ:AMZN",

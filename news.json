@@ -1,56 +1,128 @@
 {
-  "lastUpdated": "2026-04-29T23:29:16.224179+00:00",
-  "lastUpdatedDisplay": "Apr 29, 2026 \u2014 11:29 PM UTC",
+  "lastUpdated": "2026-04-30T01:17:12.466830+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 01:17 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "The Fed held rates unchanged with Powell signaling cautious optimism about the economy while maintaining an easing bias, though some dissent emerged within the FOMC. Oil prices surged on Middle East tensions while Bitcoin stalled around $75-80k resistance levels, and yields rose to one-month highs on hawkish Fed shifts.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Fed hawkish shift pushed yields higher and strengthened the dollar, creating cross-currents against the risk-on thesis despite continued equity resilience.",
+    "macroSummary": "The Fed held rates steady at 3.5-3.75% with Powell emphasizing economic resilience while acknowledging Middle East uncertainties, as oil prices surged on prolonged Iran conflict concerns. Markets showed mixed reactions with dollar gains, yen weakness past 160, yields rising to one-month highs, and Bitcoin stalling around $75K despite some crypto optimism.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached with dollar gaining strength, yen weakening past 160 (near the 155 carry unwind trigger), and hawkish Fed shift driving yields higher amid geopolitical tensions.",
     "thresholdWatches": [
+      {
+        "indicator": "USDJPY",
+        "level": "< 155",
+        "signal": "Yen weakened past 160 after Fed decision, moving closer to carry unwind trigger level"
+      },
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar gains after Fed decision, though specific level not cited in articles"
-      },
-      {
-        "indicator": "MOVE",
-        "level": "> 100",
-        "signal": "Yields hit one-month highs on hawkish Fed shift, suggesting rising rates volatility"
+        "signal": "Dollar gained after Fed held rates unchanged, approaching risk-off threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Hawkish Fed shift sends yields to one-month high, pressuring duration-sensitive assets",
+        "signal": "Hawkish Fed shift sends yields to one-month high, contradicting dovish front-end expectations",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar gains after Fed holds rates unchanged, countering risk-on FX flows",
+        "signal": "USDJPY weakening past 160 approaches the 155 carry unwind trigger that historically coincides with Risk-Off",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Dollar gains after Fed decision, moving toward 100 level that would signal risk-off bid emergence",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil soaring on prolonged Iran conflict creates stagflation risk that could pressure risk assets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin recovery stalls and slips to $75k on Fed uncertainty and structural resistance",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil soars on Iran/Middle East tensions while stocks end muted, showing defensive rotation",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "S&P 500 ETF flows surge suggesting continued equity demand despite cross-currents",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin stalling at $75K with large player sell walls suggests crypto momentum fading despite bullish narratives",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes as crypto weakness may accelerate put assignment risk",
-      "Watch DXY closely for break above 100 threshold signaling potential regime shift",
-      "Consider reducing Maturity overweight exposure given rising yield environment"
+      "Monitor USDJPY closely - further yen weakness toward 155 could trigger global carry unwind",
+      "Watch DXY break above 100 as potential regime flip signal to Risk-Off",
+      "Consider tightening BMNR put ladder strikes if crypto momentum continues to stall"
     ]
   },
   "articles": [
+    {
+      "title": "Ethereum Poised For $140% Rally If This Resistance Flips \u2013 Analyst Calls Breakout Inevitable",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T00:23:28+00:00",
+      "timeDisplay": "12:23 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:6a748ddc2094b:0-ethereum-poised-for-140-rally-if-this-resistance-flips-analyst-calls-breakout-inevitable/"
+    },
+    {
+      "title": "Oil Prices Mixed; Prospect of Prolonged Strait of Hormuz Closure May Buoy \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T00:18:00+00:00",
+      "timeDisplay": "12:18 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429018969:0/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T00:11:14+00:00",
+      "timeDisplay": "12:11 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D008:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Key facts: DeFi United Pledges; ETH Addresses Rise; 10k-ETH Moved",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T00:08:55+00:00",
+      "timeDisplay": "12:08 AM",
+      "link": "https://www.tradingview.com/news/tradingview:34352a77520e7:0-key-facts-defi-united-pledges-eth-addresses-rise-10k-eth-moved/"
+    },
+    {
+      "title": "Key facts: BTC OI $61B\u2192$49B; $2.5B liq.; WH previews BTC plan; sup $73.5K",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T00:06:44+00:00",
+      "timeDisplay": "12:06 AM",
+      "link": "https://www.tradingview.com/news/tradingview:6d0c7a08aec51:0-key-facts-btc-oi-61b-49b-2-5b-liq-wh-previews-btc-plan-sup-73-5k/"
+    },
+    {
+      "title": "Why The Bitcoin Price Could Hit $68,000 Again",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T00:00:31+00:00",
+      "timeDisplay": "12:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:da4538025094b:0-why-the-bitcoin-price-could-hit-68-000-again/"
+    },
+    {
+      "title": "Gold Hovers 1-Month Low on Inflation Risks",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T23:48:44+00:00",
+      "timeDisplay": "11:48 PM",
+      "link": "https://www.tradingview.com/news/te_news:546241:0-gold-hovers-1-month-low-on-inflation-risks/"
+    },
+    {
+      "title": "Gold Edges Higher on Likely Technical Recovery \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T23:34:00+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260429018785:0/"
+    },
+    {
+      "title": "Oil Extends Rally as Iran War Drags On",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T23:29:51+00:00",
+      "timeDisplay": "11:29 PM",
+      "link": "https://www.tradingview.com/news/te_news:546237:0-oil-extends-rally-as-iran-war-drags-on/"
+    },
     {
       "title": "Bitcoin Large Players Have Built A Sell Wall At $80.5K\u2013$82K \u2013 Spoofing Or Structural Supply?",
       "source": "newsbtc",
@@ -380,6 +452,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C1AI:0-yields-jump-on-hawkish-fed-statement/"
     },
     {
+      "title": "Fed Keeps Rates Steady In Powell\u2019s Last Rate Decision; All Eyes Now On Warsh",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-29T18:11:40+00:00",
+      "timeDisplay": "6:11 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:7c75bd691094b:0/"
+    },
+    {
       "title": "AI investment payoffs in focus as US megacaps report this week",
       "source": "reuters",
       "color": "#ff6d00",
@@ -561,7 +641,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-29T13:58:00+00:00",
       "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429010070:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260429010071:0/"
     },
     {
       "title": "NY Engelhard Gold Prices - Apr 29",
@@ -570,86 +650,6 @@
       "timestamp": "2026-04-29T13:55:00+00:00",
       "timeDisplay": "1:55 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429010047:0/"
-    },
-    {
-      "title": "US 10-Year Treasury Yield Continues to Rise, Fed Awaited",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:54:09+00:00",
-      "timeDisplay": "1:54 PM",
-      "link": "https://www.tradingview.com/news/te_news:546114:0-us-10-year-treasury-yield-continues-to-rise-fed-awaited/"
-    },
-    {
-      "title": "FOMC Decision Collides With 4 AI Mega-Cap Earnings, Setting Bitcoin\u2019s Next Move",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:52:02+00:00",
-      "timeDisplay": "1:52 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:f644138bf094b:0-fomc-decision-collides-with-4-ai-mega-cap-earnings-setting-bitcoin-s-next-move/"
-    },
-    {
-      "title": "Yields rise as Iran tensions push oil prices higher ahead of Fed decision",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T13:47:37+00:00",
-      "timeDisplay": "1:47 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0SM:0-yields-rise-as-iran-tensions-push-oil-prices-higher-ahead-of-fed-decision/"
-    },
-    {
-      "title": "US 10Y Bond Yield Hits 4-week High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:35:25+00:00",
-      "timeDisplay": "1:35 PM",
-      "link": "https://www.tradingview.com/news/te_news:546103:0-us-10y-bond-yield-hits-4-week-high/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Apr 29",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:11:00+00:00",
-      "timeDisplay": "1:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429009456:0/"
-    },
-    {
-      "title": "Oil Extends Gains Amid Middle East Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T12:52:43+00:00",
-      "timeDisplay": "12:52 PM",
-      "link": "https://www.tradingview.com/news/te_news:546087:0-oil-extends-gains-amid-middle-east-uncertainty/"
-    },
-    {
-      "title": "Stocks fall, oil rises, traders wait for tech earnings and Fed",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T11:43:03+00:00",
-      "timeDisplay": "11:43 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C0HQ:0-stocks-fall-oil-rises-traders-wait-for-tech-earnings-and-fed/"
-    },
-    {
-      "title": "Oil Gains Further as Prolonged U.S.-Iran Impasse Deepens Supply Shock \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T11:35:00+00:00",
-      "timeDisplay": "11:35 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429007736:0/"
-    },
-    {
-      "title": "European stocks fall as traders wait for tech earnings, Fed meeting",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T10:00:13+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C0C9:0-european-stocks-fall-as-traders-wait-for-tech-earnings-fed-meeting/"
-    },
-    {
-      "title": "Gold Squeezed Between Safe-Haven Allure, Rate Fears as Underlying Demand Holds \u2014 Update",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T09:56:00+00:00",
-      "timeDisplay": "9:56 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429004686:0-gold-squeezed-between-safe-haven-allure-rate-fears-as-underlying-demand-holds-update/"
     }
   ]
 }

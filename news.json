@@ -1,56 +1,64 @@
 {
-  "lastUpdated": "2026-04-30T01:17:12.466830+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 01:17 AM UTC",
+  "lastUpdated": "2026-04-30T01:27:37.121794+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 01:27 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "The Fed held rates steady at 3.5-3.75% with Powell emphasizing economic resilience while acknowledging Middle East uncertainties, as oil prices surged on prolonged Iran conflict concerns. Markets showed mixed reactions with dollar gains, yen weakness past 160, yields rising to one-month highs, and Bitcoin stalling around $75K despite some crypto optimism.",
+    "macroSummary": "The Fed held rates unchanged but struck a hawkish tone citing inflation concerns, sending yields to one-month highs and strengthening the dollar while weakening the yen past 160. Oil prices surged on prolonged Iran conflict concerns while gold dropped to one-month lows, and Bitcoin stalled around $75,000 after the Fed decision with analysts citing derivative resistance at $80K.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached with dollar gaining strength, yen weakening past 160 (near the 155 carry unwind trigger), and hawkish Fed shift driving yields higher amid geopolitical tensions.",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached or tested with dollar strength, yen weakness past 160, hawkish Fed shift driving yields higher, and gold at one-month lows suggesting early risk-off positioning.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Yen weakened past 160 after Fed decision, moving closer to carry unwind trigger level"
+        "signal": "Yen weakened past 160 after Fed hawkish hold, moving further from carry unwind trigger but in dangerous territory"
       },
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar gained after Fed held rates unchanged, approaching risk-off threshold"
+        "signal": "Dollar gained strength after Fed raised inflation alarm and held hawkish stance"
       }
     ],
     "keySignals": [
       {
-        "signal": "Hawkish Fed shift sends yields to one-month high, contradicting dovish front-end expectations",
+        "signal": "Fed held rates but struck hawkish tone on inflation, sending yields to one-month highs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "USDJPY weakening past 160 approaches the 155 carry unwind trigger that historically coincides with Risk-Off",
+        "signal": "Dollar strengthened after Fed decision while yen weakened past 160 level",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar gains after Fed decision, moving toward 100 level that would signal risk-off bid emergence",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Oil soaring on prolonged Iran conflict creates stagflation risk that could pressure risk assets",
+        "signal": "Gold dropped to one-month lows on inflation risks and hawkish Fed positioning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin stalling at $75K with large player sell walls suggests crypto momentum fading despite bullish narratives",
+        "signal": "Oil prices surged on Iran conflict escalation concerns creating stagflation risk backdrop",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin stalled at $75K with analysts citing structural resistance and potential 50% crash predictions",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely - further yen weakness toward 155 could trigger global carry unwind",
-      "Watch DXY break above 100 as potential regime flip signal to Risk-Off",
-      "Consider tightening BMNR put ladder strikes if crypto momentum continues to stall"
+      "Monitor DXY closely for break above 100 which would flip regime to Risk-Off",
+      "Watch for USDJPY carry unwind if it reverses toward 155 from current 160+ levels",
+      "Consider tightening BMNR put ladder strikes as crypto showing structural resistance and macro headwinds building"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar holds firm after Fed raises inflation alarm, yen slips past 160",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T01:21:12+00:00",
+      "timeDisplay": "1:21 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D014:0-dollar-holds-firm-after-fed-raises-inflation-alarm-yen-slips-past-160/"
+    },
     {
       "title": "Ethereum Poised For $140% Rally If This Resistance Flips \u2013 Analyst Calls Breakout Inevitable",
       "source": "newsbtc",
@@ -642,14 +650,6 @@
       "timestamp": "2026-04-29T13:58:00+00:00",
       "timeDisplay": "1:58 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260429010071:0/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - Apr 29",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T13:55:00+00:00",
-      "timeDisplay": "1:55 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429010047:0/"
     }
   ]
 }

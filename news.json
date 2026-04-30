@@ -1,56 +1,88 @@
 {
-  "lastUpdated": "2026-04-30T09:57:53.514295+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 09:57 AM UTC",
+  "lastUpdated": "2026-04-30T11:24:35.972260+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 11:24 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing significant strain from hawkish Fed messaging and surging oil prices above $110/bbl amid Iran conflict escalation. Dollar strength, rising yields (30-year above 5%, 10-year at one-month highs), and broad asset weakness across equities, bonds, and crypto suggest risk-off dynamics emerging.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Multiple headlines describe spooked markets, falling assets, and classic risk-off flows (dollar strength, yield surge, equity weakness) that directly contradict the current Risk-On regime classification.",
+    "macroSummary": "Oil prices have surged above $110/barrel on escalating Iran war tensions, driving bond yields higher with US 30-year yields topping 5% after a hawkish Fed hold. The dollar has strengthened to multi-week highs while the yen has weakened past 160, though Japanese intervention warnings have caused some dollar pullback.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil surge above $110 is driving broad risk-off behavior with bond yields spiking, dollar strengthening past key levels, and crypto markets falling despite the supposed risk-on regime.",
     "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar hitting multi-week highs on Fed hawkishness and Iran tensions"
-      },
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Yen slipped past 160 but recovering on intervention warnings, approaching carry unwind zone"
+        "signal": "Yen has weakened past 160 but Japanese officials are signaling possible intervention which could trigger carry unwind"
+      },
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar has hit multi-week highs on Iran tensions and hawkish Fed, approaching risk-off threshold levels"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil surge above $110/bbl on Iran conflict intensification driving broad market stress",
+        "signal": "Oil prices trading above $110/barrel on Iran war escalation, highest levels since 2022",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed hawkish hold sends 30-year yields above 5% and 10-year to one-month highs",
+        "signal": "US 30-year yields topped 5% after hawkish Fed hold, with German 10-year hitting 15-year highs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strength to multi-week highs amid safe-haven flows and rate concerns",
+        "signal": "Bitcoin ETF outflows crossed $490M after $2.1B inflow run ended, crypto markets falling",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Asian shares fell as Brent hits 4-year high and central bank hawks spook bond markets",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "USDJPY past 160 with intervention warnings from Japanese officials creating dollar volatility",
         "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "European markets spooked, Asian shares falling, bonds battered by central bank hawks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin ETF outflows cross $490M after $2.1B inflow run ends, crypto weakness persists",
-        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Reassess Risk-On regime classification given widespread risk-off signals",
-      "Monitor DXY breakout above 100 and USDJPY intervention zone for regime confirmation",
-      "Consider reducing BMNR ladder exposure if oil-driven stagflation fears persist"
+      "Monitor BMNR ladder strikes as crypto correlation with risk-off oil shock may create better entry points",
+      "Watch for DXY break above 100 and USDJPY intervention as potential regime flip catalysts",
+      "Consider reducing risk exposure given oil-driven stagflation concerns contradicting risk-on thesis"
     ]
   },
   "articles": [
+    {
+      "title": "Global Bond Yields Reverse from Highs as Oil Price Declines \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T11:01:00+00:00",
+      "timeDisplay": "11:01 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430007404:0/"
+    },
+    {
+      "title": "Oil fear shrouds tech splurge",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T10:43:12+00:00",
+      "timeDisplay": "10:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0RM:0-oil-fear-shrouds-tech-splurge/"
+    },
+    {
+      "title": "WTI Steadies as US Considers Iran Strikes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T10:28:32+00:00",
+      "timeDisplay": "10:28 AM",
+      "link": "https://www.tradingview.com/news/te_news:546640:0-wti-steadies-as-us-considers-iran-strikes/"
+    },
+    {
+      "title": "Ethereum to $60K? It's a 'generational play' for ETH bull Tom Lee, says analyst",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T10:23:43+00:00",
+      "timeDisplay": "10:23 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e991a8f3c094b:0-ethereum-to-60k-it-s-a-generational-play-for-eth-bull-tom-lee-says-analyst/"
+    },
     {
       "title": "Oil worries spook European markets before ECB and BoE decisions",
       "source": "reuters",
@@ -618,38 +650,6 @@
       "timestamp": "2026-04-29T19:10:00+00:00",
       "timeDisplay": "7:10 PM",
       "link": "https://www.tradingview.com/news/macenews:5a0037919094b:0-fed-s-powell-q-a-much-of-fed-independence-legally-mandated-but-independence-at-risk-none-of-that-is-concluded-yet-have-to-fight-for-it/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: HIGHER GAS PRICES MEAN 'A HIT TO GDP;' 'HAVE TO SEE HOW IT EVOLVES;' TAKE WARSH AT HIS WORD HE'LL BE INDEPENDENT OF WHITE HOUSE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:07:00+00:00",
-      "timeDisplay": "7:07 PM",
-      "link": "https://www.tradingview.com/news/macenews:c4df5725e094b:0-fed-s-powell-q-a-higher-gas-prices-mean-a-hit-to-gdp-have-to-see-how-it-evolves-take-warsh-at-his-word-he-ll-be-independent-of-white-house/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: CLOSE TO NEUTRAL RATE OF INTEREST, PERHAPS SOMEWHAT ABOVE; FAVOR 'MILDLY' ABOVE OR NEUTRAL; JOBS 'COOLING A LITTLE BIT'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:05:00+00:00",
-      "timeDisplay": "7:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:198140905094b:0-fed-s-powell-q-a-close-to-neutral-rate-of-interest-perhaps-somewhat-above-favor-mildly-above-or-neutral-jobs-cooling-a-little-bit/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: THINK POLICY IS IN A GOOD PLACE AND IF NECESSARY TO HIKE OR CUT RATES, WILL SIGNAL THAT; ECON FAR LESS ENERGY DEPENDENT THAN IN PAST",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:02:00+00:00",
-      "timeDisplay": "7:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:19eee4504094b:0-fed-s-powell-q-a-think-policy-is-in-a-good-place-and-if-necessary-to-hike-or-cut-rates-will-signal-that-econ-far-less-energy-dependent-than-in-past/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: FOUND IN REVIEW OF COMMUNICATIONS STRATEGY, COULDN'T COME UP WITH CHANGES THAT GOT MUCH SUPPORT SO MOVED ON; NOT A FAN OF DOT PLOT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:00:00+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:007aab2ee094b:0-fed-s-powell-q-a-found-in-review-of-communications-strategy-couldn-t-come-up-with-changes-that-got-much-support-so-moved-on-not-a-fan-of-dot-plot/"
     }
   ]
 }

@@ -1,56 +1,267 @@
 {
-  "lastUpdated": "2026-04-30T11:24:35.972260+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 11:24 AM UTC",
+  "lastUpdated": "2026-04-30T13:13:47.154319+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 01:13 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices have surged above $110/barrel on escalating Iran war tensions, driving bond yields higher with US 30-year yields topping 5% after a hawkish Fed hold. The dollar has strengthened to multi-week highs while the yen has weakened past 160, though Japanese intervention warnings have caused some dollar pullback.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil surge above $110 is driving broad risk-off behavior with bond yields spiking, dollar strengthening past key levels, and crypto markets falling despite the supposed risk-on regime.",
+    "macroSummary": "Economic data shows inflation meeting expectations with PCE at 3.5% YoY, GDP growth at 2.0% slightly below forecast, and labor market strength with jobless claims falling to 189K. Oil markets experienced whiplash with WTI hitting four-year highs amid Iran strike considerations before retreating, while the dollar weakened sharply against the yen as Japanese officials signal intervention readiness.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil volatility and dollar weakness versus yen approach key thresholds, while inflation data remaining elevated and equity markets showing resilience create crosscurrents.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Yen has weakened past 160 but Japanese officials are signaling possible intervention which could trigger carry unwind"
-      },
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar has hit multi-week highs on Iran tensions and hawkish Fed, approaching risk-off threshold levels"
+        "signal": "Dollar tumbling versus yen as Japanese officials signal intervention, approaching carry unwind trigger"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices trading above $110/barrel on Iran war escalation, highest levels since 2022",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US 30-year yields topped 5% after hawkish Fed hold, with German 10-year hitting 15-year highs",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin ETF outflows crossed $490M after $2.1B inflow run ended, crypto markets falling",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Asian shares fell as Brent hits 4-year high and central bank hawks spook bond markets",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "USDJPY past 160 with intervention warnings from Japanese officials creating dollar volatility",
+        "signal": "Dollar drops sharply versus yen with Japanese intervention signals approaching USDJPY < 155 threshold",
         "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil hitting four-year highs before retreating creates volatility and inflation pressure concerns",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "S&P 500 hovering near highs despite oil and data crosscurrents shows equity resilience",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Core PCE quarterly surge to 4.3% vs 2.7% prior quarter signals persistent inflation pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Labor market strength with jobless claims falling to 189K supports growth narrative",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes as crypto correlation with risk-off oil shock may create better entry points",
-      "Watch for DXY break above 100 and USDJPY intervention as potential regime flip catalysts",
-      "Consider reducing risk exposure given oil-driven stagflation concerns contradicting risk-on thesis"
+      "Monitor USDJPY closely for break below 155 which would trigger carry unwind and potential Risk-Off flip",
+      "Watch oil volatility impact on inflation expectations and bond yields given recent four-year highs",
+      "Consider reducing BMNR ladder exposure if dollar weakness accelerates given ETH correlation risks"
     ]
   },
   "articles": [
+    {
+      "title": "S&P 500 hovers near highs as tech earnings counter crude and data crosscurrents\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T13:04:53+00:00",
+      "timeDisplay": "1:04 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0PP:0-s-p-500-hovers-near-highs-as-tech-earnings-counter-crude-and-data-crosscurrents/"
+    },
+    {
+      "title": "Industry Expert Samson Mow Reveals When The Bitcoin Price Will Hit $1M",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T13:00:28+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:ffeec3f58094b:0-industry-expert-samson-mow-reveals-when-the-bitcoin-price-will-hit-1m/"
+    },
+    {
+      "title": "North Korea accounts for 76% of 2026 crypto hack losses, with theft since 2017 topping $6 billion: TRM Labs",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T13:00:00+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/the_block:dcd99f56b094b:0-north-korea-accounts-for-76-of-2026-crypto-hack-losses-with-theft-since-2017-topping-6-billion-trm-labs/"
+    },
+    {
+      "title": "PCE Report: Fed's Preferred Inflation Gauge Rises 3.5% In March, Q1 GDP Comes In At 2%",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:40:23+00:00",
+      "timeDisplay": "12:40 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:ebc83fe06094b:0/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED WKLY CLAIMS 179,765, -26,668; UNADJUSTED INSURED UNEMP RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:b73261452094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-claims-179-765-26-668-unadjusted-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "US CORE PCE PRICES +3.2% IN MARCH FROM YEAR AGO (VS. +3.2% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:f7d23eb32094b:0-us-core-pce-prices-3-2-in-march-from-year-ago-vs-3-2-markets-expected/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1,785 MLN, -23,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:3d740b3c6094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-785-mln-23-000/"
+    },
+    {
+      "title": "US PCE PRICES +3.5% IN MARCH FROM YEAR AGO (VS. +3.5% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:2399b403d094b:0-us-pce-prices-3-5-in-march-from-year-ago-vs-3-5-markets-expected/"
+    },
+    {
+      "title": "US EMPLOYMENT COST INDEX +0.9% IN Q1 Q/Q",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:e9452024b094b:0-us-employment-cost-index-0-9-in-q1-q-q/"
+    },
+    {
+      "title": "US EMPLOYMENT COST INDEX +3.4% IN Q1 FROM YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:87e06b04a094b:0-us-employment-cost-index-3-4-in-q1-from-year-ago/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS:  4-WK MOVING AVG 207,500, -3,500 ; INSURED UNEMP  RATE TWO WKS AGO  1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:7a5b0b31b094b:0-us-initial-claims-for-jobless-benefits-4-wk-moving-avg-207-500-3-500-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "US Q1 PCE ANNUAL RATE +1.6% VS +1.5% EXPECTED AND +1.9% IN Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:622dfe295094b:0-us-q1-pce-annual-rate-1-6-vs-1-5-expected-and-1-9-in-q4/"
+    },
+    {
+      "title": "US CORE PCE PRICES +0.3% IN MARCH FROM FEB. (VS. +0.3% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:5e1e21bb5094b:0-us-core-pce-prices-0-3-in-march-from-feb-vs-0-3-markets-expected/"
+    },
+    {
+      "title": "US PCE PRICES +0.7% IN MARCH FROM FEB. (VS. +0.7% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:06caf0acd094b:0-us-pce-prices-0-7-in-march-from-feb-vs-0-7-markets-expected/"
+    },
+    {
+      "title": "US Q1 CORE PCE PRICE INDEX +4.3% VS +2.7% IN Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:a07283262094b:0-us-q1-core-pce-price-index-4-3-vs-2-7-in-q4/"
+    },
+    {
+      "title": "US Q1 PCE PRICE INDEX +4.5% VS +2.9% IN Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:0eca0ac88094b:0-us-q1-pce-price-index-4-5-vs-2-9-in-q4/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: 189,000, -26,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:95531a445094b:0-us-initial-claims-for-jobless-benefits-189-000-26-000/"
+    },
+    {
+      "title": "US PERSONAL INCOME +0.6% IN MARCH FROM FEB. (VS. +0.3% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:bf1c66f3c094b:0-us-personal-income-0-6-in-march-from-feb-vs-0-3-markets-expected/"
+    },
+    {
+      "title": "US PERSONAL SPENDING +0.9% IN MARCH FROM FEB. (VS. +0.9% MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:317f6751e094b:0-us-personal-spending-0-9-in-march-from-feb-vs-0-9-markets-expected/"
+    },
+    {
+      "title": "US Q1 GDP ADVANCE ESTIMATE +2.0% VS +2.1% EXPECTED AND +0.5% Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:4d95ea5bd094b:0-us-q1-gdp-advance-estimate-2-0-vs-2-1-expected-and-0-5-q4/"
+    },
+    {
+      "title": "Oil Futures Retreat After Rising to Four-Year Highs \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T12:19:00+00:00",
+      "timeDisplay": "12:19 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430009762:0/"
+    },
+    {
+      "title": "Whiplash on European markets as oil tumbles off four-year high, yen spikes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T12:11:10+00:00",
+      "timeDisplay": "12:11 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D0HV:0-whiplash-on-european-markets-as-oil-tumbles-off-four-year-high-yen-spikes/"
+    },
+    {
+      "title": "ConocoPhillips Q1 Profit Declines; Updates Production And Capital Guidance",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T11:47:12+00:00",
+      "timeDisplay": "11:47 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:547c9db13d32a:0-conocophillips-q1-profit-declines-updates-production-and-capital-guidance/"
+    },
+    {
+      "title": "BOE's 'Hold' Decision Was Helped by More Moderate March Inflation \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T11:45:00+00:00",
+      "timeDisplay": "11:45 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430008863:0/"
+    },
+    {
+      "title": "Dollar tumbles versus yen as Japanese officials signal intervention",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T11:39:28+00:00",
+      "timeDisplay": "11:39 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0S4:0-dollar-tumbles-versus-yen-as-japanese-officials-signal-intervention/"
+    },
+    {
+      "title": "Analyst Calls Local Bitcoin Top, Reveals Why The Price Is Headed Below $60,000",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T11:30:47+00:00",
+      "timeDisplay": "11:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:a911233fd094b:0-analyst-calls-local-bitcoin-top-reveals-why-the-price-is-headed-below-60-000/"
+    },
+    {
+      "title": "Brent Slide on Screens Friday Purely Due to Contract Rollover \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T11:25:00+00:00",
+      "timeDisplay": "11:25 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430008165:0/"
+    },
     {
       "title": "Global Bond Yields Reverse from Highs as Oil Price Declines \u2014 Market Talk",
       "source": "dow-jones",
@@ -108,14 +319,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:cf4cf4c3f094b:0-bitcoin-eyes-75k-after-most-hawkish-fomc-as-oil-hits-highest-since-2022/"
     },
     {
-      "title": "Dollar Turns Lower as Yen Recovers on Intervention Warning \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T09:03:00+00:00",
-      "timeDisplay": "9:03 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430003987:0/"
-    },
-    {
       "title": "US Treasury vs. Tehran: Iran in Bitcoin Cat and Mouse Game",
       "source": "cryptonews",
       "color": "#00e5ff",
@@ -138,14 +341,6 @@
       "timestamp": "2026-04-30T08:00:33+00:00",
       "timeDisplay": "8:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:c5a6269f2094b:0-fidelity-flags-bitcoin-price-zone-that-historically-marked-accumulation/"
-    },
-    {
-      "title": "Dollar hits multi-week highs as oil surges, yen near 160",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T07:59:28+00:00",
-      "timeDisplay": "7:59 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D0FW:0-dollar-hits-multi-week-highs-as-oil-surges-yen-near-160/"
     },
     {
       "title": "US 30-year yields top 5% after hawkish Fed hold",
@@ -212,14 +407,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260430002698:0/"
     },
     {
-      "title": "Dollar Rises on Iran War Tensions, Fed Powell Remaining on Board \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T06:49:00+00:00",
-      "timeDisplay": "6:49 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430002684:0/"
-    },
-    {
       "title": "Bitcoin ETF Inflow Stops After $2.1B Run, Outflows Cross $490M",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -234,14 +421,6 @@
       "timestamp": "2026-04-30T06:04:00+00:00",
       "timeDisplay": "6:04 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260430002060:0/"
-    },
-    {
-      "title": "Dollar firms as oil surges, Fed raises inflation alarm; yen slips past 160",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T05:56:05+00:00",
-      "timeDisplay": "5:56 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D06E:0-dollar-firms-as-oil-surges-fed-raises-inflation-alarm-yen-slips-past-160/"
     },
     {
       "title": "U.S. 10-Year Treasury Yield Hovers Near One-Month High \u2014 Market Talk",
@@ -260,28 +439,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D05C:0-asian-shares-fall-as-brent-hits-4-year-high-bonds-battered-by-central-bank-hawks/"
     },
     {
-      "title": "Central bank hawks spook bonds, tech untroubled",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T04:30:00+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D054:0-central-bank-hawks-spook-bonds-tech-untroubled/"
-    },
-    {
       "title": "Crude Oil WTI traded above 110 USD/Bbl",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T04:24:33+00:00",
       "timeDisplay": "4:24 AM",
       "link": "https://www.tradingview.com/news/te_news:546396:0-crude-oil-wti-traded-above-110-usd-bbl/"
-    },
-    {
-      "title": "China's yuan briefly hits three-week low, set for monthly gain",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T04:03:14+00:00",
-      "timeDisplay": "4:03 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D059:0-china-s-yuan-briefly-hits-three-week-low-set-for-monthly-gain/"
     },
     {
       "title": "Oil Extends Rally as Iran War Intensifies",
@@ -332,28 +495,12 @@
       "link": "https://www.tradingview.com/news/te_news:546354:0-us-10-year-yield-holds-firm-after-fed-decision/"
     },
     {
-      "title": "Rupee to encounter fresh strain as Fed's hawkish tilt compounds oil pain",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T02:37:09+00:00",
-      "timeDisplay": "2:37 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D02V:0-rupee-to-encounter-fresh-strain-as-fed-s-hawkish-tilt-compounds-oil-pain/"
-    },
-    {
       "title": "Bitcoin Price Weakness Grows, Traders Brace For Further Downside",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T02:31:25+00:00",
       "timeDisplay": "2:31 AM",
       "link": "https://www.tradingview.com/news/newsbtc:40da52e8f094b:0-bitcoin-price-weakness-grows-traders-brace-for-further-downside/"
-    },
-    {
-      "title": "Dollar Holds Gains After Fed Decision",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T02:12:11+00:00",
-      "timeDisplay": "2:12 AM",
-      "link": "https://www.tradingview.com/news/te_news:546346:0-dollar-holds-gains-after-fed-decision/"
     },
     {
       "title": "Miko Matsumura: No More Crypto Wild West, This Cycle Will Reward Different Behavior",
@@ -370,14 +517,6 @@
       "timestamp": "2026-04-30T01:51:41+00:00",
       "timeDisplay": "1:51 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41C333:0-tech-shares-rise-in-asia-bonds-scarred-by-central-bank-hawks-as-oil-spikes/"
-    },
-    {
-      "title": "Dollar holds firm after Fed raises inflation alarm, yen slips past 160",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T01:21:12+00:00",
-      "timeDisplay": "1:21 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D014:0-dollar-holds-firm-after-fed-raises-inflation-alarm-yen-slips-past-160/"
     },
     {
       "title": "Ethereum Poised For $140% Rally If This Resistance Flips \u2013 Analyst Calls Breakout Inevitable",
@@ -484,14 +623,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:5f55a1985094b:0-bitcoin-recovery-stalls-after-fed-holds-interest-rates-citing-uncertainty-in-middle-east/"
     },
     {
-      "title": "Powell\u2019s Last Pause: A Divided Fed, a Frozen Bill, and Bitcoin\u2019s $250K Bull Case in Retreat",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T22:17:30+00:00",
-      "timeDisplay": "10:17 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:1444abb15094b:0/"
-    },
-    {
       "title": "Oil soars, US stocks end muted on Iran worries with earnings, Fed in focus",
       "source": "reuters",
       "color": "#ff6d00",
@@ -508,148 +639,12 @@
       "link": "https://www.tradingview.com/news/macenews:1d6b7e946094b:0-fomc-leaves-funds-rate-in-3-5-3-75-target-range-keeps-easing-bias-for-now/"
     },
     {
-      "title": "Bitcoin is having its best month in a year - but the retail crowd is looking elsewhere",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T21:22:00+00:00",
-      "timeDisplay": "9:22 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260429020859:0/"
-    },
-    {
       "title": "S&P 500 ETFs Flows Surge as ARK Leads Outflows",
       "source": "etfcom",
       "color": "#00e5ff",
       "timestamp": "2026-04-29T21:00:05+00:00",
       "timeDisplay": "9:00 PM",
       "link": "https://www.tradingview.com/news/etfcom:fd820fa7a094b:0-s-p-500-etfs-flows-surge-as-ark-leads-outflows/"
-    },
-    {
-      "title": "Dollar gains after Fed keeps rates unchanged and yen weakens past 160",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T20:42:18+00:00",
-      "timeDisplay": "8:42 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C18N:0-dollar-gains-after-fed-keeps-rates-unchanged-and-yen-weakens-past-160/"
-    },
-    {
-      "title": "TRANSCRIPT: Fed\u2019s Powell Q&A; to Stay on Fed Board after Warsh; Could Cut or Hike Rates Depending on What Happens",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T20:35:00+00:00",
-      "timeDisplay": "8:35 PM",
-      "link": "https://www.tradingview.com/news/macenews:c826b6345094b:0-transcript-fed-s-powell-q-a-to-stay-on-fed-board-after-warsh-could-cut-or-hike-rates-depending-on-what-happens/"
-    },
-    {
-      "title": "S&P, Nasdaq flat after choppy session; Powell signals he\u2019s not going anywhere",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T20:18:26+00:00",
-      "timeDisplay": "8:18 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C1B8:0-s-p-nasdaq-flat-after-choppy-session-powell-signals-he-s-not-going-anywhere/"
-    },
-    {
-      "title": "Hawkish Fed shift sends yields to one-month high",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T20:15:31+00:00",
-      "timeDisplay": "8:15 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C15S:0-hawkish-fed-shift-sends-yields-to-one-month-high/"
-    },
-    {
-      "title": "Oil soars, stocks dip on Iran worries, earnings in focus after Fed",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T19:42:19+00:00",
-      "timeDisplay": "7:42 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C18M:0-oil-soars-stocks-dip-on-iran-worries-earnings-in-focus-after-fed/"
-    },
-    {
-      "title": "Dollar Gains on Three Hawkish FOMC Dissents",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:37:17+00:00",
-      "timeDisplay": "7:37 PM",
-      "link": "https://www.tradingview.com/news/barchart:e953a3056094b:0-dollar-gains-on-three-hawkish-fomc-dissents/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: US ECONOMY 'HAS BEEN REMARKABLY RESILIENT; 'PEOPLE ARE STILL SPENDING;' BUT THINK LOGICALLY WILL SLOW; ENDS Q&A (APPLAUSE)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:25:00+00:00",
-      "timeDisplay": "7:25 PM",
-      "link": "https://www.tradingview.com/news/macenews:03cf150cc094b:0-fed-s-powell-q-a-us-economy-has-been-remarkably-resilient-people-are-still-spending-but-think-logically-will-slow-ends-q-a-applause/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: FED NOT BIPARTISAN, IT'S NON-PARTISAN; HAVE TO BE INDEPENDENT OF POLITICS; NO SENSE THAT CREDIBILITY IN MKTS 'HAS WEAKENED'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:22:00+00:00",
-      "timeDisplay": "7:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:c40e68fbb094b:0-fed-s-powell-q-a-fed-not-bipartisan-it-s-non-partisan-have-to-be-independent-of-politics-no-sense-that-credibility-in-mkts-has-weakened/"
-    },
-    {
-      "title": "Crude Prices Surge With No End in Sight to US-Iran War",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:20:50+00:00",
-      "timeDisplay": "7:20 PM",
-      "link": "https://www.tradingview.com/news/barchart:99db811b5094b:0-crude-prices-surge-with-no-end-in-sight-to-us-iran-war/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: 'NOT LOOKING TO BE A HIGH-PROFILE DISSIDENT' ON BOARD; BEEN CHALLENGING TO DEAL WITH SIX YEARS OF SUPPLY SHOCKS; 'A DIFFERENT WORLD'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:20:00+00:00",
-      "timeDisplay": "7:20 PM",
-      "link": "https://www.tradingview.com/news/macenews:758e9225b094b:0-fed-s-powell-q-a-not-looking-to-be-a-high-profile-dissident-on-board-been-challenging-to-deal-with-six-years-of-supply-shocks-a-different-world/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: CENTER OF POLIC IS MOVING TOWARD  A MORE NEUTRAL PACE AND FOR MKTS TOO; MAJORITY DIDN'T FEEL NECESSARY TO SEND A SIGNAL 'RIGHT NOW'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:17:00+00:00",
-      "timeDisplay": "7:17 PM",
-      "link": "https://www.tradingview.com/news/macenews:b0bedd01c094b:0-fed-s-powell-q-a-center-of-polic-is-moving-toward-a-more-neutral-pace-and-for-mkts-too-majority-didn-t-feel-necessary-to-send-a-signal-right-now/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: GETTING BACK TO INFLATION GOAL TOO QUICKLY COULD BE COSTLY FOR JOBS BUT WILL GET THERE; ECON GROWING AT 2% OR BETTER; UNEMP LOW",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:15:00+00:00",
-      "timeDisplay": "7:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:d31c33704094b:0-fed-s-powell-q-a-getting-back-to-inflation-goal-too-quickly-could-be-costly-for-jobs-but-will-get-there-econ-growing-at-2-or-better-unemp-low/"
-    },
-    {
-      "title": "Oil Futures Rise As Middle East Stalemate Drags On \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:13:00+00:00",
-      "timeDisplay": "7:13 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429013244:0/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: 'WIDESPREAD CONCERNS' WITHIN FED RE INDEPENDENCE; 'BACK AND FORTH' WITHIN FED ON CONSOLIDATING SOME NON POLICY REGIONAL BANK TASKS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:13:00+00:00",
-      "timeDisplay": "7:13 PM",
-      "link": "https://www.tradingview.com/news/macenews:53b7f74fa094b:0-fed-s-powell-q-a-widespread-concerns-within-fed-re-independence-back-and-forth-within-fed-on-consolidating-some-non-policy-regional-bank-tasks/"
-    },
-    {
-      "title": "Gold Drops to 1-Month Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:10:57+00:00",
-      "timeDisplay": "7:10 PM",
-      "link": "https://www.tradingview.com/news/te_news:546202:0-gold-drops-to-1-month-low/"
-    },
-    {
-      "title": "FED'S POWELL Q&A: MUCH OF FED INDEPENDENCE LEGALLY MANDATED; BUT INDEPENDENCE AT RISK; 'NONE OF THAT IS CONCLUDED YET;' 'HAVE TO FIGHT FOR IT'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T19:10:00+00:00",
-      "timeDisplay": "7:10 PM",
-      "link": "https://www.tradingview.com/news/macenews:5a0037919094b:0-fed-s-powell-q-a-much-of-fed-independence-legally-mandated-but-independence-at-risk-none-of-that-is-concluded-yet-have-to-fight-for-it/"
     }
   ]
 }

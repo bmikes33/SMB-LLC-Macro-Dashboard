@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SOFI SOTP Valuation — FINAL — 2026-04-30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-1: #0a0e17; --bg-2: #0f1420; --bg-3: #141926;
+  --text-1: #e2e8f0; --text-2: #8b9ab5; --text-3: #4a5976;
+  --border: #1e2a3a;
+  --accent-cyan: #00e5ff; --accent-green: #00e676;
+  --accent-red: #ff3d57; --accent-amber: #ffab00;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'IBM Plex Sans', sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg-1); color: var(--text-1);
+  font-family: var(--sans); font-size: 14px; line-height: 1.5;
+  margin: 0; padding: 24px;
+  max-width: 1280px; margin-left: auto; margin-right: auto;
+}
+h1, h2, h3 { font-family: var(--mono); }
+.header-block {
+  background: linear-gradient(135deg, var(--bg-2), var(--bg-3));
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 24px 28px; margin-bottom: 24px;
+}
+.header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+.ticker-block .ticker { font-family: var(--mono); font-size: 32px; font-weight: 700; color: var(--accent-cyan); letter-spacing: 2px; }
+.ticker-block .name { color: var(--text-2); font-size: 13px; margin-top: 2px; }
+.price-block { text-align: right; }
+.price-block .price { font-family: var(--mono); font-size: 28px; font-weight: 700; }
+.price-block .move { color: var(--accent-red); font-family: var(--mono); font-size: 13px; }
+.price-block .tbv { color: var(--text-3); font-family: var(--mono); font-size: 11px; margin-top: 4px; }
+.fv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 20px; }
+.fv-cell { background: var(--bg-1); border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px; }
+.fv-cell .label { font-family: var(--mono); font-size: 10px; color: var(--text-3); text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 4px; }
+.fv-cell .value { font-family: var(--mono); font-size: 22px; font-weight: 700; }
+.fv-cell .delta { font-family: var(--mono); font-size: 12px; margin-top: 2px; }
+.fv-cell .ptbv { font-family: var(--mono); font-size: 10px; color: var(--text-3); margin-top: 2px; }
+.verdict-row { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 12px; }
+.verdict-badge { font-family: var(--mono); font-size: 16px; font-weight: 700; padding: 8px 16px; border: 2px solid; border-radius: 4px; letter-spacing: 1.5px; }
+.cap-badge { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 4px 10px; border: 1px solid; border-radius: 3px; letter-spacing: 1px; }
+.dq-pill { font-family: var(--mono); font-size: 10px; color: var(--text-2); background: var(--bg-1); border: 1px solid var(--border); padding: 4px 10px; border-radius: 12px; }
+section { margin-top: 28px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg-2); padding: 22px 26px; }
+section h2 { font-family: var(--mono); font-size: 13px; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 2.5px; margin: 0 0 14px 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+th { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-3); font-weight: 500; }
+td.num { font-family: var(--mono); text-align: right; }
+.flag { display: inline-block; font-family: var(--mono); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 3px; letter-spacing: 1px; }
+.flag-green { background: rgba(0,230,118,0.12); color: var(--accent-green); border: 1px solid var(--accent-green); }
+.flag-amber { background: rgba(255,171,0,0.12); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+.flag-red { background: rgba(255,61,87,0.12); color: var(--accent-red); border: 1px solid var(--accent-red); }
+.bear { color: var(--accent-red); }
+.base { color: var(--text-1); }
+.bull { color: var(--accent-green); }
+.allocated { font-style: italic; color: var(--text-2); }
+.allocated::after { content: '†'; color: var(--accent-amber); font-style: normal; margin-left: 2px; }
+.user-override { font-weight: 700; color: var(--accent-amber); }
+.user-override::after { content: '*'; }
+.note { background: var(--bg-3); border-left: 3px solid var(--accent-cyan); padding: 12px 16px; margin: 12px 0; font-size: 13px; color: var(--text-2); border-radius: 0 4px 4px 0; }
+.note.warn { border-left-color: var(--accent-amber); }
+.note.danger { border-left-color: var(--accent-red); }
+.note.success { border-left-color: var(--accent-green); }
+.bridge { font-family: var(--mono); font-size: 12px; background: var(--bg-1); padding: 14px 16px; border: 1px solid var(--border); border-radius: 4px; }
+.bridge-row { display: flex; justify-content: space-between; padding: 3px 0; }
+.bridge-row.total { border-top: 1px solid var(--border); padding-top: 6px; margin-top: 6px; font-weight: 700; color: var(--accent-cyan); }
+.bridge-row.subtotal { border-top: 1px dashed var(--border); padding-top: 6px; margin-top: 4px; font-weight: 500; }
+.bridge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.bridge-col h4 { font-family: var(--mono); font-size: 11px; letter-spacing: 1.2px; color: var(--text-3); margin: 0 0 8px 0; text-transform: uppercase; }
+.legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-3); font-family: var(--mono); flex-wrap: wrap; }
+.subhead { color: var(--text-2); font-size: 12px; margin-bottom: 8px; }
+ul { padding-left: 18px; color: var(--text-2); font-size: 13px; line-height: 1.7; }
+ul li { margin-bottom: 6px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); font-family: var(--mono); font-size: 10px; color: var(--text-3); text-align: center; letter-spacing: 1px; }
+.revision-banner { background: rgba(0,229,255,0.08); border: 1px solid var(--accent-cyan); padding: 10px 16px; border-radius: 4px; margin-bottom: 14px; font-size: 12px; color: var(--text-2); }
+.revision-banner strong { color: var(--accent-cyan); }
+</style>
+</head>
+<body>
+
+<div class="header-block">
+  <div class="header-top">
+    <div class="ticker-block">
+      <div class="ticker">SOFI</div>
+      <div class="name">SoFi Technologies, Inc. — Bank Holding Co. (NASDAQ)</div>
+    </div>
+    <div class="price-block">
+      <div class="price">$15.53</div>
+      <div class="move">prev. close 4/29/26 (−15.4% on Q1 print)</div>
+      <div class="tbv">TBV/share: $7.21</div>
+    </div>
+  </div>
+  <div class="fv-grid">
+    <div class="fv-cell">
+      <div class="label">Bear (2Y Disc.)</div>
+      <div class="value bear">$5.67</div>
+      <div class="delta bear">-63.5%</div>
+      <div class="ptbv">0.79x P/TBV</div>
+    </div>
+    <div class="fv-cell">
+      <div class="label">Base (2Y Disc.)</div>
+      <div class="value">$11.99</div>
+      <div class="delta" style="color:var(--accent-red)">-22.8%</div>
+      <div class="ptbv">1.66x P/TBV</div>
+    </div>
+    <div class="fv-cell">
+      <div class="label">Bull (2Y Disc.)</div>
+      <div class="value bull">$25.27</div>
+      <div class="delta bull">+62.7%</div>
+      <div class="ptbv">3.50x P/TBV</div>
+    </div>
+    <div class="fv-cell">
+      <div class="label">Prob-Weighted</div>
+      <div class="value" style="color:var(--accent-red)">$13.73</div>
+      <div class="delta" style="color:var(--accent-red)">-11.6%</div>
+      <div class="ptbv">1.90x P/TBV</div>
+    </div>
+  </div>
+  <div class="verdict-row">
+    <div class="verdict-badge" style="color:var(--accent-red); border-color:var(--accent-red)">OVERVALUED</div>
+    <div class="cap-badge" style="color:var(--accent-amber); border-color:var(--accent-amber)">CAP STRUCTURE: AMBER</div>
+    <div class="dq-pill">DATA: 60% DISC / 35% ALLOC / 5% OVR</div>
+    <div class="dq-pill">SOTP — 3 SEGMENTS</div>
+    <div class="dq-pill">2026-04-30 05:52 ET</div>
+  </div>
+</div>
+
+<section>
+<h2>1. Executive Summary</h2>
+<div class="revision-banner">
+<strong>FINAL BUILD —</strong> incorporates: (1) precise convertible note treatment ($500M corp borrowings, not $3.5B); (2) Bear case Option A — cost discipline, $1.0B flat corp OH; (3) Corp OH calibrated to revenue × leverage ratio anchored to mgmt FY26 guide.
+</div>
+<p style="color:var(--text-2)">SOFI's segment-level fundamentals — anchored to Q1 2026 actuals (released 4/29/26) and management's FY2026 guide ($4.655B adj NR, $1.6B adj EBITDA, $0.60 adj EPS) — produce a base-case fair value of <strong style="color:var(--text-1)">$11.99/share</strong> using 2Y discounted EV/Contribution Profit. <strong style="color:var(--accent-red)">OVERVALUED</strong> at current price of $15.53 (-22.8%). Methodology adapts the standard SOTP framework for SOFI's bank holding company structure.</p>
+<table>
+  <thead><tr><th>Case</th><th class="num">2Y Discounted</th><th class="num">Upside</th><th class="num">NTM × Multiple</th><th class="num">Upside</th><th class="num">P/TBV</th></tr></thead>
+  <tbody>
+    <tr><td><span class="bear">Bear</span></td><td class="num bear">$5.67</td><td class="num bear">-63.5%</td><td class="num bear">$5.30</td><td class="num bear">-65.9%</td><td class="num">0.79x</td></tr>
+    <tr><td>Base</td><td class="num">$11.99</td><td class="num" style="color:var(--accent-red)">-22.8%</td><td class="num">$10.24</td><td class="num" style="color:var(--accent-red)">-34.1%</td><td class="num">1.66x</td></tr>
+    <tr><td><span class="bull">Bull</span></td><td class="num bull">$25.27</td><td class="num bull">+62.7%</td><td class="num bull">$20.74</td><td class="num bull">+33.6%</td><td class="num">3.50x</td></tr>
+    <tr style="background:var(--bg-3)"><td><strong>Prob-Wt 25/50/25</strong></td><td class="num"><strong>$13.73</strong></td><td class="num" style="color:var(--accent-red)"><strong>-11.6%</strong></td><td class="num"><strong>$11.63</strong></td><td class="num" style="color:var(--accent-red)"><strong>-25.1%</strong></td><td class="num"><strong>1.90x</strong></td></tr>
+  </tbody>
+</table>
+<div class="note warn">
+<strong>Read-out:</strong> Base case implies SOFI is mildly overvalued (−23%), not catastrophically so. The recent 15% post-earnings drop didn't go far enough — fair entry zone is ~$11–12. Bull case at $25.27 (+63%) requires execution on management's operating-leverage guide AND Tech Platform recovery — non-trivial conditions, but plausible. Risk-reward at current price is asymmetric to the downside (−23% base vs. +63% bull). Bear case ($5.67, 0.79x P/TBV) is below tangible book — implies severe credit/macro stress.
+</div>
+</section>
+
+<section>
+<h2>2. Segment Lifecycle Map</h2>
+<table>
+<thead><tr><th>Segment</th><th>Stage</th><th class="num">FY25 Adj NR</th><th class="num">FY25 CP Margin</th><th class="num">Q1 26 YoY Growth</th><th>Forecast Horizon</th></tr></thead>
+<tbody>
+<tr><td><strong>Lending</strong></td><td>Mature Growth</td><td class="num">$1,827M</td><td class="num">56%</td><td class="num bull">+53%</td><td>2Y (mild taper Y2)</td></tr>
+<tr><td><strong>Financial Services</strong></td><td>High Growth</td><td class="num">$1,542M</td><td class="num">51%</td><td class="num">+41%</td><td>NTM + 1Y</td></tr>
+<tr><td><strong>Technology Platform</strong></td><td>Mature Growth (Bull) / <span class="bear">Decline (Base/Bear)</span></td><td class="num">$450M</td><td class="num">32%</td><td class="num bear">−27%</td><td>NTM, stage-conditioned</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Notes:</strong> Lending Q1 26 +53% growth driven by Loan Platform Business mix ($3.0B third-party originations + $138M fees). Mgmt guides full-year ~30% — implying deceleration. FS growth decelerated from FY25 +88% to Q1 26 +41%, contribution margin moderated 51%→46% Q4 25→Q1 26. Tech Platform lost a major client (transitioned off pre-Dec 2025); rebrand to "SoFi Technology Solutions" coming. Per user election, base/bear value TP as Decline-stage; bull assumes Mature Growth recovery.
+</div>
+</section>
+
+<section>
+<h2>3. Framework Adaptation: Bank Holding Company</h2>
+<p style="color:var(--text-2)">Three departures from skill defaults required for SOFI's bank holdco structure:</p>
+<ol style="color:var(--text-2); font-size:13px; line-height:1.7">
+<li><strong style="color:var(--text-1)">Segment EBITDA-equivalent = Contribution Profit</strong> (segment net revenue − directly attributable expenses − provision for credit losses). This is the operating-profit metric SOFI manages to. Segment-level D&A is already absorbed in directly attributable expenses — Phase 4 D&A routing does not apply.</li>
+<li><strong style="color:var(--text-1)">Deposits ($40.2B) NOT subtracted as debt</strong>. Operational funding for the loan book; subtracting them like corp debt would zero out lending segment value. Only corporate borrowings at the holdco level are subtracted.</li>
+<li><strong style="color:var(--text-1)">Convertibles treated based on moneyness:</strong> 2026 converts ($500M, OOTM at $22.41 conv. vs. $15.53 stock) treated as cash debt. 2029 converts ($862.5M, deeply ITM at $9.45) treated as equity (already in 1,378M diluted share count via if-converted method).</li>
+</ol>
+</section>
+
+<section>
+<h2>4. Convertible Note Treatment (Precise)</h2>
+<table>
+<thead><tr><th>Note</th><th class="num">Outstanding</th><th class="num">Coupon</th><th class="num">Conv. Price</th><th class="num">Maturity</th><th>Status</th><th>Treatment</th></tr></thead>
+<tbody>
+<tr><td><strong>2026 Converts</strong></td><td class="num">$500M</td><td class="num">0%</td><td class="num">$22.41</td><td class="num">Oct 2026</td><td><span class="flag flag-red">OUT OF MONEY</span></td><td>Cash settle — subtract from EV</td></tr>
+<tr><td><strong>2029 Converts</strong></td><td class="num">$862.5M</td><td class="num">1.25%</td><td class="num">$9.45</td><td class="num">Mar 2029</td><td><span class="flag flag-green">DEEPLY ITM</span></td><td>Equity dilution — already in 1,378M diluted shares</td></tr>
+<tr style="background:var(--bg-3)"><td><strong>Total Outstanding</strong></td><td class="num"><strong>$1,362M</strong></td><td colspan="2"></td><td colspan="3">Subtracted from EV: <strong>$500M</strong> only (the OOTM portion)</td></tr>
+</tbody>
+</table>
+<div class="note success">
+<strong>Why the original $3.5B was wrong:</strong> Initial estimate conflated total outstanding face value with subtraction obligation. The $600M March 2024 exchange (2026 converts → 61.7M shares) reduced 2026 outstanding to $500M. The 2029 converts ($862.5M) are deeply ITM and effectively pre-dilution — already counted as if-converted shares in the 1,378M diluted weighted average. Subtracting them at face would double-count. Per the FY 2024 10-K indenture disclosure: 2026 conversion rate 44.6150 shares/$1,000; 2029 conversion rate 105.8089 shares/$1,000.
+</div>
+</section>
+
+<section>
+<h2>5. Corporate Overhead Calibration</h2>
+<p style="color:var(--text-2)">Corp OH is the largest single negative line item in the bridge — properly calibrating it materially affects fair value. Anchored to historical actuals + management's operating-leverage guidance.</p>
+<table>
+<thead><tr><th>Period</th><th class="num">Sum Seg CP</th><th class="num">Adj EBITDA</th><th class="num">Implied Corp OH</th><th class="num">OH / Revenue</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>FY 2024 actual</td><td class="num">$1,325M</td><td class="num">$666M</td><td class="num">$658M</td><td class="num">25%</td><td>10-K</td></tr>
+<tr><td>FY 2025 actual</td><td class="num">$1,954M</td><td class="num">$1,054M</td><td class="num">$900M</td><td class="num">25%</td><td>10-K / Q4 8-K</td></tr>
+<tr><td>FY 2026 mgmt guide</td><td class="num">~$2,450M</td><td class="num">$1,600M</td><td class="num">$849M</td><td class="num"><strong style="color:var(--accent-cyan)">18%</strong></td><td>Mgmt guide implies</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Calibration logic:</strong> Management's FY26 guide implies corp OH ratio drops from 25% → 18% (operating leverage thesis). My cases bracket this: bull = mgmt guide (18% Y1, 15% Y2 continued leverage); base = partial leverage delivered (22% Y1, 20% Y2); bear = no leverage delivered, but cost discipline keeps OH flat (Option A, $1.0B sustained).
+</div>
+<table>
+<thead><tr><th>Case</th><th class="num">Y1 Revenue</th><th class="num">Y1 OH Ratio</th><th class="num">Y1 Corp OH</th><th class="num">Y2 Revenue</th><th class="num">Y2 OH Ratio</th><th class="num">Y2 Corp OH</th></tr></thead>
+<tbody>
+<tr><td><span class="bear">Bear (Option A — cost discipline)</span></td><td class="num">$4,415M</td><td class="num user-override">flat*</td><td class="num bear">$1,000M</td><td class="num">$4,994M</td><td class="num user-override">flat*</td><td class="num bear">$1,000M</td></tr>
+<tr><td>Base</td><td class="num">$4,920M</td><td class="num">22%</td><td class="num">$1,082M</td><td class="num">$6,258M</td><td class="num">20%</td><td class="num">$1,252M</td></tr>
+<tr><td><span class="bull">Bull</span></td><td class="num">$5,583M</td><td class="num">18%</td><td class="num bull">$1,005M</td><td class="num">$7,509M</td><td class="num">15%</td><td class="num bull">$1,126M</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>6. Peer Set, Multiples & WACC</h2>
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:14px;">LENDING — Mature Growth</h3>
+<div class="subhead">Peers: ALLY (7.1x P/E), SYF (8.5x), LC (10x), OMF (8.1x), DFS (~11x), AX (~9x), BFH (~7x). Industry P/E P25 ~7x, P50 ~9x. Translated to EV/CP (× 0.74 tax adj): P25 ~5x, P50 ~7x, P75 ~9x. <span class="user-override">User uplift to 6.0/8.0/11.0x</span> reflecting SOFI's premium growth and contribution margin profile.</div>
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:14px;">FINANCIAL SERVICES — High Growth</h3>
+<div class="subhead">Peers: HOOD (37x P/E), NU (33x EV/EBITDA), SQ (~12x), AFRM (loss), WISE (15–20x P/E). Wide dispersion. EV/CP base 15x is mid-range fintech, premium for high growth/scale.</div>
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:14px;">TECHNOLOGY PLATFORM — Stage-Conditioned</h3>
+<div class="subhead">Peers: MQ (1.4x EV/Rev — distressed Galileo comp), FOUR (~3–4x), GLBE (~3–5x), TOST (~5–8x), FIS/FI (~3–4x mature). EV/CP at SOFI TP's 25% margin: 6.0/6.0/12.0x — base/bear at MQ-distressed equivalent (no recovery), bull at Mature Growth recovery.</div>
+<table style="margin-top:14px">
+<thead><tr><th>Segment</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">WACC</th><th>WACC Rationale</th></tr></thead>
+<tbody>
+<tr><td><strong>Lending</strong></td><td class="num">6.0x</td><td class="num">8.0x</td><td class="num">11.0x</td><td class="num user-override">9.0%</td><td>Bank-charter funded; deposit base lowers risk vs. non-bank consumer finance</td></tr>
+<tr><td><strong>Financial Services</strong></td><td class="num">10.0x</td><td class="num">15.0x</td><td class="num">20.0x</td><td class="num">11.0%</td><td>High Growth stage default</td></tr>
+<tr><td><strong>Technology Platform</strong></td><td class="num">6.0x</td><td class="num">6.0x</td><td class="num">12.0x</td><td class="num user-override">12.0%</td><td>Higher than stage default — single-client concentration risk realized; rebrand execution risk</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>7. Bear / Base / Bull Cases (Y1 + Y2 CP)</h2>
+<table>
+<thead><tr><th>Segment / Case</th><th class="num">Y1 Rev ($M)</th><th class="num">Y1 CP%</th><th class="num">Y1 CP ($M)</th><th class="num">Y2 Rev ($M)</th><th class="num">Y2 CP%</th><th class="num">Y2 CP ($M)</th></tr></thead>
+<tbody>
+<tr><td><strong>LENDING — Bear</strong></td><td class="num">2,100</td><td class="num">54%</td><td class="num bear">1,134</td><td class="num">2,310</td><td class="num">54%</td><td class="num bear">1,247</td></tr>
+<tr><td><strong>LENDING — Base</strong></td><td class="num">2,400</td><td class="num">56%</td><td class="num">1,344</td><td class="num">3,000</td><td class="num">56%</td><td class="num">1,680</td></tr>
+<tr><td><strong>LENDING — Bull</strong></td><td class="num">2,800</td><td class="num">60%</td><td class="num bull">1,680</td><td class="num">3,640</td><td class="num">58%</td><td class="num bull">2,111</td></tr>
+<tr><td colspan="7"><hr></td></tr>
+<tr><td><strong>FIN SERVICES — Bear</strong></td><td class="num">2,000</td><td class="num">42%</td><td class="num bear">840</td><td class="num">2,400</td><td class="num">42%</td><td class="num bear">1,008</td></tr>
+<tr><td><strong>FIN SERVICES — Base</strong></td><td class="num">2,160</td><td class="num">47%</td><td class="num">1,015</td><td class="num">2,916</td><td class="num">47%</td><td class="num">1,370</td></tr>
+<tr><td><strong>FIN SERVICES — Bull</strong></td><td class="num">2,310</td><td class="num">51%</td><td class="num bull">1,178</td><td class="num">3,349</td><td class="num">51%</td><td class="num bull">1,708</td></tr>
+<tr><td colspan="7"><hr></td></tr>
+<tr><td><strong>TECH PLATFORM — Bear</strong></td><td class="num">315</td><td class="num">18%</td><td class="num bear">57</td><td class="num">284</td><td class="num">18%</td><td class="num bear">51</td></tr>
+<tr><td><strong>TECH PLATFORM — Base</strong></td><td class="num">360</td><td class="num">25%</td><td class="num">90</td><td class="num">342</td><td class="num">25%</td><td class="num">86</td></tr>
+<tr><td><strong>TECH PLATFORM — Bull</strong></td><td class="num">473</td><td class="num">35%</td><td class="num bull">166</td><td class="num">520</td><td class="num">38%</td><td class="num bull">198</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Case construction:</strong> Per skill spec, Y1 anchored to 8Q observed range + mgmt guide. Lending Y2 mildly tapered (per user) — Q1 26 +53% growth attributed to LPB mix shift, normalizes to +25–30%. FS sustained (high-growth regime persistence). TP stage-conditioned per case (Decline base/bear, Mature Growth bull). SBC ($262M FY25) is corporate-level — handled in Corp OH bracket, not segment CP.
+</div>
+</section>
+
+<section>
+<h2>8. Bridge to Equity Value (2Y Discounted — PRIMARY)</h2>
+<div class="bridge-grid">
+
+  <div class="bridge-col">
+    <h4>BEAR CASE</h4>
+    <div class="bridge">
+      <div class="bridge-row"><span>Lending Y2 EV (undisc)</span><span class="num">$7,482M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 9%)²</span><span class="num">$6,297M</span></div>
+      <div class="bridge-row"><span>FS Y2 EV (undisc)</span><span class="num">$10,080M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 11%)²</span><span class="num">$8,181M</span></div>
+      <div class="bridge-row"><span>TP Y2 EV (undisc)</span><span class="num">$306M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 12%)²</span><span class="num">$244M</span></div>
+      <div class="bridge-row subtotal"><span><strong>Σ Segment EVs</strong></span><span class="num"><strong>$14,723M</strong></span></div>
+      <div class="bridge-row"><span class="bear">− Corp OH × 7.7x ÷ disc</span><span class="num bear">($6,404M)</span></div>
+      <div class="bridge-row"><span class="bear">− 2026 Converts (cash)</span><span class="num bear">($500)</span></div>
+      <div class="bridge-row total"><span>Equity Fair Value</span><span class="num">$7,819M</span></div>
+      <div class="bridge-row total"><span>÷ 1378M shares</span><span class="num" style="color:var(--accent-red)">$5.67</span></div>
+    </div>
+  </div>
+
+  <div class="bridge-col">
+    <h4>BASE CASE</h4>
+    <div class="bridge">
+      <div class="bridge-row"><span>Lending Y2 EV (undisc)</span><span class="num">$13,440M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 9%)²</span><span class="num">$11,312M</span></div>
+      <div class="bridge-row"><span>FS Y2 EV (undisc)</span><span class="num">$20,550M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 11%)²</span><span class="num">$16,679M</span></div>
+      <div class="bridge-row"><span>TP Y2 EV (undisc)</span><span class="num">$516M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 12%)²</span><span class="num">$411M</span></div>
+      <div class="bridge-row subtotal"><span><strong>Σ Segment EVs</strong></span><span class="num"><strong>$28,402M</strong></span></div>
+      <div class="bridge-row"><span class="bear">− Corp OH × 11.0x ÷ disc</span><span class="num bear">($11,385M)</span></div>
+      <div class="bridge-row"><span class="bear">− 2026 Converts (cash)</span><span class="num bear">($500)</span></div>
+      <div class="bridge-row total"><span>Equity Fair Value</span><span class="num">$16,517M</span></div>
+      <div class="bridge-row total"><span>÷ 1378M shares</span><span class="num" style="color:var(--accent-red)">$11.99</span></div>
+    </div>
+  </div>
+
+  <div class="bridge-col">
+    <h4>BULL CASE</h4>
+    <div class="bridge">
+      <div class="bridge-row"><span>Lending Y2 EV (undisc)</span><span class="num">$23,221M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 9%)²</span><span class="num">$19,545M</span></div>
+      <div class="bridge-row"><span>FS Y2 EV (undisc)</span><span class="num">$34,160M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 11%)²</span><span class="num">$27,725M</span></div>
+      <div class="bridge-row"><span>TP Y2 EV (undisc)</span><span class="num">$2,376M</span></div>
+      <div class="bridge-row"><span>÷ (1 + 12%)²</span><span class="num">$1,894M</span></div>
+      <div class="bridge-row subtotal"><span><strong>Σ Segment EVs</strong></span><span class="num"><strong>$49,164M</strong></span></div>
+      <div class="bridge-row"><span class="bear">− Corp OH × 14.9x ÷ disc</span><span class="num bear">($13,843M)</span></div>
+      <div class="bridge-row"><span class="bear">− 2026 Converts (cash)</span><span class="num bear">($500)</span></div>
+      <div class="bridge-row total"><span>Equity Fair Value</span><span class="num">$34,820M</span></div>
+      <div class="bridge-row total"><span>÷ 1378M shares</span><span class="num" style="color:var(--accent-green)">$25.27</span></div>
+    </div>
+  </div>
+
+</div>
+<div class="note">
+<strong>Bridge mechanics:</strong> Y2 segment EVs discounted at segment-specific WACC. Corp overhead capitalized at the CP-weighted-average multiple (varies by case: bear 7.7x, base 11.0x, bull 14.9x — reflecting that the weighted multiple rises with the FS/Lending mix premium in higher cases). Only $500M corp borrowings subtracted (2026 converts cash settlement); $862.5M of 2029 converts ride in dilution via the 1,378M diluted share count. <strong>No add-back of cash & investments</strong> — bank operating capital, not excess corporate capital.
+</div>
+</section>
+
+<section>
+<h2>9. Method Comparison (NTM × Multiple — Sanity Check)</h2>
+<table>
+<thead><tr><th>Method</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">Prob-Wt</th></tr></thead>
+<tbody>
+<tr><td>2Y Discounted (Method A — primary)</td><td class="num bear">$5.67</td><td class="num">$11.99</td><td class="num bull">$25.27</td><td class="num">$13.73</td></tr>
+<tr><td>NTM × Multiple (Method B)</td><td class="num bear">$5.30</td><td class="num">$10.24</td><td class="num bull">$20.74</td><td class="num">$11.63</td></tr>
+<tr><td>Gap (A − B) / B</td><td class="num">+7.1%</td><td class="num">+17.0%</td><td class="num">+21.8%</td><td class="num">+18.1%</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Method A &gt; Method B</strong> across all cases — second-year compounding adds material value beyond the NTM multiple. Base case gap of +17.0% means ~$1.75/share of fair value depends on Year 2 regime sustaining. If macro deterioration compresses Year 2 (stagflation credit stress), fair value compresses toward $10.24 base.
+</div>
+</section>
+
+<section>
+<h2>10. Probability-Weighted Sensitivity</h2>
+<table>
+<thead><tr><th>Weighting</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">PW Fair Value</th><th class="num">Upside</th></tr></thead>
+<tbody>
+<tr><td>25/50/25 (default)</td><td class="num">25%</td><td class="num">50%</td><td class="num">25%</td><td class="num"><strong>$13.73</strong></td><td class="num" style="color:var(--accent-red)"><strong>-11.6%</strong></td></tr>
+<tr><td>30/50/20 (bear-skewed)</td><td class="num">30%</td><td class="num">50%</td><td class="num">20%</td><td class="num">$12.75</td><td class="num">-17.9%</td></tr>
+<tr><td>20/50/30 (bull-skewed)</td><td class="num">20%</td><td class="num">50%</td><td class="num">30%</td><td class="num">$14.71</td><td class="num">-5.3%</td></tr>
+<tr><td>15/40/45 (deep bull)</td><td class="num">15%</td><td class="num">40%</td><td class="num">45%</td><td class="num">$17.02</td><td class="num">+9.6%</td></tr>
+</tbody>
+</table>
+<div class="note">
+<strong>Crossover:</strong> To justify current price of $15.53, you need bull case probability ~40%+ with bear ≤15%. Reasonable if you have high conviction on operating-leverage execution and TP recovery. Default 25/50/25 yields modest overvaluation.
+</div>
+</section>
+
+<section>
+<h2>11. Capital Structure Health Check (Bank-Adapted)</h2>
+<table>
+<thead><tr><th>Metric</th><th class="num">Value</th><th>Flag</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Corp Borrowings / Adj EBITDA</td><td class="num">1.3x</td><td><span class="flag flag-green">GREEN</span></td><td>$1.36B converts vs $1.05B FY25 EBITDA. Convertibles at 0% (2026) and 1.25% (2029) — very cheap funding.</td></tr>
+<tr><td>Adj EBITDA / Corp Interest</td><td class="num">23x</td><td><span class="flag flag-green">GREEN</span></td><td>$1.05B EBITDA / $46M corp interest. Coverage abundant.</td></tr>
+<tr><td>Maturity Wall (24mo)</td><td class="num">$500M / 37%</td><td><span class="flag flag-amber">AMBER</span></td><td>2026 converts mature Q3 2026 (cash settle since OOTM). Mitigant: Q4 2025 $1.5B equity raise pre-funded.</td></tr>
+<tr><td>Liquidity (cash+inv vs 12mo obligations)</td><td class="num">&gt;&gt;2x</td><td><span class="flag flag-green">GREEN</span></td><td>$4.9B cash + $2.6B investments. CET1 ratio 21.1% (vs ~10% min) = significant excess capital.</td></tr>
+<tr><td>Diluted Share Count 1y Growth</td><td class="num">+16%</td><td><span class="flag flag-red">RED</span></td><td>Heavy dilution from converts (March 2024 exchange added 61.7M shares) + Q4 25 equity raise. Expected to moderate post-2026 conv settlement, but 2029 converts (91M shares if-converted) remain.</td></tr>
+</tbody>
+</table>
+<div class="note warn">
+<strong>Verdict modifier:</strong> AMBER overall — manageable refi wall, abundant liquidity, but persistent dilution is a real cost. Heavy dilution + multiple compression compound losses if growth disappoints. The 16% YoY share growth is structurally embedded in any future return.
+</div>
+<div class="note danger">
+<strong>External risk vector not in framework:</strong> Active <strong>Muddy Waters short report</strong> (Q1 2026) alleging accounting manipulation. SOFI denied claims and threatened litigation. Skill assumes filings accurate as filed — a thesis-relevant accounting issue would invalidate the analysis. Track separately.
+</div>
+</section>
+
+<section>
+<h2>12. Methodology & Data Provenance</h2>
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px;">DATA SOURCES</h3>
+<ul>
+<li><strong>Primary:</strong> Q1 2026 8-K (4/29/26), FY 2025 10-K (filed Feb 2026), Q4 2025 8-K, Q3 2025 8-K, FY 2024 10-K.</li>
+<li><strong>Disclosed cells (60%):</strong> Q4 2024, Q1 2025, Q4 2025, Q1 2026 segment data — directly from 8-Ks.</li>
+<li><span class="allocated">Allocated cells (35%)</span>: Q2 2024, Q3 2024, Q2 2025, Q3 2025 segment splits — derived from FY totals minus known quarters.</li>
+<li><span class="user-override">User-override cells (5%)</span>: Lending multiples uplift (P50 6.0→8.0x, Bull 9.0→11.0x); WACC overrides (Lending 9% vs 10% default; TP 12% vs 10% default); Bear case Option A (cost discipline corp OH); TP bear/base stage = Decline; Lending Y2 mild taper.</li>
+</ul>
+
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:18px;">KEY ASSUMPTIONS LOG</h3>
+<ul>
+<li><strong>Convertibles:</strong> 2026 converts $500M outstanding (after $600M Mar 2024 exchange), OOTM at $22.41 conv vs $15.53 stock → cash settle. 2029 converts $862.5M, deeply ITM at $9.45 → equity dilution already in 1,378M diluted shares.</li>
+<li><strong>Corp overhead:</strong> Verified $1.0B FY25 baseline (Q1 2026: $590M segment CP − $340M EBITDA = $250M/Q × 4). Calibrated by case to revenue × leverage ratio: Bear flat $1.0B (cost discipline); Base 22% Y1 / 20% Y2; Bull 18% Y1 / 15% Y2 (matches mgmt guide).</li>
+<li><strong>Y2 sustained vs. tapered:</strong> Lending Y2 mildly tapered (+30%→25% growth, +53%→30% bull) — Q1 26 LPB-driven anomaly normalizes. FS Y2 sustained at Y1 trajectory. TP Y2 case-conditioned.</li>
+<li><strong>Diluted shares:</strong> 1,378M (Q1 2026 weighted average diluted, GAAP if-converted method including 2029 converts).</li>
+<li><strong>Cash & investments:</strong> NOT added to bridge — bank operating capital (regulatory liquidity, deposit float), not excess corporate capital.</li>
+<li><strong>SBC:</strong> $262M FY25, mostly corporate (engineering/G&A) — captured in corp OH bracket, not segment CP.</li>
+</ul>
+
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:18px;">FRAMEWORK ADAPTATIONS FROM STANDARD SOTP</h3>
+<ul>
+<li>Used <strong>segment Contribution Profit</strong> as EBITDA-equivalent (segment D&A absorbed in directly attributable expenses; Phase 4 D&A routing inapplicable).</li>
+<li>Excluded deposits ($40.2B), warehouse facilities, and securitization debt from bridge subtraction — operational funding.</li>
+<li>Capital structure check uses bank-relevant metrics (CET1, deposit funding spread, share count growth) rather than pure corporate Net Debt/EBITDA.</li>
+<li>Convertible note treatment based on moneyness — OOTM treated as cash debt, ITM treated as equity (avoids double-counting with diluted share count).</li>
+</ul>
+
+<h3 style="color:var(--text-2); font-size:12px; letter-spacing:1px; margin-top:18px;">LEGEND</h3>
+<div class="legend">
+<span>Disclosed: plain</span>
+<span class="allocated">Allocated</span>
+<span class="user-override">User Override</span>
+<span class="flag flag-green">GREEN</span>
+<span class="flag flag-amber">AMBER</span>
+<span class="flag flag-red">RED</span>
+</div>
+</section>
+
+<div class="footer">
+GENERATED 2026-04-30 05:52 ET · SOTP FUNDAMENTAL VALUATION · SMB LLC · ANCHORED TO Q1 2026 8-K · FINAL BUILD
+</div>
+
+</body>
+</html>

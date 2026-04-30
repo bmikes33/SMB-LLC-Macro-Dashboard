@@ -1,51 +1,128 @@
 {
-  "lastUpdated": "2026-04-30T05:18:30.770137+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 05:18 AM UTC",
+  "lastUpdated": "2026-04-30T07:56:41.716320+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 07:56 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices surge to 4-year highs above $110/bbl amid escalating Iran conflict and US military option considerations, while central bank hawkishness batters bonds and strengthens the dollar. Asian equities decline broadly while crypto markets show weakness with Bitcoin stalling below $80K and derivative positioning shifting defensive.",
+    "macroSummary": "Markets are experiencing significant stress from Iran war escalation driving oil to 4-year highs above $110/bbl, while central bank hawkishness is battering bonds with 10-year yields at multi-year highs. The dollar is strengthening on safe-haven flows and Fed inflation concerns, with the yen weakening past 160, while risk assets including crypto and Asian equities are under pressure.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Multiple regime invalidation signals are flashing with dollar strength, bond selloffs from central bank hawkishness, broad Asian equity declines, and crypto weakness contradicting the Risk-On thesis.",
+    "regimePressureReason": "Multiple signals directly contradict the Risk-On regime classification - oil spiking on war fears, bonds selling off on central bank hawkishness, dollar strengthening on safe-haven demand, and Asian equities falling.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
-        "level": "> 160",
-        "signal": "Yen slips past 160 level, approaching carry unwind trigger territory that historically coincides with global Risk-Off"
+        "level": "< 155",
+        "signal": "Yen has weakened past 160, moving further from the 155 carry unwind trigger but indicating continued dollar strength"
+      },
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar rising on Iran war tensions and Fed hawkishness, approaching potential safe-haven regime flip level"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar holds firm and gains strength after Fed raises inflation alarm, contradicting Risk-On dollar weakness expectations",
+        "signal": "Oil surging above $110/bbl on Iran war escalation fears represents classic risk-off geopolitical premium.",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian shares fall broadly with bonds battered by central bank hawks, showing risk-off equity behavior",
+        "signal": "Dollar strengthening on safe-haven flows and Fed inflation concerns contradicts risk-on currency dynamics.",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil spike to 4-year highs above $110 creating stagflation pressures that typically trigger regime shifts",
+        "signal": "Asian shares falling and bonds battered by central bank hawks shows broad risk asset weakness.",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin recovery stalls below $80K with defensive derivative positioning and large player sell walls emerging",
+        "signal": "10-year Treasury and Bund yields hitting multi-year highs on hawkish central bank positioning pressures growth assets.",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "USDJPY breaks above 160 level, approaching the 155 carry unwind trigger threshold from below",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Bitcoin and Ethereum showing weakness with traders bracing for further downside reflects crypto risk-off sentiment.",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness and stalled Bitcoin recovery may pressure ETH-linked positions",
-      "Prepare to reduce Maturity overweight exposure as bond selloff and hawkish central banks challenge low-vol environment assumptions",
-      "Watch for VIX, MOVE, and HYG threshold breaks as multiple regime invalidation signals are already flashing"
+      "Reassess Risk-On regime classification given multiple contradictory signals emerging",
+      "Monitor DXY closely for break above 100 which would confirm safe-haven dollar bid",
+      "Consider tightening BMNR put ladder strikes given crypto weakness and regime uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "Sterling Rises Ahead of BOE Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T07:36:00+00:00",
+      "timeDisplay": "7:36 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430003098:0/"
+    },
+    {
+      "title": "Gold Rebounds But Remains on Track for Weekly Loss on Rate Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T07:35:00+00:00",
+      "timeDisplay": "7:35 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430003079:0/"
+    },
+    {
+      "title": "Gold Edges Higher as Middle East Conflict Persists",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T07:28:10+00:00",
+      "timeDisplay": "7:28 AM",
+      "link": "https://www.tradingview.com/news/te_news:546521:0-gold-edges-higher-as-middle-east-conflict-persists/"
+    },
+    {
+      "title": "Bitcoin Recovers Slightly as Trades Weigh Tech Earnings, Iran War News \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T07:02:00+00:00",
+      "timeDisplay": "7:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430002845:0/"
+    },
+    {
+      "title": "Ten-Year Bund Yield Hits 15-Year High as Oil Prices Rise; ECB Awaited \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T06:51:00+00:00",
+      "timeDisplay": "6:51 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430002698:0/"
+    },
+    {
+      "title": "Dollar Rises on Iran War Tensions, Fed Powell Remaining on Board \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T06:49:00+00:00",
+      "timeDisplay": "6:49 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430002684:0/"
+    },
+    {
+      "title": "S&P Global Ratings Raises WTI, Brent Price Forecasts \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T06:04:00+00:00",
+      "timeDisplay": "6:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430002060:0/"
+    },
+    {
+      "title": "Dollar firms as oil surges, Fed raises inflation alarm; yen slips past 160",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T05:56:05+00:00",
+      "timeDisplay": "5:56 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D06E:0-dollar-firms-as-oil-surges-fed-raises-inflation-alarm-yen-slips-past-160/"
+    },
+    {
+      "title": "U.S. 10-Year Treasury Yield Hovers Near One-Month High \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T05:54:00+00:00",
+      "timeDisplay": "5:54 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260430001680:0/"
+    },
     {
       "title": "Asian shares fall as Brent hits 4-year high; bonds battered by central bank hawks",
       "source": "reuters",
@@ -103,12 +180,12 @@
       "link": "https://www.tradingview.com/news/beincrypto:f42af9922094b:0-peter-schiff-continues-to-go-after-microstrategy-but-is-he-right-this-time/"
     },
     {
-      "title": "Oil prices rise on report US considering military options to break Iran deadlock",
+      "title": "Brent jumps to 4-year high as concerns of US-Iran war escalation",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-30T03:57:53+00:00",
       "timeDisplay": "3:57 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D02M:0-oil-prices-rise-on-report-us-considering-military-options-to-break-iran-deadlock/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D02M:0-brent-jumps-to-4-year-high-as-concerns-of-us-iran-war-escalation/"
     },
     {
       "title": "THURSDAY WHITE HOUSE SCHEDULE - President Trump bids King Charles goodbye",
@@ -573,78 +650,6 @@
       "timestamp": "2026-04-29T18:36:15+00:00",
       "timeDisplay": "6:36 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C170:0-fed-holds-rates-steady-but-board-vote-is-most-divided-since-1992/"
-    },
-    {
-      "title": "Bitcoin, Ethereum and XRP Prices Drop As Fed Holds Rates and Trump Rejects Iran Deal",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:22:51+00:00",
-      "timeDisplay": "6:22 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:9a9c3ad44094b:0-bitcoin-ethereum-and-xrp-prices-drop-as-fed-holds-rates-and-trump-rejects-iran-deal/"
-    },
-    {
-      "title": "Treasury Yields Hit New 4-Week High After Fed",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:20:56+00:00",
-      "timeDisplay": "6:20 PM",
-      "link": "https://www.tradingview.com/news/te_news:546180:0-treasury-yields-hit-new-4-week-high-after-fed/"
-    },
-    {
-      "title": "WTI Surges 7%",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:15:42+00:00",
-      "timeDisplay": "6:15 PM",
-      "link": "https://www.tradingview.com/news/te_news:546175:0-wti-surges-7/"
-    },
-    {
-      "title": "Cryptocurrency Down Following Fed Decision \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:15:00+00:00",
-      "timeDisplay": "6:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260429012701:0/"
-    },
-    {
-      "title": "Yields jump on hawkish Fed statement",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T18:13:41+00:00",
-      "timeDisplay": "6:13 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C1AI:0-yields-jump-on-hawkish-fed-statement/"
-    },
-    {
-      "title": "Fed Keeps Rates Steady In Powell\u2019s Last Rate Decision; All Eyes Now On Warsh",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T18:11:40+00:00",
-      "timeDisplay": "6:11 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:7c75bd691094b:0/"
-    },
-    {
-      "title": "AI investment payoffs in focus as US megacaps report this week",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T17:54:51+00:00",
-      "timeDisplay": "5:54 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41C14P:0-ai-investment-payoffs-in-focus-as-us-megacaps-report-this-week/"
-    },
-    {
-      "title": "Most crypto investors believe Bitcoin is undervalued: Coinbase survey",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-29T17:54:33+00:00",
-      "timeDisplay": "5:54 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:642dabf61094b:0-most-crypto-investors-believe-bitcoin-is-undervalued-coinbase-survey/"
-    },
-    {
-      "title": "Oil rises, stocks dip with Iran, earnings and Fed in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-29T17:48:53+00:00",
-      "timeDisplay": "5:48 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41C15K:0-oil-rises-stocks-dip-with-iran-earnings-and-fed-in-focus/"
     }
   ]
 }

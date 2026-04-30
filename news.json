@@ -1,29 +1,29 @@
 {
-  "lastUpdated": "2026-04-30T20:58:11.351231+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 08:58 PM UTC",
+  "lastUpdated": "2026-04-30T21:59:27.511807+00:00",
+  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 09:59 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed strong April performance with stocks hitting new highs and bonds rising as oil pulled back from four-year highs. Japan intervened to support the yen causing dollar weakness, while mixed economic data showed GDP growth estimates at 3.7% but leading indicators declining 0.6% in March.",
+    "macroSummary": "Markets showed mixed dynamics with Japanese yen intervention causing dollar weakness while US stocks ended April strongly with new S&P 500 highs. Oil prices pulled back from four-year highs amid US-Iran standstill, leading to lower bond yields, while crypto markets remained volatile with Bitcoin hovering around $76K.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Strong equity performance and bond rallies support risk-on, but yen intervention causing dollar weakness and negative sentiment shifts create cross-currents.",
+    "regimePressureReason": "Strong equity performance and lower volatility support Risk-On, but Japanese intervention driving dollar weakness and shift in sentiment indicators create cross-currents.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "< 155",
-        "signal": "Dollar slides against yen after Japan's reported currency intervention"
+        "indicator": "DXY",
+        "level": "< 100",
+        "signal": "Dollar tumbling after Japanese intervention, approaching lower threshold that would confirm risk-on continuation"
       }
     ],
     "keySignals": [
       {
-        "signal": "S&P 500 pushes to new highs with strong April performance supporting risk appetite",
+        "signal": "S&P 500 pushed to new highs as US stocks ended strong April with significant gains",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar slides against yen after Japan's currency intervention, approaching carry unwind trigger",
+        "signal": "Dollar slides significantly against yen following reported Japanese currency intervention",
         "tag": "THRESHOLD_WATCH"
       },
       {
@@ -31,21 +31,53 @@
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Leading Economic Indicators declined 0.6% in March reflecting weakness in permits, sentiment, and stock prices",
-        "tag": "CONTRADICTS"
+        "signal": "Bond yields fall and oil retreats from four-year highs, reducing inflation pressure",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Bond yields fall and stocks rise as oil retreats from four-year highs",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin rejection at higher levels sparks caution about rally losing steam",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY levels closely as intervention effects could trigger broader carry unwind",
-      "Watch for VIX response to negative sentiment shift in AAII data",
-      "Consider tightening BMNR ladder strikes given mixed economic leading indicators"
+      "Monitor DXY closely - further weakness toward 100 threshold would confirm risk-on regime continuation",
+      "BMNR ladder may benefit from crypto volatility - consider tightening strikes if Bitcoin consolidates around $75K support",
+      "Watch for VIX moves given negative Bull-Bear spread sentiment shift"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar tumbles after Japanese intervention boosts yen",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-04-30T21:21:57+00:00",
+      "timeDisplay": "9:21 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1J1:0-dollar-tumbles-after-japanese-intervention-boosts-yen/"
+    },
+    {
+      "title": "Stablecoins overtake Bitcoin in Latin America crypto purchases \u2014 Bitso",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T21:03:22+00:00",
+      "timeDisplay": "9:03 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:36676b013094b:0-stablecoins-overtake-bitcoin-in-latin-america-crypto-purchases-bitso/"
+    },
+    {
+      "title": "ETF League Tables: Global X Gains on Tech Trade",
+      "source": "etfcom",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T21:00:04+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/etfcom:bc70ec1f0094b:0-etf-league-tables-global-x-gains-on-tech-trade/"
+    },
+    {
+      "title": "Arbitrum DAO starts vote to release 30,766 frozen ETH to DeFi United, following Kelp DAO attack",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T20:58:46+00:00",
+      "timeDisplay": "8:58 PM",
+      "link": "https://www.tradingview.com/news/the_block:e0cd155ee094b:0-arbitrum-dao-starts-vote-to-release-30-766-frozen-eth-to-defi-united-following-kelp-dao-attack/"
+    },
     {
       "title": "Bitcoin Crash Is Coming: Pundit Says It\u2019s Time To Sell All Your BTC",
       "source": "newsbtc",
@@ -140,7 +172,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-30T18:00:00+00:00",
       "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014360:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260430014362:0/"
     },
     {
       "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
@@ -503,14 +535,6 @@
       "link": "https://www.tradingview.com/news/macenews:e9452024b094b:0-us-employment-cost-index-0-9-in-q1-q-q/"
     },
     {
-      "title": "US EMPLOYMENT COST INDEX +3.4% IN Q1 FROM YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:87e06b04a094b:0-us-employment-cost-index-3-4-in-q1-from-year-ago/"
-    },
-    {
       "title": "Oil Futures Retreat After Rising to Four-Year Highs \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -621,30 +645,6 @@
       "timestamp": "2026-04-30T07:36:00+00:00",
       "timeDisplay": "7:36 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260430003098:0/"
-    },
-    {
-      "title": "Gold Rebounds But Remains on Track for Weekly Loss on Rate Concerns \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T07:35:00+00:00",
-      "timeDisplay": "7:35 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430003079:0/"
-    },
-    {
-      "title": "Gold Edges Higher as Middle East Conflict Persists",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T07:28:10+00:00",
-      "timeDisplay": "7:28 AM",
-      "link": "https://www.tradingview.com/news/te_news:546521:0-gold-edges-higher-as-middle-east-conflict-persists/"
-    },
-    {
-      "title": "Kraken bundles crypto and tokenized stocks in pursuit of multi-asset investors",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T07:00:00+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:855c8fb10094b:0-kraken-bundles-crypto-and-tokenized-stocks-in-pursuit-of-multi-asset-investors/"
     }
   ]
 }

@@ -772,7 +772,7 @@ function App() {
         {/* LEFT — Reports */}
         <div className="sidebar-left" style={{display:"flex",flexDirection:"column"}}>
           <div style={{padding:"10px 12px",borderBottom:"1px solid var(--border)",background:"var(--bg-secondary)"}}>
-            <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)"}}>TA Reports</div>
+            <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1.5,textTransform:"uppercase",color:"var(--accent)"}}>Reports</div>
             <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginTop:2}}>Click to load chart + levels</div>
           </div>
           <div style={{flex:1,overflowY:"auto"}}>
@@ -920,6 +920,114 @@ function App() {
               <div className="analysis-scroll">
                 {activeReport ? (
                   <React.Fragment>
+                    {activeReport.type === "valuation" ? (
+                    /* ============ VALUATION REPORT VIEW ============ */
+                    <React.Fragment>
+                    {(() => {
+                      const valColor = "#b388ff";
+                      const verdictColor = (v) => {
+                        if (!v) return "var(--text-muted)";
+                        if (v === "UNDERVALUED") return "var(--green)";
+                        if (v === "OVERVALUED") return "var(--red)";
+                        if (v === "CAP_CAVEAT" || v === "CAP_STRUCTURE_CAVEAT") return "var(--amber)";
+                        return "var(--amber)";
+                      };
+                      const upsideColor = (u) => {
+                        if (typeof u !== "number") return "var(--text-muted)";
+                        if (u > 5) return "var(--green)";
+                        if (u < -5) return "var(--red)";
+                        return "var(--amber)";
+                      };
+                      const fv = activeReport.fairValue || {};
+                      const up = activeReport.upside || {};
+                      const fmtUp = (v) => v === undefined ? "—" : (v >= 0 ? "+" : "") + v.toFixed(1) + "%";
+                      const fmtFv = (v) => v === undefined ? "—" : "$" + v.toFixed(2);
+                      const capColor = activeReport.capitalStructure === "GREEN" ? "var(--green)"
+                                     : activeReport.capitalStructure === "AMBER" ? "var(--amber)"
+                                     : activeReport.capitalStructure === "RED" ? "var(--red)" : "var(--text-muted)";
+                      const fcfFlag = activeReport.fcfRealismCheck && activeReport.fcfRealismCheck.ran ? activeReport.fcfRealismCheck.flag : null;
+                      const fcfColor = fcfFlag === "PASS" ? "var(--green)" : fcfFlag === "NEUTRAL" ? "var(--amber)" : fcfFlag === "CAVEAT" ? "var(--red)" : "var(--text-muted)";
+                      return (
+                      <React.Fragment>
+                      {/* HEADER */}
+                      <div style={{display:"flex",alignItems:"center",gap:14,padding:"10px 14px",background:"var(--bg-secondary)",borderBottom:"1px solid "+valColor,flexWrap:"wrap"}}>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Active Valuation</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:800,color:valColor,letterSpacing:.5}}>{activeReport.ticker}</div>
+                        </div>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Verdict</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,letterSpacing:.5,padding:"1px 8px",borderRadius:3,background:verdictColor(activeReport.verdictBadge)+"20",color:verdictColor(activeReport.verdictBadge),alignSelf:"flex-start"}}>{activeReport.verdictBadge || "—"}</div>
+                        </div>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Mode</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:"var(--text-secondary)",letterSpacing:.5}}>{activeReport.mode || "—"}{activeReport.segmentCount ? " / "+activeReport.segmentCount+" seg" : ""}</div>
+                        </div>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Capital</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:capColor,letterSpacing:.5}}>{activeReport.capitalStructure || "—"}</div>
+                        </div>
+                        {fcfFlag && (
+                          <div style={{display:"flex",flexDirection:"column"}}>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>FCF Check</div>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:fcfColor,letterSpacing:.5}}>{fcfFlag}</div>
+                          </div>
+                        )}
+                        <a href={"reports/" + activeReport.file} target="_blank" rel="noopener noreferrer" style={{marginLeft:"auto",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:valColor,textDecoration:"none",padding:"5px 10px",border:"1px solid "+valColor,borderRadius:3}}>Open Full Report →</a>
+                      </div>
+                      {/* FAIR VALUE GRID — Bear/Base/Bull/PWt */}
+                      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr",gap:1,background:"var(--border)"}}>
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Bear</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--text-primary)",marginTop:2}}>{fmtFv(fv.bear)}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:upsideColor(up.bear),marginTop:1}}>{fmtUp(up.bear)}</div>
+                        </div>
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Base</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--text-primary)",marginTop:2}}>{fmtFv(fv.base)}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:upsideColor(up.base),marginTop:1}}>{fmtUp(up.base)}</div>
+                        </div>
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Bull</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--text-primary)",marginTop:2}}>{fmtFv(fv.bull)}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:upsideColor(up.bull),marginTop:1}}>{fmtUp(up.bull)}</div>
+                        </div>
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px",borderLeft:"2px solid "+valColor}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>P-Wt 25/50/25</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:valColor,marginTop:2}}>{fmtFv(fv.probWeighted)}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:upsideColor(up.probWeighted),marginTop:1}}>{fmtUp(up.probWeighted)}</div>
+                        </div>
+                      </div>
+                      {/* PRICE + CAVEATS */}
+                      {(activeReport.currentPrice !== undefined || (activeReport.verdictCaveats && activeReport.verdictCaveats.length > 0)) && (
+                        <div style={{padding:"10px 20px",background:"var(--bg-tertiary)",borderBottom:"1px solid var(--border)"}}>
+                          {activeReport.currentPrice !== undefined && (
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:11,color:"var(--text-secondary)",marginBottom:6}}>
+                              <span style={{color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase",fontSize:9,marginRight:6}}>Current</span>
+                              <span style={{color:"var(--text-primary)",fontWeight:700}}>${activeReport.currentPrice.toFixed(2)}</span>
+                            </div>
+                          )}
+                          {activeReport.verdictCaveats && activeReport.verdictCaveats.map((c,i) => (
+                            <div key={i} style={{fontFamily:"var(--font-sans)",fontSize:11,color:"var(--amber)",lineHeight:1.5,marginTop:i===0?0:3}}>⚠ {c}</div>
+                          ))}
+                        </div>
+                      )}
+                      {/* USER OVERRIDES (if any) */}
+                      {activeReport.userOverrides && activeReport.userOverrides.length > 0 && (
+                        <div style={{padding:"10px 20px",borderBottom:"1px solid var(--border)"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase",marginBottom:5}}>User Overrides Applied</div>
+                          {activeReport.userOverrides.map((o,i) => (
+                            <div key={i} style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,marginTop:i===0?0:3}}>· {o}</div>
+                          ))}
+                        </div>
+                      )}
+                      </React.Fragment>
+                      );
+                    })()}
+                    </React.Fragment>
+                    ) : (
+                    /* ============ TA REPORT VIEW (existing) ============ */
+                    <React.Fragment>
                     {/* REPORT-DRIVEN TICKER HEADER */}
                     <div style={{display:"flex",alignItems:"center",gap:14,padding:"10px 14px",background:"var(--bg-secondary)",borderBottom:"1px solid var(--border)",flexWrap:"wrap"}}>
                       <div style={{display:"flex",flexDirection:"column"}}>
@@ -988,13 +1096,14 @@ function App() {
                         </table>
                       </div>
                     )}
+                    </React.Fragment>
+                    )}
                   </React.Fragment>
                 ) : (
                   <div style={{padding:"20px 14px",color:"var(--text-muted)",fontSize:12}}>
-                    No active report. Generate a TA report and commit it to <code>reports/</code> to populate this panel. Manual chart changes via the ticker dropdown above do not load report data.
+                    No active report. Select a TA, valuation, or macro report from the left sidebar to populate this panel. Manual chart changes via the ticker dropdown above do not load report data.
                   </div>
-                )}
-              </div>
+                )}              </div>
             </React.Fragment>
             )
           ) : (
@@ -1118,7 +1227,12 @@ function Reports({ onSelect, activeFile }) {
         const latest = group[0];
         const isOpen = !!expanded[k];
         const isMacroGroup = latest.type === "macro";
-        const groupAccent = isMacroGroup ? (regimeColors[latest.regime] || latest.regimeColor || "#8b9ab5") : "var(--accent)";
+        const isValGroup = latest.type === "valuation";
+        const valColor = "#b388ff"; // purple — distinct from macro accent palette
+        const groupAccent = isMacroGroup ? (regimeColors[latest.regime] || latest.regimeColor || "#8b9ab5")
+                          : isValGroup ? valColor
+                          : "var(--accent)";
+        const typeLabel = isMacroGroup ? "MACRO" : isValGroup ? "VAL" : "TA";
         const hasActiveChild = group.some(r => r.file === activeFile);
         return (
           <div key={k} style={{borderBottom:"1px solid var(--border)",marginLeft:-8,marginRight:-8}}>
@@ -1129,7 +1243,7 @@ function Reports({ onSelect, activeFile }) {
               onMouseLeave={e => { if (!hasActiveChild) e.currentTarget.style.background = "transparent"; }}
               style={{padding:"8px",cursor:"pointer",display:"flex",alignItems:"center",gap:6,background:hasActiveChild?"var(--bg-tertiary)":"transparent",borderLeft:hasActiveChild?"2px solid "+groupAccent:"2px solid transparent"}}>
               <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",width:8,display:"inline-block"}}>{isOpen?"▼":"▶"}</span>
-              <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:isMacroGroup?groupAccent+"25":"var(--accent)20",color:groupAccent,textTransform:"uppercase"}}>{isMacroGroup?"MACRO":"TA"}</span>
+              <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:(isMacroGroup||isValGroup)?groupAccent+"25":"var(--accent)20",color:groupAccent,textTransform:"uppercase"}}>{typeLabel}</span>
               <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:700,color:groupAccent,letterSpacing:.5}}>{k}</span>
               {group.length > 1 && (
                 <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",background:"var(--bg-tertiary)",padding:"1px 5px",borderRadius:2}}>{group.length}</span>
@@ -1141,8 +1255,24 @@ function Reports({ onSelect, activeFile }) {
             {isOpen && group.map((r, i) => {
               const isActive = activeFile === r.file;
               const isMacro = r.type === "macro";
+              const isVal = r.type === "valuation";
               const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
-              const accentColor = isMacro ? regColor : "var(--accent)";
+              const verdictColor = (v) => {
+                if (!v) return "var(--text-muted)";
+                if (v === "UNDERVALUED") return "var(--green)";
+                if (v === "OVERVALUED") return "var(--red)";
+                if (v === "CAP_CAVEAT" || v === "CAP_STRUCTURE_CAVEAT") return "var(--amber)";
+                return "var(--amber)";
+              };
+              const accentColor = isMacro ? regColor
+                                : isVal ? verdictColor(r.verdictBadge)
+                                : "var(--accent)";
+              const upsideColor = (u) => {
+                if (!u) return "var(--text-muted)";
+                if (u.startsWith("+")) return "var(--green)";
+                if (u.startsWith("-") || u.startsWith("−")) return "var(--red)";
+                return "var(--text-secondary)";
+              };
               return (
                 <div key={i}
                      style={{padding:"7px 8px 7px 24px",borderTop:"1px solid var(--border)",cursor:"pointer",borderLeft:isActive?"2px solid "+accentColor:"2px solid transparent",background:isActive?"var(--bg-tertiary)":"transparent"}}
@@ -1150,13 +1280,13 @@ function Reports({ onSelect, activeFile }) {
                      onMouseEnter={e => { if (!isActive) e.currentTarget.style.background = "var(--bg-tertiary)"; }}
                      onMouseLeave={e => { if (!isActive) e.currentTarget.style.background = "transparent"; }}>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3,gap:6}}>
-                    <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:600,color:isMacro?accentColor:biasColor(r.bias),letterSpacing:.3,textTransform:"uppercase",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
-                      {isMacro ? r.regime : (r.bias || "—")}
+                    <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:600,color:isMacro?accentColor:isVal?accentColor:biasColor(r.bias),letterSpacing:.3,textTransform:"uppercase",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
+                      {isMacro ? r.regime : isVal ? (r.summary || r.verdictBadge || "—") : (r.bias || "—")}
                     </span>
                     <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",flexShrink:0}}>{fmtDate(r.date)}</span>
                   </div>
                   <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
-                    {!isMacro && (
+                    {!isMacro && !isVal && (
                       <React.Fragment>
                         <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
                         {r.bullScore !== undefined && (
@@ -1169,6 +1299,22 @@ function Reports({ onSelect, activeFile }) {
                         <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.regimeConfidence)+"20",color:confColor(r.regimeConfidence)}}>{r.regimeConfidence}</span>
                         {r.aggregateScore !== undefined && (
                           <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-secondary)"}}>agg {r.aggregateScore.toFixed(2)}</span>
+                        )}
+                      </React.Fragment>
+                    )}
+                    {isVal && (
+                      <React.Fragment>
+                        {r.verdictBadge && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:verdictColor(r.verdictBadge)+"20",color:verdictColor(r.verdictBadge)}}>{r.verdictBadge}</span>
+                        )}
+                        {r.upsideBadge && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,color:upsideColor(r.upsideBadge)}}>{r.upsideBadge}</span>
+                        )}
+                        {r.capitalStructure && r.capitalStructure !== "GREEN" && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--amber)"}}>cap-{r.capitalStructure}</span>
+                        )}
+                        {r.fcfRealismCheck && r.fcfRealismCheck.ran && r.fcfRealismCheck.flag && r.fcfRealismCheck.flag !== "PASS" && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--amber)"}}>fcf-{r.fcfRealismCheck.flag}</span>
                         )}
                       </React.Fragment>
                     )}

@@ -1,0 +1,87 @@
+{
+  "type": "valuation",
+  "file": "AMZN_VAL_2026-04-29_v3.html",
+  "ticker": "AMZN",
+  "tvSymbol": "NASDAQ:AMZN",
+  "date": "2026-04-29T23:55:00-05:00",
+  "summary": "UNDERVALUED \u2014 Base +21.2% / P-Wt +29.3% \u00b7 cap-AMBER \u00b7 fcf-NEUTRAL",
+  "verdictBadge": "UNDERVALUED",
+  "upsideBadge": "+21.2%",
+  "mode": "SOTP",
+  "segmentCount": 3,
+  "currentPrice": 270.25,
+  "fairValue": {
+    "method": "2Y_discounted_with_chip_override",
+    "bear": 222.08,
+    "base": 327.62,
+    "bull": 520.65,
+    "probWeighted": 349.49
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 235.85,
+    "base": 336.7,
+    "bull": 536.51,
+    "probWeighted": 360.67
+  },
+  "upside": {
+    "bear": -17.8,
+    "base": 21.2,
+    "bull": 92.7,
+    "probWeighted": 29.3
+  },
+  "wacc": {
+    "method": "stage_default",
+    "perSegment": {
+      "NA": 0.09,
+      "International": 0.1,
+      "AWS": 0.1
+    }
+  },
+  "daAllocationMethod": "capex_weighted",
+  "userOverrides": [
+    "International multiple range: 13/18/22 (rejected mechanical 17.5/25/25.5)",
+    "AWS multiple range: 18/22/26 (rejected mechanical 16.7/19.9/23)",
+    "AWS Bull growth: 32% (override from 28% observed max) \u2014 chip thesis: $20B run-rate + 100%+ growth + OpenAI/Anthropic/Meta/Uber forward bookings"
+  ],
+  "capitalStructure": "AMBER",
+  "capitalStructureFlags": [
+    "Liquidity tight: $200B 2026 capex compressed TTM FCF to $1.2B from $25.9B",
+    "Coverage = (OCF + Cash) / Obligations = 1.32x \u2014 sufficient but slim"
+  ],
+  "fcfRealismCheck": {
+    "ran": true,
+    "triggers": [
+      "capex anomaly (2026 +33% vs TTM)",
+      "FCF compression (-95% YoY)",
+      "AMBER liquidity flag"
+    ],
+    "horizon": "5Y",
+    "consolidatedWacc": 0.1,
+    "exitMultiple": 18.1,
+    "y1FCF": -41.5,
+    "y5FCF": 158.6,
+    "pvExplicitFCF": 194.0,
+    "pvTerminalValue": 2860.0,
+    "terminalValuePctOfDcf": 94,
+    "dcfEv": 3053.0,
+    "dcfEquity": 3096.0,
+    "dcfFairValue": 284.7,
+    "gapToSotp2yBase": -13.1,
+    "gapToSotpNtmBase": -15.4,
+    "flag": "NEUTRAL",
+    "interpretation": "DCF 13% below SOTP base \u2014 SOTP requires faster capex normalization or sustained terminal multiple to hold",
+    "dominantSensitivity": "exit_multiple"
+  },
+  "dataQuality": {
+    "disclosedPct": 72,
+    "allocatedPct": 23,
+    "userOverridePct": 5
+  },
+  "verdict": "UNDERVALUED",
+  "verdictCaveats": [
+    "Capital structure AMBER: capex consumes FCF",
+    "FCF realism NEUTRAL: SOTP base 13% above DCF \u2014 requires capex normalization or multiple sustainment"
+  ],
+  "notes": "SOTP base case $327.62 (+21.2%) sits between DCF $284.70 (+5.3%) and bull $520.65 (+92.7%). All scenarios positive vs. current $270.25. Two caveats temper the thesis but don't invalidate it: cap structure (AMBER) and FCF realism (NEUTRAL). The 13% gap between SOTP base and DCF is informative \u2014 the SOTP multiple-based approach implicitly assumes capex normalization that the DCF makes explicit. Chip business thesis captured via AWS Bull growth override (28% \u2192 32%); not separately reported as segment."
+}

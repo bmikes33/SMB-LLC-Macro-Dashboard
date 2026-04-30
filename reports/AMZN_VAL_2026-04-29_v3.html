@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMZN SOTP Valuation v3 — 2026-04-29</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-1: #0a0e17; --bg-2: #0f1420; --bg-3: #141926;
+    --txt-1: #e2e8f0; --txt-2: #8b9ab5; --txt-3: #4a5976;
+    --bd: #1e2a3a;
+    --cyan: #00e5ff; --green: #00e676; --red: #ff3d57; --amber: #ffab00;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-1); color: var(--txt-1); font-family: var(--sans); font-size: 14px;
+         line-height: 1.55; padding: 28px 36px; max-width: 1280px; margin: 0 auto; }
+  h1, h2, h3, h4 { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  h1 { font-size: 22px; color: var(--cyan); }
+  h2 { font-size: 13px; color: var(--cyan); margin: 28px 0 12px;
+       border-bottom: 1px solid var(--bd); padding-bottom: 8px; letter-spacing: 0.14em; }
+  h3 { font-size: 12px; color: var(--txt-2); margin: 18px 0 8px; letter-spacing: 0.12em; }
+  .mono, .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .green { color: var(--green); } .red { color: var(--red); }
+  .amber { color: var(--amber); } .cyan { color: var(--cyan); }
+  .muted { color: var(--txt-3); } .secondary { color: var(--txt-2); }
+  .header { display: grid; grid-template-columns: 1fr auto; gap: 16px;
+            background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px;
+            padding: 18px 22px; margin-bottom: 24px; }
+  .header-l h1 { margin-bottom: 4px; }
+  .header-l .sub { color: var(--txt-2); font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .header-r { text-align: right; }
+  .header-r .price { font-family: var(--mono); font-size: 28px; font-weight: 500; }
+  .header-r .price-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+                           color: var(--txt-3); letter-spacing: 0.12em; }
+  .verdict-badge, .cap-badge, .method-badge, .fcf-badge {
+    display: inline-block; padding: 4px 10px; font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 3px; margin-top: 8px;
+  }
+  .verdict-badge { background: rgba(0, 230, 118, 0.12); color: var(--green); border: 1px solid var(--green); }
+  .cap-badge { background: rgba(255, 171, 0, 0.12); color: var(--amber); border: 1px solid var(--amber); margin-left: 6px; }
+  .method-badge { background: rgba(0, 229, 255, 0.10); color: var(--cyan); border: 1px solid var(--cyan); margin-left: 6px; }
+  .fcf-badge { background: rgba(255, 171, 0, 0.10); color: var(--amber); border: 1px solid var(--amber); margin-left: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0;
+          background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px; overflow: hidden; }
+  th, td { text-align: right; padding: 9px 14px; border-bottom: 1px solid var(--bd);
+           font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: var(--bg-3); color: var(--txt-2); font-weight: 500;
+       text-transform: uppercase; font-size: 10px; letter-spacing: 0.10em; }
+  tr:last-child td { border-bottom: none; }
+  tr.total td { border-top: 1px solid var(--cyan); background: var(--bg-3); font-weight: 700; color: var(--txt-1); }
+  tr:hover td { background: rgba(0, 229, 255, 0.03); }
+  .alloc { font-style: italic; color: #a8b8d0; }
+  .alloc::after { content: '†'; margin-left: 3px; color: var(--amber); }
+  .override { font-weight: 700; color: var(--amber); }
+  .override::after { content: '*'; margin-left: 3px; }
+  .fv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+  .fv-card { background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px;
+             padding: 14px; text-align: center; }
+  .fv-card.bear { border-left: 3px solid var(--red); }
+  .fv-card.base { border-left: 3px solid var(--cyan); }
+  .fv-card.bull { border-left: 3px solid var(--green); }
+  .fv-card.pw   { border-left: 3px solid var(--amber); }
+  .fv-card .label { font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+                    color: var(--txt-3); letter-spacing: 0.14em; margin-bottom: 6px; }
+  .fv-card .val { font-family: var(--mono); font-size: 22px; font-weight: 500; color: var(--txt-1); }
+  .fv-card .val-sm { font-family: var(--mono); font-size: 11px; color: var(--txt-3); margin-top: 6px; }
+  .fv-card .delta { font-family: var(--mono); font-size: 12px; margin-top: 4px; }
+  .flag-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--bd); }
+  .flag-row:last-child { border-bottom: none; }
+  .flag { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+  .flag.green { background: var(--green); box-shadow: 0 0 10px rgba(0, 230, 118, 0.4); }
+  .flag.amber { background: var(--amber); box-shadow: 0 0 10px rgba(255, 171, 0, 0.4); }
+  .flag.red   { background: var(--red);   box-shadow: 0 0 10px rgba(255, 61, 87, 0.4); }
+  .flag-label { flex-grow: 1; font-family: var(--mono); font-size: 13px; }
+  .flag-val { font-family: var(--mono); color: var(--txt-2); font-variant-numeric: tabular-nums; }
+  .qbar { display: flex; height: 10px; border-radius: 2px; overflow: hidden; margin: 8px 0; }
+  .qbar .disclosed { background: var(--cyan); }
+  .qbar .allocated { background: var(--amber); }
+  .qbar .override  { background: var(--green); }
+  .footnote { color: var(--txt-3); font-size: 12px; margin-top: 8px; line-height: 1.5; }
+  .caveat-box { background: rgba(255, 171, 0, 0.06); border: 1px solid var(--amber);
+                border-left: 4px solid var(--amber); padding: 12px 16px; margin: 14px 0;
+                border-radius: 3px; font-size: 13px; }
+  .caveat-box .caveat-label { font-family: var(--mono); font-weight: 700; color: var(--amber);
+                              text-transform: uppercase; font-size: 11px; letter-spacing: 0.12em; margin-right: 6px; }
+  .info-box { background: rgba(0, 229, 255, 0.05); border: 1px solid var(--cyan);
+              border-left: 4px solid var(--cyan); padding: 12px 16px; margin: 14px 0;
+              border-radius: 3px; font-size: 13px; }
+  .info-box .info-label { font-family: var(--mono); font-weight: 700; color: var(--cyan);
+                          text-transform: uppercase; font-size: 11px; letter-spacing: 0.12em; margin-right: 6px; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; color: var(--txt-2); font-size: 13px; }
+  li b { color: var(--txt-1); }
+  .legend { background: var(--bg-3); border: 1px solid var(--bd); padding: 10px 14px;
+            margin: 8px 0 16px; font-family: var(--mono); font-size: 11px;
+            color: var(--txt-2); border-radius: 3px; letter-spacing: 0.04em; }
+  .gap-pos { color: var(--green); }
+  .gap-neg { color: var(--red); }
+  .summary-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0;
+  }
+  .summary-card {
+    background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px;
+    padding: 16px; text-align: center;
+  }
+  .summary-card .method { font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+                         color: var(--txt-3); letter-spacing: 0.14em; margin-bottom: 8px; }
+  .summary-card .val { font-family: var(--mono); font-size: 26px; font-weight: 500; }
+  .summary-card .delta { font-family: var(--mono); font-size: 13px; margin-top: 6px; }
+  .summary-card.primary { border: 2px solid var(--cyan); }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-l">
+    <h1>AMZN — SOTP Fundamental Valuation v3</h1>
+    <div class="sub">Amazon.com, Inc. · NASDAQ:AMZN · 2026-04-29 · Standalone Analysis</div>
+    <span class="verdict-badge">Undervalued — Base +21.2%</span>
+    <span class="cap-badge">Cap Structure: AMBER</span>
+    <span class="fcf-badge">FCF Check: NEUTRAL</span>
+    <span class="method-badge">2Y Discounted (primary)</span>
+  </div>
+  <div class="header-r">
+    <div class="price-label">Last close</div>
+    <div class="price">$270.25</div>
+    <div class="secondary mono" style="font-size: 11px; margin-top: 4px;">After-hours: $277.46 (+2.7%)</div>
+  </div>
+</div>
+
+<!-- Data Provenance Strip -->
+<div class="legend">
+  <strong style="color: var(--txt-1);">Data Provenance:</strong>
+  72% disclosed (filings) · 23% allocated (capex-weighted D&amp;A + function-weighted SBC) · 5% user-override
+  <div class="qbar">
+    <div class="disclosed" style="width: 72%;"></div>
+    <div class="allocated" style="width: 23%;"></div>
+    <div class="override" style="width: 5%;"></div>
+  </div>
+  <strong>Disclosed</strong>: plain · <strong class="alloc" style="font-style: normal;">Allocated</strong>: italic + † · <strong class="override" style="font-weight: 700;">User-override</strong>: bold amber + *
+</div>
+
+<!-- Section 1: Executive Summary -->
+<h2>§1 — Executive Summary</h2>
+
+<div class="fv-grid">
+  <div class="fv-card bear">
+    <div class="label">Bear (2Y Disc)</div>
+    <div class="val">$222.08</div>
+    <div class="delta red">-17.8%</div>
+    <div class="val-sm">NTM × Mult: $235.85 (−12.7%)</div>
+  </div>
+  <div class="fv-card base">
+    <div class="label">Base (2Y Disc)</div>
+    <div class="val">$327.62</div>
+    <div class="delta green">+21.2%</div>
+    <div class="val-sm">NTM × Mult: $336.70 (+24.6%)</div>
+  </div>
+  <div class="fv-card bull">
+    <div class="label">Bull <span class="override" style="font-size: 9px;">chip override</span></div>
+    <div class="val">$520.65</div>
+    <div class="delta green">+92.7%</div>
+    <div class="val-sm">w/o override: $503.97</div>
+  </div>
+  <div class="fv-card pw">
+    <div class="label">Prob-Wt 25/50/25</div>
+    <div class="val">$349.49</div>
+    <div class="delta green">+29.3%</div>
+    <div class="val-sm">w/o override: $345.32</div>
+  </div>
+</div>
+
+<div class="info-box">
+  <span class="info-label">User Override Applied — AWS Bull Case (Chip Thesis)</span>
+  AWS bull-case revenue growth raised from <strong>28%</strong> (max observed) to <strong>32%</strong> (sustained)
+  to capture chip business mix shift: $20B+ chip run-rate at 100%+ growth, plus contracted forward bookings
+  (OpenAI 2GW Trainium for 2027, Anthropic 5GW Trainium, Meta tens of millions of Graviton cores, Uber Graviton4 + Trainium3).
+  Chip business not separately reported by AMZN — embedded inside AWS segment. Op margin (39.5%) and multiple (26x) unchanged.
+</div>
+
+<div class="caveat-box">
+  <span class="caveat-label">Verdict</span>
+  <strong style="color: var(--green);">Undervalued at base case (+21.2%)</strong>.
+  Probability-weighted upside ~29%. Bull case ($520 / +93%) reflects chip-driven AWS sustaining 32% growth.
+  Bear case (−18%) sustained worst observed quarters over 2 years.
+  <strong style="color: var(--amber);">Two caveats apply:</strong>
+  (1) Cap structure AMBER — 2026 capex compressing FCF. (2) FCF realism check NEUTRAL — DCF FV ($285) is 13% below SOTP base, suggesting SOTP base case has some optimism baked into the multiples that requires capex normalization to hold.
+</div>
+
+<!-- Section 2: Segment Lifecycle Map -->
+<h2>§2 — Segment Lifecycle Map</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Segment</th><th>TTM Rev ($B)</th><th>Mix</th><th>YoY (Q1'26)</th>
+      <th>TTM Op Mgn</th><th>EBITDA Mgn</th><th>Stage</th><th>WACC</th><th>Forecast</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>North America</td><td>437.6</td><td>58.9%</td><td>12.0%</td><td>7.3%</td>
+        <td class="alloc">15.4%</td><td>Maturity</td><td>9.0%</td><td>2Y</td></tr>
+    <tr><td>International</td><td>168.2</td><td>22.6%</td><td>11.0% ex-FX</td><td>3.1%</td>
+        <td class="alloc">10.2%</td><td>Mature Growth</td><td>10.0%</td><td>2Y</td></tr>
+    <tr><td>AWS</td><td>137.0</td><td>18.4%</td><td>28.0%</td><td>35.2%</td>
+        <td class="alloc">52.1%</td><td>Mature Growth</td><td>10.0%</td><td>2Y</td></tr>
+    <tr class="total"><td>Consolidated</td><td>742.8</td><td>100.0%</td><td>15.0% ex-FX</td><td>11.5%</td>
+        <td class="alloc">21.0%</td><td>Mixed</td><td>—</td><td>2Y</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 3: D&A Allocation -->
+<h2>§3 — D&amp;A Allocation Methodology</h2>
+
+<div class="info-box">
+  <span class="info-label">Auto-Routing Decision</span>
+  AMZN triggers <strong>Method B (capex-weighted D&amp;A)</strong> — AWS captures ~80% of consolidated capex but 18% of revenue (4.4× skew, well above 2× threshold).
+</div>
+
+<table>
+  <thead>
+    <tr><th>Segment</th><th>Method A (Rev Share)</th><th>Method B (Capex Wtd) — applied</th><th>Δ vs. A</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>NA</td><td class="num">$41.5B</td><td class="alloc num">$35.2B</td><td class="num red">−$6.3B</td></tr>
+    <tr><td>International</td><td class="num">$15.9B</td><td class="alloc num">$12.0B</td><td class="num red">−$3.9B</td></tr>
+    <tr><td>AWS</td><td class="num">$13.0B</td><td class="alloc num">$23.2B</td><td class="num green">+$10.2B</td></tr>
+    <tr class="total"><td>Total TTM D&amp;A</td><td class="num">$70.4B</td><td class="num">$70.4B</td><td class="num">match ✓</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 4: Peer set, multiples, WACC -->
+<h2>§4 — Peer Set, Multiples &amp; WACC</h2>
+
+<h3>NA (Maturity) — EV/EBITDA, WACC 9.0%</h3>
+<table>
+  <thead><tr><th>Peer</th><th>EV/EBITDA TTM</th><th>Anchor</th></tr></thead>
+  <tbody>
+    <tr><td>TGT</td><td>8.5x</td><td>Pure retail</td></tr>
+    <tr><td>EBAY</td><td>16.6x</td><td>Pure marketplace</td></tr>
+    <tr><td>WMT</td><td>20.0x</td><td>Best single-comp anchor</td></tr>
+    <tr><td>COST</td><td>32.0x</td><td>Outlier — premium loyalty model</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Range</th><th>Bear (25th)</th><th>Base (50th)</th><th>Bull (75th)</th></tr></thead>
+  <tbody><tr><td>Mechanical (accepted)</td><td class="num">14.6x</td><td class="num">18.3x</td><td class="num">23.0x</td></tr></tbody>
+</table>
+
+<h3>International (Mature Growth) — EV/EBITDA, WACC 10.0%</h3>
+<table>
+  <thead><tr><th>Range</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Mechanical (rejected)</td><td class="num muted">17.5x</td><td class="num muted">25.0x</td><td class="num muted">25.5x</td></tr>
+    <tr><td>User-override (applied)</td><td class="num override">13.0x</td><td class="num override">18.0x</td><td class="num override">22.0x</td></tr>
+  </tbody>
+</table>
+
+<h3>AWS (Mature Growth) — EV/EBITDA, WACC 10.0%</h3>
+<table>
+  <thead><tr><th>Range</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Mechanical (rejected)</td><td class="num muted">16.7x</td><td class="num muted">19.9x</td><td class="num muted">23.0x</td></tr>
+    <tr><td>User-override (applied)</td><td class="num override">18.0x</td><td class="num override">22.0x</td><td class="num override">26.0x</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 5: Bear/Base/Bull cases -->
+<h2>§5 — Bear / Base / Bull (Year 1 + Year 2 EBITDA)</h2>
+
+<h3>North America</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Revenue growth</td><td class="num">8.0%</td><td class="num">11.0%</td><td class="num">12.0%</td></tr>
+    <tr><td>Op margin</td><td class="num">4.5%</td><td class="num">7.2%</td><td class="num">9.0%</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">59.3</td><td class="num">74.1</td><td class="num">91.7</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">64.0</td><td class="num">82.3</td><td class="num">102.7</td></tr>
+    <tr><td>Multiple</td><td class="num">14.6x</td><td class="num">18.3x</td><td class="num">23.0x</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">935</td><td class="num">1,506</td><td class="num">2,363</td></tr>
+    <tr class="total"><td>2Y Disc EV (WACC 9%)</td><td class="num">787</td><td class="num">1,268</td><td class="num">1,989</td></tr>
+  </tbody>
+</table>
+
+<h3>International</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Revenue growth (ex-FX)</td><td class="num">8.0%</td><td class="num">10.75%</td><td class="num">11.0%</td></tr>
+    <tr><td>Op margin</td><td class="num">2.1%</td><td class="num">3.2%</td><td class="num">4.1%</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">16.8</td><td class="num">19.2</td><td class="num">23.3</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">18.2</td><td class="num">21.3</td><td class="num">25.9</td></tr>
+    <tr><td>Multiple <span class="override" style="font-size: 9px;">override</span></td><td class="num override">13.0x</td><td class="num override">18.0x</td><td class="num override">22.0x</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">236</td><td class="num">383</td><td class="num">569</td></tr>
+    <tr class="total"><td>2Y Disc EV (WACC 10%)</td><td class="num">195</td><td class="num">317</td><td class="num">471</td></tr>
+  </tbody>
+</table>
+
+<h3>AWS — Bull Case Includes Chip Override</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull <span class="override" style="font-size: 9px;">chip override</span></th></tr></thead>
+  <tbody>
+    <tr><td>Revenue growth (ex-FX)</td><td class="num">17.0%</td><td class="num">22.25%</td><td class="num override">32.0%</td></tr>
+    <tr><td>Op margin</td><td class="num">32.9%</td><td class="num">35.05%</td><td class="num">39.5%</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">79.9</td><td class="num">87.1</td><td class="num">111.4</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">93.5</td><td class="num">106.5</td><td class="num">147.0</td></tr>
+    <tr><td>Multiple <span class="override" style="font-size: 9px;">override</span></td><td class="num override">18.0x</td><td class="num override">22.0x</td><td class="num override">26.0x</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">1,683</td><td class="num">2,342</td><td class="num">3,823</td></tr>
+    <tr class="total"><td>2Y Disc EV (WACC 10%)</td><td class="num">1,391</td><td class="num">1,936</td><td class="num">3,159</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 7: Bridge -->
+<h2>§7 — Bridge to Equity Fair Value (2Y Discounted)</h2>
+
+<table>
+  <thead><tr><th>Component</th><th>Bear ($B)</th><th>Base ($B)</th><th>Bull ($B)</th></tr></thead>
+  <tbody>
+    <tr><td>NA segment EV</td><td class="num">787</td><td class="num">1,268</td><td class="num">1,989</td></tr>
+    <tr><td>International segment EV</td><td class="num">195</td><td class="num">317</td><td class="num">471</td></tr>
+    <tr><td>AWS segment EV (incl. chip override on Bull)</td><td class="num">1,391</td><td class="num">1,936</td><td class="num">3,159</td></tr>
+    <tr class="total"><td>Σ Today's Segment EV</td><td class="num">2,372</td><td class="num">3,520</td><td class="num">5,619</td></tr>
+    <tr><td>+ Cash &amp; marketable securities</td><td class="num">+143.1</td><td class="num">+143.1</td><td class="num">+143.1</td></tr>
+    <tr><td>− Total debt</td><td class="num">−130.7</td><td class="num">−130.7</td><td class="num">−130.7</td></tr>
+    <tr><td>+ Anthropic stake</td><td class="alloc num">+30.0</td><td class="alloc num">+30.0</td><td class="alloc num">+30.0</td></tr>
+    <tr class="total"><td>Equity Fair Value ($B)</td><td class="num">2,415</td><td class="num">3,563</td><td class="num">5,662</td></tr>
+    <tr><td>÷ Diluted shares (M)</td><td class="num">10,874</td><td class="num">10,874</td><td class="num">10,874</td></tr>
+    <tr class="total"><td>Fair Value per Share ($)</td><td class="num">222.08</td><td class="num">327.62</td><td class="num">520.65</td></tr>
+    <tr><td>vs. $270.25 close</td><td class="num red">−17.8%</td><td class="num green">+21.2%</td><td class="num green">+92.7%</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 9: Probability-weighted -->
+<h2>§9 — Probability-Weighted Fair Value</h2>
+
+<table>
+  <thead><tr><th>Weights</th><th>FV/Share (2Y Disc)</th><th>vs. $270.25</th></tr></thead>
+  <tbody>
+    <tr><td>Default (25/50/25)</td><td class="num">$349.49</td><td class="num green">+29.3%</td></tr>
+    <tr><td>Conservative (40/40/20)</td><td class="num">$324.97</td><td class="num green">+20.2%</td></tr>
+    <tr><td>Aggressive (15/50/35)</td><td class="num">$379.21</td><td class="num green">+40.3%</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 10: Capital Structure -->
+<h2>§10 — Capital Structure Health Check</h2>
+
+<table>
+  <tbody>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">1. Net Debt / TTM EBITDA</td><td class="flag-val">−0.08x (net cash)</td><td class="flag-val green">GREEN</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">2. EBITDA / Interest</td><td class="flag-val">~65x</td><td class="flag-val green">GREEN</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">3. Maturity Wall (24mo)</td><td class="flag-val">Manageable</td><td class="flag-val green">GREEN*</td></tr>
+    <tr class="flag-row"><td><span class="flag amber"></span></td><td class="flag-label">4. Liquidity vs. obligations</td><td class="flag-val">Tight — $200B 2026 capex</td><td class="flag-val amber">AMBER</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">5. Diluted Share CAGR</td><td class="flag-val">~0.6%/yr</td><td class="flag-val green">GREEN</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 11: FCF REALISM CHECK (NEW) -->
+<h2>§11 — FCF Realism Check (5Y DCF Sanity)</h2>
+
+<div class="info-box">
+  <span class="info-label">Why this section ran</span>
+  AMZN announced 2026 capex of <strong>$200B</strong> vs. TTM run-rate of $151B (+33%). TTM FCF compressed to <strong>$1.2B from $25.9B</strong>.
+  Capital structure AMBER liquidity flag in §10 is tied to this capex cycle.
+  All three triggers fire — FCF realism check ran automatically.
+</div>
+
+<h3>5-Year Consolidated Projection</h3>
+<table>
+  <thead>
+    <tr><th>Year</th><th>Revenue ($B)</th><th>EBITDA ($B)</th><th>D&amp;A ($B)</th><th>Op Inc ($B)</th><th>Capex ($B)</th><th>Cash Tax ($B)</th><th>FCF ($B)</th><th>PV @ 10%</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2026 (Y1)</td><td class="num">839.5</td><td class="num">180.4</td><td class="num">80.7</td><td class="num">99.7</td><td class="num">200.0</td><td class="num">21.9</td><td class="num red">−41.5</td><td class="num red">−37.7</td></tr>
+    <tr><td>2027 (Y2)</td><td class="num">940.2</td><td class="num">202.0</td><td class="num">90.4</td><td class="num">111.6</td><td class="num">166.2</td><td class="num">24.6</td><td class="num">11.3</td><td class="num">9.3</td></tr>
+    <tr><td>2028 (Y3)</td><td class="num">1,034.3</td><td class="num">222.3</td><td class="num">99.5</td><td class="num">122.8</td><td class="num">132.4</td><td class="num">27.0</td><td class="num">62.8</td><td class="num">47.2</td></tr>
+    <tr><td>2029 (Y4)</td><td class="num">1,117.0</td><td class="num">240.0</td><td class="num">107.4</td><td class="num">132.6</td><td class="num">98.7</td><td class="num">29.2</td><td class="num">112.2</td><td class="num">76.6</td></tr>
+    <tr><td>2030 (Y5)</td><td class="num">1,184.0</td><td class="num">254.4</td><td class="num">113.9</td><td class="num">140.6</td><td class="num">64.9</td><td class="num">30.9</td><td class="num">158.6</td><td class="num">98.5</td></tr>
+    <tr class="total"><td>Sum PV (Y1–Y5)</td><td colspan="7"></td><td class="num">194</td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">
+  EBITDA growth taper: 13% → 12% → 10% → 8% → 6% (toward terminal 3%).
+  Capex linear taper from $200B Y1 to $65B Y5 (target: 25.5% of EBITDA — weighted-average stage-typical).
+  Cash tax = 22% × Operating Income. WC change neutral (AMZN runs negative WC; conservative baseline).
+</p>
+
+<h3>Terminal Value &amp; DCF Bridge</h3>
+<table>
+  <tbody>
+    <tr><td>Year 5 EBITDA</td><td class="num">$254.4B</td></tr>
+    <tr><td>Exit multiple (weighted avg base × 0.9 maturity compression)</td><td class="num">18.1x</td></tr>
+    <tr><td>Terminal EV (Year 5)</td><td class="num">$4,605B</td></tr>
+    <tr><td>PV of Terminal Value @ 10% × 5</td><td class="num">$2,860B</td></tr>
+    <tr><td>+ PV of explicit FCF (Y1–Y5)</td><td class="num">$194B</td></tr>
+    <tr class="total"><td>DCF Enterprise Value</td><td class="num">$3,053B</td></tr>
+    <tr><td>+ Cash & marketable</td><td class="num">+$143.1B</td></tr>
+    <tr><td>− Debt</td><td class="num">−$130.7B</td></tr>
+    <tr><td>+ Anthropic stake</td><td class="alloc num">+$30.0B</td></tr>
+    <tr class="total"><td>DCF Equity Value</td><td class="num">$3,096B</td></tr>
+    <tr><td>÷ Diluted shares (10,874M)</td><td></td></tr>
+    <tr class="total"><td>DCF Fair Value per Share</td><td class="num">$284.70</td></tr>
+    <tr><td>vs. $270.25 close</td><td class="num green">+5.3%</td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">
+  <strong>Terminal value = 94% of total DCF EV.</strong> This is typical for a tech business with long-duration cash flows. The exit multiple is the dominant assumption.
+</p>
+
+<h3>Comparison to SOTP &amp; Sensitivity</h3>
+<table>
+  <thead>
+    <tr><th>Method</th><th>Fair Value/Share</th><th>vs. Current</th><th>Gap to SOTP 2Y Base</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>SOTP Bull (chip override)</td><td class="num">$520.65</td><td class="num green">+92.7%</td><td class="num">—</td></tr>
+    <tr><td>SOTP NTM × Multiple Base</td><td class="num">$336.70</td><td class="num green">+24.6%</td><td class="num gap-pos">+2.8%</td></tr>
+    <tr><td>SOTP 2Y Discounted Base (primary)</td><td class="num">$327.62</td><td class="num green">+21.2%</td><td class="num">baseline</td></tr>
+    <tr><td>DCF FCF Realism (5Y)</td><td class="num">$284.70</td><td class="num green">+5.3%</td><td class="num gap-neg">−13.1%</td></tr>
+    <tr><td>SOTP Bear</td><td class="num">$222.08</td><td class="num red">−17.8%</td><td class="num gap-neg">−32.2%</td></tr>
+  </tbody>
+</table>
+
+<div class="caveat-box">
+  <span class="caveat-label">FCF Realism Flag — NEUTRAL (Caveat)</span>
+  DCF fair value is <strong>13.1% below</strong> the SOTP 2Y discounted base case. The gap is in the 5–15% range — not invalidating, but noteworthy.
+  <br><br>
+  <strong>What it means:</strong> the SOTP base case assumes peer multiples that, when projected through explicit FCF, require either (a) <strong>faster capex normalization</strong> than the linear taper to 25.5% of EBITDA by 2030, or (b) <strong>terminal multiple sustainability at ~20x rather than the 18.1x compression assumed</strong>.
+  <br><br>
+  <strong>The thesis still holds</strong> — even DCF says +5.3% upside. But the FCF picture raises the bar on capex discipline. If 2026 capex slips to $250B+ or sustained beyond 2027, the thesis weakens.
+</div>
+
+<h3>Sensitivity</h3>
+<table>
+  <thead>
+    <tr><th>Scenario</th><th>Y5 Capex</th><th>Exit Mult</th><th>DCF FV/Share</th><th>Gap to SOTP 2Y Base</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Base case</td><td class="num">$65B</td><td class="num">18.1x</td><td class="num">$284.70</td><td class="num gap-neg">−13.1%</td></tr>
+    <tr><td>Capex Y5 −20%</td><td class="num">$52B</td><td class="num">18.1x</td><td class="num">$286.74</td><td class="num gap-neg">−12.5%</td></tr>
+    <tr><td>Capex Y5 +20%</td><td class="num">$78B</td><td class="num">18.1x</td><td class="num">$282.65</td><td class="num gap-neg">−13.7%</td></tr>
+    <tr><td>Exit multiple −2x</td><td class="num">$65B</td><td class="num">16.1x</td><td class="num">$255.64</td><td class="num gap-neg">−22.0%</td></tr>
+    <tr><td>Exit multiple +2x</td><td class="num">$65B</td><td class="num">20.1x</td><td class="num">$313.75</td><td class="num gap-neg">−4.2%</td></tr>
+    <tr><td>Aggressive (low capex + high mult)</td><td class="num">$52B</td><td class="num">20.1x</td><td class="num">$315.80</td><td class="num gap-neg">−3.6%</td></tr>
+    <tr><td>Conservative (high capex + low mult)</td><td class="num">$78B</td><td class="num">16.1x</td><td class="num">$253.59</td><td class="num gap-neg">−22.6%</td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">
+  <strong>Dominant variable: exit multiple.</strong> ±2x = ±$30/share. Capex Y5 ±20% = only ±$2/share.
+  This is the right read — long-duration tech businesses are dominated by terminal value sensitivity.
+  The implication for the thesis: AMZN's bull case rests more on multiple-sustainment than on capex efficiency.
+</p>
+
+<!-- Section 12: Methodology -->
+<h2>§12 — Methodology &amp; Data Provenance</h2>
+
+<h3>Source Documents</h3>
+<ul>
+  <li><b>Primary:</b> Amazon Q1 2026 Earnings Release (8-K), filed 2026-04-29.</li>
+  <li><b>Freshness:</b> Confirmed latest filing. 10-Q expected mid-May 2026.</li>
+  <li><b>Peer multiples:</b> GuruFocus, Yahoo Finance, StockAnalysis, valueinvesting.io — pulled 2026-04-29.</li>
+</ul>
+
+<h3>Methodology Selections</h3>
+<ul>
+  <li><b>Primary valuation:</b> 2Y forward EBITDA × multiple, discounted at WACC.</li>
+  <li><b>D&amp;A allocation:</b> Method B (capex-weighted), auto-routed.</li>
+  <li><b>WACC:</b> Stage-default — NA 9% (Maturity), Intl 10% (Mature Growth), AWS 10% (Mature Growth).</li>
+  <li><b>SBC treatment:</b> Bull adds back, Base/Bear strict. Function-weighted allocation.</li>
+  <li><b>FCF Realism Check:</b> Triggered automatically by capex anomaly + AMBER liquidity flag.</li>
+</ul>
+
+<h3>User Overrides Applied</h3>
+<ul>
+  <li><b>International multiple range:</b> 13.0/18.0/22.0.</li>
+  <li><b>AWS multiple range:</b> 18.0/22.0/26.0.</li>
+  <li><b>AWS Bull case growth:</b> 32% (override from 28% observed max). Justification: $20B chip business at 100%+ growth + contracted forward bookings (OpenAI 2GW for 2027, Anthropic 5GW Trainium, Meta Graviton, Uber Graviton4/Trainium3). Chip business not separately reported in segment financials.</li>
+</ul>
+
+<h3>Constraints &amp; Limitations</h3>
+<ul>
+  <li><b>6 quarters used vs. skill standard 8.</b> 8-K supplemental did not include older periods.</li>
+  <li><b>Segment D&amp;A and SBC are allocated, not disclosed.</b> 10-K footnote will confirm.</li>
+  <li><b>Anthropic stake fair value $30B is an estimate.</b></li>
+  <li><b>Chip business not reported as separate segment.</b> Override applied at AWS Bull case to capture upside.</li>
+  <li><b>FCF Realism Check uses consolidated WACC of 10%.</b> A weighted average of segment WACCs (NA 9% / Intl 10% / AWS 10%) gives 9.6%; rounded to 10% for simplicity.</li>
+</ul>
+
+<p class="footnote" style="margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--bd);">
+  <span class="muted">Generated 2026-04-29 · SOTP Fundamental Valuation Skill v3 · Standalone analysis · Includes FCF Realism Check · No macro overlay applied · No cross-skill linkage</span>
+</p>
+
+</body>
+</html>

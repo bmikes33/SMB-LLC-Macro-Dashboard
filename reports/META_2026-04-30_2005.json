@@ -1,0 +1,90 @@
+{
+  "type": "ta",
+  "file": "META_2026-04-30_2005.html",
+  "ticker": "META",
+  "tvSymbol": "NASDAQ:META",
+  "date": "2026-04-30T20:05:21-05:00",
+  "bias": "NEUTRAL \u2014 no edge",
+  "confidence": "MEDIUM",
+  "bullScore": 0,
+  "bearScore": 6,
+  "scoreMax": 6,
+  "invalidation": "$595 short-term / $521 structural",
+  "entryZone": "no directional edge \u2014 CSP setup at $570 put wall",
+  "exitZone": "$640\u2013$650 (4-tool resistance confluence)",
+  "levels": [
+    {
+      "weight": "HEAVY",
+      "price": "$670\u2013$680",
+      "sources": "Weekly 50 SMA $677 + Call walls ($670 OI 306 + $675 OI 313)"
+    },
+    {
+      "weight": "HEAVY",
+      "price": "$640\u2013$650",
+      "sources": "Daily 200 SMA + 4h 200 SMA $644.60 + Weekly 0.786 Fib $638.58 + Call wall stack ($640 OI 212, $645 OI 190, $650 OI 144)"
+    },
+    {
+      "weight": "MEDIUM",
+      "price": "$626\u2013$631",
+      "sources": "4h 50 SMA $626.89 + Daily 50 SMA $631.06 (clustered, first overhead)"
+    },
+    {
+      "weight": "MEDIUM",
+      "price": "$617\u2013$620",
+      "sources": "30m RVWAP line + Put OI $620 (326)"
+    },
+    {
+      "weight": "CURRENT",
+      "price": "$612.60",
+      "sources": "Regular session price"
+    },
+    {
+      "weight": "MEDIUM",
+      "price": "$600",
+      "sources": "Put OI 500 + round number + recent intraday low"
+    },
+    {
+      "weight": "HEAVY",
+      "price": "$570",
+      "sources": "MASSIVE put wall (OI 2,005 \u2014 heaviest in chain) + structural prior low confluence"
+    },
+    {
+      "weight": "HEAVY",
+      "price": "$521",
+      "sources": "Weekly 0.618 Fib $521.09 + April 2026 swing low (structural invalidation)"
+    }
+  ],
+  "cspZones": [
+    {
+      "tier": "Tier 1",
+      "strike": "$565\u2013$570",
+      "premium": "$3.25 / \u0394 -0.12 / 7% ann.",
+      "notes": "Best structural \u2014 heaviest put wall in chain"
+    },
+    {
+      "tier": "Tier 2",
+      "strike": "$595\u2013$600",
+      "premium": "$13\u201315 / \u0394 -0.36 to -0.39 / 31% ann.",
+      "notes": "Aggressive \u2014 closer to current price"
+    }
+  ],
+  "macroWatch": [
+    {
+      "date": "May 8 8:30AM",
+      "event": "April NFP",
+      "impact": "HIGH"
+    },
+    {
+      "date": "Mid-May",
+      "event": "April CPI",
+      "impact": "HIGH"
+    },
+    {
+      "date": "May 30 8:30AM",
+      "event": "April PCE",
+      "impact": "HIGH"
+    }
+  ],
+  "fundamentalContext": "UNDERVALUED \u2014 Base $1,073 (+74.8% per SOTP)",
+  "summary": "NEUTRAL \u2014 no directional edge; trend broken on earnings (-8.93%) but oversold + capitulation + heavy put wall at $570 = CSP setup at structural support. MEDIUM confidence (capped by 3 high-impact macro events in expiry window)."
+}

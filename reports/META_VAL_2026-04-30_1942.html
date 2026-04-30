@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>META — SOTP Fundamental Valuation — 2026-04-30</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --accent-cyan: #00e5ff;
+    --accent-green: #00e676;
+    --accent-red: #ff3d57;
+    --accent-amber: #ffab00;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 32px 40px;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; }
+  h1 { font-size: 28px; color: var(--accent-cyan); font-weight: 600; margin-bottom: 4px; }
+  h2 { font-size: 14px; color: var(--accent-cyan); font-weight: 600; margin: 32px 0 12px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border); letter-spacing: 0.08em; }
+  h3 { font-size: 12px; color: var(--text-secondary); font-weight: 500; margin: 16px 0 8px 0; letter-spacing: 0.06em; }
+  .num, .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  
+  .header {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-cyan);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    border-radius: 2px;
+  }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+  .ticker { font-family: var(--font-mono); font-size: 36px; color: var(--accent-cyan); font-weight: 700; letter-spacing: 0.04em; }
+  .ticker-meta { color: var(--text-muted); font-size: 11px; font-family: var(--font-mono); margin-top: 4px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .verdict-block { text-align: right; }
+  .verdict-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid #00e676;
+    color: #00e676;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+  }
+  .upside-badge {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 8px 14px;
+    background: #00e676;
+    color: var(--bg-primary);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .summary-line { font-family: var(--font-mono); color: var(--text-secondary); font-size: 12px; margin-top: 8px; letter-spacing: 0.05em; }
+  
+  .header-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .header-stat { }
+  .header-stat .label { font-size: 10px; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .header-stat .value { font-family: var(--font-mono); color: var(--text-primary); font-size: 16px; font-weight: 500; }
+  .badge-pill { display: inline-block; padding: 2px 10px; border-radius: 2px; font-size: 11px; font-family: var(--font-mono); font-weight: 600; letter-spacing: 0.06em; }
+  .pill-green { background: rgba(0,230,118,0.15); color: var(--accent-green); border: 1px solid rgba(0,230,118,0.3); }
+  .pill-amber { background: rgba(255,171,0,0.15); color: var(--accent-amber); border: 1px solid rgba(255,171,0,0.3); }
+  .pill-red { background: rgba(255,61,87,0.15); color: var(--accent-red); border: 1px solid rgba(255,61,87,0.3); }
+  
+  .data-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  .data-table th {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 12px;
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .data-table th.num { text-align: right; }
+  .data-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); color: var(--text-primary); }
+  .data-table td.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .data-table tbody tr:hover { background: var(--bg-secondary); }
+  .data-table .seg-label { font-weight: 500; color: var(--text-secondary); }
+  .data-table .div-row td { padding: 4px; border: none; }
+  .neg { color: var(--accent-red); }
+  .pos { color: var(--accent-green); }
+  .anomaly { color: var(--accent-amber); font-size: 11px; }
+  
+  .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 16px 0; }
+  .case-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 18px 20px;
+    border-radius: 2px;
+  }
+  .case-card.bear { border-left: 3px solid var(--accent-red); }
+  .case-card.base { border-left: 3px solid var(--accent-cyan); }
+  .case-card.bull { border-left: 3px solid var(--accent-green); }
+  .case-card .case-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .case-card .case-price { font-family: var(--font-mono); font-size: 28px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+  .case-card .case-upside { font-family: var(--font-mono); font-size: 14px; font-weight: 600; }
+  .case-card .case-detail { font-size: 12px; color: var(--text-secondary); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .case-card .case-detail-row { display: flex; justify-content: space-between; margin: 4px 0; }
+  .case-card .case-detail-row .num { color: var(--text-primary); }
+  
+  .methodology { font-size: 13px; color: var(--text-secondary); }
+  .methodology p { margin: 8px 0; }
+  .methodology ul { margin: 8px 0 8px 20px; }
+  .methodology li { margin: 4px 0; }
+  .methodology code { background: var(--bg-tertiary); padding: 2px 6px; font-family: var(--font-mono); font-size: 12px; color: var(--accent-cyan); }
+  
+  .legend { display: flex; gap: 20px; font-size: 11px; color: var(--text-muted); margin: 12px 0; padding: 10px; background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 2px; }
+  .legend span { font-family: var(--font-mono); }
+  .disclosed { color: var(--text-primary); }
+  .allocated { color: var(--accent-amber); font-style: italic; }
+  .override { color: var(--accent-amber); font-weight: 700; }
+  
+  .footer { margin-top: 48px; padding: 16px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 11px; text-align: center; font-family: var(--font-mono); letter-spacing: 0.05em; }
+
+  .quote { background: var(--bg-tertiary); border-left: 2px solid var(--accent-cyan); padding: 12px 18px; margin: 12px 0; font-size: 13px; color: var(--text-secondary); }
+  .quote em { color: var(--text-primary); font-style: normal; }
+
+  .flag-row { display: grid; grid-template-columns: 2fr 1fr 1.5fr 0.7fr; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--border); align-items: center; }
+  .flag-row:last-child { border-bottom: none; }
+  .flag-row .label { color: var(--text-secondary); font-size: 13px; }
+  .flag-row .value { font-family: var(--font-mono); color: var(--text-primary); }
+  .flag-row .threshold { font-family: var(--font-mono); color: var(--text-muted); font-size: 11px; }
+  
+  .flex-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="ticker">META</div>
+      <div class="ticker-meta">META PLATFORMS, INC. · NASDAQ · SOTP FUNDAMENTAL VALUATION</div>
+      <div class="summary-line">UNDERVALUED — Base +74.8% / P-Wt +80.6% · fcf-NEUTRAL</div>
+    </div>
+    <div class="verdict-block">
+      <span class="verdict-badge">UNDERVALUED</span>
+      <span class="upside-badge">+74.8%</span>
+    </div>
+  </div>
+  <div class="header-grid">
+    <div class="header-stat">
+      <div class="label">Current Price</div>
+      <div class="value">$613.64</div>
+    </div>
+    <div class="header-stat">
+      <div class="label">Fair Value (Base, 2Y Disc.)</div>
+      <div class="value" style="color: var(--accent-green);">$1,073</div>
+    </div>
+    <div class="header-stat">
+      <div class="label">Prob-Weighted (25/50/25)</div>
+      <div class="value" style="color: var(--accent-cyan);">$1,108</div>
+    </div>
+    <div class="header-stat">
+      <div class="label">Capital Structure</div>
+      <div class="value"><span class="badge-pill pill-green">GREEN</span></div>
+    </div>
+    <div class="header-stat">
+      <div class="label">FCF Realism Check</div>
+      <div class="value"><span class="badge-pill pill-neutral">NEUTRAL</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <span>DATA PROVENANCE: 88% disclosed (filings) / 10% allocated (capex-weighted methodology) / 2% user-override</span>
+  <span class="disclosed">disclosed: plain</span>
+  <span class="allocated">allocated†</span>
+  <span class="override">user-override*</span>
+</div>
+
+<h2>§1 — Executive Summary</h2>
+<div class="case-grid">
+  <div class="case-card bear">
+    <div class="case-label">BEAR CASE</div>
+    <div class="case-price">$713</div>
+    <div class="case-upside neg">+16.1%</div>
+    <div class="case-detail">
+      <div class="case-detail-row"><span>FoA Multiple</span><span class="num">13.0x</span></div>
+      <div class="case-detail-row"><span>FoA Y1 Growth</span><span class="num">+16.3%</span></div>
+      <div class="case-detail-row"><span>FoA OI Margin</span><span class="num">48.1%</span></div>
+      <div class="case-detail-row"><span>NTM × Mult.</span><span class="num">$741</span></div>
+    </div>
+  </div>
+  <div class="case-card base">
+    <div class="case-label">BASE CASE (PRIMARY)</div>
+    <div class="case-price">$1,073</div>
+    <div class="case-upside pos">+74.8%</div>
+    <div class="case-detail">
+      <div class="case-detail-row"><span>FoA Multiple</span><span class="num">16.0x</span></div>
+      <div class="case-detail-row"><span>FoA Y1 Growth</span><span class="num">+26.4%</span></div>
+      <div class="case-detail-row"><span>FoA OI Margin</span><span class="num">50.6%</span></div>
+      <div class="case-detail-row"><span>NTM × Mult.</span><span class="num">$1,028</span></div>
+    </div>
+  </div>
+  <div class="case-card bull">
+    <div class="case-label">BULL CASE</div>
+    <div class="case-price">$1,575</div>
+    <div class="case-upside pos">+156.7%</div>
+    <div class="case-detail">
+      <div class="case-detail-row"><span>FoA Multiple</span><span class="num">20.0x</span></div>
+      <div class="case-detail-row"><span>FoA Y1 Growth</span><span class="num">+33.4%</span></div>
+      <div class="case-detail-row"><span>FoA OI Margin</span><span class="num">54.0%</span></div>
+      <div class="case-detail-row"><span>NTM × Mult.</span><span class="num">$1,428</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="quote">
+  <em>Trigger context.</em> META printed Q1'26 revenue of $56.3B (+33% YoY, accelerating from +24% in Q4'25). Stock dropped 8.93% on April 29 close to $613.64 after Meta raised 2026 capex guide to $125–145B (from $115–135B). Market punished the spend, not the print. This SOTP tests whether the post-drop price has overshot fair value — base case answer: <em>yes, by a wide margin.</em>
+</div>
+
+<h2>§2 — Segment Lifecycle Map</h2>
+<table class="data-table">
+<thead><tr>
+  <th>Segment</th><th>Stage</th><th class="num">TTM Rev</th><th class="num">% Total</th>
+  <th class="num">Q1'26 YoY</th><th class="num">TTM OI Mgn</th><th>Forecast Horizon</th><th>Metric</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="seg-label">Family of Apps (FoA)</td>
+  <td>Mature Growth*</td>
+  <td class="num">$212.8B</td>
+  <td class="num">99.0%</td>
+  <td class="num pos">+33.4%</td>
+  <td class="num">50.6%</td>
+  <td>2Y forward</td>
+  <td>EV/EBITDA</td>
+</tr>
+<tr>
+  <td class="seg-label">Reality Labs (RL)</td>
+  <td>Young Growth</td>
+  <td class="num">$2.2B</td>
+  <td class="num">1.0%</td>
+  <td class="num neg">-2.4%</td>
+  <td class="num neg">n/m (loss)</td>
+  <td>NTM only</td>
+  <td>EV/Revenue</td>
+</tr>
+</tbody>
+</table>
+<p class="methodology" style="margin-top: 8px;"><em>* User-confirmed Mature Growth despite Q1'26 +33% YoY (above typical 10–25% Mature Growth band). Margin profile (50%+ OI margin, stable FCF generation, mature 3.56B DAP user base) is the binding constraint. AI-driven re-acceleration is the upside catalyst, not a stage reclassification trigger.</em></p>
+
+<h2>§3 — D&A Allocation Methodology (Capex-Weighted, Method B)</h2>
+<p class="methodology"><strong>User decision: capex-weighted.</strong> Auto-routing trigger met — capex/revenue ratio is dramatically different by segment (FoA has data center & AI infrastructure capex driving the entire $80B TTM run-rate; RL capex is hardware-design-light vs. its $4B/qtr opex burn).</p>
+<p class="methodology">10-K Note 15 explicitly states: <em>"Costs related to the operation of our data centers and technical infrastructure are generally allocated to our segments based on estimated usage, most of which is allocated to the FoA segment."</em> This confirms capex-weighting is consistent with management's own internal allocation. Applied split: <span class="override">FoA 95%* / RL 5%*</span>.</p>
+<table class="data-table">
+<thead><tr><th>Item</th><th class="num">Consolidated</th><th class="num">FoA (95%)</th><th class="num">RL (5%)</th></tr></thead>
+<tbody>
+<tr><td class="seg-label">TTM D&A</td><td class="num">20,715</td><td class="num allocated">19,679†</td><td class="num allocated">1,036†</td></tr>
+<tr><td class="seg-label">TTM Operating Income</td><td class="num">88,593</td><td class="num">107,604</td><td class="num neg">(19,011)</td></tr>
+<tr><td class="seg-label">TTM EBITDA (derived)</td><td class="num">109,308</td><td class="num">127,283</td><td class="num neg">(17,975)</td></tr>
+<tr><td class="seg-label">EBITDA Margin</td><td class="num">50.8%</td><td class="num">59.8%</td><td class="num neg">n/m</td></tr>
+</tbody>
+</table>
+<p class="methodology"><em>What would have changed under Method A (revenue-share, 99% FoA / 1% RL): RL would absorb $207M of D&A vs. $1,036M under Method B. RL EBITDA would be -$18.8B vs. -$18.0B (immaterial difference at consolidated level since RL is loss-making either way). Material impact would be a more honest allocation of the ~$830M D&A increment showing up in FoA EBITDA = lower FoA implied EBITDA margin. Capex-weighted is more defensible.</em></p>
+
+<h2>§4 — Peer Set, Multiples & WACC</h2>
+<table class="data-table">
+<thead><tr>
+  <th>Segment</th><th>Peer Set</th><th>Metric</th>
+  <th class="num">Bear (25th)</th><th class="num">Base (50th)</th><th class="num">Bull (75th)</th>
+  <th class="num">WACC</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="seg-label">FoA</td>
+  <td>GOOGL, NFLX, TTD, RDDT, PINS, SNAP</td>
+  <td>EV/EBITDA NTM</td>
+  <td class="num">13.0x</td>
+  <td class="num">16.0x</td>
+  <td class="num">20.0x</td>
+  <td class="num">10%</td>
+</tr>
+<tr>
+  <td class="seg-label">RL</td>
+  <td>SONY, GRMN, LOGI (no clean AR/VR peer)</td>
+  <td>EV/Revenue</td>
+  <td class="num">1.0x</td>
+  <td class="num">3.0x</td>
+  <td class="num">5.0x</td>
+  <td class="num">12%</td>
+</tr>
+</tbody>
+</table>
+<p class="methodology"><em>WACC: stage-default per user. FoA Mature Growth → 10%. RL Young Growth → 12%. Single blended ~10.05% (FoA dominates EV weight). Multiples derived from current peer NTM consensus (web-search verified). Current META trades at 14.2x EV/EBITDA TTM — base case 16x reflects modest multiple expansion driven by the AI-led growth re-acceleration.</em></p>
+
+<h2>§5 — Bear / Base / Bull Cases (Year 1 + Year 2)</h2>
+
+<h3>FoA — Year 1 (NTM) and Year 2 (Sustained Regime)</h3>
+<table class="data-table">
+<thead><tr>
+  <th>Case</th><th class="num">Y1 Growth</th><th class="num">EBITDA Mgn</th>
+  <th class="num">Y1 Rev</th><th class="num">Y1 EBITDA</th>
+  <th class="num">Y2 Rev</th><th class="num">Y2 EBITDA</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="seg-label">Bear</td>
+  <td class="num">+16.3%</td>
+  <td class="num">57.4%</td>
+  <td class="num">$247.5B</td>
+  <td class="num">$142.0B</td>
+  <td class="num">$288.0B</td>
+  <td class="num">$165.2B</td>
+</tr>
+<tr>
+  <td class="seg-label">Base</td>
+  <td class="num">+26.4%</td>
+  <td class="num">59.9%</td>
+  <td class="num">$269.0B</td>
+  <td class="num">$161.0B</td>
+  <td class="num">$340.1B</td>
+  <td class="num">$203.6B</td>
+</tr>
+<tr>
+  <td class="seg-label">Bull</td>
+  <td class="num">+33.4%</td>
+  <td class="num">63.3%</td>
+  <td class="num">$283.9B</td>
+  <td class="num">$179.6B</td>
+  <td class="num">$378.8B</td>
+  <td class="num">$239.6B</td>
+</tr>
+</tbody>
+</table>
+
+<h3>RL — Year 1 (NTM) and Year 2</h3>
+<table class="data-table">
+<thead><tr><th>Case</th><th class="num">Y1 Growth</th><th class="num">Y1 Rev</th><th class="num">Y2 Rev</th></tr></thead>
+<tbody>
+<tr><td class="seg-label">Bear</td><td class="num">-11.8%</td><td class="num">$1,937M</td><td class="num">$1,708M</td></tr>
+<tr><td class="seg-label">Base</td><td class="num">+16.2%</td><td class="num">$2,552M</td><td class="num">$2,964M</td></tr>
+<tr><td class="seg-label">Bull</td><td class="num">+74.1%</td><td class="num">$3,824M</td><td class="num">$6,657M</td></tr>
+</tbody>
+</table>
+<p class="methodology"><em>RL growth is product-cycle driven (Q4 hardware launches drive +74% Q3'25 ramp; -12% Q4'25 reflects launch tougher comp). Sustained-regime Y2 doesn't truly capture cycle dynamics. RL EBITDA loss held flat at ~$19B/yr in projections — management explicitly guided "RL operating losses to remain similar" in 2026 (10-K, p.3273).</em></p>
+
+<h3>Margin Observation Window (8Q)</h3>
+<table class="data-table">
+<thead><tr><th>Quarter</th><th class="num">FoA OI Margin</th><th>Note</th></tr></thead>
+<tbody><tr><td>Q1'24</td><td class="num">49.0%</td><td></td></tr><tr><td>Q2'24</td><td class="num">49.9%</td><td></td></tr><tr><td>Q3'24</td><td class="num">54.0%</td><td></td></tr><tr><td>Q4'24</td><td class="num">59.9%</td><td> <span class="anomaly">⚠ legal credit anomaly</span></td></tr><tr><td>Q1'25</td><td class="num">51.9%</td><td></td></tr><tr><td>Q2'25</td><td class="num">53.0%</td><td></td></tr><tr><td>Q3'25</td><td class="num">49.2%</td><td></td></tr><tr><td>Q4'25</td><td class="num">52.2%</td><td></td></tr><tr><td>Q1'26</td><td class="num">48.1%</td><td></td></tr></tbody>
+</table>
+<p class="methodology"><em>Bull margin uses Q3'24 (54.0%), excluding the Q4'24 anomaly (59.9% OI margin, driven by an unusual G&A line of just $761M vs. $2-3B run rate — likely a one-time legal accrual reversal). Including Q4'24 would inflate Bull case fair value by ~5%.</em></p>
+
+<h2>§6 — SBC Treatment</h2>
+<p class="methodology">Per skill default: <strong>Bull case adds back SBC</strong> (street standard, treats SBC as non-cash). <strong>Base & Bear strict</strong> (SBC stays embedded in EBITDA as a real cost). META TTM SBC is <strong>$22.3B = 10.4% of revenue</strong> — a meaningful real cost that materially impacts the gap between bull-addback and base/bear-strict treatments. SBC ramped sharply in Q1'26 ($6.0B vs $4.1B = +45% YoY) reflecting AI talent hires.</p>
+<p class="methodology"><em>The Q1'26 SBC step-up to $6B/quarter ($24B annualized) is a real headwind to economic earnings. Bull case "EBITDA + SBC addback" treats this as non-cash; base/bear treat it as a cash cost. The honest read: at $24B annualized, SBC dilution + tax leakage is meaningful, especially with planned 8,000-person headcount cut in May likely driving one-time restructuring charges that offset compensation savings near-term.</em></p>
+
+<h2>§7 — Bridge to Equity Value (Method A: 2Y Discounted, PRIMARY)</h2>
+<table class="data-table">
+<thead><tr>
+  <th>Component</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th>
+</tr></thead>
+<tbody>
+<tr><td class="seg-label">FoA Y2 EV (Y2 EBITDA × Multiple)</td>
+  <td class="num">$2,148B</td>
+  <td class="num">$3,257B</td>
+  <td class="num">$4,793B</td></tr>
+<tr><td class="seg-label">FoA Today's EV (Y2 / 1.10²)</td>
+  <td class="num">$1,775B</td>
+  <td class="num">$2,692B</td>
+  <td class="num">$3,961B</td></tr>
+<tr><td class="seg-label">RL Y2 EV (Y2 Rev × Multiple)</td>
+  <td class="num">$1.7B</td>
+  <td class="num">$8.9B</td>
+  <td class="num">$33.3B</td></tr>
+<tr><td class="seg-label">RL Today's EV (Y2 / 1.12²)</td>
+  <td class="num">$1.4B</td>
+  <td class="num">$7.1B</td>
+  <td class="num">$26.5B</td></tr>
+<tr><td class="seg-label" style="border-top: 2px solid var(--border);"><strong>Σ Today's Segment EV</strong></td>
+  <td class="num"><strong>$1,776B</strong></td>
+  <td class="num"><strong>$2,699B</strong></td>
+  <td class="num"><strong>$3,987B</strong></td></tr>
+<tr><td class="seg-label">+ Non-marketable equity inv. (book)</td>
+  <td class="num">$28.4B</td>
+  <td class="num">$28.4B</td>
+  <td class="num">$28.4B</td></tr>
+<tr><td class="seg-label">− Long-term debt</td>
+  <td class="num neg">($58.7B)</td>
+  <td class="num neg">($58.7B)</td>
+  <td class="num neg">($58.7B)</td></tr>
+<tr><td class="seg-label">+ Cash + marketable securities</td>
+  <td class="num">$81.2B</td>
+  <td class="num">$81.2B</td>
+  <td class="num">$81.2B</td></tr>
+<tr><td class="seg-label" style="border-top: 2px solid var(--border);"><strong>= Equity Fair Value</strong></td>
+  <td class="num"><strong>$1,827B</strong></td>
+  <td class="num"><strong>$2,750B</strong></td>
+  <td class="num"><strong>$4,038B</strong></td></tr>
+<tr><td class="seg-label">÷ Diluted shares (Q1'26)</td>
+  <td class="num">2,564M</td>
+  <td class="num">2,564M</td>
+  <td class="num">2,564M</td></tr>
+<tr><td class="seg-label" style="border-top: 2px solid var(--border);"><strong>= Fair Value per share</strong></td>
+  <td class="num pos"><strong>$713</strong></td>
+  <td class="num pos"><strong>$1,073</strong></td>
+  <td class="num pos"><strong>$1,575</strong></td></tr>
+<tr><td class="seg-label">Upside vs current ($613.64)</td>
+  <td class="num pos">+16.1%</td>
+  <td class="num pos">+74.8%</td>
+  <td class="num pos">+156.7%</td></tr>
+</tbody>
+</table>
+
+<h2>§8 — Method Comparison (NTM × Multiple Sanity Check)</h2>
+<table class="data-table">
+<thead><tr>
+  <th>Method</th><th class="num">Bear $/sh</th><th class="num">Base $/sh</th><th class="num">Bull $/sh</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="seg-label">Method A — 2Y EBITDA × Multiple, discounted</td>
+  <td class="num">$713</td><td class="num">$1,073</td><td class="num">$1,575</td>
+</tr>
+<tr>
+  <td class="seg-label">Method B — NTM EBITDA × Multiple</td>
+  <td class="num">$741</td><td class="num">$1,028</td><td class="num">$1,428</td>
+</tr>
+<tr>
+  <td class="seg-label">Gap (A − B) / B</td>
+  <td class="num">-3.8%</td>
+  <td class="num">+4.4%</td>
+  <td class="num">+10.3%</td>
+</tr>
+</tbody>
+</table>
+<p class="methodology"><em><strong>Methods converge at +4.4% on Base.</strong> The multiple is doing its job pricing forward expectations cleanly — typical for Mature Growth segments. The 2Y discounted (A) method gets a slight nudge over NTM × multiple (B) from second-year compounding, partially offset by the WACC discount. Both methods deliver the same directional verdict at meaningful magnitude.</em></p>
+
+<h2>§9 — Probability-Weighted Fair Value</h2>
+<table class="data-table">
+<thead><tr><th>Weighting</th><th class="num">Prob-Weighted $/sh</th><th class="num">Upside</th></tr></thead>
+<tbody>
+<tr><td class="seg-label">25 / 50 / 25 (default)</td><td class="num"><strong>$1,108</strong></td><td class="num pos"><strong>+80.6%</strong></td></tr>
+<tr><td class="seg-label">10 / 60 / 30 (bullish skew)</td><td class="num">$1,187</td><td class="num pos">+93.5%</td></tr>
+<tr><td class="seg-label">35 / 50 / 15 (bearish skew)</td><td class="num">$1,022</td><td class="num pos">+66.5%</td></tr>
+</tbody>
+</table>
+<p class="methodology"><em>Even under a bearish skew (35/50/15 weighting), fair value is materially above current price. The verdict is robust to sensible weighting alternatives.</em></p>
+
+<h2>§10 — Capital Structure Health Check</h2>
+<div style="background: var(--bg-secondary); border: 1px solid var(--border); padding: 0; margin: 12px 0; border-radius: 2px;">
+  <div class="flag-row" style="background: var(--bg-tertiary); border-bottom: 1px solid var(--border);">
+    <div class="label" style="color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;">Metric</div>
+    <div class="value" style="color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; text-align: right; text-transform: uppercase; letter-spacing: 0.08em;">Value</div>
+    <div class="threshold" style="text-transform: uppercase;">Threshold (G/A/R)</div>
+    <div style="text-align: right; color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;">Flag</div>
+  </div>
+  <div class="flag-row">
+    <div class="label">Net Debt / TTM EBITDA</div>
+    <div class="value" style="text-align: right;">-0.21x (net cash)</div>
+    <div class="threshold">&lt; 2.0x / 2-4x / &gt; 4x</div>
+    <div style="text-align: right;"><span class="badge-pill pill-green">GREEN</span></div>
+  </div>
+  <div class="flag-row">
+    <div class="label">TTM EBITDA / Interest Expense</div>
+    <div class="value" style="text-align: right;">42.2x</div>
+    <div class="threshold">&gt; 8x / 4-8x / &lt; 4x</div>
+    <div style="text-align: right;"><span class="badge-pill pill-green">GREEN</span></div>
+  </div>
+  <div class="flag-row">
+    <div class="label">Maturity Wall (next 24mo, % total debt)</div>
+    <div class="value" style="text-align: right;">4.7%</div>
+    <div class="threshold">&lt; 10% / 10-30% / &gt; 30%</div>
+    <div style="text-align: right;"><span class="badge-pill pill-green">GREEN</span></div>
+  </div>
+  <div class="flag-row">
+    <div class="label">Liquidity (cash + revolver / 12mo obligations)</div>
+    <div class="value" style="text-align: right;">16.1x</div>
+    <div class="threshold">&gt; 2x / 1-2x / &lt; 1x</div>
+    <div style="text-align: right;"><span class="badge-pill pill-green">GREEN</span></div>
+  </div>
+  <div class="flag-row">
+    <div class="label">Diluted Share Count 3y CAGR</div>
+    <div class="value" style="text-align: right;">-1.2% (net buyback)</div>
+    <div class="threshold">&lt; 3% / 3-7% / &gt; 7%</div>
+    <div style="text-align: right;"><span class="badge-pill pill-green">GREEN</span></div>
+  </div>
+</div>
+
+<h3>Long-Term Debt Maturity Schedule (10-K Note 10)</h3>
+<table class="data-table">
+<thead><tr><th>Year</th><th class="num">Maturity ($M)</th><th class="num">% of Total</th></tr></thead>
+<tbody>
+<tr><td>2026</td><td class="num">$0</td><td class="num">0.0%</td></tr>
+<tr><td>2027</td><td class="num">$2,750</td><td class="num">4.7%</td></tr>
+<tr><td>2028</td><td class="num">$1,500</td><td class="num">2.5%</td></tr>
+<tr><td>2029</td><td class="num">$1,000</td><td class="num">1.7%</td></tr>
+<tr><td>2030</td><td class="num">$5,000</td><td class="num">8.5%</td></tr>
+<tr><td>Thereafter</td><td class="num">$48,750</td><td class="num">82.6%</td></tr>
+<tr><td><strong>Total Face</strong></td><td class="num"><strong>$59,000</strong></td><td class="num">100.0%</td></tr>
+</tbody>
+</table>
+<p class="methodology"><em>$30B issued November 2025 at 4.20–5.75% range across 6 series (2030–2065 maturities). Blended new coupon ~5.0%. <strong>No 2026 maturities.</strong> Refi risk effectively zero through 2027. Capital structure is the strongest possible — net cash, long-dated debt, no covenants on the senior unsecured notes, $5B undrawn revolver, share count declining via net buyback. <span class="badge-pill pill-green">GREEN across all 5 metrics</span> — no caveats apply to the verdict.</em></p>
+
+<h2>§11 — FCF Realism Check (Phase 10)</h2>
+<p class="methodology"><strong>Trigger:</strong> Capex/EBITDA TTM = 71.6% (vs. trailing 3y avg of ~45%) AND 2026 capex guide of $125-145B (midpoint $135B) implies capex/EBITDA jumps to ~95% — anomalously elevated. Auto-routed.</p>
+
+<h3>5-Year Projection (Consolidated Base Case)</h3>
+<table class="data-table">
+<thead><tr><th>Year</th><th class="num">EBITDA</th><th class="num">Capex</th><th class="num">Cash Tax (~14%)</th><th class="num">FCF</th><th class="num">PV @ 10%</th></tr></thead>
+<tbody>
+<tr><td>2026 (Y1)</td><td class="num">$142B</td><td class="num">$135B</td><td class="num">$14.9B</td><td class="num neg">($7.9B)</td><td class="num neg">($7.2B)</td></tr>
+<tr><td>2027 (Y2)</td><td class="num">$185B</td><td class="num">$120B</td><td class="num">$19.4B</td><td class="num">$45.2B</td><td class="num">$37.4B</td></tr>
+<tr><td>2028 (Y3)</td><td class="num">$218B</td><td class="num">$100B</td><td class="num">$22.9B</td><td class="num">$94.9B</td><td class="num">$71.3B</td></tr>
+<tr><td>2029 (Y4)</td><td class="num">$240B</td><td class="num">$80B</td><td class="num">$25.2B</td><td class="num">$134.4B</td><td class="num">$91.8B</td></tr>
+<tr><td>2030 (Y5)</td><td class="num">$252B</td><td class="num">$60B</td><td class="num">$26.4B</td><td class="num">$165.2B</td><td class="num">$102.6B</td></tr>
+<tr><td><strong>Σ PV(FCF)</strong></td><td colspan="4"></td><td class="num"><strong>$295.9B</strong></td></tr>
+<tr><td>+ Terminal EV (Y5 × 14.4x exit) PV</td><td colspan="4"></td><td class="num">$2,249B</td></tr>
+<tr><td><strong>= DCF EV</strong></td><td colspan="4"></td><td class="num"><strong>$2,545B</strong></td></tr>
+<tr><td>+ Bridge (cash − debt + equity inv)</td><td colspan="4"></td><td class="num">$50.8B</td></tr>
+<tr><td>÷ Diluted shares</td><td colspan="4"></td><td class="num">2,564M</td></tr>
+<tr><td><strong>= DCF Per Share</strong></td><td colspan="4"></td><td class="num pos"><strong>$1,013</strong></td></tr>
+</tbody>
+</table>
+
+<p class="methodology"><strong>DCF $/sh: $1,013 vs. SOTP Base $/sh: $1,073 → gap -5.6% → <span class="badge-pill pill-amber">NEUTRAL</span></strong></p>
+<p class="methodology"><em>The flag is NEUTRAL because DCF is 5.6% below SOTP Base — slightly aggressive on capex normalization. The story: <strong>2026 FCF goes deeply negative</strong> if capex hits guidance midpoint ($135B vs. EBITDA of ~$141B base case, before cash taxes leaves -$8B FCF). The SOTP doesn't directly penalize this because it values Y2 EBITDA × multiple, not cash flows. The DCF says: if you believe capex normalizes back toward 30% of EBITDA (Maturity-stage steady state) by 2030, you get $1,013/share. If capex stays elevated longer, fair value is lower. <strong>The capex normalization assumption is doing significant work in this valuation.</strong></em></p>
+
+<h3>Sensitivity</h3>
+<table class="data-table">
+<thead><tr><th>Sensitivity</th><th class="num">Δ DCF $/sh</th></tr></thead>
+<tbody>
+<tr><td>Y5 capex +20% ($72B vs $60B base)</td><td class="num neg">≈ −$3</td></tr>
+<tr><td>Y5 capex −20% ($48B vs $60B base)</td><td class="num pos">≈ +$3</td></tr>
+<tr><td>Exit multiple 12.4x vs 14.4x</td><td class="num neg">≈ −$122</td></tr>
+<tr><td>Exit multiple 16.4x vs 14.4x</td><td class="num pos">≈ +$122</td></tr>
+</tbody>
+</table>
+<p class="methodology"><em>The exit multiple is the dominant DCF assumption — a ±2x swing in exit multiple moves DCF $/share by ~$200, larger than the capex sensitivity. This is normal for tech DCFs.</em></p>
+
+<h2>§12 — Methodology & Data Provenance</h2>
+
+<h3>Source Documents</h3>
+<ul class="methodology" style="margin: 8px 0 8px 24px;">
+  <li><strong>10-K (FY2025)</strong> filed 2026-01-28 — Note 15 (segment), Note 10 (long-term debt), cash flow statement, P&E disclosure</li>
+  <li><strong>10-Q (Q1 2026)</strong> filed 2026-04-30 — most recent balance sheet & cash flow statement</li>
+  <li><strong>8-K (Q1 2026 earnings)</strong> filed 2026-04-29 with Exhibit 99.1 supplemental — Q1 2026 segment results, Q2 outlook</li>
+  <li><strong>Q1 2026 Earnings Presentation</strong> — trailing 9-quarter segment financials (Q1'24-Q1'26)</li>
+  <li><strong>Q1 2026 Earnings Call & Follow-up Transcripts</strong> — capex guide, RL outlook, AI roadmap context</li>
+</ul>
+
+<h3>Trailing 8Q Segment Data (Q2'24-Q1'26)</h3>
+<table class="data-table"><thead><tr><th>Quarter</th><th class="num">Q1'24</th><th class="num">Q2'24</th><th class="num">Q3'24</th><th class="num">Q4'24</th><th class="num">Q1'25</th><th class="num">Q2'25</th><th class="num">Q3'25</th><th class="num">Q4'25</th><th class="num">Q1'26</th></tr></thead><tbody><tr><td class="seg-label">FoA Revenue</td><td class="num">36,015</td><td class="num">38,718</td><td class="num">40,319</td><td class="num">47,302</td><td class="num">41,902</td><td class="num">47,146</td><td class="num">50,772</td><td class="num">58,938</td><td class="num">55,909</td></tr><tr><td class="seg-label">FoA Op Income</td><td class="num">17,664</td><td class="num">19,335</td><td class="num">21,778</td><td class="num">28,332</td><td class="num">21,765</td><td class="num">24,971</td><td class="num">24,967</td><td class="num">30,766</td><td class="num">26,900</td></tr><tr><td class="seg-label">FoA OI Margin</td><td class="num">49.0%</td><td class="num">49.9%</td><td class="num">54.0%</td><td class="num">59.9%</td><td class="num">51.9%</td><td class="num">53.0%</td><td class="num">49.2%</td><td class="num">52.2%</td><td class="num">48.1%</td></tr><tr class="div-row"><td colspan="10"></td></tr><tr><td class="seg-label">RL Revenue</td><td class="num">440</td><td class="num">353</td><td class="num">270</td><td class="num">1,083</td><td class="num">412</td><td class="num">370</td><td class="num">470</td><td class="num">955</td><td class="num">402</td></tr><tr><td class="seg-label">RL Op (Loss)</td><td class="num neg">(3,846)</td><td class="num neg">(4,488)</td><td class="num neg">(4,428)</td><td class="num neg">(4,967)</td><td class="num neg">(4,210)</td><td class="num neg">(4,530)</td><td class="num neg">(4,432)</td><td class="num neg">(6,021)</td><td class="num neg">(4,028)</td></tr></tbody></table>
+
+<h3>Key Methodology Choices</h3>
+<ul class="methodology" style="margin: 8px 0 8px 24px;">
+  <li><strong>Lifecycle stage:</strong> FoA = Mature Growth (user-confirmed); RL = Young Growth.</li>
+  <li><strong>D&A allocation:</strong> Capex-weighted Method B (user-elected). Split: FoA 95% / RL 5% based on 10-K Note 15 narrative + industry knowledge of META's AI infrastructure capex concentration.</li>
+  <li><strong>WACC:</strong> Stage-default per segment (user-elected). FoA 10%, RL 12%.</li>
+  <li><strong>Bull margin selection:</strong> Q3'24 (54.0%) used as Bull OI margin instead of Q4'24 (59.9%) due to one-time legal credit anomaly in Q4'24.</li>
+  <li><strong>Year 2 case:</strong> Sustained regime per skill default (Y2 = Y1). User did not request taper.</li>
+  <li><strong>Probability weights:</strong> Default 25/50/25.</li>
+</ul>
+
+<h3>Key Risks & Caveats</h3>
+<ul class="methodology" style="margin: 8px 0 8px 24px;">
+  <li><strong>Capex normalization risk:</strong> Base case implicitly assumes capex/EBITDA reverts to ~30% by Y5. Mark Zuckerberg explicitly said on the Q1 call that they "aren't optimizing for a specific cash flow level." If capex stays elevated longer than Y5, fair value compresses by ~$50-100/share.</li>
+  <li><strong>EU LPA headwind:</strong> Susan Li flagged Q2'26 will see "larger" revenue impact from less personalized ads in Europe. Already factored into Q2 guide of $58-61B. If LPA enforcement broadens beyond EU, base growth assumption (+26.4%) could prove optimistic.</li>
+  <li><strong>Youth-related litigation:</strong> Management noted "additional trials scheduled for this year in the U.S., which may ultimately result in a material loss." Not modeled. Could be a discrete tail risk.</li>
+  <li><strong>SBC ramp:</strong> Q1'26 SBC of $6.0B is a meaningful real cost. Bull case adds it back; base/bear keep it embedded. Real economic value is closer to base/bear treatment.</li>
+  <li><strong>RL trajectory:</strong> Continues to operate at $19B+ annual loss. Management explicitly said this remains expected for foreseeable future. Not a thesis break, but worth monitoring quarterly.</li>
+  <li><strong>Stagflation regime context:</strong> This SOTP is unadjusted for the macro regime. The user's macro framework (stagflation, weakening growth + accelerating inflation) is a headwind to ad market durability that the base case does not penalize. Apply regime overlay manually.</li>
+</ul>
+
+<h3>What's Not in This Analysis</h3>
+<ul class="methodology" style="margin: 8px 0 8px 24px;">
+  <li>Macro regime overlay (per skill design — standalone fundamental fair value)</li>
+  <li>Technical analysis / entry timing (separate skill)</li>
+  <li>Options chain / IV-driven structuring</li>
+  <li>Cross-skill linkage to TA or macro skills</li>
+</ul>
+
+<div class="footer">
+  SMB LLC · META SOTP Fundamental Valuation · Generated 2026-04-30 19:42 CT · Per skill: filings = truth, peer multiples = approved range, capex-weighted D&A, stage-default WACC<br>
+  Methods converge at +4.4% on Base · Capital structure GREEN across all 5 metrics · FCF realism: NEUTRAL (capex normalization assumption material)
+</div>
+
+</body>
+</html>

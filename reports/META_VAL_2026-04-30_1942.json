@@ -1,0 +1,61 @@
+{
+  "type": "valuation",
+  "file": "META_VAL_2026-04-30_1942.html",
+  "ticker": "META",
+  "tvSymbol": "NASDAQ:META",
+  "date": "2026-04-30T19:42:48-05:00",
+  "summary": "UNDERVALUED \u2014 Base +74.8% / P-Wt +80.6% \u00b7 fcf-NEUTRAL",
+  "verdictBadge": "UNDERVALUED",
+  "upsideBadge": "+74.8%",
+  "mode": "SOTP",
+  "segmentCount": 2,
+  "currentPrice": 613.64,
+  "fairValue": {
+    "method": "2Y_discounted",
+    "bear": 712.63,
+    "base": 1072.56,
+    "bull": 1574.99,
+    "probWeighted": 1108.19
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 740.55,
+    "base": 1027.69,
+    "bull": 1428.2
+  },
+  "upside": {
+    "bear": 16.1,
+    "base": 74.8,
+    "bull": 156.7,
+    "probWeighted": 80.6
+  },
+  "wacc": {
+    "method": "stage_default",
+    "perSegment": {
+      "FamilyOfApps": 0.1,
+      "RealityLabs": 0.12
+    }
+  },
+  "daAllocationMethod": "capex_weighted",
+  "capitalStructure": "GREEN",
+  "capitalStructureFlags": [
+    "Net Debt / EBITDA: -0.21x (net cash position)",
+    "EBITDA / Interest: 42.2x",
+    "24mo maturity wall: 4.7% of total debt",
+    "Liquidity coverage: 16.1x",
+    "Share count 3y CAGR: -1.2% (net buyback)"
+  ],
+  "dataQuality": {
+    "disclosedPct": 88,
+    "allocatedPct": 10,
+    "userOverridePct": 2
+  },
+  "verdict": "UNDERVALUED",
+  "fcfRealismCheck": {
+    "ran": true,
+    "dcfFairValue": 1012.56,
+    "gapToSotp": -5.6,
+    "flag": "NEUTRAL"
+  },
+  "notes": "Q4'24 OI margin (59.9%) excluded from Bull margin selection due to one-time legal credit anomaly (G&A unusually low at $761M). RL Y2 sustained-regime cycles will not actually look like Y1 due to product launch cadence. FY2026 capex guide ($125-145B) implies Y1 FCF severely compressed even under base case. Methods converge at +4.4% (A vs B Base)."
+}

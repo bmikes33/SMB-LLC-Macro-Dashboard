@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMZN SOTP Valuation v2 — 2Y Discounted — 2026-04-29</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-1: #0a0e17; --bg-2: #0f1420; --bg-3: #141926;
+    --txt-1: #e2e8f0; --txt-2: #8b9ab5; --txt-3: #4a5976;
+    --bd: #1e2a3a;
+    --cyan: #00e5ff; --green: #00e676; --red: #ff3d57; --amber: #ffab00;
+    --mono: 'JetBrains Mono', monospace;
+    --sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-1); color: var(--txt-1); font-family: var(--sans); font-size: 14px;
+         line-height: 1.55; padding: 28px 36px; max-width: 1280px; margin: 0 auto; }
+  h1, h2, h3, h4 { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+  h1 { font-size: 22px; color: var(--cyan); }
+  h2 { font-size: 13px; color: var(--cyan); margin: 28px 0 12px;
+       border-bottom: 1px solid var(--bd); padding-bottom: 8px; letter-spacing: 0.14em; }
+  h3 { font-size: 12px; color: var(--txt-2); margin: 18px 0 8px; letter-spacing: 0.12em; }
+  .mono { font-family: var(--mono); }
+  .num  { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .green { color: var(--green); } .red { color: var(--red); }
+  .amber { color: var(--amber); } .cyan { color: var(--cyan); }
+  .muted { color: var(--txt-3); } .secondary { color: var(--txt-2); }
+  .header { display: grid; grid-template-columns: 1fr auto; gap: 16px;
+            background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px;
+            padding: 18px 22px; margin-bottom: 24px; }
+  .header-l h1 { margin-bottom: 4px; }
+  .header-l .sub { color: var(--txt-2); font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .header-r { text-align: right; }
+  .header-r .price { font-family: var(--mono); font-size: 28px; font-weight: 500; }
+  .header-r .price-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+                            color: var(--txt-3); letter-spacing: 0.12em; }
+  .verdict-badge, .cap-badge, .method-badge {
+    display: inline-block; padding: 4px 10px; font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 3px; margin-top: 8px;
+  }
+  .verdict-badge { background: rgba(0, 230, 118, 0.12); color: var(--green); border: 1px solid var(--green); }
+  .cap-badge { background: rgba(255, 171, 0, 0.12); color: var(--amber); border: 1px solid var(--amber); margin-left: 6px; }
+  .method-badge { background: rgba(0, 229, 255, 0.10); color: var(--cyan); border: 1px solid var(--cyan); margin-left: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0;
+          background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px; overflow: hidden; }
+  th, td { text-align: right; padding: 9px 14px; border-bottom: 1px solid var(--bd);
+           font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+  th:first-child, td:first-child { text-align: left; }
+  th { background: var(--bg-3); color: var(--txt-2); font-weight: 500;
+       text-transform: uppercase; font-size: 10px; letter-spacing: 0.10em; }
+  tr:last-child td { border-bottom: none; }
+  tr.total td { border-top: 1px solid var(--cyan); background: var(--bg-3); font-weight: 700; color: var(--txt-1); }
+  tr:hover td { background: rgba(0, 229, 255, 0.03); }
+  .alloc { font-style: italic; color: #a8b8d0; }
+  .alloc::after { content: '†'; margin-left: 3px; color: var(--amber); }
+  .override { font-weight: 700; color: var(--amber); }
+  .override::after { content: '*'; margin-left: 3px; }
+  .fv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 16px 0; }
+  .fv-card { background: var(--bg-2); border: 1px solid var(--bd); border-radius: 4px;
+             padding: 14px; text-align: center; }
+  .fv-card.bear { border-left: 3px solid var(--red); }
+  .fv-card.base { border-left: 3px solid var(--cyan); }
+  .fv-card.bull { border-left: 3px solid var(--green); }
+  .fv-card.pw   { border-left: 3px solid var(--amber); }
+  .fv-card .label { font-family: var(--mono); font-size: 10px; text-transform: uppercase;
+                    color: var(--txt-3); letter-spacing: 0.14em; margin-bottom: 6px; }
+  .fv-card .val { font-family: var(--mono); font-size: 22px; font-weight: 500; color: var(--txt-1); }
+  .fv-card .val-sm { font-family: var(--mono); font-size: 11px; color: var(--txt-3); margin-top: 6px; }
+  .fv-card .delta { font-family: var(--mono); font-size: 12px; margin-top: 4px; }
+  .flag-row { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--bd); }
+  .flag-row:last-child { border-bottom: none; }
+  .flag { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; }
+  .flag.green { background: var(--green); box-shadow: 0 0 10px rgba(0, 230, 118, 0.4); }
+  .flag.amber { background: var(--amber); box-shadow: 0 0 10px rgba(255, 171, 0, 0.4); }
+  .flag.red   { background: var(--red);   box-shadow: 0 0 10px rgba(255, 61, 87, 0.4); }
+  .flag-label { flex-grow: 1; font-family: var(--mono); font-size: 13px; }
+  .flag-val { font-family: var(--mono); color: var(--txt-2); font-variant-numeric: tabular-nums; }
+  .qbar { display: flex; height: 10px; border-radius: 2px; overflow: hidden; margin: 8px 0; }
+  .qbar .disclosed { background: var(--cyan); }
+  .qbar .allocated { background: var(--amber); }
+  .qbar .override  { background: var(--green); }
+  .footnote { color: var(--txt-3); font-size: 12px; margin-top: 8px; line-height: 1.5; }
+  .caveat-box { background: rgba(255, 171, 0, 0.06); border: 1px solid var(--amber);
+                border-left: 4px solid var(--amber); padding: 12px 16px; margin: 14px 0;
+                border-radius: 3px; font-size: 13px; }
+  .caveat-box .caveat-label { font-family: var(--mono); font-weight: 700; color: var(--amber);
+                              text-transform: uppercase; font-size: 11px; letter-spacing: 0.12em; margin-right: 6px; }
+  .info-box { background: rgba(0, 229, 255, 0.05); border: 1px solid var(--cyan);
+              border-left: 4px solid var(--cyan); padding: 12px 16px; margin: 14px 0;
+              border-radius: 3px; font-size: 13px; }
+  .info-box .info-label { font-family: var(--mono); font-weight: 700; color: var(--cyan);
+                          text-transform: uppercase; font-size: 11px; letter-spacing: 0.12em; margin-right: 6px; }
+  ul { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; color: var(--txt-2); font-size: 13px; }
+  li b { color: var(--txt-1); }
+  .legend { background: var(--bg-3); border: 1px solid var(--bd); padding: 10px 14px;
+            margin: 8px 0 16px; font-family: var(--mono); font-size: 11px;
+            color: var(--txt-2); border-radius: 3px; letter-spacing: 0.04em; }
+  .gap-pos { color: var(--green); }
+  .gap-neg { color: var(--red); }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-l">
+    <h1>AMZN — SOTP Fundamental Valuation v2</h1>
+    <div class="sub">Amazon.com, Inc. · NASDAQ:AMZN · 2026-04-29 · Standalone Analysis</div>
+    <span class="verdict-badge">Undervalued — Base +21.2%</span>
+    <span class="cap-badge">Cap Structure: AMBER</span>
+    <span class="method-badge">Method: 2Y EBITDA Discounted</span>
+  </div>
+  <div class="header-r">
+    <div class="price-label">Last close</div>
+    <div class="price">$270.25</div>
+    <div class="secondary mono" style="font-size: 11px; margin-top: 4px;">After-hours: $277.46 (+2.7%)</div>
+  </div>
+</div>
+
+<!-- Data Provenance Strip -->
+<div class="legend">
+  <strong style="color: var(--txt-1);">Data Provenance:</strong>
+  72% disclosed (filings) · 23% allocated (capex-weighted D&amp;A + function-weighted SBC) · 5% user-override
+  <div class="qbar">
+    <div class="disclosed" style="width: 72%;"></div>
+    <div class="allocated" style="width: 23%;"></div>
+    <div class="override" style="width: 5%;"></div>
+  </div>
+  <strong>Disclosed</strong>: plain · <strong class="alloc" style="font-style: normal;">Allocated</strong>: italic + † · <strong class="override" style="font-weight: 700;">User-override</strong>: bold amber + *
+</div>
+
+<!-- Section 1: Executive Summary -->
+<h2>§1 — Executive Summary</h2>
+
+<div class="fv-grid">
+  <div class="fv-card bear">
+    <div class="label">Bear (2Y Disc)</div>
+    <div class="val">$222.08</div>
+    <div class="delta red">-17.8%</div>
+    <div class="val-sm">NTM × Mult: $235.85 (−12.7%)</div>
+  </div>
+  <div class="fv-card base">
+    <div class="label">Base (2Y Disc)</div>
+    <div class="val">$327.62</div>
+    <div class="delta green">+21.2%</div>
+    <div class="val-sm">NTM × Mult: $336.70 (+24.6%)</div>
+  </div>
+  <div class="fv-card bull">
+    <div class="label">Bull (2Y Disc)</div>
+    <div class="val">$503.97</div>
+    <div class="delta green">+86.5%</div>
+    <div class="val-sm">NTM × Mult: $504.01 (+86.5%)</div>
+  </div>
+  <div class="fv-card pw">
+    <div class="label">Prob-Wt 25/50/25</div>
+    <div class="val">$345.32</div>
+    <div class="delta green">+27.8%</div>
+    <div class="val-sm">NTM × Mult: $353.31 (+30.7%)</div>
+  </div>
+</div>
+
+<div class="info-box">
+  <span class="info-label">Methodology Note</span>
+  Primary valuation = <strong>2Y Forward EBITDA × Multiple, discounted back at WACC</strong>.
+  Year 2 EBITDA = sustained-regime projection (Year 2 growth + margin = Year 1).
+  WACC: NA 9% (Maturity), International 10% (Mature Growth), AWS 10% (Mature Growth) — stage-default, no user override.
+  NTM × multiple shown as sanity check.
+</div>
+
+<div class="caveat-box">
+  <span class="caveat-label">Verdict</span>
+  <strong style="color: var(--green);">Undervalued at base case (+21.2%)</strong> under 2Y discounted methodology.
+  Probability-weighted upside ~28%. Bull case (+86%) requires AWS sustaining 28% growth and reverting to peak 39.5% margin —
+  achievable but contingent. Bear case (−18%) reflects worst-observed quarter on every driver, sustained over 2 years.
+  <strong style="color: var(--amber);">Capital structure caveat applies (§10): aggressive 2026 capex compressing FCF.</strong>
+</div>
+
+<!-- Section 2: Segment Lifecycle Map -->
+<h2>§2 — Segment Lifecycle Map</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Segment</th>
+      <th>TTM Rev ($B)</th>
+      <th>Mix</th>
+      <th>YoY (Q1'26)</th>
+      <th>TTM Op Mgn</th>
+      <th>EBITDA Mgn</th>
+      <th>Stage</th>
+      <th>WACC</th>
+      <th>Forecast</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>North America</td>
+      <td>437.6</td><td>58.9%</td><td>12.0%</td><td>7.3%</td>
+      <td class="alloc">15.4%</td>
+      <td>Maturity</td>
+      <td>9.0%</td>
+      <td>2Y</td>
+    </tr>
+    <tr>
+      <td>International</td>
+      <td>168.2</td><td>22.6%</td><td>11.0% ex-FX</td><td>3.1%</td>
+      <td class="alloc">10.2%</td>
+      <td>Mature Growth</td>
+      <td>10.0%</td>
+      <td>2Y</td>
+    </tr>
+    <tr>
+      <td>AWS</td>
+      <td>137.0</td><td>18.4%</td><td>28.0%</td><td>35.2%</td>
+      <td class="alloc">52.1%</td>
+      <td>Mature Growth</td>
+      <td>10.0%</td>
+      <td>2Y</td>
+    </tr>
+    <tr class="total">
+      <td>Consolidated</td>
+      <td>742.8</td><td>100.0%</td><td>15.0% ex-FX</td><td>11.5%</td>
+      <td class="alloc">21.0%</td><td>Mixed</td><td>—</td><td>2Y</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Section 3: D&A Allocation Methodology -->
+<h2>§3 — D&amp;A Allocation Methodology</h2>
+
+<div class="info-box">
+  <span class="info-label">Auto-Routing Decision</span>
+  AMZN triggers <strong>Method B (capex-weighted D&amp;A)</strong>.
+  AWS represents ~80% of consolidated capex but only 18% of revenue — a 4.4× skew, well above the 2× threshold.
+  Revenue-share allocation would systematically understate AWS EBITDA by ~$10B and overstate NA EBITDA by similar.
+</div>
+
+<table>
+  <thead>
+    <tr><th>Segment</th><th>Method A (Rev Share)</th><th>Method B (Capex Wtd) — applied</th><th>Δ vs. A</th><th>Source</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>NA</td><td class="num">$41.5B (58.9%)</td><td class="alloc num">$35.2B (50.0%)</td><td class="num red">−$6.3B</td><td class="muted">Reduced — lower capex intensity</td></tr>
+    <tr><td>International</td><td class="num">$15.9B (22.6%)</td><td class="alloc num">$12.0B (17.0%)</td><td class="num red">−$3.9B</td><td class="muted">Reduced — lower capex intensity</td></tr>
+    <tr><td>AWS</td><td class="num">$13.0B (18.4%)</td><td class="alloc num">$23.2B (33.0%)</td><td class="num green">+$10.2B</td><td class="muted">Increased — datacenter capex</td></tr>
+    <tr class="total"><td>Total TTM D&amp;A</td><td class="num">$70.4B</td><td class="num">$70.4B</td><td class="num">match ✓</td><td></td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">
+Capex-weighted allocation reverse-engineered from widely reported AWS EBITDA margin (~52% TTM). AWS D&amp;A of $23.2B implies $71.4B AWS EBITDA on $137B revenue (52.1%) — matches public benchmark. Cross-check: total allocated D&amp;A sums to $70.4B consolidated. ✓
+Under Method A (revenue-share), AWS NTM Base EV would have been ~$1,690B vs. $1,916B under Method B — an $226B difference flowing through to fair value.
+</p>
+
+<!-- Section 4: Peer Set, Multiples & WACC -->
+<h2>§4 — Peer Set, Multiples &amp; WACC</h2>
+
+<h3>North America Segment — EV/EBITDA, WACC 9.0%</h3>
+<table>
+  <thead><tr><th>Peer</th><th>EV/EBITDA TTM</th><th>Anchor</th></tr></thead>
+  <tbody>
+    <tr><td>TGT</td><td>8.5x</td><td>Pure retail, no marketplace/ads premium</td></tr>
+    <tr><td>EBAY</td><td>16.6x</td><td>Pure marketplace, no fulfillment/retail</td></tr>
+    <tr><td>WMT</td><td>20.0x</td><td>Best single-comp anchor — omnichannel + ads + Walmart+</td></tr>
+    <tr><td>COST</td><td>32.0x</td><td>Outlier — premium loyalty/subscription model</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Range</th><th>Bear (25th)</th><th>Base (50th)</th><th>Bull (75th)</th></tr></thead>
+  <tbody><tr><td>Mechanical (accepted)</td><td class="num">14.6x</td><td class="num">18.3x</td><td class="num">23.0x</td></tr></tbody>
+</table>
+
+<h3>International Segment — EV/EBITDA, WACC 10.0%</h3>
+<table>
+  <thead><tr><th>Peer</th><th>EV/EBITDA TTM</th><th>Anchor</th></tr></thead>
+  <tbody>
+    <tr><td>SE</td><td>10.0x</td><td>Compressed — flat 2026 EBITDA guide</td></tr>
+    <tr><td>MELI</td><td>26.0x</td><td>LatAm dominator, premium for moat</td></tr>
+    <tr><td>CPNG</td><td>25.0x</td><td>Mature Korean ecom</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Range</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Mechanical (rejected)</td><td class="num muted">17.5x</td><td class="num muted">25.0x</td><td class="num muted">25.5x</td></tr>
+    <tr><td>User-override (applied)</td><td class="num override">13.0x</td><td class="num override">18.0x</td><td class="num override">22.0x</td></tr>
+  </tbody>
+</table>
+
+<h3>AWS Segment — EV/EBITDA, WACC 10.0%</h3>
+<table>
+  <thead><tr><th>Peer</th><th>EV/EBITDA TTM</th><th>Anchor</th></tr></thead>
+  <tbody>
+    <tr><td>MSFT</td><td>16.7x</td><td>Whole-co — Azure ~25% of revenue</td></tr>
+    <tr><td>GOOGL</td><td>23.0x</td><td>Whole-co — GCP ~13% of revenue</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th>Range</th><th>Bear</th><th>Base</th><th>Bull</th></tr></thead>
+  <tbody>
+    <tr><td>Mechanical (rejected)</td><td class="num muted">16.7x</td><td class="num muted">19.9x</td><td class="num muted">23.0x</td></tr>
+    <tr><td>User-override (applied)</td><td class="num override">18.0x</td><td class="num override">22.0x</td><td class="num override">26.0x</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 5: Bear/Base/Bull cases (Y1 + Y2) -->
+<h2>§5 — Bear / Base / Bull — Year 1 + Year 2 EBITDA</h2>
+<p class="footnote">Year 2 = sustained regime (Year 2 growth + margin = Year 1). User did not apply tapering. SBC added back in Bull only.</p>
+
+<h3>North America</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>YoY revenue growth</td><td class="num">8.0%</td><td class="num">11.0%</td><td class="num">12.0%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>Operating margin</td><td class="num">4.5%</td><td class="num">7.2%</td><td class="num">9.0%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>D&amp;A margin</td><td class="alloc num">8.0%</td><td class="alloc num">8.0%</td><td class="alloc num">8.0%</td><td class="muted">Method B</td></tr>
+    <tr><td>EBITDA margin</td><td class="num">12.5%</td><td class="num">15.2%</td><td class="num">17.0%</td><td class="muted">OpMgn + D&amp;A</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">59.3</td><td class="num">74.1</td><td class="num">91.7</td><td class="muted">Bull incl. SBC addback</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">64.0</td><td class="num">82.3</td><td class="num">102.7</td><td class="muted">Y1 × (1+growth) × margin</td></tr>
+    <tr><td>Multiple</td><td class="num">14.6x</td><td class="num">18.3x</td><td class="num">23.0x</td><td class="muted">Peer 25/50/75</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">935</td><td class="num">1,506</td><td class="num">2,363</td><td class="muted">Y2 EBITDA × multiple</td></tr>
+    <tr class="total"><td>2Y Discounted EV ($B, WACC 9%)</td><td class="num">787</td><td class="num">1,268</td><td class="num">1,989</td><td class="muted">Y2 EV / 1.09²</td></tr>
+  </tbody>
+</table>
+
+<h3>International</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>YoY revenue growth (ex-FX)</td><td class="num">8.0%</td><td class="num">10.75%</td><td class="num">11.0%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>Operating margin</td><td class="num">2.1%</td><td class="num">3.2%</td><td class="num">4.1%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>D&amp;A margin</td><td class="alloc num">7.2%</td><td class="alloc num">7.2%</td><td class="alloc num">7.2%</td><td class="muted">Method B</td></tr>
+    <tr><td>EBITDA margin</td><td class="num">9.3%</td><td class="num">10.4%</td><td class="num">11.3%</td><td class="muted">OpMgn + D&amp;A</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">16.8</td><td class="num">19.2</td><td class="num">23.3</td><td class="muted">Bull incl. SBC addback</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">18.2</td><td class="num">21.3</td><td class="num">25.9</td><td class="muted"></td></tr>
+    <tr><td>Multiple <span class="override" style="font-size: 9px;">override</span></td><td class="num override">13.0x</td><td class="num override">18.0x</td><td class="num override">22.0x</td><td class="muted">User override</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">236</td><td class="num">383</td><td class="num">569</td><td class="muted"></td></tr>
+    <tr class="total"><td>2Y Discounted EV ($B, WACC 10%)</td><td class="num">195</td><td class="num">317</td><td class="num">471</td><td class="muted">Y2 EV / 1.10²</td></tr>
+  </tbody>
+</table>
+
+<h3>AWS</h3>
+<table>
+  <thead><tr><th>Driver</th><th>Bear</th><th>Base</th><th>Bull</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>YoY revenue growth (ex-FX)</td><td class="num">17.0%</td><td class="num">22.25%</td><td class="num">28.0%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>Operating margin</td><td class="num">32.9%</td><td class="num">35.05%</td><td class="num">39.5%</td><td class="muted">Min / Last-4Q avg / Max</td></tr>
+    <tr><td>D&amp;A margin</td><td class="alloc num">16.9%</td><td class="alloc num">16.9%</td><td class="alloc num">16.9%</td><td class="muted">Method B</td></tr>
+    <tr><td>EBITDA margin</td><td class="num">49.8%</td><td class="num">52.0%</td><td class="num">56.4%</td><td class="muted">OpMgn + D&amp;A</td></tr>
+    <tr><td>Year 1 (NTM) EBITDA ($B)</td><td class="num">79.9</td><td class="num">87.1</td><td class="num">108.3</td><td class="muted">Bull incl. SBC addback</td></tr>
+    <tr><td>Year 2 EBITDA ($B)</td><td class="num">93.5</td><td class="num">106.5</td><td class="num">138.6</td><td class="muted"></td></tr>
+    <tr><td>Multiple <span class="override" style="font-size: 9px;">override</span></td><td class="num override">18.0x</td><td class="num override">22.0x</td><td class="num override">26.0x</td><td class="muted">User override</td></tr>
+    <tr><td>Year 2 EV ($B)</td><td class="num">1,683</td><td class="num">2,342</td><td class="num">3,604</td><td class="muted"></td></tr>
+    <tr class="total"><td>2Y Discounted EV ($B, WACC 10%)</td><td class="num">1,391</td><td class="num">1,936</td><td class="num">2,978</td><td class="muted">Y2 EV / 1.10²</td></tr>
+  </tbody>
+</table>
+
+<!-- Section 6: SBC Treatment -->
+<h2>§6 — SBC Treatment</h2>
+
+<table>
+  <thead><tr><th>Segment</th><th>TTM SBC ($B)</th><th>Bull Y1 EBITDA Adj.</th><th>Bull Y2 EBITDA Adj.</th><th>Methodology</th></tr></thead>
+  <tbody>
+    <tr><td>North America</td><td class="alloc">8.2</td><td class="num">$83.5B + $8.2B = $91.7B</td><td class="num">$93.4B + $9.2B = $102.7B</td><td class="muted">Bull only — strict for Base/Bear</td></tr>
+    <tr><td>International</td><td class="alloc">2.3</td><td class="num">$21.0B + $2.3B = $23.3B</td><td class="num">$23.3B + $2.6B = $25.9B</td><td class="muted">Bull only</td></tr>
+    <tr><td>AWS</td><td class="alloc">9.3</td><td class="num">$99.0B + $9.3B = $108.3B</td><td class="num">$126.7B + $11.9B = $138.6B</td><td class="muted">Bull only</td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">
+  Function-weighted allocation: AWS gets 80% of T&amp;I SBC + 5% other; NA gets 15% T&amp;I + 75% other; Intl gets 5% T&amp;I + 20% other.
+  Year 2 SBC scales with revenue growth (held constant as % of revenue).
+  Strict treatment in Base/Bear: SBC remains embedded as a real cost.
+</p>
+
+<!-- Section 7: Bridge to Equity (2Y Discounted, PRIMARY) -->
+<h2>§7 — Bridge to Equity Fair Value (2Y Discounted) — Method A, Primary</h2>
+
+<table>
+  <thead><tr><th>Component</th><th>Bear ($B)</th><th>Base ($B)</th><th>Bull ($B)</th><th>Source</th></tr></thead>
+  <tbody>
+    <tr><td>NA segment EV (2Y disc, WACC 9%)</td><td class="num">787</td><td class="num">1,268</td><td class="num">1,989</td><td class="muted">§5</td></tr>
+    <tr><td>International segment EV (2Y disc, WACC 10%)</td><td class="num">195</td><td class="num">317</td><td class="num">471</td><td class="muted">§5</td></tr>
+    <tr><td>AWS segment EV (2Y disc, WACC 10%)</td><td class="num">1,391</td><td class="num">1,936</td><td class="num">2,978</td><td class="muted">§5</td></tr>
+    <tr class="total"><td>Σ Today's Segment EV</td><td class="num">2,372</td><td class="num">3,520</td><td class="num">5,438</td><td></td></tr>
+    <tr><td>+ Cash &amp; marketable securities</td><td class="num">+143.1</td><td class="num">+143.1</td><td class="num">+143.1</td><td class="muted">Q1'26 BS</td></tr>
+    <tr><td>− Total debt (LT + current)</td><td class="num">−130.7</td><td class="num">−130.7</td><td class="num">−130.7</td><td class="muted">Q1'26 BS</td></tr>
+    <tr><td>+ Anthropic stake (fair value)</td><td class="alloc num">+30.0</td><td class="alloc num">+30.0</td><td class="alloc num">+30.0</td><td class="muted">Estimate</td></tr>
+    <tr class="total"><td>Equity Fair Value ($B)</td><td class="num">2,415</td><td class="num">3,563</td><td class="num">5,480</td><td></td></tr>
+    <tr><td>÷ Diluted shares (M)</td><td class="num">10,874</td><td class="num">10,874</td><td class="num">10,874</td><td class="muted">Q1'26</td></tr>
+    <tr class="total"><td>Fair Value per Share ($)</td><td class="num">222.08</td><td class="num">327.62</td><td class="num">503.97</td><td></td></tr>
+    <tr><td>vs. $270.25 close</td><td class="num red">−17.8%</td><td class="num green">+21.2%</td><td class="num green">+86.5%</td><td></td></tr>
+  </tbody>
+</table>
+
+<!-- Section 8: NTM × Multiple comparison -->
+<h2>§8 — Method Comparison (NTM × Multiple Sanity Check)</h2>
+
+<table>
+  <thead><tr><th>Segment</th><th>Method A — 2Y Disc</th><th>Method B — NTM × Mult</th><th>Δ (A vs. B)</th><th>Interpretation</th></tr></thead>
+  <tbody>
+    <tr><td>NA — Bear</td><td class="num">$787</td><td class="num">$866</td><td class="num gap-neg">−9.1%</td><td class="muted">Discount &gt; 8% growth</td></tr>
+    <tr><td>NA — Base</td><td class="num">$1,268</td><td class="num">$1,357</td><td class="num gap-neg">−6.6%</td><td class="muted">Discount &gt; 11% growth</td></tr>
+    <tr><td>NA — Bull</td><td class="num">$1,989</td><td class="num">$2,110</td><td class="num gap-neg">−5.7%</td><td class="muted">Discount &gt; 12% growth</td></tr>
+    <tr><td>Intl — Bear</td><td class="num">$195</td><td class="num">$219</td><td class="num gap-neg">−10.7%</td><td class="muted">Higher WACC, modest growth</td></tr>
+    <tr><td>Intl — Base</td><td class="num">$317</td><td class="num">$346</td><td class="num gap-neg">−8.5%</td><td class="muted">Same</td></tr>
+    <tr><td>Intl — Bull</td><td class="num">$471</td><td class="num">$513</td><td class="num gap-neg">−8.3%</td><td class="muted">Same</td></tr>
+    <tr><td>AWS — Bear</td><td class="num">$1,391</td><td class="num">$1,438</td><td class="num gap-neg">−3.3%</td><td class="muted">17% growth ≈ WACC²</td></tr>
+    <tr><td>AWS — Base</td><td class="num">$1,936</td><td class="num">$1,916</td><td class="num gap-pos">+1.0%</td><td class="muted">22% growth offsets discount</td></tr>
+    <tr><td>AWS — Bull</td><td class="num">$2,978</td><td class="num">$2,815</td><td class="num gap-pos">+5.8%</td><td class="muted">28% growth premium</td></tr>
+    <tr class="total"><td>Total — Base</td><td class="num">$3,520</td><td class="num">$3,619</td><td class="num gap-neg">−2.7%</td><td></td></tr>
+  </tbody>
+</table>
+
+<div class="info-box">
+  <span class="info-label">What the gap tells us</span>
+  AMZN's <strong>value is increasingly concentrated in AWS</strong>. AWS's 22%+ growth comfortably outpaces its 10% WACC,
+  so 2Y compounding adds value beyond what the multiple captures. NA and International growth rates (8–12%, 8–11%) barely
+  beat the time-value-of-money cost, so 2Y discounting compresses fair value vs. the snapshot multiple.
+  Net effect on AMZN: 2Y discounted base case is ~3% below NTM × multiple — investment thesis holds either way.
+</div>
+
+<!-- Section 9: Probability-weighted -->
+<h2>§9 — Probability-Weighted Fair Value</h2>
+
+<table>
+  <thead><tr><th>Weights</th><th>Bear</th><th>Base</th><th>Bull</th><th>FV/Share (2Y Disc)</th><th>vs. $270.25</th></tr></thead>
+  <tbody>
+    <tr><td>Default (25/50/25)</td><td class="num">25%</td><td class="num">50%</td><td class="num">25%</td><td class="num">$345.32</td><td class="num green">+27.8%</td></tr>
+    <tr><td>Conservative (40/40/20)</td><td class="num">40%</td><td class="num">40%</td><td class="num">20%</td><td class="num">$320.69</td><td class="num green">+18.7%</td></tr>
+    <tr><td>Aggressive (15/50/35)</td><td class="num">15%</td><td class="num">50%</td><td class="num">35%</td><td class="num">$373.50</td><td class="num green">+38.2%</td></tr>
+  </tbody>
+</table>
+
+<p class="footnote">All weight scenarios produce positive expected return. Conservative weighting still implies +18.7% upside.</p>
+
+<!-- Section 10: Capital Structure -->
+<h2>§10 — Capital Structure Health Check</h2>
+
+<table>
+  <tbody>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">1. Net Debt / TTM EBITDA</td><td class="flag-val">−0.08x (net cash)</td><td class="flag-val green">GREEN</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">2. TTM EBITDA / Interest Expense</td><td class="flag-val">~65x</td><td class="flag-val green">GREEN</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">3. Maturity Wall (next 24 months)</td><td class="flag-val">Manageable (Q1 raised $53B)</td><td class="flag-val green">GREEN*</td></tr>
+    <tr class="flag-row"><td><span class="flag amber"></span></td><td class="flag-label">4. Liquidity vs. 12-month obligations</td><td class="flag-val">Tight — $200B 2026 capex</td><td class="flag-val amber">AMBER</td></tr>
+    <tr class="flag-row"><td><span class="flag green"></span></td><td class="flag-label">5. Diluted Share Count 3y CAGR</td><td class="flag-val">~0.6%/yr</td><td class="flag-val green">GREEN</td></tr>
+  </tbody>
+</table>
+
+<div class="caveat-box">
+  <span class="caveat-label">Capital Structure Caveat — Liquidity</span>
+  AMZN announced ~$200B in 2026 capex. TTM FCF compressed to $1.2B from $25.9B (−95%) on AI infrastructure spending.
+  Coverage = (TTM OCF $148.5B + Cash $143.1B) ÷ ~$220B obligations = 1.32x. Sufficient but tight.
+  Bull thesis assumes capex ROI materializes; bear thesis questions ROI on $200B AI spend.
+</div>
+
+<!-- Section 11: Methodology -->
+<h2>§11 — Methodology &amp; Data Provenance</h2>
+
+<h3>Source Documents</h3>
+<ul>
+  <li><b>Primary:</b> Amazon Q1 2026 Earnings Release (8-K), filed 2026-04-29.</li>
+  <li><b>Freshness:</b> Confirmed latest filing. 10-Q expected mid-May 2026.</li>
+  <li><b>Peer multiples:</b> GuruFocus, Yahoo Finance, StockAnalysis, valueinvesting.io — pulled 2026-04-29.</li>
+  <li><b>TradingView screenshots:</b> Not provided this run; if provided in future would supplement to fill 8Q range.</li>
+</ul>
+
+<h3>Methodology Selections</h3>
+<ul>
+  <li><b>D&amp;A allocation:</b> <span class="alloc" style="font-style: normal;">Method B (capex-weighted)</span> auto-routed — AWS captures ~80% of consolidated capex vs. 18% revenue share (4.4× skew).</li>
+  <li><b>Primary valuation:</b> 2Y forward EBITDA × multiple, discounted at WACC.</li>
+  <li><b>Year 2 projection:</b> Sustained regime (no taper). User did not apply Year 2 tapering.</li>
+  <li><b>WACC:</b> Stage-default — NA 9% (Maturity), Intl 10% (Mature Growth), AWS 10% (Mature Growth). No user override.</li>
+  <li><b>SBC treatment:</b> Bull adds back, Base/Bear strict. Function-weighted allocation across segments.</li>
+</ul>
+
+<h3>User Overrides Applied</h3>
+<ul>
+  <li><b>International multiple range:</b> 13.0/18.0/22.0 (rejected mechanical 17.5/25.0/25.5).</li>
+  <li><b>AWS multiple range:</b> 18.0/22.0/26.0 (rejected mechanical 16.7/19.9/23.0).</li>
+</ul>
+
+<h3>Constraints &amp; Limitations</h3>
+<ul>
+  <li><b>6 quarters used vs. skill standard 8.</b> 8-K supplemental did not include older periods. Trailing-4Q regime-anchored base case fully covered.</li>
+  <li><b>Segment D&amp;A and SBC are allocated, not disclosed.</b> 10-K footnote (when accessible) will confirm or revise.</li>
+  <li><b>Anthropic stake fair value $30B is an estimate.</b> Carrying value embedded in $151.8B Other assets.</li>
+  <li><b>Maturity wall flagged GREEN with asterisk:</b> full debt maturity schedule requires 10-K Note (not in 8-K).</li>
+</ul>
+
+<p class="footnote" style="margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--bd);">
+  <span class="muted">Generated 2026-04-29 · SOTP Fundamental Valuation Skill v2 · Standalone analysis · 2Y EBITDA discounted methodology · No macro overlay applied · No cross-skill linkage</span>
+</p>
+
+</body>
+</html>

@@ -1,51 +1,205 @@
 {
-  "lastUpdated": "2026-05-01T12:56:54.537753+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 12:56 PM UTC",
+  "lastUpdated": "2026-05-01T14:16:10.198713+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 02:16 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Federal Reserve officials signal growing dovish uncertainty with Kashkari and Hammack expressing caution about forward guidance and dissenting from easing bias respectively. Markets show mixed performance with Bitcoin rallying strongly on institutional inflows while currency markets remain volatile with yen intervention concerns and dollar strength emerging on geopolitical tensions.",
+    "macroSummary": "Manufacturing data shows mixed signals with ISM at 52.7 (slightly below consensus) but prices paid spiked to 84.6 - highest in four years. Three Fed officials reiterated their dissents from the FOMC's easing bias, citing elevated uncertainty and two-sided risks.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Fed officials are backing away from dovish forward guidance while dollar strength and geopolitical tensions create headwinds against the Risk-On regime assumption.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "> 100",
-        "signal": "Dollar rises as geopolitical tensions from Iran war show no end in sight"
-      }
-    ],
+    "regimePressureReason": "Multiple Fed dissents against easing bias and a significant spike in manufacturing input prices to 4-year highs signal potential early reflation pressures that could challenge the current risk-on positioning.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Fed's Kashkari and Hammack both express uncertainty about future easing, with Hammack dissenting from dovish statement bias",
+        "signal": "Manufacturing prices paid index jumped to 84.6 vs 78.3 prior, highest since April 2022",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strength emerging on geopolitical tensions with no end in sight for Iran war",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Three Fed officials (Kashkari, Logan, Hammack) all reiterated dissents from FOMC easing bias due to elevated uncertainty",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETFs see $2B April inflows with institutional money re-accelerating into crypto",
+        "signal": "Manufacturing employment index fell to 46.4 from 48.7, showing continued labor market softening",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Export orders contracted for second straight month at 47.9, signaling global demand weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin ETFs drew $2B in April for highest monthly inflows this year",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "S&P 500 hits fresh all-time highs while Bitcoin seals best monthly gain in a year",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Yen intervention threats keep currency markets in volatile focus as carry trade risks persist",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 threshold which would signal regime invalidation",
-      "BMNR ladder strategy benefits from Bitcoin strength but watch for futures-driven rally warnings",
-      "Consider reducing risk exposure if Fed pivots more hawkish given Kashkari/Hammack comments"
+      "Monitor MOVE closely - manufacturing price spike could trigger rates volatility approaching 100 threshold",
+      "Consider tightening BMNR put strikes - Fed dissents suggest monetary policy pivot risk",
+      "Watch for any HYG weakness if reflation concerns begin impacting credit spreads"
     ]
   },
   "articles": [
+    {
+      "title": "BBG: US ISM'S SPENCE Q&A: MANUFACTURING INDEX LITTLEBELOW CONSENSUS; SLIGHT SLOWDOWN FROM LAST MONTH OR TWO; PRICE INDEX HIGHEST IN FOUR YEARS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:09:00+00:00",
+      "timeDisplay": "2:09 PM",
+      "link": "https://www.tradingview.com/news/macenews:98b8c6b72094b:0-bbg-us-ism-s-spence-q-a-manufacturing-index-littlebelow-consensus-slight-slowdown-from-last-month-or-two-price-index-highest-in-four-years/"
+    },
+    {
+      "title": "MINN FED'S KASHARI REITEREATES REASON FOR FOMC DISSENT, THAT EASING BIAS FORWARD GUIDANCE COULD TIGHTEN FINANCIAL CONDITIONS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:06:00+00:00",
+      "timeDisplay": "2:06 PM",
+      "link": "https://www.tradingview.com/news/macenews:2e04b035d094b:0-minn-fed-s-kashari-reitereates-reason-for-fomc-dissent-that-easing-bias-forward-guidance-could-tighten-financial-conditions/"
+    },
+    {
+      "title": "MORE US ISM MANUFACTURING: NEW EXPORT ORDERS CONTRACT IN APRIL FOR 2ND STRAIGHT MONTH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:04:00+00:00",
+      "timeDisplay": "2:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:d2a3cb1c1094b:0-more-us-ism-manufacturing-new-export-orders-contract-in-april-for-2nd-straight-month/"
+    },
+    {
+      "title": "MORE US ISM MANUFACTURING: PRICES PAID HIGHEST IN APRL SINCE APRIL 2022",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:03:00+00:00",
+      "timeDisplay": "2:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:11bd3ebaa094b:0-more-us-ism-manufacturing-prices-paid-highest-in-aprl-since-april-2022/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN REITERATES REASON FOR FOMC DISSENT,THAT TWO-SIDED RISKS TO MONPOL MEANS EASING BIAS NO LONGER APPROPRIATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:02:00+00:00",
+      "timeDisplay": "2:02 PM",
+      "link": "https://www.tradingview.com/news/macenews:afe3106fb094b:0-dallas-fed-s-logan-reiterates-reason-for-fomc-dissent-that-two-sided-risks-to-monpol-means-easing-bias-no-longer-appropriate/"
+    },
+    {
+      "title": "US ISM MANUFACTURING EMPLOYMENT INDEX 46.4 IN APRIL VS. 48.7 IN MARCH, 48.8 IN FEB. (VS. 49.0 MARKETS EXPECTED FOR APRIL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:f53edada5094b:0-us-ism-manufacturing-employment-index-46-4-in-april-vs-48-7-in-march-48-8-in-feb-vs-49-0-markets-expected-for-april/"
+    },
+    {
+      "title": "US ISM MANUFACTURING INDEX 52.7 IN APRIL VS. 52.7 IN MARCH, 52.4 IN FEB. (VS. 53.0 MARKETS EXPECTED FOR APRIL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:79073df3e094b:0-us-ism-manufacturing-index-52-7-in-april-vs-52-7-in-march-52-4-in-feb-vs-53-0-markets-expected-for-april/"
+    },
+    {
+      "title": "US ISM MANUFACTURING NEW EXPORT ORDERS 47.9 IN APRIL VS. 49.9 IN MARCH, 50.3 IN FEB.",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:f9f2b2f5d094b:0-us-ism-manufacturing-new-export-orders-47-9-in-april-vs-49-9-in-march-50-3-in-feb/"
+    },
+    {
+      "title": "US ISM MANUFACTURING NEW ORDERS INDEX 54.1 IN APRIL VS. 53.5 IN MARCH, 55.8 IN FEB.",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:6263a75e1094b:0-us-ism-manufacturing-new-orders-index-54-1-in-april-vs-53-5-in-march-55-8-in-feb/"
+    },
+    {
+      "title": "US ISM MANUFACTURING PRICES PAID INDEX 84.6 IN APRIL VS.78.3 IN MARCH, 70.5 IN FEB. (VS. 80.0 MARKETS EXPECTED FOR APRIL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:f5908387d094b:0-us-ism-manufacturing-prices-paid-index-84-6-in-april-vs-78-3-in-march-70-5-in-feb-vs-80-0-markets-expected-for-april/"
+    },
+    {
+      "title": "US ISM MANUFACTURING SUPPLIER DELIVERY INDEX 60.6 IN APRIL VS. 58.9 IN MARCH, 55.1 IN FEB.",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:99c41eb34094b:0-us-ism-manufacturing-supplier-delivery-index-60-6-in-april-vs-58-9-in-march-55-1-in-feb/"
+    },
+    {
+      "title": "Dogecoin Outpaces Bitcoin In April \u2013 Leads Weekly Gains Among Crypto Majors As XRP Lags",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:57:11+00:00",
+      "timeDisplay": "1:57 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:cadfcd0fd094b:0/"
+    },
+    {
+      "title": "OPEC+ Potential Output Hike Would Be Largely Symbolic \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:57:00+00:00",
+      "timeDisplay": "1:57 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501004148:0/"
+    },
+    {
+      "title": "NY Engelhard Gold Prices - May 1",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:48:00+00:00",
+      "timeDisplay": "1:48 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501004086:0/"
+    },
+    {
+      "title": "RECAP: CLEVE FED'S HAMMACK REITERATES REASON FOR FOMC DISSENT, THAT UNCERTAINTY RE THE ECONOMIC OUTLOOK 'IS ELEVATED' SO NO REASON FOR AN EASING BIAS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:47:00+00:00",
+      "timeDisplay": "1:47 PM",
+      "link": "https://www.tradingview.com/news/macenews:d179d1c4f094b:0-recap-cleve-fed-s-hammack-reiterates-reason-for-fomc-dissent-that-uncertainty-re-the-economic-outlook-is-elevated-so-no-reason-for-an-easing-bias/"
+    },
+    {
+      "title": "APRIL FINAL S&P GLOBAL US MANUFACTURING PMI 54.5 VS 52.3 IN MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:46:00+00:00",
+      "timeDisplay": "1:46 PM",
+      "link": "https://www.tradingview.com/news/macenews:ba0ec1c05094b:0-april-final-s-p-global-us-manufacturing-pmi-54-5-vs-52-3-in-march/"
+    },
+    {
+      "title": "Occidental Petroleum Appoints Richard\u00a0Jackson As CEO",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:21:46+00:00",
+      "timeDisplay": "1:21 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:1a6a5525446d8:0-occidental-petroleum-appoints-richard-jackson-as-ceo/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - May 1",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:17:00+00:00",
+      "timeDisplay": "1:17 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003808:0/"
+    },
+    {
+      "title": "Crude Oil Prices Fall",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T13:09:06+00:00",
+      "timeDisplay": "1:09 PM",
+      "link": "https://www.tradingview.com/news/te_news:547046:0-crude-oil-prices-fall/"
+    },
+    {
+      "title": "Risk is back\u2014and momentum is running the show\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T13:03:56+00:00",
+      "timeDisplay": "1:03 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0CM:0-risk-is-back-and-momentum-is-running-the-show/"
+    },
     {
       "title": "RECAPPING: FED'S KASHKARI: GIVEN UNCERTAINTY, DID NOT THINK IT APPROPRIATE TO SUGGEST IN FOMC STATEMENT GUIDANCE THAT THE NEXT STEP WOULD BE A CUT",
       "source": "macenews",
@@ -92,7 +246,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T11:40:00+00:00",
       "timeDisplay": "11:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501003002:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003003:0/"
     },
     {
       "title": "BOE Rate Rise Prospect Could Fall if Energy-Supply Shock Ends \u2014 Market Talk",
@@ -263,14 +417,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:6e025b719094b:0-bitcoin-s-surge-to-77k-pressures-shorts-but-absent-spot-and-long-leverage-caps-rallies/"
     },
     {
-      "title": "Never mind the oil, feel the earnings!",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T04:31:33+00:00",
-      "timeDisplay": "4:31 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E01U:0-never-mind-the-oil-feel-the-earnings/"
-    },
-    {
       "title": "Yen jumps as Japan threatens more intervention",
       "source": "reuters",
       "color": "#ff6d00",
@@ -335,14 +481,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260430020579:0/"
     },
     {
-      "title": "Dollar Holds Decline on Yen Intervention",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T02:21:53+00:00",
-      "timeDisplay": "2:21 AM",
-      "link": "https://www.tradingview.com/news/te_news:546942:0-dollar-holds-decline-on-yen-intervention/"
-    },
-    {
       "title": "Spot Bitcoin ETF outflows top $490M: Is BTC\u2019s rally losing momentum?",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -399,14 +537,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:761f10845094b:0-bitcoin-technical-charts-for-may-turn-bearish-will-btc-fall-again/"
     },
     {
-      "title": "Yen trims gains against dollar after Japan's intervention in markets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T00:30:08+00:00",
-      "timeDisplay": "12:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E001:0-yen-trims-gains-against-dollar-after-japan-s-intervention-in-markets/"
-    },
-    {
       "title": "Key facts: Institutions Expand BTC Access; BTC Below 200-Day, 65\u201370k",
       "source": "tradingview",
       "color": "#00e5ff",
@@ -439,14 +569,6 @@
       "link": "https://www.tradingview.com/news/te_news:546889:0-gold-holds-firm-as-dollar-weakens/"
     },
     {
-      "title": "Bitcoin ETFs Lose Nearly Half A Billion Dollars As Fear Returns To Crypto",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T23:30:42+00:00",
-      "timeDisplay": "11:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:729dbfdaf094b:0-bitcoin-etfs-lose-nearly-half-a-billion-dollars-as-fear-returns-to-crypto/"
-    },
-    {
       "title": "Oil Heads for Second Straight Weekly Gain",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -469,14 +591,6 @@
       "timestamp": "2026-04-30T22:14:52+00:00",
       "timeDisplay": "10:14 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D34F:0-us-crude-futures-rise-41-cents-to-105-50-bbl-after-prior-intraday-high-of-110-93-bbl/"
-    },
-    {
-      "title": "Dollar tumbles after Japanese intervention boosts yen",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T21:21:57+00:00",
-      "timeDisplay": "9:21 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1J1:0-dollar-tumbles-after-japanese-intervention-boosts-yen/"
     },
     {
       "title": "ETF League Tables: Global X Gains on Tech Trade",
@@ -525,126 +639,6 @@
       "timestamp": "2026-04-30T19:37:47+00:00",
       "timeDisplay": "7:37 PM",
       "link": "https://www.tradingview.com/news/the_block:f8fb0a5f5094b:0-crypto-hacks-hit-record-high-in-april-as-exploits-kept-piling-up/"
-    },
-    {
-      "title": "Dollar Weakens as Japan Intervenes in Forex Market to Support the Yen",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:32:05+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/barchart:cbaf63a9c094b:0-dollar-weakens-as-japan-intervenes-in-forex-market-to-support-the-yen/"
-    },
-    {
-      "title": "Crude Oil Prices Retreat on Signs of Weaker Global Energy Demand",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:17:34+00:00",
-      "timeDisplay": "7:17 PM",
-      "link": "https://www.tradingview.com/news/barchart:a1bf13c49094b:0-crude-oil-prices-retreat-on-signs-of-weaker-global-energy-demand/"
-    },
-    {
-      "title": "Oil Futures Pull Back Amid U.S.-Iran Standstill \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:08:00+00:00",
-      "timeDisplay": "7:08 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014740:0/"
-    },
-    {
-      "title": "Yields ease as oil retreats from four-year high",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T19:07:50+00:00",
-      "timeDisplay": "7:07 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41D1F9:0-yields-ease-as-oil-retreats-from-four-year-high/"
-    },
-    {
-      "title": "US AGRICULTURE PRICES +1.1% IN MARCH FROM FEB.; -7.8% FROM YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:02:00+00:00",
-      "timeDisplay": "7:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:d9e91c296094b:0-us-agriculture-prices-1-1-in-march-from-feb-7-8-from-year-ago/"
-    },
-    {
-      "title": "S&P 500 pushes to new highs. Here is the 'line in the sand' for this bull run.",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T18:00:00+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260430019168:0/"
-    },
-    {
-      "title": "Cryptocurrency Rebounds After Fed Holds Rates Steady \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T18:00:00+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014360:0/"
-    },
-    {
-      "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T17:56:03+00:00",
-      "timeDisplay": "5:56 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1CF:0-bond-yields-fall-stocks-rise-as-oil-prices-fall-yen-jumps-after-japan-s-reported-currency-intervention/"
-    },
-    {
-      "title": "Inflation is high but so is FOMO\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T17:47:56+00:00",
-      "timeDisplay": "5:47 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1DO:0-inflation-is-high-but-so-is-fomo/"
-    },
-    {
-      "title": "Dollar slides against yen after Japan's reported currency intervention",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T17:31:14+00:00",
-      "timeDisplay": "5:31 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1CL:0-dollar-slides-against-yen-after-japan-s-reported-currency-intervention/"
-    },
-    {
-      "title": "Bull-Bear spread turns negative as sentiment swings - AAII\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T17:05:22+00:00",
-      "timeDisplay": "5:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1C6:0-bull-bear-spread-turns-negative-as-sentiment-swings-aaii/"
-    },
-    {
-      "title": "Gas prices eating up tax refunds: BofA\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T16:37:24+00:00",
-      "timeDisplay": "4:37 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1BW:0-gas-prices-eating-up-tax-refunds-bofa/"
-    },
-    {
-      "title": "House Passes New Farm Bill, Without E15 \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:36:00+00:00",
-      "timeDisplay": "4:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430013791:0/"
-    },
-    {
-      "title": "Three reasons why $3K ETH price target is back for May",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:24:35+00:00",
-      "timeDisplay": "4:24 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5441a829b094b:0-three-reasons-why-3k-eth-price-target-is-back-for-may/"
-    },
-    {
-      "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.64% IN LATEST WEEK VS. 5.58% IN PREVIOUS WEEK, 5.92% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:14:00+00:00",
-      "timeDisplay": "4:14 PM",
-      "link": "https://www.tradingview.com/news/macenews:b113d6bbd094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-64-in-latest-week-vs-5-58-in-previous-week-5-92-year-ago/"
     }
   ]
 }

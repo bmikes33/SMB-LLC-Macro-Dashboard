@@ -1,6 +1,74 @@
 {
   "reports": [
     {
+      "type": "valuation",
+      "file": "MSFT_VAL_2026-04-30_2105.html",
+      "ticker": "MSFT",
+      "tvSymbol": "NASDAQ:MSFT",
+      "date": "2026-04-30T21:05:59-05:00",
+      "summary": "UNDERVALUED — Base +94.3% / P-Wt +96.0%",
+      "verdictBadge": "UNDERVALUED",
+      "upsideBadge": "+94.3%",
+      "mode": "SOTP",
+      "segmentCount": 3,
+      "currentPrice": 407.78,
+      "fairValue": {
+        "method": "2Y_discounted",
+        "bear": 488.73,
+        "base": 792.19,
+        "bull": 1123.3,
+        "probWeighted": 799.1
+      },
+      "fairValueNtm": {
+        "method": "NTM_multiple",
+        "bear": 521.09,
+        "base": 793.15,
+        "bull": 1112.3
+      },
+      "upside": {
+        "bear": 19.9,
+        "base": 94.3,
+        "bull": 175.5,
+        "probWeighted": 96.0
+      },
+      "wacc": {
+        "method": "stage_default_per_segment",
+        "perSegment": {
+          "PBP": 0.1,
+          "IC": 0.11,
+          "MPC": 0.09
+        },
+        "consolidatedWeighted": 0.105
+      },
+      "daAllocationMethod": "capex_weighted",
+      "daAllocationShares": {
+        "IC": 0.8,
+        "PBP": 0.15,
+        "MPC": 0.05
+      },
+      "capitalStructure": "GREEN",
+      "capitalStructureFlags": [],
+      "dataQuality": {
+        "disclosedPct": 78,
+        "allocatedPct": 17,
+        "userOverridePct": 5
+      },
+      "verdict": "UNDERVALUED",
+      "fcfRealismCheck": {
+        "ran": true,
+        "dcfFairValue": 768.11,
+        "gapToSotp": -3.0,
+        "flag": "PASS"
+      },
+      "openAITreatment": {
+        "method": "bear_book_bull_fair_value",
+        "bookValue_M": 11100,
+        "fairValue_M": 135000,
+        "perSharePremium": 16.64
+      },
+      "notes": "MSFT trades at 16.2x TTM EBITDA vs SOTP-implied ~31x at peer P50. 60% multiple discount reflects market AI-capex anxiety. Terminal multiple is dominant value driver."
+    },
+    {
       "type": "ta",
       "file": "META_2026-04-30_2005.html",
       "ticker": "META",

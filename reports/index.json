@@ -2,6 +2,318 @@
   "reports": [
     {
       "type": "valuation",
+      "file": "GOOGL_VAL_2026-05-01_2030.html",
+      "ticker": "GOOGL",
+      "tvSymbol": "NASDAQ:GOOGL",
+      "date": "2026-05-01T20:30:00-05:00",
+      "summary": "OVERVALUED — Base -21.6% / P-Wt -18.1%",
+      "verdictBadge": "OVERVALUED",
+      "upsideBadge": "-21.6%",
+      "mode": "SOTP",
+      "segmentCount": 3,
+      "currentPrice": 384.8,
+      "fairValue": {
+        "method": "2Y_discounted",
+        "bear": 205.55,
+        "base": 301.6,
+        "bull": 452.16,
+        "probWeighted": 315.23
+      },
+      "fairValueNtm": {
+        "method": "NTM_multiple",
+        "bear": 212.71,
+        "base": 297.17,
+        "bull": 414.15
+      },
+      "upside": {
+        "bear": -46.6,
+        "base": -21.6,
+        "bull": 17.5,
+        "probWeighted": -18.1
+      },
+      "wacc": {
+        "method": "stage_default",
+        "perSegment": {
+          "Google Services": 0.1,
+          "Google Cloud": 0.11,
+          "Other Bets": null
+        }
+      },
+      "daAllocationMethod": "capex_weighted",
+      "daAllocationPct": {
+        "Google Services": 0.1,
+        "Google Cloud": 0.85,
+        "Other Bets": 0.05
+      },
+      "segments": [
+        {
+          "name": "Google Services",
+          "stage": "Mature Growth",
+          "ttmRevenue": 355094,
+          "revenueShare": 0.816,
+          "ttmYoYGrowth": 0.139,
+          "ttmOpMargin": 0.425,
+          "ttmEbitdaMargin": 0.431,
+          "metric": "EV/EBITDA",
+          "multiples": {
+            "bear": 12,
+            "base": 15,
+            "bull": 18
+          },
+          "wacc": 0.1,
+          "forecastHorizon": "2Y",
+          "y2Ebitda": {
+            "bear": 179996,
+            "base": 198339,
+            "bull": 219870
+          },
+          "ev2yDiscounted": {
+            "bear": 1785088,
+            "base": 2458750,
+            "bull": 3270789
+          }
+        },
+        {
+          "name": "Google Cloud",
+          "stage": "High Growth",
+          "ttmRevenue": 66473,
+          "revenueShare": 0.157,
+          "ttmYoYGrowth": 0.448,
+          "ttmOpMargin": 0.276,
+          "ttmEbitdaMargin": 0.572,
+          "metric": "EV/EBITDA",
+          "multiples": {
+            "bear": 18,
+            "base": 22,
+            "bull": 28
+          },
+          "wacc": 0.11,
+          "forecastHorizon": "NTM+1Y",
+          "y2Ebitda": {
+            "bear": 59842,
+            "base": 78199,
+            "bull": 107242
+          },
+          "ev2yDiscounted": {
+            "bear": 874241,
+            "base": 1396302,
+            "bull": 2437113
+          }
+        },
+        {
+          "name": "Other Bets",
+          "stage": "Young Growth",
+          "ttmRevenue": 1498,
+          "revenueShare": 0.003,
+          "ttmYoYGrowth": -0.066,
+          "ttmOpMargin": null,
+          "ttmEbitdaMargin": null,
+          "metric": "Direct EV (Waymo anchor)",
+          "anchor": "Waymo Feb 2026 funding round",
+          "evDirect": {
+            "bear": 30000,
+            "base": 45000,
+            "bull": 70000
+          }
+        }
+      ],
+      "corporateDrag": {
+        "method": "capitalize_at_15x",
+        "ttmCost": -19124,
+        "ntmCost": -23905,
+        "y2Cost": -28686,
+        "drag2yDiscounted": -352401,
+        "dragNtm": -358575
+      },
+      "balanceSheet": {
+        "asOf": "2026-03-31",
+        "cashAndMarketableSecurities": 126840,
+        "nonMarketableSecurities": 106946,
+        "longTermDebt": 77501,
+        "operatingLeaseLiabilities": 12983,
+        "dilutedShares": 12238
+      },
+      "capitalStructure": "GREEN",
+      "capitalStructureMetrics": {
+        "netDebtToEbitda_basic": -0.22,
+        "netDebtToEbitda_full": -0.87,
+        "ebitdaToInterest": 133.4,
+        "maturityWall24mo": "GREEN",
+        "liquidity": "GREEN",
+        "shareCount3yCagr": -0.017
+      },
+      "capitalStructureFlags": [],
+      "dataQuality": {
+        "disclosedPct": 71,
+        "allocatedPct": 24,
+        "userOverridePct": 5
+      },
+      "verdict": "OVERVALUED",
+      "fcfRealismCheck": {
+        "ran": true,
+        "dcfFairValue": 294.27,
+        "gapToSotp": -2.4,
+        "flag": "PASS",
+        "flagDescription": "Methods converge — DCF 2.4% below SOTP base, within ±5% convergence band"
+      },
+      "nonRecurringAdjustments": [
+        {
+          "period": "Q3 2025",
+          "item": "EC Fine",
+          "amount": 3500,
+          "segment": "Google Services",
+          "treatment": "excluded from baseline"
+        },
+        {
+          "period": "Q4 2025",
+          "item": "Waymo employee comp charge",
+          "amount": 2100,
+          "segment": "Other Bets",
+          "treatment": "excluded from baseline"
+        }
+      ],
+      "edgarFilings": [
+        "Q1 2026 10-Q (Apr 29, 2026)",
+        "Q4 2025 / FY2025 8-K (Feb 4, 2026)",
+        "Q3 2025 8-K (Oct 29, 2025)",
+        "Q2 2025 8-K (Jul 23, 2025)",
+        "Q1 2025 8-K (Apr 24, 2025)"
+      ],
+      "notes": "Market is pricing GOOGL at the bull-end of the framework — implied current multiple is 21.5x forward Y2 EBITDA vs. base 17x. Cloud backlog of $467B (7x TTM revenue) provides directional support but is not yet reflected in disclosed earnings. Bull case (sustained 60%+ Cloud growth, 60% margin) yields only +17.5% upside; Cloud Year 2 sustained regime is at the edge of plausibility at $138B revenue scale."
+    },
+    {
+      "type": "ta",
+      "file": "GOOGL_2026-05-01_0915.html",
+      "ticker": "GOOGL",
+      "tvSymbol": "NASDAQ:GOOGL",
+      "date": "2026-05-01T09:15:00-05:00",
+      "bias": "LONG tactical",
+      "confidence": "MEDIUM",
+      "bullScore": 6,
+      "bearScore": 0,
+      "scoreMax": 6,
+      "invalidation": "$370 short-term / $345 structural",
+      "entryZone": "$370–$375",
+      "exitZone": "$395–$401",
+      "levels": [
+        {
+          "weight": "LIGHT",
+          "price": "$471.29",
+          "sources": "Weekly Fib 1.618 extension (long-horizon target)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$395–$401",
+          "sources": "Daily upper VWAP $395.61 + 4h upper VWAP $401.32 + Call wall $400 (743 OI)"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$390",
+          "sources": "Call wall (639 OI)"
+        },
+        {
+          "weight": "CURRENT",
+          "price": "$383.65",
+          "sources": "Regular session intraday"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$374.66",
+          "sources": "30m VWAP mid (rolling)"
+        },
+        {
+          "weight": "HEAVY",
+          "price": "$340–$350",
+          "sources": "Put wall $340 (785 OI) + Put wall $350 (674 OI) + Daily/Weekly Fib 1.0 $345.81"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$334.65",
+          "sources": "Daily VWAP mid"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$315.48",
+          "sources": "Daily 50 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$302.36",
+          "sources": "Daily/Weekly Fib 0.786"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$281.12",
+          "sources": "Daily 200 SMA"
+        },
+        {
+          "weight": "MEDIUM",
+          "price": "$268.25",
+          "sources": "Daily/Weekly Fib 0.618 (golden pocket)"
+        }
+      ],
+      "cspZones": {
+        "tier1": {
+          "strikes": "$340–$350",
+          "confluence": "Put wall stack (1,459 combined OI) + Daily Fib 1.0 $345.81",
+          "premium": "$1.60–$2.50",
+          "delta": "−0.06 to −0.14"
+        },
+        "tier2": {
+          "strikes": "$355–$365",
+          "confluence": "Single technical (4h MA proximity, broken VWAP band)",
+          "premium": "$3.00–$4.85",
+          "delta": "−0.18 to −0.26"
+        },
+        "avoid": {
+          "strikes": "$370–$385 (LVN gap zone) and below $320 (premium too thin)"
+        }
+      },
+      "fundamentalContext": {
+        "view": "OVERVALUED",
+        "source": "SOTP fundamental valuation 2026-05-01",
+        "fairValue": {
+          "base": 301.6,
+          "probWeighted": 315.23
+        },
+        "modifierApplied": "-1 tier"
+      },
+      "macroContext": {
+        "fomcLast": "Apr 28-29, 2026 (passed, hold at 3.50-3.75%)",
+        "fomcNext": "Jun 16-17, 2026 (outside May 29 expiry)",
+        "earnings": "Q1 2026 Apr 29 passed; next ~Jul 22-29",
+        "withinExpiry": [
+          "CPI ~May 13"
+        ],
+        "modifierApplied": "none"
+      },
+      "options": {
+        "expiry": "2026-05-29",
+        "dte": 28,
+        "atmIv": 0.3282,
+        "expectedMove": 32.57,
+        "callWall": {
+          "strike": 400,
+          "oi": 743
+        },
+        "putWall": {
+          "strike": 340,
+          "oi": 785
+        },
+        "secondaryPut": {
+          "strike": 350,
+          "oi": 674
+        },
+        "strandedItmCall": {
+          "strike": 365,
+          "oi": 1208
+        },
+        "maxPainEstimate": "$355-$365"
+      },
+      "notes": "6/6 bull score capped at MEDIUM by fundamental modifier (OVERVALUED -22% per SOTP). Translation: trend is real, but don't pay current prices. Pullback entries or short-premium against $340-$350 put wall stack are the cleanest expressions. Macro window unusually clean — FOMC passed Apr 29, earnings passed Apr 29, next FOMC outside expiry. CSP setup quality is HIGH given post-earnings IV crush + dealer-reinforced support."
+    },
+    {
+      "type": "valuation",
       "file": "MSFT_VAL_2026-04-30_2105.html",
       "ticker": "MSFT",
       "tvSymbol": "NASDAQ:MSFT",

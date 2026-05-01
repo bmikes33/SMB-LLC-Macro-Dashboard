@@ -1,58 +1,92 @@
 {
-  "lastUpdated": "2026-05-01T07:55:46.157853+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 07:55 AM UTC",
+  "lastUpdated": "2026-05-01T09:23:43.544162+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 09:23 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with oil rising to $105.50 on Middle East conflict concerns while tech resilience supports Asian equities. Bitcoin faces pressure near $77K resistance with ETF outflows exceeding $490M, and the yen strengthened after Japanese intervention though the dollar maintains broader strength.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Geopolitical risk (oil spike, Middle East conflict) and crypto weakness create risk-off pressures while tech resilience and bond/stock gains maintain risk-on elements.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil",
-        "level": "Spike to $105.50",
-        "signal": "Oil rises on prolonged Middle East conflict concerns, testing risk-on regime resilience"
-      }
-    ],
+    "macroSummary": "Markets show mixed signals with Bitcoin experiencing volatility around resistance levels while facing nearly $500M in ETF outflows, alongside yen intervention activity and persistent Middle East geopolitical tensions supporting oil prices. Dollar weakness and declining 10-year yields provide some risk-on support, but crypto markets display signs of institutional retreat and technical deterioration.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Significant Bitcoin ETF outflows ($490M+) and crypto technical weakness contradict the risk-on regime, while yen intervention signals and geopolitical tensions suggest underlying stress in global markets.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Bitcoin ETF outflows top $490M as rally loses momentum near $77K resistance",
+        "signal": "Bitcoin ETF outflows exceed $490M as institutional money retreats from crypto markets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices surge to $105.50 with no end in sight for Iran war, raising stagflation risks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar rises despite yen intervention, maintaining safe-haven bid",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Asian equities find support from tech resilience as bonds and stocks climb",
+        "signal": "Dollar weakness and declining 10-year yields support risk asset backdrop",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold holds firm as dollar weakens in some crosses, mixed safe-haven flows",
+        "signal": "Japan threatens more yen intervention amid currency volatility, suggesting FX stress",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin facing technical rejection at key resistance with futures-driven rally losing momentum",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Persistent Iran conflict concerns keeping oil elevated and geopolitical risk premium intact",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder for crypto weakness spillover as Bitcoin faces key resistance rejection",
-      "Watch oil volatility impact on growth/inflation expectations for Maturity sector positioning",
-      "Assess if geopolitical risk premium requires defensive positioning adjustments"
+      "Monitor BMNR ladder performance as crypto institutional flows reverse - consider tightening strikes if weakness accelerates",
+      "Watch for any approaching DXY strength above 100 as yen intervention suggests dollar bid emerging",
+      "Reassess equity bias if crypto weakness spreads to broader risk assets"
     ]
   },
   "articles": [
+    {
+      "title": "Global shares steady as yen intervention keeps currency markets in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T09:00:57+00:00",
+      "timeDisplay": "9:00 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E041:0-global-shares-steady-as-yen-intervention-keeps-currency-markets-in-focus/"
+    },
+    {
+      "title": "Bitcoin Price Rallies. Why Cryptos Could Climb to Their Highest in Months. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T08:55:00+00:00",
+      "timeDisplay": "8:55 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001371:0/"
+    },
+    {
+      "title": "Bitcoin Spot CVD Surges 199% as Institutional Inflows Re-Accelerate",
+      "source": "cryptonews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T08:36:17+00:00",
+      "timeDisplay": "8:36 AM",
+      "link": "https://www.tradingview.com/news/cryptonews:0e071a824094b:0-bitcoin-spot-cvd-surges-199-as-institutional-inflows-re-accelerate/"
+    },
+    {
+      "title": "Riot reports $33 million in first data center revenue as AMD doubles contracted capacity",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T08:31:15+00:00",
+      "timeDisplay": "8:31 AM",
+      "link": "https://www.tradingview.com/news/the_block:4ac65bfb9094b:0-riot-reports-33-million-in-first-data-center-revenue-as-amd-doubles-contracted-capacity/"
+    },
+    {
+      "title": "Grayscale Names Six Protocols Set to Win the Tokenization Megatrend",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T08:06:20+00:00",
+      "timeDisplay": "8:06 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:01c8f6f49094b:0-grayscale-names-six-protocols-set-to-win-the-tokenization-megatrend/"
+    },
     {
       "title": "Bitcoin Rises After Gains on Wall Street \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-01T07:09:00+00:00",
       "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001118:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001116:0/"
     },
     {
       "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
@@ -111,12 +145,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E01U:0-never-mind-the-oil-feel-the-earnings/"
     },
     {
-      "title": "Yen steadies after Japan intervention, traders brace for more action",
+      "title": "Yen jumps as Japan threatens more intervention at end of busy central bank week",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
       "timeDisplay": "4:15 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-yen-steadies-after-japan-intervention-traders-brace-for-more-action/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-yen-jumps-as-japan-threatens-more-intervention-at-end-of-busy-central-bank-week/"
     },
     {
       "title": "FRIDAY WHITE HOUSE SCHEDULE - President Trump travels to the Villages in Palm Beach",
@@ -207,12 +241,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:bbd18a3b5094b:0-us-rep-calls-bitcoin-a-geopolitical-weapon-used-by-multiple-adversaries/"
     },
     {
-      "title": "Oil prices rise\u00a0with no sign of end to Iran war",
+      "title": "Oil prices rise with no sign of an end to Iran war",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T01:55:00+00:00",
       "timeDisplay": "1:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-oil-prices-rise-with-no-sign-of-end-to-iran-war/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-oil-prices-rise-with-no-sign-of-an-end-to-iran-war/"
     },
     {
       "title": "Gold Steady But Stagnation of Diplomacy in Middle East Weighs \u2014 Market Talk",
@@ -335,7 +369,7 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1J1:0-dollar-tumbles-after-japanese-intervention-boosts-yen/"
     },
     {
-      "title": "Stablecoins overtake Bitcoin in Latin America crypto purchases \u2014 Bitso",
+      "title": "Stablecoins overtake Bitcoin in Latin America crypto purchases: Bitso",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T21:12:00+00:00",
@@ -437,30 +471,6 @@
       "timestamp": "2026-04-30T19:02:00+00:00",
       "timeDisplay": "7:02 PM",
       "link": "https://www.tradingview.com/news/macenews:d9e91c296094b:0-us-agriculture-prices-1-1-in-march-from-feb-7-8-from-year-ago/"
-    },
-    {
-      "title": "Bitcoin Rejection Sparks Caution: Is The Rally Losing Steam?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:00:47+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:730ac950a094b:0-bitcoin-rejection-sparks-caution-is-the-rally-losing-steam/"
-    },
-    {
-      "title": "Bitcoin\u2019s $75K cost basis emerges as key support zone for current bull trend",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T18:56:06+00:00",
-      "timeDisplay": "6:56 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:31d42eee6094b:0-bitcoin-s-75k-cost-basis-emerges-as-key-support-zone-for-current-bull-trend/"
-    },
-    {
-      "title": "Key Reason Why New Fed Chair Might Be Bearish for Bitcoin",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T18:22:20+00:00",
-      "timeDisplay": "6:22 PM",
-      "link": "https://www.tradingview.com/news/u_today:debcbe7be094b:0-key-reason-why-new-fed-chair-might-be-bearish-for-bitcoin/"
     },
     {
       "title": "S&P 500 pushes to new highs. Here is the 'line in the sand' for this bull run.",
@@ -629,22 +639,6 @@
       "timestamp": "2026-04-30T13:46:00+00:00",
       "timeDisplay": "1:46 PM",
       "link": "https://www.tradingview.com/news/macenews:8ec21ef56094b:0-us-chicago-pmi-index-49-2-in-april-vs-52-8-in-march-vs-54-8-markets-expected/"
-    },
-    {
-      "title": "Oil Futures Pull Back In Volatile Trade on Middle East Uncertainty \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:42:00+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430011562:0/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - Apr 30",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:40:00+00:00",
-      "timeDisplay": "1:40 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430011545:0/"
     }
   ]
 }

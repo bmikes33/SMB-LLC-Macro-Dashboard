@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMB LLC · Macro Regime · 2026-05-01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --regime-color: #00e5ff;     /* Reflation accent */
+    --risk-on: #00e676;
+    --reflation: #00e5ff;
+    --risk-off: #ff3d57;
+    --deflation: #b388ff;
+    --stagflation: #ffab00;
+    --neutral: #8b9ab5;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 32px 24px 80px; max-width: 1200px; margin: 0 auto; }
+  .meta-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 16px; margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    font-family: var(--mono); font-size: 11px;
+    color: var(--text-muted); letter-spacing: 0.04em;
+  }
+  .meta-bar .left { color: var(--text-secondary); }
+  .meta-bar .right { color: var(--text-muted); }
+
+  /* Hero header */
+  .hero {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.08) 0%, rgba(0, 229, 255, 0.02) 60%, transparent 100%);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 4px;
+    background: var(--regime-color);
+  }
+  .hero .label {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em;
+    color: var(--text-muted); text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: var(--mono); font-weight: 700;
+    font-size: 44px; letter-spacing: -0.01em;
+    color: var(--regime-color); margin-top: 6px; margin-bottom: 10px;
+  }
+  .hero .subline {
+    color: var(--text-secondary); font-size: 15px;
+    max-width: 880px;
+  }
+  .hero .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .pill {
+    font-family: var(--mono); font-size: 11px;
+    padding: 5px 11px; border-radius: 999px; letter-spacing: 0.04em;
+    background: var(--bg-tertiary); border: 1px solid var(--border);
+    color: var(--text-secondary);
+  }
+  .pill.confidence-medium { color: #ffab00; border-color: rgba(255, 171, 0, 0.4); }
+  .pill.bias { color: var(--regime-color); border-color: rgba(0, 229, 255, 0.4); }
+
+  /* Sections */
+  section { margin-bottom: 36px; }
+  h2 {
+    font-family: var(--mono); font-weight: 600;
+    font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px; margin-bottom: 16px;
+  }
+  h3 {
+    font-family: var(--sans); font-weight: 600; font-size: 15px;
+    color: var(--text-primary); margin-top: 18px; margin-bottom: 8px;
+  }
+  p { margin-bottom: 10px; color: var(--text-primary); }
+  p + p { margin-top: 6px; }
+
+  /* Tables */
+  table {
+    width: 100%; border-collapse: separate; border-spacing: 0;
+    background: var(--bg-secondary); border: 1px solid var(--border);
+    border-radius: 8px; overflow: hidden;
+    font-size: 13px;
+  }
+  th, td {
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border); vertical-align: top;
+  }
+  thead th {
+    background: var(--bg-tertiary); font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-secondary); font-weight: 500;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.label { color: var(--text-secondary); width: 30%; font-family: var(--mono); font-size: 12px; }
+  td.value { color: var(--text-primary); font-weight: 500; }
+  td.mono { font-family: var(--mono); }
+  .group-credit { color: #00e5ff; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .group-rates  { color: #ffab00; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .group-vol    { color: #b388ff; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; }
+  .ticker { font-family: var(--mono); font-weight: 600; color: var(--text-primary); }
+  .vote {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+    padding: 3px 8px; border-radius: 4px; display: inline-block;
+    background: var(--bg-tertiary); border: 1px solid var(--border);
+  }
+  .vote.reflation   { color: var(--reflation);   border-color: rgba(0, 229, 255, 0.4); }
+  .vote.risk-on     { color: var(--risk-on);     border-color: rgba(0, 230, 118, 0.4); }
+  .vote.stagflation { color: var(--stagflation); border-color: rgba(255, 171, 0, 0.4); }
+  .vote.risk-off    { color: var(--risk-off);    border-color: rgba(255, 61, 87, 0.4); }
+  .vote.deflation   { color: var(--deflation);   border-color: rgba(179, 136, 255, 0.4); }
+  .vote.neutral     { color: var(--neutral); }
+  .vote.na          { color: var(--text-muted); border-style: dashed; }
+
+  /* Stage positioning bias colors */
+  .bias-favored      { color: #00e5ff; font-weight: 600; }
+  .bias-overweight   { color: #00e676; font-weight: 600; }
+  .bias-neutral      { color: #8b9ab5; font-weight: 600; }
+  .bias-underweight  { color: #ffab00; font-weight: 600; }
+  .bias-avoid        { color: #ff3d57; font-weight: 600; }
+
+  /* Threshold list */
+  .thresholds { list-style: none; }
+  .thresholds li {
+    padding: 10px 14px; border-left: 2px solid var(--border);
+    background: var(--bg-secondary); margin-bottom: 6px; border-radius: 0 6px 6px 0;
+    font-size: 13px;
+  }
+  .thresholds li .level {
+    font-family: var(--mono); font-weight: 600; color: var(--text-primary);
+  }
+  .thresholds li .arrow { color: var(--text-muted); margin: 0 8px; }
+  .thresholds li .effect { color: var(--text-secondary); }
+  .thresholds li.warn { border-left-color: var(--stagflation); }
+  .thresholds li.danger { border-left-color: var(--risk-off); }
+
+  /* Confidence rows highlighting */
+  .conf-row td.value { font-family: var(--mono); }
+
+  .footer {
+    margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border);
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+    color: var(--text-muted); text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="meta-bar">
+  <span class="left">SMB LLC · MACRO REGIME REPORT</span>
+  <span class="right">2026-05-01 · 15:30 CT</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="label">Current Regime</div>
+  <h1>REFLATION</h1>
+  <p class="subline">
+    Bullish-cyclical equity setup with steepening curve, soft dollar, and resilient HY credit. Long-end bond stress (30Y at 5%) and the active Iran-war oil shock leave a stagflationary undertone — confidence dropped from HIGH to MEDIUM as cross-asset tensions emerged.
+  </p>
+  <div class="pills">
+    <span class="pill confidence-medium">Confidence: MEDIUM · 0.467</span>
+    <span class="pill bias">Bias: BULLISH-CYCLICALS</span>
+    <span class="pill">Credit 2/3</span>
+    <span class="pill">Rates 3/6</span>
+    <span class="pill">Vol 0/3 (dissent → Risk-On)</span>
+  </div>
+</div>
+
+<!-- 1A · EXECUTIVE SUMMARY -->
+<section>
+  <h2>1A · Executive Summary</h2>
+  <table>
+    <tbody>
+      <tr><td class="label">Regime</td><td class="value mono" style="color: var(--regime-color)">REFLATION</td></tr>
+      <tr><td class="label">Regime Confidence</td><td class="value mono" style="color: var(--stagflation)">MEDIUM</td></tr>
+      <tr><td class="label">Equity Bias</td><td class="value">BULLISH-CYCLICALS</td></tr>
+      <tr><td class="label">Group Support</td><td class="value mono">Credit 2/3 · Rates 3/6 · Vol 0/3</td></tr>
+      <tr><td class="label">Primary Tension</td><td class="value">Vol prices Risk-On while Credit/Rates price Reflation. Long-end stress (30Y at 5%, LQD weak) is the stagflationary undertone. Iran-war oil shock embedded.</td></tr>
+      <tr><td class="label">Macro Watch</td><td class="value">NFP <strong>today</strong> 8:30 AM ET · Hawkish FOMC just held 4/29 (4 dissents — most since 1992) · Next FOMC June 16–17 (Warsh likely chairs)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 1B · INDICATOR READINGS -->
+<section>
+  <h2>1B · Indicator Readings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:90px">Group</th>
+        <th style="width:110px">Indicator</th>
+        <th>Reading</th>
+        <th style="width:130px">Vote</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="group-credit">CREDIT</span></td>
+        <td class="ticker">HYG</td>
+        <td>$80.06, holding 80 SMA cluster, recovered from 78.6 March low</td>
+        <td><span class="vote reflation">REFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-credit">CREDIT</span></td>
+        <td class="ticker">LQD</td>
+        <td>$108.60, below 21/50/200 MAs, retesting March lows — duration pain</td>
+        <td><span class="vote stagflation">STAGFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-credit">CREDIT</span></td>
+        <td class="ticker">HYG/LQD</td>
+        <td>Ratio rising as HY outperforms IG — pure risk-appetite signal</td>
+        <td><span class="vote reflation">REFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">US02Y</td>
+        <td>3.886%, pulled back from 4.00% peak, elevated/sideways</td>
+        <td><span class="vote neutral">NEUTRAL</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">US10Y</td>
+        <td>4.376%, in uptrend with growth holding + oil firm</td>
+        <td><span class="vote reflation">REFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">US30Y</td>
+        <td>4.963%, just printed 5.00%, leading the rise — bear steepener</td>
+        <td><span class="vote stagflation">STAGFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">2s10s</td>
+        <td>+49 bps, steepening from inverted = curve normalization</td>
+        <td><span class="vote reflation">REFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">MOVE</td>
+        <td style="color: var(--text-muted); font-style: italic;">Not provided in upload</td>
+        <td><span class="vote na">N/A</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">DXY</td>
+        <td>98.22, soft despite hawkish Fed = fiscal/term-premium driven</td>
+        <td><span class="vote reflation">REFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">USDJPY</td>
+        <td>157.04, rising toward 160 BOJ intervention zone, carry on</td>
+        <td><span class="vote risk-on">RISK-ON</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-rates">RATES</span></td>
+        <td class="ticker">JP10Y</td>
+        <td>2.50%, multi-decade highs, BOJ YCC strain rising</td>
+        <td><span class="vote stagflation">STAGFLATION</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-vol">VOL</span></td>
+        <td class="ticker">VIX</td>
+        <td>16.98, well below 18 threshold, vol-crushed from 30 in March</td>
+        <td><span class="vote risk-on">RISK-ON</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-vol">VOL</span></td>
+        <td class="ticker">VVIX</td>
+        <td>95.06, below 100 threshold, calm vol-of-vol</td>
+        <td><span class="vote risk-on">RISK-ON</span></td>
+      </tr>
+      <tr>
+        <td><span class="group-vol">VOL</span></td>
+        <td class="ticker">SPY IV</td>
+        <td>30D ≈16–17%, term structure in normal contango</td>
+        <td><span class="vote risk-on">RISK-ON</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 1C · KEY THRESHOLDS -->
+<section>
+  <h2>1C · Key Thresholds to Watch</h2>
+  <ul class="thresholds">
+    <li class="warn"><span class="ticker">VIX</span> <span class="arrow">→</span> <span class="level">&gt; 22</span> <span class="arrow">→</span> <span class="effect">Flip toward Risk-Off</span></li>
+    <li class="danger"><span class="ticker">HYG</span> <span class="arrow">→</span> <span class="level">break &lt; 79</span> <span class="arrow">→</span> <span class="effect">Structural credit damage, flip to Stagflation/Risk-Off</span></li>
+    <li class="warn"><span class="ticker">LQD</span> <span class="arrow">→</span> <span class="level">break &lt; 107</span> <span class="arrow">→</span> <span class="effect">Bond market dysfunction confirmation</span></li>
+    <li class="warn"><span class="ticker">US30Y</span> <span class="arrow">→</span> <span class="level">&gt; 5.10%</span> <span class="arrow">→</span> <span class="effect">Long-duration capitulation, accelerates Stagflation pressure</span></li>
+    <li><span class="ticker">DXY</span> <span class="arrow">→</span> <span class="level">break &gt; 100</span> <span class="arrow">→</span> <span class="effect">Dollar regime flip — watch flag</span></li>
+    <li class="danger"><span class="ticker">USDJPY</span> <span class="arrow">→</span> <span class="level">&gt; 160</span> <span class="arrow">→</span> <span class="effect">BOJ intervention zone — classic Risk-Off catalyst via yen carry unwind</span></li>
+    <li><span class="ticker">2s10s</span> <span class="arrow">→</span> <span class="level">flatten back below 0</span> <span class="arrow">→</span> <span class="effect">Reflation thesis cracking</span></li>
+    <li class="warn"><span class="ticker">Oil</span> <span class="arrow">→</span> <span class="level">sustained &gt; $115</span> <span class="arrow">→</span> <span class="effect">Inflation fears dominate, regime tilts Stagflation</span></li>
+    <li><span class="ticker">HYG/LQD ratio</span> <span class="arrow">→</span> <span class="level">rolls over</span> <span class="arrow">→</span> <span class="effect">Risk appetite peaking, leading edge of regime change</span></li>
+  </ul>
+</section>
+
+<!-- 2 · CONFIDENCE BREAKDOWN -->
+<section>
+  <h2>2 · Confidence Breakdown</h2>
+  <table>
+    <thead>
+      <tr><th style="width:35%">Stage</th><th>Value</th></tr>
+    </thead>
+    <tbody>
+      <tr class="conf-row"><td class="label">Credit Score (40% weight)</td><td class="value">Reflation at <strong>0.67</strong> &nbsp;<span style="color: var(--text-muted)">(2 of 3 votes)</span></td></tr>
+      <tr class="conf-row"><td class="label">Rates Score (40% weight)</td><td class="value">Reflation at <strong>0.50</strong> &nbsp;<span style="color: var(--text-muted)">(3 of 6 cast votes; 1 NEUTRAL, 1 N/A)</span></td></tr>
+      <tr class="conf-row"><td class="label">Volatility Score (20% weight)</td><td class="value">Reflation at <strong>0.00</strong> &nbsp;<span style="color: var(--text-muted)">(Vol cast Risk-On x3 — benign dissent within bullish umbrella)</span></td></tr>
+      <tr class="conf-row"><td class="label">Aggregate</td><td class="value" style="color: var(--regime-color)">Reflation at <strong>0.467</strong></td></tr>
+      <tr class="conf-row"><td class="label">Regime Confidence</td><td class="value" style="color: var(--stagflation)"><strong>MEDIUM</strong> &nbsp;<span style="color: var(--text-muted)">(in 0.45–0.64 band; Credit + Rates agree, Vol dissents)</span></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 3 · SUPPORTING ANALYSIS -->
+<section>
+  <h2>3 · Supporting Analysis</h2>
+
+  <h3>3A · Credit Read</h3>
+  <p>HY is more resilient than IG — exactly the signature you want in Reflation. HYG holding the 80 cluster off a clean March bottom at 79, with the HYG/LQD ratio rising, is a clean risk-appetite tell. LQD is the dissenting vote: below all major MAs and retesting March lows because the long end is grinding higher. Credit is saying <em>spreads aren't the issue, duration is</em>.</p>
+
+  <h3>3B · Rates Read</h3>
+  <p>The messiest group and where the regime tension lives. The 10Y rising into a steepening curve while the front-end stalls is a textbook Reflation footprint — but the 30Y at 5% leading the rise is bear-steepening, which the framework specifically tags as Stagflation (inflation fears / term-premium repricing). DXY soft <em>despite</em> a hawkish Fed (4 dissents on hold = restrictive bias) tells you the move isn't being driven by Fed policy — it's fiscal and term-premium. USDJPY at 157 grinding toward 160 keeps yen-carry alive but adds a tail-risk catalyst. JP10Y at multi-decade highs is structural global rate pressure that historically amplifies any Risk-Off impulse. Net: Reflation wins the headcount, but the long-end is whispering Stagflation.</p>
+
+  <h3>3C · Volatility Read</h3>
+  <p>All three vol readings are Risk-On — VIX 16.98, VVIX 95, SPY 30D IV ≈16–17% in normal contango. This is consistent with equities at ATH (SPY/QQQ/IWM/XLK all making new highs). The dissent vs. the bond-market stress is the key tension: equity vol is treating the Iran oil shock + 30Y at 5% as transitory while bonds are pricing it as more persistent. <em>That gap is what closes when regimes flip.</em> For now it tilts the bullish case, but flag it.</p>
+
+  <h3>3D · Cross-Asset Tensions</h3>
+  <p><strong>Vol calm + bonds stressed.</strong> Equity vol is lagging the rates story. If MOVE is elevated (we couldn't read it from this upload), this is the classic "rates lead, equities catch up" setup.</p>
+  <p><strong>Soft dollar + hawkish Fed.</strong> Not a normal pairing — points to fiscal/term-premium pressure, not monetary easing. Read this as "the Fed isn't the marginal driver here, the long bond is."</p>
+  <p><strong>Bear-steepening curve under a Reflation banner.</strong> Steepening is reflationary; bear-steepening (long-end leading) is stagflationary. The growth-stays-firm scenario keeps it Reflation; if growth rolls, it flips.</p>
+  <p><strong>Iran war oil shock embedded.</strong> WTI at $102 (off $112 highs), Brent reportedly hit ≈$120 area. This is supply-driven inflation, the textbook Stagflation input. Markets are absorbing it via the <em>growth still holding</em> narrative — IWM at ATH is the cleanest evidence for that.</p>
+
+  <h3>3E · Stage Positioning (Reflation tilts)</h3>
+  <table>
+    <thead>
+      <tr><th style="width:18%">Stage</th><th style="width:16%">Bias</th><th>Note</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="ticker">Young Growth</td><td><span class="bias-favored">FAVORED</span></td><td>High beta benefits from animal spirits and broad reflation rally</td></tr>
+      <tr><td class="ticker">High Growth</td><td><span class="bias-overweight">OVERWEIGHT</span></td><td>Growth beta + soft DXY tailwind, but watch duration sensitivity if 30Y &gt; 5.10%</td></tr>
+      <tr><td class="ticker">Mature Growth</td><td><span class="bias-overweight">OVERWEIGHT</span></td><td>Quality cohort wins both ways; XLK breakout to ATH confirms</td></tr>
+      <tr><td class="ticker">Maturity</td><td><span class="bias-overweight">OVERWEIGHT</span></td><td>Energy/cyclical maturity benefits from commodity firmness; XLE consolidating after run, XLF mixed</td></tr>
+      <tr><td class="ticker">Decline</td><td><span class="bias-underweight">UNDERWEIGHT</span></td><td>Structural headwinds compound; not the regime to bottom-fish</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3F · Notes</h3>
+  <p><strong>Regime arc:</strong> Stagflation → Risk-On (HIGH) → <strong>Reflation (MEDIUM)</strong>. Confidence stepped down as the bear-steepening + oil shock added Stagflationary pressure points beneath an otherwise bullish equity setup. This is a <em>drift</em>, not a flip.</p>
+  <p><strong>NFP today (May 1, 8:30 AM ET)</strong> is the immediate catalyst. A hot print + sticky wage growth re-prices the front end and adds Stagflation pressure; a soft print pulls 2Y and supports the Reflation read.</p>
+  <p><strong>FOMC 4/29:</strong> Held 3.50–3.75%, four dissents (Miran wanted cut; Hammack/Kashkari/Logan opposed easing bias) — most dissents since 1992. CME FedWatch shows &lt;10% chance of any cut this year, ~3.5% chance of a hike. Hawkish lean confirmed.</p>
+  <p><strong>Powell</strong> stays on the board past the May 15 chairmanship end. <strong>Warsh</strong> likely chairs the next FOMC June 16–17 (with SEP).</p>
+  <p><strong>For the BMNR ladder backdrop:</strong> Reflation is constructive for high-beta and crypto-adjacent equity; the long-end stress (30Y at 5%) is the cross-current to monitor — duration sensitivity in ETH-treasury names is real. Position-level decisions live in <span class="ticker">/ta-chart-analysis</span>, not here.</p>
+</section>
+
+<!-- APPENDIX -->
+<section>
+  <h2>Appendix · Sources &amp; Methodology</h2>
+  <p style="font-size: 12px; color: var(--text-secondary)">
+    Indicator readings derived from user-provided TradingView charts (LQD, HYG, US02Y, US10Y, US30Y, DXY, USDJPY, JP10Y, VIX, VVIX, SPY IV chain) plus context for sector ETFs (XLK, XLE, XLP, XLF) and indices (SPY, QQQ, IWM) and WTI crude.
+    MOVE Index not provided — flagged as data gap.
+    Macro calendar context via web_search: FOMC 4/29 outcome and dissents, NFP today (May 1), CME FedWatch rate path, Powell/Warsh transition, Iran-war oil shock context (Brent ≈$120 area).
+    Voting framework: Credit 40% (HYG, LQD, HYG/LQD ratio), Rates 40% (US02Y, US10Y, US30Y, 2s10s, MOVE, DXY, USDJPY, JP10Y), Volatility 20% (VIX, VVIX, SPY IV).
+    Regime confidence thresholds: HIGH ≥ 0.65 + ≥2 groups agree · MEDIUM 0.45–0.64 OR 2/3 groups agree · LOW &lt; 0.45 or all groups disagree.
+  </p>
+</section>
+
+<div class="footer">
+  SMB LLC · MACRO REGIME REPORT · 2026-05-01 · GENERATED 15:30 CT
+</div>
+
+</body>
+</html>

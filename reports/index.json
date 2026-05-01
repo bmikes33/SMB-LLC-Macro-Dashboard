@@ -182,6 +182,182 @@
       "notes": "Market is pricing GOOGL at the bull-end of the framework — implied current multiple is 21.5x forward Y2 EBITDA vs. base 17x. Cloud backlog of $467B (7x TTM revenue) provides directional support but is not yet reflected in disclosed earnings. Bull case (sustained 60%+ Cloud growth, 60% margin) yields only +17.5% upside; Cloud Year 2 sustained regime is at the edge of plausibility at $138B revenue scale."
     },
     {
+      "type": "macro",
+      "file": "MACRO_2026-05-01_1530.html",
+      "ticker": "MACRO",
+      "tvSymbol": null,
+      "date": "2026-05-01T15:30:00-05:00",
+      "regime": "Reflation",
+      "regimeColor": "#00e5ff",
+      "regimeConfidence": "MEDIUM",
+      "equityBias": "BULLISH-CYCLICALS",
+      "creditScore": 0.67,
+      "ratesScore": 0.5,
+      "volScore": 0.0,
+      "aggregateScore": 0.467,
+      "primaryTension": "Vol prices Risk-On while Credit/Rates price Reflation; long-end stress (30Y at 5%, LQD weak) is the stagflationary undertone within an otherwise bullish equity setup. Iran-war oil shock embedded.",
+      "indicators": [
+        {
+          "group": "Credit",
+          "name": "HYG",
+          "reading": "$80.06, holding 80 SMA cluster, recovered from 78.6 March low",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Credit",
+          "name": "LQD",
+          "reading": "$108.60, below 21/50/200 MAs, retesting March lows — duration pain",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Credit",
+          "name": "HYG/LQD",
+          "reading": "Ratio rising as HY outperforms IG — pure risk-appetite signal",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US02Y",
+          "reading": "3.886%, pulled back from 4.00% peak, elevated/sideways",
+          "vote": "Neutral"
+        },
+        {
+          "group": "Rates",
+          "name": "US10Y",
+          "reading": "4.376%, in uptrend with growth holding + oil firm",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "US30Y",
+          "reading": "4.963%, just printed 5.00%, leading the rise — bear steepener",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Rates",
+          "name": "2s10s",
+          "reading": "+49 bps, steepening from inverted = curve normalization",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "MOVE",
+          "reading": "Not provided in upload",
+          "vote": "N/A"
+        },
+        {
+          "group": "Rates",
+          "name": "DXY",
+          "reading": "98.22, soft despite hawkish Fed = fiscal/term-premium driven",
+          "vote": "Reflation"
+        },
+        {
+          "group": "Rates",
+          "name": "USDJPY",
+          "reading": "157.04, rising toward 160 BOJ intervention zone, carry on",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Rates",
+          "name": "JP10Y",
+          "reading": "2.50%, multi-decade highs, BOJ YCC strain rising",
+          "vote": "Stagflation"
+        },
+        {
+          "group": "Vol",
+          "name": "VIX",
+          "reading": "16.98, well below 18 threshold, vol-crushed from 30 in March",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Vol",
+          "name": "VVIX",
+          "reading": "95.06, below 100 threshold, calm vol-of-vol",
+          "vote": "Risk-On"
+        },
+        {
+          "group": "Vol",
+          "name": "SPY IV",
+          "reading": "30D ≈16–17%, term structure in normal contango",
+          "vote": "Risk-On"
+        }
+      ],
+      "thresholds": [
+        {
+          "indicator": "VIX",
+          "level": "22",
+          "signal": "Flip toward Risk-Off"
+        },
+        {
+          "indicator": "HYG",
+          "level": "79",
+          "signal": "Structural credit damage → Stagflation/Risk-Off"
+        },
+        {
+          "indicator": "LQD",
+          "level": "107",
+          "signal": "Bond market dysfunction confirmation"
+        },
+        {
+          "indicator": "US30Y",
+          "level": "5.10%",
+          "signal": "Long-duration capitulation, accelerates Stagflation pressure"
+        },
+        {
+          "indicator": "DXY",
+          "level": "100",
+          "signal": "Dollar regime flip — watch flag"
+        },
+        {
+          "indicator": "USDJPY",
+          "level": "160",
+          "signal": "BOJ intervention zone — Risk-Off catalyst via yen carry"
+        },
+        {
+          "indicator": "2s10s",
+          "level": "0 bps",
+          "signal": "Re-flatten below zero → Reflation thesis cracking"
+        },
+        {
+          "indicator": "Oil (WTI)",
+          "level": "$115",
+          "signal": "Sustained break → Stagflation tilt dominates"
+        },
+        {
+          "indicator": "HYG/LQD",
+          "level": "ratio rolls",
+          "signal": "Risk appetite peaking — leading edge of regime change"
+        }
+      ],
+      "stagePositioning": [
+        {
+          "stage": "Young Growth",
+          "bias": "FAVORED",
+          "note": "High beta benefits from animal spirits and broad reflation rally"
+        },
+        {
+          "stage": "High Growth",
+          "bias": "OVERWEIGHT",
+          "note": "Growth beta + soft DXY tailwind, but watch duration sensitivity if 30Y > 5.10%"
+        },
+        {
+          "stage": "Mature Growth",
+          "bias": "OVERWEIGHT",
+          "note": "Quality cohort wins both ways; XLK breakout to ATH confirms"
+        },
+        {
+          "stage": "Maturity",
+          "bias": "OVERWEIGHT",
+          "note": "Energy/cyclical maturity benefits from commodity firmness; XLE consolidating after run, XLF mixed"
+        },
+        {
+          "stage": "Decline",
+          "bias": "UNDERWEIGHT",
+          "note": "Structural headwinds compound; not the regime to bottom-fish"
+        }
+      ]
+    },
+    {
       "type": "ta",
       "file": "GOOGL_2026-05-01_0915.html",
       "ticker": "GOOGL",

@@ -518,7 +518,7 @@ function NewsFeed() {
   );
 }
 
-function AISummary() {
+function AISummary({ latestMacro }) {
   const [news, setNews] = React.useState(null);
   const [error, setError] = React.useState(null);
 
@@ -552,13 +552,21 @@ function AISummary() {
     "THRESHOLD_WATCH":  "#ffab00",
     "NEUTRAL":          "#8b9ab5",
   };
-  const regimeFallbackColor = news.currentRegimeColor || "#00e5ff";
+  const regimeFallbackColor = (latestMacro && latestMacro.regimeColor) || news.currentRegimeColor || "#00e5ff";
+
+  // Macro report (uploaded by user) is the authoritative regime source.
+  // News pipeline keeps ownership of regimePressure (REINFORCING / MIXED / PRESSURING / CHALLENGING) —
+  // its job is to assess how news flow is interacting with the regime call, not to compute it.
+  const currentRegime    = (latestMacro && latestMacro.regime)           || news.currentRegime;
+  const regimeConfidence = (latestMacro && latestMacro.regimeConfidence) || news.regimeConfidence;
+  const regimeSource     = latestMacro ? "macro report" : "news pipeline";
+  const regimeAsOfRaw    = (latestMacro && latestMacro.date)             || news.regimeAsOf;
 
   // Format the "as of" timestamp nicely
   let regimeAsOfDisplay = null;
-  if (news.regimeAsOf) {
+  if (regimeAsOfRaw) {
     try {
-      const dt = new Date(news.regimeAsOf);
+      const dt = new Date(regimeAsOfRaw);
       regimeAsOfDisplay = dt.toLocaleDateString("en-US",{month:"short",day:"numeric"}) + " " +
                           dt.toLocaleTimeString("en-US",{hour:"2-digit",minute:"2-digit",hour12:false});
     } catch (e) {}
@@ -570,16 +578,16 @@ function AISummary() {
       <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",marginBottom:10}}>Updated: {news.lastUpdatedDisplay}</div>
 
       {/* REGIME CONTEXT + PRESSURE BANNER (new) */}
-      {news.currentRegime && (
+      {currentRegime && (
         <div style={{background:regimeFallbackColor+"15",border:"1px solid "+regimeFallbackColor+"40",borderRadius:6,padding:10,marginBottom:8}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:4}}>
             <div style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:"var(--text-muted)"}}>Regime Context</div>
-            {regimeAsOfDisplay && <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>as of {regimeAsOfDisplay}</div>}
+            {regimeAsOfDisplay && <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)"}}>{regimeSource} · {regimeAsOfDisplay}</div>}
           </div>
           <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:6,flexWrap:"wrap"}}>
-            <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:800,color:regimeFallbackColor,letterSpacing:1,textTransform:"uppercase"}}>{news.currentRegime}</span>
-            {news.regimeConfidence && (
-              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:regimeFallbackColor+"25",color:regimeFallbackColor}}>{news.regimeConfidence}</span>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:12,fontWeight:800,color:regimeFallbackColor,letterSpacing:1,textTransform:"uppercase"}}>{currentRegime}</span>
+            {regimeConfidence && (
+              <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:regimeFallbackColor+"25",color:regimeFallbackColor}}>{regimeConfidence}</span>
             )}
           </div>
           {s.regimePressure && s.regimePressure !== "N/A" && (
@@ -1130,7 +1138,7 @@ function App() {
               <NewsFeed />
             )}
             {rightTab==="summary" && (
-              <AISummary />
+              <AISummary latestMacro={latestMacro} />
             )}
           </div>
         </div>

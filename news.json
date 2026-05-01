@@ -1,45 +1,83 @@
 {
-  "lastUpdated": "2026-05-01T10:59:01.399920+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 10:59 AM UTC",
+  "lastUpdated": "2026-05-01T11:56:58.915537+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 11:56 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin posting strong monthly gains and S&P 500 hitting fresh highs, while energy earnings disappoint and Japan intervenes to support the yen amid ongoing Middle East tensions. Dollar weakness persists despite geopolitical concerns, and crypto markets face conflicting narratives of institutional inflows versus futures-driven rally concerns.",
+    "macroSummary": "Markets show mixed signals with Bitcoin posting strong monthly gains and S&P 500 hitting new highs, while currency markets remain volatile due to yen intervention concerns. Oil prices rise on Middle East conflict concerns, but energy earnings from Exxon and Chevron show declining income despite strong underlying business performance.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Equity strength and crypto rallies support risk-on, but yen intervention concerns, energy sector weakness, and mixed crypto flow data create cross-currents.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Risk assets (Bitcoin, S&P 500 highs) support Risk-On, but dollar strength on Iran war concerns and yen intervention volatility create cross-currents that muddy the regime clarity.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar rises on Iran war concerns with no end in sight to conflict"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin posts best monthly gain in a year with S&P 500 hitting fresh all-time highs",
+        "signal": "S&P 500 hits fresh all-time high while Bitcoin seals best monthly gain in a year",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Japan threatens more currency intervention as yen weakness continues despite intervention attempts",
+        "signal": "Dollar strengthening on Iran war geopolitical concerns with no end in sight",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin ETF outflows top $490M despite rally, questioning momentum sustainability",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar holds decline on yen intervention concerns, moving away from safe-haven demand",
-        "tag": "SUPPORTS"
+        "signal": "Yen intervention threats create currency market volatility and global risk concerns",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Energy sector earnings disappoint with Exxon and Chevron reporting declining Q1 income",
+        "signal": "Oil rises on prolonged Middle East conflict concerns adding inflationary pressure",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Bitcoin spot ETF outflows top $490M raising questions about rally sustainability",
-        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely - yen intervention concerns could signal early carry trade unwind pressure",
-      "BMNR ladder remains appropriate given crypto strength but watch for ETF outflow acceleration",
-      "Energy sector weakness may be commodity-driven rather than risk-off signal - assess broader sector rotation"
+      "Monitor DXY closely for break above 100 which would trigger regime invalidation threshold",
+      "Consider tightening BMNR put ladder strikes given mixed crypto momentum signals and ETF outflows",
+      "Watch for yen intervention execution which could trigger broader risk-off move via carry trade unwinds"
     ]
   },
   "articles": [
+    {
+      "title": "Global markets tread water as yen moves dominate currency trading",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T11:47:07+00:00",
+      "timeDisplay": "11:47 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E08P:0-global-markets-tread-water-as-yen-moves-dominate-currency-trading/"
+    },
+    {
+      "title": "ExxonMobil: Underlying Business Delivers Strong Q1 Results",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T11:46:11+00:00",
+      "timeDisplay": "11:46 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:39bf6412d1aaf:0-exxonmobil-underlying-business-delivers-strong-q1-results/"
+    },
+    {
+      "title": "Bitcoin Rises as U.S. Stock Futures Point to Further Gains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T11:40:00+00:00",
+      "timeDisplay": "11:40 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003002:0/"
+    },
+    {
+      "title": "BOE Rate Rise Prospect Could Fall if Energy-Supply Shock Ends \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T11:20:00+00:00",
+      "timeDisplay": "11:20 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501002796:0/"
+    },
     {
       "title": "Exxon Mobil Corp. Reports Fall In Q1 Income",
       "source": "dpa_afx",
@@ -47,6 +85,14 @@
       "timestamp": "2026-05-01T10:54:24+00:00",
       "timeDisplay": "10:54 AM",
       "link": "https://www.tradingview.com/news/dpa_afx:00a4e2a655f93:0-exxon-mobil-corp-reports-fall-in-q1-income/"
+    },
+    {
+      "title": "Bitcoin ETFs draw $2B in April for highest monthly inflows this year",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T10:53:44+00:00",
+      "timeDisplay": "10:53 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e85f0b084094b:0-bitcoin-etfs-draw-2b-in-april-for-highest-monthly-inflows-this-year/"
     },
     {
       "title": "So much news, so little time",
@@ -126,7 +172,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T07:09:00+00:00",
       "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001118:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001116:0/"
     },
     {
       "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
@@ -151,6 +197,14 @@
       "timestamp": "2026-05-01T06:38:00+00:00",
       "timeDisplay": "6:38 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260501001028:0/"
+    },
+    {
+      "title": "Musk Slams Crypto During OpenAI Trial",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T06:27:46+00:00",
+      "timeDisplay": "6:27 AM",
+      "link": "https://www.tradingview.com/news/u_today:3825306e4094b:0-musk-slams-crypto-during-openai-trial/"
     },
     {
       "title": "\u201cSell in May and Go Away\u201d? Bitcoin Price Could Repeat Its Worst MAY Pattern",
@@ -281,12 +335,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:bbd18a3b5094b:0-us-rep-calls-bitcoin-a-geopolitical-weapon-used-by-multiple-adversaries/"
     },
     {
-      "title": "Oil prices rise with no sign of an end to Iran war",
+      "title": "Steady oil prices set for weekly gain as Iran war rumbles on",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T01:55:00+00:00",
       "timeDisplay": "1:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-oil-prices-rise-with-no-sign-of-an-end-to-iran-war/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-steady-oil-prices-set-for-weekly-gain-as-iran-war-rumbles-on/"
     },
     {
       "title": "Gold Steady But Stagnation of Diplomacy in Middle East Weighs \u2014 Market Talk",
@@ -393,28 +447,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D34F:0-us-crude-futures-rise-41-cents-to-105-50-bbl-after-prior-intraday-high-of-110-93-bbl/"
     },
     {
-      "title": "Bitcoin On Morgan Stanley\u2019s Balance Sheet? The Answer Is Getting Interesting",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T22:00:53+00:00",
-      "timeDisplay": "10:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:e54cbf942094b:0-bitcoin-on-morgan-stanley-s-balance-sheet-the-answer-is-getting-interesting/"
-    },
-    {
       "title": "Dollar tumbles after Japanese intervention boosts yen",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-04-30T21:21:57+00:00",
       "timeDisplay": "9:21 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1J1:0-dollar-tumbles-after-japanese-intervention-boosts-yen/"
-    },
-    {
-      "title": "Stablecoins overtake Bitcoin in Latin America crypto purchases: Bitso",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T21:12:00+00:00",
-      "timeDisplay": "9:12 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:36676b013094b:0-stablecoins-overtake-bitcoin-in-latin-america-crypto-purchases-bitso/"
     },
     {
       "title": "ETF League Tables: Global X Gains on Tech Trade",
@@ -425,20 +463,20 @@
       "link": "https://www.tradingview.com/news/etfcom:bc70ec1f0094b:0-etf-league-tables-global-x-gains-on-tech-trade/"
     },
     {
+      "title": "Tech ETFs Dominate as $11.4B Floods Into U.S. Equity Funds",
+      "source": "etfcom",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T21:00:04+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/etfcom:f2eeef35e094b:0-tech-etfs-dominate-as-11-4b-floods-into-u-s-equity-funds/"
+    },
+    {
       "title": "Arbitrum DAO starts vote to release 30,766 frozen ETH to DeFi United, following Kelp DAO attack",
       "source": "the_block",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T20:58:46+00:00",
       "timeDisplay": "8:58 PM",
       "link": "https://www.tradingview.com/news/the_block:e0cd155ee094b:0-arbitrum-dao-starts-vote-to-release-30-766-frozen-eth-to-defi-united-following-kelp-dao-attack/"
-    },
-    {
-      "title": "Bitcoin Crash Is Coming: Pundit Says It\u2019s Time To Sell All Your BTC",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T20:30:45+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:8aee496fe094b:0-bitcoin-crash-is-coming-pundit-says-it-s-time-to-sell-all-your-btc/"
     },
     {
       "title": "US stocks end strong April with a bang",
@@ -518,7 +556,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-30T18:00:00+00:00",
       "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014360:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260430014362:0/"
     },
     {
       "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
@@ -607,38 +645,6 @@
       "timestamp": "2026-04-30T15:34:00+00:00",
       "timeDisplay": "3:34 PM",
       "link": "https://www.tradingview.com/news/barchart:726136112094b:0-signs-of-weaker-energy-demand-fuel-long-liquidation-in-crude-prices/"
-    },
-    {
-      "title": "Data stew: GDP, PCE, jobless claims, et al",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T15:32:41+00:00",
-      "timeDisplay": "3:32 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D18T:0-data-stew-gdp-pce-jobless-claims-et-al/"
-    },
-    {
-      "title": "Dollar Falls as the Yen Rallies on Intervention Talk",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T14:50:47+00:00",
-      "timeDisplay": "2:50 PM",
-      "link": "https://www.tradingview.com/news/barchart:d26a8e3f6094b:0-dollar-falls-as-the-yen-rallies-on-intervention-talk/"
-    },
-    {
-      "title": "US stocks mixed in early trade after data flurry, big earnings",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T14:40:26+00:00",
-      "timeDisplay": "2:40 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D17N:0-us-stocks-mixed-in-early-trade-after-data-flurry-big-earnings/"
-    },
-    {
-      "title": "US EIA NATURAL GAS IN STORAGE +79 BLN CUBIC FEET IN LATEST WEEK FROM PREVIOUS WEEK (VS. +83 BLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:f21914af5094b:0-us-eia-natural-gas-in-storage-79-bln-cubic-feet-in-latest-week-from-previous-week-vs-83-bln-markets-expected/"
     }
   ]
 }

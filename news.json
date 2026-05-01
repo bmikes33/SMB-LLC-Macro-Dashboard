@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-05-01T17:56:55.175401+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 05:56 PM UTC",
+  "lastUpdated": "2026-05-01T19:13:01.215082+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 07:13 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Economic data shows mixed signals with ISM manufacturing steady but employment weakening and prices paid hitting 4-year highs, while markets rally with US stocks adding $5 trillion in April and bitcoin approaching $80k. Dollar hits two-month lows and 10-year yields pull back as crypto-equity correlation loosens and gold rises on geopolitical developments.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "ISM prices paid index at 4-year highs (84.6 vs 78.3) with weakening employment signals early reflation pressures that could push rates volatility toward the MOVE > 100 threshold.",
+    "macroSummary": "Markets show mixed signals with Bitcoin breaking $78,000 amid oil drops on Iran peace signals while manufacturing data reveals weakness in employment and export orders. Dollar hits two-month lows and 10-year yields pull back, though ISM manufacturing shows elevated prices at four-year highs alongside expansion concerns.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Risk assets rallying (Bitcoin $78K, equities adding $5T in April) supports Risk-On, but manufacturing employment weakness, export order contractions, and Fed officials reiterating hawkish stances create countervailing pressures.",
     "thresholdWatches": [
       {
-        "indicator": "MOVE",
-        "level": "> 100",
-        "signal": "ISM prices paid hitting 4-year highs with manufacturing employment declining suggests stagflationary pressures building"
+        "indicator": "DXY",
+        "level": "< 100",
+        "signal": "Dollar hits two-month low, moving away from risk-off threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "ISM prices paid index jumps to 84.6 from 78.3, highest since April 2022, signaling inflationary pressures",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Manufacturing employment index falls to 46.4 from 48.7, described as 'stubborn' and 'at risk' by ISM's Spence",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US stocks added $5 trillion in April after March selloff with bitcoin approaching $80k amid $200M short squeeze",
+        "signal": "Bitcoin breaks $78,000 with $200M short squeeze as oil drops on Iran peace signals",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar hits two-month low while 10-year yields pull back despite inflationary manufacturing data",
-        "tag": "MIXED"
+        "signal": "US stocks add $5 trillion in April after March rout, continuing risk asset rally",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Crypto Fear and Greed Index returns to neutral after brief dip, bitcoin-equity correlation loosening",
-        "tag": "NEUTRAL"
+        "signal": "Manufacturing employment index stubborn below 50 with export orders contracting second straight month",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "ISM manufacturing prices index hits four-year high while expansion described as 'at risk'",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar hits two-month low with 10-year yields pulling back, easing financial conditions",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor MOVE index closely - ISM price pressures could trigger rates volatility above 100 threshold",
-      "Consider reducing BMNR ladder size if stagflationary mix (high prices + weak employment) persists",
-      "Watch for any follow-through in dollar weakness - sustained DXY decline supports risk-on but price pressures complicate"
+      "Monitor manufacturing weakness for potential growth slowdown that could shift regime despite current risk asset strength",
+      "Track dollar weakness continuation - further DXY decline supports risk-on but watch for reversal signals",
+      "Consider BMNR ladder adjustments if crypto momentum continues given Bitcoin's approach toward $80K"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Renko Mari-Ashi Reveals Where The Bottom Lies And When The Rise Will Begin Again",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:00:26+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:fddaaea1b094b:0-bitcoin-renko-mari-ashi-reveals-where-the-bottom-lies-and-when-the-rise-will-begin-again/"
+    },
+    {
+      "title": "Ethereum Foundation\u2019s recent ETH sales to Tom Lee\u2019s Bitmine hit $47 million after latest deal",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T18:58:32+00:00",
+      "timeDisplay": "6:58 PM",
+      "link": "https://www.tradingview.com/news/the_block:89fa4ffc1094b:0-ethereum-foundation-s-recent-eth-sales-to-tom-lee-s-bitmine-hit-47-million-after-latest-deal/"
+    },
+    {
+      "title": "Gold and Silver Higher for the Day, Lower For The Week \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T18:27:00+00:00",
+      "timeDisplay": "6:27 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006093:0/"
+    },
+    {
+      "title": "TRANSCRIPT: White House pool Q&A with Pres Trump on departure for Palm Beach Villages on Iran, gas prices, Pete Rose",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T18:27:00+00:00",
+      "timeDisplay": "6:27 PM",
+      "link": "https://www.tradingview.com/news/macenews:279c04589094b:0-transcript-white-house-pool-q-a-with-pres-trump-on-departure-for-palm-beach-villages-on-iran-gas-prices-pete-rose/"
+    },
+    {
+      "title": "White House Fact Sheet re Two Sets of Sanctions on Cuba Posted on WhiteHouse.gov in 'News' Section; Details Vague on Threatened EU 25% Vehicle Levies",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T18:16:00+00:00",
+      "timeDisplay": "6:16 PM",
+      "link": "https://www.tradingview.com/news/macenews:2d7bb58c5094b:0-white-house-fact-sheet-re-two-sets-of-sanctions-on-cuba-posted-on-whitehouse-gov-in-news-section-details-vague-on-threatened-eu-25-vehicle-levies/"
+    },
+    {
+      "title": "MSTR Vs ASST Vs BTC \u2013 Crypto DATs Outperform Bitcoin in April Amid Renewed Treasury Buying",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:59:48+00:00",
+      "timeDisplay": "5:59 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:0e508fb26094b:0/"
+    },
     {
       "title": "Paradigm researcher proposes timestamp \u2018escape hatch\u2019 to protect Satoshi-era bitcoin from quantum threats",
       "source": "the_block",
@@ -77,6 +125,14 @@
       "timestamp": "2026-05-01T17:29:58+00:00",
       "timeDisplay": "5:29 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0PL:0-russell-rank-day-in-the-books/"
+    },
+    {
+      "title": "Exclusive: Bitcoin Breaks $78,000 on Risk-On Shift but Crypto CEO Warns the Rally Has a Ceiling",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:23:49+00:00",
+      "timeDisplay": "5:23 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:afeb70f09094b:0-exclusive-bitcoin-breaks-78-000-on-risk-on-shift-but-crypto-ceo-warns-the-rally-has-a-ceiling/"
     },
     {
       "title": "Bitcoin Rises Toward $80,000 After Oil Drops On Iran Peace Signals \u2013 Triggers $200 Million Short Squeeze",
@@ -367,14 +423,6 @@
       "link": "https://www.tradingview.com/news/macenews:d179d1c4f094b:0-recap-cleve-fed-s-hammack-reiterates-reason-for-fomc-dissent-that-uncertainty-re-the-economic-outlook-is-elevated-so-no-reason-for-an-easing-bias/"
     },
     {
-      "title": "APRIL FINAL S&P GLOBAL US MANUFACTURING PMI 54.5 VS 52.3 IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T13:46:00+00:00",
-      "timeDisplay": "1:46 PM",
-      "link": "https://www.tradingview.com/news/macenews:ba0ec1c05094b:0-april-final-s-p-global-us-manufacturing-pmi-54-5-vs-52-3-in-march/"
-    },
-    {
       "title": "Occidental Petroleum Appoints Richard\u00a0Jackson As CEO",
       "source": "dpa_afx",
       "color": "#00e5ff",
@@ -407,14 +455,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:a6e299290094b:0-tom-lee-s-bitmine-locks-508m-in-eth-hold-4-of-total-eth-supply/"
     },
     {
-      "title": "RECAPPING: FED'S KASHKARI: GIVEN UNCERTAINTY, DID NOT THINK IT APPROPRIATE TO SUGGEST IN FOMC STATEMENT GUIDANCE THAT THE NEXT STEP WOULD BE A CUT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T12:37:00+00:00",
-      "timeDisplay": "12:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:b04107b97094b:0-recapping-fed-s-kashkari-given-uncertainty-did-not-think-it-appropriate-to-suggest-in-fomc-statement-guidance-that-the-next-step-would-be-a-cut/"
-    },
-    {
       "title": "ExxonMobil: Underlying Business Delivers Strong Q1 Results",
       "source": "dpa_afx",
       "color": "#00e5ff",
@@ -428,7 +468,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T11:40:00+00:00",
       "timeDisplay": "11:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501003003:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003002:0/"
     },
     {
       "title": "BOE Rate Rise Prospect Could Fall if Energy-Supply Shock Ends \u2014 Market Talk",
@@ -527,30 +567,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:01c8f6f49094b:0-grayscale-names-six-protocols-set-to-win-the-tokenization-megatrend/"
     },
     {
-      "title": "Bitcoin Rises After Gains on Wall Street \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T07:09:00+00:00",
-      "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001116:0/"
-    },
-    {
-      "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T06:53:44+00:00",
-      "timeDisplay": "6:53 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:fa66ef35c094b:0-bitcoin-risks-extended-retreat-as-april-rally-was-futures-driven-cryptoquant/"
-    },
-    {
-      "title": "Bitcoiners launch 'The Bitcoin Evidence Base' to stamp out FUD",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T06:51:37+00:00",
-      "timeDisplay": "6:51 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:092e98d6a094b:0-bitcoiners-launch-the-bitcoin-evidence-base-to-stamp-out-fud/"
-    },
-    {
       "title": "Asia shares find hope in tech resilience, oil off peak",
       "source": "reuters",
       "color": "#ff6d00",
@@ -629,22 +645,6 @@
       "timestamp": "2026-05-01T01:23:01+00:00",
       "timeDisplay": "1:23 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D381:0-asia-shares-find-relief-in-tech-resilience-oil-off-peak/"
-    },
-    {
-      "title": "Key facts: ETH $1B+ buys; exploit drains dormant wallets; near $2,280",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T00:06:50+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/tradingview:81366556e0f85:0-key-facts-eth-1b-buys-exploit-drains-dormant-wallets-near-2-280/"
-    },
-    {
-      "title": "XRP Nears 'Unbreakable' Support, Will Dogecoin (DOGE) Hit $0.2 in New Rally? Big Ethereum (ETH) Price Test Incoming: Crypto Market Review",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T00:01:00+00:00",
-      "timeDisplay": "12:01 AM",
-      "link": "https://www.tradingview.com/news/u_today:5f7de135b094b:0-xrp-nears-unbreakable-support-will-dogecoin-doge-hit-0-2-in-new-rally-big-ethereum-eth-price-test-incoming-crypto-market-review/"
     }
   ]
 }

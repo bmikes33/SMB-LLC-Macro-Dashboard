@@ -1,45 +1,117 @@
 {
-  "lastUpdated": "2026-05-01T14:16:10.198713+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 02:16 PM UTC",
+  "lastUpdated": "2026-05-01T15:32:23.072248+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 03:32 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Manufacturing data shows mixed signals with ISM at 52.7 (slightly below consensus) but prices paid spiked to 84.6 - highest in four years. Three Fed officials reiterated their dissents from the FOMC's easing bias, citing elevated uncertainty and two-sided risks.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple Fed dissents against easing bias and a significant spike in manufacturing input prices to 4-year highs signal potential early reflation pressures that could challenge the current risk-on positioning.",
+    "macroSummary": "Manufacturing data shows continued expansion with ISM at 52.7 but concerning employment weakness at 46.4, while prices paid surged to highest levels since April 2022 at 84.6. Multiple Fed officials reiterated dissents against easing bias citing elevated uncertainty, as stocks added $5 trillion in April and the dollar hit two-month lows.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Strong equity performance and dollar weakness support Risk-On, but surging input prices, employment contraction, and Fed pushback against easing create early reflation/stagflation tensions.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Manufacturing prices paid index jumped to 84.6 vs 78.3 prior, highest since April 2022",
+        "signal": "ISM prices paid index spiked to 84.6 from 78.3, highest since April 2022, signaling accelerating input cost inflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Three Fed officials (Kashkari, Logan, Hammack) all reiterated dissents from FOMC easing bias due to elevated uncertainty",
+        "signal": "Manufacturing employment index fell to 46.4 from 48.7, remaining below 50 for extended period amid expansion",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Manufacturing employment index fell to 46.4 from 48.7, showing continued labor market softening",
+        "signal": "Three Fed officials (Kashkari, Logan, Hammack) publicly reiterated dissents against easing bias citing uncertainty",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Export orders contracted for second straight month at 47.9, signaling global demand weakness",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin ETFs drew $2B in April for highest monthly inflows this year",
+        "signal": "Dollar hits two-month low while US stocks added $5 trillion in April after March rout",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Export orders contracted for second straight month at 47.9, showing global demand weakness",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor MOVE closely - manufacturing price spike could trigger rates volatility approaching 100 threshold",
-      "Consider tightening BMNR put strikes - Fed dissents suggest monetary policy pivot risk",
-      "Watch for any HYG weakness if reflation concerns begin impacting credit spreads"
+      "Monitor MOVE index closely - price surge with Fed hawkish pushback increases rates volatility risk",
+      "Consider tightening BMNR put strikes - employment weakness amid expansion creates stagflation setup risk",
+      "Watch HYG reaction to manufacturing employment data - credit may price labor market deterioration"
     ]
   },
   "articles": [
+    {
+      "title": "Dueling PMIs: Factory activity continued to expand in April amid soaring prices",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T15:25:12+00:00",
+      "timeDisplay": "3:25 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0KW:0-dueling-pmis-factory-activity-continued-to-expand-in-april-amid-soaring-prices/"
+    },
+    {
+      "title": "US Stocks Add $5 Trillion In April After March Rout \u2013 Crypto Lags At $230 Billion Despite Bitcoin Strength",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T15:00:07+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:3d28a019f094b:0/"
+    },
+    {
+      "title": "US 10-Year Yield Pulls Back",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:43:16+00:00",
+      "timeDisplay": "2:43 PM",
+      "link": "https://www.tradingview.com/news/te_news:547067:0-us-10-year-yield-pulls-back/"
+    },
+    {
+      "title": "Imperial Oil Q1 Net Profit Declines; Declares Dividend; Stock Down 5.2%",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:40:09+00:00",
+      "timeDisplay": "2:40 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:25d104d0974b2:0-imperial-oil-q1-net-profit-declines-declares-dividend-stock-down-5-2/"
+    },
+    {
+      "title": "Dollar Hits Two-Month Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:32:07+00:00",
+      "timeDisplay": "2:32 PM",
+      "link": "https://www.tradingview.com/news/te_news:547066:0-dollar-hits-two-month-low/"
+    },
+    {
+      "title": "US stocks open May on a strong note after stellar April",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T14:29:27+00:00",
+      "timeDisplay": "2:29 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0K1:0-us-stocks-open-may-on-a-strong-note-after-stellar-april/"
+    },
+    {
+      "title": "BBG: US ISM'S SPENCE Q&A: DON'T BELIEVE ELEVATED PRICES INDEX LEADS TO A MFG SLOWDOWN 'IN AND OF ITSELF' BUT COUPLED WITH LOWER EMPLOYMENT COULD HURT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:19:00+00:00",
+      "timeDisplay": "2:19 PM",
+      "link": "https://www.tradingview.com/news/macenews:d3512ee3c094b:0-bbg-us-ism-s-spence-q-a-don-t-believe-elevated-prices-index-leads-to-a-mfg-slowdown-in-and-of-itself-but-coupled-with-lower-employment-could-hurt/"
+    },
+    {
+      "title": "BBG: US ISM'S SPENCE Q&A  NO BIG MOVE TOWARD REVERSING NON-HIRING TREND WHICH 'COULD ERODE THE EXPANSION;' 'DEFINITELY A FLY IN THE OINTMENT HERE;'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:17:00+00:00",
+      "timeDisplay": "2:17 PM",
+      "link": "https://www.tradingview.com/news/macenews:e5dc30487094b:0-bbg-us-ism-s-spence-q-a-no-big-move-toward-reversing-non-hiring-trend-which-could-erode-the-expansion-definitely-a-fly-in-the-ointment-here/"
+    },
+    {
+      "title": "BBG: US ISM'S SPENCE Q&A: MFG EMPLOYMENT INDEX 'STUBBORN, NOT RISING ABOVE 50;'SO LAST FEW MONTHS OF EXPANSION 'AT RISK'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T14:13:00+00:00",
+      "timeDisplay": "2:13 PM",
+      "link": "https://www.tradingview.com/news/macenews:c0fd8319d094b:0-bbg-us-ism-s-spence-q-a-mfg-employment-index-stubborn-not-rising-above-50-so-last-few-months-of-expansion-at-risk/"
+    },
     {
       "title": "BBG: US ISM'S SPENCE Q&A: MANUFACTURING INDEX LITTLEBELOW CONSENSUS; SLIGHT SLOWDOWN FROM LAST MONTH OR TWO; PRICE INDEX HIGHEST IN FOUR YEARS",
       "source": "macenews",
@@ -201,6 +273,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0CM:0-risk-is-back-and-momentum-is-running-the-show/"
     },
     {
+      "title": "Tom Lee\u2019s Bitmine Locks $508M in ETH, Hold 4% Of Total ETH Supply",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T12:56:33+00:00",
+      "timeDisplay": "12:56 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:a6e299290094b:0-tom-lee-s-bitmine-locks-508m-in-eth-hold-4-of-total-eth-supply/"
+    },
+    {
       "title": "RECAPPING: FED'S KASHKARI: GIVEN UNCERTAINTY, DID NOT THINK IT APPROPRIATE TO SUGGEST IN FOMC STATEMENT GUIDANCE THAT THE NEXT STEP WOULD BE A CUT",
       "source": "macenews",
       "color": "#00e5ff",
@@ -246,7 +326,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T11:40:00+00:00",
       "timeDisplay": "11:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501003003:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003002:0/"
     },
     {
       "title": "BOE Rate Rise Prospect Could Fall if Energy-Supply Shock Ends \u2014 Market Talk",
@@ -358,7 +438,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T07:09:00+00:00",
       "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001118:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001116:0/"
     },
     {
       "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
@@ -375,14 +455,6 @@
       "timestamp": "2026-05-01T06:51:37+00:00",
       "timeDisplay": "6:51 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:092e98d6a094b:0-bitcoiners-launch-the-bitcoin-evidence-base-to-stamp-out-fud/"
-    },
-    {
-      "title": "Dollar Rises as No End in Sight For Iran War \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T06:38:00+00:00",
-      "timeDisplay": "6:38 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001028:0/"
     },
     {
       "title": "Musk Slams Crypto During OpenAI Trial",
@@ -417,20 +489,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:6e025b719094b:0-bitcoin-s-surge-to-77k-pressures-shorts-but-absent-spot-and-long-leverage-caps-rallies/"
     },
     {
-      "title": "Yen jumps as Japan threatens more intervention",
+      "title": "Dollar heads for biggest weekly loss against yen since February after Japan's intervention",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
       "timeDisplay": "4:15 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-yen-jumps-as-japan-threatens-more-intervention/"
-    },
-    {
-      "title": "FRIDAY WHITE HOUSE SCHEDULE - President Trump travels to the Villages in Palm Beach",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T04:14:00+00:00",
-      "timeDisplay": "4:14 AM",
-      "link": "https://www.tradingview.com/news/macenews:ae3e3a048094b:0-friday-white-house-schedule-president-trump-travels-to-the-villages-in-palm-beach/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-dollar-heads-for-biggest-weekly-loss-against-yen-since-february-after-japan-s-intervention/"
     },
     {
       "title": "Bitcoin Rejected At Key Cost Basis Zone\u2014Is $68,000 The Next Support?",
@@ -537,14 +601,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:761f10845094b:0-bitcoin-technical-charts-for-may-turn-bearish-will-btc-fall-again/"
     },
     {
-      "title": "Key facts: Institutions Expand BTC Access; BTC Below 200-Day, 65\u201370k",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T00:09:14+00:00",
-      "timeDisplay": "12:09 AM",
-      "link": "https://www.tradingview.com/news/tradingview:f246ccb272171:0-key-facts-institutions-expand-btc-access-btc-below-200-day-65-70k/"
-    },
-    {
       "title": "Key facts: ETH $1B+ buys; exploit drains dormant wallets; near $2,280",
       "source": "tradingview",
       "color": "#00e5ff",
@@ -583,62 +639,6 @@
       "timestamp": "2026-04-30T23:05:52+00:00",
       "timeDisplay": "11:05 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1LC:0-bonds-stocks-climb-on-oil-s-pullback-yen-jumps-after-japan-s-currency-intervention/"
-    },
-    {
-      "title": "US crude futures rise 41 cents to $105.50/bbl after prior intraday high of $110.93/bbl",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T22:14:52+00:00",
-      "timeDisplay": "10:14 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D34F:0-us-crude-futures-rise-41-cents-to-105-50-bbl-after-prior-intraday-high-of-110-93-bbl/"
-    },
-    {
-      "title": "ETF League Tables: Global X Gains on Tech Trade",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T21:00:04+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:bc70ec1f0094b:0-etf-league-tables-global-x-gains-on-tech-trade/"
-    },
-    {
-      "title": "Tech ETFs Dominate as $11.4B Floods Into U.S. Equity Funds",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T21:00:04+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:f2eeef35e094b:0-tech-etfs-dominate-as-11-4b-floods-into-u-s-equity-funds/"
-    },
-    {
-      "title": "Arbitrum DAO starts vote to release 30,766 frozen ETH to DeFi United, following Kelp DAO attack",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T20:58:46+00:00",
-      "timeDisplay": "8:58 PM",
-      "link": "https://www.tradingview.com/news/the_block:e0cd155ee094b:0-arbitrum-dao-starts-vote-to-release-30-766-frozen-eth-to-defi-united-following-kelp-dao-attack/"
-    },
-    {
-      "title": "US stocks end strong April with a bang",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T20:25:44+00:00",
-      "timeDisplay": "8:25 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1IB:0-us-stocks-end-strong-april-with-a-bang/"
-    },
-    {
-      "title": "Bonds, stocks rise on oil's pullback; yen jumps after Japan's currency intervention",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T19:43:05+00:00",
-      "timeDisplay": "7:43 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1GP:0-bonds-stocks-rise-on-oil-s-pullback-yen-jumps-after-japan-s-currency-intervention/"
-    },
-    {
-      "title": "Crypto hacks hit record high in April as exploits kept piling up",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T19:37:47+00:00",
-      "timeDisplay": "7:37 PM",
-      "link": "https://www.tradingview.com/news/the_block:f8fb0a5f5094b:0-crypto-hacks-hit-record-high-in-april-as-exploits-kept-piling-up/"
     }
   ]
 }

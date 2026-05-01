@@ -1,51 +1,75 @@
 {
-  "lastUpdated": "2026-05-01T11:56:58.915537+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 11:56 AM UTC",
+  "lastUpdated": "2026-05-01T12:56:54.537753+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 12:56 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin posting strong monthly gains and S&P 500 hitting new highs, while currency markets remain volatile due to yen intervention concerns. Oil prices rise on Middle East conflict concerns, but energy earnings from Exxon and Chevron show declining income despite strong underlying business performance.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Risk assets (Bitcoin, S&P 500 highs) support Risk-On, but dollar strength on Iran war concerns and yen intervention volatility create cross-currents that muddy the regime clarity.",
+    "macroSummary": "Federal Reserve officials signal growing dovish uncertainty with Kashkari and Hammack expressing caution about forward guidance and dissenting from easing bias respectively. Markets show mixed performance with Bitcoin rallying strongly on institutional inflows while currency markets remain volatile with yen intervention concerns and dollar strength emerging on geopolitical tensions.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Fed officials are backing away from dovish forward guidance while dollar strength and geopolitical tensions create headwinds against the Risk-On regime assumption.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "> 100",
-        "signal": "Dollar rises on Iran war concerns with no end in sight to conflict"
+        "signal": "Dollar rises as geopolitical tensions from Iran war show no end in sight"
       }
     ],
     "keySignals": [
       {
-        "signal": "S&P 500 hits fresh all-time high while Bitcoin seals best monthly gain in a year",
-        "tag": "SUPPORTS"
+        "signal": "Fed's Kashkari and Hammack both express uncertainty about future easing, with Hammack dissenting from dovish statement bias",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening on Iran war geopolitical concerns with no end in sight",
+        "signal": "Dollar strength emerging on geopolitical tensions with no end in sight for Iran war",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin ETF outflows top $490M despite rally, questioning momentum sustainability",
-        "tag": "CONTRADICTS"
+        "signal": "Bitcoin ETFs see $2B April inflows with institutional money re-accelerating into crypto",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Yen intervention threats create currency market volatility and global risk concerns",
-        "tag": "CONTRADICTS"
+        "signal": "S&P 500 hits fresh all-time highs while Bitcoin seals best monthly gain in a year",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil rises on prolonged Middle East conflict concerns adding inflationary pressure",
+        "signal": "Yen intervention threats keep currency markets in volatile focus as carry trade risks persist",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 which would trigger regime invalidation threshold",
-      "Consider tightening BMNR put ladder strikes given mixed crypto momentum signals and ETF outflows",
-      "Watch for yen intervention execution which could trigger broader risk-off move via carry trade unwinds"
+      "Monitor DXY closely for break above 100 threshold which would signal regime invalidation",
+      "BMNR ladder strategy benefits from Bitcoin strength but watch for futures-driven rally warnings",
+      "Consider reducing risk exposure if Fed pivots more hawkish given Kashkari/Hammack comments"
     ]
   },
   "articles": [
+    {
+      "title": "RECAPPING: FED'S KASHKARI: GIVEN UNCERTAINTY, DID NOT THINK IT APPROPRIATE TO SUGGEST IN FOMC STATEMENT GUIDANCE THAT THE NEXT STEP WOULD BE A CUT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T12:37:00+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:b04107b97094b:0-recapping-fed-s-kashkari-given-uncertainty-did-not-think-it-appropriate-to-suggest-in-fomc-statement-guidance-that-the-next-step-would-be-a-cut/"
+    },
+    {
+      "title": "RECAPPING: FED'S HAMMACK: DISSENTED FROM EASING BIAS IN FED STATEMENT, REFERENCE TO ADDITIONAL ADJUSTMENTS AS STATEMENT WAS INTENDED TO INDICATE PAUSE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T12:29:00+00:00",
+      "timeDisplay": "12:29 PM",
+      "link": "https://www.tradingview.com/news/macenews:15b57af75094b:0-recapping-fed-s-hammack-dissented-from-easing-bias-in-fed-statement-reference-to-additional-adjustments-as-statement-was-intended-to-indicate-pause/"
+    },
+    {
+      "title": "RECAPPING: FED'S HAMMACK: DISSENTED FROM EASING BIAS IN FOMC STATEMENT DUE TO ELEVATED UNCERTAINTY, RISKS TO EITHER SIDE OF FED MANDATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T12:28:00+00:00",
+      "timeDisplay": "12:28 PM",
+      "link": "https://www.tradingview.com/news/macenews:49db2410d094b:0-recapping-fed-s-hammack-dissented-from-easing-bias-in-fomc-statement-due-to-elevated-uncertainty-risks-to-either-side-of-fed-mandate/"
+    },
     {
       "title": "Global markets tread water as yen moves dominate currency trading",
       "source": "reuters",
@@ -111,6 +135,14 @@
       "link": "https://www.tradingview.com/news/dpa_afx:cfb089a1181ba:0-chevron-corp-q1-income-declines/"
     },
     {
+      "title": "XRP Price Follows Bitcoin? Bill Morgan Explains XRP-BTC Correlation",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T10:36:28+00:00",
+      "timeDisplay": "10:36 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:c538f8ac7094b:0-xrp-price-follows-bitcoin-bill-morgan-explains-xrp-btc-correlation/"
+    },
+    {
       "title": "Sell in May and go away? Not so fast, investors.",
       "source": "reuters",
       "color": "#ff6d00",
@@ -172,7 +204,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T07:09:00+00:00",
       "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501001116:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001118:0/"
     },
     {
       "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
@@ -239,12 +271,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E01U:0-never-mind-the-oil-feel-the-earnings/"
     },
     {
-      "title": "Yen jumps as Japan threatens more intervention at end of busy central bank week",
+      "title": "Yen jumps as Japan threatens more intervention",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
       "timeDisplay": "4:15 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-yen-jumps-as-japan-threatens-more-intervention-at-end-of-busy-central-bank-week/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-yen-jumps-as-japan-threatens-more-intervention/"
     },
     {
       "title": "FRIDAY WHITE HOUSE SCHEDULE - President Trump travels to the Villages in Palm Beach",
@@ -335,12 +367,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:bbd18a3b5094b:0-us-rep-calls-bitcoin-a-geopolitical-weapon-used-by-multiple-adversaries/"
     },
     {
-      "title": "Steady oil prices set for weekly gain as Iran war rumbles on",
+      "title": "Oil falls as Iran proposes talks but prices still set for weekly gains",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T01:55:00+00:00",
       "timeDisplay": "1:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-steady-oil-prices-set-for-weekly-gain-as-iran-war-rumbles-on/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-oil-falls-as-iran-proposes-talks-but-prices-still-set-for-weekly-gains/"
     },
     {
       "title": "Gold Steady But Stagnation of Diplomacy in Middle East Weighs \u2014 Market Talk",
@@ -429,14 +461,6 @@
       "timestamp": "2026-04-30T23:05:52+00:00",
       "timeDisplay": "11:05 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1LC:0-bonds-stocks-climb-on-oil-s-pullback-yen-jumps-after-japan-s-currency-intervention/"
-    },
-    {
-      "title": "Repeated Bitcoin profit taking near $77K suggests rally is losing steam",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T22:25:10+00:00",
-      "timeDisplay": "10:25 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:435e6afb9094b:0-repeated-bitcoin-profit-taking-near-77k-suggests-rally-is-losing-steam/"
     },
     {
       "title": "US crude futures rise 41 cents to $105.50/bbl after prior intraday high of $110.93/bbl",
@@ -556,7 +580,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-30T18:00:00+00:00",
       "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014362:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260430014360:0/"
     },
     {
       "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
@@ -621,30 +645,6 @@
       "timestamp": "2026-04-30T16:14:00+00:00",
       "timeDisplay": "4:14 PM",
       "link": "https://www.tradingview.com/news/macenews:b113d6bbd094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-64-in-latest-week-vs-5-58-in-previous-week-5-92-year-ago/"
-    },
-    {
-      "title": "US FREDDIE MAC 30-YEAR MORTGAGE RATE AVERAGES 6.30% IN LATEST WEEK VS. 6.23% IN PREVIOUS WEEK, 6.76% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:13:00+00:00",
-      "timeDisplay": "4:13 PM",
-      "link": "https://www.tradingview.com/news/macenews:cb5509fda094b:0-us-freddie-mac-30-year-mortgage-rate-averages-6-30-in-latest-week-vs-6-23-in-previous-week-6-76-year-ago/"
-    },
-    {
-      "title": "US ATLANTA FED GDPNOW MODEL SEES US 2Q GDP GROWTH RATE AT 3.7% IN FIRST ESTIMATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:11:00+00:00",
-      "timeDisplay": "4:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:02b848d5e094b:0-us-atlanta-fed-gdpnow-model-sees-us-2q-gdp-growth-rate-at-3-7-in-first-estimate/"
-    },
-    {
-      "title": "Signs of Weaker Energy Demand Fuel Long Liquidation in Crude Prices",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T15:34:00+00:00",
-      "timeDisplay": "3:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:726136112094b:0-signs-of-weaker-energy-demand-fuel-long-liquidation-in-crude-prices/"
     }
   ]
 }

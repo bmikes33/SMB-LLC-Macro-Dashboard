@@ -1,51 +1,91 @@
 {
-  "lastUpdated": "2026-04-30T23:56:04.358850+00:00",
-  "lastUpdatedDisplay": "Apr 30, 2026 \u2014 11:56 PM UTC",
+  "lastUpdated": "2026-05-01T01:30:30.616460+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 01:30 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed performance with oil pulling back from four-year highs after hitting $110.93, while stocks and bonds rallied on the energy retreat. Japan conducted currency intervention boosting the yen significantly against the dollar, and crypto markets faced heavy selling pressure with Bitcoin ETFs losing nearly $500 million.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil pullback and stock gains support risk-on, but Japanese intervention driving yen strength and crypto weakness introduce cross-currents that complicate the clean risk-on narrative.",
+    "macroSummary": "Markets showed mixed signals with stocks and bonds rising on oil pullbacks from four-year highs, while Japan's currency intervention caused dollar weakness and yen strength. Bitcoin faced selling pressure with ETF outflows approaching $500M, though traditional equities ended April strong with S&P 500 hitting new highs.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Japanese intervention driving dollar weakness and yen strength directly pressures the Risk-On regime, as USDJPY decline approaches the <155 carry unwind threshold that historically coincides with Risk-Off transitions.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "< 155",
-        "signal": "Japanese intervention caused yen to jump significantly against dollar, potentially approaching carry unwind trigger"
+        "signal": "Yen jumps after Japan's intervention, triggering potential carry trade unwind"
       }
     ],
     "keySignals": [
       {
-        "signal": "Japanese currency intervention drove sharp yen gains against dollar, threatening carry trade dynamics",
+        "signal": "Japanese currency intervention causes dollar tumble and yen strength, approaching carry unwind levels",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin ETFs shed nearly $500 million as crypto fear returns, contradicting typical risk-on asset behavior",
+        "signal": "Bitcoin ETFs lose nearly $500M as fear returns to crypto markets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil retreated from $110.93 highs to $105.50, reducing inflation pressure and supporting bond/stock rally",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "US stocks ended April strong with S&P 500 pushing to new highs despite mixed cross-asset signals",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bull-Bear sentiment spread turned negative according to AAII, suggesting investor caution despite equity strength",
+        "signal": "Bull-Bear sentiment spread turns negative according to AAII survey",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil retreats from four-year highs, bonds and stocks rise on pullback",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "S&P 500 pushes to new highs, ending April strong",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY levels closely - intervention-driven yen strength could trigger broader carry unwind if < 155",
-      "Consider reducing BMNR ladder exposure given crypto sector weakness and Bitcoin ETF outflows",
-      "Watch for oil price stabilization around $105 - further retreat could cement risk-on regime confirmation"
+      "Monitor USDJPY levels closely - intervention-driven yen strength could trigger carry unwind if <155 breaks",
+      "Consider reducing BMNR ladder exposure given crypto risk-off signals and Bitcoin ETF outflows",
+      "Watch for VIX reaction to sentiment deterioration shown in AAII Bull-Bear spread turning negative"
     ]
   },
   "articles": [
+    {
+      "title": "Asia shares find relief in tech resilience, oil off peak",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T01:23:01+00:00",
+      "timeDisplay": "1:23 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D381:0-asia-shares-find-relief-in-tech-resilience-oil-off-peak/"
+    },
+    {
+      "title": "Yen trims gains against dollar after Japan's intervention in markets",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T00:30:08+00:00",
+      "timeDisplay": "12:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E001:0-yen-trims-gains-against-dollar-after-japan-s-intervention-in-markets/"
+    },
+    {
+      "title": "Key facts: Institutions Expand BTC Access; BTC Below 200-Day, 65\u201370k",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T00:09:14+00:00",
+      "timeDisplay": "12:09 AM",
+      "link": "https://www.tradingview.com/news/tradingview:f246ccb272171:0-key-facts-institutions-expand-btc-access-btc-below-200-day-65-70k/"
+    },
+    {
+      "title": "Key facts: ETH $1B+ buys; exploit drains dormant wallets; near $2,280",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T00:06:50+00:00",
+      "timeDisplay": "12:06 AM",
+      "link": "https://www.tradingview.com/news/tradingview:81366556e0f85:0-key-facts-eth-1b-buys-exploit-drains-dormant-wallets-near-2-280/"
+    },
+    {
+      "title": "Gold Holds Firm as Dollar Weakens",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T23:49:19+00:00",
+      "timeDisplay": "11:49 PM",
+      "link": "https://www.tradingview.com/news/te_news:546889:0-gold-holds-firm-as-dollar-weakens/"
+    },
     {
       "title": "Bitcoin ETFs Lose Nearly Half A Billion Dollars As Fear Returns To Crypto",
       "source": "newsbtc",
@@ -199,6 +239,14 @@
       "link": "https://www.tradingview.com/news/cointelegraph:31d42eee6094b:0-bitcoin-s-75k-cost-basis-emerges-as-key-support-zone-for-current-bull-trend/"
     },
     {
+      "title": "Key Reason Why New Fed Chair Might Be Bearish for Bitcoin",
+      "source": "u_today",
+      "color": "#00e5ff",
+      "timestamp": "2026-04-30T18:22:20+00:00",
+      "timeDisplay": "6:22 PM",
+      "link": "https://www.tradingview.com/news/u_today:debcbe7be094b:0-key-reason-why-new-fed-chair-might-be-bearish-for-bitcoin/"
+    },
+    {
       "title": "S&P 500 pushes to new highs. Here is the 'line in the sand' for this bull run.",
       "source": "market-watch",
       "color": "#00e5ff",
@@ -212,7 +260,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-04-30T18:00:00+00:00",
       "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430014362:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260430014360:0/"
     },
     {
       "title": "Bond yields fall, stocks rise as oil prices fall; yen jumps after Japan's reported currency intervention",
@@ -487,28 +535,12 @@
       "link": "https://www.tradingview.com/news/te_news:546760:0-us-10-year-yield-eases-from-9-month-high/"
     },
     {
-      "title": "Did Bitcoin bottom versus gold? BTC price will reach $167K in 2027 if history repeats",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:20:23+00:00",
-      "timeDisplay": "1:20 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b54af27af094b:0-did-bitcoin-bottom-versus-gold-btc-price-will-reach-167k-in-2027-if-history-repeats/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - Apr 30",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-04-30T13:16:00+00:00",
       "timeDisplay": "1:16 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260430010991:0/"
-    },
-    {
-      "title": "Bitcoin \u2018trapped below\u2019 key resistance level as ETF outflows stretch to three days amid Fed split",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:14:12+00:00",
-      "timeDisplay": "1:14 PM",
-      "link": "https://www.tradingview.com/news/the_block:720376d07094b:0-bitcoin-trapped-below-key-resistance-level-as-etf-outflows-stretch-to-three-days-amid-fed-split/"
     },
     {
       "title": "DXY Eases on Thursday",
@@ -613,38 +645,6 @@
       "timestamp": "2026-04-30T11:47:12+00:00",
       "timeDisplay": "11:47 AM",
       "link": "https://www.tradingview.com/news/dpa_afx:547c9db13d32a:0-conocophillips-q1-profit-declines-updates-production-and-capital-guidance/"
-    },
-    {
-      "title": "BOE's 'Hold' Decision Was Helped by More Moderate March Inflation \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T11:45:00+00:00",
-      "timeDisplay": "11:45 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430008863:0/"
-    },
-    {
-      "title": "Brent Slide on Screens Friday Purely Due to Contract Rollover \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T11:25:00+00:00",
-      "timeDisplay": "11:25 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430008165:0/"
-    },
-    {
-      "title": "Global Bond Yields Reverse from Highs as Oil Price Declines \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T11:01:00+00:00",
-      "timeDisplay": "11:01 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430007404:0/"
-    },
-    {
-      "title": "WTI Steadies as US Considers Iran Strikes",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T10:28:32+00:00",
-      "timeDisplay": "10:28 AM",
-      "link": "https://www.tradingview.com/news/te_news:546640:0-wti-steadies-as-us-considers-iran-strikes/"
     }
   ]
 }

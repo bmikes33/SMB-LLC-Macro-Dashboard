@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MSFT — SOTP Fundamental Valuation — Apr 30, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0e17;
+    color: #e2e8f0;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 14px; line-height: 1.55;
+    padding: 24px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  h1, h2, h3, .mono, table, .ticker, .num {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  h1 { font-size: 20px; letter-spacing: 0.5px; color: #e2e8f0; }
+  h2 {
+    font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+    text-transform: uppercase; color: #00e5ff;
+    border-top: 1px solid #1e2a3a;
+    padding-top: 18px; margin-top: 28px; margin-bottom: 14px;
+  }
+  h3 { font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase; color: #8b9ab5; margin: 10px 0 6px 0; }
+  .header {
+    background: #0f1420;
+    border: 1px solid #1e2a3a;
+    padding: 18px 22px;
+    border-radius: 4px;
+    display: flex; flex-wrap: wrap; gap: 32px;
+    align-items: flex-end; justify-content: space-between;
+  }
+  .ticker { font-size: 28px; font-weight: 700; color: #e2e8f0; letter-spacing: 1px; }
+  .subhead { color: #8b9ab5; font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+  .price { color: #e2e8f0; font-size: 22px; font-weight: 500; }
+  .change-down { color: #ff3d57; font-size: 12px; }
+  .verdict-badge {
+    display: inline-block; padding: 4px 10px; border-radius: 3px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+  .verdict-green { background: rgba(0,230,118,0.12); color: #00e676; border: 1px solid #00e676; }
+  .verdict-amber { background: rgba(255,171,0,0.12); color: #ffab00; border: 1px solid #ffab00; }
+  .verdict-red { background: rgba(255,61,87,0.12); color: #ff3d57; border: 1px solid #ff3d57; }
+  .badge-green { color: #00e676; font-weight: 600; }
+  .badge-amber { color: #ffab00; font-weight: 600; }
+  .badge-red { color: #ff3d57; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 16px 0; font-size: 12px; }
+  th {
+    text-align: left; padding: 8px 10px;
+    background: #0f1420;
+    border-bottom: 1px solid #1e2a3a;
+    color: #8b9ab5;
+    font-weight: 500; letter-spacing: 0.5px;
+    text-transform: uppercase; font-size: 10px;
+  }
+  td { padding: 7px 10px; border-bottom: 1px solid #141926; color: #e2e8f0; }
+  tr:hover td { background: #141926; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .allocated { font-style: italic; color: #ffab00; }
+  .allocated::after { content: " †"; }
+  .override { color: #ffab00; font-weight: 700; }
+  .override::after { content: " *"; }
+  .disclosed { color: #e2e8f0; }
+  .legend { font-size: 11px; color: #8b9ab5; padding: 10px 14px; background: #0f1420; border-left: 2px solid #00e5ff; margin: 8px 0 16px 0; }
+  .legend strong { color: #e2e8f0; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 12px 0; }
+  .card { background: #0f1420; border: 1px solid #1e2a3a; padding: 14px; border-radius: 3px; }
+  .card-label { font-size: 10px; color: #8b9ab5; text-transform: uppercase; letter-spacing: 0.8px; }
+  .card-value { font-size: 22px; font-family: 'JetBrains Mono', monospace; font-weight: 500; margin: 4px 0; }
+  .card-sub { font-size: 11px; color: #8b9ab5; }
+  .pos { color: #00e676; }
+  .neg { color: #ff3d57; }
+  .neutral { color: #ffab00; }
+  .dim { color: #4a5976; font-size: 11px; }
+  .footnote { font-size: 10px; color: #4a5976; margin-top: 8px; line-height: 1.5; }
+  .caveat { background: rgba(255,171,0,0.06); border-left: 3px solid #ffab00; padding: 12px 16px; margin: 12px 0; font-size: 12px; }
+  .caveat strong { color: #ffab00; }
+  .pass-flag { background: rgba(0,230,118,0.06); border-left: 3px solid #00e676; padding: 12px 16px; margin: 12px 0; font-size: 12px; }
+  .pass-flag strong { color: #00e676; }
+</style>
+</head>
+<body>
+
+<!-- ===================================================== -->
+<!-- HEADER BLOCK                                           -->
+<!-- ===================================================== -->
+<div class="header">
+  <div>
+    <div class="ticker">MSFT</div>
+    <div class="subhead">Microsoft Corp · NASDAQ · SOTP Fundamental Valuation</div>
+  </div>
+  <div>
+    <div class="card-label">Current Price</div>
+    <div class="price">$407.78</div>
+    <div class="change-down">−3.93% today (capex outlook)</div>
+  </div>
+  <div>
+    <div class="card-label">Fair Value (2Y disc, base)</div>
+    <div class="price"><span class="pos">$792</span></div>
+    <div class="dim">Bear $489 · Bull $1123</div>
+  </div>
+  <div>
+    <div class="card-label">Verdict</div>
+    <div><span class="verdict-badge verdict-green">UNDERVALUED</span></div>
+    <div class="dim">Cap struct: <span class="badge-green">GREEN</span> · FCF: <span class="badge-green">PASS</span></div>
+  </div>
+  <div>
+    <div class="card-label">Report Date</div>
+    <div class="mono" style="font-size:14px;">2026-04-30 21:05</div>
+    <div class="dim">FY26Q3 10-Q + FY25 10-K</div>
+  </div>
+</div>
+
+<div class="legend">
+  <strong>Data Provenance:</strong> 78% disclosed (EDGAR filings) / 17% allocated (capex-weighted methodology) / 5% user-override.
+  Disclosed cells: plain. <span class="allocated">Allocated cells: italic + † marker</span>. <span class="override">User-override cells: bold amber + * marker</span>.
+</div>
+
+<!-- ===================================================== -->
+<!-- SECTION 1 — EXECUTIVE SUMMARY                          -->
+<!-- ===================================================== -->
+<h2>Section 1 — Executive Summary</h2>
+<p style="margin-bottom:12px;font-size:13px;color:#8b9ab5;">
+SOTP across 3 reportable segments. <strong style="color:#e2e8f0;">Verdict: UNDERVALUED.</strong>
+Base case fair value $792/share implies $+94.3% upside, driven by Intelligent Cloud (Azure +40%/+39% CC, AI run-rate $37B at +123% YoY) and Productivity & Business Processes (M365 + LinkedIn + Dynamics, all accelerating).
+The headline gap to current price reflects MSFT trading at <strong style="color:#e2e8f0;">16.2x TTM EBITDA</strong> while the SOTP-implied peer-median fair value sits at <strong style="color:#e2e8f0;">~31x</strong> — a 60% multiple discount the market is currently pricing in due to capex anxiety.
+</p>
+
+<table>
+  <tr><th>Case</th><th class="num">2Y Discounted (PRIMARY)</th><th class="num">vs Current</th><th class="num">NTM × Multiple (Sanity)</th><th class="num">vs Current</th></tr>
+  <tr><td>Bear</td><td class="num">$488.73</td><td class="num pos">+19.9%</td><td class="num">$521.09</td><td class="num pos">+27.8%</td></tr>
+  <tr><td>Base</td><td class="num"><strong>$792.19</strong></td><td class="num pos"><strong>+94.3%</strong></td><td class="num">$793.15</td><td class="num pos">+94.5%</td></tr>
+  <tr><td>Bull</td><td class="num">$1123.30</td><td class="num pos">+175.5%</td><td class="num">$1112.30</td><td class="num pos">+172.8%</td></tr>
+  <tr><td>Prob-weighted (25/50/25)</td><td class="num"><strong>$799.10</strong></td><td class="num pos"><strong>+96.0%</strong></td><td class="num">$804.92</td><td class="num pos">+97.4%</td></tr>
+</table>
+
+<div class="caveat">
+  <strong>Multiple sensitivity caveat:</strong> The base case applies peer P50 multiples (24x EBITDA PBP / 30x IC / 16x MPC) per user approval. These reflect software/cloud peer medians. If peers re-rate downward by ~30%, fair value compresses to roughly current price. The bear case (peer P25 multiples) is the more defensible floor at $489/share.
+</div>
+
+<!-- ===================================================== -->
+<!-- SECTION 2 — SEGMENT LIFECYCLE MAP                      -->
+<!-- ===================================================== -->
+<h2>Section 2 — Segment Lifecycle Map</h2>
+<table>
+  <tr>
+    <th>Segment</th><th class="num">TTM Rev</th><th class="num">% of Total</th>
+    <th class="num">TTM YoY</th><th class="num">TTM OpMargin</th>
+    <th>Stage</th><th>Forecast</th><th>Metric</th>
+  </tr>
+  <tr>
+    <td><strong>Productivity & Business Processes</strong></td>
+    <td class="num">$135.3B</td>
+    <td class="num">42.5%</td>
+    <td class="num">+16.3%</td>
+    <td class="num">59.9%</td>
+    <td><span class="badge-green">Mature Growth</span></td>
+    <td>2Y</td><td>EV/EBITDA</td>
+  </tr>
+  <tr>
+    <td><strong>Intelligent Cloud</strong></td>
+    <td class="num">$128.4B</td>
+    <td class="num">40.3%</td>
+    <td class="num"><strong class="pos">+28.1%</strong></td>
+    <td class="num">41.4%</td>
+    <td><span class="badge-green">High Growth</span></td>
+    <td>2Y</td><td>EV/EBITDA</td>
+  </tr>
+  <tr>
+    <td><strong>More Personal Computing</strong></td>
+    <td class="num">$54.6B</td>
+    <td class="num">17.2%</td>
+    <td class="num neutral">+2.4%</td>
+    <td class="num">27.1%</td>
+    <td><span class="badge-amber">Maturity</span></td>
+    <td>2Y</td><td>EV/EBITDA</td>
+  </tr>
+  <tr style="font-weight:600;">
+    <td>Total</td>
+    <td class="num">$318.3B</td>
+    <td class="num">100.0%</td>
+    <td class="num">+17.9%</td>
+    <td class="num">46.8%</td>
+    <td colspan="3"></td>
+  </tr>
+</table>
+
+<p class="footnote">
+IC sub-thesis: Azure 40%/39% CC growth and accelerating; AI revenue annual run-rate $37B (+123% YoY); commercial RPO $627B (+99% YoY). Classified as High Growth despite mature-level margin (41%) given the durability and acceleration of the underlying growth driver. <br>
+MPC: Windows OEM/Devices declining (-2%/-3% CC), Xbox content lapping Activision (-5%/-7% CC), Search the bright spot (+12%/+9% CC). Composite is Maturity.
+</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 3 — D&A ALLOCATION METHODOLOGY                 -->
+<!-- ===================================================== -->
+<h2>Section 3 — D&A Allocation Methodology (Method B: Capex-Weighted)</h2>
+<p style="font-size:12px;color:#8b9ab5;margin-bottom:10px;">
+10-K Note 18 explicitly states: <em>"It is impracticable for us to separately identify the amount of amortization and depreciation by segment that is included in the measure of segment profit or loss."</em> Method B routing triggered by Q3-26 management commentary: <em>"roughly two thirds of our capex was for short-lived assets, primarily GPUs and CPUs"</em> — overwhelmingly Azure infrastructure. CY2026 capex guidance: $190B.
+</p>
+<table>
+  <tr>
+    <th>Segment</th><th class="num">Capex Share*</th>
+    <th class="num">Revenue Share</th><th class="num">Capex/Rev Ratio</th>
+    <th class="num">Allocated D&A (TTM)</th>
+  </tr>
+  <tr><td>Intelligent Cloud</td><td class="num override">80%</td><td class="num">40.3%</td><td class="num">1.99x</td><td class="num allocated">$28.8B</td></tr>
+  <tr><td>Productivity & Business Processes</td><td class="num override">15%</td><td class="num">42.5%</td><td class="num">0.35x</td><td class="num allocated">$5.4B</td></tr>
+  <tr><td>More Personal Computing</td><td class="num override">5%</td><td class="num">17.2%</td><td class="num">0.29x</td><td class="num allocated">$1.8B</td></tr>
+  <tr style="font-weight:600;"><td>Total</td><td class="num">100%</td><td class="num">100%</td><td class="num">—</td><td class="num">$36B</td></tr>
+</table>
+<p class="footnote">
+* User-override allocation based on management capex commentary and industry knowledge. Under Method A (revenue-share), IC EBITDA would be understated by ~$13B/yr and MPC overstated by ~$7B/yr — material valuation shift toward MPC and away from IC.
+</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 4 — PEER SET, MULTIPLES & WACC                 -->
+<!-- ===================================================== -->
+<h2>Section 4 — Peer Set, Multiples & WACC (User-Approved)</h2>
+<table>
+  <tr>
+    <th>Segment</th><th>Peers</th>
+    <th class="num">Bear (P25)</th><th class="num">Base (P50)</th><th class="num">Bull (P75)</th>
+    <th class="num">WACC</th>
+  </tr>
+  <tr>
+    <td>Productivity & Business Processes</td>
+    <td>ORCL, CRM, ADBE, INTU, SAP, NOW</td>
+    <td class="num">18x</td><td class="num">24x</td><td class="num">30x</td>
+    <td class="num">10%</td>
+  </tr>
+  <tr>
+    <td>Intelligent Cloud</td>
+    <td>AMZN¹, GOOGL¹, ORCL (cloud), SNOW, NET, CRWD</td>
+    <td class="num">22x</td><td class="num">30x</td><td class="num">38x</td>
+    <td class="num">11%</td>
+  </tr>
+  <tr>
+    <td>More Personal Computing</td>
+    <td>GOOGL Search proxy, AAPL services, EA, TTWO</td>
+    <td class="num">12x</td><td class="num">16x</td><td class="num">20x</td>
+    <td class="num">9%</td>
+  </tr>
+</table>
+<p class="footnote">¹ Conglomerate proxy for cloud peer. EV/EBITDA NTM. WACCs are stage-default per skill: Mature Growth 10%, High Growth 11%, Maturity 9%.</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 5 — BEAR / BASE / BULL CASES                   -->
+<!-- ===================================================== -->
+<h2>Section 5 — Bear / Base / Bull Cases (Year 1 + Year 2 EBITDA)</h2>
+
+<h3>Productivity & Business Processes</h3>
+<table>
+  <tr><th>Case</th><th class="num">YoY Growth</th><th class="num">EBITDA Margin</th><th class="num">Y1 Revenue</th><th class="num">Y1 EBITDA</th><th class="num">Y2 Revenue</th><th class="num">Y2 EBITDA</th></tr>
+  <tr><td>Bear</td><td class="num">10.4%</td><td class="num">58.9%</td><td class="num">$149.4B</td><td class="num">$87.9B</td><td class="num">$165.0B</td><td class="num">$97.1B</td></tr>
+  <tr><td>Base</td><td class="num"><strong>16.3%</strong></td><td class="num"><strong>63.9%</strong></td><td class="num">$157.3B</td><td class="num"><strong>$100.4B</strong></td><td class="num">$182.9B</td><td class="num"><strong>$116.8B</strong></td></tr>
+  <tr><td>Bull (+SBC)</td><td class="num">16.9%</td><td class="num">65.8%</td><td class="num">$158.2B</td><td class="num">$109.3B</td><td class="num">$184.9B</td><td class="num">$127.8B</td></tr>
+</table>
+
+<h3>Intelligent Cloud</h3>
+<table>
+  <tr><th>Case</th><th class="num">YoY Growth</th><th class="num">EBITDA Margin</th><th class="num">Y1 Revenue</th><th class="num">Y1 EBITDA</th><th class="num">Y2 Revenue</th><th class="num">Y2 EBITDA</th></tr>
+  <tr><td>Bear</td><td class="num">18.7%</td><td class="num">62.1%</td><td class="num">$152.3B</td><td class="num">$94.6B</td><td class="num">$180.8B</td><td class="num">$112.2B</td></tr>
+  <tr><td>Base</td><td class="num"><strong>28.1%</strong></td><td class="num"><strong>63.9%</strong></td><td class="num">$164.4B</td><td class="num"><strong>$105.0B</strong></td><td class="num">$210.6B</td><td class="num"><strong>$134.5B</strong></td></tr>
+  <tr><td>Bull (+SBC)</td><td class="num">29.6%</td><td class="num">66.0%</td><td class="num">$166.4B</td><td class="num">$114.8B</td><td class="num">$215.7B</td><td class="num">$148.9B</td></tr>
+</table>
+
+<h3>More Personal Computing</h3>
+<table>
+  <tr><th>Case</th><th class="num">YoY Growth</th><th class="num">EBITDA Margin</th><th class="num">Y1 Revenue</th><th class="num">Y1 EBITDA</th><th class="num">Y2 Revenue</th><th class="num">Y2 EBITDA</th></tr>
+  <tr><td>Bear</td><td class="num neg">-2.7%</td><td class="num">22.7%</td><td class="num">$53.2B</td><td class="num">$12.0B</td><td class="num">$51.7B</td><td class="num">$11.7B</td></tr>
+  <tr><td>Base</td><td class="num"><strong>2.4%</strong></td><td class="num"><strong>30.4%</strong></td><td class="num">$56.0B</td><td class="num"><strong>$17.0B</strong></td><td class="num">$57.3B</td><td class="num"><strong>$17.4B</strong></td></tr>
+  <tr><td>Bull¹ (+SBC)</td><td class="num">9.2%</td><td class="num">33.6%</td><td class="num">$59.7B</td><td class="num">$22.1B</td><td class="num">$65.2B</td><td class="num">$24.2B</td></tr>
+</table>
+<p class="footnote">¹ MPC bull uses last-4Q best YoY (+9.2%) rather than Q1-25's +16.8% (Activision acquisition lap; non-recurring).</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 6 — BRIDGE TO EQUITY VALUE (METHOD A PRIMARY)  -->
+<!-- ===================================================== -->
+<h2>Section 6 — Bridge to Equity Fair Value (2Y Discounted, PRIMARY)</h2>
+<table>
+  <tr><th>Segment / Bridge Item</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th></tr>
+  <tr><td>PBP — Year 2 EV (EBITDA × Multiple)</td><td class="num">$1748B</td><td class="num">$2802B</td><td class="num">$3834B</td></tr>
+  <tr><td>PBP — PV (today, /1.10²)</td><td class="num">$1445B</td><td class="num">$2316B</td><td class="num">$3168B</td></tr>
+  <tr><td>IC — Year 2 EV</td><td class="num">$2469B</td><td class="num">$4036B</td><td class="num">$5658B</td></tr>
+  <tr><td>IC — PV (today, /1.11²)</td><td class="num">$2004B</td><td class="num">$3276B</td><td class="num">$4592B</td></tr>
+  <tr><td>MPC — Year 2 EV</td><td class="num">$141B</td><td class="num">$279B</td><td class="num">$484B</td></tr>
+  <tr><td>MPC — PV (today, /1.09²)</td><td class="num">$118B</td><td class="num">$235B</td><td class="num">$407B</td></tr>
+  <tr style="font-weight:600;background:#0f1420;"><td>Σ Segment EVs (today)</td><td class="num">$3567B</td><td class="num">$5826B</td><td class="num">$8167B</td></tr>
+  <tr><td>+ Cash & non-equity-method investments</td><td class="num">+$101B</td><td class="num">+$101B</td><td class="num">+$101B</td></tr>
+  <tr><td>+ OpenAI investment (book / book / FV)</td><td class="num">+$11B</td><td class="num">+$11B</td><td class="num"><span class="override">+$135B</span></td></tr>
+  <tr><td>− Total long-term debt (incl. current portion)</td><td class="num">−$40B</td><td class="num">−$40B</td><td class="num">−$40B</td></tr>
+  <tr style="font-weight:700;background:#141926;"><td>Equity Fair Value</td><td class="num">$3639B</td><td class="num">$5898B</td><td class="num">$8363B</td></tr>
+  <tr><td>÷ Diluted shares (7,445M)</td><td class="num"></td><td class="num"></td><td class="num"></td></tr>
+  <tr style="font-weight:700;background:#0f1420;color:#00e5ff;"><td>Fair Value per Share</td><td class="num">$488.73</td><td class="num">$792.19</td><td class="num">$1123.30</td></tr>
+  <tr><td>vs. current $407.78</td><td class="num pos">+19.9%</td><td class="num pos"><strong>+94.3%</strong></td><td class="num pos">+175.5%</td></tr>
+</table>
+
+<!-- ===================================================== -->
+<!-- SECTION 7 — METHOD COMPARISON (NTM × Multiple)         -->
+<!-- ===================================================== -->
+<h2>Section 7 — Method Comparison (NTM × Multiple Sanity Check)</h2>
+<table>
+  <tr><th>Case</th><th class="num">Method A (2Y disc)</th><th class="num">Method B (NTM × mult)</th><th class="num">A − B</th><th>Interpretation</th></tr>
+  <tr><td>Bear</td><td class="num">$488.73</td><td class="num">$521.09</td><td class="num">$-32.36</td><td class="dim">Bear g (10.4%/18.7%/-2.7%) below WACC discount → A < B</td></tr>
+  <tr><td>Base</td><td class="num"><strong>$792.19</strong></td><td class="num"><strong>$793.15</strong></td><td class="num">$-0.96</td><td class="dim">Methods converge — multiple correctly prices forward expectations</td></tr>
+  <tr><td>Bull</td><td class="num">$1123.30</td><td class="num">$1112.30</td><td class="num">$+10.99</td><td class="dim">Aggressive g (29.6% IC) outpaces 11% WACC discount</td></tr>
+</table>
+<p class="footnote">Methods converge in the base case (within $1/share). The 2Y-discounted method (A) is the headline; NTM × multiple (B) shown for sanity. Tight convergence indicates the multiples appropriately price forward-year compounding for this growth profile.</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 8 — PROBABILITY-WEIGHTED FAIR VALUE            -->
+<!-- ===================================================== -->
+<h2>Section 8 — Probability-Weighted Fair Value</h2>
+<table>
+  <tr><th>Weighting</th><th class="num">Bear</th><th class="num">Base</th><th class="num">Bull</th><th class="num">P-Weighted FV</th><th class="num">Upside</th></tr>
+  <tr><td>Default (25 / 50 / 25)</td><td class="num">25% × $489</td><td class="num">50% × $792</td><td class="num">25% × $1123</td><td class="num"><strong>$799.10</strong></td><td class="num pos"><strong>+96.0%</strong></td></tr>
+  <tr><td>Conservative (40 / 50 / 10)</td><td class="num">40%</td><td class="num">50%</td><td class="num">10%</td><td class="num">$703.92</td><td class="num pos">+72.6%</td></tr>
+  <tr><td>Aggressive (10 / 50 / 40)</td><td class="num">10%</td><td class="num">50%</td><td class="num">40%</td><td class="num">$894.29</td><td class="num pos">+119.3%</td></tr>
+</table>
+
+<!-- ===================================================== -->
+<!-- SECTION 9 — CAPITAL STRUCTURE                          -->
+<!-- ===================================================== -->
+<h2>Section 9 — Capital Structure Health Check</h2>
+<table>
+  <tr><th>#</th><th>Metric</th><th class="num">Value</th><th class="num">Threshold</th><th>Flag</th></tr>
+  <tr><td>1</td><td>Net Debt / TTM EBITDA</td><td class="num">−0.21x (NET CASH)</td><td class="num">&lt;2.0x = Green</td><td><span class="badge-green">GREEN</span></td></tr>
+  <tr><td>2</td><td>TTM EBITDA / Interest Expense</td><td class="num">62.7x</td><td class="num">&gt;8x = Green</td><td><span class="badge-green">GREEN</span></td></tr>
+  <tr><td>3</td><td>Maturity wall (FY26+FY27 / total LT debt)</td><td class="num">25%</td><td class="num">&lt;30% = Amber-bound</td><td><span class="badge-amber">AMBER</span></td></tr>
+  <tr><td>4</td><td>Liquidity (cash + revolver / 12mo obligations)</td><td class="num">&gt;5x</td><td class="num">&gt;2x = Green</td><td><span class="badge-green">GREEN</span></td></tr>
+  <tr><td>5</td><td>Diluted share count 3yr CAGR</td><td class="num">−0.4%</td><td class="num">&lt;3% = Green</td><td><span class="badge-green">GREEN</span></td></tr>
+</table>
+<p class="footnote">
+Notable additional: Finance lease obligations (datacenter leases) total ~$50B+ and growing as MSFT signs long-term Fairwater datacenter deals. Treated as commitments rather than debt under GAAP. AAA credit rating (10-Q Note 5: <em>"As of March 31, 2026, our long-term unsecured debt rating was AAA"</em>). Refi delta concern is muted: $12.25B maturing FY26-FY27 at low coupon, but refi at current AAA ~5% rate would cost ~$0.4B/yr incremental interest = 0.2% of EBITDA. Immaterial.
+</p>
+
+<!-- ===================================================== -->
+<!-- SECTION 10 — FCF REALISM CHECK                         -->
+<!-- ===================================================== -->
+<h2>Section 10 — FCF Realism Check (5-Year Consolidated DCF)</h2>
+<p style="font-size:12px;color:#8b9ab5;margin-bottom:12px;">
+Auto-triggered: capex/EBITDA jumped from 40% (FY24) → 50% (FY25) → projected ~85% (CY26 guidance $190B). The market sold off MSFT 3.93% today on this exact concern. The check tests whether the SOTP's implied 5-year FCF trajectory is credible.
+</p>
+
+<table>
+  <tr><th>Year</th><th class="num">EBITDA</th><th class="num">Capex</th><th class="num">D&A</th><th class="num">Cash Tax</th><th class="num">FCF</th><th class="num">PV @ 10.5%</th></tr>
+  <tr><td>Y1</td><td class="num">$222.5B</td><td class="num">$190.0B</td><td class="num">$43.3B</td><td class="num">$35.1B</td><td class="num neg">$-2.6B</td><td class="num neg">$-2.4B</td></tr>
+  <tr><td>Y2</td><td class="num">$268.7B</td><td class="num">$176.3B</td><td class="num">$52.3B</td><td class="num">$42.4B</td><td class="num pos">$50.0B</td><td class="num pos">$40.9B</td></tr>
+  <tr><td>Y3</td><td class="num">$312.6B</td><td class="num">$162.7B</td><td class="num">$60.9B</td><td class="num">$49.3B</td><td class="num pos">$100.6B</td><td class="num pos">$74.6B</td></tr>
+  <tr><td>Y4</td><td class="num">$349.8B</td><td class="num">$149.0B</td><td class="num">$68.1B</td><td class="num">$55.2B</td><td class="num pos">$145.6B</td><td class="num pos">$97.7B</td></tr>
+  <tr><td>Y5</td><td class="num">$375.9B</td><td class="num">$135.3B</td><td class="num">$73.2B</td><td class="num">$59.3B</td><td class="num pos">$181.2B</td><td class="num pos">$110.0B</td></tr>
+  <tr style="font-weight:600;background:#0f1420;"><td>Σ PV(FCF Y1-Y5)</td><td class="num" colspan="5"></td><td class="num">$321B</td></tr>
+  <tr><td>+ Terminal Value (Y5 EBITDA × 23.3x exit)</td><td class="num" colspan="5">Y5 EBITDA × Exit Mult = $8775B</td><td class="num">$5326B</td></tr>
+  <tr style="font-weight:700;background:#141926;"><td>DCF Enterprise Value</td><td class="num" colspan="5"></td><td class="num">$5647B</td></tr>
+  <tr style="font-weight:700;background:#0f1420;color:#00e5ff;"><td>DCF Fair Value per share</td><td class="num" colspan="5">SOTP base: $792.19/share</td><td class="num">$768.11</td></tr>
+</table>
+
+<div class="pass-flag">
+  <strong>FCF Realism flag: PASS — methods converge</strong> · DCF $768/share vs SOTP base $792/share = gap of -3.0%. Within ±5% convergence threshold. The valuation rests on solid forward FCF assumptions, with terminal multiple compression (exit at 23.3x = base × 0.9) the dominant value driver.
+</div>
+
+<h3>Capex Sensitivity Table</h3>
+<table>
+  <tr><th>Y5 Capex</th><th class="num">% of Default</th><th class="num">DCF Fair Value</th><th class="num">Gap to SOTP Base</th></tr>
+  <tr><td>$108B (normalized aggressive)</td><td class="num">80%</td><td class="num">$774</td><td class="num">−2.3%</td></tr>
+  <tr style="background:#0f1420;font-weight:600;"><td>$135B (default)</td><td class="num">100%</td><td class="num">$768</td><td class="num">−3.0%</td></tr>
+  <tr><td>$162B (capex stays elevated)</td><td class="num">120%</td><td class="num">$762</td><td class="num">−3.8%</td></tr>
+</table>
+
+<h3>Terminal Multiple Sensitivity</h3>
+<table>
+  <tr><th>Exit Multiple</th><th class="num">Y5 EBITDA × Mult</th><th class="num">DCF Fair Value</th><th class="num">Gap to SOTP</th></tr>
+  <tr><td>15.0x (= MSFT current TTM)</td><td class="num">$5638B</td><td class="num">$513</td><td class="num neg">−35.2%</td></tr>
+  <tr><td>20.0x</td><td class="num">$7517B</td><td class="num">$668</td><td class="num neg">−15.6%</td></tr>
+  <tr style="background:#0f1420;font-weight:600;"><td>23.3x (default)</td><td class="num">$8775B</td><td class="num">$768</td><td class="num">−3.0%</td></tr>
+  <tr><td>25.0x</td><td class="num">$9397B</td><td class="num">$818</td><td class="num pos">+3.3%</td></tr>
+</table>
+
+<div class="caveat">
+  <strong>Most informative finding:</strong> Terminal multiple is the single largest leverage point. If MSFT continues trading at its current ~15x EBITDA, the implied DCF fair value is $513/share — meaningfully below SOTP base $792 but still +25% above current $407.78. The SOTP's bull case requires the market to re-rate MSFT toward peer P50 multiples; the bear case $489 survives even at peer P25.
+</div>
+
+<!-- ===================================================== -->
+<!-- SECTION 11 — METHODOLOGY & DATA PROVENANCE             -->
+<!-- ===================================================== -->
+<h2>Section 11 — Methodology & Data Provenance</h2>
+
+<h3>Source Hierarchy</h3>
+<p style="font-size:12px;color:#8b9ab5;">
+1. EDGAR filings (authoritative): FY26 Q3 10-Q (filed Apr 29, 2026); FY25 10-K (filed Jul 30, 2025). 
+2. Earnings package: FY26 Q3 press release, financial statement xlsx, metrics xlsx, transcript, slides.
+3. Web search: current MSFT price ($407.78), peer multiples (P25/P50/P75 ranges).
+</p>
+
+<h3>Key Methodology Choices</h3>
+<table>
+  <tr><th>Decision</th><th>Choice</th><th>Rationale</th></tr>
+  <tr><td>SOTP vs Consolidated</td><td>SOTP</td><td>3 reportable segments, none &gt;90%; full disclosure available</td></tr>
+  <tr><td>D&A allocation method</td><td><strong class="override">Method B (capex-weighted)</strong></td><td>Q3-26 transcript: 2/3 capex = GPUs/CPUs (Azure infra); IC dominates capex</td></tr>
+  <tr><td>IC stage classification</td><td>High Growth</td><td>Azure +40%/+39% CC accelerating; AI run-rate $37B at +123% YoY; metric: EV/EBITDA</td></tr>
+  <tr><td>MPC bull YoY override</td><td><strong class="override">Last-4Q best (9.2%)</strong> not 8Q max (16.8%)</td><td>Q1-25 +16.8% was Activision lap; non-recurring</td></tr>
+  <tr><td>OpenAI carrying value</td><td><strong class="override">Bear/Bull split: book ($11B) vs FV ($135B)</strong></td><td>27% × ~$500B implied private mark; book reflects HLBV equity-method, not market</td></tr>
+  <tr><td>Multiple range</td><td>Peer P25 / P50 / P75</td><td>User-approved peer set per segment</td></tr>
+  <tr><td>WACC</td><td>Stage-default (10/11/9%)</td><td>Per-segment per skill defaults; consolidated weighted = 10.5%</td></tr>
+  <tr><td>SBC treatment</td><td>Bull: street addback. Base/Bear: strict</td><td>SBC ~$12.3B TTM allocated revenue-share (function-level not disclosed)</td></tr>
+  <tr><td>Probability weighting</td><td>25 / 50 / 25 default</td><td>Conservative-to-neutral; sensitivity shown</td></tr>
+  <tr><td>Year 2 default</td><td>Sustained regime</td><td>Per skill default; no taper applied</td></tr>
+</table>
+
+<h3>Critical Data Points (Filings-Anchored)</h3>
+<table>
+  <tr><th>Metric</th><th class="num">Value</th><th>Source</th></tr>
+  <tr><td>Q3-26 Total Revenue</td><td class="num">$82.886B</td><td>10-Q Income Statement</td></tr>
+  <tr><td>Q3-26 OpInc by segment (PBP/IC/MPC)</td><td class="num">$20.97B / $13.75B / $3.67B</td><td>FinancialStatement xlsx Segment History</td></tr>
+  <tr><td>Q3-26 D&A</td><td class="num">$10.17B (9mo: $27.51B)</td><td>10-Q Cash Flow Statement</td></tr>
+  <tr><td>Q3-26 Capex (incl. finance leases)</td><td class="num">$31.9B (9mo: $104.3B)</td><td>FinancialStatement xlsx CapEx + transcript</td></tr>
+  <tr><td>Cash + ST investments</td><td class="num">$78.27B</td><td>10-Q Balance Sheet</td></tr>
+  <tr><td>LT investments (incl. equity method)</td><td class="num">$33.68B</td><td>10-Q Balance Sheet</td></tr>
+  <tr><td>OpenAI equity method (HLBV)</td><td class="num">$11.1B (of $11.8B funded)</td><td>10-Q Note 1 + Note 4</td></tr>
+  <tr><td>Total long-term debt</td><td class="num">$40.26B (LT $31.42B + current $8.84B)</td><td>10-Q Balance Sheet</td></tr>
+  <tr><td>Diluted shares (weighted avg Q3-26)</td><td class="num">7,445M</td><td>10-Q Income Statement</td></tr>
+  <tr><td>Azure growth Q3-26</td><td class="num">+40% / +39% CC</td><td>Q3-26 Investor Metrics</td></tr>
+  <tr><td>Commercial RPO</td><td class="num">$627B (+99% YoY)</td><td>Q3-26 Press Release</td></tr>
+  <tr><td>AI revenue annual run-rate</td><td class="num">$37B (+123% YoY)</td><td>Q3-26 Press Release</td></tr>
+  <tr><td>CY2026 capex guidance</td><td class="num">~$190B (incl. $25B component pricing)</td><td>Q3-26 Transcript</td></tr>
+  <tr><td>Long-term debt rating</td><td class="num">AAA</td><td>10-Q Note 5</td></tr>
+</table>
+
+<h3>What's NOT Disclosed (Allocated)</h3>
+<p style="font-size:12px;color:#8b9ab5;">
+Segment-level D&A, capex, and SBC are not disclosed by Microsoft (10-K Note 18: <em>"It is impracticable for us to separately identify the amount of amortization and depreciation by segment"</em>). All three were allocated:
+</p>
+<ul style="font-size:12px; color:#8b9ab5; padding-left:20px; margin-bottom:14px;">
+  <li>D&A allocated <span class="allocated">capex-weighted (80/15/5)</span> — Method B per Phase 4 routing</li>
+  <li>SBC allocated <span class="allocated">revenue-share</span> — function-weighted preferred but not disclosed</li>
+  <li>Capex implicitly treated as flowing to IC for Q4 capex projection</li>
+</ul>
+
+<h3>Verdict & Caveats</h3>
+<p style="font-size:13px;color:#e2e8f0; margin-bottom:14px; line-height:1.6;">
+<strong>UNDERVALUED</strong> — Base case fair value <strong>$792/share</strong> (+94.3% upside) under user-approved peer P50 multiples. Even bear case $489 (peer P25 + worst observed margin/growth) implies +20% upside. FCF realism check converges with SOTP within 3% (PASS). Capital structure GREEN with net cash position and AAA credit rating.
+</p>
+
+<div class="caveat">
+  <strong>Three caveats Bryan should weigh:</strong>
+  <ul style="padding-left:20px;margin-top:6px;font-size:12px;line-height:1.6;">
+    <li><strong>Multiple discount:</strong> MSFT trades at 16.2x TTM EBITDA vs peer P50 implied ~31x. The 60% discount reflects market anxiety on AI capex ROI. If peers re-rate downward 30%, fair value ≈ current price.</li>
+    <li><strong>Terminal multiple is the lever:</strong> 94% of DCF value is in the terminal. At 15x exit (current MSFT trading multiple), DCF fair value = $513/share — still +25% upside, but bull case collapses.</li>
+    <li><strong>OpenAI fair value gap:</strong> Bull case includes $135B vs base $11B book = ~$17/share differential. The $135B mark is implied from a private secondary; not a disclosed valuation. Treat as upside option, not base.</li>
+  </ul>
+</div>
+
+<p class="footnote" style="margin-top:24px;">
+Generated 2026-04-30 21:05 · MSFT_VAL · sotp-fundamental-valuation skill · standalone fundamental valuation, no macro overlay applied · user applies regime context manually.
+</p>
+
+</body>
+</html>

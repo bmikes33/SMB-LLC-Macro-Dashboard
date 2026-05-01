@@ -1,51 +1,107 @@
 {
-  "lastUpdated": "2026-05-01T05:30:27.398024+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 05:30 AM UTC",
+  "lastUpdated": "2026-05-01T07:55:46.157853+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 07:55 AM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed signals with Japan intervening to support the yen against the dollar, oil prices rising on Middle East conflict concerns reaching $105-110 range, and crypto markets experiencing significant outflows with Bitcoin ETFs losing nearly $500M. Equity markets ended April strong while bonds climbed alongside stocks as oil pulled back from intraday highs.",
+    "macroSummary": "Markets show mixed signals with oil rising to $105.50 on Middle East conflict concerns while tech resilience supports Asian equities. Bitcoin faces pressure near $77K resistance with ETF outflows exceeding $490M, and the yen strengthened after Japanese intervention though the dollar maintains broader strength.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar weakness and equity strength support risk-on, but oil spike to $110+ and crypto outflows suggest underlying stress emerging in risk assets.",
+    "regimePressureReason": "Geopolitical risk (oil spike, Middle East conflict) and crypto weakness create risk-off pressures while tech resilience and bond/stock gains maintain risk-on elements.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "< 155",
-        "signal": "Japan intervened to boost yen, suggesting USDJPY may be approaching carry unwind levels"
+        "indicator": "Oil",
+        "level": "Spike to $105.50",
+        "signal": "Oil rises on prolonged Middle East conflict concerns, testing risk-on regime resilience"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil spiked to intraday high of $110.93 on Middle East conflict escalation concerns",
+        "signal": "Bitcoin ETF outflows top $490M as rally loses momentum near $77K resistance",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETFs saw massive $490M+ outflows with repeated profit-taking near $77K resistance",
+        "signal": "Oil prices surge to $105.50 with no end in sight for Iran war, raising stagflation risks",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Japan conducted currency intervention to boost yen, suggesting stress in carry trade dynamics",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Dollar rises despite yen intervention, maintaining safe-haven bid",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar tumbled broadly after Japanese intervention while bonds and stocks climbed together",
+        "signal": "Asian equities find support from tech resilience as bonds and stocks climb",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US stocks ended April strong despite underlying volatility in commodities and crypto",
-        "tag": "SUPPORTS"
+        "signal": "Gold holds firm as dollar weakens in some crosses, mixed safe-haven flows",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely for further yen strength that could trigger carry unwind threshold < 155",
-      "Watch for oil volatility spillover into equity markets if Middle East tensions escalate further",
-      "Consider BMNR ladder adjustments if crypto weakness broadens to ETH given correlation patterns"
+      "Monitor BMNR ladder for crypto weakness spillover as Bitcoin faces key resistance rejection",
+      "Watch oil volatility impact on growth/inflation expectations for Maturity sector positioning",
+      "Assess if geopolitical risk premium requires defensive positioning adjustments"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Rises After Gains on Wall Street \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T07:09:00+00:00",
+      "timeDisplay": "7:09 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001118:0/"
+    },
+    {
+      "title": "Bitcoin risks extended retreat as April rally was futures-driven: CryptoQuant",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T06:53:44+00:00",
+      "timeDisplay": "6:53 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:fa66ef35c094b:0-bitcoin-risks-extended-retreat-as-april-rally-was-futures-driven-cryptoquant/"
+    },
+    {
+      "title": "Bitcoiners launch 'The Bitcoin Evidence Base' to stamp out FUD",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T06:51:37+00:00",
+      "timeDisplay": "6:51 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:092e98d6a094b:0-bitcoiners-launch-the-bitcoin-evidence-base-to-stamp-out-fud/"
+    },
+    {
+      "title": "Dollar Rises as No End in Sight For Iran War \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T06:38:00+00:00",
+      "timeDisplay": "6:38 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501001028:0/"
+    },
+    {
+      "title": "\u201cSell in May and Go Away\u201d? Bitcoin Price Could Repeat Its Worst MAY Pattern",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T05:35:38+00:00",
+      "timeDisplay": "5:35 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:0ca1998fa094b:0-sell-in-may-and-go-away-bitcoin-price-could-repeat-its-worst-may-pattern/"
+    },
+    {
+      "title": "Asia shares find hope in tech resilience, oil off peak",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T05:34:48+00:00",
+      "timeDisplay": "5:34 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E01E:0-asia-shares-find-hope-in-tech-resilience-oil-off-peak/"
+    },
+    {
+      "title": "Bitcoin\u2019s surge to $77K pressures shorts, but absent spot and long leverage caps rallies",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T05:34:10+00:00",
+      "timeDisplay": "5:34 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:6e025b719094b:0-bitcoin-s-surge-to-77k-pressures-shorts-but-absent-spot-and-long-leverage-caps-rallies/"
+    },
     {
       "title": "Never mind the oil, feel the earnings!",
       "source": "reuters",
@@ -55,7 +111,7 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41E01U:0-never-mind-the-oil-feel-the-earnings/"
     },
     {
-      "title": "Yen steadies after Japan intervention; traders brace for more action",
+      "title": "Yen steadies after Japan intervention, traders brace for more action",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
@@ -439,14 +495,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D1DO:0-inflation-is-high-but-so-is-fomo/"
     },
     {
-      "title": "Eric Trump Gives His Unsurprising Bitcoin Prediction in Las Vegas",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T17:46:29+00:00",
-      "timeDisplay": "5:46 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:cfd3f831d094b:0-eric-trump-gives-his-unsurprising-bitcoin-prediction-in-las-vegas/"
-    },
-    {
       "title": "Dollar slides against yen after Japan's reported currency intervention",
       "source": "reuters",
       "color": "#ff6d00",
@@ -511,22 +559,6 @@
       "link": "https://www.tradingview.com/news/macenews:02b848d5e094b:0-us-atlanta-fed-gdpnow-model-sees-us-2q-gdp-growth-rate-at-3-7-in-first-estimate/"
     },
     {
-      "title": "Bitcoin Coinbase Premium threatens bear flag repeat with BTC price at $76K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:01:22+00:00",
-      "timeDisplay": "4:01 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b22624ffd094b:0-bitcoin-coinbase-premium-threatens-bear-flag-repeat-with-btc-price-at-76k/"
-    },
-    {
-      "title": "Bitcoin And XRP Are Seeing A Surge In Adoption, Here Are The Numbers",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T16:00:47+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:849f84b9a094b:0-bitcoin-and-xrp-are-seeing-a-surge-in-adoption-here-are-the-numbers/"
-    },
-    {
       "title": "Signs of Weaker Energy Demand Fuel Long Liquidation in Crude Prices",
       "source": "barchart",
       "color": "#00e5ff",
@@ -557,14 +589,6 @@
       "timestamp": "2026-04-30T14:40:26+00:00",
       "timeDisplay": "2:40 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D17N:0-us-stocks-mixed-in-early-trade-after-data-flurry-big-earnings/"
-    },
-    {
-      "title": "Bitcoin miner MARA to acquire Long Ridge in $1.5 billion Ohio gas plant deal",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T14:38:33+00:00",
-      "timeDisplay": "2:38 PM",
-      "link": "https://www.tradingview.com/news/the_block:e07652a39094b:0-bitcoin-miner-mara-to-acquire-long-ridge-in-1-5-billion-ohio-gas-plant-deal/"
     },
     {
       "title": "US EIA NATURAL GAS IN STORAGE +79 BLN CUBIC FEET IN LATEST WEEK FROM PREVIOUS WEEK (VS. +83 BLN MARKETS EXPECTED)",
@@ -621,30 +645,6 @@
       "timestamp": "2026-04-30T13:40:00+00:00",
       "timeDisplay": "1:40 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260430011545:0/"
-    },
-    {
-      "title": "Solid Canada GDP Data Gives Bank of Canada Clearance to Mull Rate Hikes \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:35:00+00:00",
-      "timeDisplay": "1:35 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430011447:0/"
-    },
-    {
-      "title": "US growth picks up; PCE inflation is higher but in line with expectations",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-04-30T13:26:05+00:00",
-      "timeDisplay": "1:26 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41D14F:0-us-growth-picks-up-pce-inflation-is-higher-but-in-line-with-expectations/"
-    },
-    {
-      "title": "US 10-Year Yield Eases from 9-Month High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T13:25:15+00:00",
-      "timeDisplay": "1:25 PM",
-      "link": "https://www.tradingview.com/news/te_news:546760:0-us-10-year-yield-eases-from-9-month-high/"
     }
   ]
 }

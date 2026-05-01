@@ -1,51 +1,85 @@
 {
-  "lastUpdated": "2026-05-01T20:14:30.123831+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 08:14 PM UTC",
+  "lastUpdated": "2026-05-01T21:13:25.509156+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 09:13 PM UTC",
   "articleCount": 75,
-  "currentRegime": "Risk-On",
-  "currentRegimeColor": "#00e676",
-  "regimeConfidence": "HIGH",
-  "regimeAsOf": "2026-04-18T12:00:00-05:00",
+  "currentRegime": "Reflation",
+  "currentRegimeColor": "#00e5ff",
+  "regimeConfidence": "MEDIUM",
+  "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed broad strength with Bitcoin breaking $78,000 amid a $200M short squeeze, US stocks adding $5 trillion in April, and the dollar hitting two-month lows. Oil rose for a second week on Middle East tensions while gold gained on Iranian peace proposal hopes, though the Atlanta Fed revised Q2 GDP estimates down to 3.5%.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Headlines consistently show risk-on behavior with crypto rallies, equity strength, dollar weakness, and commodities rising on geopolitical developments rather than safe-haven flows.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar hits two-month low, moving further from risk-off threshold of 100"
-      }
-    ],
+    "macroSummary": "Markets show mixed signals with S&P and Nasdaq hitting records while oil rises for a second week amid Middle East tensions. Bitcoin breaks $78,000 on risk-on sentiment as Iranian peace proposals emerge, while the Atlanta Fed cuts Q2 GDP estimates to 3.5% from 3.7%.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Equity records and Bitcoin strength suggest risk-on appetite, but sustained oil rises and Iranian tensions maintain reflation pressures while GDP growth estimates are moderating.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Bitcoin breaks $78,000 with $200M short squeeze indicating strong risk appetite",
+        "signal": "S&P and Nasdaq close at record highs with $5 trillion added in April after March selloff",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US stocks added $5 trillion in April after March selloff, showing sustained risk-on flows",
+        "signal": "Oil rises for second consecutive week amid Middle East standoff and Iranian tensions",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar hits two-month lows, moving away from DXY 100+ risk-off threshold",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin breaks $78,000 on risk-on shift and Iranian peace signals, triggering $200M short squeeze",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil rises on Middle East tensions while gold gains on peace hopes, showing nuanced commodity positioning",
+        "signal": "Atlanta Fed GDPNow model cuts Q2 GDP estimate to 3.5% from 3.7% after latest economic reports",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Atlanta Fed revises Q2 GDP down to 3.5% from 3.7%, slight growth deceleration",
-        "tag": "NEUTRAL"
+        "signal": "Ethereum shows strength with $1 billion buying despite hawkish Fed expectations",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "BMNR ladder: Consider rolling up strikes given crypto strength and risk-on momentum",
-      "Monitor DXY weakness continuation - further dollar decline supports risk-on thesis",
-      "Watch for any volatility pickup despite current strength - VIX remains well below 22 threshold"
+      "Monitor oil price action closely - sustained strength supports reflation thesis but peace signals could reverse quickly",
+      "BMNR ladder benefits from ETH strength - consider tightening strikes on new puts given crypto risk-on momentum",
+      "Watch for divergence between equity highs and underlying growth estimates - GDP revision suggests economic momentum may be cooling"
     ]
   },
   "articles": [
+    {
+      "title": "ETF League Tables: Big Names Benefit as Investors Diversify",
+      "source": "etfcom",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T21:00:04+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/etfcom:88481daa2094b:0-etf-league-tables-big-names-benefit-as-investors-diversify/"
+    },
+    {
+      "title": "Global markets tread water as yen moves dominate currency trading",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T20:55:08+00:00",
+      "timeDisplay": "8:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0SY:0-global-markets-tread-water-as-yen-moves-dominate-currency-trading/"
+    },
+    {
+      "title": "S&P, Nasdaq close at records as Amgen weighs on Dow",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T20:24:08+00:00",
+      "timeDisplay": "8:24 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0T4:0-s-p-nasdaq-close-at-records-as-amgen-weighs-on-dow/"
+    },
+    {
+      "title": "US stocks rally could find fuel in earnings, jobs data amid surging oil prices",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T20:15:39+00:00",
+      "timeDisplay": "8:15 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0PM:0-us-stocks-rally-could-find-fuel-in-earnings-jobs-data-amid-surging-oil-prices/"
+    },
+    {
+      "title": "Bitcoin Dominance Nears Death Cross, Ethereum Could Trigger Altcoin Season",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T20:04:12+00:00",
+      "timeDisplay": "8:04 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:961376a2a094b:0-bitcoin-dominance-nears-death-cross-ethereum-could-trigger-altcoin-season/"
+    },
     {
       "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
       "source": "dow-jones",
@@ -253,14 +287,6 @@
       "timestamp": "2026-05-01T15:41:37+00:00",
       "timeDisplay": "3:41 PM",
       "link": "https://www.tradingview.com/news/stockstory:ac7ead56b094b:0-why-strategy-mstr-stock-is-trading-up-today/"
-    },
-    {
-      "title": "Global markets tread water as yen moves dominate currency trading",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T15:41:25+00:00",
-      "timeDisplay": "3:41 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0LM:0-global-markets-tread-water-as-yen-moves-dominate-currency-trading/"
     },
     {
       "title": "Gold rises as Iranian proposal raises hopes for US-Tehran deal",
@@ -613,38 +639,6 @@
       "timestamp": "2026-05-01T05:34:48+00:00",
       "timeDisplay": "5:34 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E01E:0-asia-shares-find-hope-in-tech-resilience-oil-off-peak/"
-    },
-    {
-      "title": "Dollar set for sharp weekly loss versus yen after Japan steps in",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T04:15:36+00:00",
-      "timeDisplay": "4:15 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-dollar-set-for-sharp-weekly-loss-versus-yen-after-japan-steps-in/"
-    },
-    {
-      "title": "Ethereum Price Holds Losses Under $2,300, Recovery Momentum Still Weak",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T03:18:23+00:00",
-      "timeDisplay": "3:18 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:dc0c3109a094b:0-ethereum-price-holds-losses-under-2-300-recovery-momentum-still-weak/"
-    },
-    {
-      "title": "Ethereum Pullback Sparks $1B Buying Frenzy Despite Hawkish Fed Warning on Inflation \u2014 What Changed?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T03:00:26+00:00",
-      "timeDisplay": "3:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:998aa03f6094b:0-ethereum-pullback-sparks-1b-buying-frenzy-despite-hawkish-fed-warning-on-inflation-what-changed/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Decline",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T02:29:47+00:00",
-      "timeDisplay": "2:29 AM",
-      "link": "https://www.tradingview.com/news/te_news:546944:0-us-10-year-yield-holds-decline/"
     }
   ]
 }

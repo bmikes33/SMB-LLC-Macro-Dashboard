@@ -1,45 +1,91 @@
 {
-  "lastUpdated": "2026-05-01T16:54:34.264521+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 04:54 PM UTC",
+  "lastUpdated": "2026-05-01T17:56:55.175401+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 05:56 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Manufacturing data shows mixed signals with PMI beating expectations at 54.5 but employment weakness persisting and prices paid hitting four-year highs. Fed officials reiterate dissents on easing bias while markets posted strong April gains despite inflation concerns.",
+    "macroSummary": "Economic data shows mixed signals with ISM manufacturing steady but employment weakening and prices paid hitting 4-year highs, while markets rally with US stocks adding $5 trillion in April and bitcoin approaching $80k. Dollar hits two-month lows and 10-year yields pull back as crypto-equity correlation loosens and gold rises on geopolitical developments.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Manufacturing employment contraction deepening, prices paid at highest since April 2022, and multiple Fed dissents against easing bias signal building inflationary pressures that challenge risk-on sustainability.",
-    "thresholdWatches": [],
+    "regimePressureReason": "ISM prices paid index at 4-year highs (84.6 vs 78.3) with weakening employment signals early reflation pressures that could push rates volatility toward the MOVE > 100 threshold.",
+    "thresholdWatches": [
+      {
+        "indicator": "MOVE",
+        "level": "> 100",
+        "signal": "ISM prices paid hitting 4-year highs with manufacturing employment declining suggests stagflationary pressures building"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "ISM manufacturing employment index falls to 46.4 from 48.7, deepest contraction in months with ISM noting stubborn below-50 readings",
+        "signal": "ISM prices paid index jumps to 84.6 from 78.3, highest since April 2022, signaling inflationary pressures",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Manufacturing prices paid index surges to 84.6 from 78.3, highest level since April 2022 inflation peak",
+        "signal": "Manufacturing employment index falls to 46.4 from 48.7, described as 'stubborn' and 'at risk' by ISM's Spence",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Multiple Fed officials (Kashkari, Logan, Hammack) reiterate dissents on easing bias, citing elevated uncertainty and two-sided risks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US stocks added $5 trillion in April after March rout with S&P 500 breakout suggesting rally continuation",
+        "signal": "US stocks added $5 trillion in April after March selloff with bitcoin approaching $80k amid $200M short squeeze",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar hits two-month low while 10-year yield pulls back, consistent with risk-on flows",
-        "tag": "SUPPORTS"
+        "signal": "Dollar hits two-month low while 10-year yields pull back despite inflationary manufacturing data",
+        "tag": "MIXED"
+      },
+      {
+        "signal": "Crypto Fear and Greed Index returns to neutral after brief dip, bitcoin-equity correlation loosening",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as employment weakness + price pressures create stagflation risk that could pressure crypto correlations",
-      "Consider reducing Maturity overweight as manufacturing employment contraction threatens defensive thesis",
-      "Watch for any Vol group indicators approaching thresholds as inflationary pressures build policy uncertainty"
+      "Monitor MOVE index closely - ISM price pressures could trigger rates volatility above 100 threshold",
+      "Consider reducing BMNR ladder size if stagflationary mix (high prices + weak employment) persists",
+      "Watch for any follow-through in dollar weakness - sustained DXY decline supports risk-on but price pressures complicate"
     ]
   },
   "articles": [
+    {
+      "title": "Paradigm researcher proposes timestamp \u2018escape hatch\u2019 to protect Satoshi-era bitcoin from quantum threats",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:44:32+00:00",
+      "timeDisplay": "5:44 PM",
+      "link": "https://www.tradingview.com/news/the_block:4bad5e4f2094b:0-paradigm-researcher-proposes-timestamp-escape-hatch-to-protect-satoshi-era-bitcoin-from-quantum-threats/"
+    },
+    {
+      "title": "Crypto 'Fear and Greed Index' Returns to Neutral Reading After Brief Dip \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:37:00+00:00",
+      "timeDisplay": "5:37 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501005868:0/"
+    },
+    {
+      "title": "Ethereum Shows Strength With $1 Billion In Buying Despite Hawkish Fed",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:30:04+00:00",
+      "timeDisplay": "5:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:a6e2a3352094b:0-ethereum-shows-strength-with-1-billion-in-buying-despite-hawkish-fed/"
+    },
+    {
+      "title": "Russell Rank Day in the books",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-01T17:29:58+00:00",
+      "timeDisplay": "5:29 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0PL:0-russell-rank-day-in-the-books/"
+    },
+    {
+      "title": "Bitcoin Rises Toward $80,000 After Oil Drops On Iran Peace Signals \u2013 Triggers $200 Million Short Squeeze",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T17:12:59+00:00",
+      "timeDisplay": "5:12 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:5061d56c9094b:0/"
+    },
     {
       "title": "Institutional Markets Begin to Trade on Event Contracts \u2014 Market Talk",
       "source": "dow-jones",
@@ -71,6 +117,14 @@
       "timestamp": "2026-05-01T15:50:00+00:00",
       "timeDisplay": "3:50 PM",
       "link": "https://www.tradingview.com/news/macenews:4920cf6a2094b:0-us-atlanta-fed-gdpnow-model-estimates-us-2q-gdp-growth-rate-at-3-5-down-from-3-7-previously-after-latest-economic-reports/"
+    },
+    {
+      "title": "This Memecoin Is Gaining Momentum \u2014 Can It Replicate Dogecoin\u2019s Rally and Jump 25%?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T15:49:39+00:00",
+      "timeDisplay": "3:49 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:e5f0ae8b5094b:0-this-memecoin-is-gaining-momentum-can-it-replicate-dogecoin-s-rally-and-jump-25/"
     },
     {
       "title": "S&P 500 Breakout -- Why History Says the Rally Isn't Over",
@@ -345,14 +399,6 @@
       "link": "https://www.tradingview.com/news/te_news:547046:0-crude-oil-prices-fall/"
     },
     {
-      "title": "Risk is back\u2014and momentum is running the show\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T13:03:56+00:00",
-      "timeDisplay": "1:03 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E0CM:0-risk-is-back-and-momentum-is-running-the-show/"
-    },
-    {
       "title": "Tom Lee\u2019s Bitmine Locks $508M in ETH, Hold 4% Of Total ETH Supply",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -505,22 +551,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:092e98d6a094b:0-bitcoiners-launch-the-bitcoin-evidence-base-to-stamp-out-fud/"
     },
     {
-      "title": "Musk Slams Crypto During OpenAI Trial",
-      "source": "u_today",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T06:27:46+00:00",
-      "timeDisplay": "6:27 AM",
-      "link": "https://www.tradingview.com/news/u_today:3825306e4094b:0-musk-slams-crypto-during-openai-trial/"
-    },
-    {
-      "title": "\u201cSell in May and Go Away\u201d? Bitcoin Price Could Repeat Its Worst MAY Pattern",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T05:35:38+00:00",
-      "timeDisplay": "5:35 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:0ca1998fa094b:0-sell-in-may-and-go-away-bitcoin-price-could-repeat-its-worst-may-pattern/"
-    },
-    {
       "title": "Asia shares find hope in tech resilience, oil off peak",
       "source": "reuters",
       "color": "#ff6d00",
@@ -529,28 +559,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E01E:0-asia-shares-find-hope-in-tech-resilience-oil-off-peak/"
     },
     {
-      "title": "Bitcoin\u2019s surge to $77K pressures shorts, but absent spot and long leverage caps rallies",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T05:34:10+00:00",
-      "timeDisplay": "5:34 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6e025b719094b:0-bitcoin-s-surge-to-77k-pressures-shorts-but-absent-spot-and-long-leverage-caps-rallies/"
-    },
-    {
       "title": "Dollar heads for biggest weekly loss against yen since February after Japan's intervention",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
       "timeDisplay": "4:15 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-dollar-heads-for-biggest-weekly-loss-against-yen-since-february-after-japan-s-intervention/"
-    },
-    {
-      "title": "Bitcoin Rejected At Key Cost Basis Zone\u2014Is $68,000 The Next Support?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T04:00:52+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:a38fc1278094b:0-bitcoin-rejected-at-key-cost-basis-zone-is-68-000-the-next-support/"
     },
     {
       "title": "Ethereum Price Holds Losses Under $2,300, Recovery Momentum Still Weak",
@@ -631,14 +645,6 @@
       "timestamp": "2026-05-01T00:01:00+00:00",
       "timeDisplay": "12:01 AM",
       "link": "https://www.tradingview.com/news/u_today:5f7de135b094b:0-xrp-nears-unbreakable-support-will-dogecoin-doge-hit-0-2-in-new-rally-big-ethereum-eth-price-test-incoming-crypto-market-review/"
-    },
-    {
-      "title": "Gold Holds Firm as Dollar Weakens",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-04-30T23:49:19+00:00",
-      "timeDisplay": "11:49 PM",
-      "link": "https://www.tradingview.com/news/te_news:546889:0-gold-holds-firm-as-dollar-weakens/"
     }
   ]
 }

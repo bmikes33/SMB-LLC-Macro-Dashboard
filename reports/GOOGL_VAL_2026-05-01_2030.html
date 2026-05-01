@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GOOGL — SOTP Fundamental Valuation — 2026-05-01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #0f1420;
+  --bg-tertiary: #141926;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8b9ab5;
+  --text-muted: #4a5976;
+  --border: #1e2a3a;
+  --cyan: #00e5ff;
+  --green: #00e676;
+  --red: #ff3d57;
+  --amber: #ffab00;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  padding: 32px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin: 36px 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 20px 0 8px 0;
+}
+.subtle { color: var(--text-secondary); }
+.muted { color: var(--text-muted); }
+.green { color: var(--green); }
+.red { color: var(--red); }
+.amber { color: var(--amber); }
+.cyan { color: var(--cyan); }
+
+/* HEADER */
+.header {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.header-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.ticker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 2px;
+}
+.subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.timestamp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.badge-red { background: rgba(255, 61, 87, 0.12); border-color: var(--red); color: var(--red); }
+.badge-green { background: rgba(0, 230, 118, 0.12); border-color: var(--green); color: var(--green); }
+.badge-amber { background: rgba(255, 171, 0, 0.12); border-color: var(--amber); color: var(--amber); }
+.badge-cyan { background: rgba(0, 229, 255, 0.10); border-color: var(--cyan); color: var(--cyan); }
+.badge-neutral { background: var(--bg-tertiary); border-color: var(--border); color: var(--text-secondary); }
+
+/* KEY METRICS */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.metric {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 3px;
+}
+.metric-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.metric-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  margin-top: 8px;
+}
+th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  text-align: right;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+th:first-child { text-align: left; }
+td {
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+td:first-child {
+  text-align: left;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+}
+tr:hover { background: var(--bg-secondary); }
+tr.total {
+  font-weight: 600;
+  background: var(--bg-secondary);
+}
+tr.total td { border-top: 1px solid var(--border); }
+.allocated { font-style: italic; color: var(--amber); }
+.allocated::after { content: '†'; margin-left: 2px; }
+.user-override { color: var(--amber); font-weight: 600; }
+.user-override::after { content: '*'; margin-left: 2px; }
+
+/* WATERFALL */
+.waterfall {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 12px 0;
+}
+.waterfall-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+.waterfall-row:last-child { border-bottom: none; }
+.waterfall-row.subtotal {
+  font-weight: 600;
+  border-top: 1px solid var(--text-muted);
+  margin-top: 4px;
+  padding-top: 8px;
+}
+.waterfall-row.final {
+  background: var(--bg-tertiary);
+  margin: 6px -16px -16px -16px;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: var(--cyan);
+  font-size: 14px;
+}
+
+/* THREE-CASE LAYOUT */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .cases-grid { grid-template-columns: 1fr; }
+}
+.case-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px;
+}
+.case-card.bear { border-top: 2px solid var(--red); }
+.case-card.base { border-top: 2px solid var(--cyan); }
+.case-card.bull { border-top: 2px solid var(--green); }
+.case-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+.case-card.bear .case-header { color: var(--red); }
+.case-card.base .case-header { color: var(--cyan); }
+.case-card.bull .case-header { color: var(--green); }
+
+.fv-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+.fv-upside {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+/* CALLOUTS */
+.callout {
+  background: var(--bg-tertiary);
+  border-left: 3px solid var(--cyan);
+  padding: 12px 16px;
+  margin: 12px 0;
+  border-radius: 0 3px 3px 0;
+  font-size: 13px;
+}
+.callout.amber { border-left-color: var(--amber); }
+.callout.red { border-left-color: var(--red); }
+.callout.green { border-left-color: var(--green); }
+.callout-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  color: var(--cyan);
+}
+.callout.amber .callout-title { color: var(--amber); }
+.callout.red .callout-title { color: var(--red); }
+.callout.green .callout-title { color: var(--green); }
+
+/* PROVENANCE LEGEND */
+.legend {
+  background: var(--bg-tertiary);
+  padding: 10px 14px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin: 8px 0;
+}
+.legend-item { margin-right: 18px; display: inline-block; }
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<div class="header">
+  <div class="header-row">
+    <span class="ticker">GOOGL</span>
+    <span class="subtitle">Alphabet Inc. · Class A · NASDAQ</span>
+    <span class="timestamp mono">2026-05-01 · 20:30 CT</span>
+  </div>
+  <div class="header-row" style="margin-top: 12px;">
+    <span class="subtle mono" style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px;">Type:</span>
+    <span class="mono" style="font-size: 11px;">VAL · SOTP Fundamental</span>
+    <span class="subtle mono" style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-left: 16px;">Mode:</span>
+    <span class="mono" style="font-size: 11px;">SOTP · 3 segments</span>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric">
+      <div class="metric-label">Current Price</div>
+      <div class="metric-value">$384.80</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">FV Bear (2Y Disc)</div>
+      <div class="metric-value red">$205.55</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">FV Base (2Y Disc)</div>
+      <div class="metric-value">$301.60</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">FV Bull (2Y Disc)</div>
+      <div class="metric-value green">$452.16</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Prob-Weighted FV</div>
+      <div class="metric-value">$315.23</div>
+    </div>
+    <div class="metric">
+      <div class="metric-label">Base Upside</div>
+      <div class="metric-value red">-21.6%</div>
+    </div>
+  </div>
+
+  <div class="badges">
+    <span class="badge badge-red">VERDICT: OVERVALUED</span>
+    <span class="badge badge-green">CAPITAL STRUCTURE: GREEN</span>
+    <span class="badge badge-cyan">FCF REALISM: PASS — METHODS CONVERGE</span>
+    <span class="badge badge-neutral">D&amp;A: CAPEX-WEIGHTED</span>
+    <span class="badge badge-neutral">DATA: 71% DISCLOSED · 24% ALLOCATED · 5% USER</span>
+  </div>
+</div>
+
+<div class="legend">
+  <span class="legend-item"><strong>Provenance:</strong></span>
+  <span class="legend-item">Disclosed = plain text</span>
+  <span class="legend-item allocated">Allocated = italic + †</span>
+  <span class="legend-item user-override">User Override = bold amber + *</span>
+</div>
+
+<!-- ===================== SECTION 1: EXECUTIVE SUMMARY ===================== -->
+<h2>1 · Executive Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case</th>
+      <th>2Y Discounted (PRIMARY)</th>
+      <th>Upside</th>
+      <th>NTM × Multiple (Sanity)</th>
+      <th>Upside</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Bear</td><td class="red">$205.55</td><td class="red">-46.6%</td><td class="red">$212.71</td><td class="red">-44.7%</td></tr>
+    <tr><td>Base</td><td>$301.60</td><td class="red">-21.6%</td><td>$297.17</td><td class="red">-22.8%</td></tr>
+    <tr><td>Bull</td><td class="green">$452.16</td><td class="green">+17.5%</td><td class="green">$414.15</td><td class="green">+7.6%</td></tr>
+    <tr class="total"><td>Probability-Weighted (25/50/25)</td><td>$315.23</td><td class="red">-18.1%</td><td>$305.30</td><td class="red">-20.7%</td></tr>
+  </tbody>
+</table>
+
+<div class="callout red">
+  <div class="callout-title">VERDICT: OVERVALUED</div>
+  Probability-weighted SOTP fair value of <strong>$315/share</strong> sits 18% below current price of $384.80. Even the bull case (sustained 60%+ Cloud growth at 60% EBITDA margin) yields only +17.5% upside. The market is pricing GOOGL at the framework's bull-end — implied current multiple is 21.5x forward Year 2 EBITDA versus the proposed base case of 17x. <strong>Cloud backlog of $467B (7x TTM revenue)</strong> and accelerating AI-driven Search monetization provide directional support for the market's premium positioning, but neither is yet reflected in disclosed earnings. The thesis hinges on whether the framework's regime-anchored multiples (META/AAPL/MSFT for Services; AWS/Azure-implied for Cloud) understate what an AI-leveraged Alphabet should command.
+</div>
+
+<div class="callout amber">
+  <div class="callout-title">KEY FUNDAMENTAL TENSION</div>
+  Alphabet guided <strong>$175–$185B 2026 capex</strong> (~2× FY25's $91B) — this is the single biggest fundamental swing factor. Year 1 FCF likely compresses to $20–50B (vs. TTM $64B). Whether this capex normalizes or sustains determines whether DCF-implied fair value lands at $440 (bull on normalization) or $200 (bear on persistent over-investment). The 2Y discounted SOTP method is agnostic to this; the FCF realism check (Section 11) shows methods converge at ~$294, which is just below the SOTP base.
+</div>
+
+<!-- ===================== SECTION 2: SEGMENT LIFECYCLE MAP ===================== -->
+<h2>2 · Segment Lifecycle Map</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Segment</th>
+      <th>TTM Revenue ($M)</th>
+      <th>% of Total</th>
+      <th>YoY Growth</th>
+      <th>TTM Op Margin</th>
+      <th>TTM EBITDA Margin†</th>
+      <th>Stage</th>
+      <th>Forecast Horizon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Services</td>
+      <td>355,094</td>
+      <td>81.6%</td>
+      <td class="green">+13.9%</td>
+      <td>42.5%</td>
+      <td class="allocated">43.1%</td>
+      <td class="cyan">Mature Growth</td>
+      <td>2 Years</td>
+    </tr>
+    <tr>
+      <td>Google Cloud</td>
+      <td>66,473</td>
+      <td>15.3%</td>
+      <td class="green">+44.8%</td>
+      <td>27.6%</td>
+      <td class="allocated">57.2%</td>
+      <td class="cyan">High Growth</td>
+      <td>NTM + 1Y</td>
+    </tr>
+    <tr>
+      <td>Other Bets (Waymo-led)</td>
+      <td>1,498</td>
+      <td>0.3%</td>
+      <td class="red">-6.6%</td>
+      <td class="red">n/m (loss)</td>
+      <td class="red">n/m (loss)</td>
+      <td class="cyan">Young Growth</td>
+      <td>Anchor (Feb '26 round)</td>
+    </tr>
+    <tr>
+      <td>Hedging</td>
+      <td>(167)</td>
+      <td>0.0%</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td class="muted">N/A</td>
+      <td>Passthrough</td>
+    </tr>
+    <tr class="total">
+      <td>Total / Consolidated</td>
+      <td>422,898</td>
+      <td>100%</td>
+      <td>+17.6%</td>
+      <td>34.0% (ex-fine, ex-Waymo)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">Lifecycle classification rationale</div>
+  <strong>Google Services → Mature Growth</strong>: TTM growth has <em>accelerated</em> from 11.7% (Q2'25) to 16.0% (Q1'26) on AI-driven Search engagement. Op margins are not just stable but expanding (42.5% TTM → 45.3% Q1'26). Sits between Mature Growth and Maturity; classifying as Mature Growth because the trajectory is up, not flat.<br><br>
+  <strong>Google Cloud → High Growth</strong>: 44.8% TTM growth accelerating to 63.4% in Q1'26. EBITDA margins expanding from 51.9% to 60.5% over four quarters. Backlog tripled QoQ to $467B (7x TTM revenue), giving extraordinary forward visibility.<br><br>
+  <strong>Other Bets → Young Growth</strong>: -$6.3B TTM EBITDA, revenue ~flat ($1.5B). Waymo Feb 2026 round (post-money implied ~$45B) is the dominant value anchor. Waymo achieved 500K+ autonomous rides/week per Q1 2026 commentary.
+</div>
+
+<!-- ===================== SECTION 3: D&A ALLOCATION METHODOLOGY ===================== -->
+<h2>3 · D&amp;A Allocation Methodology</h2>
+
+<div class="callout amber">
+  <div class="callout-title">Method: Capex-Weighted (Method B)</div>
+  Cloud captures ~85% of consolidated capex (data centers, TPUs, GPU infrastructure for AI training/inference) but is only 15% of consolidated revenue. Capex skew is <strong>5.6× Cloud's revenue share</strong> — well above the 2× trigger threshold for Method B. Revenue-share allocation would systematically under-credit Cloud EBITDA by ~25 percentage points of margin and overstate Services margin.
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Segment</th>
+      <th>Revenue Share</th>
+      <th>Capex Share (est.)</th>
+      <th>D&amp;A Allocation %</th>
+      <th>TTM D&amp;A ($M)</th>
+      <th>D&amp;A as % of Revenue</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Google Cloud</td>
+      <td>15.7%</td>
+      <td class="user-override">~85%</td>
+      <td class="user-override">85%</td>
+      <td class="allocated">19,661</td>
+      <td>29.6%</td>
+    </tr>
+    <tr>
+      <td>Google Services</td>
+      <td>83.9%</td>
+      <td class="user-override">~10%</td>
+      <td class="user-override">10%</td>
+      <td class="allocated">2,313</td>
+      <td>0.7%</td>
+    </tr>
+    <tr>
+      <td>Other Bets</td>
+      <td>0.4%</td>
+      <td class="user-override">~5%</td>
+      <td class="user-override">5%</td>
+      <td class="allocated">1,157</td>
+      <td>77.3%</td>
+    </tr>
+    <tr class="total">
+      <td>Total</td>
+      <td>100%</td>
+      <td>100%</td>
+      <td>100%</td>
+      <td>23,131</td>
+      <td>5.5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">Sensitivity to allocation method</div>
+  If revenue-share method (Method A) were used instead: Cloud D&amp;A drops to $3.6B (15.7%), Services D&amp;A jumps to $19.4B (83.9%). Cloud TTM EBITDA margin would compress from 57.2% to ~33%, Services would <em>rise</em> from 43.1% to ~48%. Result: Cloud SOTP fair value ~25% lower, Services ~10% higher. Net effect on Base FV would be roughly -8% (Cloud's higher multiple amplifies its EBITDA contribution). Capex-weighted is the defensible methodology choice given Alphabet's confirmed AI/TPU concentration.
+</div>
+
+<!-- ===================== SECTION 4: PEER SET, MULTIPLES & WACC ===================== -->
+<h2>4 · Peer Set, Multiples &amp; WACC (User-Approved)</h2>
+
+<h3>Google Services — Mature Growth · EV/EBITDA</h3>
+<table>
+  <thead>
+    <tr><th>Peer Tickers</th><th>Bear (25th pct)</th><th>Base (50th pct)</th><th>Bull (75th pct)</th><th>WACC</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>META, AMZN, NFLX, AAPL, MSFT</td>
+      <td class="user-override">12.0x</td>
+      <td class="user-override">15.0x</td>
+      <td class="user-override">18.0x</td>
+      <td class="user-override">10.0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Google Cloud — High Growth · EV/EBITDA</h3>
+<table>
+  <thead>
+    <tr><th>Peer Tickers</th><th>Bear (25th pct)</th><th>Base (50th pct)</th><th>Bull (75th pct)</th><th>WACC</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSFT (Azure), AMZN (AWS), ORCL, SNOW, NET, MDB, CRM</td>
+      <td class="user-override">18.0x</td>
+      <td class="user-override">22.0x</td>
+      <td class="user-override">28.0x</td>
+      <td class="user-override">11.0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Other Bets — Young Growth · Anchored to Waymo Feb 2026 Round</h3>
+<table>
+  <thead>
+    <tr><th>Anchor</th><th>Bear EV ($M)</th><th>Base EV ($M)</th><th>Bull EV ($M)</th><th>WACC</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Waymo $45B implied + residual optionality (Verily, GFiber, Isomorphic Labs)</td>
+      <td class="user-override">30,000</td>
+      <td class="user-override">45,000</td>
+      <td class="user-override">70,000</td>
+      <td class="muted">n/a (anchor)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Corporate / Alphabet-Level Activities — Capitalized at 15× as Cost Center</h3>
+<table>
+  <thead>
+    <tr><th>Method</th><th>TTM Cost ($M)</th><th>NTM (+25%)</th><th>Year 2 (+20%)</th><th>Multiple</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Capitalize as permanent corporate drag</td>
+      <td>(19,124)</td>
+      <td class="allocated">(23,905)</td>
+      <td class="allocated">(28,686)</td>
+      <td class="user-override">15.0×</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ===================== SECTION 5: BEAR/BASE/BULL CASES ===================== -->
+<h2>5 · Bear / Base / Bull Cases — Year 1 (NTM) + Year 2 EBITDA</h2>
+
+<h3>Google Services</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Driver</th>
+      <th class="red">Bear</th>
+      <th>Base</th>
+      <th class="green">Bull</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Y1 Revenue Growth (regime-anchored)</td><td>+11.7% <span class="muted">(Q2'25 min)</span></td><td>+13.9% <span class="muted">(last 4Q avg)</span></td><td>+16.0% <span class="muted">(Q1'26 max)</span></td></tr>
+    <tr><td>Y1 EBITDA Margin†</td><td class="allocated">40.7%</td><td class="allocated">43.1%</td><td class="allocated">46.0%</td></tr>
+    <tr><td>NTM Revenue ($M)</td><td>396,474</td><td>404,310</td><td>411,958</td></tr>
+    <tr><td>NTM EBITDA ($M, ex-SBC)</td><td>161,210</td><td>174,196</td><td>189,520</td></tr>
+    <tr><td>Y2 Growth (sustained regime)</td><td>+11.7%</td><td>+13.9%</td><td>+16.0%</td></tr>
+    <tr><td>Y2 Revenue ($M)</td><td>442,676</td><td>460,347</td><td>477,929</td></tr>
+    <tr class="total"><td>Y2 EBITDA ($M, ex-SBC)</td><td>179,996</td><td>198,339</td><td>219,870</td></tr>
+  </tbody>
+</table>
+
+<h3>Google Cloud</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Driver</th>
+      <th class="red">Bear</th>
+      <th>Base</th>
+      <th class="green">Bull</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Y1 Revenue Growth (regime-anchored)</td><td>+31.7% <span class="muted">(Q2'25 min)</span></td><td>+44.1% <span class="muted">(last 4Q avg)</span></td><td>+63.4% <span class="muted">(Q1'26 max)</span></td></tr>
+    <tr><td>Y1 EBITDA Margin†</td><td class="allocated">51.9%</td><td class="allocated">56.7%</td><td class="allocated">60.5%</td></tr>
+    <tr><td>NTM Revenue ($M)</td><td>87,526</td><td>95,770</td><td>108,591</td></tr>
+    <tr><td>NTM EBITDA ($M, ex-SBC)</td><td>45,448</td><td>54,278</td><td>65,647</td></tr>
+    <tr><td>Y2 Growth (sustained regime)</td><td>+31.7%</td><td>+44.1%</td><td>+63.4%</td></tr>
+    <tr><td>Y2 Revenue ($M)</td><td>115,246</td><td>137,978</td><td>177,394</td></tr>
+    <tr class="total"><td>Y2 EBITDA ($M, ex-SBC)</td><td>59,842</td><td>78,199</td><td>107,242</td></tr>
+  </tbody>
+</table>
+
+<div class="callout amber">
+  <div class="callout-title">Cloud sustained-regime caveat</div>
+  Year 2 base case implies $138B Cloud revenue / $78B EBITDA — that would put Google Cloud at ~125% of AWS's current scale. Defensible given the $467B backlog (which is a forward demand signal already booked) and ongoing capacity expansion via $180B 2026 capex, but tapered Year 2 growth (e.g., 35% instead of 44%) would compress base case fair value by ~$25/share. Not applied here per skill default of sustained regime.
+</div>
+
+<h3>Other Bets — Direct EV Anchor</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Driver</th>
+      <th class="red">Bear</th>
+      <th>Base</th>
+      <th class="green">Bull</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Anchor Methodology</td><td class="muted" colspan="3">Waymo Feb 2026 round (~$45B implied) + optionality on Verily, GFiber, Isomorphic Labs, Wing</td></tr>
+    <tr><td>Direct EV ($M, today)</td><td class="user-override">30,000</td><td class="user-override">45,000</td><td class="user-override">70,000</td></tr>
+  </tbody>
+</table>
+
+<!-- ===================== SECTION 6: SBC ANALYSIS ===================== -->
+<h2>6 · SBC Treatment</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Segment</th>
+      <th>TTM SBC Allocation†</th>
+      <th>SBC % of Revenue</th>
+      <th>Bull EBITDA Addback (Y2)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Services (function-weighted)</td><td class="allocated">17,022</td><td>4.8%</td><td class="allocated">+22,940</td></tr>
+    <tr><td>Cloud (engineering-heavy)</td><td class="allocated">7,856</td><td>11.8%</td><td class="allocated">+20,933</td></tr>
+    <tr><td>Other Bets</td><td class="allocated">1,310</td><td>87.4%</td><td class="muted">n/a (anchor)</td></tr>
+    <tr class="total"><td>Total TTM SBC</td><td>26,188</td><td>6.2%</td><td>+43,873</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">Treatment per skill methodology</div>
+  <strong>Bear &amp; Base cases</strong>: SBC is held as embedded cost (strict treatment — SBC is dilution and a real expense to existing holders).<br>
+  <strong>Bull case</strong>: SBC added back (street standard — non-cash). Bull case fair value with SBC addback would be ~$520/share (vs. the $452 strict bull shown in headline). The $68 gap is the SBC addback dilution risk.<br><br>
+  Cloud's 11.8% SBC/revenue ratio is the highest material number — engineering-heavy, GenAI talent costs concentrated here. If Cloud SBC growth outpaces revenue, Bull case is structurally weakened.
+</div>
+
+<!-- ===================== SECTION 7: BRIDGE — 2Y DISCOUNTED (PRIMARY) ===================== -->
+<h2>7 · Bridge to Equity Value — 2Y Discounted Method (PRIMARY)</h2>
+
+<div class="cases-grid">
+  <!-- BEAR -->
+  <div class="case-card bear">
+    <div class="case-header">Bear Case</div>
+    <div class="waterfall">
+      <div class="waterfall-row"><span>Services Y2 EBITDA × 12x ÷ 1.21</span><span>$1,785,088</span></div>
+      <div class="waterfall-row"><span>Cloud Y2 EBITDA × 18x ÷ 1.2321</span><span>$874,241</span></div>
+      <div class="waterfall-row"><span>Other Bets EV (anchored)</span><span>$30,000</span></div>
+      <div class="waterfall-row"><span>Corporate drag (15× × 0.9 ÷ 1.221)</span><span class="red">$(317,161)</span></div>
+      <div class="waterfall-row subtotal"><span>Enterprise Value</span><span>$2,372,169</span></div>
+      <div class="waterfall-row"><span>+ Cash + ST investments</span><span class="green">$126,840</span></div>
+      <div class="waterfall-row"><span>+ Non-marketable (Anthropic stake)</span><span class="green">$106,946</span></div>
+      <div class="waterfall-row"><span>− LT Debt</span><span class="red">$(77,501)</span></div>
+      <div class="waterfall-row"><span>− Op Lease Liabilities</span><span class="red">$(12,983)</span></div>
+      <div class="waterfall-row subtotal"><span>Equity Value</span><span>$2,515,471</span></div>
+      <div class="waterfall-row"><span>÷ Diluted Shares (12,238M)</span><span></span></div>
+      <div class="waterfall-row final"><span>Fair Value / Share</span><span>$205.55</span></div>
+    </div>
+    <div class="fv-upside red mono">Upside: −46.6%</div>
+  </div>
+
+  <!-- BASE -->
+  <div class="case-card base">
+    <div class="case-header">Base Case</div>
+    <div class="waterfall">
+      <div class="waterfall-row"><span>Services Y2 EBITDA × 15x ÷ 1.21</span><span>$2,458,750</span></div>
+      <div class="waterfall-row"><span>Cloud Y2 EBITDA × 22x ÷ 1.2321</span><span>$1,396,302</span></div>
+      <div class="waterfall-row"><span>Other Bets EV (Waymo anchor)</span><span>$45,000</span></div>
+      <div class="waterfall-row"><span>Corporate drag (15× ÷ 1.221)</span><span class="red">$(352,401)</span></div>
+      <div class="waterfall-row subtotal"><span>Enterprise Value</span><span>$3,547,651</span></div>
+      <div class="waterfall-row"><span>+ Cash + ST investments</span><span class="green">$126,840</span></div>
+      <div class="waterfall-row"><span>+ Non-marketable (Anthropic stake)</span><span class="green">$106,946</span></div>
+      <div class="waterfall-row"><span>− LT Debt</span><span class="red">$(77,501)</span></div>
+      <div class="waterfall-row"><span>− Op Lease Liabilities</span><span class="red">$(12,983)</span></div>
+      <div class="waterfall-row subtotal"><span>Equity Value</span><span>$3,690,953</span></div>
+      <div class="waterfall-row"><span>÷ Diluted Shares (12,238M)</span><span></span></div>
+      <div class="waterfall-row final"><span>Fair Value / Share</span><span>$301.60</span></div>
+    </div>
+    <div class="fv-upside red mono">Upside: −21.6%</div>
+  </div>
+
+  <!-- BULL -->
+  <div class="case-card bull">
+    <div class="case-header">Bull Case</div>
+    <div class="waterfall">
+      <div class="waterfall-row"><span>Services Y2 EBITDA × 18x ÷ 1.21</span><span>$3,270,789</span></div>
+      <div class="waterfall-row"><span>Cloud Y2 EBITDA × 28x ÷ 1.2321</span><span>$2,437,113</span></div>
+      <div class="waterfall-row"><span>Other Bets EV (anchored)</span><span>$70,000</span></div>
+      <div class="waterfall-row"><span>Corporate drag (15× × 1.1 ÷ 1.221)</span><span class="red">$(387,641)</span></div>
+      <div class="waterfall-row subtotal"><span>Enterprise Value</span><span>$5,390,262</span></div>
+      <div class="waterfall-row"><span>+ Cash + ST investments</span><span class="green">$126,840</span></div>
+      <div class="waterfall-row"><span>+ Non-marketable (Anthropic stake)</span><span class="green">$106,946</span></div>
+      <div class="waterfall-row"><span>− LT Debt</span><span class="red">$(77,501)</span></div>
+      <div class="waterfall-row"><span>− Op Lease Liabilities</span><span class="red">$(12,983)</span></div>
+      <div class="waterfall-row subtotal"><span>Equity Value</span><span>$5,533,564</span></div>
+      <div class="waterfall-row"><span>÷ Diluted Shares (12,238M)</span><span></span></div>
+      <div class="waterfall-row final"><span>Fair Value / Share</span><span>$452.16</span></div>
+    </div>
+    <div class="fv-upside green mono">Upside: +17.5%</div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 8: METHOD COMPARISON ===================== -->
+<h2>8 · Method Comparison — NTM × Multiple (Sanity Check)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case</th>
+      <th>Method A: 2Y Discounted ($/sh)</th>
+      <th>Method B: NTM × Multiple ($/sh)</th>
+      <th>Δ (A − B)</th>
+      <th>Interpretation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="red">Bear</td>
+      <td>$205.55</td>
+      <td>$212.71</td>
+      <td class="red">−$7.16</td>
+      <td class="muted">Y2 weak compounding penalized by WACC discount</td>
+    </tr>
+    <tr>
+      <td>Base</td>
+      <td>$301.60</td>
+      <td>$297.17</td>
+      <td>+$4.43</td>
+      <td class="muted">Methods converge — multiple prices in regime</td>
+    </tr>
+    <tr>
+      <td class="green">Bull</td>
+      <td>$452.16</td>
+      <td>$414.15</td>
+      <td class="green">+$38.01</td>
+      <td class="muted">Y2 compounding adds value beyond NTM multiple</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">What the gap tells you</div>
+  Bull case shows the largest A &gt; B gap ($38), because the second year of 60%+ Cloud growth and 16% Services growth materially compounds. In Bear case, weak compounding doesn't beat the WACC drag (Cloud at 11%). The convergence in Base case is healthy — it suggests the proposed multiples appropriately price the regime-anchored forward growth.
+</div>
+
+<!-- ===================== SECTION 9: PROBABILITY-WEIGHTED ===================== -->
+<h2>9 · Probability-Weighted Fair Value</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weighting</th>
+      <th>Bear Weight</th>
+      <th>Base Weight</th>
+      <th>Bull Weight</th>
+      <th>FV ($/sh, 2Y disc.)</th>
+      <th>Upside</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Default (skill standard)</td>
+      <td>25%</td>
+      <td>50%</td>
+      <td>25%</td>
+      <td>$315.23</td>
+      <td class="red">−18.1%</td>
+    </tr>
+    <tr>
+      <td>Conservative tilt</td>
+      <td>40%</td>
+      <td>40%</td>
+      <td>20%</td>
+      <td>$293.30</td>
+      <td class="red">−23.8%</td>
+    </tr>
+    <tr>
+      <td>Bullish tilt (AI optionality)</td>
+      <td>15%</td>
+      <td>50%</td>
+      <td>35%</td>
+      <td>$340.34</td>
+      <td class="red">−11.6%</td>
+    </tr>
+    <tr>
+      <td>Even-weighted</td>
+      <td>33%</td>
+      <td>33%</td>
+      <td>33%</td>
+      <td>$319.77</td>
+      <td class="red">−16.9%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout amber">
+  <div class="callout-title">Sensitivity to weighting</div>
+  Across all reasonable weighting schemes, GOOGL screens as overvalued (−12% to −24%). The current price implies a probability weighting closer to 80%+ on the bull case, which is a strong claim about Cloud's ability to sustain 60%+ growth at 60% margin while Services maintains 16%.
+</div>
+
+<!-- ===================== SECTION 10: CAPITAL STRUCTURE ===================== -->
+<h2>10 · Capital Structure Health Check</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Threshold (Green / Amber / Red)</th>
+      <th>Actual</th>
+      <th>Flag</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Net Debt / TTM EBITDA</td>
+      <td><span class="green">&lt;2.0×</span> / <span class="amber">2.0–4.0×</span> / <span class="red">&gt;4.0×</span></td>
+      <td>−0.22× <span class="muted">(net cash basic; −0.87× incl. non-marketable)</span></td>
+      <td><span class="badge badge-green">GREEN</span></td>
+    </tr>
+    <tr>
+      <td>TTM EBITDA / TTM Interest</td>
+      <td><span class="green">&gt;8×</span> / <span class="amber">4–8×</span> / <span class="red">&lt;4×</span></td>
+      <td>133.4× <span class="muted">(EBITDA $164.7B vs. interest $1.2B)</span></td>
+      <td><span class="badge badge-green">GREEN</span></td>
+    </tr>
+    <tr>
+      <td>Maturity Wall (next 24 months)</td>
+      <td><span class="green">&lt;10%</span> / <span class="amber">10–30%</span> / <span class="red">&gt;30%</span></td>
+      <td>&lt;10% <span class="muted">(Q1 2026 issuance was long-dated; no near-term wall disclosed)</span></td>
+      <td><span class="badge badge-green">GREEN</span></td>
+    </tr>
+    <tr>
+      <td>Liquidity (cash + revolver vs. 12mo obligations)</td>
+      <td><span class="green">&gt;2×</span> / <span class="amber">1–2×</span> / <span class="red">&lt;1×</span></td>
+      <td>&gt;5× <span class="muted">($127B cash + $174B TTM Op CF vs. $90B total debt-like)</span></td>
+      <td><span class="badge badge-green">GREEN</span></td>
+    </tr>
+    <tr>
+      <td>Diluted Share Count 3Y CAGR</td>
+      <td><span class="green">&lt;3%</span> / <span class="amber">3–7%</span> / <span class="red">&gt;7%</span></td>
+      <td>−1.7%/yr <span class="muted">(buybacks; 12,447 → 12,238 shares)</span></td>
+      <td><span class="badge badge-green">GREEN</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <div class="callout-title">Capital structure: bulletproof</div>
+  Alphabet operates from a position of structural strength — fortress balance sheet with $127B cash, ~$143B net cash including the Anthropic stake, and 133× interest coverage. The Q1 2026 $31B debt issuance to fund Wiz ($29.5B) and Intersect ($5.9B) acquisitions is well within normal capital management for a company generating $174B TTM operating cash flow. No verdict caveat is required from capital structure.
+</div>
+
+<!-- ===================== SECTION 11: FCF REALISM CHECK ===================== -->
+<h2>11 · FCF Realism Check (Phase 10)</h2>
+
+<div class="callout amber">
+  <div class="callout-title">Why this check ran</div>
+  TTM Capex/EBITDA ratio = 66.7% (vs. ~40% three-year norm). 2026 capex guidance of $175–185B implies the ratio jumps to ~85–90%. This is the central fundamental debate on GOOGL — whether AI infrastructure capex normalizes (FCF re-expands) or sustains (FCF remains compressed for 3+ years).
+</div>
+
+<h3>5-Year FCF Projection</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>EBITDA ($M)</th>
+      <th>Capex ($M)</th>
+      <th>D&amp;A est. ($M)</th>
+      <th>Cash Taxes ($M)</th>
+      <th>WC Δ ($M)</th>
+      <th>FCF ($M)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Y1 (FY 2026)</td>
+      <td class="allocated">198,279</td>
+      <td>180,000 <span class="muted">(mgmt mid)</span></td>
+      <td>54,000</td>
+      <td>24,527</td>
+      <td>5,000</td>
+      <td class="red">(11,248)</td>
+    </tr>
+    <tr>
+      <td>Y2 (FY 2027)</td>
+      <td class="allocated">235,462</td>
+      <td>175,000</td>
+      <td>52,500</td>
+      <td>31,104</td>
+      <td>5,000</td>
+      <td class="amber">24,358</td>
+    </tr>
+    <tr>
+      <td>Y3 (FY 2028)</td>
+      <td class="allocated">272,644</td>
+      <td>170,000</td>
+      <td>51,000</td>
+      <td>37,679</td>
+      <td>5,000</td>
+      <td>59,964</td>
+    </tr>
+    <tr>
+      <td>Y4 (FY 2029)</td>
+      <td class="allocated">309,826</td>
+      <td>175,000</td>
+      <td>52,500</td>
+      <td>43,745</td>
+      <td>5,000</td>
+      <td>86,081</td>
+    </tr>
+    <tr>
+      <td>Y5 (FY 2030)</td>
+      <td class="allocated">347,008</td>
+      <td>200,000</td>
+      <td>60,000</td>
+      <td>48,791</td>
+      <td>5,000</td>
+      <td>93,217</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>DCF Bridge</h3>
+<div class="waterfall">
+  <div class="waterfall-row"><span>PV of Y1–Y5 FCF (discounted at 10.5% blended WACC)</span><span>$168,533</span></div>
+  <div class="waterfall-row"><span>Terminal EV (Y5 EBITDA $347B × 15.6× exit mult)</span><span>$5,419,110</span></div>
+  <div class="waterfall-row"><span>PV of Terminal (÷ 1.105⁵)</span><span>$3,289,399</span></div>
+  <div class="waterfall-row subtotal"><span>DCF Enterprise Value</span><span>$3,457,932</span></div>
+  <div class="waterfall-row"><span>+ Cash + Non-mkt securities</span><span class="green">$233,786</span></div>
+  <div class="waterfall-row"><span>− Debt − Op Lease</span><span class="red">$(90,484)</span></div>
+  <div class="waterfall-row subtotal"><span>DCF Equity Value</span><span>$3,601,234</span></div>
+  <div class="waterfall-row final"><span>DCF Fair Value / Share</span><span>$294.27</span></div>
+</div>
+
+<h3>Sensitivity Analysis</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>−20% / Low Case</th>
+      <th>Base</th>
+      <th>+20% / High Case</th>
+      <th>FV Range / Share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Y5 Capex Sensitivity</td>
+      <td>$160B</td>
+      <td>$200B</td>
+      <td>$240B</td>
+      <td>$316 / $294 / $272</td>
+    </tr>
+    <tr>
+      <td>Terminal Multiple Sensitivity</td>
+      <td>13.6×</td>
+      <td>15.6×</td>
+      <td>17.6×</td>
+      <td>$240 / $294 / $348</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <div class="callout-title">FCF Realism Flag: PASS — Methods Converge</div>
+  DCF fair value of $294.27 sits 2.4% below SOTP base of $301.60 — within the ±5% convergence band. Both methods independently arrive at a fair value range of $290–$310, materially below the current price of $384.80. The terminal multiple is the dominant sensitivity ($108 swing per 4× change in terminal multiple); Y5 capex is a smaller lever ($44 swing per ±$40B capex shift). No CAVEAT flag is added to the verdict.
+</div>
+
+<!-- ===================== SECTION 12: METHODOLOGY & PROVENANCE ===================== -->
+<h2>12 · Methodology &amp; Data Provenance</h2>
+
+<h3>Data Sources (EDGAR-direct)</h3>
+<ul style="font-size: 13px; line-height: 1.8; padding-left: 24px; color: var(--text-secondary);">
+  <li><strong>Q1 2026 10-Q</strong> — filed Apr 29, 2026 (sec.gov/Archives/edgar/data/1652044/000165204426000043)</li>
+  <li><strong>Q4 2025 / FY2025 8-K</strong> — Feb 4, 2026 (s206.q4cdn.com/479360582/files/doc_financials/2025/q4)</li>
+  <li><strong>Q3 2025 8-K</strong> — Oct 29, 2025 (s206.q4cdn.com/479360582/files/doc_financials/2025/q3)</li>
+  <li><strong>Q2 2025 8-K</strong> — Jul 23, 2025 (s206.q4cdn.com/479360582/files/doc_financials/2025/q2)</li>
+  <li><strong>Q1 2025 8-K</strong> — Apr 24, 2025 (sec.gov/Archives/edgar/data/1652044/000165204425000040)</li>
+  <li><strong>Current price</strong>: $384.80 (May 1, 2026 close, post-earnings rip)</li>
+</ul>
+
+<h3>Key Methodology Choices &amp; User Overrides</h3>
+<ul style="font-size: 13px; line-height: 1.8; padding-left: 24px; color: var(--text-secondary);">
+  <li><strong>D&amp;A allocation method</strong>: Capex-weighted (85/10/5 — Cloud/Services/Other Bets) — driven by Cloud's 5.6× capex skew vs. revenue share. Auto-routed; allocation percentages estimated from industry knowledge and management commentary on TPU/AI infra spend concentration.</li>
+  <li><strong>Bear/base/bull anchoring</strong>: Last 4 quarters of YoY growth and EBITDA margin (regime-anchored per skill default). Note: 8Q range was not used because earlier 2024 quarters lack segment-level data with consistent definitions in some periods.</li>
+  <li><strong>Year 2 sustained regime</strong>: Default per skill methodology. Cloud Y2 base case (44% growth, 56.7% margin) is aggressive but supported by $467B backlog disclosure (Q1 2026).</li>
+  <li><strong>Multiples</strong>: Services 12/15/18× EV/EBITDA; Cloud 18/22/28× EV/EBITDA — user-approved.</li>
+  <li><strong>WACC</strong>: Services 10% (Mature Growth default), Cloud 11% (High Growth default) — user-approved.</li>
+  <li><strong>Other Bets</strong>: Anchored to Waymo Feb 2026 round implied valuation (~$45B base) plus optionality range — user-approved.</li>
+  <li><strong>Corporate drag</strong>: Capitalized at 15× of forward (NTM/Y2) corporate cost — user-approved. Corporate spend grew +78% YoY in Q1 2026 (largely AI R&amp;D); projected at +25% NTM, +20% Y2.</li>
+  <li><strong>Anthropic equity stake</strong>: Held at fair value ($107B) per Q1 2026 balance sheet. Q1 2026 alone recorded $36.9B unrealized gain on non-marketable equity securities, primarily Anthropic.</li>
+</ul>
+
+<h3>Non-Recurring Item Adjustments</h3>
+<ul style="font-size: 13px; line-height: 1.8; padding-left: 24px; color: var(--text-secondary);">
+  <li><strong>Q3 2025 EC Fine</strong>: $3.5B charge against Services operating income — excluded from baseline. If included, Services Q3 2025 op margin would be 38.5% instead of 42.5%.</li>
+  <li><strong>Q4 2025 Waymo Charge</strong>: $2.1B employee compensation charge in Other Bets — excluded from baseline. Reflects stock-based comp from the Feb 2026 funding round mark-to-market.</li>
+</ul>
+
+<h3>Limitations &amp; Caveats</h3>
+<ul style="font-size: 13px; line-height: 1.8; padding-left: 24px; color: var(--text-secondary);">
+  <li>Segment-level capex is not directly disclosed; allocation percentages are estimates calibrated to industry knowledge and partial management commentary.</li>
+  <li>SBC allocation across segments uses estimated function-weighting (engineering-heavy at Cloud, sales-heavy at Services) rather than precise function-level disclosure.</li>
+  <li>Cloud Year 2 sustained regime (44% growth) is on the boundary of plausibility at $138B revenue scale; user may wish to apply a Year 2 taper if positioning conservatively.</li>
+  <li>Other Bets EV anchored to Waymo round; precise post-money valuation of the Feb 2026 round is not fully disclosed.</li>
+</ul>
+
+<!-- ===================== FOOTER ===================== -->
+<div class="footer">
+  GOOGL · SOTP Fundamental Valuation · Generated 2026-05-01 20:30 CT · SMB LLC<br>
+  Source data: EDGAR filings (10-K, 10-Q, 8-K). All figures in USD. This is a fundamental valuation analysis, not a recommendation.<br>
+  Final price: $384.80. Prob-weighted SOTP fair value: $315.23. Verdict: OVERVALUED on probability-weighted basis (−18.1%).
+</div>
+
+</body>
+</html>

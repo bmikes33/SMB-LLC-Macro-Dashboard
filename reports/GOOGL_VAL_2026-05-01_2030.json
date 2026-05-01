@@ -1,0 +1,141 @@
+{
+  "type": "valuation",
+  "file": "GOOGL_VAL_2026-05-01_2030.html",
+  "ticker": "GOOGL",
+  "tvSymbol": "NASDAQ:GOOGL",
+  "date": "2026-05-01T20:30:00-05:00",
+  "summary": "OVERVALUED — Base -21.6% / P-Wt -18.1%",
+  "verdictBadge": "OVERVALUED",
+  "upsideBadge": "-21.6%",
+  "mode": "SOTP",
+  "segmentCount": 3,
+  "currentPrice": 384.80,
+  "fairValue": {
+    "method": "2Y_discounted",
+    "bear": 205.55,
+    "base": 301.60,
+    "bull": 452.16,
+    "probWeighted": 315.23
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 212.71,
+    "base": 297.17,
+    "bull": 414.15
+  },
+  "upside": {
+    "bear": -46.6,
+    "base": -21.6,
+    "bull": 17.5,
+    "probWeighted": -18.1
+  },
+  "wacc": {
+    "method": "stage_default",
+    "perSegment": {
+      "Google Services": 0.10,
+      "Google Cloud": 0.11,
+      "Other Bets": null
+    }
+  },
+  "daAllocationMethod": "capex_weighted",
+  "daAllocationPct": {
+    "Google Services": 0.10,
+    "Google Cloud": 0.85,
+    "Other Bets": 0.05
+  },
+  "segments": [
+    {
+      "name": "Google Services",
+      "stage": "Mature Growth",
+      "ttmRevenue": 355094,
+      "revenueShare": 0.816,
+      "ttmYoYGrowth": 0.139,
+      "ttmOpMargin": 0.425,
+      "ttmEbitdaMargin": 0.431,
+      "metric": "EV/EBITDA",
+      "multiples": {"bear": 12, "base": 15, "bull": 18},
+      "wacc": 0.10,
+      "forecastHorizon": "2Y",
+      "y2Ebitda": {"bear": 179996, "base": 198339, "bull": 219870},
+      "ev2yDiscounted": {"bear": 1785088, "base": 2458750, "bull": 3270789}
+    },
+    {
+      "name": "Google Cloud",
+      "stage": "High Growth",
+      "ttmRevenue": 66473,
+      "revenueShare": 0.157,
+      "ttmYoYGrowth": 0.448,
+      "ttmOpMargin": 0.276,
+      "ttmEbitdaMargin": 0.572,
+      "metric": "EV/EBITDA",
+      "multiples": {"bear": 18, "base": 22, "bull": 28},
+      "wacc": 0.11,
+      "forecastHorizon": "NTM+1Y",
+      "y2Ebitda": {"bear": 59842, "base": 78199, "bull": 107242},
+      "ev2yDiscounted": {"bear": 874241, "base": 1396302, "bull": 2437113}
+    },
+    {
+      "name": "Other Bets",
+      "stage": "Young Growth",
+      "ttmRevenue": 1498,
+      "revenueShare": 0.003,
+      "ttmYoYGrowth": -0.066,
+      "ttmOpMargin": null,
+      "ttmEbitdaMargin": null,
+      "metric": "Direct EV (Waymo anchor)",
+      "anchor": "Waymo Feb 2026 funding round",
+      "evDirect": {"bear": 30000, "base": 45000, "bull": 70000}
+    }
+  ],
+  "corporateDrag": {
+    "method": "capitalize_at_15x",
+    "ttmCost": -19124,
+    "ntmCost": -23905,
+    "y2Cost": -28686,
+    "drag2yDiscounted": -352401,
+    "dragNtm": -358575
+  },
+  "balanceSheet": {
+    "asOf": "2026-03-31",
+    "cashAndMarketableSecurities": 126840,
+    "nonMarketableSecurities": 106946,
+    "longTermDebt": 77501,
+    "operatingLeaseLiabilities": 12983,
+    "dilutedShares": 12238
+  },
+  "capitalStructure": "GREEN",
+  "capitalStructureMetrics": {
+    "netDebtToEbitda_basic": -0.22,
+    "netDebtToEbitda_full": -0.87,
+    "ebitdaToInterest": 133.4,
+    "maturityWall24mo": "GREEN",
+    "liquidity": "GREEN",
+    "shareCount3yCagr": -0.017
+  },
+  "capitalStructureFlags": [],
+  "dataQuality": {
+    "disclosedPct": 71,
+    "allocatedPct": 24,
+    "userOverridePct": 5
+  },
+  "verdict": "OVERVALUED",
+  "fcfRealismCheck": {
+    "ran": true,
+    "dcfFairValue": 294.27,
+    "gapToSotp": -2.4,
+    "flag": "PASS",
+    "flagDescription": "Methods converge — DCF 2.4% below SOTP base, within ±5% convergence band"
+  },
+  "nonRecurringAdjustments": [
+    {"period": "Q3 2025", "item": "EC Fine", "amount": 3500, "segment": "Google Services", "treatment": "excluded from baseline"},
+    {"period": "Q4 2025", "item": "Waymo employee comp charge", "amount": 2100, "segment": "Other Bets", "treatment": "excluded from baseline"}
+  ],
+  "edgarFilings": [
+    "Q1 2026 10-Q (Apr 29, 2026)",
+    "Q4 2025 / FY2025 8-K (Feb 4, 2026)",
+    "Q3 2025 8-K (Oct 29, 2025)",
+    "Q2 2025 8-K (Jul 23, 2025)",
+    "Q1 2025 8-K (Apr 24, 2025)"
+  ],
+  "notes": "Market is pricing GOOGL at the bull-end of the framework — implied current multiple is 21.5x forward Y2 EBITDA vs. base 17x. Cloud backlog of $467B (7x TTM revenue) provides directional support but is not yet reflected in disclosed earnings. Bull case (sustained 60%+ Cloud growth, 60% margin) yields only +17.5% upside; Cloud Year 2 sustained regime is at the edge of plausibility at $138B revenue scale."
+}

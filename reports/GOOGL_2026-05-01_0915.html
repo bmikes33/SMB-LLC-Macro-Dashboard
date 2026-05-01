@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GOOGL — TA Read — 2026-05-01</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-primary:#0a0e17;--bg-secondary:#0f1420;--bg-tertiary:#141926;
+  --text-primary:#e2e8f0;--text-secondary:#8b9ab5;--text-muted:#4a5976;
+  --border:#1e2a3a;--cyan:#00e5ff;--green:#00e676;--red:#ff3d57;--amber:#ffab00;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-primary);color:var(--text-primary);font-family:'IBM Plex Sans',-apple-system,sans-serif;font-size:14px;line-height:1.55;padding:32px 24px;max-width:1400px;margin:0 auto}
+.mono{font-family:'JetBrains Mono','Courier New',monospace}
+h1{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;letter-spacing:1px;margin-bottom:4px}
+h2{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin:36px 0 12px 0;padding-bottom:6px;border-bottom:1px solid var(--border)}
+h3{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--text-secondary);margin:20px 0 8px 0}
+.subtle{color:var(--text-secondary)}.muted{color:var(--text-muted)}
+.green{color:var(--green)}.red{color:var(--red)}.amber{color:var(--amber)}.cyan{color:var(--cyan)}
+
+.header{background:var(--bg-secondary);border:1px solid var(--border);border-radius:4px;padding:20px 24px;margin-bottom:24px}
+.header-row{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+.ticker{font-family:'JetBrains Mono',monospace;font-size:32px;font-weight:700;color:var(--cyan);letter-spacing:2px}
+.subtitle{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.timestamp{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);margin-left:auto}
+.badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.badge{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:1px;padding:4px 10px;border:1px solid;border-radius:3px;text-transform:uppercase}
+.badge-red{background:rgba(255,61,87,0.12);border-color:var(--red);color:var(--red)}
+.badge-green{background:rgba(0,230,118,0.12);border-color:var(--green);color:var(--green)}
+.badge-amber{background:rgba(255,171,0,0.12);border-color:var(--amber);color:var(--amber)}
+.badge-cyan{background:rgba(0,229,255,0.10);border-color:var(--cyan);color:var(--cyan)}
+.badge-neutral{background:var(--bg-tertiary);border-color:var(--border);color:var(--text-secondary)}
+
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px}
+.metric{background:var(--bg-tertiary);border:1px solid var(--border);padding:10px 14px;border-radius:3px}
+.metric-label{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.metric-value{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;margin-top:2px}
+
+table{width:100%;border-collapse:collapse;font-family:'IBM Plex Sans',sans-serif;font-size:13px;margin-top:8px}
+th{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-secondary);text-align:right;padding:8px 10px;border-bottom:1px solid var(--border);background:var(--bg-secondary)}
+th:first-child{text-align:left}
+td{padding:7px 10px;border-bottom:1px solid var(--border);text-align:right;font-family:'JetBrains Mono',monospace;font-size:12px}
+td:first-child{text-align:left;font-family:'IBM Plex Sans',sans-serif;font-size:13px}
+tr:hover{background:var(--bg-secondary)}
+tr.heavy-row{background:rgba(255,61,87,0.05)}
+tr.heavy-row td{font-weight:600}
+tr.medium-row{background:rgba(255,171,0,0.04)}
+tr.tier1-row{background:rgba(0,230,118,0.05)}
+tr.tier1-row td{font-weight:600}
+tr.avoid-row{background:rgba(255,61,87,0.05)}
+tr.current-row{background:var(--bg-tertiary);border-top:2px solid var(--cyan);border-bottom:2px solid var(--cyan)}
+tr.current-row td{font-weight:700;color:var(--cyan)}
+
+.callout{background:var(--bg-tertiary);border-left:3px solid var(--cyan);padding:12px 16px;margin:12px 0;border-radius:0 3px 3px 0;font-size:13px}
+.callout.amber{border-left-color:var(--amber)}.callout.red{border-left-color:var(--red)}.callout.green{border-left-color:var(--green)}
+.callout-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;color:var(--cyan)}
+.callout.amber .callout-title{color:var(--amber)}.callout.red .callout-title{color:var(--red)}.callout.green .callout-title{color:var(--green)}
+
+.bullet-list{list-style:none;padding-left:0;font-size:13px}
+.bullet-list li{padding:5px 0;border-bottom:1px dotted var(--border);line-height:1.6}
+.bullet-list li:last-child{border-bottom:none}
+.bullet-list strong{color:var(--cyan);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.8px;display:inline-block;min-width:140px}
+
+.footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);text-align:center;letter-spacing:0.5px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-row">
+    <span class="ticker">GOOGL</span>
+    <span class="subtitle">Alphabet Inc. · Class A · NASDAQ</span>
+    <span class="timestamp mono">2026-05-01 · 09:15 CT</span>
+  </div>
+  <div class="header-row" style="margin-top:12px">
+    <span class="subtle mono" style="font-size:11px;text-transform:uppercase;letter-spacing:1px">Type:</span>
+    <span class="mono" style="font-size:11px">TA · Multi-TF Confluence</span>
+    <span class="subtle mono" style="font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-left:16px">TFs:</span>
+    <span class="mono" style="font-size:11px">30m · 4h · Daily · Weekly</span>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric"><div class="metric-label">Current Price</div><div class="metric-value">$383.65</div></div>
+    <div class="metric"><div class="metric-label">Bias</div><div class="metric-value green">LONG · TACTICAL</div></div>
+    <div class="metric"><div class="metric-label">Final Confidence</div><div class="metric-value amber">MEDIUM</div></div>
+    <div class="metric"><div class="metric-label">Tool Agreement</div><div class="metric-value">6/6 · 100%</div></div>
+    <div class="metric"><div class="metric-label">Invalidation</div><div class="metric-value red">$345 struct.</div></div>
+    <div class="metric"><div class="metric-label">First Resistance</div><div class="metric-value">$395-$401</div></div>
+  </div>
+
+  <div class="badges">
+    <span class="badge badge-green">TA: HIGH (6/6 BULL)</span>
+    <span class="badge badge-red">FUND: OVERVALUED (-22%)</span>
+    <span class="badge badge-amber">FUND MODIFIER: -1 TIER</span>
+    <span class="badge badge-cyan">MACRO: CLEAN WINDOW</span>
+    <span class="badge badge-neutral">EARNINGS: APR 29 PASSED</span>
+    <span class="badge badge-neutral">FOMC: NEXT JUN 16-17</span>
+  </div>
+</div>
+
+<!-- SECTION 1: DECISION SUMMARY -->
+<h2>1 · Decision Summary</h2>
+
+<h3>1A · Executive Summary</h3>
+<table>
+  <tbody>
+    <tr><td>Bias</td><td class="green">LONG tactical (wait for pullback)</td></tr>
+    <tr><td>Final Confidence</td><td class="amber">MEDIUM</td></tr>
+    <tr><td>Tool Agreement</td><td>6/6 bull · 0/6 bear (100%)</td></tr>
+    <tr><td>Invalidation</td><td>$370 short-term · $345 structural</td></tr>
+    <tr><td>Entry Zone</td><td>$370–$375 (4h VWAP mid + first pullback retest)</td></tr>
+    <tr><td>Exit Zone</td><td>$395–$401 (daily upper VWAP + 4h upper VWAP + call wall $400)</td></tr>
+    <tr><td>Macro Watch</td><td>CPI mid-May (HIGH, within May 29 expiry); NFP released this morning</td></tr>
+  </tbody>
+</table>
+
+<h3>1B · Key Levels</h3>
+<table>
+  <thead>
+    <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><span class="muted">LIGHT</span></td><td>$471.29</td><td class="muted">Weekly Fib 1.618 extension (long-horizon target)</td></tr>
+    <tr class="heavy-row"><td><span class="red">HEAVY</span></td><td><strong>$395–$401</strong></td><td>Daily upper VWAP $395.61 + 4h upper VWAP $401.32 + Call wall $400 (743 OI)</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$390</td><td>Call wall (639 OI)</td></tr>
+    <tr class="current-row"><td>—</td><td>$383.65 ← CURRENT</td><td>Regular session intraday</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$374.66</td><td>30m VWAP mid (rolling)</td></tr>
+    <tr><td><span class="muted">LIGHT</span></td><td>$366.24</td><td class="muted">Weekly upper VWAP band (broken, now support)</td></tr>
+    <tr><td><span class="muted">LIGHT</span></td><td>$358.51</td><td class="muted">30m 50 SMA</td></tr>
+    <tr><td><span class="muted">LIGHT</span></td><td>$356.51</td><td class="muted">4h VWAP mid</td></tr>
+    <tr class="heavy-row"><td><span class="red">HEAVY</span></td><td><strong>$340–$350</strong></td><td>Put wall $340 (785 OI) + Put wall $350 (674 OI) + Daily/Weekly Fib 1.0 $345.81 (gap-fill base)</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$334.65</td><td>Daily VWAP mid</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$315.48</td><td>Daily 50 SMA (single major anchor)</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$302.36</td><td>Daily/Weekly Fib 0.786</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$281.12</td><td>Daily 200 SMA</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$273.68</td><td>Daily lower VWAP band</td></tr>
+    <tr class="medium-row"><td><span class="amber">MEDIUM</span></td><td>$268.25</td><td>Daily/Weekly Fib 0.618 (golden pocket)</td></tr>
+  </tbody>
+</table>
+
+<h3>1C · CSP Strike Zones — May 29, 2026 (28 DTE, IV 32.82%)</h3>
+<table>
+  <thead>
+    <tr><th>Tier</th><th>Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr class="tier1-row">
+      <td><span class="green">Tier 1</span></td>
+      <td><strong>$340–$350</strong></td>
+      <td>Put wall $340 (785 OI) + Put wall $350 (674 OI) + Daily Fib 1.0 $345.81</td>
+      <td>10–12% OTM. Premium $1.60–$2.50. Delta −0.06 to −0.14. Best structural cushion; assignment-neutral cost basis.</td>
+    </tr>
+    <tr>
+      <td><span class="amber">Tier 2</span></td>
+      <td>$355–$365</td>
+      <td>Single technical (4h MA proximity, broken VWAP band as support)</td>
+      <td>Premium $3.00–$4.85. Delta −0.18 to −0.26. Sits in LVN gap zone — weak support if tested.</td>
+    </tr>
+    <tr class="avoid-row">
+      <td><span class="red">Avoid</span></td>
+      <td>$370–$385</td>
+      <td>—</td>
+      <td>LVN gap zone. No structural support between $370 and the $345 base. Premium does not compensate for the lockup risk.</td>
+    </tr>
+    <tr class="avoid-row">
+      <td><span class="red">Avoid</span></td>
+      <td>Below $320</td>
+      <td>—</td>
+      <td>Far below structural support. Premium too thin for the assignment risk profile.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <div class="callout-title">Strike Selection Notes</div>
+  Final Confidence is MEDIUM. Per skill methodology: <em>prefer Tier 1; Tier 2 only if cost basis on assignment is acceptable</em>. The $340–$350 zone aligns with the established preference for dealer-reinforced support — both put walls (785 OI and 674 OI) are large enough to act as sticky support if price retraces toward gap-fill. IV at 32.82% is post-earnings-elevated (normal GOOGL IV is closer to 22–26%); expect compression as earnings premium decays — providing IV-crush tailwind for short-premium. <strong>No earnings-through-expiry conflict</strong> (Q1 reported Apr 29, next print ~July 22–29). FOMC just passed Apr 29; next FOMC June 16–17 is outside expiry. May 29 expiry sits in an unusually clean macro window.
+</div>
+
+<!-- SECTION 2: CONFIDENCE BREAKDOWN -->
+<h2>2 · Confidence Breakdown</h2>
+
+<table>
+  <thead>
+    <tr><th>Stage</th><th>Value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>TA Confidence</td><td class="green">HIGH — 6/6 tool agreement, multi-timeframe alignment, massive volume on Apr 30 breakout (50M vs 25M avg)</td></tr>
+    <tr><td>Fundamental Context</td><td class="red">OVERVALUED — SOTP base $301.60 (−21.6%), prob-weighted $315.23 (−18.1%) per 2026-05-01 valuation</td></tr>
+    <tr><td>Fundamental Modifier</td><td class="amber">−1 tier (LONG bias + OVERVALUED)</td></tr>
+    <tr><td>Macro Calendar</td><td>FOMC Apr 28-29 passed; next FOMC Jun 16-17 (outside); CPI ~May 13 (within expiry); NFP today already released; GOOGL earnings Apr 29 passed</td></tr>
+    <tr><td>Macro Modifier</td><td>None (no IMMINENT high-impact event; CPI is &gt;24h out, within expiry but not capping)</td></tr>
+    <tr><td><strong>Final Confidence</strong></td><td><strong class="amber">MEDIUM</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="callout amber">
+  <div class="callout-title">Sanity Check</div>
+  6/6 bull score with MEDIUM Final Confidence is the textbook case of a fundamental modifier capping a clean technical setup. TA-only would read HIGH confidence LONG; the OVERVALUED fundamental view (SOTP says fair value is $300, market is at $385) downgrades the read by one tier. <strong>Translation: trend is real but don't pay current prices.</strong> Either wait for pullback to entry zone, or sell premium against structural support — both are consistent with the combined view.
+</div>
+
+<!-- SECTION 3: SUPPORTING ANALYSIS -->
+<h2>3 · Supporting Analysis</h2>
+
+<h3>3A · Higher Timeframe Context</h3>
+<ul class="bullet-list">
+  <li><strong>Weekly:</strong> Trending up sharply post-earnings. Price ($384) above weekly upper VWAP band ($366.24), 50 SMA ($264.39), and 200 SMA ($170.33). Just broke prior swing high (Weekly Fib 1.0 at $345.81). Long-horizon target = Weekly Fib 1.618 extension at $471.29. RSI 72.94 — overbought but trending. MACD above zero with positive expansion. Note: weekly RSI was making lower highs through Q1 2026 (developing bearish divergence) — but the Apr 30 earnings rip violently invalidated that divergence on extreme volume. Weekly bias = <span class="green">LONG</span>.</li>
+  <li><strong>Daily:</strong> Trending up sharply. Above all MAs, approaching daily upper VWAP band ($395.61). Just broke daily Fib 1.0 ($345.81). RSI 81.68 (extreme but durable in trend), MACD strongly bullish above zero. Volume on Apr 30 was 50M shares vs ~25M average — highest single-session volume since prior earnings cycles. Daily bias = <span class="green">LONG</span>.</li>
+</ul>
+
+<h3>3B · Current Timeframe Read (4h, primary execution TF)</h3>
+<ul class="bullet-list">
+  <li><strong>Regime:</strong> Trending up post-breakout, riding upper Bollinger zone of VWAP bands</li>
+  <li><strong>VWAP:</strong> Price $383.44 above mid VWAP ($356.51); approaching upper band ($401.32); slope rising sharply</li>
+  <li><strong>MAs:</strong> 50 SMA ($324.43) above 200 SMA ($317.40) — bullish stack, both well below price</li>
+  <li><strong>Momentum:</strong> RSI 84.00 (extreme; in trending regime, do not fade RSI alone); MACD 13.62 / 10.26 — above zero, expanding</li>
+  <li><strong>Fib reference (HTF):</strong> Above broken Daily/Weekly Fib 1.0 ($345.81); next reference = Weekly Fib 1.618 extension at $471.29</li>
+  <li><strong>30m view:</strong> Price between mid VWAP ($374.66) and upper band ($398.13). RSI 75.57 (smoothed 81.03). MACD 8.60/7.78 expanding. Volume from Apr 30 still elevated.</li>
+</ul>
+
+<h3>3C · Confluence Zones</h3>
+<p style="font-size:13px;line-height:1.7;margin:12px 0">
+The single most important level on the chart is the <strong class="red">$395–$401 resistance stack</strong>: daily upper VWAP band ($395.61), 4h upper VWAP band ($401.32), and call wall at $400 strike with 743 OI all converge in a 6-point range. This is where statistical extremes (2.5σ on two timeframes) and dealer hedging (call wall) both push back. First test of this zone is the high-probability rejection point — fade candidates only confirm with a second-day failure to close above $395.
+</p>
+<p style="font-size:13px;line-height:1.7;margin:12px 0">
+On the support side, the <strong class="red">$340–$350 zone</strong> is the nearest HEAVY confluence: put wall stack ($340 with 785 OI + $350 with 674 OI) intersecting the broken Fib 1.0 retest at $345.81. This is the gap-fill base and represents 10–12% retracement from current price. Anything above $345 maintains the breakout structure; loss of $345 invalidates the post-earnings setup entirely and re-opens the prior $300–$345 range.
+</p>
+<p style="font-size:13px;line-height:1.7;margin:12px 0">
+The intervening <strong>$355–$370 zone is structurally thin</strong> — a low-volume node from the Apr 30 gap. Price moves through this LVN quickly in either direction, making it poor support for CSPs but a reasonable zone to monitor for re-acceleration on a normal pullback or a rejection if the breakout is failing.
+</p>
+
+<h3>3D · Divergences</h3>
+<p style="font-size:13px;line-height:1.7;margin:12px 0">
+Weekly RSI was printing lower highs through Q1 2026 even as price held the $260–$340 range — a developing bearish divergence. The Apr 30 breakout on extreme volume and the post-earnings RSI surge from ~50 to ~73 invalidated that divergence cleanly. This is the technical reason the breakout is being respected. <strong>No divergences currently in play across timeframes</strong>; momentum is confirming structure on all four TFs.
+</p>
+
+<h3>3E · Notes</h3>
+<ul class="bullet-list">
+  <li><strong>TA-Fund tension:</strong> TA scores 6/6 bull. Final Confidence is MEDIUM only because fundamental view is OVERVALUED. Implication: trade the structure, not the levels. Pullback entries or short-premium against support are the cleanest expressions.</li>
+  <li><strong>CSP setup is the cleanest joint expression:</strong> positive carry from elevated IV (32.82% → ~24% normalized), structural cushion at the $340–$350 put wall stack, assignment-neutral cost basis if pulled to $345 (still 14% above SOTP base case fair value of $301).</li>
+  <li><strong>Macro window is unusually clean:</strong> FOMC Apr 28-29 passed (no rate change, hold at 3.50–3.75%), next FOMC June 16-17 outside the May 29 expiry. Earnings just passed (Q1 2026 Apr 29 AMC), next print ~July 22-29. CPI mid-May is the only HIGH-impact event in expiry window — note widened invalidation buffer for that release.</li>
+  <li><strong>"Two consecutive closes above key level" rule:</strong> Apr 30 = first close above prior swing high $345.81. May 1 close (today) = if it holds above the breakout, that's the second confirmation per documented discipline. Current price action ($384, opened $381) suggests follow-through is intact.</li>
+  <li><strong>Stranded options positioning:</strong> Call OI heavy at $365 (1,208 OI — now ITM by ~$19) means dealers are unwinding short-call hedges into rallies (selling pressure). Put OI heavy at $340–$355 means stable dealer positioning at structural support. This creates asymmetric pressure: rallies face hedge unwinds, dips toward $340–$355 face dealer support.</li>
+</ul>
+
+<!-- SECTION 4: OPTIONS DETAIL -->
+<h2>4 · Options Detail</h2>
+
+<ul class="bullet-list">
+  <li><strong>Source:</strong> User-provided screenshot (broker chain)</li>
+  <li><strong>Expiry:</strong> May 29, 2026 (28 days)</li>
+  <li><strong>Underlying:</strong> $383.95 (chain timestamp)</li>
+  <li><strong>ATM IV:</strong> 32.82% — post-earnings elevated; normalized GOOGL IV ~22–26%</li>
+  <li><strong>Expected Move:</strong> ±$32.57 (±8.5%) over 28 DTE</li>
+  <li><strong>Call wall:</strong> $400 (743 OI) — primary upside resistance</li>
+  <li><strong>Secondary call:</strong> $390 (639 OI)</li>
+  <li><strong>Put wall:</strong> $340 (785 OI) — primary downside support</li>
+  <li><strong>Secondary put:</strong> $350 (674 OI)</li>
+  <li><strong>Stranded ITM call OI:</strong> $365 strike has 1,208 OI now ITM — dealer unwinding likely contributing to upside friction</li>
+  <li><strong>Max pain estimate:</strong> $355–$365 (heavy OI overlap from pre-earnings positioning, now stranded)</li>
+  <li><strong>IV term structure:</strong> 28D ATM 32.82%; expect compression toward 22–26% as expiry approaches absent new catalyst</li>
+</ul>
+
+<div class="callout green">
+  <div class="callout-title">CSP Setup Quality: HIGH</div>
+  This is one of the cleaner CSP setups available — post-earnings IV crush tailwind, dealer-reinforced support stack at $340–$350 (1,459 combined put OI), no earnings-through-expiry conflict, and clean macro window. The trade-off is the 10–12% buffer means lower premium per contract; a Tier 1 $340 put at ~$1.60–$1.80 represents thin nominal premium but high risk-adjusted yield given the structural cushion.
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  GOOGL · Multi-Timeframe Confluence Read · Generated 2026-05-01 09:15 CT · SMB LLC<br>
+  Data sources: TradingView charts (30m / 4h / Daily / Weekly), user-provided options chain, EDGAR filings via SOTP analysis.<br>
+  This is a technical analysis, not a recommendation. User sizes the trade.
+</div>
+
+</body>
+</html>

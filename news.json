@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-05-01T19:13:01.215082+00:00",
-  "lastUpdatedDisplay": "May 01, 2026 \u2014 07:13 PM UTC",
+  "lastUpdated": "2026-05-01T20:14:30.123831+00:00",
+  "lastUpdatedDisplay": "May 01, 2026 \u2014 08:14 PM UTC",
   "articleCount": 75,
   "currentRegime": "Risk-On",
   "currentRegimeColor": "#00e676",
   "regimeConfidence": "HIGH",
   "regimeAsOf": "2026-04-18T12:00:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin breaking $78,000 amid oil drops on Iran peace signals while manufacturing data reveals weakness in employment and export orders. Dollar hits two-month lows and 10-year yields pull back, though ISM manufacturing shows elevated prices at four-year highs alongside expansion concerns.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Risk assets rallying (Bitcoin $78K, equities adding $5T in April) supports Risk-On, but manufacturing employment weakness, export order contractions, and Fed officials reiterating hawkish stances create countervailing pressures.",
+    "macroSummary": "Markets showed broad strength with Bitcoin breaking $78,000 amid a $200M short squeeze, US stocks adding $5 trillion in April, and the dollar hitting two-month lows. Oil rose for a second week on Middle East tensions while gold gained on Iranian peace proposal hopes, though the Atlanta Fed revised Q2 GDP estimates down to 3.5%.",
+    "regimePressure": "REINFORCING",
+    "regimePressureReason": "Headlines consistently show risk-on behavior with crypto rallies, equity strength, dollar weakness, and commodities rising on geopolitical developments rather than safe-haven flows.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "< 100",
-        "signal": "Dollar hits two-month low, moving away from risk-off threshold"
+        "signal": "Dollar hits two-month low, moving further from risk-off threshold of 100"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin breaks $78,000 with $200M short squeeze as oil drops on Iran peace signals",
+        "signal": "Bitcoin breaks $78,000 with $200M short squeeze indicating strong risk appetite",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US stocks add $5 trillion in April after March rout, continuing risk asset rally",
+        "signal": "US stocks added $5 trillion in April after March selloff, showing sustained risk-on flows",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Manufacturing employment index stubborn below 50 with export orders contracting second straight month",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "ISM manufacturing prices index hits four-year high while expansion described as 'at risk'",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar hits two-month low with 10-year yields pulling back, easing financial conditions",
+        "signal": "Dollar hits two-month lows, moving away from DXY 100+ risk-off threshold",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Oil rises on Middle East tensions while gold gains on peace hopes, showing nuanced commodity positioning",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Atlanta Fed revises Q2 GDP down to 3.5% from 3.7%, slight growth deceleration",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor manufacturing weakness for potential growth slowdown that could shift regime despite current risk asset strength",
-      "Track dollar weakness continuation - further DXY decline supports risk-on but watch for reversal signals",
-      "Consider BMNR ladder adjustments if crypto momentum continues given Bitcoin's approach toward $80K"
+      "BMNR ladder: Consider rolling up strikes given crypto strength and risk-on momentum",
+      "Monitor DXY weakness continuation - further dollar decline supports risk-on thesis",
+      "Watch for any volatility pickup despite current strength - VIX remains well below 22 threshold"
     ]
   },
   "articles": [
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:36:00+00:00",
+      "timeDisplay": "7:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006609:0/"
+    },
+    {
+      "title": "Change in Fed Leadership May Hamper Crypto Rebound \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:33:00+00:00",
+      "timeDisplay": "7:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006525:0/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures/Options - May 01",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:33:00+00:00",
+      "timeDisplay": "7:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006511:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futures",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:33:00+00:00",
+      "timeDisplay": "7:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006502:0/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures - May 01",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:30:00+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006463:0/"
+    },
+    {
+      "title": "Oil Rises for Second Consecutive Week Amid Middle East Standoff \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-01T19:18:00+00:00",
+      "timeDisplay": "7:18 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260501006355:0/"
+    },
     {
       "title": "Bitcoin Renko Mari-Ashi Reveals Where The Bottom Lies And When The Rise Will Begin Again",
       "source": "newsbtc",
@@ -468,7 +516,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-01T11:40:00+00:00",
       "timeDisplay": "11:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260501003002:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260501003003:0/"
     },
     {
       "title": "BOE Rate Rise Prospect Could Fall if Energy-Supply Shock Ends \u2014 Market Talk",
@@ -551,14 +599,6 @@
       "link": "https://www.tradingview.com/news/cryptonews:0e071a824094b:0-bitcoin-spot-cvd-surges-199-as-institutional-inflows-re-accelerate/"
     },
     {
-      "title": "Riot reports $33 million in first data center revenue as AMD doubles contracted capacity",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T08:31:15+00:00",
-      "timeDisplay": "8:31 AM",
-      "link": "https://www.tradingview.com/news/the_block:4ac65bfb9094b:0-riot-reports-33-million-in-first-data-center-revenue-as-amd-doubles-contracted-capacity/"
-    },
-    {
       "title": "Grayscale Names Six Protocols Set to Win the Tokenization Megatrend",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -575,12 +615,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E01E:0-asia-shares-find-hope-in-tech-resilience-oil-off-peak/"
     },
     {
-      "title": "Dollar heads for biggest weekly loss against yen since February after Japan's intervention",
+      "title": "Dollar set for sharp weekly loss versus yen after Japan steps in",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-01T04:15:36+00:00",
       "timeDisplay": "4:15 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-dollar-heads-for-biggest-weekly-loss-against-yen-since-february-after-japan-s-intervention/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41E01U:0-dollar-set-for-sharp-weekly-loss-versus-yen-after-japan-steps-in/"
     },
     {
       "title": "Ethereum Price Holds Losses Under $2,300, Recovery Momentum Still Weak",
@@ -605,46 +645,6 @@
       "timestamp": "2026-05-01T02:29:47+00:00",
       "timeDisplay": "2:29 AM",
       "link": "https://www.tradingview.com/news/te_news:546944:0-us-10-year-yield-holds-decline/"
-    },
-    {
-      "title": "Gold Likely to Remain Under Pressure for a Bit \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T02:22:00+00:00",
-      "timeDisplay": "2:22 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430020579:0/"
-    },
-    {
-      "title": "Oil Rises as Concerns Over Prolonged Middle East Conflict Persist \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T02:11:00+00:00",
-      "timeDisplay": "2:11 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430020568:0/"
-    },
-    {
-      "title": "Crude futures fall on new Iran proposal for peace talks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T01:55:00+00:00",
-      "timeDisplay": "1:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41E00I:0-crude-futures-fall-on-new-iran-proposal-for-peace-talks/"
-    },
-    {
-      "title": "Gold Steady But Stagnation of Diplomacy in Middle East Weighs \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-01T01:37:00+00:00",
-      "timeDisplay": "1:37 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260430020503:0/"
-    },
-    {
-      "title": "Asia shares find relief in tech resilience, oil off peak",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-01T01:23:01+00:00",
-      "timeDisplay": "1:23 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41D381:0-asia-shares-find-relief-in-tech-resilience-oil-off-peak/"
     }
   ]
 }

@@ -1,51 +1,152 @@
 {
-  "lastUpdated": "2026-05-04T17:10:38.989545+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 05:10 PM UTC",
+  "lastUpdated": "2026-05-04T19:02:57.707452+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 07:02 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Headlines show mixed developments with Iran-Hormuz tensions driving oil volatility and risk-off flows, while factory orders surged past expectations led by defense and AI spending. Fed's Williams maintains inflation will return to 2% next year despite current 3% levels, as vehicle sales weakened year-over-year and Goldman warns AI is boosting US inflation.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Strong factory orders and defense spending support reflation, but weakening auto sales, persistent 3% inflation, and oil volatility from Iran tensions create cross-currents that neither strongly confirm nor challenge the regime.",
+    "macroSummary": "Iran has escalated attacks on UAE oil infrastructure and Strait of Hormuz shipping, driving oil up 6% while stocks drop on heightened geopolitical risk. US 10-year yields hit 9-month highs as Fed's Williams warns of broader supply shock risks, while Bitcoin pushes past $80k amid continued crypto institutional adoption.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Iran conflict escalation is driving oil higher and stocks lower with 10Y yields at 9-month highs, moving closer to several stagflationary invalidation thresholds.",
     "thresholdWatches": [
       {
+        "indicator": "US30Y",
+        "level": "5.10%",
+        "signal": "10Y at 9-month high with Fed warning of broader supply shocks suggests long-end stress building"
+      },
+      {
         "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil jumped on Hormuz threats but pared gains as US denied Iran strike report, suggesting volatility without sustained breakout"
+        "level": "$115",
+        "signal": "6% jump on Iran Strait attacks with Chevron CEO warning weeks-to-months for stabilization even if war ends"
       }
     ],
     "keySignals": [
       {
-        "signal": "Factory orders blasted past expectations at +1.5% vs +0.5% expected, driven by war machinery and AI spending",
-        "tag": "SUPPORTS"
+        "signal": "Iran attacks UAE oil port and Strait shipping causing 6% oil spike with stocks dropping",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Fed's Williams sees inflation staying at 3% this year despite expecting 2% next year, acknowledging 'unusual set of circumstances'",
+        "signal": "US 10-year Treasury hits 9-month high amid geopolitical oil supply concerns",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Fed's Williams warns Iran conflict could cause larger, broader-based supply shock with severe consequences",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Total motor vehicle sales at 15.9M in April down from 17.1M in April 2025, showing demand weakness",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Goldman warns AI is boosting US inflation, adding to price pressures beyond oil shocks",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar edges up and yields rise as Iran conflict keeps risk appetite in check despite equity strength",
+        "signal": "Bitcoin breaks $80k despite risk-asset selloff, showing crypto decoupling from traditional risk correlations",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Factory orders surge on war machinery and AI spending, supporting growth narrative",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder for vol expansion if Iran tensions escalate beyond current noise level",
-      "Watch for auto sector weakness confirmation in Maturity names given significant vehicle sales decline",
-      "Prepare for potential regime reassessment if 3% inflation persists longer than Fed expects"
+      "Monitor oil closely - sustained move toward $115 would flip regime to stagflation-dominant",
+      "Watch long-end yields - 30Y approaching 5.10% invalidation threshold with Iran escalation",
+      "BMNR ladder benefits from crypto strength but stay alert to broader risk-off if geopolitical tensions spread"
     ]
   },
   "articles": [
+    {
+      "title": "The market is riding high on an AI spending boom - but what could crack this rally?",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T18:45:00+00:00",
+      "timeDisplay": "6:45 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260503000415:0/"
+    },
+    {
+      "title": "Aave fights court-ordered $73 million ETH freeze, argues \u2018a thief does not own what he steals\u2019",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T18:24:34+00:00",
+      "timeDisplay": "6:24 PM",
+      "link": "https://www.tradingview.com/news/the_block:3f061d56f094b:0-aave-fights-court-ordered-73-million-eth-freeze-argues-a-thief-does-not-own-what-he-steals/"
+    },
+    {
+      "title": "Bitcoin Pushes Over $80k as Oil-BTC Relationship Steps Aside \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T18:18:00+00:00",
+      "timeDisplay": "6:18 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504006277:0/"
+    },
+    {
+      "title": "Bitcoin Nears Structural Shift Amid Changing Market Conditions \u2014 What This Means",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T18:00:45+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:914f113b9094b:0-bitcoin-nears-structural-shift-amid-changing-market-conditions-what-this-means/"
+    },
+    {
+      "title": "Oil jumps, stocks drop as Iran tightens grip on Strait of Hormuz",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T17:57:44+00:00",
+      "timeDisplay": "5:57 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H0N6:0-oil-jumps-stocks-drop-as-iran-tightens-grip-on-strait-of-hormuz/"
+    },
+    {
+      "title": "Crypto Stocks Explode After Bitcoin Smashes Through $80,000",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:55:09+00:00",
+      "timeDisplay": "5:55 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:6bbf9717a094b:0-crypto-stocks-explode-after-bitcoin-smashes-through-80-000/"
+    },
+    {
+      "title": "CLARITY Act Section 1960 Issue To Be Fixed \u2018Very Soon,\u2019 Says White House Crypto Advisor",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:39:25+00:00",
+      "timeDisplay": "5:39 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:d82990747094b:0/"
+    },
+    {
+      "title": "Bitcoin bounces around $80K as Iran strike unsettles crypto, risk assets",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:21:37+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:28b105122094b:0-bitcoin-bounces-around-80k-as-iran-strike-unsettles-crypto-risk-assets/"
+    },
+    {
+      "title": "CHEVRON CEO WIRTH Q&A/CNBC-MILKEN CONF: EVEN IF WAR ENDED WOULD TAKE WKS TO MOS FOR OIL MKT TO STABILIZE; EUROPE CONCERN SHIFTS, PRICE TO AVAILABILITY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:19:00+00:00",
+      "timeDisplay": "5:19 PM",
+      "link": "https://www.tradingview.com/news/macenews:e003ec1cb094b:0-chevron-ceo-wirth-q-a-cnbc-milken-conf-even-if-war-ended-would-take-wks-to-mos-for-oil-mkt-to-stabilize-europe-concern-shifts-price-to-availability/"
+    },
+    {
+      "title": "Crypto Is Now Mainstream. Investors of All Ages Are Diving In. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:16:00+00:00",
+      "timeDisplay": "5:16 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260502000619:0/"
+    },
+    {
+      "title": "Oil Futures Climb on Reports on Iranian Attacks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:16:00+00:00",
+      "timeDisplay": "5:16 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504005930:0/"
+    },
+    {
+      "title": "IRAN UPDATE: UAE DEFENSES PROTECT AGAINST 4 ATTACKS, EAST COAST OIL PORT AFLAME; US NAVY REPELS CRUISE MISSILE, DRONE ATTACKS IN STRAIT; OMAN ATTACKED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:11:00+00:00",
+      "timeDisplay": "5:11 PM",
+      "link": "https://www.tradingview.com/news/macenews:d2a07b919094b:0-iran-update-uae-defenses-protect-against-4-attacks-east-coast-oil-port-aflame-us-navy-repels-cruise-missile-drone-attacks-in-strait-oman-attacked/"
+    },
     {
       "title": "Even odds for a blue Congress\u00a0",
       "source": "reuters",
@@ -61,6 +162,14 @@
       "timestamp": "2026-05-04T17:06:00+00:00",
       "timeDisplay": "5:06 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260504005875:0/"
+    },
+    {
+      "title": "US 10-Year Treasury Note Hits 9-Month High",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:59:49+00:00",
+      "timeDisplay": "4:59 PM",
+      "link": "https://www.tradingview.com/news/te_news:547555:0-us-10-year-treasury-note-hits-9-month-high/"
     },
     {
       "title": "NYFED'S WILLIAMS/CYNOSURE: 'RISKS TO BOTH SIDES OF OUR MANDATES HAVE INCREASED;' 'SIMPLY CAN'T KNOW HOW THIS WILL PLAY OUT'",
@@ -207,6 +316,14 @@
       "link": "https://www.tradingview.com/news/macenews:d501d20ed094b:0-us-bea-total-motor-vehicles-sales-15-9-mln-in-april-vs-16-2-mln-in-march-17-1-mln-in-april-2025/"
     },
     {
+      "title": "Oil prices jump 6% as Iran sets UAE oil port ablaze, strikes vessels in Strait of Hormuz",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T15:28:24+00:00",
+      "timeDisplay": "3:28 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41G06D:0-oil-prices-jump-6-as-iran-sets-uae-oil-port-ablaze-strikes-vessels-in-strait-of-hormuz/"
+    },
+    {
       "title": "Factory orders blast past expectations, with war machinery, AI spending in the driver's seat\u00a0",
       "source": "reuters",
       "color": "#ff6d00",
@@ -311,14 +428,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260504004136:0/"
     },
     {
-      "title": "AI is boosting US inflation, Goldman says",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T13:54:41+00:00",
-      "timeDisplay": "1:54 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H105:0-ai-is-boosting-us-inflation-goldman-says/"
-    },
-    {
       "title": "Oil Pares Gains as US Denies Iran Strike Report",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -341,14 +450,6 @@
       "timestamp": "2026-05-04T13:21:59+00:00",
       "timeDisplay": "1:21 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:b177302e9094b:0-bitcoin-price-eyes-96k-as-institutions-absorb-500-of-daily-btc-supply/"
-    },
-    {
-      "title": "The market is riding high on an AI spending boom - but what could crack this rally?",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T13:21:00+00:00",
-      "timeDisplay": "1:21 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260503000415:0/"
     },
     {
       "title": "Comex Gold Delivery Intentions Breakdown - May 4",
@@ -431,14 +532,6 @@
       "link": "https://www.tradingview.com/news/gurufocus:4ead4e611094b:0-bitcoin-breaks-80-000-as-etf-inflows-hit-630-million/"
     },
     {
-      "title": "Bitcoin Price Broke $80,000. Why the Crypto Rally Is Set to Disappoint. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T12:20:00+00:00",
-      "timeDisplay": "12:20 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504001155:0/"
-    },
-    {
       "title": "Dollar Edges Up to 98.4",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -447,52 +540,12 @@
       "link": "https://www.tradingview.com/news/te_news:547460:0-dollar-edges-up-to-98-4/"
     },
     {
-      "title": "Strategy - As Of May 3, Holds 818,334 Btc With Aggregate Purchase Price $61.81 Billion - SEC Filing",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T12:13:00+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41H02F:0-strategy-as-of-may-3-holds-818-334-btc-with-aggregate-purchase-price-61-81-billion-sec-filing/"
-    },
-    {
-      "title": "Strive Inc - Reports Bitcoin Treasury Of 15,000 Bitcoin As Of May 1, 2026 - SEC Filing",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T12:12:43+00:00",
-      "timeDisplay": "12:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41H0V2:0-strive-inc-reports-bitcoin-treasury-of-15-000-bitcoin-as-of-may-1-2026-sec-filing/"
-    },
-    {
-      "title": "Bitcoin Holds Near $79K as CME Gaps Set Up Key Move: Will BTC Price Drop to $78K or Rally to $84K?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T12:02:28+00:00",
-      "timeDisplay": "12:02 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:642c427ec094b:0-bitcoin-holds-near-79k-as-cme-gaps-set-up-key-move-will-btc-price-drop-to-78k-or-rally-to-84k/"
-    },
-    {
-      "title": "This Signal Has Predicted Every Bitcoin Bottom, Here\u2019s What It\u2019s Saying Now",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T12:00:31+00:00",
-      "timeDisplay": "12:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:59c8f473e094b:0-this-signal-has-predicted-every-bitcoin-bottom-here-s-what-it-s-saying-now/"
-    },
-    {
       "title": "10-Year Treasury Yield Rises to Approach 4-Week Highs Again",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-05-04T11:46:35+00:00",
       "timeDisplay": "11:46 AM",
       "link": "https://www.tradingview.com/news/te_news:547456:0-10-year-treasury-yield-rises-to-approach-4-week-highs-again/"
-    },
-    {
-      "title": "Yen spikes briefly and reported Iran escalation boosts dollar",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T11:43:57+00:00",
-      "timeDisplay": "11:43 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0GS:0-yen-spikes-briefly-and-reported-iran-escalation-boosts-dollar/"
     },
     {
       "title": "Euro Credit Default Protection Costs Stay Steady at Elevated Levels \u2014 Market Talk",
@@ -509,14 +562,6 @@
       "timestamp": "2026-05-04T11:22:51+00:00",
       "timeDisplay": "11:22 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H09C:0-oil-jumps-after-iran-s-navy-said-it-halted-a-us-warship/"
-    },
-    {
-      "title": "BTC price can \u2018easily\u2019 hit $95K: Five things to know in Bitcoin this week",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T11:05:33+00:00",
-      "timeDisplay": "11:05 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:27c0269ba094b:0-btc-price-can-easily-hit-95k-five-things-to-know-in-bitcoin-this-week/"
     },
     {
       "title": "Ethereum Price Gears Up for Breakout as Whales Accumulate: Is $3K Back in Play?",
@@ -605,46 +650,6 @@
       "timestamp": "2026-05-04T07:19:50+00:00",
       "timeDisplay": "7:19 AM",
       "link": "https://www.tradingview.com/news/te_news:547305:0-oil-rises-on-middle-east-uncertainty/"
-    },
-    {
-      "title": "Treasury Yields Rise as Inflation Concerns Persist \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T07:14:00+00:00",
-      "timeDisplay": "7:14 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504000647:0/"
-    },
-    {
-      "title": "Gold Falls in Thin Trade as U.S.-Iran Uncertainty Clouds Rate Outlook \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T06:51:00+00:00",
-      "timeDisplay": "6:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504000545:0/"
-    },
-    {
-      "title": "Oil Slips After Trump Says U.S. Will Assist Stranded Ships in Hormuz \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T06:43:00+00:00",
-      "timeDisplay": "6:43 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504000522:0/"
-    },
-    {
-      "title": "Stocks gain in Asia, oil flat amid new Gulf proposals",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T04:31:40+00:00",
-      "timeDisplay": "4:31 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H02Y:0-stocks-gain-in-asia-oil-flat-amid-new-gulf-proposals/"
-    },
-    {
-      "title": "Oil Prices Likely to Remain Elevated \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T03:30:00+00:00",
-      "timeDisplay": "3:30 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260503000863:0/"
     }
   ]
 }

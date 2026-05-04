@@ -1,61 +1,77 @@
 {
-  "lastUpdated": "2026-05-04T20:46:30.797022+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 08:46 PM UTC",
+  "lastUpdated": "2026-05-04T21:57:14.320875+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 09:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Iran has escalated military operations in the Strait of Hormuz with attacks on ships and UAE facilities, driving oil prices higher and pushing US 10-year yields to 9-month highs. Risk assets including stocks are under pressure while the dollar strengthens, though Bitcoin has managed to reclaim $80,000 amid the volatility.",
+    "macroSummary": "Iran escalated attacks on UAE oil facilities and Strait of Hormuz shipping, driving oil prices higher and US Treasury yields to 9-month highs. Risk assets including US stocks declined while the dollar strengthened, though Bitcoin recovered above $80K despite initial weakness from geopolitical tensions.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The Iran conflict escalation is driving oil higher and yields to 9-month highs while suppressing risk appetite, pushing closer to several stagflationary invalidation thresholds including potential moves toward $115 oil and further long-end stress.",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached simultaneously - US 10Y at 9-month highs suggests long-end stress is accelerating, oil price surge from Iran conflict intensifies stagflationary pressures, and risk-off behavior in equities contradicts the bullish-cyclicals bias.",
     "thresholdWatches": [
       {
-        "indicator": "US 10Y yields",
-        "level": "9-month high",
-        "signal": "Iran conflict pushing yields higher as oil prices surge"
+        "indicator": "US30Y",
+        "level": "approaching 5.10%",
+        "signal": "US 10-Year hits 9-month high as Iran conflict pushes yields higher"
       },
       {
         "indicator": "Oil (WTI)",
-        "level": "Rising toward $115",
-        "signal": "Iran attacks in Strait of Hormuz driving crude futures higher"
+        "level": "trending toward $115",
+        "signal": "Oil jumps on Iran tightening Strait of Hormuz grip and attacking UAE facilities"
       },
       {
-        "indicator": "Risk appetite",
-        "level": "Muted",
-        "signal": "Stocks dropping and dollar strengthening as Middle East jitters dominate"
+        "indicator": "VIX",
+        "level": "approaching 22",
+        "signal": "Middle East jitters cause US stocks to dip and keep risk appetite muted"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran attacks in Strait of Hormuz with UAE oil facilities ablaze pushing oil futures higher",
+        "signal": "US 10-Year Treasury yields hit 9-month highs as Iran conflict escalates, approaching long-duration capitulation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US 10-year Treasury yields hit 9-month high as Iran conflict escalates",
+        "signal": "Oil prices surge as Iran attacks UAE facilities and tightens Strait of Hormuz control, moving toward stagflation trigger level",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar higher and risk appetite muted as Middle East conflict keeps investors on edge",
+        "signal": "US stocks decline and LatAm assets fall as Middle East tensions keep investors on edge, contradicting bullish-cyclicals bias",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Williams warns Iran conflict could result in broader supply shock with severe adverse consequences",
+        "signal": "Dollar strengthens as US-Iran conflict keeps risk appetite muted, approaching potential regime flip level",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Treasury borrowing estimates show $671B needed for July-Sept quarter",
-        "tag": "SUPPORTS"
+        "signal": "Fed's Williams notes risks to both mandates have increased, signaling policy uncertainty amid geopolitical tensions",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely for sustained break above $115 which would trigger stagflation dominance",
-      "Watch for further long-end stress as 10Y at 9-month highs pressures duration assets",
-      "Consider tightening BMNR put strikes if risk-off accelerates beyond current Middle East jitters"
+      "Monitor BMNR put ladder strikes - crypto showing resilience but broader risk-off could accelerate",
+      "Consider reducing Maturity sector overweight as long-end yields approach capitulation levels",
+      "Prepare for potential regime flip to Risk-Off/Stagflation if oil breaks $115 and 30Y breaks 5.10%"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Price Rally Could Trigger 20% Push for Dogecoin, Here\u2019s When",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T21:00:31+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:7735ca534094b:0-bitcoin-price-rally-could-trigger-20-push-for-dogecoin-here-s-when/"
+    },
+    {
+      "title": "Bitcoin short-term cost basis approaches profitability, but $80K must flip to support first",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T20:38:43+00:00",
+      "timeDisplay": "8:38 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:352918a9f094b:0-bitcoin-short-term-cost-basis-approaches-profitability-but-80k-must-flip-to-support-first/"
+    },
     {
       "title": "Oil jumps, stocks drop as Iran tightens grip on Strait of Hormuz",
       "source": "reuters",
@@ -63,6 +79,14 @@
       "timestamp": "2026-05-04T20:34:59+00:00",
       "timeDisplay": "8:34 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H0WD:0-oil-jumps-stocks-drop-as-iran-tightens-grip-on-strait-of-hormuz/"
+    },
+    {
+      "title": "Oil Prices Rise as US and Iran Exchange Fire",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T20:34:15+00:00",
+      "timeDisplay": "8:34 PM",
+      "link": "https://www.tradingview.com/news/te_news:547578:0-oil-prices-rise-as-us-and-iran-exchange-fire/"
     },
     {
       "title": "US stocks dip as Middle East jitters overshadow earnings \u00a0\u00a0",
@@ -545,14 +569,6 @@
       "link": "https://www.tradingview.com/news/gurufocus:d606abe9b094b:0-bitcoin-tops-80k-as-crypto-momentum-builds/"
     },
     {
-      "title": "Bitcoin scaling layer Citrea rolls out CTR token and dual treasury model",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T13:01:01+00:00",
-      "timeDisplay": "1:01 PM",
-      "link": "https://www.tradingview.com/news/the_block:7621b2ef9094b:0-bitcoin-scaling-layer-citrea-rolls-out-ctr-token-and-dual-treasury-model/"
-    },
-    {
       "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.18 Million Tokens, and Total Crypto and Total Cash Holdings of $13.1 Billion",
       "source": "chainwire",
       "color": "#00e5ff",
@@ -567,14 +583,6 @@
       "timestamp": "2026-05-04T12:45:33+00:00",
       "timeDisplay": "12:45 PM",
       "link": "https://www.tradingview.com/news/coinpedia:d93af7919094b:0-ethereum-fails-at-2-400-again-will-2-300-decide-the-next-eth-price-move/"
-    },
-    {
-      "title": "Coinbase Stock, Strategy Gain. It's Not Just Rising Bitcoin Lifting Crypto Companies. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504001291:0/"
     },
     {
       "title": "Bitmine Immersion Technologies (Bmnr) Announces Eth Holdings Reach 5.18 Million Tokens, And Total Crypto And Total Cash Holdings Of $13.1 Billion",
@@ -647,14 +655,6 @@
       "timestamp": "2026-05-04T10:20:35+00:00",
       "timeDisplay": "10:20 AM",
       "link": "https://www.tradingview.com/news/te_news:547407:0-oil-extends-gains/"
-    },
-    {
-      "title": "World stocks gain, oil climbs amid new Gulf proposals",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T09:33:37+00:00",
-      "timeDisplay": "9:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H06Z:0-world-stocks-gain-oil-climbs-amid-new-gulf-proposals/"
     }
   ]
 }

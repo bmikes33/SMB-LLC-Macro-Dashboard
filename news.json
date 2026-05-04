@@ -1,51 +1,219 @@
 {
-  "lastUpdated": "2026-05-04T15:09:11.630870+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 03:09 PM UTC",
+  "lastUpdated": "2026-05-04T17:10:38.989545+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 05:10 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with US-Iran tensions driving oil higher and keeping risk appetite cautious, while Bitcoin breaks above $80K on institutional demand and factory orders surprise to the upside. Dollar edges up to 98.4 as yields rise amid ongoing Strait of Hormuz standoff, though AI spending is reportedly boosting US inflation according to Goldman.",
+    "macroSummary": "Headlines show mixed developments with Iran-Hormuz tensions driving oil volatility and risk-off flows, while factory orders surged past expectations led by defense and AI spending. Fed's Williams maintains inflation will return to 2% next year despite current 3% levels, as vehicle sales weakened year-over-year and Goldman warns AI is boosting US inflation.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Geopolitical tensions support the oil shock element of the regime, but rising yields and cautious risk appetite amid mixed equity performance suggest reflation pressures without clear bullish-cyclical momentum.",
+    "regimePressureReason": "Strong factory orders and defense spending support reflation, but weakening auto sales, persistent 3% inflation, and oil volatility from Iran tensions create cross-currents that neither strongly confirm nor challenge the regime.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar edges up to 98.4, moving closer to the 100 regime flip threshold"
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil jumped on Hormuz threats but pared gains as US denied Iran strike report, suggesting volatility without sustained breakout"
       }
     ],
     "keySignals": [
       {
-        "signal": "US factory orders jump 1.5% vs 0.5% expected, showing manufacturing strength supporting reflation thesis",
+        "signal": "Factory orders blasted past expectations at +1.5% vs +0.5% expected, driven by war machinery and AI spending",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar rising to 98.4 approaches the 100 regime flip threshold as Iran tensions keep risk appetite in check",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Goldman reports AI is boosting US inflation, adding to reflation pressures beyond the oil shock",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "US stocks mixed rather than bullish-cyclical behavior expected in reflation regime with equity bias",
+        "signal": "Fed's Williams sees inflation staying at 3% this year despite expecting 2% next year, acknowledging 'unusual set of circumstances'",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin breaks $80K with massive institutional flows while BMNR adds 101K ETH, crypto strength continues",
+        "signal": "Total motor vehicle sales at 15.9M in April down from 17.1M in April 2025, showing demand weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Goldman warns AI is boosting US inflation, adding to price pressures beyond oil shocks",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar edges up and yields rise as Iran conflict keeps risk appetite in check despite equity strength",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as it approaches 100 threshold - dollar strength could signal regime flip",
-      "BMNR ladder strategy benefits from continued institutional crypto demand and BMNR's growing ETH treasury",
-      "Watch for equity sector rotation into true cyclicals if reflation thesis holds - current mixed performance is concerning"
+      "Monitor BMNR ladder for vol expansion if Iran tensions escalate beyond current noise level",
+      "Watch for auto sector weakness confirmation in Maturity names given significant vehicle sales decline",
+      "Prepare for potential regime reassessment if 3% inflation persists longer than Fed expects"
     ]
   },
   "articles": [
+    {
+      "title": "Even odds for a blue Congress\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T17:09:09+00:00",
+      "timeDisplay": "5:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0S8:0-even-odds-for-a-blue-congress/"
+    },
+    {
+      "title": "Higher Crude Oil Gives Soyoil a Boost \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T17:06:00+00:00",
+      "timeDisplay": "5:06 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504005875:0/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOSURE: 'RISKS TO BOTH SIDES OF OUR MANDATES HAVE INCREASED;' 'SIMPLY CAN'T KNOW HOW THIS WILL PLAY OUT'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:55:00+00:00",
+      "timeDisplay": "4:55 PM",
+      "link": "https://www.tradingview.com/news/macenews:a0577d420094b:0-nyfed-s-williams-cynosure-risks-to-both-sides-of-our-mandates-have-increased-simply-can-t-know-how-this-will-play-out/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOASURE: MEDIUM AND LONG-TERM INFLATION EXPECTATIONS 'REMAIN SOLIDLY ANCHORED;' STILL SEE INFLATION AT ABOUT 3% THIS YR, 2% NEXT YR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:51:00+00:00",
+      "timeDisplay": "4:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:7ef2f3661094b:0-nyfed-s-williams-cynoasure-medium-and-long-term-inflation-expectations-remain-solidly-anchored-still-see-inflation-at-about-3-this-yr-2-next-yr/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOASURE: STILL 'NO SIGNS OF SIGNIFICANT SECOND-ROUND EFFECTS FROM TARIFFS; UNDERLYING INFLATION 'STABLE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:51:00+00:00",
+      "timeDisplay": "4:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:8431f49c1094b:0-nyfed-s-williams-cynoasure-still-no-signs-of-significant-second-round-effects-from-tariffs-underlying-inflation-stable/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOSURE: 'DESPITE THE UNCERTAINTY, WE HAVE A MISSION;'  'UNUSUAL SET OF CIRCUMASTANCES'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:50:00+00:00",
+      "timeDisplay": "4:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:b89599d43094b:0-nyfed-s-williams-cynosure-despite-the-uncertainty-we-have-a-mission-unusual-set-of-circumastances/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOSURE: IRAN CONFLICT 'COULD RESULT IN A LARGER AND BROADER-BASED SUPPLY SHOCK THAT HAS MORE SEVEE ADVERSE CONSEQUENCES'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:50:00+00:00",
+      "timeDisplay": "4:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:d40fcfd11094b:0-nyfed-s-williams-cynosure-iran-conflict-could-result-in-a-larger-and-broader-based-supply-shock-that-has-more-sevee-adverse-consequences/"
+    },
+    {
+      "title": "NYFED'S WILLIAMS/CYNOSURE: STILL 'NO SIGNS OF SIGNIFICANT SECOND-ROUND EFFECTS FROM TARIFFS; UNDERLYING INFLATION 'STABLE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:50:00+00:00",
+      "timeDisplay": "4:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:92006dcb8094b:0-nyfed-s-williams-cynosure-still-no-signs-of-significant-second-round-effects-from-tariffs-underlying-inflation-stable/"
+    },
+    {
+      "title": "HEADS UP: NYFED'S WILLIAMS REMARKS AT CYNOSURE GROUP SYMPOSIUM IN N.Y. COMING UP AT 12:50P ET",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:34:00+00:00",
+      "timeDisplay": "4:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:5ebb30cd5094b:0-heads-up-nyfed-s-williams-remarks-at-cynosure-group-symposium-in-n-y-coming-up-at-12-50p-et/"
+    },
+    {
+      "title": "Market Analyst Predicts Bitcoin And Ethereum Prices For The Next 3 Quarters",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:30:32+00:00",
+      "timeDisplay": "4:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:b3799c4b4094b:0-market-analyst-predicts-bitcoin-and-ethereum-prices-for-the-next-3-quarters/"
+    },
+    {
+      "title": "Ethereum holders are back in profit as ETH price chart targets $3K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:30:03+00:00",
+      "timeDisplay": "4:30 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:14e8e15c8094b:0-ethereum-holders-are-back-in-profit-as-eth-price-chart-targets-3k/"
+    },
+    {
+      "title": "WTI Jumps as Hormuz Threats Rise",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T16:06:58+00:00",
+      "timeDisplay": "4:06 PM",
+      "link": "https://www.tradingview.com/news/te_news:547535:0-wti-jumps-as-hormuz-threats-rise/"
+    },
+    {
+      "title": "AI\u2019s next gold rush is in the plumbing, not the processors\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T16:05:02+00:00",
+      "timeDisplay": "4:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0P7:0-ai-s-next-gold-rush-is-in-the-plumbing-not-the-processors/"
+    },
+    {
+      "title": "BlackRock's IBIT Drew $2.3 Billion In April Flows Despite Negative Year-to-Date Return",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:57:32+00:00",
+      "timeDisplay": "3:57 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:a18cbce45094b:0/"
+    },
+    {
+      "title": "Pepsi \u2018Playbook\u2019 Meets Bitcoin: Cathie Wood Sees Liquidity Fueling Next Surge",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:48:22+00:00",
+      "timeDisplay": "3:48 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:717ad3d21094b:0/"
+    },
+    {
+      "title": "US BEA HEAVY TRUCK SALES 398,000 IN APRIL VS 367,000 IN MARCH; 451,000 IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:38:00+00:00",
+      "timeDisplay": "3:38 PM",
+      "link": "https://www.tradingview.com/news/macenews:c98dc1302094b:0-us-bea-heavy-truck-sales-398-000-in-april-vs-367-000-in-march-451-000-in-april-2025/"
+    },
+    {
+      "title": "US BEA LIGHT TRUCK SALES 13.3 MLN IN APRIL VS 13.5 MLN IN MARCH; 14.2 MLN IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:38:00+00:00",
+      "timeDisplay": "3:38 PM",
+      "link": "https://www.tradingview.com/news/macenews:4036af739094b:0-us-bea-light-truck-sales-13-3-mln-in-april-vs-13-5-mln-in-march-14-2-mln-in-april-2025/"
+    },
+    {
+      "title": "US BEA PASSENGER CAR SALES 2.6 MLN IN APRIL VS 2.6 MLN IN MARCH; 2.9 MLN IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:38:00+00:00",
+      "timeDisplay": "3:38 PM",
+      "link": "https://www.tradingview.com/news/macenews:01db76f13094b:0-us-bea-passenger-car-sales-2-6-mln-in-april-vs-2-6-mln-in-march-2-9-mln-in-april-2025/"
+    },
+    {
+      "title": "US BEA DOMESTIC MOTOR VEHICLES SALES 12.2 MLN IN APRIL VS 12.6 MLN IN MARCH; 13.0 MLN IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:37:00+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:b44b68421094b:0-us-bea-domestic-motor-vehicles-sales-12-2-mln-in-april-vs-12-6-mln-in-march-13-0-mln-in-april-2025/"
+    },
+    {
+      "title": "US BEA TOTAL MOTOR VEHICLES SALES 15.9 MLN IN APRIL VS 16.2 MLN IN MARCH; 17.1 MLN IN APRIL 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:37:00+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:d501d20ed094b:0-us-bea-total-motor-vehicles-sales-15-9-mln-in-april-vs-16-2-mln-in-march-17-1-mln-in-april-2025/"
+    },
+    {
+      "title": "Factory orders blast past expectations, with war machinery, AI spending in the driver's seat\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T15:12:00+00:00",
+      "timeDisplay": "3:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0PG:0-factory-orders-blast-past-expectations-with-war-machinery-ai-spending-in-the-driver-s-seat/"
+    },
     {
       "title": "US yields rise as Strait of Hormuz standoff continues",
       "source": "reuters",
@@ -215,14 +383,6 @@
       "link": "https://www.tradingview.com/news/chainwire:0c4ad2b26094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-5-18-million-tokens-and-total-crypto-and-total-cash-holdings-of-13-1-billion/"
     },
     {
-      "title": "Nasdaq hits new highs as market breadth sends a warning",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T12:59:14+00:00",
-      "timeDisplay": "12:59 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0I9:0-nasdaq-hits-new-highs-as-market-breadth-sends-a-warning/"
-    },
-    {
       "title": "Ethereum Fails at $2,400 Again: Will $2,300 Decide the Next ETH Price Move?",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -319,14 +479,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:59c8f473e094b:0-this-signal-has-predicted-every-bitcoin-bottom-here-s-what-it-s-saying-now/"
     },
     {
-      "title": "Strait talk",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T11:55:34+00:00",
-      "timeDisplay": "11:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0J1:0-strait-talk/"
-    },
-    {
       "title": "10-Year Treasury Yield Rises to Approach 4-Week Highs Again",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -407,38 +559,6 @@
       "link": "https://www.tradingview.com/news/te_news:547407:0-oil-extends-gains/"
     },
     {
-      "title": "Dollar rises, European stocks and bonds fall after reports of U.S. warship being hit missiles\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T10:10:18+00:00",
-      "timeDisplay": "10:10 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0FE:0-dollar-rises-european-stocks-and-bonds-fall-after-reports-of-u-s-warship-being-hit-missiles/"
-    },
-    {
-      "title": "When Will Bitcoin Price Hit $100,000 Again?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:08:52+00:00",
-      "timeDisplay": "10:08 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:e46a2505b094b:0-when-will-bitcoin-price-hit-100-000-again/"
-    },
-    {
-      "title": "Who\u2019s Buying All The Bitcoin? ETFs Are Now Taking 500% Of New Supply",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:06:11+00:00",
-      "timeDisplay": "10:06 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:5b58ad144094b:0/"
-    },
-    {
-      "title": "Capital B raises $1.3M from Adam Back for Bitcoin strategy",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:05:30+00:00",
-      "timeDisplay": "10:05 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5608c0deb094b:0-capital-b-raises-1-3m-from-adam-back-for-bitcoin-strategy/"
-    },
-    {
       "title": "World stocks gain, oil climbs amid new Gulf proposals",
       "source": "reuters",
       "color": "#ff6d00",
@@ -453,14 +573,6 @@
       "timestamp": "2026-05-04T08:27:35+00:00",
       "timeDisplay": "8:27 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:2564080cd094b:0-us-law-firm-attempts-to-block-transfer-of-frozen-eth-from-kelp-exploit/"
-    },
-    {
-      "title": "Yen rises sharply before unwinding, intervention remains on radar of markets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T08:25:09+00:00",
-      "timeDisplay": "8:25 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H08O:0-yen-rises-sharply-before-unwinding-intervention-remains-on-radar-of-markets/"
     },
     {
       "title": "Equinor Extends Drilling; Well Service Contracts Worth NOK 17 Bln",
@@ -503,14 +615,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260504000647:0/"
     },
     {
-      "title": "Dollar Steady After Trump Announces Plan to Guide Stranded Ships Through Hormuz \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T06:52:00+00:00",
-      "timeDisplay": "6:52 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504000547:0/"
-    },
-    {
       "title": "Gold Falls in Thin Trade as U.S.-Iran Uncertainty Clouds Rate Outlook \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -527,22 +631,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260504000522:0/"
     },
     {
-      "title": "Yen spikes higher as intervention on the radar of markets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T04:53:52+00:00",
-      "timeDisplay": "4:53 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H02W:0-yen-spikes-higher-as-intervention-on-the-radar-of-markets/"
-    },
-    {
-      "title": "MONDAY WHITE HOUSE SCHEDULE - President Trump participates in a small business summit",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T04:49:00+00:00",
-      "timeDisplay": "4:49 AM",
-      "link": "https://www.tradingview.com/news/macenews:38afd2813094b:0-monday-white-house-schedule-president-trump-participates-in-a-small-business-summit/"
-    },
-    {
       "title": "Stocks gain in Asia, oil flat amid new Gulf proposals",
       "source": "reuters",
       "color": "#ff6d00",
@@ -551,100 +639,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H02Y:0-stocks-gain-in-asia-oil-flat-amid-new-gulf-proposals/"
     },
     {
-      "title": "Opening the Strait, or maybe not",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T04:30:00+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H04N:0-opening-the-strait-or-maybe-not/"
-    },
-    {
       "title": "Oil Prices Likely to Remain Elevated \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-04T03:30:00+00:00",
       "timeDisplay": "3:30 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260503000863:0/"
-    },
-    {
-      "title": "Ethereum Price Tracks Bitcoin Rally, Targets Crucial Break Higher",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T03:28:48+00:00",
-      "timeDisplay": "3:28 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:bc2c05c5b094b:0-ethereum-price-tracks-bitcoin-rally-targets-crucial-break-higher/"
-    },
-    {
-      "title": "US oil may test resistance at $103.42",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T02:41:59+00:00",
-      "timeDisplay": "2:41 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H03K:0-us-oil-may-test-resistance-at-103-42/"
-    },
-    {
-      "title": "Dollar Steadies After Sharp Drop",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T02:22:48+00:00",
-      "timeDisplay": "2:22 AM",
-      "link": "https://www.tradingview.com/news/te_news:547216:0-dollar-steadies-after-sharp-drop/"
-    },
-    {
-      "title": "Brent Crude Oil Price Likely to Rise Further Than Previously Thought \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T01:10:00+00:00",
-      "timeDisplay": "1:10 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260503000715:0/"
-    },
-    {
-      "title": "Stocks edge up in Asia, oil flat amid Middle East uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T00:56:41+00:00",
-      "timeDisplay": "12:56 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41G05Q:0-stocks-edge-up-in-asia-oil-flat-amid-middle-east-uncertainty/"
-    },
-    {
-      "title": "Yen steady as intervention fears linger with Japan shut for holidays",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T00:31:57+00:00",
-      "timeDisplay": "12:31 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H009:0-yen-steady-as-intervention-fears-linger-with-japan-shut-for-holidays/"
-    },
-    {
-      "title": "Asian Currencies Consolidate; May Be Buoyed by Mild Risk-on Sentiment \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T00:24:00+00:00",
-      "timeDisplay": "12:24 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260503000650:0/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T00:18:25+00:00",
-      "timeDisplay": "12:18 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H001:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Gold Steady as US\u2013Iran Progress in Focus",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T23:55:46+00:00",
-      "timeDisplay": "11:55 PM",
-      "link": "https://www.tradingview.com/news/te_news:547147:0-gold-steady-as-us-iran-progress-in-focus/"
-    },
-    {
-      "title": "Gold Edge Higher Amid Signs of Resilience \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T23:39:00+00:00",
-      "timeDisplay": "11:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260503000600:0/"
     }
   ]
 }

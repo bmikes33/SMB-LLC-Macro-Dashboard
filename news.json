@@ -1,56 +1,179 @@
 {
-  "lastUpdated": "2026-05-04T05:21:05.639804+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 05:21 AM UTC",
-  "articleCount": 41,
+  "lastUpdated": "2026-05-04T08:10:56.690209+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 08:10 AM UTC",
+  "articleCount": 50,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with yen intervention fears keeping dollar subdued while oil prices ease on Middle East diplomatic optimism. Bitcoin breaks $80k psychological resistance as crypto rallies continue, while Asian equities edge higher amid cautious risk-on sentiment.",
+    "macroSummary": "Bitcoin surged past $80,000 for the first time since January amid Trump's announcement of Project Freedom to assist ships through Hormuz Strait, while oil prices showed mixed signals with initial rises on Middle East tensions followed by declines after the Trump announcement. Asian markets gained modestly while the yen spiked higher on intervention fears with USD/JPY approaching critical levels.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar weakness and easing oil prices on diplomatic progress contradict reflation drivers, while crypto strength and mild risk-on sentiment support the bullish equity bias.",
+    "regimePressureReason": "Headlines show conflicting signals with Trump's Gulf intervention potentially de-escalating oil tensions (contradicting stagflation fears) while treasury yields rise on persistent inflation concerns and yen intervention risks approach the 160 threshold.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen intervention fears active with sharp yen strength reported as markets watch for BOJ action"
-      },
-      {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar steadies after sharp drop, suggesting potential approach to regime flip threshold"
+        "signal": "Yen spiked higher as intervention fears resurface with Japan on holiday"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar experiencing sharp decline with yen intervention fears pressuring USDJPY lower toward intervention zone",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Oil prices easing and described as flat amid Middle East diplomatic optimism, reducing stagflationary pressure",
+        "signal": "Trump's Project Freedom announcement caused oil to slip after initial Middle East tension spikes, potentially reducing stagflation pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin breaks $80k resistance with crypto rallying as geopolitical hedge, supporting risk asset strength",
+        "signal": "Treasury yields rising on persistent inflation concerns despite geopolitical developments",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Asian equities gaining with mild risk-on sentiment consolidating, consistent with bullish cyclical bias",
-        "tag": "SUPPORTS"
+        "signal": "Yen intervention fears mounting as USD/JPY approaches 160 threshold with Japan on holiday",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold steady rather than declining despite risk-on moves, suggesting underlying inflation concerns persist",
+        "signal": "Bitcoin breaking $80K suggests strong risk-on sentiment amid geopolitical uncertainty",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Asian markets gaining while oil shows mixed signals indicates market uncertainty about regime direction",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely as intervention fears could trigger risk-off cascade if BOJ acts near 160 level",
-      "Watch for oil price confirmation below recent highs as Middle East optimism could unwind stagflation premium",
-      "Consider tightening BMNR put ladder strikes if crypto strength continues but watch for technical exhaustion signals emerging in Bitcoin"
+      "Monitor USD/JPY closely approaching 160 intervention zone - potential Risk-Off catalyst",
+      "Watch oil price action for sustained moves below recent highs as Trump Gulf intervention may reduce Iran premium",
+      "BMNR ladder: Consider tightening strikes if risk-on sentiment continues with BTC strength"
     ]
   },
   "articles": [
+    {
+      "title": "Equinor Extends Drilling; Well Service Contracts Worth NOK 17 Bln",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:56:15+00:00",
+      "timeDisplay": "7:56 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:0989f1e5b2e0a:0-equinor-extends-drilling-well-service-contracts-worth-nok-17-bln/"
+    },
+    {
+      "title": "Gold Slips on US\u2013Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:49:47+00:00",
+      "timeDisplay": "7:49 AM",
+      "link": "https://www.tradingview.com/news/te_news:547341:0-gold-slips-on-us-iran-uncertainty/"
+    },
+    {
+      "title": "Brent Could Climb Toward $200 in Worst-Case Iran Conflict Scenario, ANZ Says \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:23:00+00:00",
+      "timeDisplay": "7:23 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000703:0/"
+    },
+    {
+      "title": "Oil Rises on Middle East Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:19:50+00:00",
+      "timeDisplay": "7:19 AM",
+      "link": "https://www.tradingview.com/news/te_news:547305:0-oil-rises-on-middle-east-uncertainty/"
+    },
+    {
+      "title": "Bitcoin Price Tops $80,000 For First Time Since January After Trump Announcement",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:15:20+00:00",
+      "timeDisplay": "7:15 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:91a09e443094b:0-bitcoin-price-tops-80-000-for-first-time-since-january-after-trump-announcement/"
+    },
+    {
+      "title": "Treasury Yields Rise as Inflation Concerns Persist \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:14:00+00:00",
+      "timeDisplay": "7:14 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000647:0/"
+    },
+    {
+      "title": "BTC/USD: Bitcoin Knocks Out $80,000 for Three-Month Top amid Upbeat Sentiment",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T07:02:48+00:00",
+      "timeDisplay": "7:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:9b6576392094b:0-btc-usd-bitcoin-knocks-out-80-000-for-three-month-top-amid-upbeat-sentiment/"
+    },
+    {
+      "title": "Why Is Bitcoin Surging Today? BTC Price Tops $80,000 for Three-Month High as Iran De-escalation Lifts Crypto",
+      "source": "financemagnates",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:54:38+00:00",
+      "timeDisplay": "6:54 AM",
+      "link": "https://www.tradingview.com/news/financemagnates:9eb030ddd094b:0-why-is-bitcoin-surging-today-btc-price-tops-80-000-for-three-month-high-as-iran-de-escalation-lifts-crypto/"
+    },
+    {
+      "title": "Bitcoin climbs past $80K for the first time since January",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:54:18+00:00",
+      "timeDisplay": "6:54 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:b13cb2b9b094b:0-bitcoin-climbs-past-80k-for-the-first-time-since-january/"
+    },
+    {
+      "title": "Dollar Steady After Trump Announces Plan to Guide Stranded Ships Through Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:52:00+00:00",
+      "timeDisplay": "6:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000547:0/"
+    },
+    {
+      "title": "Gold Falls in Thin Trade as U.S.-Iran Uncertainty Clouds Rate Outlook \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:51:00+00:00",
+      "timeDisplay": "6:51 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000545:0/"
+    },
+    {
+      "title": "Oil Slips After Trump Says U.S. Will Assist Stranded Ships in Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:43:00+00:00",
+      "timeDisplay": "6:43 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000522:0/"
+    },
+    {
+      "title": "Amitis Capital Accelerates Digital Asset Capabilities With Samara Alpha Integration",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T06:07:18+00:00",
+      "timeDisplay": "6:07 AM",
+      "link": "https://www.tradingview.com/news/chainwire:c4d108f77094b:0-amitis-capital-accelerates-digital-asset-capabilities-with-samara-alpha-integration/"
+    },
+    {
+      "title": "Bitcoin Price Hits $80K as Buyers Rush In \u2013 Can BTC Reach $100K in May 2026?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T05:45:53+00:00",
+      "timeDisplay": "5:45 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:23709a295094b:0-bitcoin-price-hits-80k-as-buyers-rush-in-can-btc-reach-100k-in-may-2026/"
+    },
+    {
+      "title": "Bitcoin Back Above $80,000 as Asian Stock Markets Rise \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T05:45:00+00:00",
+      "timeDisplay": "5:45 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504000291:0/"
+    },
+    {
+      "title": "BlackRock\u2019s Bitcoin Bet Grows in Europe \u2014 IB1T Tops $1.1B with 14,200 BTC",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T05:44:01+00:00",
+      "timeDisplay": "5:44 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:1cea1ac87094b:0-blackrock-s-bitcoin-bet-grows-in-europe-ib1t-tops-1-1b-with-14-200-btc/"
+    },
     {
       "title": "Yen spikes higher as intervention on the radar of markets",
       "source": "reuters",
@@ -82,6 +205,14 @@
       "timestamp": "2026-05-04T04:30:00+00:00",
       "timeDisplay": "4:30 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H04N:0-opening-the-strait-or-maybe-not/"
+    },
+    {
+      "title": "Bitcoin Price Today Hits $80K as ETF Inflows Surge",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T04:25:14+00:00",
+      "timeDisplay": "4:25 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:a34a3f866094b:0-bitcoin-price-today-hits-80k-as-etf-inflows-surge/"
     },
     {
       "title": "Bitcoin rises past $80,000, breaking \u2018major\u2019 psychological resistance zone",
@@ -300,38 +431,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:664c64b15094b:0-bitcoin-preps-highest-weekly-close-since-january-as-btc-price-nears-79k/"
     },
     {
-      "title": "AI Capex Boom Warps Nasdaq As Hyperscalers Take Over, Bitcoin Seen As Hedge By Wall Street Veteran",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T15:43:33+00:00",
-      "timeDisplay": "3:43 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:e4957386d094b:0/"
-    },
-    {
-      "title": "Bitcoin At Risk As TD Sequential Flashes Key Bearish Signal \u2013 Details",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T15:00:33+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:9b3818562094b:0-bitcoin-at-risk-as-td-sequential-flashes-key-bearish-signal-details/"
-    },
-    {
-      "title": "Pizza Orders Near Pentagon Spark Fresh Iran War Jitters",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T13:14:21+00:00",
-      "timeDisplay": "1:14 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:3a8317a70094b:0-pizza-orders-near-pentagon-spark-fresh-iran-war-jitters/"
-    },
-    {
-      "title": "Bitcoin Bulls Show Signs Of Exhaustion Around $78,000 \u2014 What\u2019s Next?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T13:00:33+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:40033a8d1094b:0-bitcoin-bulls-show-signs-of-exhaustion-around-78-000-what-s-next/"
-    },
-    {
       "title": "US stocks rally could find fuel in earnings, jobs data amid surging oil prices",
       "source": "reuters",
       "color": "#ff6d00",
@@ -346,38 +445,6 @@
       "timestamp": "2026-05-03T12:27:03+00:00",
       "timeDisplay": "12:27 PM",
       "link": "https://www.tradingview.com/news/stocktwits:9769452a0094b:0/"
-    },
-    {
-      "title": "Solana\u2019s Founder Warns AI Could Crack Post-Quantum Cryptography Schemes",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T10:23:14+00:00",
-      "timeDisplay": "10:23 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:b923c680d094b:0-solana-s-founder-warns-ai-could-crack-post-quantum-cryptography-schemes/"
-    },
-    {
-      "title": "Bitcoin Bottom Zone Now Lies Around $59,000 Based On This On-Chain Metric",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T07:00:54+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:c2def9251094b:0-bitcoin-bottom-zone-now-lies-around-59-000-based-on-this-on-chain-metric/"
-    },
-    {
-      "title": "Exclusive: India\u2019s Crypto Future Hinges on Clarity, Not Just Taxes \u2014 CoinSwitch Co-founder Speaks",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T06:46:35+00:00",
-      "timeDisplay": "6:46 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d1e7feefd094b:0-exclusive-india-s-crypto-future-hinges-on-clarity-not-just-taxes-coinswitch-co-founder-speaks/"
-    },
-    {
-      "title": "Crypto industry will be \u2018just fine\u2019 if CLARITY Act doesn\u2019t pass: Chris Perkins",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T05:51:03+00:00",
-      "timeDisplay": "5:51 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:4093a304f094b:0-crypto-industry-will-be-just-fine-if-clarity-act-doesn-t-pass-chris-perkins/"
     }
   ]
 }

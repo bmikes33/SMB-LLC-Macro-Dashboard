@@ -1,61 +1,77 @@
 {
-  "lastUpdated": "2026-05-04T21:57:14.320875+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 09:57 PM UTC",
+  "lastUpdated": "2026-05-04T22:58:06.227992+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 10:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Iran escalated attacks on UAE oil facilities and Strait of Hormuz shipping, driving oil prices higher and US Treasury yields to 9-month highs. Risk assets including US stocks declined while the dollar strengthened, though Bitcoin recovered above $80K despite initial weakness from geopolitical tensions.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached simultaneously - US 10Y at 9-month highs suggests long-end stress is accelerating, oil price surge from Iran conflict intensifies stagflationary pressures, and risk-off behavior in equities contradicts the bullish-cyclicals bias.",
+    "macroSummary": "Iran has escalated military actions in the Strait of Hormuz, attacking ships and oil infrastructure in UAE and Oman, driving oil prices higher and US Treasury yields to 9-month highs. Risk assets including stocks are declining globally while the dollar strengthens, though Bitcoin has rallied back above $80,000. Treasury borrowing estimates show significantly higher funding needs than previously projected.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The Iran conflict escalation is driving classic stagflationary dynamics with oil spiking, yields hitting 9-month highs, risk assets falling, and dollar strengthening - this pushes multiple invalidation thresholds and suggests the regime may be shifting toward Risk-Off/Stagflation.",
     "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "approaching $115",
+        "signal": "Iran attacks on Strait of Hormuz and UAE oil infrastructure driving sustained oil price surge"
+      },
       {
         "indicator": "US30Y",
         "level": "approaching 5.10%",
-        "signal": "US 10-Year hits 9-month high as Iran conflict pushes yields higher"
+        "signal": "US 10-year Treasury hits 9-month high amid Iran conflict pushing yields across curve"
       },
       {
-        "indicator": "Oil (WTI)",
-        "level": "trending toward $115",
-        "signal": "Oil jumps on Iran tightening Strait of Hormuz grip and attacking UAE facilities"
-      },
-      {
-        "indicator": "VIX",
-        "level": "approaching 22",
-        "signal": "Middle East jitters cause US stocks to dip and keep risk appetite muted"
+        "indicator": "DXY",
+        "level": "approaching 100",
+        "signal": "Dollar higher as US-Iran conflict keeps risk appetite muted"
       }
     ],
     "keySignals": [
       {
-        "signal": "US 10-Year Treasury yields hit 9-month highs as Iran conflict escalates, approaching long-duration capitulation threshold",
+        "signal": "Iran military escalation in Strait of Hormuz attacking ships and oil infrastructure creates sustained oil supply shock",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil prices surge as Iran attacks UAE facilities and tightens Strait of Hormuz control, moving toward stagflation trigger level",
+        "signal": "US Treasury yields hit 9-month highs as Iran conflict drives flight-to-quality and inflation concerns",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US stocks decline and LatAm assets fall as Middle East tensions keep investors on edge, contradicting bullish-cyclicals bias",
+        "signal": "Global risk assets declining with US stocks dipping and LatAm FX/stocks falling on Middle East tensions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthens as US-Iran conflict keeps risk appetite muted, approaching potential regime flip level",
+        "signal": "Dollar strengthening as conflict keeps risk appetite muted, moving toward regime flip level",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Fed's Williams notes risks to both mandates have increased, signaling policy uncertainty amid geopolitical tensions",
+        "signal": "Treasury borrowing estimates show $79 billion higher funding needs than February estimates",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR put ladder strikes - crypto showing resilience but broader risk-off could accelerate",
-      "Consider reducing Maturity sector overweight as long-end yields approach capitulation levels",
-      "Prepare for potential regime flip to Risk-Off/Stagflation if oil breaks $115 and 30Y breaks 5.10%"
+      "Monitor oil prices closely - sustained break above $115 WTI would confirm stagflation tilt dominance",
+      "Prepare to adjust BMNR put ladder strikes higher if multiple thresholds breach simultaneously",
+      "Consider reducing cyclical exposure if VIX breaks 22 alongside current threshold approaches"
     ]
   },
   "articles": [
+    {
+      "title": "Long-Dormant Bitcoin Whale Transfers 11,300 BTC, Sparking Market Speculation",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T22:30:14+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:3bff95739094b:0-long-dormant-bitcoin-whale-transfers-11-300-btc-sparking-market-speculation/"
+    },
+    {
+      "title": "BOC's Macklem: Conditions To Dictate Fuel-Price Response \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504010365:0/"
+    },
     {
       "title": "Bitcoin Price Rally Could Trigger 20% Push for Dogecoin, Here\u2019s When",
       "source": "newsbtc",
@@ -230,7 +246,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-04T18:18:00+00:00",
       "timeDisplay": "6:18 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504006278:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260504006277:0/"
     },
     {
       "title": "Bitcoin Nears Structural Shift Amid Changing Market Conditions \u2014 What This Means",
@@ -473,6 +489,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41G06D:0-oil-prices-jump-6-as-iran-sets-uae-oil-port-ablaze-strikes-vessels-in-strait-of-hormuz/"
     },
     {
+      "title": "Stocks Turn Lower as Middle East Tensions Rise",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:16:26+00:00",
+      "timeDisplay": "3:16 PM",
+      "link": "https://www.tradingview.com/news/barchart:503291006094b:0-stocks-turn-lower-as-middle-east-tensions-rise/"
+    },
+    {
       "title": "US yields rise as Strait of Hormuz standoff continues",
       "source": "reuters",
       "color": "#ff6d00",
@@ -561,14 +585,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260504003766:0/"
     },
     {
-      "title": "Bitcoin tops $80K as crypto momentum builds",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T13:06:00+00:00",
-      "timeDisplay": "1:06 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:d606abe9b094b:0-bitcoin-tops-80k-as-crypto-momentum-builds/"
-    },
-    {
       "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.18 Million Tokens, and Total Crypto and Total Cash Holdings of $13.1 Billion",
       "source": "chainwire",
       "color": "#00e5ff",
@@ -639,22 +655,6 @@
       "timestamp": "2026-05-04T10:33:00+00:00",
       "timeDisplay": "10:33 AM",
       "link": "https://www.tradingview.com/news/te_news:547421:0-gold-drops-to-lowest-since-late-march/"
-    },
-    {
-      "title": "CNN: IRANIAN STATE MEDIA CLAIMS US NAVAL VESSEL HITS WITH TWO MISSILES AS PRES TRUMP SAYS US NAVY TO START ESCORTING TANKERS THROUGH THE STRAIT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:32:00+00:00",
-      "timeDisplay": "10:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:613b5c5c6094b:0-cnn-iranian-state-media-claims-us-naval-vessel-hits-with-two-missiles-as-pres-trump-says-us-navy-to-start-escorting-tankers-through-the-strait/"
-    },
-    {
-      "title": "Oil Extends Gains",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:20:35+00:00",
-      "timeDisplay": "10:20 AM",
-      "link": "https://www.tradingview.com/news/te_news:547407:0-oil-extends-gains/"
     }
   ]
 }

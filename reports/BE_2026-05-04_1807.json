@@ -1,0 +1,45 @@
+{
+  "type": "ta",
+  "file": "BE_2026-05-04_1807.html",
+  "ticker": "BE",
+  "tvSymbol": "NYSE:BE",
+  "date": "2026-05-04T18:07:00-05:00",
+  "bias": "LONG tactical",
+  "confidence": "LOW",
+  "bullScore": 6,
+  "bearScore": 0,
+  "scoreMax": 6,
+  "invalidation": "$275 short-term / $240 structural",
+  "entryZone": "$260–$275",
+  "exitZone": "$300 → $325–$330",
+  "levels": [
+    { "weight": "MEDIUM", "price": "$360", "sources": "Call wall (130 OI, largest call) — major dealer ceiling" },
+    { "weight": "HEAVY", "price": "$325–$330", "sources": "Daily RVWAP upper $329.94 + Call OI $325 (124)" },
+    { "weight": "MEDIUM", "price": "$295–$300", "sources": "30m RVWAP upper $299.27 + 30m BB upper $295.58" },
+    { "weight": "CURRENT", "price": "$289.90", "sources": "Intraday — near recent post-earnings high" },
+    { "weight": "MEDIUM", "price": "$260", "sources": "Put OI $260 (261) + 4h RVWAP mid $258.67" },
+    { "weight": "HEAVY", "price": "$240", "sources": "Put wall (426 OI massive) + 4h breakout pivot + post-earnings spike base" }
+  ],
+  "macroWatch": "April CPI ~May 13, 2026 (HIGH-impact, within May 29 expiry; widen invalidation buffer)",
+  "fundamentalContext": "OVERVALUED — sourced from same-session SOTP valuation (Trad Base −69.5% / AI-Premium Base −54.2%)",
+  "fundamentalModifier": "−1 tier (long bias on OVERVALUED)",
+  "macroModifier": "No cap (CPI >24h out); IV/pin risk note",
+  "taConfidencePreCap": "HIGH (6/6 alignment)",
+  "taConfidencePostFibCap": "MEDIUM (Fibs not drawn on daily/weekly)",
+  "options": {
+    "expiry": "2026-05-29",
+    "dte": 25,
+    "iv": 1.0862,
+    "expectedMove": 77.47,
+    "callWall": { "strike": 360, "oi": 130 },
+    "putWall": { "strike": 240, "oi": 426 },
+    "maxPainApprox": "$260–$265",
+    "source": "user-provided screenshot"
+  },
+  "cspZones": {
+    "tier1": { "strikeZone": "$240", "confluence": "Put wall (426 OI) + 4h breakout pivot + structural post-earnings base", "premiumApprox": "$11", "deltaApprox": -0.21 },
+    "tier2": { "strikeZone": "$260–$265", "confluence": "Put OI $260 (261) + 4h RVWAP mid", "premiumApprox": "$16-$18", "recommendation": "Not recommended — Final Confidence LOW" },
+    "avoid": { "strikeZone": "$275–$287.50", "reason": "LIGHT support only; thin OI; close to current; no structural cushion" }
+  },
+  "rerunTrigger": "Draw Fibs on weekly + daily and re-run; or after BE next earnings ~2026-07-30; or if CPI ~May 13 produces material gap"
+}

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BE — SOTP Fundamental Valuation — 2026-05-04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg-1:#0a0e17; --bg-2:#0f1420; --bg-3:#141926;
+    --text-1:#e2e8f0; --text-2:#8b9ab5; --text-3:#4a5976;
+    --border:#1e2a3a;
+    --cyan:#00e5ff; --green:#00e676; --red:#ff3d57; --amber:#ffab00; --purple:#bb86fc;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg-1);color:var(--text-1);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1240px;margin:0 auto;padding:36px 28px}
+  .mono{font-family:var(--mono)}
+  .hdr{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:30px}
+  .hdr-left .ticker{font-family:var(--mono);font-size:36px;font-weight:700;letter-spacing:1px;color:var(--text-1)}
+  .hdr-left .name{color:var(--text-2);font-size:13px;letter-spacing:.5px;margin-top:4px}
+  .hdr-left .sub{color:var(--text-3);font-size:11px;margin-top:8px;font-family:var(--mono);letter-spacing:.5px}
+  .hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .price{font-family:var(--mono);font-size:24px;font-weight:600}
+  .price-label{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.8px}
+  .price-sub{font-family:var(--mono);font-size:11px;color:var(--text-2)}
+  .badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .badge{display:inline-block;padding:5px 11px;border-radius:3px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;border:1px solid}
+  .badge-amber{background:rgba(255,171,0,.12);color:var(--amber);border-color:rgba(255,171,0,.4)}
+  .badge-green{background:rgba(0,230,118,.12);color:var(--green);border-color:rgba(0,230,118,.4)}
+  .badge-red{background:rgba(255,61,87,.12);color:var(--red);border-color:rgba(255,61,87,.4)}
+  .badge-cyan{background:rgba(0,229,255,.12);color:var(--cyan);border-color:rgba(0,229,255,.4)}
+  .badge-purple{background:rgba(187,134,252,.12);color:var(--purple);border-color:rgba(187,134,252,.4)}
+  .verdict-banner{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:linear-gradient(90deg, rgba(255,61,87,.08), rgba(255,171,0,.08));border:1px solid rgba(255,61,87,.3);border-left:4px solid var(--red);border-radius:4px;margin-bottom:32px}
+  .verdict-text{font-family:var(--mono);font-weight:700;font-size:18px;color:var(--red);letter-spacing:.5px}
+  .verdict-sub{color:var(--text-2);font-size:12px;margin-top:4px}
+  .section{margin-bottom:38px}
+  .section h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .section h3{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-1);margin:18px 0 10px}
+  .section h4{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--cyan);margin:14px 0 8px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--border)}
+  th{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.8px;background:var(--bg-2)}
+  td{color:var(--text-1)}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  td.center,th.center{text-align:center}
+  tr:hover td{background:rgba(0,229,255,.03)}
+  .pos{color:var(--green);font-family:var(--mono)}
+  .neg{color:var(--red);font-family:var(--mono)}
+  .neutral{color:var(--text-2);font-family:var(--mono)}
+  .alloc{font-style:italic;color:var(--text-2)}
+  .alloc::after{content:" †"}
+  .override{font-weight:600;color:var(--amber)}
+  .override::after{content:" *"}
+  .kvgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;margin:14px 0 4px}
+  .kv{background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:12px 14px}
+  .kv-label{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+  .kv-val{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--text-1)}
+  .kv-sub{font-size:11px;color:var(--text-2);margin-top:3px}
+  .legend{font-size:11px;color:var(--text-3);margin-top:10px;font-style:italic}
+  .legend strong{color:var(--text-2);font-style:normal}
+  .alert{padding:14px 18px;border-radius:4px;margin:14px 0;font-size:13px;line-height:1.6}
+  .alert-amber{background:rgba(255,171,0,.06);border-left:3px solid var(--amber);color:var(--text-1)}
+  .alert-red{background:rgba(255,61,87,.06);border-left:3px solid var(--red);color:var(--text-1)}
+  .alert-cyan{background:rgba(0,229,255,.06);border-left:3px solid var(--cyan);color:var(--text-1)}
+  .alert-purple{background:rgba(187,134,252,.06);border-left:3px solid var(--purple);color:var(--text-1)}
+  .alert strong{color:var(--text-1);font-weight:600}
+  .alert-amber strong{color:var(--amber)}
+  .alert-red strong{color:var(--red)}
+  .alert-purple strong{color:var(--purple)}
+  .small{font-size:11.5px;color:var(--text-2)}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10.5px;color:var(--text-3);letter-spacing:.5px}
+  .col-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .framework-card{background:var(--bg-2);border:1px solid var(--border);border-radius:6px;padding:18px}
+  .framework-card.traditional{border-left:4px solid var(--cyan)}
+  .framework-card.ai-premium{border-left:4px solid var(--purple)}
+  .framework-card h4{margin-top:0}
+  @media(max-width:780px){.col-2{grid-template-columns:1fr}.hdr-right{align-items:flex-start}.hdr{flex-direction:column}}
+  ul.tight{margin:8px 0;padding-left:20px}
+  ul.tight li{margin-bottom:4px;color:var(--text-1)}
+  .scroll-x{overflow-x:auto}
+  .runup-banner{background:linear-gradient(90deg, rgba(255,171,0,.10), rgba(255,61,87,.10));border:1px solid rgba(255,171,0,.4);padding:14px 18px;border-radius:6px;margin-bottom:28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .runup-stat{font-family:var(--mono);font-size:14px;color:var(--amber)}
+  .runup-stat strong{font-size:18px;color:var(--text-1);font-weight:700}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="ticker">BE</div>
+      <div class="name">Bloom Energy Corporation — NYSE</div>
+      <div class="sub">SOTP FUNDAMENTAL VALUATION • CONSOLIDATED MODE • DUAL-SCENARIO • 2026-05-04 17:44 CT</div>
+    </div>
+    <div class="hdr-right">
+      <div class="price-label">Current Price</div>
+      <div class="price">$290.52</div>
+      <div class="price-sub">May 1, 2026 close</div>
+      <div class="badge-row">
+        <span class="badge badge-red">OVERVALUED</span>
+        <span class="badge badge-amber">CAP AMBER</span>
+        <span class="badge badge-purple">DUAL SCENARIO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUN-UP CONTEXT BANNER -->
+  <div class="runup-banner">
+    <div class="runup-stat"><strong>+1,460%</strong> TTM</div>
+    <div class="runup-stat"><strong>+194%</strong> YTD</div>
+    <div class="runup-stat"><strong>52w range:</strong> $16.05 — $296.50</div>
+    <div class="runup-stat" style="color:var(--text-2)">Stock at top of historic range; pricing 5+ years of compound growth + sustained premium multiples</div>
+  </div>
+
+  <!-- VERDICT BANNER -->
+  <div class="verdict-banner">
+    <div>
+      <div class="verdict-text">OVERVALUED — Traditional Base −69.5% • AI-Premium Base −54.2%</div>
+      <div class="verdict-sub">Even the AI-Premium Bull case ($271.55) sits below current price ($290.52). The market is pricing scenarios that exceed even the premium bull. Asymmetry is to downside under fundamentals.</div>
+    </div>
+    <div class="badge badge-cyan">2Y DISC PRIMARY</div>
+  </div>
+
+  <!-- DATA PROVENANCE -->
+  <div class="alert alert-cyan">
+    <strong>Data Provenance:</strong> 82% disclosed (10-K filed 2026-02-09 for FY2025; 10-Q filed 2026-04-24 for Q1 2026, released 2026-04-28) • 8% allocated (Q1'24, Q2'24, Q2'25 quarterly cuts derived from FY/9M totals) • 10% user-override (forward growth cases overridden to align with mgmt FY26 guide of $3.4B–$3.8B). <span class="legend">Disclosed cells: plain. <span class="alloc">Allocated</span>. <span class="override">User-override</span>.</span>
+  </div>
+
+  <!-- DUAL FRAMEWORK EXPLANATION -->
+  <div class="alert alert-purple">
+    <strong>⚠ Dual-Scenario Framework.</strong> BE's 1,460% TTM run cannot be reconciled with traditional industrial peer multiples. This report runs <strong>two parallel valuations</strong>:
+    <ul class="tight">
+      <li><strong>TRADITIONAL</strong> — applies peer-derived EV/Revenue multiples (GEV, VRT, CEG; OKLO excluded as pre-revenue) at the 25th / median / 75th percentiles.</li>
+      <li><strong>AI-PREMIUM</strong> — applies multiples 50% above peer 75th percentile, reflecting the AI-data-center / clean-power thesis premium that the market is currently assigning to OKLO and similar speculative AI-power names.</li>
+    </ul>
+    Both methodologies produce OVERVALUED verdicts. The AI-Premium framework gets the bull case <em>close</em> to current price ($271 vs $290) but does not exceed it. <strong>Anything above current requires a third regime — call it "narrative supremacy" — where the multiple expands further before fundamentals catch up.</strong>
+  </div>
+
+  <!-- SECTION 1: EXECUTIVE SUMMARY - DUAL FRAMEWORK -->
+  <div class="section">
+    <h2>§1 — Executive Summary: Dual-Framework Fair Value</h2>
+    <div class="col-2">
+
+      <div class="framework-card traditional">
+        <h4 style="color:var(--cyan)">▶ TRADITIONAL Framework</h4>
+        <p class="small" style="margin-top:0">Peer 25th / Median / 75th: 4x / 7x / 10.5x EV/Revenue (GEV, VRT, CEG)</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th class="num">2Y Disc (PRIMARY)</th>
+              <th class="num">vs Current</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Bear</td><td class="num mono">$34.18</td><td class="num neg">−88.2%</td></tr>
+            <tr><td>Base</td><td class="num mono">$88.51</td><td class="num neg">−69.5%</td></tr>
+            <tr><td>Bull</td><td class="num mono">$180.92</td><td class="num neg">−37.7%</td></tr>
+            <tr style="background:rgba(0,229,255,.06)">
+              <td><strong>Prob-Wt</strong> <span class="small">25/50/25</span></td>
+              <td class="num mono"><strong>$98.03</strong></td>
+              <td class="num neg"><strong>−66.3%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="framework-card ai-premium">
+        <h4 style="color:var(--purple)">▶ AI-PREMIUM Framework</h4>
+        <p class="small" style="margin-top:0">1.5x peer 75th pct: 6x / 10.5x / 15.75x EV/Revenue</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th class="num">2Y Disc (PRIMARY)</th>
+              <th class="num">vs Current</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Bear</td><td class="num mono">$51.45</td><td class="num neg">−82.3%</td></tr>
+            <tr><td>Base</td><td class="num mono">$132.94</td><td class="num neg">−54.2%</td></tr>
+            <tr><td>Bull</td><td class="num mono">$271.55</td><td class="num neg">−6.5%</td></tr>
+            <tr style="background:rgba(187,134,252,.08)">
+              <td><strong>Prob-Wt</strong> <span class="small">25/50/25</span></td>
+              <td class="num mono"><strong>$147.22</strong></td>
+              <td class="num neg"><strong>−49.3%</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <p class="legend" style="margin-top:12px">Both frameworks use 2Y EBITDA × Multiple discounted at 11% WACC as PRIMARY. Per Young Growth lifecycle override, EV/Revenue is the stage metric (margin ignored). NTM × Multiple sanity check shown in §8.</p>
+  </div>
+
+  <!-- SECTION 2: LIFECYCLE & MODE -->
+  <div class="section">
+    <h2>§2 — Mode & Lifecycle Classification</h2>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">Mode</div><div class="kv-val">CONSOLIDATED</div><div class="kv-sub">Single reportable segment per 10-Q</div></div>
+      <div class="kv"><div class="kv-label">Lifecycle Stage</div><div class="kv-val">YOUNG GROWTH*</div><div class="kv-sub">User override (default would be High Growth)</div></div>
+      <div class="kv"><div class="kv-label">Stage Metric</div><div class="kv-val">EV/Revenue</div><div class="kv-sub">Margin ignored per override</div></div>
+      <div class="kv"><div class="kv-label">Sector Flags</div><div class="kv-val">⚠ ⚠</div><div class="kv-sub">Cyclical industry + customer concentration</div></div>
+    </div>
+
+    <h3>Why Young Growth (User Override)</h3>
+    <p>BE explicitly states in the Q1 2026 10-Q that "the CODM reviews consolidated results when making decisions about allocating resources and assessing the performance of the Company as a whole and hence, we have only one reportable segment." Single segment → Consolidated mode (no SOTP scaffolding).</p>
+    <p>Default lifecycle classification would be <strong>High Growth</strong> based on margin profile (just turned operating profitable in Q4 2025; Q1 2026 GAAP op income $72M; Adj EBITDA margin ~19%). User override to <strong>Young Growth</strong> recognizes that:</p>
+    <ul class="tight">
+      <li>Revenue growth at +130% YoY (Q1 2026) is 3–4× above the standard High Growth band of 20–40%.</li>
+      <li>Margin profile is just-emerging — consolidating Y1 to High Growth treatment via EV/Gross Profit would understate the run-rate revenue scaling story.</li>
+      <li>EV/Revenue is the cleanest metric for AI-tailwind growth narratives where revenue trajectory drives the equity story.</li>
+    </ul>
+    <p>The override is deliberate but worth flagging: <strong>using Young Growth multiples on a company with positive margins systematically inflates fair value vs the High Growth EV/Gross Profit framework.</strong> Even with this charitable framing, the result is OVERVALUED.</p>
+  </div>
+
+  <!-- SECTION 3: PEER SET, MULTIPLES, WACC -->
+  <div class="section">
+    <h2>§3 — Peer Set, Multiples & WACC</h2>
+
+    <h3>Approved Peer Set (Mixed: AI Power + Clean Energy)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Peer</th>
+          <th>Bucket</th>
+          <th class="num">Mkt Cap</th>
+          <th class="num">TTM Rev</th>
+          <th class="num">EV/Revenue</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mono">GEV</td>
+          <td>Power equipment / AI grid</td>
+          <td class="num mono">$285B</td>
+          <td class="num mono">$39.4B</td>
+          <td class="num mono">~7x</td>
+          <td>Largest direct AI-grid play; turbines + grid + electrification</td>
+        </tr>
+        <tr>
+          <td class="mono">VRT</td>
+          <td>Data center critical infra</td>
+          <td class="num mono">$113B</td>
+          <td class="num mono">$10.84B</td>
+          <td class="num mono">~10.5x</td>
+          <td>Pure data center power/cooling; +30% growth Q1'26</td>
+        </tr>
+        <tr>
+          <td class="mono">CEG</td>
+          <td>Clean nuclear utility</td>
+          <td class="num mono">$92–107B</td>
+          <td class="num mono">$25.5B</td>
+          <td class="num mono">~4x</td>
+          <td>Utility floor multiple; AI nuclear PPA narrative</td>
+        </tr>
+        <tr style="opacity:.5">
+          <td class="mono">OKLO</td>
+          <td>Pre-revenue SMR (excluded)</td>
+          <td class="num mono">$6.5B</td>
+          <td class="num mono">~$0</td>
+          <td class="num mono neg">N/M</td>
+          <td>Pre-2027 commercial; informative as AI-nuclear thesis premium signal</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">OKLO excluded from quantitative multiple derivation (pre-revenue, no meaningful EV/Revenue). Retained as a qualitative reference for the AI-nuclear narrative premium that defines the AI-Premium framework. Peer 25th = 4x (CEG), median ~7x (GEV), 75th = 10.5x (VRT).</p>
+
+    <h3>EV/Revenue Multiple Range — Both Frameworks</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">TRADITIONAL</th>
+          <th class="num">AI-PREMIUM (1.5× peer 75th)</th>
+          <th>Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td class="num mono">4.0x (CEG floor)</td>
+          <td class="num mono">6.0x (peer median)</td>
+          <td>Bear assumes regression toward utility-style multiple if AI capex slows</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong></td>
+          <td class="num mono">7.0x (peer median)</td>
+          <td class="num mono">10.5x (= peer 75th)</td>
+          <td>Base assumes BE warrants peer median treatment given growth profile</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong></td>
+          <td class="num mono">10.5x (peer 75th)</td>
+          <td class="num mono">15.75x (1.5× peer 75th)</td>
+          <td>Bull assumes BE warrants VRT-like premium for data center AI exposure</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>WACC</h3>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">Stage Default (Young Growth)</div><div class="kv-val">11%</div><div class="kv-sub">Standard for sub-scale growth</div></div>
+      <div class="kv"><div class="kv-label">Applied</div><div class="kv-val">11%</div><div class="kv-sub">No override</div></div>
+      <div class="kv"><div class="kv-label">2Y Discount Factor</div><div class="kv-val">0.8116</div><div class="kv-sub">1 / (1.11)²</div></div>
+    </div>
+    <p class="small">Capital-intensive industrial WACC arguably warrants higher (12-13%); using 11% as charitable assumption — moving WACC up reduces fair value further.</p>
+  </div>
+
+  <!-- SECTION 4: TRAILING 8Q + REVENUE CASES -->
+  <div class="section">
+    <h2>§4 — Trailing 8Q & Revenue Case Construction</h2>
+
+    <h3>Trailing 8Q Revenue (Q2 2024 → Q1 2026)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th class="num">Revenue ($M)</th>
+          <th class="num">YoY Growth</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Q2 2024</td><td class="num mono"><span class="alloc">$332</span></td><td class="num mono neutral">—</td><td>Allocated from FY24 less Q3+Q4+Q1 disclosed</td></tr>
+        <tr><td>Q3 2024</td><td class="num mono">$330</td><td class="num mono neutral">—</td><td>Disclosed in Q3 2025 10-Q</td></tr>
+        <tr><td>Q4 2024</td><td class="num mono">$572</td><td class="num mono neutral">—</td><td>Disclosed in 10-K (FY2024 yr-end)</td></tr>
+        <tr><td>Q1 2025</td><td class="num mono">$326</td><td class="num mono pos">+39%</td><td>Disclosed; Q1 typical seasonal low</td></tr>
+        <tr><td>Q2 2025</td><td class="num mono"><span class="alloc">$397</span></td><td class="num mono pos">+20%</td><td>Allocated from FY25 less Q1+Q3+Q4 disclosed</td></tr>
+        <tr><td>Q3 2025</td><td class="num mono">$519</td><td class="num mono pos">+57%</td><td>Disclosed; AI ramp begins</td></tr>
+        <tr><td>Q4 2025</td><td class="num mono">$778</td><td class="num mono pos">+36%</td><td>Disclosed; record quarter</td></tr>
+        <tr><td><strong>Q1 2026</strong></td><td class="num mono"><strong>$751</strong></td><td class="num mono pos"><strong>+130%</strong></td><td><strong>Released April 28, 2026 — quantum leap from Q1'25 base</strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p><strong>TTM Revenue (Q2 25 + Q3 25 + Q4 25 + Q1 26) = $2,445M = $2.45B.</strong> FY2025 reported revenue $2.02B. The TTM number reflects the Q1 26 surge; reported FY26 guidance midpoint $3.6B implies sustained ~80% growth pace.</p>
+
+    <h3>Revenue Cases — Y1 (FY26) and Y2 (FY27)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">Y1 (FY26) Revenue</th>
+          <th class="num">Y1 Growth YoY</th>
+          <th class="num">Y2 (FY27) Revenue</th>
+          <th class="num">Y2 Growth YoY</th>
+          <th>Implicit Thesis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td class="num mono override">$3,400</td>
+          <td class="num mono">+68%</td>
+          <td class="num mono override">$3,400</td>
+          <td class="num mono">0%</td>
+          <td>FY26 low end of guide; FY27 stagnates if AI capex pause / Oracle delays</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong></td>
+          <td class="num mono override">$3,700</td>
+          <td class="num mono">+83%</td>
+          <td class="num mono override">$5,000</td>
+          <td class="num mono">+35%</td>
+          <td>Above guide midpoint; sustained AI pull-through; Oracle phase 1 lands</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong></td>
+          <td class="num mono override">$4,200</td>
+          <td class="num mono">+108%</td>
+          <td class="num mono override">$6,800</td>
+          <td class="num mono">+62%</td>
+          <td>Above high end of guide; Oracle 2.8GW MOU ramps fast; Brookfield $5B framework deploys</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>User Override Logged</h3>
+    <div class="alert alert-amber">
+      <strong>⚠ Forward growth cases overridden from mechanical last-4Q rule.</strong><br>
+      Mechanical last-4Q YoY average = (57% + 36% + 130% + ?) — the Q1 2026 +130% spike (driven by Q1 2025 base of $326M and Oracle warrant grant April 9, 2026) skews the rolling average upward. <strong>Override aligns Y1 to mgmt FY26 guidance range $3.4B–$3.8B</strong> (released April 28, 2026 with raised midpoint $3.6B). Y2 base assumes ~35% deceleration consistent with normalizing comps.<br><br>
+      <strong>Oracle warrant contra-revenue.</strong> The April 9, 2026 Oracle warrant ($261.3M fair value) will reduce reported revenue over time as warrants vest with deliveries. Mgmt guidance is gross of this; effective revenue may be ~5-7% lower than reported. Not modeled separately here but flagged.
+    </div>
+  </div>
+
+  <!-- SECTION 5: TRADITIONAL FRAMEWORK BRIDGE -->
+  <div class="section">
+    <h2>§5 — TRADITIONAL Framework: Bridge to Equity (PRIMARY, 2Y Discounted)</h2>
+    <p>Y2 Revenue × Peer-Derived Multiple, discounted 2Y at 11% WACC.</p>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th class="num">Bear</th>
+          <th class="num">Base</th>
+          <th class="num">Bull</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Y2 Revenue ($M)</td>
+          <td class="num mono">$3,400</td>
+          <td class="num mono">$5,000</td>
+          <td class="num mono">$6,800</td>
+        </tr>
+        <tr>
+          <td>× EV/Revenue Multiple</td>
+          <td class="num mono">4.0x</td>
+          <td class="num mono">7.0x</td>
+          <td class="num mono">10.5x</td>
+        </tr>
+        <tr>
+          <td><strong>Y2 EV ($M)</strong></td>
+          <td class="num mono"><strong>$13,600</strong></td>
+          <td class="num mono"><strong>$35,000</strong></td>
+          <td class="num mono"><strong>$71,400</strong></td>
+        </tr>
+        <tr>
+          <td>÷ (1+WACC)² (0.8116)</td>
+          <td class="num mono">$11,038</td>
+          <td class="num mono">$28,406</td>
+          <td class="num mono">$57,948</td>
+        </tr>
+        <tr>
+          <td>+ Cash & equivalents (Q1 26)</td>
+          <td class="num mono pos">$2,490</td>
+          <td class="num mono pos">$2,490</td>
+          <td class="num mono pos">$2,490</td>
+        </tr>
+        <tr>
+          <td>− Recourse debt (Q1 26)</td>
+          <td class="num mono neg">($2,600)</td>
+          <td class="num mono neg">($2,600)</td>
+          <td class="num mono neg">($2,600)</td>
+        </tr>
+        <tr style="border-top:2px solid var(--cyan)">
+          <td><strong>Equity Fair Value ($M)</strong></td>
+          <td class="num mono"><strong>$10,928</strong></td>
+          <td class="num mono"><strong>$28,296</strong></td>
+          <td class="num mono"><strong>$57,838</strong></td>
+        </tr>
+        <tr>
+          <td>÷ Diluted shares (319.7M)</td>
+          <td class="num mono">319.7M</td>
+          <td class="num mono">319.7M</td>
+          <td class="num mono">319.7M</td>
+        </tr>
+        <tr style="background:rgba(0,229,255,.08)">
+          <td><strong>Per-Share Fair Value</strong></td>
+          <td class="num mono"><strong>$34.18</strong></td>
+          <td class="num mono"><strong>$88.51</strong></td>
+          <td class="num mono"><strong>$180.92</strong></td>
+        </tr>
+        <tr>
+          <td><strong>vs Current $290.52</strong></td>
+          <td class="num neg"><strong>−88.2%</strong></td>
+          <td class="num neg"><strong>−69.5%</strong></td>
+          <td class="num neg"><strong>−37.7%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Cash & debt as of March 31, 2026. Net debt is essentially zero (~$110M). Brookfield $5B project finance framework is non-recourse, not on BE balance sheet, excluded from bridge. Diluted shares = Q1 2026 weighted average (319.7M, up from basic 281.7M due to convertible notes and stock awards).</p>
+  </div>
+
+  <!-- SECTION 6: AI-PREMIUM FRAMEWORK BRIDGE -->
+  <div class="section">
+    <h2>§6 — AI-PREMIUM Framework: Bridge to Equity (PRIMARY, 2Y Discounted)</h2>
+    <p>Same Y2 revenue cases × <strong>1.5× peer 75th percentile multiples</strong>, discounted 2Y at 11% WACC.</p>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th class="num">Bear</th>
+          <th class="num">Base</th>
+          <th class="num">Bull</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Y2 Revenue ($M)</td>
+          <td class="num mono">$3,400</td>
+          <td class="num mono">$5,000</td>
+          <td class="num mono">$6,800</td>
+        </tr>
+        <tr>
+          <td>× EV/Revenue Multiple (premium)</td>
+          <td class="num mono">6.0x</td>
+          <td class="num mono">10.5x</td>
+          <td class="num mono">15.75x</td>
+        </tr>
+        <tr>
+          <td><strong>Y2 EV ($M)</strong></td>
+          <td class="num mono"><strong>$20,400</strong></td>
+          <td class="num mono"><strong>$52,500</strong></td>
+          <td class="num mono"><strong>$107,100</strong></td>
+        </tr>
+        <tr>
+          <td>÷ (1+WACC)² (0.8116)</td>
+          <td class="num mono">$16,557</td>
+          <td class="num mono">$42,609</td>
+          <td class="num mono">$86,922</td>
+        </tr>
+        <tr>
+          <td>+ Cash & equivalents</td>
+          <td class="num mono pos">$2,490</td>
+          <td class="num mono pos">$2,490</td>
+          <td class="num mono pos">$2,490</td>
+        </tr>
+        <tr>
+          <td>− Recourse debt</td>
+          <td class="num mono neg">($2,600)</td>
+          <td class="num mono neg">($2,600)</td>
+          <td class="num mono neg">($2,600)</td>
+        </tr>
+        <tr style="border-top:2px solid var(--purple)">
+          <td><strong>Equity Fair Value ($M)</strong></td>
+          <td class="num mono"><strong>$16,447</strong></td>
+          <td class="num mono"><strong>$42,499</strong></td>
+          <td class="num mono"><strong>$86,812</strong></td>
+        </tr>
+        <tr style="background:rgba(187,134,252,.08)">
+          <td><strong>Per-Share Fair Value</strong></td>
+          <td class="num mono"><strong>$51.45</strong></td>
+          <td class="num mono"><strong>$132.94</strong></td>
+          <td class="num mono"><strong>$271.55</strong></td>
+        </tr>
+        <tr>
+          <td><strong>vs Current $290.52</strong></td>
+          <td class="num neg"><strong>−82.3%</strong></td>
+          <td class="num neg"><strong>−54.2%</strong></td>
+          <td class="num neg"><strong>−6.5%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>The AI-Premium Bull case ($271.55) is the closest any scenario gets to current price ($290.52) — and it still falls 6.5% short. <strong>This means: even applying 50% premiums to the highest peer multiple, on the most aggressive Y2 revenue assumption, the implied fair value is below where the stock trades today.</strong></p>
+  </div>
+
+  <!-- SECTION 7: NTM × MULTIPLE SANITY CHECK -->
+  <div class="section">
+    <h2>§7 — NTM × Multiple Sanity Check (Both Frameworks)</h2>
+    <div class="col-2">
+
+      <div class="framework-card traditional">
+        <h4 style="color:var(--cyan)">▶ TRADITIONAL — NTM Sanity</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th class="num">Y1 Rev</th>
+              <th class="num">× Mult</th>
+              <th class="num">FV/share</th>
+              <th class="num">vs Curr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Bear</td><td class="num mono">$3,400</td><td class="num mono">4.0x</td><td class="num mono">$42.20</td><td class="num neg">−85.5%</td></tr>
+            <tr><td>Base</td><td class="num mono">$3,700</td><td class="num mono">7.0x</td><td class="num mono">$80.67</td><td class="num neg">−72.2%</td></tr>
+            <tr><td>Bull</td><td class="num mono">$4,200</td><td class="num mono">10.5x</td><td class="num mono">$137.60</td><td class="num neg">−52.6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="framework-card ai-premium">
+        <h4 style="color:var(--purple)">▶ AI-PREMIUM — NTM Sanity</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Case</th>
+              <th class="num">Y1 Rev</th>
+              <th class="num">× Mult</th>
+              <th class="num">FV/share</th>
+              <th class="num">vs Curr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Bear</td><td class="num mono">$3,400</td><td class="num mono">6.0x</td><td class="num mono">$63.47</td><td class="num neg">−78.2%</td></tr>
+            <tr><td>Base</td><td class="num mono">$3,700</td><td class="num mono">10.5x</td><td class="num mono">$121.18</td><td class="num neg">−58.3%</td></tr>
+            <tr><td>Bull</td><td class="num mono">$4,200</td><td class="num mono">15.75x</td><td class="num mono">$206.57</td><td class="num neg">−28.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <p class="small" style="margin-top:12px"><strong>Method comparison:</strong> NTM × Multiple is consistently HIGHER than 2Y discounted in the Bear case (because the 2Y discount factor of 0.8116 outweighs the marginal Y2 revenue contribution when growth is 0%). In Base/Bull, 2Y discounted exceeds NTM as the second-year growth contribution dominates the discount drag. Both methods point to OVERVALUED in all scenarios except AI-Premium Bull which approaches but doesn't reach current price.</p>
+  </div>
+
+  <!-- SECTION 8: CURRENT IMPLIED MULTIPLES -->
+  <div class="section">
+    <h2>§8 — Current Implied Multiples (What the Market is Paying)</h2>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">EV / TTM Revenue</div><div class="kv-val">38.0x</div><div class="kv-sub">$93.0B EV / $2.45B TTM Rev</div></div>
+      <div class="kv"><div class="kv-label">EV / FY26 Guide Mid</div><div class="kv-val">25.8x</div><div class="kv-sub">$93.0B / $3.6B FY26 mid</div></div>
+      <div class="kv"><div class="kv-label">EV / FY27 Base Proj</div><div class="kv-val">18.6x</div><div class="kv-sub">$93.0B / $5.0B FY27 base</div></div>
+      <div class="kv"><div class="kv-label">vs Peer 75th (VRT 10.5x)</div><div class="kv-val" style="color:var(--red)">+77%</div><div class="kv-sub">vs FY27 base, even at peer 75th</div></div>
+    </div>
+    <div class="alert alert-red">
+      <strong>What price action implies fundamentally.</strong> At $290.52, the market is paying 18.6x EV/FY27-base-revenue — well above the 1.5× peer 75th premium of 15.75x. To justify the current price under a 2Y discounted methodology, one of three things must be true:
+      <ul class="tight">
+        <li>Y2 revenue exceeds the bull case ($6.8B) — implies FY27 revenue closer to $8B+ (40% above bull)</li>
+        <li>Multiples expand further — implies sustained 20x+ EV/Revenue, which would price BE above virtually any historical industrial growth comparable</li>
+        <li>The forecast horizon should be Y3+ rather than Y2 — implying the market is already pricing FY28-29 revenue in today's stock</li>
+      </ul>
+      None of these are impossible — but each demands acceptance of an extraordinary regime that this framework deliberately does not assume.
+    </div>
+  </div>
+
+  <!-- SECTION 9: PROBABILITY-WEIGHTED -->
+  <div class="section">
+    <h2>§9 — Probability-Weighted Fair Value (2Y Discounted)</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Weighting Scheme</th>
+          <th class="num">Weights (B/B/B)</th>
+          <th class="num">Traditional FV</th>
+          <th class="num">vs Current</th>
+          <th class="num">AI-Premium FV</th>
+          <th class="num">vs Current</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(0,229,255,.04)">
+          <td><strong>Default</strong></td>
+          <td class="num">25 / 50 / 25</td>
+          <td class="num mono">$98.03</td>
+          <td class="num neg">−66.3%</td>
+          <td class="num mono">$147.22</td>
+          <td class="num neg">−49.3%</td>
+        </tr>
+        <tr>
+          <td>Bull-skewed (AI thesis intact)</td>
+          <td class="num">15 / 50 / 35</td>
+          <td class="num mono">$112.99</td>
+          <td class="num neg">−61.1%</td>
+          <td class="num mono">$169.67</td>
+          <td class="num neg">−41.6%</td>
+        </tr>
+        <tr>
+          <td>Maximum bull (data center supercycle)</td>
+          <td class="num">10 / 30 / 60</td>
+          <td class="num mono">$138.51</td>
+          <td class="num neg">−52.3%</td>
+          <td class="num mono">$208.04</td>
+          <td class="num neg">−28.4%</td>
+        </tr>
+        <tr>
+          <td>Bear-skewed (AI cooling)</td>
+          <td class="num">40 / 40 / 20</td>
+          <td class="num mono">$84.27</td>
+          <td class="num neg">−71.0%</td>
+          <td class="num mono">$127.68</td>
+          <td class="num neg">−56.0%</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Even in a 10/30/60 maximum-bull weighting under the AI-Premium framework — assuming a sustained data center supercycle and aggressive multiple expansion — the implied fair value tops out at $208.04, still 28% below current. <strong>Asymmetry is to the downside under fundamentals.</strong></p>
+  </div>
+
+  <!-- SECTION 10: CAPITAL STRUCTURE -->
+  <div class="section">
+    <h2>§10 — Capital Structure Health Check</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="num">Value</th>
+          <th class="center">Threshold</th>
+          <th class="center">Flag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Net Debt / TTM EBITDA</td>
+          <td class="num mono">~0.0x</td>
+          <td class="center small">&lt;2x = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Cash on hand (Q1 26)</td>
+          <td class="num mono">$2.49B</td>
+          <td class="center small">&gt;6mo opex</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Maturity wall (next 24mo)</td>
+          <td class="num mono">$0 / $2.6B principal</td>
+          <td class="center small">&lt;10% = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Convertible notes coupon</td>
+          <td class="num mono">0% (3.0% on 2029 tranche)</td>
+          <td class="center small">low = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Project finance access</td>
+          <td class="num mono">Brookfield $5B framework</td>
+          <td class="center small">non-recourse</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Diluted share count YoY (Q1 26 wtd avg vs Q1 25)</td>
+          <td class="num mono">+39%</td>
+          <td class="center small">&lt;7% = amber; &gt;7% = red</td>
+          <td class="center"><span class="badge badge-amber">AMBER*</span></td>
+        </tr>
+        <tr>
+          <td><strong>Customer concentration (SK ecoplant Q3 25)</strong></td>
+          <td class="num mono"><strong>55% of Q3 25 revenue</strong></td>
+          <td class="center small">&gt;30% = red</td>
+          <td class="center"><span class="badge badge-red">RED</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">*Diluted share count jump is largely driven by the convertible notes' if-converted method effect (21.4M added) and stock awards (16.6M added) — actual share count growth is more modest. Still a real dilution overhang as convertibles mature 2029-2030.</p>
+    <div class="alert alert-amber">
+      <strong>⚠ Capital Structure: AMBER — driven by customer concentration, not balance sheet health.</strong><br>
+      The balance sheet is strong: $2.49B cash, $2.60B recourse debt (mostly 0% convertibles), no near-term refi wall, $5B Brookfield non-recourse framework, positive operating cash flow ($73.6M Q1 26). On its own, balance sheet would be GREEN.<br><br>
+      <strong>The AMBER flag is the SK ecoplant concentration:</strong> 55% of Q3 2025 revenue from a single related-party customer. This has likely shifted with the Oracle 2.8GW MOU and broader data center book, but historical concentration is structurally elevated. The mix is moving toward Oracle and other AI customers in 2026 — but Oracle itself becomes a new concentration risk if it scales to that magnitude.<br><br>
+      <strong>Oracle warrant contra-revenue:</strong> $261.3M fair value granted April 9, 2026 — will reduce revenue over time as warrants vest with deliveries. Not a balance sheet liability per se but a forward revenue drag. Not modeled in the dual-framework above; would push fair values another 5-7% lower if explicitly netted.
+    </div>
+  </div>
+
+  <!-- SECTION 11: METHODOLOGY & PROVENANCE -->
+  <div class="section">
+    <h2>§11 — Methodology, Source Citations & User Overrides</h2>
+
+    <h3>Sources Used</h3>
+    <ul class="tight">
+      <li><strong>10-K filed 2026-02-09</strong> — FY2025 audited financials. Used for: full-year revenue ($2.02B), gross margin (29% GAAP), Adj EBITDA, FY24 comparison data, OBBBA tax act commentary (30% ITC for fuel cells), segment reporting (single segment).</li>
+      <li><strong>10-Q for Q1 2026 filed 2026-04-24</strong> — Period ending March 31, 2026. Used for: Q1 2026 revenue cuts ($751M total: Product $653M, Service $62M, Install $26M, Electricity $10M), GAAP/non-GAAP margins, balance sheet (cash $2.49B, recourse debt $2.60B), Oracle warrant disclosure ($261.3M fair value, granted April 9, 2026), Brookfield $5B framework, diluted share count (319.7M weighted avg).</li>
+      <li><strong>Q1 2026 earnings release 2026-04-28</strong> — FY26 guidance raise ($3.4B–$3.8B, mid $3.6B), Adj EBITDA $143M, non-GAAP EPS $0.44 (vs $0.12 estimate).</li>
+      <li><strong>Q3 2025 10-Q</strong> — Used for SK ecoplant 55% concentration disclosure, convertible note exchange details.</li>
+      <li><strong>Peer current market data</strong> — GEV ($285B mcap, $39.4B rev), VRT ($113B, $10.84B rev), CEG ($92-107B, $25.5B rev), OKLO ($6.5B, ~$0 rev) — Yahoo Finance / TradingView / stockanalysis.com / MacroTrends current as of late April / early May 2026.</li>
+    </ul>
+
+    <h3>User Overrides Applied (Logged)</h3>
+    <ul class="tight">
+      <li><strong>Lifecycle stage:</strong> Override default High Growth → Young Growth (EV/Revenue primary, ignore margin). Justification: revenue growth at 130% YoY is 3-4× above High Growth band; margin profile is just-emerging; aligns with AI-tailwind narrative framing.</li>
+      <li><strong>Peer set:</strong> User-selected GEV + VRT + CEG + OKLO (mixed AI power + clean energy). Justification: BE positions itself in AI data center power; pure fuel cell peers (PLUG, FCEL, BLDP) are distressed and would compress multiples toward zero. OKLO excluded from quantitative derivation (pre-revenue) but retained as AI-nuclear thesis premium reference.</li>
+      <li><strong>Multiple expansion regime:</strong> User-elected dual-scenario (traditional + AI-premium). AI-Premium = 1.5× peer 75th percentile. Justification: market is clearly in a momentum/narrative regime that traditional peer multiples cannot capture; dual presentation makes this explicit rather than hiding the assumption.</li>
+      <li><strong>Y1 (FY26) revenue cases:</strong> Bear $3.4B, Base $3.7B, Bull $4.2B. Bear matches mgmt guidance low; base just above midpoint; bull above mgmt high end allowing for Oracle acceleration.</li>
+      <li><strong>Y2 (FY27) revenue cases:</strong> Bear $3.4B (no growth), Base $5.0B (+35%), Bull $6.8B (+62%). Justification: Oracle 2.8GW MOU represents potential ~doubling of deployed base, supports bull; Brookfield $5B project finance enables capacity; bear assumes AI capex pause + Oracle delays.</li>
+    </ul>
+
+    <h3>Items Not in Skill but Material</h3>
+    <ul class="tight">
+      <li><strong>Oracle warrant ($261.3M fair value, April 9, 2026):</strong> Will reduce revenue over time as warrants vest with deliveries. Effective revenue may be 5-7% lower than reported.</li>
+      <li><strong>Customer concentration (SK ecoplant 55% Q3 25):</strong> Related-party concentration; mix shifting in 2026 toward Oracle/data centers, but Oracle itself emerging as new concentration.</li>
+      <li><strong>OBBBA Section 48 ITC at 30%:</strong> Tailwind for backlog economics; partially priced in to FY26 guidance but not separately modeled.</li>
+      <li><strong>Brookfield $5B project finance framework:</strong> Non-recourse, supports BE capacity scaling without on-balance-sheet debt; not directly accretive to BE equity but enables faster ramp.</li>
+      <li><strong>Sector cyclicality:</strong> Energy/power generation is historically cyclical. Trailing 8Q does not span a full cycle; FY27 bear case implicitly captures cycle reversal risk.</li>
+      <li><strong>The 1,460% TTM run:</strong> Stock at top of historic range. Per skill conservative bias, mean reversion risk is elevated. Standard framework cannot price the momentum/narrative premium.</li>
+    </ul>
+
+    <h3>Re-run Trigger</h3>
+    <p>Re-run after Q2 2026 earnings (~July 30, 2026) — will refresh trailing 4Q with Q2 2026 actual data, capture any updates to FY26 guidance, and reveal whether the Q1 2026 +130% YoY pace is sustained or normalizes. Also will incorporate Oracle warrant vesting progression and any updates on customer concentration.</p>
+  </div>
+
+  <div class="footer">
+    SMB LLC — SOTP FUNDAMENTAL VALUATION REPORT • BE • 2026-05-04 • Generated via /sotp-fundamental-valuation skill
+    <br>For internal SMB LLC use. Not investment advice. Re-run after Q2 2026 earnings ~July 30, 2026.
+  </div>
+</div>
+</body>
+</html>

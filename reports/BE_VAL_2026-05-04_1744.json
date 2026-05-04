@@ -1,0 +1,176 @@
+{
+  "type": "valuation",
+  "file": "BE_VAL_2026-05-04_1744.html",
+  "ticker": "BE",
+  "tvSymbol": "NYSE:BE",
+  "date": "2026-05-04T17:44:00-05:00",
+  "summary": "OVERVALUED — Trad Base −69.5% / AI-Prem Base −54.2% · cap-AMBER",
+  "verdictBadge": "OVERVALUED",
+  "upsideBadge": "−69.5%",
+  "mode": "CONSOLIDATED",
+  "segmentCount": 1,
+  "currentPrice": 290.52,
+  "stage": "YOUNG_GROWTH",
+  "stageMetric": "EV_Revenue",
+  "stageOverride": true,
+  "stageOverrideRationale": "Default would be High Growth; user override to Young Growth recognizes 130% YoY revenue growth is 3-4x above High Growth band; margin profile is just-emerging; aligns with AI-tailwind narrative framing",
+  "framework": "DUAL_SCENARIO",
+  "fairValue": {
+    "method": "2Y_discounted",
+    "traditional": {
+      "bear": 34.18,
+      "base": 88.51,
+      "bull": 180.92,
+      "probWeighted": 98.03
+    },
+    "aiPremium": {
+      "bear": 51.45,
+      "base": 132.94,
+      "bull": 271.55,
+      "probWeighted": 147.22
+    }
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "traditional": {
+      "bear": 42.20,
+      "base": 80.67,
+      "bull": 137.60
+    },
+    "aiPremium": {
+      "bear": 63.47,
+      "base": 121.18,
+      "bull": 206.57
+    }
+  },
+  "upside": {
+    "traditional": {
+      "bear": -88.2,
+      "base": -69.5,
+      "bull": -37.7,
+      "probWeighted": -66.3
+    },
+    "aiPremium": {
+      "bear": -82.3,
+      "base": -54.2,
+      "bull": -6.5,
+      "probWeighted": -49.3
+    }
+  },
+  "wacc": {
+    "method": "stage_default",
+    "consolidated": 0.11
+  },
+  "multiples": {
+    "metric": "EV/Revenue",
+    "traditional": {
+      "bear": 4.0,
+      "base": 7.0,
+      "bull": 10.5,
+      "rationale": "Peer 25th / median / 75th: CEG 4x, GEV ~7x, VRT 10.5x"
+    },
+    "aiPremium": {
+      "bear": 6.0,
+      "base": 10.5,
+      "bull": 15.75,
+      "rationale": "1.5x peer 75th percentile; reflects AI-data-center / clean-power thesis premium"
+    },
+    "peerSet": ["GEV", "VRT", "CEG", "OKLO"],
+    "peerNote": "OKLO excluded from quantitative derivation (pre-revenue, $0 TTM rev); retained as qualitative AI-nuclear thesis premium reference"
+  },
+  "growthAssumptions": {
+    "y1Bear": 0.68,
+    "y1Base": 0.83,
+    "y1Bull": 1.08,
+    "y2Bear": 0.0,
+    "y2Base": 0.35,
+    "y2Bull": 0.62,
+    "y1RevenueBear": 3400,
+    "y1RevenueBase": 3700,
+    "y1RevenueBull": 4200,
+    "y2RevenueBear": 3400,
+    "y2RevenueBase": 5000,
+    "y2RevenueBull": 6800,
+    "note": "Y1 cases anchored to mgmt FY26 guidance $3.4B-$3.8B (mid $3.6B) released April 28, 2026; Y2 cases reflect Oracle 2.8GW MOU ramp + Brookfield $5B project finance enablement"
+  },
+  "balanceSheet": {
+    "asOf": "2026-03-31",
+    "cashAndInvestments": 2490,
+    "recourseDebt": 2600,
+    "nonRecourseDebt": 4.3,
+    "netDebt": 110,
+    "dilutedSharesEstimated": 319.7,
+    "marketCap": 92879,
+    "enterpriseValue": 92989,
+    "brookfieldFramework": 5000
+  },
+  "currentImpliedMultiples": {
+    "evToTtmRev": 38.0,
+    "evToFy26Mid": 25.8,
+    "evToFy27Base": 18.6,
+    "vsPeer75thOnFy27Base": 0.77,
+    "note": "Market is paying 18.6x EV/FY27-base-revenue, well above 1.5x peer 75th premium of 15.75x"
+  },
+  "trailingRevenue": {
+    "ttm": 2445,
+    "fy24": 1470,
+    "fy25": 2020,
+    "q1_26": 751,
+    "q4_25": 778,
+    "q3_25": 519,
+    "q2_25_alloc": 397,
+    "q1_25": 326,
+    "q4_24": 572,
+    "q3_24": 330,
+    "q2_24_alloc": 332,
+    "q1_26_yoy_growth": 1.30
+  },
+  "fy26Guidance": {
+    "low": 3400,
+    "mid": 3600,
+    "high": 3800,
+    "impliedYoyGrowth": 0.78,
+    "raisedFromMid": 3200,
+    "raisedDate": "2026-04-28"
+  },
+  "capitalStructure": "AMBER",
+  "capitalStructureFlags": [
+    "Customer concentration: SK ecoplant 55% of Q3 2025 revenue (related party) — RED flag",
+    "Oracle warrant $261.3M fair value granted April 9 2026 — contra-revenue drag as warrants vest with deliveries",
+    "Diluted share count +39% YoY (Q1 26 wtd avg vs Q1 25) driven by convertibles if-converted method + stock awards",
+    "Mitigants: net debt ~zero; convertibles 0% coupon (3.0% on 2029 tranche); no near-term refi wall; Brookfield $5B non-recourse project finance",
+    "Positive Q1 2026 operating cash flow $73.6M reverses prior quarters of negative OCF"
+  ],
+  "runUpContext": {
+    "ttmReturn": 14.60,
+    "ytdReturn": 1.94,
+    "weekRange52": [16.05, 296.50],
+    "atTopOfRange": true,
+    "note": "Stock has run +1,460% in the past 12 months; sits at top of historic range; pricing 5+ years of compound growth + sustained premium multiples"
+  },
+  "dataQuality": {
+    "disclosedPct": 82,
+    "allocatedPct": 8,
+    "userOverridePct": 10
+  },
+  "verdict": "OVERVALUED",
+  "verdictCaveats": [
+    "Both Traditional and AI-Premium frameworks produce OVERVALUED results",
+    "Even AI-Premium Bull case ($271.55) is below current price ($290.52)",
+    "Capital structure AMBER due to SK ecoplant 55% concentration",
+    "Standard framework cannot price the momentum/narrative premium that the market is currently assigning"
+  ],
+  "fcfRealismCheck": {
+    "ran": false,
+    "deferralReason": "Heavy capex/working capital build through FY25 (cash flow from operations was -$304M YTD through Q3 25; Q1 26 swung positive to +$73.6M). 5Y DCF would require assumption stack on Oracle ramp pace + AI capex sustainability that the dual-scenario framework already captures via Y2 case range."
+  },
+  "sources": {
+    "10K": "filed 2026-02-09 for FY2025",
+    "10Q_Q1_2026": "filed 2026-04-24 for period ending 2026-03-31",
+    "10Q_Q3_2025": "used for SK ecoplant 55% concentration disclosure",
+    "earningsRelease": "released 2026-04-28; raised FY26 guide to $3.4B-$3.8B (mid $3.6B)",
+    "freshnessNote": "Q2 2026 10-Q expected ~July 30, 2026 - re-run trigger"
+  },
+  "rerunTrigger": "Q2 2026 earnings ~2026-07-30",
+  "notes": "Single-segment per BE 10-Q disclosure routes to Consolidated mode (not SOTP). Lifecycle override to Young Growth (EV/Revenue primary) was deliberate user choice — using High Growth (EV/Gross Profit) would produce even more conservative fair values given BE's 30% GM. Dual-scenario framework explicitly handles the disconnect between traditional industrial peer multiples and current market pricing. Market is paying 18.6x EV/FY27-base-revenue, which exceeds even the AI-Premium framework's 15.75x bull multiple. To justify current price, one of three things must be true: (1) FY27 revenue exceeds bull case ($6.8B), implying $8B+ actual; (2) multiples expand further into 20x+ territory; (3) market is pricing FY28-29 revenue today rather than FY27. None impossible, all extraordinary."
+}

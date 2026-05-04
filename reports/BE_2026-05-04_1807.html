@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BE — TA Chart Analysis — 2026-05-04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg-1:#0a0e17; --bg-2:#0f1420; --bg-3:#141926;
+    --text-1:#e2e8f0; --text-2:#8b9ab5; --text-3:#4a5976;
+    --border:#1e2a3a;
+    --cyan:#00e5ff; --green:#00e676; --red:#ff3d57; --amber:#ffab00; --purple:#bb86fc;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg-1);color:var(--text-1);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1240px;margin:0 auto;padding:36px 28px}
+  .mono{font-family:var(--mono)}
+  .hdr{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:30px}
+  .hdr-left .ticker{font-family:var(--mono);font-size:36px;font-weight:700;letter-spacing:1px;color:var(--text-1)}
+  .hdr-left .name{color:var(--text-2);font-size:13px;letter-spacing:.5px;margin-top:4px}
+  .hdr-left .sub{color:var(--text-3);font-size:11px;margin-top:8px;font-family:var(--mono);letter-spacing:.5px}
+  .hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .price{font-family:var(--mono);font-size:24px;font-weight:600}
+  .price-label{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.8px}
+  .price-sub{font-family:var(--mono);font-size:11px;color:var(--text-2)}
+  .badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .badge{display:inline-block;padding:5px 11px;border-radius:3px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;border:1px solid}
+  .badge-amber{background:rgba(255,171,0,.12);color:var(--amber);border-color:rgba(255,171,0,.4)}
+  .badge-green{background:rgba(0,230,118,.12);color:var(--green);border-color:rgba(0,230,118,.4)}
+  .badge-red{background:rgba(255,61,87,.12);color:var(--red);border-color:rgba(255,61,87,.4)}
+  .badge-cyan{background:rgba(0,229,255,.12);color:var(--cyan);border-color:rgba(0,229,255,.4)}
+  .badge-purple{background:rgba(187,134,252,.12);color:var(--purple);border-color:rgba(187,134,252,.4)}
+  .verdict-banner{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:linear-gradient(90deg, rgba(255,171,0,.08), rgba(187,134,252,.08));border:1px solid rgba(255,171,0,.3);border-left:4px solid var(--amber);border-radius:4px;margin-bottom:32px}
+  .verdict-text{font-family:var(--mono);font-weight:700;font-size:18px;color:var(--amber);letter-spacing:.5px}
+  .verdict-sub{color:var(--text-2);font-size:12px;margin-top:4px}
+  .section{margin-bottom:38px}
+  .section h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .section h3{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-1);margin:18px 0 10px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--border)}
+  th{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.8px;background:var(--bg-2)}
+  td{color:var(--text-1)}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  td.center,th.center{text-align:center}
+  tr:hover td{background:rgba(0,229,255,.03)}
+  .heavy-row td{background:rgba(255,61,87,.06)}
+  .medium-row td{background:rgba(255,171,0,.04)}
+  .tier1-row td{background:rgba(0,230,118,.05)}
+  .avoid-row td{background:rgba(255,61,87,.06)}
+  .current-row td{background:rgba(0,229,255,.08);font-weight:600}
+  .pos{color:var(--green);font-family:var(--mono)}
+  .neg{color:var(--red);font-family:var(--mono)}
+  .neutral{color:var(--text-2);font-family:var(--mono)}
+  .alert{padding:14px 18px;border-radius:4px;margin:14px 0;font-size:13px;line-height:1.6}
+  .alert-amber{background:rgba(255,171,0,.06);border-left:3px solid var(--amber);color:var(--text-1)}
+  .alert-red{background:rgba(255,61,87,.06);border-left:3px solid var(--red);color:var(--text-1)}
+  .alert-cyan{background:rgba(0,229,255,.06);border-left:3px solid var(--cyan);color:var(--text-1)}
+  .alert-purple{background:rgba(187,134,252,.06);border-left:3px solid var(--purple);color:var(--text-1)}
+  .alert strong{color:var(--text-1);font-weight:600}
+  .alert-amber strong{color:var(--amber)}
+  .alert-red strong{color:var(--red)}
+  .alert-purple strong{color:var(--purple)}
+  .small{font-size:11.5px;color:var(--text-2)}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10.5px;color:var(--text-3);letter-spacing:.5px}
+  .kvgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;margin:14px 0 4px}
+  .kv{background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:12px 14px}
+  .kv-label{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+  .kv-val{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--text-1)}
+  .kv-sub{font-size:11px;color:var(--text-2);margin-top:3px}
+  ul.tight{margin:8px 0;padding-left:20px}
+  ul.tight li{margin-bottom:4px;color:var(--text-1)}
+  .scroll-x{overflow-x:auto}
+  @media(max-width:780px){.hdr-right{align-items:flex-start}.hdr{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="ticker">BE</div>
+      <div class="name">Bloom Energy Corporation — NYSE</div>
+      <div class="sub">TA CHART ANALYSIS • 30M · 4H · DAILY · WEEKLY • OPTIONS MAY 29 • 2026-05-04 18:07 CT</div>
+    </div>
+    <div class="hdr-right">
+      <div class="price-label">Current Price</div>
+      <div class="price">$289.90</div>
+      <div class="price-sub">Intraday</div>
+      <div class="badge-row">
+        <span class="badge badge-amber">LONG TACTICAL</span>
+        <span class="badge badge-red">CONF: LOW</span>
+        <span class="badge badge-cyan">6/6 BULL</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VERDICT BANNER -->
+  <div class="verdict-banner">
+    <div>
+      <div class="verdict-text">LONG tactical — trend intact but extended; do not chase at $290</div>
+      <div class="verdict-sub">6/6 bull tool agreement (perfect alignment) BUT capped to LOW: Fib gap on daily/weekly + OVERVALUED fundamental from today's SOTP. Wait for pullback to $260–$275 confluence support.</div>
+    </div>
+    <div class="badge badge-amber">25 DTE / IV 108.62%</div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <h2>§1 — Decision Summary</h2>
+
+    <h3>1A. Executive Summary</h3>
+    <div class="scroll-x">
+    <table>
+      <tbody>
+        <tr><td><strong>Bias</strong></td><td>LONG tactical — trend intact but extended; do not chase at $290</td></tr>
+        <tr><td><strong>Final Confidence</strong></td><td><span class="badge badge-red">LOW</span> &nbsp; (TA HIGH → MEDIUM cap from no-Fibs → −1 OVERVALUED modifier → LOW)</td></tr>
+        <tr><td><strong>Tool Agreement</strong></td><td class="mono">6/6 bull · 0/6 bear (100%)</td></tr>
+        <tr><td><strong>Invalidation</strong></td><td class="mono">$275 short-term (30m RVWAP lower) / $240 structural (put wall + breakout pivot)</td></tr>
+        <tr><td><strong>Entry Zone</strong></td><td class="mono">$260–$275 (4h RVWAP mid $258.67 + 30m RVWAP lower $275.94 + put OI cluster $260)</td></tr>
+        <tr><td><strong>Exit Zone</strong></td><td class="mono">$300 first (30m RVWAP upper $299.27 + BB upper) → $325–$330 extended (daily RVWAP upper $329.94 + call OI $325)</td></tr>
+        <tr><td><strong>Macro Watch</strong></td><td>April CPI ~May 13 (HIGH-impact, within May 29 expiry; widen invalidation buffer)</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>1B. Key Levels (Sorted Top → Bottom)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Weight</th><th class="num">Price</th><th>Sources</th></tr>
+      </thead>
+      <tbody>
+        <tr class="medium-row"><td><span class="badge badge-amber">MEDIUM</span></td><td class="num mono">$360</td><td>Call wall ($360 = 130 OI, largest call OI) — major dealer ceiling but no chart confluence</td></tr>
+        <tr class="heavy-row"><td><span class="badge badge-red">HEAVY</span></td><td class="num mono"><strong>$325–$330</strong></td><td>Daily RVWAP upper $329.94 + Call OI $325 (124) — first major resistance cluster</td></tr>
+        <tr class="medium-row"><td><span class="badge badge-amber">MEDIUM</span></td><td class="num mono">$295–$300</td><td>30m RVWAP upper $299.27 + 30m BB upper $295.58 + recent intraday highs</td></tr>
+        <tr class="current-row"><td>—</td><td class="num mono">$289.90 ← CURRENT</td><td>Intraday near-flat below post-earnings spike high</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$280–$282</td><td>30m SMA 50 $280.86 + BB midline $282.66</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$275</td><td>30m RVWAP lower $275.94 — short-term trigger</td></tr>
+        <tr class="medium-row"><td><span class="badge badge-amber">MEDIUM</span></td><td class="num mono">$260</td><td>Put OI $260 (261) + 4h RVWAP mid $258.67 — first dealer-reinforced support</td></tr>
+        <tr class="heavy-row"><td><span class="badge badge-red">HEAVY</span></td><td class="num mono"><strong>$240</strong></td><td>Put wall ($240 = 426 OI massive) + 4h breakout pivot + post-earnings spike base</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$220</td><td>Daily RVWAP mid $220.05</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$200</td><td>4h SMA 50 $201.56 + psychological round</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$178</td><td>Daily SMA 50 — would be a major mean-reversion target if structure breaks</td></tr>
+        <tr><td>LIGHT</td><td class="num mono">$159</td><td>Weekly RVWAP mid — deep structural pullback level</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>1C. CSP Strike Zones — May 29 Expiry · 25 DTE · IV 108.62% · ±$77.47 expected move</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>Tier</th><th class="num">Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr class="tier1-row">
+          <td><span class="badge badge-green">Tier 1</span></td>
+          <td class="num mono"><strong>$240</strong></td>
+          <td>Put wall (426 OI massive) + 4h breakout pivot + structural post-earnings base</td>
+          <td>Heaviest defended price on chart; ~$11 mid-bid premium; ~−21 delta. Assignment here = long at the structural low of the entire post-Q1 spike — most defensible cost basis available.</td>
+        </tr>
+        <tr>
+          <td>Tier 2</td>
+          <td class="num mono">$260–$265</td>
+          <td>Put OI $260 (261) + 4h RVWAP mid $258.67</td>
+          <td>Higher premium ($16-$18) but assignment could occur on normal mean-reversion pullback rather than thesis break. <strong>Per LOW Final Confidence: not recommended.</strong></td>
+        </tr>
+        <tr class="avoid-row">
+          <td><span class="badge badge-red">Avoid</span></td>
+          <td class="num mono">$275–$287.50</td>
+          <td>LIGHT support only; thin OI; close to current price</td>
+          <td>Strikes here collect premium but offer no structural cushion if post-earnings melt-up unwinds. Crowded short-premium territory.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="alert alert-amber">
+      <strong>Strike Selection Notes.</strong> With Final Confidence LOW (driven by Fib gap + OVERVALUED fundamental from today's SOTP), <strong>Tier 1 only or stand aside.</strong> The $240 strike is structurally clean — heaviest put OI on the chain AND breakout pivot from the April 28 spike. If you write this strike and get assigned, you're long at the most defended price on the entire post-earnings structure. Do NOT reach for Tier 2 at this confidence level even though premium looks attractive — IV at 108% is rich for a reason (post-earnings + extreme stretch + macro CPI in window).
+    </div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <h2>§2 — Confidence Breakdown</h2>
+    <div class="scroll-x">
+    <table>
+      <thead><tr><th>Stage</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td><strong>TA Confidence</strong></td><td><strong>HIGH → capped at MEDIUM</strong> — 6/6 tool agreement (perfect bull alignment) BUT no Fibonacci drawn on daily/weekly. Per skill rule: structural retracement is unknown, cap applies.</td></tr>
+        <tr><td><strong>Fundamental Context</strong></td><td><span class="badge badge-red">OVERVALUED</span> — sourced from today's SOTP valuation (Trad Base −69.5% / AI-Premium Base −54.2%; even AI-Premium Bull below current price)</td></tr>
+        <tr><td><strong>Fundamental Modifier</strong></td><td><strong>−1 tier</strong> (long bias on OVERVALUED) → MEDIUM drops to <span class="badge badge-red">LOW</span></td></tr>
+        <tr><td><strong>Macro Calendar</strong></td><td>April CPI release ~May 13, 2026 (HIGH-impact, within May 29 expiry) · No FOMC in window (last Apr 28-29; next Jun 16-17) · No BE earnings in window (next ~Jul 30)</td></tr>
+        <tr><td><strong>Macro Modifier</strong></td><td><strong>No cap</strong> (CPI is &gt;24h out) — note elevated IV / pin risk; widen invalidation buffer</td></tr>
+        <tr style="background:rgba(255,61,87,.08)"><td><strong>Final Confidence</strong></td><td><strong><span class="badge badge-red">LOW</span></strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <h2>§3 — Supporting Analysis</h2>
+
+    <h3>3A. Higher Timeframe Context</h3>
+    <ul class="tight">
+      <li><strong>Weekly:</strong> Trending up. Price at $289.91. RVWAP mid $159.23, <strong>upper band $260.96 — price is ABOVE the weekly upper RVWAP band</strong>, a statistically rare extreme. SMA 50 ($104.90) >> SMA 200 ($38.95), bullishly stacked. RSI 14 = <strong>80.22</strong> (extreme overbought, but trending regime). MACD 13.33 / 40.39 — extreme positive expansion. <strong>Active Fib anchors: NOT DRAWN.</strong> Multi-year structure shows the entire 2024 base ($16) → 2026 vertical ($290) — this is the kind of move where even bears wait for confirmation rather than fading momentum directly.</li>
+      <li><strong>Daily:</strong> Trending up. Price at $289.67. RVWAP mid $220.05, upper $329.94, lower $110.15. SMA 50 $178.35 (price ~62% above 50 SMA — extreme stretch). SMA 200 $115.71. RSI 14 = <strong>77.55</strong> (overbought). MACD 7.30 / 32.85 — strong positive but at multi-month extreme. The Apr 28 earnings candle was the entire breakout — prior structure topped near $200, post-earnings pushed to $329 high then settled around $290. <strong>Active Fib anchors: NOT DRAWN</strong> — without Fib retracement levels mapped, natural pullback targets (38.2%, 50%, 61.8% of post-earnings move) cannot be referenced. This is the gap that caps confidence.</li>
+    </ul>
+
+    <h3>3B. Current Timeframe Read (30m for entry trigger; 4h for setup)</h3>
+    <ul class="tight">
+      <li><strong>Regime:</strong> 30m is <strong>ranging</strong> within $280-$300 since the Apr 29 peak; broader 4h/Daily/Weekly are <strong>trending up</strong>. Lower-TF chop inside an HTF uptrend is classic post-spike consolidation.</li>
+      <li><strong>VWAP:</strong> Price ($289.76) sits between 30m RVWAP mid ($287.60) and upper ($299.27); 4h RVWAP shows price near upper band ($324.94); Daily and Weekly upper bands have already been pierced upward. VWAP slope is rising on all timeframes.</li>
+      <li><strong>MAs:</strong> 50 SMA ($280.86) above 200 SMA ($235.55) on 30m. Bullish stack across all TFs. Slope universally rising.</li>
+      <li><strong>Momentum:</strong> RSI 30m = 57.33 (neutral, normalizing from post-spike overbought). MACD 30m = −0.4318 line, histogram contracting (slight bearish micro divergence — first sign that 30m momentum is fading from spike high but no major confirmation yet).</li>
+      <li><strong>Fib reference (from HTF):</strong> <strong>None — not drawn on daily or weekly.</strong> Structural blind spot driving the MEDIUM cap.</li>
+    </ul>
+
+    <h3>3C. Confluence Zones</h3>
+    <p>The two HEAVY zones bracket the actionable range:</p>
+    <ul class="tight">
+      <li><strong>$325–$330 (HEAVY resistance):</strong> Daily RVWAP upper band ($329.94) sits exactly at the call OI cluster at $325 (124 OI). First dealer-reinforced ceiling. Price has touched this zone once already (Apr 29 daily high $302.99 stretched up to ~$330 area on the spike before settling). Second test would face genuine option-selling pressure from short-call hedging.</li>
+      <li><strong>$240 (HEAVY support):</strong> Put wall at $240 (426 OI — by far the largest single OI in the chain) coincides with the structural breakout pivot from the April 28 candle (post-earnings move launched from this area). Dealer-reinforced floor and structural invalidation level for the entire post-earnings thesis. A break below $240 would likely cascade to $200 (4h SMA 50) and then $178 (daily SMA 50).</li>
+    </ul>
+    <p>The MEDIUM zones at $295-$300 and $260 are the proximate boundaries for the current consolidation. The market is currently distributing in the upper half of that range.</p>
+
+    <h3>3D. Divergences</h3>
+    <ul class="tight">
+      <li><strong>30m bearish micro-divergence forming:</strong> Post-Apr 29 high, price held in $280-$300 range while RSI 14 has rolled from ~75 to ~57, and MACD has gone slightly negative below signal. Normal post-spike cooling — not yet a confirmed divergence at a structural level. Watch if 30m RSI puts in a higher low while price prints a higher high (would negate); or if a lower high in price coincides with a lower high in RSI (would confirm short-term distribution).</li>
+      <li><strong>Daily and Weekly: NO confirmed divergence yet.</strong> RSI is extreme but still rising in lockstep with price. Trending-overbought, not divergent-overbought.</li>
+    </ul>
+
+    <h3>3E. Notes</h3>
+    <ul class="tight">
+      <li><strong>The chase risk dominates this read.</strong> Stock has run +1,460% TTM, +194% YTD, sits at the top of its 52w range ($16.05–$296.50). Even with 6/6 bull tool agreement, entering long at $290 means buying right at the upper-band extreme on every higher timeframe.</li>
+      <li><strong>Multi-timeframe alignment is unanimous.</strong> No conflict between TFs — but the HTF extension is the issue, not a TF disagreement. Weekly RSI 80+ is not a sell signal in trends, but it is a "wait for pullback" signal for new entries.</li>
+      <li><strong>Earnings risk: clear.</strong> BE reported Q1 2026 on April 28 (the spike candle). Next earnings ~July 30, 2026 — well outside the May 29 expiry window. ✓ No earnings-through-expiry cap applies for short-premium structures.</li>
+      <li><strong>CPI within window.</strong> April CPI release ~May 13 (~9 days into May 29 expiry). HIGH-impact macro, but &gt;24h out — no confidence cap, just IV/pin risk to watch. With IV already at 108%, there's little additional vol premium for CPI specifically — most of the risk is already in the chain.</li>
+      <li><strong>Sanity check on 6/6 vs LOW final:</strong> The contradiction is explicitly accounted for. TA agreement is perfect, but the Fib gap caps to MEDIUM and the OVERVALUED fundamental cap drops to LOW. If you draw weekly + daily Fibs from the FY24 low ($16) to the recent high ($329.94), and from the Q1 25 base to the post-earnings high, the picture changes — natural retracement targets become referenceable and TA confidence could lift back to HIGH (still capped to MEDIUM by the OVERVALUED fundamental). <strong>Recommend: draw Fibs on weekly + daily and re-run.</strong></li>
+      <li><strong>Volume context:</strong> Daily volume on Apr 28-29 spike was ~11M (vs 7.5M average) — meaningful confirmation of the breakout. Subsequent days have seen volume normalize, neither strong distribution nor strong accumulation. Volume on the consolidation is unimpressive.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <h2>§4 — Options Chain Detail</h2>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">Source</div><div class="kv-val" style="font-size:13px">User screenshot</div><div class="kv-sub">Tier 1 quality</div></div>
+      <div class="kv"><div class="kv-label">Expiry</div><div class="kv-val" style="font-size:13px">May 29, 2026</div><div class="kv-sub">25 DTE</div></div>
+      <div class="kv"><div class="kv-label">IV</div><div class="kv-val">108.62%</div><div class="kv-sub">Extreme — post-earnings + stretched + CPI pending</div></div>
+      <div class="kv"><div class="kv-label">Expected Move</div><div class="kv-val">±$77.47</div><div class="kv-sub">$212 — $367 implied range</div></div>
+    </div>
+    <ul class="tight" style="margin-top:14px">
+      <li><strong>Call wall:</strong> <span class="mono">$360 (130 OI)</span> — major dealer ceiling, well above current; secondary wall at $325 (124 OI) which carries chart confluence</li>
+      <li><strong>Put wall:</strong> <span class="mono">$240 (426 OI)</span> — by far the largest single OI on the chain; HEAVY structural support</li>
+      <li><strong>Max pain:</strong> Approximate <span class="mono">$260–$265</span> area (heavy put OI cluster $240/$250/$260 + decent call OI at $245/$250 — wide-IV chain so max pain is less reliable than usual)</li>
+      <li><strong>Notable:</strong> OI distribution is asymmetric — puts cluster heavily in $240–$265 (matching post-earnings breakout structure), calls cluster at $325 and $360 (matching upper resistance and "lottery ticket" upside strike). Premium-sellers have positioned short puts at the structural floor and short calls well above the realistic move. Volume on $280 calls (371 today) is the only outlier worth flagging — small but unusual concentration.</li>
+    </ul>
+  </div>
+
+  <!-- APPENDIX -->
+  <div class="section">
+    <h2>§5 — Appendix · Indicator Readings</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr><th>TF</th><th class="num">Price</th><th class="num">RVWAP Mid</th><th class="num">RVWAP Upper</th><th class="num">RVWAP Lower</th><th class="num">SMA 50</th><th class="num">SMA 200</th><th class="num">RSI 14</th><th class="num">MACD Line</th><th class="num">MACD Hist</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>30m</td><td class="num mono">$289.76</td><td class="num mono">$287.60</td><td class="num mono">$299.27</td><td class="num mono">$275.94</td><td class="num mono">$280.86</td><td class="num mono">$235.55</td><td class="num mono">57.33</td><td class="num mono neg">−0.43</td><td class="num mono">3.42</td></tr>
+        <tr><td>4h</td><td class="num mono">$289.78</td><td class="num mono">$258.67</td><td class="num mono">$324.94</td><td class="num mono">$192.40</td><td class="num mono">$201.56</td><td class="num mono">$151.89</td><td class="num mono">76.71</td><td class="num mono pos">2.23</td><td class="num mono">22.80</td></tr>
+        <tr><td>Daily</td><td class="num mono">$289.67</td><td class="num mono">$220.05</td><td class="num mono">$329.94</td><td class="num mono">$110.15</td><td class="num mono">$178.35</td><td class="num mono">$115.71</td><td class="num mono">77.55</td><td class="num mono pos">7.30</td><td class="num mono">25.55</td></tr>
+        <tr><td>Weekly</td><td class="num mono">$289.91</td><td class="num mono">$159.23</td><td class="num mono">$260.96</td><td class="num mono">$57.50</td><td class="num mono">$104.90</td><td class="num mono">$38.95</td><td class="num mono">80.22</td><td class="num mono pos">13.33</td><td class="num mono">27.06</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">All values from user-provided TradingView screenshots. RVWAP = rolling VWAP with 2.5σ bands (HLC3 typical price). Price &gt; weekly upper RVWAP band is statistically rare and a defining feature of this read.</p>
+  </div>
+
+  <div class="footer">
+    SMB LLC — TA CHART ANALYSIS REPORT • BE • 2026-05-04 18:07 CT • Generated via /ta-chart-analysis skill
+    <br>For internal SMB LLC use. Not investment advice. User sizes the position. Recommend re-run with Fibs drawn on weekly + daily.
+  </div>
+</div>
+</body>
+</html>

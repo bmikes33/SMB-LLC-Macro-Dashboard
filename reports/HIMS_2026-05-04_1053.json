@@ -1,0 +1,24 @@
+{
+  "type": "ta",
+  "file": "HIMS_2026-05-04_1053.html",
+  "ticker": "HIMS",
+  "tvSymbol": "NYSE:HIMS",
+  "date": "2026-05-04T10:53:00-05:00",
+  "bias": "NEUTRAL — no edge",
+  "confidence": "LOW",
+  "bullScore": 4,
+  "bearScore": 2,
+  "scoreMax": 6,
+  "invalidation": "$25 short-term / $22 structural",
+  "entryZone": "$24.00–$25.00 (post-earnings only)",
+  "exitZone": "$30.00–$32.00",
+  "levels": [
+    { "weight": "HEAVY",   "price": "$30.00–$32.00", "sources": "$30 call wall (18,841 OI) + 4h VWAP upper band ($32.45)" },
+    { "weight": "MEDIUM",  "price": "$28.00",        "sources": "$28 call OI (4,521) + $28 put OI (3,786) — pin-magnet" },
+    { "weight": "HEAVY",   "price": "$26.59–$27.05", "sources": "Daily Fib 0.382 + Weekly Fib 0.382 + 30m 50/200 SMA + Daily VWAP + 4h 200 SMA (6-tool stack)" },
+    { "weight": "CURRENT", "price": "$27.01",        "sources": "Regular session close" },
+    { "weight": "MEDIUM",  "price": "$25.00",        "sources": "$25 put wall (6,372 OI) + $25 call wall (5,366 OI)" },
+    { "weight": "MEDIUM",  "price": "$24.00–$24.30", "sources": "4h 50 SMA ($24.28) + daily ascending trendline" },
+    { "weight": "HEAVY",   "price": "$20.00–$22.00", "sources": "Put wall stack: $20 (8,859) + $22 (6,880) + $21 (5,652) OI" }
+  ]
+}

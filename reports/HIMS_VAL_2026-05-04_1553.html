@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HIMS — SOTP Fundamental Valuation — 2026-05-04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg-1:#0a0e17; --bg-2:#0f1420; --bg-3:#141926;
+    --text-1:#e2e8f0; --text-2:#8b9ab5; --text-3:#4a5976;
+    --border:#1e2a3a;
+    --cyan:#00e5ff; --green:#00e676; --red:#ff3d57; --amber:#ffab00;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg-1);color:var(--text-1);font-family:var(--sans);font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--cyan);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1240px;margin:0 auto;padding:36px 28px}
+  .mono{font-family:var(--mono)}
+  .hdr{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:30px}
+  .hdr-left .ticker{font-family:var(--mono);font-size:36px;font-weight:700;letter-spacing:1px;color:var(--text-1)}
+  .hdr-left .name{color:var(--text-2);font-size:13px;letter-spacing:.5px;margin-top:4px}
+  .hdr-left .sub{color:var(--text-3);font-size:11px;margin-top:8px;font-family:var(--mono);letter-spacing:.5px}
+  .hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .price{font-family:var(--mono);font-size:24px;font-weight:600}
+  .price-label{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.8px}
+  .badge-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .badge{display:inline-block;padding:5px 11px;border-radius:3px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;border:1px solid}
+  .badge-amber{background:rgba(255,171,0,.12);color:var(--amber);border-color:rgba(255,171,0,.4)}
+  .badge-green{background:rgba(0,230,118,.12);color:var(--green);border-color:rgba(0,230,118,.4)}
+  .badge-red{background:rgba(255,61,87,.12);color:var(--red);border-color:rgba(255,61,87,.4)}
+  .badge-cyan{background:rgba(0,229,255,.12);color:var(--cyan);border-color:rgba(0,229,255,.4)}
+  .verdict-banner{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:linear-gradient(90deg, rgba(0,230,118,.08), rgba(255,171,0,.08));border:1px solid rgba(0,230,118,.3);border-left:4px solid var(--green);border-radius:4px;margin-bottom:32px}
+  .verdict-text{font-family:var(--mono);font-weight:700;font-size:18px;color:var(--green);letter-spacing:.5px}
+  .verdict-sub{color:var(--text-2);font-size:12px;margin-top:4px}
+  .section{margin-bottom:38px}
+  .section h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .section h3{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-1);margin:18px 0 10px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--border)}
+  th{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.8px;background:var(--bg-2)}
+  td{color:var(--text-1)}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  td.center,th.center{text-align:center}
+  tr:hover td{background:rgba(0,229,255,.03)}
+  .pos{color:var(--green);font-family:var(--mono)}
+  .neg{color:var(--red);font-family:var(--mono)}
+  .neutral{color:var(--text-2);font-family:var(--mono)}
+  .alloc{font-style:italic;color:var(--text-2)}
+  .alloc::after{content:" †"}
+  .override{font-weight:600;color:var(--amber)}
+  .override::after{content:" *"}
+  .kvgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;margin:14px 0 4px}
+  .kv{background:var(--bg-2);border:1px solid var(--border);border-radius:4px;padding:12px 14px}
+  .kv-label{font-family:var(--mono);font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+  .kv-val{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--text-1)}
+  .kv-sub{font-size:11px;color:var(--text-2);margin-top:3px}
+  .legend{font-size:11px;color:var(--text-3);margin-top:10px;font-style:italic}
+  .legend strong{color:var(--text-2);font-style:normal}
+  .alert{padding:14px 18px;border-radius:4px;margin:14px 0;font-size:13px;line-height:1.6}
+  .alert-amber{background:rgba(255,171,0,.06);border-left:3px solid var(--amber);color:var(--text-1)}
+  .alert-red{background:rgba(255,61,87,.06);border-left:3px solid var(--red);color:var(--text-1)}
+  .alert-cyan{background:rgba(0,229,255,.06);border-left:3px solid var(--cyan);color:var(--text-1)}
+  .alert strong{color:var(--text-1);font-weight:600}
+  .alert-amber strong{color:var(--amber)}
+  .alert-red strong{color:var(--red)}
+  .small{font-size:11.5px;color:var(--text-2)}
+  .footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--border);font-family:var(--mono);font-size:10.5px;color:var(--text-3);letter-spacing:.5px}
+  .col-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:780px){.col-2{grid-template-columns:1fr}.hdr-right{align-items:flex-start}.hdr{flex-direction:column}}
+  ul.tight{margin:8px 0;padding-left:20px}
+  ul.tight li{margin-bottom:4px;color:var(--text-1)}
+  .scroll-x{overflow-x:auto}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="ticker">HIMS</div>
+      <div class="name">Hims & Hers Health, Inc. — NYSE</div>
+      <div class="sub">SOTP FUNDAMENTAL VALUATION • CONSOLIDATED MODE • 2026-05-04 15:53 CT</div>
+    </div>
+    <div class="hdr-right">
+      <div class="price-label">Current Price</div>
+      <div class="price">$27.41</div>
+      <div class="badge-row">
+        <span class="badge badge-green">UNDERVALUED</span>
+        <span class="badge badge-amber">CAP AMBER</span>
+        <span class="badge badge-red">REG OVERHANG</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- VERDICT BANNER -->
+  <div class="verdict-banner">
+    <div>
+      <div class="verdict-text">UNDERVALUED — base +61.6% • prob-weighted +62.3%</div>
+      <div class="verdict-sub">Verdict carries dual caveat: AMBER capital structure (Eucalyptus liquidity drag) AND material regulatory overhang (DOJ/FDA/Novo Nordisk Feb 2026 actions not in trailing data)</div>
+    </div>
+    <div class="badge badge-cyan">2Y DISC PRIMARY</div>
+  </div>
+
+  <!-- DATA PROVENANCE -->
+  <div class="alert alert-cyan">
+    <strong>Data Provenance:</strong> 78% disclosed (10-K filed 2026-02-23, 10-Q Q3 2025 filed 2025-11-03) • 8% allocated (cell-level methodology) • 14% user-override (forward growth + GM cases overridden from mechanical last-4Q rule due to visible deceleration + post-trailing-period regulatory actions). <span class="legend">Disclosed cells: plain. <span class="alloc">Allocated</span>. <span class="override">User-override</span>.</span>
+  </div>
+
+  <!-- SECTION 1: EXECUTIVE SUMMARY -->
+  <div class="section">
+    <h2>§1 — Executive Summary: Fair Value Table</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">2Y Discounted (PRIMARY)</th>
+          <th class="num">vs Current</th>
+          <th class="num">NTM × Multiple (Sanity)</th>
+          <th class="num">vs Current</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td class="num mono">$25.49</td>
+          <td class="num neg">−7.0%</td>
+          <td class="num mono">$31.55</td>
+          <td class="num pos">+15.1%</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong> <span class="override">override</span></td>
+          <td class="num mono">$44.28</td>
+          <td class="num pos">+61.6%</td>
+          <td class="num mono">$47.49</td>
+          <td class="num pos">+73.3%</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong> <span class="override">override</span></td>
+          <td class="num mono">$63.92</td>
+          <td class="num pos">+133.2%</td>
+          <td class="num mono">$63.02</td>
+          <td class="num pos">+129.9%</td>
+        </tr>
+        <tr style="background:rgba(0,229,255,.06)">
+          <td><strong>Probability-Weighted</strong> <span class="small">25/50/25</span></td>
+          <td class="num mono"><strong>$44.49</strong></td>
+          <td class="num pos"><strong>+62.3%</strong></td>
+          <td class="num mono">—</td>
+          <td class="num">—</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="legend">Method A (2Y discounted) is the headline. Method B is shown side-by-side as a sanity check. The fact that 2Y disc &lt; NTM × multiple (modestly) reflects that Year-2 deceleration partly offsets WACC-discounted forward EV — typical of a regime shift case.</p>
+  </div>
+
+  <!-- SECTION 2: LIFECYCLE & MODE ROUTING -->
+  <div class="section">
+    <h2>§2 — Mode & Lifecycle Classification</h2>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">Mode</div><div class="kv-val">CONSOLIDATED</div><div class="kv-sub">Single operating segment per filings</div></div>
+      <div class="kv"><div class="kv-label">Lifecycle Stage</div><div class="kv-val">HIGH GROWTH*</div><div class="kv-sub">Elevated growth band; just-positive EBITDA</div></div>
+      <div class="kv"><div class="kv-label">Stage Metric</div><div class="kv-val">EV/Gross Profit</div><div class="kv-sub">EV/EBITDA shown as sanity</div></div>
+      <div class="kv"><div class="kv-label">Forecast Horizon</div><div class="kv-val">NTM + 1Y</div><div class="kv-sub">High Growth standard</div></div>
+    </div>
+    <p>HIMS explicitly states in its 10-Q footnotes that "the Company is managed as a single operating segment on a consolidated basis." Per skill rules, this triggers Consolidated mode — no SOTP scaffolding. Lifecycle classification is High Growth with an asterisk: revenue growth at 59% FY25 exceeds the standard 20–40% High Growth band, but margin profile (just-positive 14% adj-EBITDA, expanding) sits below Mature Growth thresholds. The combination is more characteristic of a hyper-growth profitable platform than a traditional High Growth name.</p>
+    <h3>Why High Growth, not Mature Growth</h3>
+    <p>FY25 GAAP gross margin compressed from 79% → 74% (driven by GLP-1 mix and international expansion). Subscriber growth decelerated from +45% YoY (FY24) to +13% YoY (FY25), while ARPU expanded +28% — the "growth" is now coming from monetization, not customer acquisition. This is a transitional profile, but the still-elevated revenue growth and unstable margin trajectory keep it in High Growth rather than Mature.</p>
+  </div>
+
+  <!-- SECTION 3: D&A ALLOCATION (consolidated note) -->
+  <div class="section">
+    <h2>§3 — D&A Allocation Methodology</h2>
+    <p>Not applicable in Consolidated mode — D&A flows through consolidated totals. For reference: FY25 D&A = $54.5M (vs $17.1M FY24) — sharp acceleration driven by recent acquisitions (Zava, Medici, MedisourceRx) and capex investments at the Mesa AZ, New Albany OH, and Menlo Park CA facilities. <span class="alloc">$172.6M of property/equipment is classified as "assets not placed in service" as of Q3 2025</span>, indicating a significant tail of D&A acceleration ahead as these facilities come online.</p>
+  </div>
+
+  <!-- SECTION 4: PEER SET, MULTIPLES, WACC -->
+  <div class="section">
+    <h2>§4 — Peer Set, Multiples & WACC</h2>
+    <h3>Approved Peer Set (mixed: digital health + DTC growth)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Peer</th>
+          <th>Sector Bucket</th>
+          <th class="num">Mkt Cap</th>
+          <th class="num">TTM Rev</th>
+          <th class="num">TTM GM%</th>
+          <th class="num">EV/Rev</th>
+          <th class="num">EV/Gross Profit</th>
+          <th class="num">EV/EBITDA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mono">DOCS</td>
+          <td>Digital health platform</td>
+          <td class="num mono">$4.5B</td>
+          <td class="num mono">$638M</td>
+          <td class="num mono">90%</td>
+          <td class="num mono">5.9x</td>
+          <td class="num mono">6.6x</td>
+          <td class="num mono">~10x</td>
+        </tr>
+        <tr>
+          <td class="mono">LFMD</td>
+          <td>DTC telehealth</td>
+          <td class="num mono">$0.13B</td>
+          <td class="num mono">$194M</td>
+          <td class="num mono">87%</td>
+          <td class="num mono">0.7x</td>
+          <td class="num mono neg">0.8x ⚠</td>
+          <td class="num mono">19.5x</td>
+        </tr>
+        <tr>
+          <td class="mono">ELF</td>
+          <td>DTC consumer brand</td>
+          <td class="num mono">$3.6B</td>
+          <td class="num mono">$1.39B</td>
+          <td class="num mono">70%</td>
+          <td class="num mono">4.3x</td>
+          <td class="num mono">6.1x</td>
+          <td class="num mono">17.8x</td>
+        </tr>
+        <tr>
+          <td class="mono">CELH</td>
+          <td>DTC growth brand</td>
+          <td class="num mono">$8.6B</td>
+          <td class="num mono">$2.51B</td>
+          <td class="num mono">52%</td>
+          <td class="num mono">3.6x</td>
+          <td class="num mono">6.9x</td>
+          <td class="num mono">17.6x</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">⚠ LFMD trades at distressed multiples (0.8x EV/GP) — included for completeness but flagged. The clean peer band excluding LFMD is 6.1x–6.9x EV/GP, tight median ~6.6x.</p>
+
+    <h3>EV/Gross Profit Multiple Range (Peer-Derived)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th>Source</th>
+          <th class="num">EV/GP Multiple</th>
+          <th>Rationale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td>HIMS-specific compression</td>
+          <td class="num mono override">5.0x</td>
+          <td>Below peer 25th pct; reflects HIMS regulatory overhang + GLP-1 mix dependency</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong></td>
+          <td>Slight discount to peer median</td>
+          <td class="num mono override">6.4x</td>
+          <td>Peer median ~6.6x, ~3% discount for HIMS-specific risk</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong></td>
+          <td>Peer 75th pct (CELH)</td>
+          <td class="num mono">7.0x</td>
+          <td>Premium achievable if regulatory clears + GLP-1 momentum continues</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>WACC</h3>
+    <div class="kvgrid">
+      <div class="kv"><div class="kv-label">Stage Default</div><div class="kv-val">11%</div><div class="kv-sub">High Growth</div></div>
+      <div class="kv"><div class="kv-label">Applied</div><div class="kv-val">11%</div><div class="kv-sub">No override</div></div>
+      <div class="kv"><div class="kv-label">2Y Discount Factor</div><div class="kv-val">0.8116</div><div class="kv-sub">1 / (1.11)²</div></div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: BEAR/BASE/BULL CASES -->
+  <div class="section">
+    <h2>§5 — Bear / Base / Bull Cases (Y1 + Y2)</h2>
+
+    <div class="alert alert-amber">
+      <strong>⚠ User Override Justification.</strong> The skill mechanical rule (last-4Q avg = base) produces base-case revenue growth of 65% YoY. This is overridden because:<br>
+      <strong>(1)</strong> Q1'25 Super Bowl ad campaign drove +111% YoY growth — non-repeatable.<br>
+      <strong>(2)</strong> Trailing 4-quarter trajectory shows sharp deceleration: 111% → 73% → 49% → 28% (Q4'25). Average buries the deterioration.<br>
+      <strong>(3)</strong> Post-trailing-period actions (Feb 2026 FDA Statement directly naming HIMS, HHS-to-DOJ referral, Novo Nordisk patent suit) represent material change to forward fundamentals NOT reflected in trailing data.<br>
+      <strong>(4)</strong> Analyst consensus FY26 revenue estimate ~$2.6B implies ~10–12% growth — matches override base.
+    </div>
+
+    <h3>Year 1 (NTM = ~FY26) — Revenue & Gross Profit</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">Rev Growth YoY</th>
+          <th class="num">Y1 Revenue ($M)</th>
+          <th class="num">GM%</th>
+          <th class="num">Y1 Gross Profit ($M)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td class="num override">0%</td>
+          <td class="num mono">$2,348</td>
+          <td class="num override">70%</td>
+          <td class="num mono">$1,643</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong></td>
+          <td class="num override">+12%</td>
+          <td class="num mono">$2,629</td>
+          <td class="num override">73%</td>
+          <td class="num mono">$1,919</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong></td>
+          <td class="num override">+30%</td>
+          <td class="num mono">$3,052</td>
+          <td class="num override">76%</td>
+          <td class="num mono">$2,320</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Year 2 (FY27) — Sustained Regime with Mild Recovery Taper</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">Rev Growth YoY (Y2)</th>
+          <th class="num">Y2 Revenue ($M)</th>
+          <th class="num">GM% (Y2)</th>
+          <th class="num">Y2 Gross Profit ($M)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Bear</strong></td>
+          <td class="num override">0%</td>
+          <td class="num mono">$2,348</td>
+          <td class="num override">70%</td>
+          <td class="num mono">$1,643</td>
+        </tr>
+        <tr>
+          <td><strong>Base</strong></td>
+          <td class="num override">+15%</td>
+          <td class="num mono">$3,023</td>
+          <td class="num override">73%</td>
+          <td class="num mono">$2,207</td>
+        </tr>
+        <tr>
+          <td><strong>Bull</strong></td>
+          <td class="num override">+25%</td>
+          <td class="num mono">$3,815</td>
+          <td class="num override">76%</td>
+          <td class="num mono">$2,899</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Y2 base assumes regulatory overhang clears & growth modestly reaccelerates. Y2 bear assumes regulatory action persists. Y2 bull assumes Eucalyptus integration accretive + GLP-1 framework stabilizes favorably.</p>
+
+    <h3>Trailing-8Q Observed Range (Reference)</h3>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Quarter</th>
+          <th class="num">Revenue ($M)</th>
+          <th class="num">YoY Growth</th>
+          <th class="num">Gross Margin</th>
+          <th class="num">Implied Trajectory</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Q1 2024</td><td class="num mono">$278</td><td class="num mono">+46%</td><td class="num mono">82.4%</td><td class="num mono">High GM regime</td></tr>
+        <tr><td>Q2 2024</td><td class="num mono"><span class="alloc">$316</span></td><td class="num mono">~+50%</td><td class="num mono"><span class="alloc">~80%</span></td><td class="num mono">Pre-GLP-1 ramp</td></tr>
+        <tr><td>Q3 2024</td><td class="num mono">$402</td><td class="num mono">+77%</td><td class="num mono">79.2%</td><td class="num mono">GLP-1 launch</td></tr>
+        <tr><td>Q4 2024</td><td class="num mono">$481</td><td class="num mono">+95%</td><td class="num mono"><span class="alloc">~77%</span></td><td class="num mono">Building momentum</td></tr>
+        <tr><td>Q1 2025</td><td class="num mono"><span class="alloc">$586</span></td><td class="num mono pos">+111%</td><td class="num mono"><span class="alloc">~74%</span></td><td class="num mono">Super Bowl boost</td></tr>
+        <tr><td>Q2 2025</td><td class="num mono"><span class="alloc">$545</span></td><td class="num mono">+73%</td><td class="num mono"><span class="alloc">~73%</span></td><td class="num mono">First decel signal</td></tr>
+        <tr><td>Q3 2025</td><td class="num mono">$599</td><td class="num mono">+49%</td><td class="num mono">73.8%</td><td class="num mono">Decel continues</td></tr>
+        <tr><td><strong>Q4 2025</strong></td><td class="num mono"><strong>$618</strong></td><td class="num mono neg"><strong>+28%</strong></td><td class="num mono">71.9%</td><td class="num mono"><strong>Sharp decel</strong></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Q1, Q2, Q4 2025 quarterly cuts <span class="alloc">allocated from FY/9M totals less Q3 disclosed</span>. Q1 2025 reported Super Bowl marketing campaign + GLP-1 launch acceleration drove the +111% peak. Q4 2025 +28% growth represents the current regime.</p>
+  </div>
+
+  <!-- SECTION 6: SBC ANALYSIS -->
+  <div class="section">
+    <h2>§6 — Stock-Based Compensation Analysis</h2>
+    <p>SBC as % of revenue: FY23 7.6% → FY24 6.3% → FY25 5.8% (declining as revenue scales). FY25 SBC = $135.2M. For valuation purposes:</p>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Case</th>
+          <th class="num">Treatment</th>
+          <th class="num">FY26E SBC ($M)</th>
+          <th class="num">FY27E SBC ($M)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Bear</strong> (strict)</td><td class="num">SBC stays embedded</td><td class="num mono">$130</td><td class="num mono">$130</td></tr>
+        <tr><td><strong>Base</strong> (strict)</td><td class="num">SBC stays embedded</td><td class="num mono">$155</td><td class="num mono">$175</td></tr>
+        <tr><td><strong>Bull</strong> (addback)</td><td class="num">Add SBC back as non-cash</td><td class="num mono">$180</td><td class="num mono">$220</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">SBC has trended down as % of revenue, but absolute SBC will continue growing. The bull/base/bear gap on SBC is informative — large SBC means real dilution risk if multiple compresses.</p>
+  </div>
+
+  <!-- SECTION 7: BRIDGE TO EQUITY VALUE - 2Y DISCOUNTED -->
+  <div class="section">
+    <h2>§7 — Bridge to Equity Fair Value: 2Y EBITDA × Multiple, Discounted (PRIMARY)</h2>
+    <p>For Consolidated High Growth, applied EV/Gross Profit (not EV/EBITDA) per stage convention. <strong>Year 2 Gross Profit × Multiple, discounted 2Y at WACC.</strong></p>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th class="num">Bear</th>
+          <th class="num">Base</th>
+          <th class="num">Bull</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Y2 Gross Profit ($M)</td>
+          <td class="num mono">$1,643</td>
+          <td class="num mono">$2,207</td>
+          <td class="num mono">$2,899</td>
+        </tr>
+        <tr>
+          <td>× EV/Gross Profit Multiple</td>
+          <td class="num mono">5.0x</td>
+          <td class="num mono">6.4x</td>
+          <td class="num mono">7.0x</td>
+        </tr>
+        <tr>
+          <td><strong>Y2 EV ($M)</strong></td>
+          <td class="num mono"><strong>$8,215</strong></td>
+          <td class="num mono"><strong>$14,125</strong></td>
+          <td class="num mono"><strong>$20,293</strong></td>
+        </tr>
+        <tr>
+          <td>÷ (1+WACC)² discount factor (0.8116)</td>
+          <td class="num mono">$6,667</td>
+          <td class="num mono">$11,464</td>
+          <td class="num mono">$16,470</td>
+        </tr>
+        <tr>
+          <td>+ Cash + ST/LT investments</td>
+          <td class="num mono pos">$929</td>
+          <td class="num mono pos">$929</td>
+          <td class="num mono pos">$929</td>
+        </tr>
+        <tr>
+          <td>− Convertible debt (principal)</td>
+          <td class="num mono neg">($1,000)</td>
+          <td class="num mono neg">($1,000)</td>
+          <td class="num mono neg">($1,000)</td>
+        </tr>
+        <tr>
+          <td>− Earn-out & contingent liabilities</td>
+          <td class="num mono neg">($100)</td>
+          <td class="num mono neg">($100)</td>
+          <td class="num mono neg">($100)</td>
+        </tr>
+        <tr style="border-top:2px solid var(--cyan)">
+          <td><strong>Equity Fair Value ($M)</strong></td>
+          <td class="num mono"><strong>$6,496</strong></td>
+          <td class="num mono"><strong>$11,293</strong></td>
+          <td class="num mono"><strong>$16,299</strong></td>
+        </tr>
+        <tr>
+          <td>÷ Diluted shares (~255M est.)</td>
+          <td class="num mono">255M</td>
+          <td class="num mono">255M</td>
+          <td class="num mono">255M</td>
+        </tr>
+        <tr style="background:rgba(0,229,255,.06)">
+          <td><strong>Per-Share Fair Value</strong></td>
+          <td class="num mono"><strong>$25.49</strong></td>
+          <td class="num mono"><strong>$44.28</strong></td>
+          <td class="num mono"><strong>$63.92</strong></td>
+        </tr>
+        <tr>
+          <td><strong>vs Current $27.41</strong></td>
+          <td class="num neg"><strong>−7.0%</strong></td>
+          <td class="num pos"><strong>+61.6%</strong></td>
+          <td class="num pos"><strong>+133.2%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">Cash position uses Dec 31, 2025 disclosed liquidity ($929M = cash + ST/LT investments per FY25 10-K MD&A). Earn-out liabilities estimated at ~$100M (Zava $95M + de minimis other). Convertible debt at face $1.0B (0% coupon, due 2030, convertible at $70.67/share — well above current price, so dilution treated via diluted share count rather than if-converted). Diluted share count of 255M reflects Q3 2025 weighted avg of 248.7M plus ~5M annual RSU dilution drift.</p>
+  </div>
+
+  <!-- SECTION 8: METHOD COMPARISON - NTM x MULTIPLE -->
+  <div class="section">
+    <h2>§8 — Method Comparison: NTM × Multiple (Sanity Check)</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Step</th>
+          <th class="num">Bear</th>
+          <th class="num">Base</th>
+          <th class="num">Bull</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NTM (Y1) Gross Profit ($M)</td>
+          <td class="num mono">$1,643</td>
+          <td class="num mono">$1,919</td>
+          <td class="num mono">$2,320</td>
+        </tr>
+        <tr>
+          <td>× EV/GP Multiple</td>
+          <td class="num mono">5.0x</td>
+          <td class="num mono">6.4x</td>
+          <td class="num mono">7.0x</td>
+        </tr>
+        <tr>
+          <td>Today's EV ($M)</td>
+          <td class="num mono">$8,215</td>
+          <td class="num mono">$12,282</td>
+          <td class="num mono">$16,240</td>
+        </tr>
+        <tr>
+          <td>+ Net cash bridge</td>
+          <td class="num mono neg">($171)</td>
+          <td class="num mono neg">($171)</td>
+          <td class="num mono neg">($171)</td>
+        </tr>
+        <tr>
+          <td>÷ Diluted shares (255M)</td>
+          <td class="num mono">$31.55</td>
+          <td class="num mono">$47.49</td>
+          <td class="num mono">$63.02</td>
+        </tr>
+        <tr style="background:rgba(0,229,255,.06)">
+          <td><strong>vs Method A (2Y disc)</strong></td>
+          <td class="num pos"><strong>+$6.06 higher</strong></td>
+          <td class="num pos"><strong>+$3.21 higher</strong></td>
+          <td class="num neg"><strong>−$0.90 lower</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Method A (2Y disc) consistently lower than Method B (NTM × multiple) in bear/base — the 2-year WACC discount outweighs the second-year growth contribution because Y2 growth is modest. In the bull case, Y2 reacceleration starts to compensate, narrowing the gap. <strong>Interpretation:</strong> the multiple is doing most of the valuation work; little additional value comes from the second-year compounding. This is consistent with a company in transition where forward growth is uncertain.</p>
+  </div>
+
+  <!-- SECTION 9: PROBABILITY-WEIGHTED -->
+  <div class="section">
+    <h2>§9 — Probability-Weighted Fair Value (2Y Discounted)</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Weighting Scheme</th>
+          <th class="num">Weights (B/B/B)</th>
+          <th class="num">Fair Value</th>
+          <th class="num">vs Current</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Default</strong></td>
+          <td class="num">25 / 50 / 25</td>
+          <td class="num mono">$44.49</td>
+          <td class="num pos">+62.3%</td>
+        </tr>
+        <tr>
+          <td>Bear-skewed (regulatory pessimism)</td>
+          <td class="num">40 / 40 / 20</td>
+          <td class="num mono">$40.69</td>
+          <td class="num pos">+48.4%</td>
+        </tr>
+        <tr>
+          <td>Bull-skewed (regulatory clears)</td>
+          <td class="num">15 / 50 / 35</td>
+          <td class="num mono">$48.32</td>
+          <td class="num pos">+76.3%</td>
+        </tr>
+        <tr>
+          <td>Maximum bear (crisis)</td>
+          <td class="num">60 / 30 / 10</td>
+          <td class="num mono">$34.97</td>
+          <td class="num pos">+27.6%</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Even in a 60/30/10 maximum-bear weighting (capturing significant regulatory crisis probability), HIMS still shows ~28% upside from current levels. This suggests the market is pricing in close to a max-bear scenario already. Asymmetry is to the upside if base or bull cases play out.</p>
+  </div>
+
+  <!-- SECTION 10: CAPITAL STRUCTURE -->
+  <div class="section">
+    <h2>§10 — Capital Structure Health Check</h2>
+    <div class="scroll-x">
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th class="num">Value</th>
+          <th class="center">Threshold</th>
+          <th class="center">Flag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Net Debt / TTM EBITDA</td>
+          <td class="num mono">0.54x</td>
+          <td class="center small">&lt;2x = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>EBITDA / TTM Interest Expense</td>
+          <td class="num mono">N/M (interest income exceeds expense)</td>
+          <td class="center small">&gt;8x = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Maturity wall (next 24mo)</td>
+          <td class="num mono">$0 / $1B principal</td>
+          <td class="center small">&lt;10% = green</td>
+          <td class="center"><span class="badge badge-green">GREEN</span></td>
+        </tr>
+        <tr>
+          <td>Liquidity vs 12mo obligations</td>
+          <td class="num mono">~1.7x</td>
+          <td class="center small">1–2x = amber</td>
+          <td class="center"><span class="badge badge-amber">AMBER</span></td>
+        </tr>
+        <tr>
+          <td>Diluted share count 3y CAGR</td>
+          <td class="num mono">~5.8%</td>
+          <td class="center small">3–7% = amber</td>
+          <td class="center"><span class="badge badge-amber">AMBER</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="alert alert-amber">
+      <strong>⚠ Capital Structure: AMBER — Eucalyptus consideration is the swing factor.</strong><br>
+      Eucalyptus deal (announced Feb 2026, closing mid-2026) requires $240M upfront cash + $710M deferred over 18 months + up to $200M earn-outs through 2028. Aggregate $1.15B in 2-year obligations against $929M Dec 2025 liquidity + $168M revolver = $1,097M total. Plus YourBio $150M (Jan 2026 paid), Zava earn-out $47M (1H 2026), other earn-outs. <strong>Coverage tightens to ~1x by mid-2026 if Eucalyptus closes as structured.</strong> HIMS has option to settle ~60% of Eucalyptus deferred/earn-out in stock at its election — likely outcome given current liquidity, but introduces dilution risk.<br><br>
+      <strong>Mitigants:</strong> $1B 0% convertible (no cash interest, no near-term refi wall, capped calls limit dilution to $89.95 strike). Strong operating cash flow ($300M FY25). Revolver largely undrawn.
+    </div>
+    <div class="alert alert-red">
+      <strong>⚠ Regulatory Caveat (NOT a standard skill metric, but material).</strong><br>
+      Three concurrent regulatory/legal actions surfaced post-trailing data (Feb 2026):<br>
+      <ul class="tight">
+        <li><strong>FDA Statement (Feb 2026)</strong> — directly named HIMS for GLP-1 compounding; intends to restrict GLP-1 active pharmaceutical ingredients in non-FDA-approved compounded drugs marketed as alternatives.</li>
+        <li><strong>HHS-to-DOJ referral (Feb 2026)</strong> — referred HIMS for investigation under FDCA + Title 18 (potential criminal exposure).</li>
+        <li><strong>Novo Nordisk patent suit (Feb 9, 2026)</strong> — patent infringement claim re: compounded semaglutide.</li>
+        <li><strong>Securities class actions + derivative suits</strong> filed June–Aug 2025 alleging misrepresentations re: Novo Nordisk relationship.</li>
+        <li><strong>FTC Civil Investigative Demand</strong> outstanding since Oct 2023 (substantially completed responses; outcome unknown).</li>
+        <li><strong>Cybersecurity incident</strong> Feb 2026 — PII compromised via social engineering; no EMR access.</li>
+      </ul>
+      GLP-1s sit inside the Hers brand which represented ~40% of US revenue FY25. Bear case revenue scenario (0% growth) implicitly assumes regulatory action materially compresses the GLP-1 line. Worse-than-bear outcomes (revenue contraction) are possible if multiple regulatory actions hit simultaneously.
+    </div>
+  </div>
+
+  <!-- SECTION 11: FCF REALISM CHECK -->
+  <div class="section">
+    <h2>§11 — FCF Realism Check (Deferred)</h2>
+    <p>Per skill auto-trigger logic, FCF realism check would normally run given the AMBER liquidity flag. <strong>However, deferring the standard 5-year DCF mechanics here for two reasons:</strong></p>
+    <ul class="tight">
+      <li>Capex/EBITDA ratio is severely distorted by FY25 acquisition spending ($1.0B investing cash outflow including $258M Zava + $28M Medici + $42M C S Bio + $5M Trybe Labs + $226M property/equipment + $17M website/software + $122M other acquisitions). FY25 capex/EBITDA = 76% — anomalous spike that won't repeat at this magnitude.</li>
+      <li>Regulatory uncertainty is too binary to project 5 years. Either GLP-1 framework stabilizes (path A, ~75% of forward EBITDA) or it doesn't (path B, ~50% of forward EBITDA). Averaging these in a deterministic 5Y DCF would mislead.</li>
+    </ul>
+    <p><strong>Sanity check on FCF instead:</strong> FY25 free cash flow of $57.4M (vs $198M FY24) reflects the capex spike. Normalized FCF (using $241M FY25 capex normalized to 30% of EBITDA per High Growth steady-state = $95M) would imply FY25 FCF of ~$200M+. At current $7B EV, that's ~3% normalized FCF yield — reasonable for High Growth. Suggests SOTP base case is not aggressive on FCF assumptions.</p>
+  </div>
+
+  <!-- SECTION 12: METHODOLOGY & PROVENANCE -->
+  <div class="section">
+    <h2>§12 — Methodology, Source Citations & User Overrides</h2>
+
+    <h3>Sources Used</h3>
+    <ul class="tight">
+      <li><strong>10-K filed 2026-02-23</strong> — FY2025 audited financials, KPMG opinion. Used for: annual revenue/COGS/GP/operating expenses, Adj EBITDA reconciliation, FCF reconciliation, capex breakdown, SBC by function, share count (227.9M basic at Feb 20 2026), recent developments (Eucalyptus, YourBio, FDA Statement, DOJ referral), risk factor language re: GLP-1 regulatory landscape.</li>
+      <li><strong>10-Q for Q3 2025 filed 2025-11-03</strong> — Period ending Sep 30, 2025. Used for: Q3 2025 quarterly cuts, balance sheet (cash, investments, debt, earn-out liabilities), 2030 Convertible Notes terms ($1B principal, 0% coupon, $70.67 strike, May 2030 maturity, capped calls at $89.95), Revolving Credit Facility ($175M, $168M available), recent acquisitions (Zava $258M, MedisourceRx, Trybe Labs).</li>
+      <li><strong>EDGAR freshness check</strong>: most recent filings confirmed. Q1 2026 10-Q upcoming (HIMS announced Q1 2026 earnings May 11, 2026).</li>
+      <li><strong>Peer current market data</strong>: DOCS, LFMD, ELF, CELH market caps, EV, TTM revenue, gross margins from Yahoo Finance / TradingView / stockanalysis.com / GuruFocus current as of late April / early May 2026.</li>
+    </ul>
+
+    <h3>User Overrides Applied (Logged)</h3>
+    <ul class="tight">
+      <li><strong>Y1 Revenue Growth (Base):</strong> Override mechanical 65% → 12%. Justification: trailing 4Q avg overstated by Q1'25 Super Bowl (+111%) non-repeatable; Q4'25 actual was +28% with continued deceleration; analyst consensus FY26 ~10–12%; post-trailing FDA/DOJ actions material.</li>
+      <li><strong>Y1 Revenue Growth (Bear):</strong> 0% (vs mechanical 28% Q4'25 floor). Justification: regulatory action could hit GLP-1 (~40% of US revenue); 0% reflects revenue stagnation if compounded GLP-1 line is restricted.</li>
+      <li><strong>Y1 Revenue Growth (Bull):</strong> 30% (vs mechanical 111% best). Justification: Super Bowl boost non-repeatable; 30% reflects realistic upside if regulatory clears + Eucalyptus accretes.</li>
+      <li><strong>GM% (Bull):</strong> 76% (vs mechanical 82% best Q1'24). Justification: Q1'24's 82% predates the GLP-1 mix shift and international expansion. Reverting to that GM would require abandoning GLP-1 and international — not the bull thesis.</li>
+      <li><strong>EV/GP Multiple (Bear):</strong> 5.0x (vs peer 25th pct of 6.1x). Justification: HIMS-specific regulatory overhang warrants discount below clean peer band; LFMD distressed multiple of 0.8x is not appropriate floor either.</li>
+      <li><strong>EV/GP Multiple (Base):</strong> 6.4x (vs peer median 6.6x). Justification: minor 3% discount for HIMS regulatory risk vs clean peers.</li>
+    </ul>
+
+    <h3>Key Allocation Cells (Trailing 8Q)</h3>
+    <p>Quarterly cuts of Q1'24, Q2'24, Q4'24, Q1'25, Q2'25, Q4'25 were <span class="alloc">allocated</span> from full-year and 9-month totals less Q3 disclosed values. Q3 2024, Q3 2025, FY24, FY25 are <strong>directly disclosed</strong>. GM% allocations follow the same logic. Estimates rounded.</p>
+
+    <h3>Items Not in Skill but Material</h3>
+    <ul class="tight">
+      <li><strong>Subscriber growth trajectory:</strong> +45% FY24 → +13% FY25. Leading indicator of revenue plateau if ARPU normalization happens.</li>
+      <li><strong>ARPU expansion:</strong> Monthly Revenue per Avg Subscriber $56 → $65 → $83 (FY23 → FY24 → FY25). Driven by GLP-1 — at risk if compounded GLP-1 is restricted.</li>
+      <li><strong>Q4 2025 earnings call:</strong> mgmt provided cautious Q1 2026 guidance ("Hims & Hers shares slip on underwhelming first-quarter guidance" — investing.com Feb 2026).</li>
+      <li><strong>Concentration risk:</strong> Hers brand = ~40% US revenue (FY25); GLP-1s within Hers are the primary growth driver; this is a single-line concentration.</li>
+      <li><strong>Pending Eucalyptus close:</strong> mid-2026; will materially shift balance sheet, geographic mix, and regulatory exposure.</li>
+    </ul>
+
+    <h3>Re-run Trigger</h3>
+    <p>Re-run after Q1 2026 earnings (May 11, 2026) — will refresh trailing 4Q, capture Q1 2026 actual revenue, gross margin, and updated FY26 guidance. Also will incorporate any Q1 2026 commentary on regulatory developments + Eucalyptus closing timeline.</p>
+  </div>
+
+  <div class="footer">
+    SMB LLC — SOTP FUNDAMENTAL VALUATION REPORT • HIMS • 2026-05-04 • Generated via /sotp-fundamental-valuation skill
+    <br>For internal SMB LLC use. Not investment advice. Re-run after Q1 2026 earnings May 11, 2026.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "type": "valuation",
+  "file": "HIMS_VAL_2026-05-04_1553.html",
+  "ticker": "HIMS",
+  "tvSymbol": "NYSE:HIMS",
+  "date": "2026-05-04T15:53:00-05:00",
+  "summary": "UNDERVALUED — Base +61.6% / P-Wt +62.3% · cap-AMBER",
+  "verdictBadge": "UNDERVALUED",
+  "upsideBadge": "+61.6%",
+  "mode": "CONSOLIDATED",
+  "segmentCount": 1,
+  "currentPrice": 27.41,
+  "stage": "HIGH_GROWTH",
+  "stageMetric": "EV_Gross_Profit",
+  "fairValue": {
+    "method": "2Y_discounted",
+    "bear": 25.49,
+    "base": 44.28,
+    "bull": 63.92,
+    "probWeighted": 44.49
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 31.55,
+    "base": 47.49,
+    "bull": 63.02
+  },
+  "upside": {
+    "bear": -7.0,
+    "base": 61.6,
+    "bull": 133.2,
+    "probWeighted": 62.3
+  },
+  "wacc": {
+    "method": "stage_default",
+    "consolidated": 0.11
+  },
+  "multiples": {
+    "metric": "EV/Gross_Profit",
+    "bear": 5.0,
+    "base": 6.4,
+    "bull": 7.0,
+    "peerSet": ["DOCS", "LFMD", "ELF", "CELH"],
+    "peerNote": "LFMD flagged as distressed (0.8x EV/GP); clean peer band 6.1x-6.9x"
+  },
+  "growthAssumptions": {
+    "y1Bear": 0.0,
+    "y1Base": 0.12,
+    "y1Bull": 0.30,
+    "y2Bear": 0.0,
+    "y2Base": 0.15,
+    "y2Bull": 0.25,
+    "note": "User-override applied to all cases due to visible deceleration (Q4'25 +28% vs trailing 4Q avg 65%) and post-trailing-period FDA/DOJ/Novo regulatory actions Feb 2026"
+  },
+  "marginAssumptions": {
+    "gmBear": 0.70,
+    "gmBase": 0.73,
+    "gmBull": 0.76,
+    "note": "Bull capped at 76% vs mechanical best of 82%; reverting to 82% would require abandoning GLP-1 mix"
+  },
+  "balanceSheet": {
+    "asOf": "2025-12-31",
+    "cashAndInvestments": 928.8,
+    "convertibleDebt": 1000.0,
+    "earnOutLiabilities": 100.0,
+    "netDebt": -171.2,
+    "dilutedSharesEstimated": 255.0
+  },
+  "capitalStructure": "AMBER",
+  "capitalStructureFlags": [
+    "Liquidity coverage ~1.7x; tightens to ~1x if Eucalyptus closes mid-2026 ($240M upfront + $710M deferred over 18mo)",
+    "Diluted share count 3y CAGR ~5.8% (amber band)",
+    "Mitigant: $1B 0% convertible due 2030 with $70.67 strike + capped calls; no near-term refi wall"
+  ],
+  "regulatoryFlags": [
+    "FDA Statement Feb 2026 directly named HIMS re: GLP-1 compounding restrictions",
+    "HHS-to-DOJ referral Feb 2026 for potential FDCA + Title 18 violations",
+    "Novo Nordisk patent infringement suit Feb 9 2026 (compounded semaglutide)",
+    "Securities class action + derivative suits filed June-Aug 2025",
+    "FTC Civil Investigative Demand outstanding since Oct 2023",
+    "Cybersecurity incident Feb 2026 (PII compromised, no EMR access)",
+    "GLP-1 concentration: Hers brand ~40% of US revenue; GLP-1s primary driver within Hers"
+  ],
+  "dataQuality": {
+    "disclosedPct": 78,
+    "allocatedPct": 8,
+    "userOverridePct": 14
+  },
+  "verdict": "UNDERVALUED",
+  "verdictCaveats": [
+    "Capital structure AMBER (Eucalyptus liquidity drag)",
+    "Material regulatory overhang not captured in trailing financials"
+  ],
+  "fcfRealismCheck": {
+    "ran": false,
+    "deferralReason": "FY25 capex/EBITDA distorted by acquisition spend ($1B investing outflow); regulatory binary outcomes unsuited to deterministic 5Y DCF; informal sanity check shows normalized FCF ~$200M+ supportive of base case"
+  },
+  "sources": {
+    "10K": "filed 2026-02-23 for FY2025",
+    "10Q": "filed 2025-11-03 for Q3 2025",
+    "freshnessNote": "Q1 2026 10-Q pending (earnings May 11, 2026); re-run after release"
+  },
+  "rerunTrigger": "Q1 2026 earnings 2026-05-11",
+  "notes": "Single-segment per HIMS disclosure routes to Consolidated mode (not SOTP). Lifecycle classification of High Growth includes asterisk: revenue growth at 59% FY25 exceeds standard High Growth band but margin profile (just-positive 14% Adj EBITDA, expanding) sits below Mature Growth. Three user-override decisions logged in methodology section: (1) Y1 base growth 65%->12%, (2) Y1 bear growth 28%->0%, (3) Bull GM 82%->76%. All overrides justified by post-trailing regulatory actions and visible deceleration."
+}

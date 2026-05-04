@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIMS TA Report — 2026-05-04 10:53 CT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #0f1420;
+    --bg-tertiary: #141926;
+    --text-primary: #e2e8f0;
+    --text-secondary: #8b9ab5;
+    --text-muted: #4a5976;
+    --border: #1e2a3a;
+    --accent-cyan: #00e5ff;
+    --accent-green: #00e676;
+    --accent-red: #ff3d57;
+    --accent-amber: #ffab00;
+    --bg-heavy: rgba(255, 61, 87, 0.08);
+    --bg-medium: rgba(255, 171, 0, 0.06);
+    --bg-tier1: rgba(0, 230, 118, 0.08);
+    --bg-current: rgba(0, 229, 255, 0.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    padding: 32px 24px 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1, h2, h3, h4, .mono, code, .num { font-family: 'JetBrains Mono', monospace; }
+  .header-block {
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--accent-cyan);
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .ticker {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+  }
+  .ticker .px { color: var(--accent-cyan); margin-left: 12px; font-size: 22px; }
+  .header-meta {
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  .badge {
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--bg-tertiary);
+  }
+  .badge-bias-neutral { color: var(--accent-amber); border-color: var(--accent-amber); }
+  .badge-conf-low { color: var(--accent-red); border-color: var(--accent-red); }
+  .badge-warn { color: var(--accent-amber); border-color: var(--accent-amber); }
+  h2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: var(--accent-cyan);
+    margin: 32px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 18px 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border: 1px solid var(--border);
+    font-size: 13px;
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  td.num, td .num { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+  tr.heavy { background: var(--bg-heavy); }
+  tr.heavy td:nth-child(2) { color: var(--accent-red); font-weight: 700; }
+  tr.heavy td:first-child { color: var(--accent-red); font-weight: 700; }
+  tr.medium { background: var(--bg-medium); }
+  tr.medium td:first-child { color: var(--accent-amber); font-weight: 600; }
+  tr.light td:first-child { color: var(--text-muted); }
+  tr.current { background: var(--bg-current); }
+  tr.current td { color: var(--accent-cyan); font-weight: 600; }
+  tr.tier1 { background: var(--bg-tier1); }
+  tr.tier1 td:first-child { color: var(--accent-green); font-weight: 700; }
+  tr.tier2 td:first-child { color: var(--accent-amber); font-weight: 600; }
+  tr.avoid { background: var(--bg-heavy); }
+  tr.avoid td:first-child { color: var(--accent-red); font-weight: 700; }
+  ul { padding-left: 0; list-style: none; margin: 8px 0; }
+  li { padding: 5px 0; padding-left: 14px; position: relative; }
+  li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+    font-size: 11px;
+    top: 7px;
+  }
+  li strong { color: var(--text-primary); font-weight: 600; }
+  p { margin: 8px 0; color: var(--text-primary); }
+  .callout {
+    padding: 14px 18px;
+    margin: 14px 0;
+    border-left: 3px solid var(--accent-amber);
+    background: var(--bg-medium);
+    font-size: 13px;
+  }
+  .callout-red {
+    border-left-color: var(--accent-red);
+    background: var(--bg-heavy);
+  }
+  .callout strong { color: var(--accent-amber); text-transform: uppercase; letter-spacing: 1px; font-size: 12px; }
+  .callout-red strong { color: var(--accent-red); }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .accent-green { color: var(--accent-green); }
+  .accent-red { color: var(--accent-red); }
+  .accent-amber { color: var(--accent-amber); }
+  .accent-cyan { color: var(--accent-cyan); }
+</style>
+</head>
+<body>
+
+<div class="header-block">
+  <div class="header-top">
+    <div class="ticker">HIMS<span class="px">$27.01</span></div>
+    <div class="header-meta">2026-05-04 · 10:53 CT</div>
+  </div>
+  <div class="header-meta">NYSE:HIMS · 30m / 4h / Daily / Weekly · Options chain May 15 expiry (user-provided)</div>
+  <div class="badges">
+    <div class="badge badge-bias-neutral">Bias: NEUTRAL — no edge into earnings</div>
+    <div class="badge badge-conf-low">Final Confidence: LOW</div>
+    <div class="badge badge-warn">⚠ Earnings May 11 AMC (inside expiry)</div>
+  </div>
+</div>
+
+<h2>Section 1 — Decision Summary</h2>
+
+<h3>1A. Executive Summary</h3>
+<table>
+  <tr><th>Field</th><th>Value</th></tr>
+  <tr><td>Bias</td><td><span class="accent-amber">NEUTRAL</span> — coiled at HEAVY confluence into earnings; underlying tactical lean is LONG only on a confirmed reclaim of $27 post-event</td></tr>
+  <tr><td>Final Confidence</td><td><span class="accent-red">LOW</span></td></tr>
+  <tr><td>Tool Agreement</td><td><span class="num">4/6 bull · 2/6 bear (67%)</span> — daily TA bullish, weekly fights it</td></tr>
+  <tr><td>Invalidation</td><td><span class="num">$25</span> short-term close · <span class="num">$22</span> structural (negates bounce thesis)</td></tr>
+  <tr><td>Entry Zone</td><td><span class="num">$24.00–$25.00</span> — 4h 50 SMA + ascending daily trendline + $25 put wall (post-earnings only)</td></tr>
+  <tr><td>Exit Zone</td><td><span class="num">$30.00–$32.00</span> — $30 call wall (18,841 OI) + 4h VWAP upper band</td></tr>
+  <tr><td>Macro Watch</td><td><span class="accent-red">HIMS earnings Mon May 11 AMC</span> (HIGH-impact, ticker-specific, inside May 15 expiry); CPI/PPI mid-month</td></tr>
+</table>
+
+<h3>1B. Key Levels</h3>
+<table>
+  <tr><th>Weight</th><th>Price</th><th>Sources</th></tr>
+  <tr class="heavy"><td>HEAVY</td><td>$30.00–$32.00</td><td>$30 call wall (18,841 OI — massive) + 4h VWAP upper band ($32.45) + $32 calls (2,905 OI)</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td>$28.00</td><td>$28 calls (4,521 OI) + $28 puts (3,786 OI) — pin-magnet OI cluster</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td>$26.59–$27.05</td><td><strong>6-tool stack:</strong> Daily Fib 0.382 ($27.05) + Weekly Fib 0.382 ($27.05) + 30m 50 SMA ($27.01) + 30m 200 SMA ($27.07) + Daily VWAP ($26.59) + 4h 200 SMA ($25.90 just below)</td></tr>
+  <tr class="current"><td>—</td><td>$27.01 ← CURRENT</td><td>Last regular session close</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td>$25.00</td><td>$25 put wall (6,372 OI) + $25 call wall (5,366 OI) + 30m horizontal support visible</td></tr>
+  <tr class="medium"><td>MEDIUM</td><td>$24.00–$24.30</td><td>4h 50 SMA ($24.28) + daily ascending blue trendline (~$24) + $24 puts (4,164 OI)</td></tr>
+  <tr class="heavy"><td>HEAVY</td><td>$20.00–$22.00</td><td>Massive put wall stack: $20 (8,859 OI) + $22 (6,880 OI) + $21 (5,652 OI) — dealer-defined floor</td></tr>
+  <tr class="light"><td>LIGHT</td><td>$17.90</td><td>Weekly/Daily Fib 0.236 + daily VWAP lower band ($17.82)</td></tr>
+</table>
+
+<h3>1C. CSP Strike Zones (May 15 expiry)</h3>
+<table>
+  <tr><th>Tier</th><th>Strike Zone</th><th>Confluence</th><th>Notes</th></tr>
+  <tr class="tier1"><td>Tier 1</td><td>$20–$22</td><td>3-strike put wall stack (>20K cumulative OI) — dealer-defined structural floor; below post-earnings expected-move bottom (~$21)</td><td>$20 mid 0.065 · $21 mid 0.33 · $22 mid 0.50. Premium thin reflects safety. Acceptable only if assignment at structurally defended price is desired post-earnings.</td></tr>
+  <tr class="tier2"><td>Tier 2</td><td>$24–$25</td><td>4h 50 SMA + ascending trendline + $25 put wall (6,372 OI)</td><td><strong>NOT defensible into May 11 earnings.</strong> Reassess for May 22+ expiries after IV crush. $25 mid ~$1.39, $24 mid ~$1.02.</td></tr>
+  <tr class="avoid"><td>Avoid</td><td>$26–$27 (ATM) · all strikes inside ±$5.98 expected move that lack confluence</td><td>—</td><td>Max gamma into binary event. IV 133.59% guarantees 50%+ premium evaporation post-print regardless of direction. Negative skew vs structure.</td></tr>
+</table>
+
+<div class="callout callout-red">
+  <strong>Strike Selection Notes — Final Confidence LOW</strong>
+  <p>Earnings-through-expiry rule caps short-premium confidence at LOW per the framework. Only Tier 1 ($20–$22) is defensible, and the trade-off is honest: extreme structural safety in exchange for trivial premium. The cleaner ladder play is to <strong>stand aside until May 12 open</strong>, let the binary resolve, then sell the May 22 or May 29 expiry into post-event IV crush at the same Tier 1 strikes — collecting more premium for the same structural location. The May 15 ATM premium is not compensation; it is a coin-flip wrapped in theta.</p>
+</div>
+
+<h2>Section 2 — Confidence Breakdown</h2>
+<table>
+  <tr><th>Stage</th><th>Value</th></tr>
+  <tr><td>TA Confidence</td><td><span class="accent-amber">MEDIUM</span> — daily setup is 2-tool structure (VWAP reclaim + 50 SMA reclaim) with both momentum tools confirming, but tests HEAVY weekly+daily Fib 0.382 confluence resistance with weekly trend still bearish</td></tr>
+  <tr><td>Fundamental Context</td><td>not provided</td></tr>
+  <tr><td>Fundamental Modifier</td><td>not applied</td></tr>
+  <tr><td>Macro Calendar</td><td><span class="accent-red">HIMS earnings May 11 AMC</span> — HIGH-impact ticker-specific, INSIDE May 15 options expiry window (4 days before)</td></tr>
+  <tr><td>Macro Modifier</td><td><span class="accent-red">CAP at LOW for short-premium strategies</span> per earnings-through-expiry rule; widen invalidation buffer for directional swing reads</td></tr>
+  <tr><td><strong>Final Confidence</strong></td><td><strong class="accent-red">LOW</strong></td></tr>
+</table>
+
+<h2>Section 3 — Supporting Analysis</h2>
+
+<h3>3A. Higher Timeframe Context</h3>
+<ul>
+  <li><strong>Weekly:</strong> Bearish-to-neutral structure. Price ($27.03) is BELOW 50 SMA ($39.19) — confirmed weekly downtrend — but ABOVE 200 SMA ($21.24) and weekly VWAP ($23.55). Long-term ascending blue trendline support held the recent ~$13 capitulation low. Weekly Fib (anchored from $65.79 high to recent low): <strong>0.382 = $27.05</strong> (current), 0.5 = $34.45, 0.618 ≈ $41.84, 0.236 = $17.90. RSI 47.75 (recovering). MACD -3.31 with histogram improving from -4.96 (bear momentum decelerating). Volume 145.82M on the bounce confirms real buying. <strong>Bias:</strong> bear trend with constructive bounce hitting first major Fib resistance.</li>
+  <li><strong>Daily:</strong> Tactical bullish bounce. Price ABOVE 50 SMA ($22.29) and ABOVE daily VWAP ($26.59), but BELOW 200 SMA ($37.20) — structural bear regime intact. Daily Fib confirms <strong>0.382 = $27.05</strong> as immediate ceiling. RSI 55.26 above midline. MACD 1.63 above zero with histogram +1.79 (bullish). VPVR shows heavy concentration in $14–$25 (months of basing); POC roughly $14–$16 in the recent range. Daily ascending trendline rises into ~$24. <strong>Bias:</strong> tactical long bounce in a structural bear, arrested at first major Fib retracement.</li>
+</ul>
+
+<h3>3B. Current Timeframe Read (30m + 4h)</h3>
+<ul>
+  <li><strong>Regime (30m):</strong> Tight compression. BB(1, 1000): 26.99 / 28.06 / 25.92. RVWAP 27.41 with bands 26.84–27.98 (extremely narrow). 50 SMA $27.01 and 200 SMA $27.07 converged at price — a coiled spring waiting on catalyst.</li>
+  <li><strong>VWAP (4h):</strong> Price BELOW 4h VWAP ($28.92) after fading the rally peak from ~$33. 4h VWAP bands: 25.69–32.45 (compression vs. the prior multi-week expansion). Slope flattening.</li>
+  <li><strong>MAs:</strong> Daily 50 SMA ($22.29) BELOW 200 SMA ($37.20) — structural death-cross posture. 4h 50 ($24.28) BELOW 200 ($25.90) but converging. 30m MAs converged at price.</li>
+  <li><strong>Momentum:</strong> RSI 30m 44.91 (neutral, slightly soft); 4h 50.67 (neutral); Daily 55.26 (neutral-bullish). MACD 30m -0.0326 with histogram +0.0940 turning up; 4h 0.5491 with histogram cooling; Daily 1.63 / +1.79 (cleanest bullish).</li>
+  <li><strong>Fib reference:</strong> Current price is exactly at <strong>both Daily and Weekly 0.382 ($27.05)</strong> — the most contested single price on the entire chart.</li>
+</ul>
+
+<h3>3C. Confluence Zones</h3>
+<p>The dominant fact about this chart is the six-tool confluence stacked at $26.59–$27.05: weekly Fib 0.382, daily Fib 0.382, daily VWAP, 30m 50 SMA, 30m 200 SMA, and 4h 200 SMA all within seventy cents of current price. This is not noise — this is the single most important level on the instrument. A confirmed close above $27.05 with volume opens the path to the $28 OI cluster and then the $30–$32 HEAVY resistance (massive call wall + upper VWAP band). A confirmed rejection sends price toward the $24–$25 MEDIUM support zone (4h 50 SMA + trendline + $25 put wall), and a break of $22 would invalidate the bounce thesis entirely and re-open the $17.90 weekly/daily Fib 0.236 target. The $20–$22 put wall stack (8,859 + 6,880 + 5,652 = >21K OI) is the dealer-defined structural floor — even in a bear case, that zone is heavily defended.</p>
+
+<h3>3D. Divergences</h3>
+<p>No clean divergence to flag at this read. Daily MACD is making higher highs alongside price (constructive, not divergent). Weekly RSI is rising off a deeply oversold print and is consistent with the bounce — also not divergent. The risk is a post-earnings bearish divergence printing if price gaps higher and fails the daily Fib 0.5 ($34.45), but that's a forward-looking watch, not a current signal.</p>
+
+<h3>3E. Notes</h3>
+<p><strong>Earnings dominance.</strong> HIMS reports Q1 2026 on Monday, May 11 AMC. This is the binary event of the window. The May 15 chain pricing in 133.59% IV with a ±$5.98 expected move ($21–$33) tells you the market expects the level either holds and squeezes higher or fails and retests $24, possibly $22. Either outcome is plausible; neither is edged-in by the chart.</p>
+<p><strong>OI structure read.</strong> The $30 call wall (18,841 OI) is one of the largest single-strike concentrations on the board — that's a hard ceiling on a non-blowout print. The $20–$22 put wall stack is a hard floor. Net positioning frames the realistic post-earnings range as $22–$30, with $25–$28 the most likely pin if the print is in-line. Max pain by inspection sits in the $25–$27 zone.</p>
+<p><strong>Multi-timeframe alignment.</strong> Daily MACD/RSI/VWAP/50 SMA all support the bounce, but the test occurs at HEAVY weekly resistance with weekly trend still bearish. This is the textbook setup where lower timeframes mislead — the daily looks clean, the weekly says "no, this is just an oversold bounce." Per skill rule, weekly bias overrides when in conflict; this caps the directional read at MEDIUM independent of the earnings cap, and earnings then drops it to LOW.</p>
+<p><strong>Macro context (non-ticker).</strong> FOMC met Apr 28–29 (rates held at 3.50–3.75%) — no Fed within trade horizon. NFP was last Friday. CPI release historically falls mid-month (likely May 13 inside the window) — flag as a secondary IV input, but ticker earnings dominates.</p>
+
+<h2>Section 4 — Options Detail (May 15 Expiry)</h2>
+
+<h3>Options Chain Read</h3>
+<ul>
+  <li><strong>Source:</strong> User-provided broker chain screenshot</li>
+  <li><strong>Expiry:</strong> Friday, May 15, 2026 (11 DTE)</li>
+  <li><strong>ATM IV:</strong> 133.59% — earnings-elevated</li>
+  <li><strong>Expected move:</strong> ±$5.98 ($21.03–$32.99)</li>
+  <li><strong>Call wall:</strong> $30 (18,841 OI) — dominant; secondary $25 (5,366), $28 (4,521)</li>
+  <li><strong>Put wall:</strong> $20 (8,859 OI) — dominant; secondary $22 (6,880), $25 (6,372), $21 (5,652), $23 (4,431), $24 (4,164)</li>
+  <li><strong>Max pain (visual estimate):</strong> $25–$27 zone</li>
+  <li><strong>Notable:</strong> $30 call OI is 3× the next-largest call strike — clear dealer-defined ceiling on non-blowout outcomes. The $20–$25 put OI cluster is unusually deep and uniformly distributed, suggesting institutional protective hedging rather than directional bearish positioning.</li>
+</ul>
+
+<div class="callout">
+  <strong>IV Crush Watch</strong>
+  <p>Post-print May 12 open will see ATM IV collapse from ~134% toward the 60–80% range typical for HIMS in non-event windows. This means May 22 / May 29 expiry premiums at the same Tier 1 strikes ($20–$22) will offer materially better $/contract than the May 15 chain shows today, with the binary event already resolved. The framework-preferred play is roll-the-intent to post-earnings expiry rather than chase pre-earnings ATM premium.</p>
+</div>
+
+<div class="footer">
+  Generated by ta-chart-analysis skill · SMB LLC Macro Dashboard · Bias and confidence are framework outputs, not advice. User sizes the trade.
+</div>
+
+</body>
+</html>

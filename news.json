@@ -1,61 +1,75 @@
 {
-  "lastUpdated": "2026-05-04T22:58:06.227992+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 10:58 PM UTC",
+  "lastUpdated": "2026-05-04T23:57:02.571370+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 11:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Iran has escalated military actions in the Strait of Hormuz, attacking ships and oil infrastructure in UAE and Oman, driving oil prices higher and US Treasury yields to 9-month highs. Risk assets including stocks are declining globally while the dollar strengthens, though Bitcoin has rallied back above $80,000. Treasury borrowing estimates show significantly higher funding needs than previously projected.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran conflict escalation is driving classic stagflationary dynamics with oil spiking, yields hitting 9-month highs, risk assets falling, and dollar strengthening - this pushes multiple invalidation thresholds and suggests the regime may be shifting toward Risk-Off/Stagflation.",
+    "macroSummary": "Iran-US conflict escalation is driving oil prices higher with attacks on UAE ports and Strait of Hormuz shipping, while equity markets show mixed signals with stocks initially dropping on geopolitical tensions. Bitcoin has surged above $80k amid the volatility, and Treasury borrowing estimates show elevated government funding needs through Q3.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil surge and geopolitical tensions support the reflation thesis, but initial stock weakness and risk-off flows contradict the bullish-cyclicals positioning.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "approaching $115",
-        "signal": "Iran attacks on Strait of Hormuz and UAE oil infrastructure driving sustained oil price surge"
-      },
-      {
-        "indicator": "US30Y",
-        "level": "approaching 5.10%",
-        "signal": "US 10-year Treasury hits 9-month high amid Iran conflict pushing yields across curve"
-      },
-      {
-        "indicator": "DXY",
-        "level": "approaching 100",
-        "signal": "Dollar higher as US-Iran conflict keeps risk appetite muted"
+        "signal": "Iran-US conflict driving oil prices higher with physical supply disruptions in Strait of Hormuz"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran military escalation in Strait of Hormuz attacking ships and oil infrastructure creates sustained oil supply shock",
+        "signal": "Oil prices jumping on Iran attacks in Strait of Hormuz with UAE ports on fire and shipping disrupted",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US Treasury yields hit 9-month highs as Iran conflict drives flight-to-quality and inflation concerns",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Global risk assets declining with US stocks dipping and LatAm FX/stocks falling on Middle East tensions",
+        "signal": "US stocks initially dropped and LatAm markets fell as Middle East tensions overshadowed earnings",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening as conflict keeps risk appetite muted, moving toward regime flip level",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Dollar strength and muted risk appetite emerging from geopolitical conflict",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury borrowing estimates show $79 billion higher funding needs than February estimates",
-        "tag": "CONTRADICTS"
+        "signal": "US yields climbing as Iran conflict pushes crude oil higher",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin surged above $80k despite initial risk-off moves, showing crypto decoupling from traditional risk assets",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained break above $115 WTI would confirm stagflation tilt dominance",
-      "Prepare to adjust BMNR put ladder strikes higher if multiple thresholds breach simultaneously",
-      "Consider reducing cyclical exposure if VIX breaks 22 alongside current threshold approaches"
+      "Monitor oil prices closely - approaching $115 stagflation threshold with physical supply disruptions",
+      "Watch for VIX spike if geopolitical tensions escalate further and override reflation trade",
+      "Consider reducing BMNR ladder exposure if risk-off sentiment strengthens from conflict escalation"
     ]
   },
   "articles": [
+    {
+      "title": "Gold Steady Amid Likely Technical Recovery \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T23:40:00+00:00",
+      "timeDisplay": "11:40 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504011099:0/"
+    },
+    {
+      "title": "Oil Holds Firm on US-Iran Escalation",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T23:24:18+00:00",
+      "timeDisplay": "11:24 PM",
+      "link": "https://www.tradingview.com/news/te_news:547599:0-oil-holds-firm-on-us-iran-escalation/"
+    },
+    {
+      "title": "Bitcoin turns risk on as stocks hit new highs and miner profits rise: Is $85K BTC next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T23:24:17+00:00",
+      "timeDisplay": "11:24 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:fa5e12ec8094b:0-bitcoin-turns-risk-on-as-stocks-hit-new-highs-and-miner-profits-rise-is-85k-btc-next/"
+    },
     {
       "title": "Long-Dormant Bitcoin Whale Transfers 11,300 BTC, Sparking Market Speculation",
       "source": "newsbtc",
@@ -441,6 +455,14 @@
       "link": "https://www.tradingview.com/news/stocktwits:717ad3d21094b:0/"
     },
     {
+      "title": "Crude Oil Prices Surge as Middle East Tensions Flare Up",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T15:41:33+00:00",
+      "timeDisplay": "3:41 PM",
+      "link": "https://www.tradingview.com/news/barchart:8a2633db3094b:0-crude-oil-prices-surge-as-middle-east-tensions-flare-up/"
+    },
+    {
       "title": "US BEA HEAVY TRUCK SALES 398,000 IN APRIL VS 367,000 IN MARCH; 451,000 IN APRIL 2025",
       "source": "macenews",
       "color": "#00e5ff",
@@ -569,14 +591,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:40d243c81094b:0-bitcoin-tests-crucial-80-000-resistance-one-move-could-change-everything/"
     },
     {
-      "title": "Bitcoin price eyes $96K as institutions absorb 500% of daily BTC supply",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T13:21:59+00:00",
-      "timeDisplay": "1:21 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b177302e9094b:0-bitcoin-price-eyes-96k-as-institutions-absorb-500-of-daily-btc-supply/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - May 4",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -631,30 +645,6 @@
       "timestamp": "2026-05-04T11:22:51+00:00",
       "timeDisplay": "11:22 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H09C:0-oil-jumps-after-iran-s-navy-said-it-halted-a-us-warship/"
-    },
-    {
-      "title": "Ethereum Price Gears Up for Breakout as Whales Accumulate: Is $3K Back in Play?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T11:01:58+00:00",
-      "timeDisplay": "11:01 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:cf8db5b78094b:0-ethereum-price-gears-up-for-breakout-as-whales-accumulate-is-3k-back-in-play/"
-    },
-    {
-      "title": "AXIOS: US OFFICIAL DENIES US NAVAL VESSEL HIT BY IRANIAN MISSILES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:37:00+00:00",
-      "timeDisplay": "10:37 AM",
-      "link": "https://www.tradingview.com/news/macenews:97ef6aabd094b:0-axios-us-official-denies-us-naval-vessel-hit-by-iranian-missiles/"
-    },
-    {
-      "title": "Gold Drops to Lowest Since Late March",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:33:00+00:00",
-      "timeDisplay": "10:33 AM",
-      "link": "https://www.tradingview.com/news/te_news:547421:0-gold-drops-to-lowest-since-late-march/"
     }
   ]
 }

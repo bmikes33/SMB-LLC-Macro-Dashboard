@@ -1,45 +1,195 @@
 {
-  "lastUpdated": "2026-05-03T17:44:51.198671+00:00",
-  "lastUpdatedDisplay": "May 03, 2026 \u2014 05:44 PM UTC",
-  "articleCount": 18,
+  "lastUpdated": "2026-05-04T01:23:46.681868+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 01:23 AM UTC",
+  "articleCount": 29,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin approaches $79K for its highest weekly close since January with strong April performance, though technical analysts warn of bearish signals and exhaustion around $78K resistance. AI capex boom continues driving Nasdaq gains while geopolitical tensions persist with Iran war concerns and surging oil prices potentially fueling further stock rallies through earnings season.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Risk assets (Bitcoin, AI-driven equities) showing strong momentum while oil surge from geopolitical tensions aligns with reflation narrative and equity bullishness.",
-    "thresholdWatches": [],
+    "macroSummary": "Oil markets show conflicting signals with some analysts predicting further Brent crude rises while prices declined on mild risk-on sentiment and Middle East de-escalation hopes. Asian markets edged higher with yen steady amid intervention fears, while Bitcoin approached highest weekly close since January near $79K though technical indicators suggest potential pullback.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Headlines show competing narratives with oil de-escalation dampening the Iran-war premium while AI capex boom supports risk-on equity momentum, creating cross-currents against the reflation thesis.",
+    "thresholdWatches": [
+      {
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Yen steady as intervention fears linger with Japan on holiday"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin nearing $79K weekly close represents strongest crypto risk-on signal since January",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "AI capex boom continues warping Nasdaq higher as hyperscalers drive tech rally",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Surging oil prices from Iran war jitters expected to fuel equity rally through earnings/jobs data",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin shows technical exhaustion signals around $78K with TD Sequential bearish warning",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "CryptoQuant warns Bitcoin's April surge was speculative with weak spot demand suggesting correction risk",
+        "signal": "Oil declines on Middle East optimism directly contradicts embedded Iran-war oil shock assumption",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Mild risk-on sentiment across Asian markets suggests VIX remaining subdued below 22 threshold",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "AI spending boom driving Nasdaq rally reinforces equity bullish momentum",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "USDJPY intervention fears keeping yen stable near critical 160 level",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin technical pullback signals despite strong monthly performance indicate crypto consolidation",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "BMNR ladder: Risk-on crypto momentum supports maintaining current strikes, monitor $78K technical resistance",
-      "Consider reducing short book exposure as AI/crypto risk-on momentum accelerates",
-      "Watch for oil price continuation above current levels to confirm stagflation undertones within bullish setup"
+      "Monitor oil price action closely - Middle East de-escalation could invalidate key reflation driver",
+      "BMNR ladder remains appropriate given Bitcoin strength but watch for technical consolidation",
+      "Prepare for potential regime reassessment if geopolitical oil premium continues unwinding"
     ]
   },
   "articles": [
+    {
+      "title": "Brent Crude Oil Price Likely to Rise Further Than Previously Thought \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T01:10:00+00:00",
+      "timeDisplay": "1:10 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260503000715:0/"
+    },
+    {
+      "title": "Stocks edge up in Asia, oil flat amid Middle East uncertainty",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T00:56:41+00:00",
+      "timeDisplay": "12:56 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41G05Q:0-stocks-edge-up-in-asia-oil-flat-amid-middle-east-uncertainty/"
+    },
+    {
+      "title": "Yen steady as intervention fears linger with Japan shut for holidays",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T00:31:57+00:00",
+      "timeDisplay": "12:31 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H009:0-yen-steady-as-intervention-fears-linger-with-japan-shut-for-holidays/"
+    },
+    {
+      "title": "Asian Currencies Consolidate; May Be Buoyed by Mild Risk-on Sentiment \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T00:24:00+00:00",
+      "timeDisplay": "12:24 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260503000650:0/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T00:18:25+00:00",
+      "timeDisplay": "12:18 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H001:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Key facts: MicroStrategy Pauses BTC Buys; 3-Day TD Signals Pullback",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T00:03:07+00:00",
+      "timeDisplay": "12:03 AM",
+      "link": "https://www.tradingview.com/news/tradingview:8890053412537:0-key-facts-microstrategy-pauses-btc-buys-3-day-td-signals-pullback/"
+    },
+    {
+      "title": "Gold Steady as US\u2013Iran Progress in Focus",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T23:55:46+00:00",
+      "timeDisplay": "11:55 PM",
+      "link": "https://www.tradingview.com/news/te_news:547147:0-gold-steady-as-us-iran-progress-in-focus/"
+    },
+    {
+      "title": "Gold Edge Higher Amid Signs of Resilience \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T23:39:00+00:00",
+      "timeDisplay": "11:39 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260503000600:0/"
+    },
+    {
+      "title": "Oil Declines Amid Mild Risk-on Sentiment \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T23:34:00+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260503000593:0/"
+    },
+    {
+      "title": "Oil Eases on Rising Middle East Optimism",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T23:24:12+00:00",
+      "timeDisplay": "11:24 PM",
+      "link": "https://www.tradingview.com/news/te_news:547144:0-oil-eases-on-rising-middle-east-optimism/"
+    },
+    {
+      "title": "Strategy takes Bitcoin buying breather ahead of Q1 earnings report",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T21:56:18+00:00",
+      "timeDisplay": "9:56 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:7ee18df44094b:0-strategy-takes-bitcoin-buying-breather-ahead-of-q1-earnings-report/"
+    },
+    {
+      "title": "Bitcoin Eyes Highest Weekly Close Since January as Crypto\u2019s Macro Goes Geopolitical",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T21:16:19+00:00",
+      "timeDisplay": "9:16 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:0f13b37a3094b:0/"
+    },
+    {
+      "title": "Tom Lee Says Crypto Already Moved Through a Hidden Bear Phase",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T20:40:00+00:00",
+      "timeDisplay": "8:40 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:7484ff7f0094b:0-tom-lee-says-crypto-already-moved-through-a-hidden-bear-phase/"
+    },
+    {
+      "title": "Ethereum Exit Queue Explodes 72,000% After DeFi Hack Wave",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T19:59:42+00:00",
+      "timeDisplay": "7:59 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:fd5077518094b:0-ethereum-exit-queue-explodes-72-000-after-defi-hack-wave/"
+    },
+    {
+      "title": "The market is riding high on an AI spending boom - but what could crack this rally?",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T19:14:00+00:00",
+      "timeDisplay": "7:14 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260503000415:0/"
+    },
+    {
+      "title": "North Korea terrorism creditors move to seize Arbitrum-frozen Kelp DAO ETH ahead of DeFi United vote",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T18:39:47+00:00",
+      "timeDisplay": "6:39 PM",
+      "link": "https://www.tradingview.com/news/the_block:733a33e65094b:0-north-korea-terrorism-creditors-move-to-seize-arbitrum-frozen-kelp-dao-eth-ahead-of-defi-united-vote/"
+    },
+    {
+      "title": "MicroStrategy Pauses Bitcoin Buys Ahead of May 5 Q1 Earnings",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T18:08:37+00:00",
+      "timeDisplay": "6:08 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:33fd48d97094b:0-microstrategy-pauses-bitcoin-buys-ahead-of-may-5-q1-earnings/"
+    },
+    {
+      "title": "Bitcoin At A Transitional Phase? Bull Score Index Signals Uncertain Momentum",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T18:00:05+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:5de342389094b:0-bitcoin-at-a-transitional-phase-bull-score-index-signals-uncertain-momentum/"
+    },
     {
       "title": "Bitcoin preps highest weekly close since January as BTC price nears $79K",
       "source": "cointelegraph",
@@ -47,14 +197,6 @@
       "timestamp": "2026-05-03T16:26:22+00:00",
       "timeDisplay": "4:26 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:664c64b15094b:0-bitcoin-preps-highest-weekly-close-since-january-as-btc-price-nears-79k/"
-    },
-    {
-      "title": "The market is riding high on an AI spending boom - but what could crack this rally?",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T16:00:00+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260503000415:0/"
     },
     {
       "title": "AI Capex Boom Warps Nasdaq As Hyperscalers Take Over, Bitcoin Seen As Hedge By Wall Street Veteran",
@@ -135,54 +277,6 @@
       "timestamp": "2026-05-03T03:29:34+00:00",
       "timeDisplay": "3:29 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:e2fdf018e094b:0-bitcoin-logs-best-monthly-performance-in-12-months-during-april/"
-    },
-    {
-      "title": "Key facts: ETH ETF inflows, BitMine buys 101,901 ETH; supply lows",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T00:03:16+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:01dc2b50b3e97:0-key-facts-eth-etf-inflows-bitmine-buys-101-901-eth-supply-lows/"
-    },
-    {
-      "title": "Key facts: BTC ETFs $629.8M; Taiwan seeks BTC review; 30d -44.7k",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T00:03:00+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:aa8ceb4c57171:0-key-facts-btc-etfs-629-8m-taiwan-seeks-btc-review-30d-44-7k/"
-    },
-    {
-      "title": "Analyst Predicts Exactly When To Sell Bitcoin For The Most Return",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-02T22:30:58+00:00",
-      "timeDisplay": "10:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:44a314251094b:0-analyst-predicts-exactly-when-to-sell-bitcoin-for-the-most-return/"
-    },
-    {
-      "title": "Bitcoin Clings To Key Support: EMA Reclaim Vs $78,000 Resistance Showdown",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-02T21:00:56+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:c3a6b40db094b:0-bitcoin-clings-to-key-support-ema-reclaim-vs-78-000-resistance-showdown/"
-    },
-    {
-      "title": "CryptoQuant says bitcoin\u2019s April price surge was \u2018speculative\u2019 as spot demand remains weak, warns of correction risk",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-02T20:33:31+00:00",
-      "timeDisplay": "8:33 PM",
-      "link": "https://www.tradingview.com/news/the_block:60cd12900094b:0-cryptoquant-says-bitcoin-s-april-price-surge-was-speculative-as-spot-demand-remains-weak-warns-of-correction-risk/"
-    },
-    {
-      "title": "Bitcoin Price Yet To Bottom Based On MVRV Bands \u2014 $43K Still Possible?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-02T18:00:27+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:543f26b80094b:0-bitcoin-price-yet-to-bottom-based-on-mvrv-bands-43k-still-possible/"
     }
   ]
 }

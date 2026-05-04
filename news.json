@@ -1,51 +1,152 @@
 {
-  "lastUpdated": "2026-05-04T01:23:46.681868+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 01:23 AM UTC",
-  "articleCount": 29,
+  "lastUpdated": "2026-05-04T05:21:05.639804+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 05:21 AM UTC",
+  "articleCount": 41,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil markets show conflicting signals with some analysts predicting further Brent crude rises while prices declined on mild risk-on sentiment and Middle East de-escalation hopes. Asian markets edged higher with yen steady amid intervention fears, while Bitcoin approached highest weekly close since January near $79K though technical indicators suggest potential pullback.",
+    "macroSummary": "Markets show mixed signals with yen intervention fears keeping dollar subdued while oil prices ease on Middle East diplomatic optimism. Bitcoin breaks $80k psychological resistance as crypto rallies continue, while Asian equities edge higher amid cautious risk-on sentiment.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show competing narratives with oil de-escalation dampening the Iran-war premium while AI capex boom supports risk-on equity momentum, creating cross-currents against the reflation thesis.",
+    "regimePressureReason": "Dollar weakness and easing oil prices on diplomatic progress contradict reflation drivers, while crypto strength and mild risk-on sentiment support the bullish equity bias.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen steady as intervention fears linger with Japan on holiday"
+        "signal": "Yen intervention fears active with sharp yen strength reported as markets watch for BOJ action"
+      },
+      {
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar steadies after sharp drop, suggesting potential approach to regime flip threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil declines on Middle East optimism directly contradicts embedded Iran-war oil shock assumption",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Mild risk-on sentiment across Asian markets suggests VIX remaining subdued below 22 threshold",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "AI spending boom driving Nasdaq rally reinforces equity bullish momentum",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "USDJPY intervention fears keeping yen stable near critical 160 level",
+        "signal": "Dollar experiencing sharp decline with yen intervention fears pressuring USDJPY lower toward intervention zone",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin technical pullback signals despite strong monthly performance indicate crypto consolidation",
+        "signal": "Oil prices easing and described as flat amid Middle East diplomatic optimism, reducing stagflationary pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin breaks $80k resistance with crypto rallying as geopolitical hedge, supporting risk asset strength",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Asian equities gaining with mild risk-on sentiment consolidating, consistent with bullish cyclical bias",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Gold steady rather than declining despite risk-on moves, suggesting underlying inflation concerns persist",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - Middle East de-escalation could invalidate key reflation driver",
-      "BMNR ladder remains appropriate given Bitcoin strength but watch for technical consolidation",
-      "Prepare for potential regime reassessment if geopolitical oil premium continues unwinding"
+      "Monitor USDJPY closely as intervention fears could trigger risk-off cascade if BOJ acts near 160 level",
+      "Watch for oil price confirmation below recent highs as Middle East optimism could unwind stagflation premium",
+      "Consider tightening BMNR put ladder strikes if crypto strength continues but watch for technical exhaustion signals emerging in Bitcoin"
     ]
   },
   "articles": [
+    {
+      "title": "Yen spikes higher as intervention on the radar of markets",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T04:53:52+00:00",
+      "timeDisplay": "4:53 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H02W:0-yen-spikes-higher-as-intervention-on-the-radar-of-markets/"
+    },
+    {
+      "title": "MONDAY WHITE HOUSE SCHEDULE - President Trump participates in a small business summit",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T04:49:00+00:00",
+      "timeDisplay": "4:49 AM",
+      "link": "https://www.tradingview.com/news/macenews:38afd2813094b:0-monday-white-house-schedule-president-trump-participates-in-a-small-business-summit/"
+    },
+    {
+      "title": "Stocks gain in Asia, oil flat amid new Gulf proposals",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T04:31:40+00:00",
+      "timeDisplay": "4:31 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H02Y:0-stocks-gain-in-asia-oil-flat-amid-new-gulf-proposals/"
+    },
+    {
+      "title": "Opening the Strait, or maybe not",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H04N:0-opening-the-strait-or-maybe-not/"
+    },
+    {
+      "title": "Bitcoin rises past $80,000, breaking \u2018major\u2019 psychological resistance zone",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T04:04:11+00:00",
+      "timeDisplay": "4:04 AM",
+      "link": "https://www.tradingview.com/news/the_block:085c2edd3094b:0-bitcoin-rises-past-80-000-breaking-major-psychological-resistance-zone/"
+    },
+    {
+      "title": "Oil Prices Likely to Remain Elevated \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T03:30:00+00:00",
+      "timeDisplay": "3:30 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260503000863:0/"
+    },
+    {
+      "title": "Ethereum Price Tracks Bitcoin Rally, Targets Crucial Break Higher",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T03:28:48+00:00",
+      "timeDisplay": "3:28 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:bc2c05c5b094b:0-ethereum-price-tracks-bitcoin-rally-targets-crucial-break-higher/"
+    },
+    {
+      "title": "Michael Saylor\u2019s Strategy pauses weekly bitcoin purchases ahead of Q1 earnings release",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T03:05:49+00:00",
+      "timeDisplay": "3:05 AM",
+      "link": "https://www.tradingview.com/news/the_block:9b8aaed53094b:0-michael-saylor-s-strategy-pauses-weekly-bitcoin-purchases-ahead-of-q1-earnings-release/"
+    },
+    {
+      "title": "Bitcoin Price Cracks $80K Resistance, Is A Bigger Surge Ahead?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T03:04:12+00:00",
+      "timeDisplay": "3:04 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:ebba07f11094b:0-bitcoin-price-cracks-80k-resistance-is-a-bigger-surge-ahead/"
+    },
+    {
+      "title": "US oil may test resistance at $103.42",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T02:41:59+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H03K:0-us-oil-may-test-resistance-at-103-42/"
+    },
+    {
+      "title": "Bitcoin Pushes to $80,000 as Trump\u2019s Project Freedom Pressures Oil Prices",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T02:41:45+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:8f690aede094b:0-bitcoin-pushes-to-80-000-as-trump-s-project-freedom-pressures-oil-prices/"
+    },
+    {
+      "title": "Dollar Steadies After Sharp Drop",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T02:22:48+00:00",
+      "timeDisplay": "2:22 AM",
+      "link": "https://www.tradingview.com/news/te_news:547216:0-dollar-steadies-after-sharp-drop/"
+    },
     {
       "title": "Brent Crude Oil Price Likely to Rise Further Than Previously Thought \u2014 Market Talk",
       "source": "dow-jones",
@@ -263,20 +364,20 @@
       "link": "https://www.tradingview.com/news/newsbtc:c2def9251094b:0-bitcoin-bottom-zone-now-lies-around-59-000-based-on-this-on-chain-metric/"
     },
     {
+      "title": "Exclusive: India\u2019s Crypto Future Hinges on Clarity, Not Just Taxes \u2014 CoinSwitch Co-founder Speaks",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-03T06:46:35+00:00",
+      "timeDisplay": "6:46 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:d1e7feefd094b:0-exclusive-india-s-crypto-future-hinges-on-clarity-not-just-taxes-coinswitch-co-founder-speaks/"
+    },
+    {
       "title": "Crypto industry will be \u2018just fine\u2019 if CLARITY Act doesn\u2019t pass: Chris Perkins",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-03T05:51:03+00:00",
       "timeDisplay": "5:51 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:4093a304f094b:0-crypto-industry-will-be-just-fine-if-clarity-act-doesn-t-pass-chris-perkins/"
-    },
-    {
-      "title": "Bitcoin logs best monthly performance in 12 months during April",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-03T03:29:34+00:00",
-      "timeDisplay": "3:29 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e2fdf018e094b:0-bitcoin-logs-best-monthly-performance-in-12-months-during-april/"
     }
   ]
 }

@@ -1,51 +1,128 @@
 {
-  "lastUpdated": "2026-05-04T10:51:54.220080+00:00",
-  "lastUpdatedDisplay": "May 04, 2026 \u2014 10:51 AM UTC",
-  "articleCount": 59,
+  "lastUpdated": "2026-05-04T12:15:37.424331+00:00",
+  "lastUpdatedDisplay": "May 04, 2026 \u2014 12:15 PM UTC",
+  "articleCount": 64,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed reactions to conflicting reports about Iranian missile strikes on US naval vessels, with Trump announcing naval escort operations through the Strait of Hormuz. Bitcoin surged past $80,000 for the first time since January amid crypto optimism, while oil prices fluctuated on Middle East tensions and gold declined on uncertainty.",
+    "macroSummary": "Iran-US military tensions escalated with conflicting reports of Iranian missiles hitting a US warship, driving oil higher and dollar strength before some de-escalation. Bitcoin surged past $80,000 for the first time since January on Trump's 'Project Freedom' announcement, while Treasury yields rose on persistent inflation concerns.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran-war tensions support the oil shock narrative but Trump's direct naval intervention shifts geopolitical dynamics, while Bitcoin's surge to $80K suggests risk-on appetite contradicting stagflationary concerns.",
+    "regimePressureReason": "Iran tensions support the embedded oil shock narrative, but rising Treasury yields and dollar strength suggest bond market stress may be intensifying beyond current regime assumptions.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "160",
-        "signal": "Yen spiked sharply with intervention remaining on market radar, suggesting proximity to BOJ action zone"
+        "indicator": "Oil (WTI)",
+        "level": "approaching $115",
+        "signal": "Oil extending gains on Middle East uncertainty with ANZ citing potential $200 Brent in worst-case Iran conflict scenario"
+      },
+      {
+        "indicator": "US30Y",
+        "level": "approaching 5.10%",
+        "signal": "Treasury yields rising as inflation concerns persist amid geopolitical tensions"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin breaks $80,000 with strong institutional inflows amid broad crypto rally suggesting risk-on sentiment",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Yen intervention concerns resurface as USDJPY approaches critical levels that could trigger risk-off",
+        "signal": "Treasury yields approaching 4-week highs with persistent inflation concerns despite geopolitical risk-off elements",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil prices extend gains on Middle East uncertainty but volatile on Trump naval escort announcements",
+        "signal": "Oil jumps on Iran naval escalation with worst-case scenarios pricing $200 Brent",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Treasury yields rise as inflation concerns persist, maintaining reflation narrative",
+        "signal": "Bitcoin breaks $80,000 on Trump policy announcements, showing risk-on appetite in crypto despite geopolitical tensions",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar rises sharply on Iran tensions before unwinding, showing flight-to-quality dynamics",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold falls on US-Iran uncertainty clouding rate outlook, showing safe-haven confusion",
-        "tag": "NEUTRAL"
+        "signal": "Gold drops to lowest since late March despite geopolitical uncertainty, contradicting typical safe-haven flows",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely for break above 160 as yen intervention could trigger risk-off cascade affecting crypto positions",
-      "Consider reducing BMNR exposure if Bitcoin momentum accelerates further as correlation with traditional risk assets may increase",
-      "Watch oil price action around current levels as Trump's naval intervention could cap upside despite Iran tensions"
+      "Monitor Treasury yield trajectory closely - if 30Y breaks 5.10% amid Iran tensions, stagflationary pressures accelerating beyond regime assumptions",
+      "BMNR ladder may benefit from crypto rally momentum, but watch for reversal if geopolitical tensions intensify risk-off flows",
+      "Cyclical equity exposure remains supported by risk-on crypto flows, but prepare for rotation if oil shock intensifies inflation concerns"
     ]
   },
   "articles": [
+    {
+      "title": "Strategy - As Of May 3, Holds 818,334 Btc With Aggregate Purchase Price $61.81 Billion - SEC Filing",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T12:13:00+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41H02F:0-strategy-as-of-may-3-holds-818-334-btc-with-aggregate-purchase-price-61-81-billion-sec-filing/"
+    },
+    {
+      "title": "Strive Inc - Reports Bitcoin Treasury Of 15,000 Bitcoin As Of May 1, 2026 - SEC Filing",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T12:12:43+00:00",
+      "timeDisplay": "12:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41H0V2:0-strive-inc-reports-bitcoin-treasury-of-15-000-bitcoin-as-of-may-1-2026-sec-filing/"
+    },
+    {
+      "title": "This Signal Has Predicted Every Bitcoin Bottom, Here\u2019s What It\u2019s Saying Now",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T12:00:31+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:59c8f473e094b:0-this-signal-has-predicted-every-bitcoin-bottom-here-s-what-it-s-saying-now/"
+    },
+    {
+      "title": "Strait talk",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T11:55:34+00:00",
+      "timeDisplay": "11:55 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0J1:0-strait-talk/"
+    },
+    {
+      "title": "10-Year Treasury Yield Rises to Approach 4-Week Highs Again",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T11:46:35+00:00",
+      "timeDisplay": "11:46 AM",
+      "link": "https://www.tradingview.com/news/te_news:547456:0-10-year-treasury-yield-rises-to-approach-4-week-highs-again/"
+    },
+    {
+      "title": "Yen spikes briefly and reported Iran escalation boosts dollar",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T11:43:57+00:00",
+      "timeDisplay": "11:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0GS:0-yen-spikes-briefly-and-reported-iran-escalation-boosts-dollar/"
+    },
+    {
+      "title": "Euro Credit Default Protection Costs Stay Steady at Elevated Levels \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T11:23:00+00:00",
+      "timeDisplay": "11:23 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260504002294:0/"
+    },
+    {
+      "title": "Oil jumps after Iran's navy said it halted a US warship",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-04T11:22:51+00:00",
+      "timeDisplay": "11:22 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41H09C:0-oil-jumps-after-iran-s-navy-said-it-halted-a-us-warship/"
+    },
+    {
+      "title": "BTC price can 'easily' hit $95K: Five things to know in Bitcoin this week",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T11:05:33+00:00",
+      "timeDisplay": "11:05 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:27c0269ba094b:0-btc-price-can-easily-hit-95k-five-things-to-know-in-bitcoin-this-week/"
+    },
     {
       "title": "AXIOS: US OFFICIAL DENIES US NAVAL VESSEL HIT BY IRANIAN MISSILES",
       "source": "macenews",
@@ -87,20 +164,20 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0FE:0-dollar-rises-european-stocks-and-bonds-fall-after-reports-of-u-s-warship-being-hit-missiles/"
     },
     {
+      "title": "When Will Bitcoin Price Hit $100,000 Again?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-04T10:08:52+00:00",
+      "timeDisplay": "10:08 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:e46a2505b094b:0-when-will-bitcoin-price-hit-100-000-again/"
+    },
+    {
       "title": "Who\u2019s Buying All The Bitcoin? ETFs Are Now Taking 500% Of New Supply",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-05-04T10:06:11+00:00",
       "timeDisplay": "10:06 AM",
       "link": "https://www.tradingview.com/news/stocktwits:5b58ad144094b:0/"
-    },
-    {
-      "title": "Capital B raises $1.3M from Adam Back for Bitcoin strategy",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T10:05:30+00:00",
-      "timeDisplay": "10:05 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5608c0deb094b:0-capital-b-raises-1-3m-from-adam-back-for-bitcoin-strategy/"
     },
     {
       "title": "CRCL, COIN, MSTR Stocks Gain Amid Bitcoin\u2019s Rally To Over $80K After Trump\u2019s \u2018Project Freedom\u2019",
@@ -303,14 +380,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260504000291:0/"
     },
     {
-      "title": "BlackRock\u2019s Bitcoin Bet Grows in Europe \u2014 IB1T Tops $1.1B with 14,200 BTC",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T05:44:01+00:00",
-      "timeDisplay": "5:44 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:1cea1ac87094b:0-blackrock-s-bitcoin-bet-grows-in-europe-ib1t-tops-1-1b-with-14-200-btc/"
-    },
-    {
       "title": "Yen spikes higher as intervention on the radar of markets",
       "source": "reuters",
       "color": "#ff6d00",
@@ -343,22 +412,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41H04N:0-opening-the-strait-or-maybe-not/"
     },
     {
-      "title": "Bitcoin Price Today Hits $80K as ETF Inflows Surge",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T04:25:14+00:00",
-      "timeDisplay": "4:25 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:a34a3f866094b:0-bitcoin-price-today-hits-80k-as-etf-inflows-surge/"
-    },
-    {
-      "title": "Bitcoin rises past $80,000, breaking \u2018major\u2019 psychological resistance zone",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T04:04:11+00:00",
-      "timeDisplay": "4:04 AM",
-      "link": "https://www.tradingview.com/news/the_block:085c2edd3094b:0-bitcoin-rises-past-80-000-breaking-major-psychological-resistance-zone/"
-    },
-    {
       "title": "Oil Prices Likely to Remain Elevated \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -373,14 +426,6 @@
       "timestamp": "2026-05-04T03:28:48+00:00",
       "timeDisplay": "3:28 AM",
       "link": "https://www.tradingview.com/news/newsbtc:bc2c05c5b094b:0-ethereum-price-tracks-bitcoin-rally-targets-crucial-break-higher/"
-    },
-    {
-      "title": "Michael Saylor\u2019s Strategy pauses weekly bitcoin purchases ahead of Q1 earnings release",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T03:05:49+00:00",
-      "timeDisplay": "3:05 AM",
-      "link": "https://www.tradingview.com/news/the_block:9b8aaed53094b:0-michael-saylor-s-strategy-pauses-weekly-bitcoin-purchases-ahead-of-q1-earnings-release/"
     },
     {
       "title": "US oil may test resistance at $103.42",

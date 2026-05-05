@@ -1,45 +1,69 @@
 {
-  "lastUpdated": "2026-05-05T21:34:40.318021+00:00",
-  "lastUpdatedDisplay": "May 05, 2026 \u2014 09:34 PM UTC",
+  "lastUpdated": "2026-05-05T22:52:51.864754+00:00",
+  "lastUpdatedDisplay": "May 05, 2026 \u2014 10:52 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets posted mixed results with semiconductors driving Nasdaq and S&P 500 to fresh record highs while MicroStrategy reported massive Q1 losses from Bitcoin exposure. Oil prices dipped as Middle East ceasefire holds, the dollar softened, and US GDP growth estimates were revised higher to 3.7%.",
+    "macroSummary": "Markets hit fresh records on strong earnings and falling oil prices, with semiconductors driving gains while Middle East ceasefire eases energy concerns. Bitcoin volatility continues with MicroStrategy posting massive losses, though institutional buying persists and BTC holds above $80k. Trump maintains hawkish Iran stance despite oil price relief.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Evidence splits between reflation support (record equity highs, GDP upgrade, institutions buying Bitcoin) and disinflationary signals (oil dip, dollar softening, ceasefire reducing geopolitical premium).",
+    "regimePressureReason": "Oil price decline and dollar softening contradict reflation pressures, while record equity highs and strong GDP nowcast (3.7%) support growth themes.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Semiconductors drive Nasdaq and S&P 500 to fresh all-time closing highs, supporting risk-on equity momentum",
+        "signal": "Oil prices dipping while stocks gain suggests energy shock pressure may be easing from Iran tensions",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar softening as Middle East ceasefire holds reduces reflation pressure from currency strength",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Atlanta Fed GDPNow revised up to 3.7% from 3.5% supports continued growth momentum",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil prices dipping as Middle East ceasefire holds, reducing the Iran-war oil shock premium embedded in current regime",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar softening as geopolitical tensions ease, moving away from DXY 100 threshold but in disinflationary direction",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Atlanta Fed GDPNow upgrades Q2 GDP growth estimate to 3.7% from 3.5%, reinforcing economic momentum",
+        "signal": "S&P 500 and Nasdaq hitting fresh all-time highs confirms risk-on sentiment in equities",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Individual investors trimming stocks and boosting cash as sentiment sours, contradicting broad risk-on narrative",
-        "tag": "CONTRADICTS"
+        "signal": "Individual investors trimming stocks and boosting cash shows retail sentiment souring despite institutional strength",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below recent levels would challenge the Iran-war premium assumption",
-      "Watch DXY for continued softening - move toward 100 threshold could signal broader dollar regime shift",
-      "BMNR ladder remains appropriate as crypto institutional adoption continues despite volatility"
+      "Monitor oil price action closely - sustained decline below recent highs could signal Iran war premium unwinding",
+      "Watch DXY for further softening that could approach the 100 invalidation threshold",
+      "BMNR ladder remains appropriate given ETH withdrawal low and institutional crypto buying, but watch for broader risk-off rotation"
     ]
   },
   "articles": [
+    {
+      "title": "Ethereum Withdrawals From Exchanges Just Hit An 8-Month Low: Find Out What Investors Are Waiting For",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T22:30:47+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:1b7a44eee094b:0-ethereum-withdrawals-from-exchanges-just-hit-an-8-month-low-find-out-what-investors-are-waiting-for/"
+    },
+    {
+      "title": "Chevron CEO Warns Of Potential Oil Shortages Due To Closure Of Strait Of Hormuz",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T22:21:29+00:00",
+      "timeDisplay": "10:21 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:57fa45e279270:0-chevron-ceo-warns-of-potential-oil-shortages-due-to-closure-of-strait-of-hormuz/"
+    },
+    {
+      "title": "EOG Resources Posts Higher Earnings In Q1",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T22:09:47+00:00",
+      "timeDisplay": "10:09 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:bafbc7be4e6ea:0-eog-resources-posts-higher-earnings-in-q1/"
+    },
     {
       "title": "Strategy Posts Wider Loss as Bitcoin Holdings Hit $64 Billion. The Stock Falls. \u2014 Barrons.com",
       "source": "dow-jones",
@@ -63,6 +87,14 @@
       "timestamp": "2026-05-05T21:15:00+00:00",
       "timeDisplay": "9:15 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260505015851:0/"
+    },
+    {
+      "title": "Bitcoin short liquidations push BTC to multi-month highs: Is $90K next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T21:13:22+00:00",
+      "timeDisplay": "9:13 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0503c0fe7094b:0-bitcoin-short-liquidations-push-btc-to-multi-month-highs-is-90k-next/"
     },
     {
       "title": "Devon Energy Corp. Announces Drop In Q1 Profit",
@@ -337,20 +369,20 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0UA:0-bofa-floats-reverse-inquiry-window-to-ease-us-treasury-long-end-pressure/"
     },
     {
-      "title": "Risk Assets Climb as US Jobs, Housing Data Beat Estimates",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T14:49:41+00:00",
-      "timeDisplay": "2:49 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:8d9cba053094b:0-risk-assets-climb-as-us-jobs-housing-data-beat-estimates/"
-    },
-    {
       "title": "Gold Rises While Oil Slips \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-05T14:37:00+00:00",
       "timeDisplay": "2:37 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260505008090:0/"
+    },
+    {
+      "title": "Dollar Slightly Higher as Middle East Risks Remain",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T14:32:30+00:00",
+      "timeDisplay": "2:32 PM",
+      "link": "https://www.tradingview.com/news/barchart:13502e55a094b:0-dollar-slightly-higher-as-middle-east-risks-remain/"
     },
     {
       "title": "Dollar edges down as Middle East ceasefire holds",
@@ -607,38 +639,6 @@
       "timestamp": "2026-05-05T08:17:57+00:00",
       "timeDisplay": "8:17 AM",
       "link": "https://www.tradingview.com/news/stocktwits:b924be277094b:0/"
-    },
-    {
-      "title": "Dollar Dominance Deepens: Offshore Greenback Deposits Hit $14.5 Trillion, Dwarfing Rivals",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T07:34:03+00:00",
-      "timeDisplay": "7:34 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:de3aaca86094b:0/"
-    },
-    {
-      "title": "Gold Edges Up but Middle East Escalation Caps Further Gains \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T07:33:00+00:00",
-      "timeDisplay": "7:33 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260505001360:0/"
-    },
-    {
-      "title": "Oil Eases But Stays Elevated as Hormuz Tensions Flare Up \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T07:26:00+00:00",
-      "timeDisplay": "7:26 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260505001316:0/"
-    },
-    {
-      "title": "Dollar Rises as Middle East Tensions Flare Up \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T06:52:00+00:00",
-      "timeDisplay": "6:52 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260505001152:0/"
     }
   ]
 }

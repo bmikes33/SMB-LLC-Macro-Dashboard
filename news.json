@@ -1,51 +1,155 @@
 {
-  "lastUpdated": "2026-05-05T07:09:03.685647+00:00",
-  "lastUpdatedDisplay": "May 05, 2026 \u2014 07:09 AM UTC",
+  "lastUpdated": "2026-05-05T09:48:27.176157+00:00",
+  "lastUpdatedDisplay": "May 05, 2026 \u2014 09:48 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Middle East tensions are escalating with renewed US-Iran hostilities, driving dollar strength and keeping oil prices elevated while equities slide. Bitcoin hit $80K triggering crypto shorts liquidations, while traditional safe havens like gold show mixed signals amid the geopolitical uncertainty.",
+    "macroSummary": "Markets show mixed signals with equities rising on earnings optimism while Middle East tensions escalate, driving oil prices higher and creating risk-off sentiment in some assets. Bitcoin rallies to $81K on regulatory clarity hopes while Treasury yields show conflicting movements amid geopolitical uncertainty.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Geopolitical escalation supports the Iran-war oil shock embedded in the regime, but equities sliding and risk-off sentiment in Asian currencies contradicts the bullish-cyclicals bias.",
+    "regimePressureReason": "Headlines show simultaneous risk-on equity momentum and risk-off geopolitical positioning, with oil elevated but not breaking stagflation thresholds yet.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil testing resistance at $106.44 with elevated prices on Middle East escalation"
+        "level": "approaching $115",
+        "signal": "Oil stays elevated near $106 resistance with Hormuz tensions flaring"
       }
     ],
     "keySignals": [
       {
-        "signal": "Shares slide with risk-off sentiment hitting Asian currencies as US-Iran hostilities escalate",
+        "signal": "Risk-off sentiment emerging in Asian currencies and some equity markets despite earlier gains",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices remain elevated testing $106.44 resistance on Middle East war fears",
+        "signal": "Oil prices holding elevated with Strait of Hormuz tensions escalating US-Iran hostilities",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar firming on geopolitical tensions aligns with safe haven flows",
+        "signal": "Treasury yields showing conflicting directional moves amid Middle East escalation uncertainty",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin rally to $81K driven by CLARITY Act regulatory progress supports crypto risk-on positioning",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin hitting $80K with $300M in shorts liquidated shows crypto resilience amid traditional risk-off",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "US 10-Year yields showing mixed signals with both advances and declines reported",
+        "signal": "Dollar firming on Middle East war fears while staying below DXY 100 threshold",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil closely as $106.44 break toward $115 threshold could accelerate stagflation tilt",
-      "Watch for VIX data given clear risk-off flows in Asian markets and equity weakness",
-      "Consider BMNR ladder adjustments if crypto strength diverges further from traditional risk assets"
+      "Monitor oil closely - approaching key $115 stagflation threshold with Hormuz tensions",
+      "Assess BMNR positioning as crypto rallies but broader risk-off sentiment builds",
+      "Watch for VIX break above 22 as geopolitical risk-off sentiment spreads from Asia"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Treasury Yields Fall, Dollar Firms Slightly \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T09:35:00+00:00",
+      "timeDisplay": "9:35 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505002017:0/"
+    },
+    {
+      "title": "I Asked ChatGPT to Manage a Stock Portfolio. Here's How It Did. \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T09:30:00+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505001974:0/"
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP Prices Rise. Why Oil Will Still Hold Cryptos Back. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T09:21:00+00:00",
+      "timeDisplay": "9:21 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505001923:0/"
+    },
+    {
+      "title": "Stocks rise as investors take heart from upbeat earnings, dip in oil",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T09:07:47+00:00",
+      "timeDisplay": "9:07 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0CC:0-stocks-rise-as-investors-take-heart-from-upbeat-earnings-dip-in-oil/"
+    },
+    {
+      "title": "Dollar holds steady as Middle East truce looks shaky",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T08:28:29+00:00",
+      "timeDisplay": "8:28 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0AK:0-dollar-holds-steady-as-middle-east-truce-looks-shaky/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Rise Despite US\u2013Iran Flare-Up: Why AAPL, META, TSLA, PLTR, GME, SKK Are Keeping Traders Engaged Today",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T08:17:57+00:00",
+      "timeDisplay": "8:17 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:b924be277094b:0/"
+    },
+    {
+      "title": "Bitcoin Targets $86,000 After Key EMA Reclaim: Is The Next Rally Here?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T08:00:18+00:00",
+      "timeDisplay": "8:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:e156c389d094b:0-bitcoin-targets-86-000-after-key-ema-reclaim-is-the-next-rally-here/"
+    },
+    {
+      "title": "Bitcoin Hits $81K as Realized Profits Peak: Is a Sell-the-News Event Imminent?",
+      "source": "cryptonews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:56:58+00:00",
+      "timeDisplay": "7:56 AM",
+      "link": "https://www.tradingview.com/news/cryptonews:8c955363e094b:0-bitcoin-hits-81k-as-realized-profits-peak-is-a-sell-the-news-event-imminent/"
+    },
+    {
+      "title": "Dollar Dominance Deepens: Offshore Greenback Deposits Hit $14.5 Trillion, Dwarfing Rivals",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:34:03+00:00",
+      "timeDisplay": "7:34 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:de3aaca86094b:0/"
+    },
+    {
+      "title": "Gold Edges Up but Middle East Escalation Caps Further Gains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:33:00+00:00",
+      "timeDisplay": "7:33 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505001360:0/"
+    },
+    {
+      "title": "Oil Eases But Stays Elevated as Hormuz Tensions Flare Up \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:26:00+00:00",
+      "timeDisplay": "7:26 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505001316:0/"
+    },
+    {
+      "title": "CLARITY Act Progress Drives Crypto Rally, Bitcoin Jumps To $81,000",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:23:25+00:00",
+      "timeDisplay": "7:23 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:7d5c8fb7b094b:0-clarity-act-progress-drives-crypto-rally-bitcoin-jumps-to-81-000/"
+    },
+    {
+      "title": "Bitcoin Rises to Three-Month High, Holding Above Key $80,000 Level \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T07:20:00+00:00",
+      "timeDisplay": "7:20 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505001286:0/"
+    },
     {
       "title": "Dollar Rises as Middle East Tensions Flare Up \u2014 Market Talk",
       "source": "dow-jones",
@@ -519,14 +623,6 @@
       "link": "https://www.tradingview.com/news/macenews:759883736094b:0-us-tsy-off-l-relatively-small-amount-to-borrow-for-current-qtr-had-est-109-bln-depends-on-april-tax-receipts/"
     },
     {
-      "title": "Bitcoin\u2019s 200-Week Moving Average is Signalling Bull Market Cues, Says Adam Back",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T18:53:13+00:00",
-      "timeDisplay": "6:53 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:e31977669094b:0-bitcoin-s-200-week-moving-average-is-signalling-bull-market-cues-says-adam-back/"
-    },
-    {
       "title": "The market is riding high on an AI spending boom - but what could crack this rally?",
       "source": "market-watch",
       "color": "#00e5ff",
@@ -543,108 +639,12 @@
       "link": "https://www.tradingview.com/news/the_block:3f061d56f094b:0-aave-fights-court-ordered-73-million-eth-freeze-argues-a-thief-does-not-own-what-he-steals/"
     },
     {
-      "title": "Bitcoin Pushes Over $80k as Oil-BTC Relationship Steps Aside \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T18:18:00+00:00",
-      "timeDisplay": "6:18 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504006277:0/"
-    },
-    {
-      "title": "Bitcoin Nears Structural Shift Amid Changing Market Conditions \u2014 What This Means",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T18:00:45+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:914f113b9094b:0-bitcoin-nears-structural-shift-amid-changing-market-conditions-what-this-means/"
-    },
-    {
-      "title": "Crypto Stocks Explode After Bitcoin Smashes Through $80,000",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:55:09+00:00",
-      "timeDisplay": "5:55 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:6bbf9717a094b:0-crypto-stocks-explode-after-bitcoin-smashes-through-80-000/"
-    },
-    {
-      "title": "CLARITY Act Section 1960 Issue To Be Fixed \u2018Very Soon,\u2019 Says White House Crypto Advisor",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:39:25+00:00",
-      "timeDisplay": "5:39 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:d82990747094b:0/"
-    },
-    {
       "title": "CHEVRON CEO WIRTH Q&A/CNBC-MILKEN CONF: EVEN IF WAR ENDED WOULD TAKE WKS TO MOS FOR OIL MKT TO STABILIZE; EUROPE CONCERN SHIFTS, PRICE TO AVAILABILITY",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-05-04T17:19:00+00:00",
       "timeDisplay": "5:19 PM",
       "link": "https://www.tradingview.com/news/macenews:e003ec1cb094b:0-chevron-ceo-wirth-q-a-cnbc-milken-conf-even-if-war-ended-would-take-wks-to-mos-for-oil-mkt-to-stabilize-europe-concern-shifts-price-to-availability/"
-    },
-    {
-      "title": "Crypto Is Now Mainstream. Investors of All Ages Are Diving In. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:16:00+00:00",
-      "timeDisplay": "5:16 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260502000619:0/"
-    },
-    {
-      "title": "Oil Futures Climb on Reports on Iranian Attacks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:16:00+00:00",
-      "timeDisplay": "5:16 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504005930:0/"
-    },
-    {
-      "title": "IRAN UPDATE: UAE DEFENSES PROTECT AGAINST 4 ATTACKS, EAST COAST OIL PORT AFLAME; US NAVY REPELS CRUISE MISSILE, DRONE ATTACKS IN STRAIT; OMAN ATTACKED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:11:00+00:00",
-      "timeDisplay": "5:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:d2a07b919094b:0-iran-update-uae-defenses-protect-against-4-attacks-east-coast-oil-port-aflame-us-navy-repels-cruise-missile-drone-attacks-in-strait-oman-attacked/"
-    },
-    {
-      "title": "Even odds for a blue Congress\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-04T17:09:09+00:00",
-      "timeDisplay": "5:09 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41H0S8:0-even-odds-for-a-blue-congress/"
-    },
-    {
-      "title": "Higher Crude Oil Gives Soyoil a Boost \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T17:06:00+00:00",
-      "timeDisplay": "5:06 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504005875:0/"
-    },
-    {
-      "title": "US 10-Year Treasury Note Hits 9-Month High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T16:59:49+00:00",
-      "timeDisplay": "4:59 PM",
-      "link": "https://www.tradingview.com/news/te_news:547555:0-us-10-year-treasury-note-hits-9-month-high/"
-    },
-    {
-      "title": "NYFED'S WILLIAMS/CYNOSURE: 'RISKS TO BOTH SIDES OF OUR MANDATES HAVE INCREASED;' 'SIMPLY CAN'T KNOW HOW THIS WILL PLAY OUT'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T16:55:00+00:00",
-      "timeDisplay": "4:55 PM",
-      "link": "https://www.tradingview.com/news/macenews:a0577d420094b:0-nyfed-s-williams-cynosure-risks-to-both-sides-of-our-mandates-have-increased-simply-can-t-know-how-this-will-play-out/"
-    },
-    {
-      "title": "NYFED'S WILLIAMS/CYNOASURE: MEDIUM AND LONG-TERM INFLATION EXPECTATIONS 'REMAIN SOLIDLY ANCHORED;' STILL SEE INFLATION AT ABOUT 3% THIS YR, 2% NEXT YR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-04T16:51:00+00:00",
-      "timeDisplay": "4:51 PM",
-      "link": "https://www.tradingview.com/news/macenews:7ef2f3661094b:0-nyfed-s-williams-cynoasure-medium-and-long-term-inflation-expectations-remain-solidly-anchored-still-see-inflation-at-about-3-this-yr-2-next-yr/"
     }
   ]
 }

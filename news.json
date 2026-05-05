@@ -1,45 +1,139 @@
 {
-  "lastUpdated": "2026-05-05T15:45:28.856242+00:00",
-  "lastUpdatedDisplay": "May 05, 2026 \u2014 03:45 PM UTC",
+  "lastUpdated": "2026-05-05T17:03:52.272520+00:00",
+  "lastUpdatedDisplay": "May 05, 2026 \u2014 05:03 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Middle East ceasefire developments drove oil prices down over 4% while economic data showed mixed signals with strong housing and job openings but weakening ISM services new orders. Inflation pressures persist with ISM services prices remaining elevated at 70.7, driven by energy costs, though employment components remain weak.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil price decline from ceasefire reduces stagflation pressure but persistent elevated service sector inflation (70.7 prices paid) and strong economic data maintain reflation undertones.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets showed mixed signals as oil prices fell over 4% on Middle East ceasefire developments while economic data remained robust with Atlanta Fed raising Q2 GDP estimates to 3.7% and strong JOLTS/ISM services readings. Treasury yields declined from July highs as BofA floated solutions for long-end pressure, while individual investors trimmed equity exposure despite institutional Bitcoin buying.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil price collapse on ceasefire news directly contradicts the Iran-war oil shock premise while Treasury long-end pressure shows early signs of relief via potential BofA intervention mechanisms.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil sliding over 4% on ceasefire developments moves away from stagflationary oil shock scenario"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil falls over 4% on Middle East ceasefire developments, moving away from $115 stagflation threshold",
+        "signal": "Oil falls over 4% as Middle East ceasefire holds, undermining Iran-war oil shock narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "ISM services prices paid remains at cycle highs of 70.7 with energy costs driving inflation",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Strong housing data (682K new home sales vs 610K expected) and job openings support growth narrative",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "ISM services new orders declined to 53.5 from 60.6, showing demand softening",
+        "signal": "US 10-Year Treasury yield falls from July highs with BofA proposing solutions for long-end pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar edges down on reduced geopolitical tension, moving away from DXY 100 threshold",
+        "signal": "Atlanta Fed raises Q2 GDP estimate to 3.7% with strong JOLTS and ISM services data supporting growth",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Individual investors trimming stocks and boosting cash as sentiment sours despite institutional crypto buying",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "ISM notes oil price impacts not yet visible in products but expects higher prices paid readings ahead",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor oil price action - sustained weakness below current levels reduces stagflation risk to regime",
-      "Watch for ISM employment recovery - current weakness at 48.0 could pressure cyclical equity thesis",
-      "BMNR ladder benefits from crypto strength mentioned in headlines - maintain current strikes"
+      "Monitor WTI oil trajectory closely - sustained weakness below current levels invalidates Iran-war shock premise",
+      "Watch for Treasury long-end stabilization via BofA mechanisms which could ease stagflationary pressure",
+      "Consider BMNR ladder adjustments if oil shock unwinds and growth/Treasury dynamics improve"
     ]
   },
   "articles": [
+    {
+      "title": "Tuesday data downpour: JOLTS, services PMI, trade balance, new home sales",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T16:35:09+00:00",
+      "timeDisplay": "4:35 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0XM:0-tuesday-data-downpour-jolts-services-pmi-trade-balance-new-home-sales/"
+    },
+    {
+      "title": "Trump Says Xi Jinping Has Been Very Respectful About US Blockade On Iranian Oil Exports \u2014 'We Haven't Been Challenged By China'",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T16:18:04+00:00",
+      "timeDisplay": "4:18 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:6b9e3ac8e094b:0/"
+    },
+    {
+      "title": "Institutions Buying Bitcoin En Masse \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T16:13:00+00:00",
+      "timeDisplay": "4:13 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260505009349:0/"
+    },
+    {
+      "title": "US ATLANTA FED GDPNOW MODEL ESTIMATES US Q2 GDP GROWTH RATE AT 3.7%, UP FROM 3.5% LAST WEEK, AFTER LATEST ECONOMIC REPORTS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T16:13:00+00:00",
+      "timeDisplay": "4:13 PM",
+      "link": "https://www.tradingview.com/news/macenews:324ba022b094b:0-us-atlanta-fed-gdpnow-model-estimates-us-q2-gdp-growth-rate-at-3-7-up-from-3-5-last-week-after-latest-economic-reports/"
+    },
+    {
+      "title": "Arthur Hayes Slams CLARITY Push \u2013 Crypto 'Doesn't Need' Regulation, Only Benefits Centralized Companies",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T16:07:56+00:00",
+      "timeDisplay": "4:07 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:6cf11b7cf094b:0/"
+    },
+    {
+      "title": "Individual investors trim stocks, boost cash as sentiment sours - AAII",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T16:06:42+00:00",
+      "timeDisplay": "4:06 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0WC:0-individual-investors-trim-stocks-boost-cash-as-sentiment-sours-aaii/"
+    },
+    {
+      "title": "The 15% Ethereum Rally Hides a Network Problem That Just Reached Exchanges",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T16:00:00+00:00",
+      "timeDisplay": "4:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:0501165df094b:0-the-15-ethereum-rally-hides-a-network-problem-that-just-reached-exchanges/"
+    },
+    {
+      "title": "PRES TRUMP Q&A ON IRAN ENDED WHILE ELEMENTARY STUDENTS AND ATHLETES SURROUND HIS DESK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T15:59:00+00:00",
+      "timeDisplay": "3:59 PM",
+      "link": "https://www.tradingview.com/news/macenews:766c8f829094b:0-pres-trump-q-a-on-iran-ended-while-elementary-students-and-athletes-surround-his-desk/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: 'HOPE IRAN ECONOMY FAILS 'BECAUSE I WANT TO WIN;'  THOUGHT OIL WOULD BE $300/BARREL; 'THEY'RE VERY PROUD, WON'T SEE WHITE FLAG'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T15:55:00+00:00",
+      "timeDisplay": "3:55 PM",
+      "link": "https://www.tradingview.com/news/macenews:2b1a84e41094b:0-pres-trump-q-a-hope-iran-economy-fails-because-i-want-to-win-thought-oil-would-be-300-barrel-they-re-very-proud-won-t-see-white-flag/"
+    },
+    {
+      "title": "Stocks gain as investors take heart from upbeat earnings, dip in oil",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T15:48:56+00:00",
+      "timeDisplay": "3:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0UH:0-stocks-gain-as-investors-take-heart-from-upbeat-earnings-dip-in-oil/"
+    },
+    {
+      "title": "DXY Little Changed on Tuesday",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T15:43:30+00:00",
+      "timeDisplay": "3:43 PM",
+      "link": "https://www.tradingview.com/news/te_news:547975:0-dxy-little-changed-on-tuesday/"
+    },
     {
       "title": "Prediction Markets ETFs Could Make The Sector \u2018More Legit,\u2019 Analyst Says \u2013 But Critic Calls Them \u2018Las Vegas in a New Outfit\u2019",
       "source": "stocktwits",
@@ -230,7 +324,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-05T14:07:00+00:00",
       "timeDisplay": "2:07 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260505007838:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260505007839:0/"
     },
     {
       "title": "US ISM SERVICES REPORT: 14 INDUSTRIES EXPAND BUSINESS ACTIVITY IN APRIL VS. 13 IN MARCH; 3 INDUSTRIES CONTRACTED",
@@ -305,44 +399,12 @@
       "link": "https://www.tradingview.com/news/macenews:594840afe094b:0-us-ism-services-employment-index-48-0-in-april-vs-45-2-in-march-51-8-in-feb/"
     },
     {
-      "title": "US ISM SERVICES NEW EXPORT ORDERS INDEX 52.1 IN APRIL VS. 50.7 IN MARCH, 57.2 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:44bd116f8094b:0-us-ism-services-new-export-orders-index-52-1-in-april-vs-50-7-in-march-57-2-in-feb/"
-    },
-    {
-      "title": "US ISM SERVICES NEW ORDERS INDEX 53.5 IN APRIL VS. 60.6 IN MARCH, 58.6 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:832049853094b:0-us-ism-services-new-orders-index-53-5-in-april-vs-60-6-in-march-58-6-in-feb/"
-    },
-    {
-      "title": "US ISM SERVICES INDEX 53.6 IN APRIL VS. 54.0 IN MARCH, 56.1 IN FEB. (VS. 53.9 MARKETS EXPECTED FOR APRIL)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:2f7805cd6094b:0-us-ism-services-index-53-6-in-april-vs-54-0-in-march-56-1-in-feb-vs-53-9-markets-expected-for-april/"
-    },
-    {
       "title": "Gold Rebounds From One-Month Low",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-05-05T13:53:27+00:00",
       "timeDisplay": "1:53 PM",
       "link": "https://www.tradingview.com/news/te_news:547920:0-gold-rebounds-from-one-month-low/"
-    },
-    {
-      "title": "Stocks gain as investors take heart from upbeat earnings, dip in oil",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-05T13:47:52+00:00",
-      "timeDisplay": "1:47 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0PI:0-stocks-gain-as-investors-take-heart-from-upbeat-earnings-dip-in-oil/"
     },
     {
       "title": "Bitcoin \u2018supercycle\u2019 or bear-market rally? BTC breaking $81K has traders at odds",
@@ -481,14 +543,6 @@
       "link": "https://www.tradingview.com/news/DJN_SN20260505008617:0/"
     },
     {
-      "title": "Bitcoin taps $81K as long-term holders add 330K BTC: How high can price go?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T11:16:09+00:00",
-      "timeDisplay": "11:16 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b9b65270b094b:0-bitcoin-taps-81k-as-long-term-holders-add-330k-btc-how-high-can-price-go/"
-    },
-    {
       "title": "Ethereum Sheds $81.6 Million in Funds as Crypto Snaps Mid-Week Risk Off",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -503,14 +557,6 @@
       "timestamp": "2026-05-05T10:43:18+00:00",
       "timeDisplay": "10:43 AM",
       "link": "https://www.tradingview.com/news/te_news:547846:0-wti-eases-after-sharp-rally/"
-    },
-    {
-      "title": "Iran Launches Missiles At UAE \u2014 Bitcoin Price Barely Blinks",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T10:30:59+00:00",
-      "timeDisplay": "10:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6d22eb74e094b:0-iran-launches-missiles-at-uae-bitcoin-price-barely-blinks/"
     },
     {
       "title": "I Asked ChatGPT to Manage a Stock Portfolio. Here's How It Did. \u2014 WSJ",
@@ -599,46 +645,6 @@
       "timestamp": "2026-05-05T05:37:44+00:00",
       "timeDisplay": "5:37 AM",
       "link": "https://www.tradingview.com/news/moneycontrol:f407e7647094b:0-what-is-gold-vault-option-and-how-does-it-compare-to-physical-digital-etfs/"
-    },
-    {
-      "title": "Shares falter, oil prices stay elevated as US-Iran hostilities ramp up",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-05T05:33:29+00:00",
-      "timeDisplay": "5:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41I042:0-shares-falter-oil-prices-stay-elevated-as-us-iran-hostilities-ramp-up/"
-    },
-    {
-      "title": "Crypto Spring Has Officially Begun, Says Bitmine\u2019s Tom Lee",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T03:54:30+00:00",
-      "timeDisplay": "3:54 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:b6d083e70094b:0-crypto-spring-has-officially-begun-says-bitmine-s-tom-lee/"
-    },
-    {
-      "title": "Ethereum at a Make-or-Break Level \u2014 Will May Trigger Another Explosive Rally?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T03:30:00+00:00",
-      "timeDisplay": "3:30 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:f60d22a9d094b:0-ethereum-at-a-make-or-break-level-will-may-trigger-another-explosive-rally/"
-    },
-    {
-      "title": "Ethereum Price Coiling Tight, Explosive Move Could Trigger Anytime",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T03:28:32+00:00",
-      "timeDisplay": "3:28 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:30e04c20c094b:0-ethereum-price-coiling-tight-explosive-move-could-trigger-anytime/"
-    },
-    {
-      "title": "Gold Could Rise If Fed Guidance Points to Future Easing \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T02:36:00+00:00",
-      "timeDisplay": "2:36 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260504011411:0/"
     }
   ]
 }

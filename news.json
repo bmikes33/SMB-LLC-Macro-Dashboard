@@ -1,51 +1,99 @@
 {
-  "lastUpdated": "2026-05-05T17:03:52.272520+00:00",
-  "lastUpdatedDisplay": "May 05, 2026 \u2014 05:03 PM UTC",
+  "lastUpdated": "2026-05-05T18:52:29.702257+00:00",
+  "lastUpdatedDisplay": "May 05, 2026 \u2014 06:52 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed signals as oil prices fell over 4% on Middle East ceasefire developments while economic data remained robust with Atlanta Fed raising Q2 GDP estimates to 3.7% and strong JOLTS/ISM services readings. Treasury yields declined from July highs as BofA floated solutions for long-end pressure, while individual investors trimmed equity exposure despite institutional Bitcoin buying.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil price collapse on ceasefire news directly contradicts the Iran-war oil shock premise while Treasury long-end pressure shows early signs of relief via potential BofA intervention mechanisms.",
+    "macroSummary": "Markets showed risk-on behavior with stocks gaining and oil falling over 4% as Middle East ceasefire holds, while economic data remained mixed with strong GDP revisions but individual investor sentiment souring. The dollar softened and Treasury yields fell from July highs as geopolitical tensions eased.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil's sharp decline contradicts the embedded Iran-war shock assumption while risk-on moves support reflation, but individual investor sentiment deterioration and bond rally suggest underlying concerns.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "< $115",
-        "signal": "Oil sliding over 4% on ceasefire developments moves away from stagflationary oil shock scenario"
+        "signal": "Oil slides over 4% as ceasefire holds, potentially unwinding Iran-war premium embedded in current regime thesis"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil falls over 4% as Middle East ceasefire holds, undermining Iran-war oil shock narrative",
+        "signal": "Oil falls over 4% as Middle East ceasefire holds, potentially unwinding geopolitical risk premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US 10-Year Treasury yield falls from July highs with BofA proposing solutions for long-end pressure",
+        "signal": "Individual investors trim stocks and boost cash as sentiment sours per AAII survey",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Atlanta Fed raises Q2 GDP estimate to 3.7% with strong JOLTS and ISM services data supporting growth",
+        "signal": "US 10-year Treasury yields fall from July highs while dollar softens",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Atlanta Fed GDPNow raised Q2 growth estimate to 3.7% from 3.5%",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Individual investors trimming stocks and boosting cash as sentiment sours despite institutional crypto buying",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "ISM notes oil price impacts not yet visible in products but expects higher prices paid readings ahead",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Risk assets climb broadly with stocks gaining on upbeat earnings",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor WTI oil trajectory closely - sustained weakness below current levels invalidates Iran-war shock premise",
-      "Watch for Treasury long-end stabilization via BofA mechanisms which could ease stagflationary pressure",
-      "Consider BMNR ladder adjustments if oil shock unwinds and growth/Treasury dynamics improve"
+      "Monitor oil prices closely - sustained ceasefire could invalidate Iran-war shock embedded in regime thesis",
+      "Watch for VIX compression as geopolitical risk premium unwinds",
+      "Consider taking profits on BMNR ladder if crypto risk-on continues but underlying macro tensions persist"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar softens as Middle East ceasefire holds",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T18:40:00+00:00",
+      "timeDisplay": "6:40 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41I120:0-dollar-softens-as-middle-east-ceasefire-holds/"
+    },
+    {
+      "title": "Stocks gain as investors take heart from upbeat earnings, dip in oil",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T18:13:19+00:00",
+      "timeDisplay": "6:13 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41I112:0-stocks-gain-as-investors-take-heart-from-upbeat-earnings-dip-in-oil/"
+    },
+    {
+      "title": "Bitmine Just Crossed $10 Billion In Staked Ethereum \u2013 88% of Everything It Owns Is Now Locked In",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T18:00:43+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:2a048fe80094b:0-bitmine-just-crossed-10-billion-in-staked-ethereum-88-of-everything-it-owns-is-now-locked-in/"
+    },
+    {
+      "title": "HYPE Outperforms Bitcoin As Hyperliquid Chairman Pushes Case For Layer-1 Finance",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T18:00:05+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:2ff6bd61f094b:0/"
+    },
+    {
+      "title": "Adam Back Says Satoshi Nakamoto Is Now A \u2018Cultural Myth\u2019 Like GOT\u2019s \u2018Winter Is Coming\u2019",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-05T17:32:35+00:00",
+      "timeDisplay": "5:32 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:832ff1a6d094b:0/"
+    },
+    {
+      "title": "Concentrated US markets push global diversification back into focus - Nuveen\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-05T17:02:39+00:00",
+      "timeDisplay": "5:02 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0Y3:0-concentrated-us-markets-push-global-diversification-back-into-focus-nuveen/"
+    },
     {
       "title": "Tuesday data downpour: JOLTS, services PMI, trade balance, new home sales",
       "source": "reuters",
@@ -53,14 +101,6 @@
       "timestamp": "2026-05-05T16:35:09+00:00",
       "timeDisplay": "4:35 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0XM:0-tuesday-data-downpour-jolts-services-pmi-trade-balance-new-home-sales/"
-    },
-    {
-      "title": "Trump Says Xi Jinping Has Been Very Respectful About US Blockade On Iranian Oil Exports \u2014 'We Haven't Been Challenged By China'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T16:18:04+00:00",
-      "timeDisplay": "4:18 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:6b9e3ac8e094b:0/"
     },
     {
       "title": "Institutions Buying Bitcoin En Masse \u2014 Market Talk",
@@ -117,14 +157,6 @@
       "timestamp": "2026-05-05T15:55:00+00:00",
       "timeDisplay": "3:55 PM",
       "link": "https://www.tradingview.com/news/macenews:2b1a84e41094b:0-pres-trump-q-a-hope-iran-economy-fails-because-i-want-to-win-thought-oil-would-be-300-barrel-they-re-very-proud-won-t-see-white-flag/"
-    },
-    {
-      "title": "Stocks gain as investors take heart from upbeat earnings, dip in oil",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-05T15:48:56+00:00",
-      "timeDisplay": "3:48 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41I0UH:0-stocks-gain-as-investors-take-heart-from-upbeat-earnings-dip-in-oil/"
     },
     {
       "title": "DXY Little Changed on Tuesday",
@@ -324,7 +356,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-05T14:07:00+00:00",
       "timeDisplay": "2:07 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260505007839:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260505007838:0/"
     },
     {
       "title": "US ISM SERVICES REPORT: 14 INDUSTRIES EXPAND BUSINESS ACTIVITY IN APRIL VS. 13 IN MARCH; 3 INDUSTRIES CONTRACTED",
@@ -389,14 +421,6 @@
       "timestamp": "2026-05-05T14:01:00+00:00",
       "timeDisplay": "2:01 PM",
       "link": "https://www.tradingview.com/news/macenews:002cfcc03094b:0-us-ism-service-prices-index-70-7-in-april-vs-70-7-in-march-63-0-in-feb/"
-    },
-    {
-      "title": "US ISM SERVICES EMPLOYMENT INDEX 48.0 IN APRIL VS. 45.2 IN MARCH, 51.8 IN FEB.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T14:01:00+00:00",
-      "timeDisplay": "2:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:594840afe094b:0-us-ism-services-employment-index-48-0-in-april-vs-45-2-in-march-51-8-in-feb/"
     },
     {
       "title": "Gold Rebounds From One-Month Low",
@@ -519,22 +543,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:5c853b4cc094b:0-bitcoin-at-80-000-splits-analysts-between-bullish-setup-and-coming-flush/"
     },
     {
-      "title": "Coinbase to cut 14% of workforce, citing volatile markets and AI",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T11:31:09+00:00",
-      "timeDisplay": "11:31 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:41ffbfe98094b:0-coinbase-to-cut-14-of-workforce-citing-volatile-markets-and-ai/"
-    },
-    {
-      "title": "Bitcoin Market Rocked By $1.6 Billion Wave Of Aggressive Selling",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T11:30:20+00:00",
-      "timeDisplay": "11:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:a4731341d094b:0-bitcoin-market-rocked-by-1-6-billion-wave-of-aggressive-selling/"
-    },
-    {
       "title": "Here are 13 reasons why large caps will now beat small caps, according to UBS",
       "source": "market-watch",
       "color": "#00e5ff",
@@ -637,14 +645,6 @@
       "timestamp": "2026-05-05T06:18:59+00:00",
       "timeDisplay": "6:18 AM",
       "link": "https://www.tradingview.com/news/tradingview:1ae05d693094b:0-xau-usd-gold-seeks-direction-as-swinging-prices-hurt-day-traders-what-to-do/"
-    },
-    {
-      "title": "What is 'gold vault' option and how does it compare to physical, digital, ETFs?",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-05T05:37:44+00:00",
-      "timeDisplay": "5:37 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:f407e7647094b:0-what-is-gold-vault-option-and-how-does-it-compare-to-physical-digital-etfs/"
     }
   ]
 }

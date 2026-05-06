@@ -1,51 +1,72 @@
 {
-  "lastUpdated": "2026-05-06T21:53:35.214374+00:00",
-  "lastUpdatedDisplay": "May 06, 2026 \u2014 09:53 PM UTC",
+  "lastUpdated": "2026-05-06T22:48:24.898830+00:00",
+  "lastUpdatedDisplay": "May 06, 2026 \u2014 10:48 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied to record highs on tech earnings and prospects of a US-Iran peace deal that sent oil tumbling and bond yields lower. The dollar weakened on peace talk hopes while Bitcoin reclaimed $80K amid institutional accumulation, though some major holders like Strategy are beginning to shift away from 'never sell' mantras.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran peace deal prospect directly undermines the oil shock foundation of the current regime call, with oil retreating sharply and bond yields declining contrary to reflation dynamics.",
+    "macroSummary": "Markets rallied to record highs on tech earnings and hopes for a U.S.-Iran peace deal that sent oil tumbling and bond yields lower. Dollar weakened on diplomatic progress while Bitcoin reclaimed $80K amid continued institutional inflows, though some large holders like Strategy are beginning to shift their never-sell stance.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Iran deal hopes are directly attacking the oil shock foundation of the reflation thesis, with falling yields and weakening dollar contradicting core regime assumptions.",
     "thresholdWatches": [
       {
+        "indicator": "Oil",
+        "level": "< $115",
+        "signal": "Oil sliding on Iran peace deal prospects undermines stagflationary oil shock premise"
+      },
+      {
         "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar slipping on Iran deal hopes approaches potential regime flip threshold"
+        "level": "toward 100",
+        "signal": "Dollar slipping on Iran deal hopes and peace talk optimism"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil tumbling on Iran peace deal prospects directly contradicts the embedded Iran-war oil shock assumption in current regime",
+        "signal": "Oil tumbling on Iran peace deal prospects directly contradicts the embedded Iran-war oil shock assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond yields declining as oil retreats suggests disinflationary forces reasserting rather than reflation continuation",
+        "signal": "Bond yields declining as oil falls suggests disinflationary rather than reflationary forces",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakness on peace talk hopes approaches the DXY 100 regime flip threshold",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Dollar weakness on diplomatic progress challenges reflation narrative strength",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Goolsbee warning about productivity assumptions and need for higher rates if hype continues supports reflation concerns",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Record stock highs and robust tech earnings maintain risk-on sentiment despite shifting oil dynamics",
+        "signal": "Stocks hitting records on tech earnings shows growth momentum but with different drivers than cyclical reflation",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin institutional flows continue strong with ETF support maintaining momentum",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below recent levels invalidates key regime pillar",
-      "Watch DXY near 100 level for potential dollar regime shift confirmation",
-      "Consider reducing reflation-sensitive positions if Iran deal materializes and oil shock reverses"
+      "Monitor oil price action closely - sustained weakness below current levels invalidates core regime thesis",
+      "Watch bond yields and dollar for confirmation of disinflationary shift from Iran deal progress",
+      "BMNR ladder remains supported by crypto institutional flows but watch for broader regime shift impacts"
     ]
   },
   "articles": [
+    {
+      "title": "Bullish Signal? Crypto Funds Log 5th Consecutive Week Of Inflows",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-06T22:30:36+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:9da74dd25094b:0-bullish-signal-crypto-funds-log-5th-consecutive-week-of-inflows/"
+    },
+    {
+      "title": "Bitcoin market dominance moves above 61%: Will altcoins follow?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-06T22:00:25+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:b692a0ad4094b:0-bitcoin-market-dominance-moves-above-61-will-altcoins-follow/"
+    },
     {
       "title": "Stocks hit records on tech earnings, oil slide from prospect of Iran deal",
       "source": "reuters",
@@ -125,14 +146,6 @@
       "timestamp": "2026-05-06T19:11:00+00:00",
       "timeDisplay": "7:11 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260506011197:0/"
-    },
-    {
-      "title": "Bitcoin market dominance moves above 61%: Will altcoins follow?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T19:05:31+00:00",
-      "timeDisplay": "7:05 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:ffaeafe0d094b:0-bitcoin-market-dominance-moves-above-61-will-altcoins-follow/"
     },
     {
       "title": "Strategy Posts $14.5 Billion Loss on Bitcoin Holdings. The 'Never Sell' Mantra Fades. \u2014 Barrons.com",
@@ -335,14 +348,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260506009092:0/"
     },
     {
-      "title": "Bitcoin Bears Crowd In: Analysts Warn A Violent $93K Squeeze Could Be Next",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T14:49:19+00:00",
-      "timeDisplay": "2:49 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:062ef67d3094b:0/"
-    },
-    {
       "title": "Cotton Backtracking After Posting Highest Close in More Than 2 Years \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -373,6 +378,14 @@
       "timestamp": "2026-05-06T14:35:49+00:00",
       "timeDisplay": "2:35 PM",
       "link": "https://www.tradingview.com/news/te_news:548439:0-us-crude-oil-inventories-fall-less-than-expected/"
+    },
+    {
+      "title": "Dollar Tumbles on Optimism US-Iran War Nearing an End",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-06T14:35:17+00:00",
+      "timeDisplay": "2:35 PM",
+      "link": "https://www.tradingview.com/news/barchart:d2b2f5969094b:0-dollar-tumbles-on-optimism-us-iran-war-nearing-an-end/"
     },
     {
       "title": "IRAN UPDATE: AXIOS SAYS WHITE HOUSE BELIEVES IT'S GETTING CLOSER TO ONE-PAGE MEMORANDUM TO END WAR AND SET STAGE FOR ANTI-NUKE TALKS BUT IRAN DENIES",
@@ -549,14 +562,6 @@
       "timestamp": "2026-05-06T13:00:59+00:00",
       "timeDisplay": "1:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:2d72afa00094b:0-economic-disaster-is-coming-top-author-says-hold-these-cryptos-or-pay-the-price/"
-    },
-    {
-      "title": "US TSY QUARTERLY REFUNDING: CASH BALANCE COULD PEAK AT RECORD $1 TRILLION IN LATE JULY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:97beee090094b:0-us-tsy-quarterly-refunding-cash-balance-could-peak-at-record-1-trillion-in-late-july/"
     },
     {
       "title": "Linea contributes ZK rollup stack to Linux Foundation open-source group",

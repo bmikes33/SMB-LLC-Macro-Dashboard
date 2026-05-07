@@ -1,45 +1,203 @@
 {
-  "lastUpdated": "2026-05-07T17:16:11.299846+00:00",
-  "lastUpdatedDisplay": "May 07, 2026 \u2014 05:16 PM UTC",
+  "lastUpdated": "2026-05-07T19:13:39.765558+00:00",
+  "lastUpdatedDisplay": "May 07, 2026 \u2014 07:13 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as oil prices decline on US-Iran peace deal hopes while Treasury yields recover from earlier lows. NY Fed consumer data reveals rising inflation expectations (3.64% vs 3.42% prior) alongside increased spending growth expectations, though gas price expectations dropped sharply on geopolitical optimism.",
+    "macroSummary": "Consumer credit surged well above expectations with spending growth expectations rising, while mortgage rates climbed and Treasury yields recovered from early lows. Oil prices remain volatile amid ongoing US-Iran peace deal speculation, and equity markets show mixed performance despite strong corporate profits.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Oil price pullback on Iran peace hopes contradicts the embedded war premium assumption, while rising consumer inflation expectations and mortgage rates support reflation thesis.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Strong consumer credit growth and rising spending expectations support reflation, but climbing mortgage rates and Treasury yield recovery suggest building rate pressure that could approach long-end stress thresholds.",
+    "thresholdWatches": [
+      {
+        "indicator": "US30Y",
+        "level": "5.10%",
+        "signal": "Treasury yields recovering from early lows with mortgage rates climbing to 6.37% on 30-year"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil prices continuing pullback on US-Iran peace deal hopes directly challenges the embedded Iran-war oil shock premise",
+        "signal": "Consumer credit jumped $24.8B in March vs $12.0B expected with spending growth expectations rising to 5.4%",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "30-year mortgage rates climbed to 6.37% from 6.30% with Treasury yields recovering from early lows",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil prices remain choppy and volatile amid ongoing US-Iran peace deal speculation",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Muni funds drew $22.3B as investors rush toward safer yield amid equity market uncertainty",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "NY Fed consumer 1-year inflation expectations jumped to 3.64% from 3.42%, with 3-year rising to 3.15%",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "30-year mortgage rates increased to 6.37% from 6.30%, continuing upward pressure on long-end rates",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Consumer spending growth expectations rose to 5.4% from 5.1% while income growth expectations declined",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Treasury yields recovering from early lows suggests bond market finding stability rather than dysfunction",
-        "tag": "CONTRADICTS"
+        "signal": "S&P 500's 10% surge pushes sentiment toward manic territory despite mixed underlying conditions",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained decline below recent levels would invalidate war premium embedded in regime",
-      "BMNR ladder may face headwinds per Tom Lee comments about ETH buying pullback",
-      "Rising mortgage rates suggest long-end stress persisting despite yield recovery narrative"
+      "Monitor 30Y Treasury closely as yield recovery approaches 5.10% invalidation threshold",
+      "BMNR ladder may benefit from crypto momentum but watch for pullback signals per Tom Lee comments",
+      "Consider defensive positioning given flight to muni safety and rising rate pressure"
     ]
   },
   "articles": [
+    {
+      "title": "US CONSUMER CREDIT RISES 3.2% AT ANNUAL RATE IN Q1; CONSUMER CREDIT UP AT 5.8% ANNUAL RATE IN MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T19:03:00+00:00",
+      "timeDisplay": "7:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:18c2788c5094b:0-us-consumer-credit-rises-3-2-at-annual-rate-in-q1-consumer-credit-up-at-5-8-annual-rate-in-march/"
+    },
+    {
+      "title": "US CONSUMER CREDIT UP $24.8 BLN IN MARCH FROM FEB. (VS. +$12.0 BLN MARKETS EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T19:01:00+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:cbdda8bfe094b:0-us-consumer-credit-up-24-8-bln-in-march-from-feb-vs-12-0-bln-markets-expected/"
+    },
+    {
+      "title": "Muni Funds Draw $22.3 Billion As Investors Rush Toward Safer Yield",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:54:56+00:00",
+      "timeDisplay": "6:54 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:12c579f4e094b:0-muni-funds-draw-22-3-billion-as-investors-rush-toward-safer-yield/"
+    },
+    {
+      "title": "US yields rise as crude prices reverse course",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T18:52:23+00:00",
+      "timeDisplay": "6:52 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K15E:0-us-yields-rise-as-crude-prices-reverse-course/"
+    },
+    {
+      "title": "Stocks dip, oil choppy as US-Iran peace deal remains elusive",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T18:44:22+00:00",
+      "timeDisplay": "6:44 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K1AC:0-stocks-dip-oil-choppy-as-us-iran-peace-deal-remains-elusive/"
+    },
+    {
+      "title": "CLEVE FED'S HAMMACK Q&A/COLUMBUS: LIKE THAT IN OHIO ATHLETES WHO SWITCHED TO OPPOSING TEAMS GET CHEERED; IN NY WOULD GET EGGS, TOMATOES; ENDS Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:39:00+00:00",
+      "timeDisplay": "6:39 PM",
+      "link": "https://www.tradingview.com/news/macenews:a280d279d094b:0-cleve-fed-s-hammack-q-a-columbus-like-that-in-ohio-athletes-who-switched-to-opposing-teams-get-cheered-in-ny-would-get-eggs-tomatoes-ends-q-a/"
+    },
+    {
+      "title": "CLEVE FED'S HAMMACK Q&A/COLUMBUS:  UNCERTAINTY ABOOUT THE ECONOMY TRANSLATES INTO UNCERTAINTY ABOUT MONPOL; HAVE A 'STRANGE BALANCE' IN JOBS; INFL KEY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:30:00+00:00",
+      "timeDisplay": "6:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:defcbd7ce094b:0-cleve-fed-s-hammack-q-a-columbus-uncertainty-aboout-the-economy-translates-into-uncertainty-about-monpol-have-a-strange-balance-in-jobs-infl-key/"
+    },
+    {
+      "title": "CLEVE FED'S HAMMACK Q&A/COLUMBUS: ALTHOUGH MONPOL FED'S MAIN JOB, NO.2 IS MONITORING FINANCIAL STABILITY, REASON FED WAS FOUNDED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:23:00+00:00",
+      "timeDisplay": "6:23 PM",
+      "link": "https://www.tradingview.com/news/macenews:8dafd3f1f094b:0-cleve-fed-s-hammack-q-a-columbus-although-monpol-fed-s-main-job-no-2-is-monitoring-financial-stability-reason-fed-was-founded/"
+    },
+    {
+      "title": "MINN FED'S KASHKARI Q&A/NMU: AGAIN RECOMMENDS BOOK 'WAYS & MEANS' ABOUT CIVIL WAR ECONOMY, FOUNDATION FOR US BANKING SYSTEM; ENDS Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:13:00+00:00",
+      "timeDisplay": "6:13 PM",
+      "link": "https://www.tradingview.com/news/macenews:9da12926f094b:0-minn-fed-s-kashkari-q-a-nmu-again-recommends-book-ways-means-about-civil-war-economy-foundation-for-us-banking-system-ends-q-a/"
+    },
+    {
+      "title": "MINN FED'S KASHKARI Q&A/NMU: REPEATS, FED DOESN'T HAVE TOOLS TO ADDRESS INCOME INEQUALITY; FED 'WELL EQUIPPED' TO HANDLE CRISES",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:10:00+00:00",
+      "timeDisplay": "6:10 PM",
+      "link": "https://www.tradingview.com/news/macenews:312cf677b094b:0-minn-fed-s-kashkari-q-a-nmu-repeats-fed-doesn-t-have-tools-to-address-income-inequality-fed-well-equipped-to-handle-crises/"
+    },
+    {
+      "title": "S&P 500's 10% Surge Pushes Sentiment Toward Manic Territory",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:09:16+00:00",
+      "timeDisplay": "6:09 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:859478821094b:0-s-p-500-s-10-surge-pushes-sentiment-toward-manic-territory/"
+    },
+    {
+      "title": "MINN FED'S KASHKARI Q&A/NMU: ALWAYS READY TO TEST NEW WAYS TO MEASURE INFLATION; CORE PCE REMAINS FAVORED MEASURE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:06:00+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/macenews:53cef6c5e094b:0-minn-fed-s-kashkari-q-a-nmu-always-ready-to-test-new-ways-to-measure-inflation-core-pce-remains-favored-measure/"
+    },
+    {
+      "title": "Bitcoin Faces Massive Long Liquidation Imbalance As $15 Billion Sits Below Price",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T18:00:17+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:d060f6063094b:0-bitcoin-faces-massive-long-liquidation-imbalance-as-15-billion-sits-below-price/"
+    },
+    {
+      "title": "HEADS UP: MINN FED'S KASHKARI Q&A AT NORTHERN MICHIGAN UNIVERSITY, CLEVE FED'S HAMMACK Q&A AT OHIO CEO SUMMIT COMING UP AFTER 2P ET",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:52:00+00:00",
+      "timeDisplay": "5:52 PM",
+      "link": "https://www.tradingview.com/news/macenews:aaa09aa12094b:0-heads-up-minn-fed-s-kashkari-q-a-at-northern-michigan-university-cleve-fed-s-hammack-q-a-at-ohio-ceo-summit-coming-up-after-2p-et/"
+    },
+    {
+      "title": "SBET CEO Says Ethereum Bear Case Is \u2018Very Small\u2019 Amid Institutional Crypto Adoption",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:50:56+00:00",
+      "timeDisplay": "5:50 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:a10ec6918094b:0/"
+    },
+    {
+      "title": "WSJ: SAUDI ARABIA, KUWAIT LIFT RESTRICTIONS ON US USE OF AIRSPACE, OVERFLIGHTS POTENTIALLY ALLOWING RESUMPTION OF OPERATION FREEDOM STRAIT PROTECTION",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:46:00+00:00",
+      "timeDisplay": "5:46 PM",
+      "link": "https://www.tradingview.com/news/macenews:1579bdfba094b:0-wsj-saudi-arabia-kuwait-lift-restrictions-on-us-use-of-airspace-overflights-potentially-allowing-resumption-of-operation-freedom-strait-protection/"
+    },
+    {
+      "title": "Samson Mow defends Strategy selling portions of its Bitcoin treasury",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:32:19+00:00",
+      "timeDisplay": "5:32 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:a0afc6b16094b:0-samson-mow-defends-strategy-selling-portions-of-its-bitcoin-treasury/"
+    },
+    {
+      "title": "Bitcoin bulls \u2018approaching the ceiling\u2019 near $85K resistance with $1.69B ETF inflow streak and macro tailwinds aligned: analysts",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:21:30+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/the_block:fb833e7a5094b:0-bitcoin-bulls-approaching-the-ceiling-near-85k-resistance-with-1-69b-etf-inflow-streak-and-macro-tailwinds-aligned-analysts/"
+    },
+    {
+      "title": "Crude Oil Swings Higher",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T17:16:00+00:00",
+      "timeDisplay": "5:16 PM",
+      "link": "https://www.tradingview.com/news/te_news:548884:0-crude-oil-swings-higher/"
+    },
     {
       "title": "Stocks dip as oil prices continue pullback on hopes of US-Iran peace deal",
       "source": "reuters",
@@ -201,46 +359,6 @@
       "link": "https://www.tradingview.com/news/macenews:250300b38094b:0-us-new-york-fed-consumer-1-year-job-loss-expectation-14-6-in-april-14-4-in-march-13-8-in-february-14-8-in-january/"
     },
     {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR JOB QUIT EXPECTATION 18.2% IN APRIL, 18.3% IN MARCH, 15.9% IN FEBRUARY, 18.7% IN JANUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:19a28d8b6094b:0-us-new-york-fed-consumer-1-year-job-quit-expectation-18-2-in-april-18-3-in-march-15-9-in-february-18-7-in-january/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR RENT PRICE INCREASE EXPECTATION 6.0% IN APRIL, 7.1% IN MARCH, 5.9% IN FEBRUARY, 6.8% IN JANUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:557262a2e094b:0-us-new-york-fed-consumer-1-year-rent-price-increase-expectation-6-0-in-april-7-1-in-march-5-9-in-february-6-8-in-january/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 3-YEAR INFLATION EXPECTATION 3.15% IN APRIL, 3.08% IN MARCH, 3.00% IN FEBRUARY, 2.98% IN JANUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:ba7cea4fb094b:0-us-new-york-fed-consumer-3-year-inflation-expectation-3-15-in-april-3-08-in-march-3-00-in-february-2-98-in-january/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 5-YEAR INFLATION EXPECTATION 3.01% IN APRIL, 3.05% IN MARCH, 2.98% IN FEBRUARY, 3.00% IN JANUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:446179749094b:0-us-new-york-fed-consumer-5-year-inflation-expectation-3-01-in-april-3-05-in-march-2-98-in-february-3-00-in-january/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER EXPECTED YEAR-AHEAD HOME PRICE RISE 3.1% IN APRIL, 3.3% IN MARCH, 3.0% IN FEBRUARY, 2.9% IN JANUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:0f4af44ac094b:0-us-new-york-fed-consumer-expected-year-ahead-home-price-rise-3-1-in-april-3-3-in-march-3-0-in-february-2-9-in-january/"
-    },
-    {
       "title": "US yields dip as oil prices continue fall on Iran deal hopes",
       "source": "reuters",
       "color": "#ff6d00",
@@ -257,14 +375,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K0YT:0-stocks-mixed-as-oil-prices-continue-pullback-on-hopes-of-us-iran-peace-deal/"
     },
     {
-      "title": "Thursday is Friday's warm-up act: Labor market data primes the pump",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T14:36:21+00:00",
-      "timeDisplay": "2:36 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0XJ:0-thursday-is-friday-s-warm-up-act-labor-market-data-primes-the-pump/"
-    },
-    {
       "title": "Tokenized Assets Saw 22% Market Cap Jump in April \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -279,30 +389,6 @@
       "timestamp": "2026-05-07T14:25:00+00:00",
       "timeDisplay": "2:25 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260507011385:0/"
-    },
-    {
-      "title": "US MAR CONSTRUCTION SPENDING +0.6% VS +0.4% EXPECTED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:fc71193bf094b:0-us-mar-construction-spending-0-6-vs-0-4-expected/"
-    },
-    {
-      "title": "US MARCH CONSTRUCTION SPENDING +1.6% Y/Y",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:dfeb43826094b:0-us-march-construction-spending-1-6-y-y/"
-    },
-    {
-      "title": "Wall Street mixed early as US-Iran deal hopes weigh on oil, energy stocks\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T13:55:51+00:00",
-      "timeDisplay": "1:55 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0VL:0-wall-street-mixed-early-as-us-iran-deal-hopes-weigh-on-oil-energy-stocks/"
     },
     {
       "title": "Stocks edge up, oil prices continue pullback on peace optimism",
@@ -457,30 +543,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:50f4d6c73094b:0-ethereum-price-eyes-mid-week-bounce-as-selling-pressure-craters-85/"
     },
     {
-      "title": "Bitwise CEO says four-year crypto cycle is dead as institutional era takes hold",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T10:58:46+00:00",
-      "timeDisplay": "10:58 AM",
-      "link": "https://www.tradingview.com/news/the_block:8f79f38e6094b:0-bitwise-ceo-says-four-year-crypto-cycle-is-dead-as-institutional-era-takes-hold/"
-    },
-    {
-      "title": "Bitcoin Bollinger Bands push key breakout as creator acts on positive signal",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T10:55:48+00:00",
-      "timeDisplay": "10:55 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e4cf67f2b094b:0-bitcoin-bollinger-bands-push-key-breakout-as-creator-acts-on-positive-signal/"
-    },
-    {
-      "title": "Bitcoin Rally Stalls Ahead Of Jobless Claims As Crude Oil Extends Decline: Crypto Market Sees $420M In Liquidations",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T10:54:21+00:00",
-      "timeDisplay": "10:54 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:4402a5fcc094b:0/"
-    },
-    {
       "title": "Michael Burry Adds To NVDA, QQQ Puts, Warns AI Trade Resembles Dot-Com Bubble \u2014 \u2018Pattern And Level Is Closer Than Numbers Alone Suggest\u2019",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -511,6 +573,14 @@
       "timestamp": "2026-05-07T08:30:21+00:00",
       "timeDisplay": "8:30 AM",
       "link": "https://www.tradingview.com/news/stocktwits:35f53e8d4094b:0/"
+    },
+    {
+      "title": "Why Build a Model Portfolio? 6 Reasons ETF Investors Should Start Now",
+      "source": "etfcom",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T08:08:56+00:00",
+      "timeDisplay": "8:08 AM",
+      "link": "https://www.tradingview.com/news/etfcom:bb94bf033094b:0-why-build-a-model-portfolio-6-reasons-etf-investors-should-start-now/"
     },
     {
       "title": "Oil Falls Sharply on Optimism for Iran Peace Breakthrough \u2014 Market Talk",
@@ -575,70 +645,6 @@
       "timestamp": "2026-05-07T05:10:00+00:00",
       "timeDisplay": "5:10 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260507000650:0/"
-    },
-    {
-      "title": "Gold Prices Likely Have to Break Above $4,730-$4,750 Range to Sustain Gains \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T04:51:00+00:00",
-      "timeDisplay": "4:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507000151:0/"
-    },
-    {
-      "title": "Ethereum Price Struggles To Hold Strength, Downside Risks Build",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T04:48:33+00:00",
-      "timeDisplay": "4:48 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:67db13768094b:0-ethereum-price-struggles-to-hold-strength-downside-risks-build/"
-    },
-    {
-      "title": "Fed Chair Powell\u2019s Biggest Success Was Political, Not Economic: El-Erian",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T04:21:14+00:00",
-      "timeDisplay": "4:21 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:1b8ad6d12094b:0/"
-    },
-    {
-      "title": "US oil may retrace into $91.30-$93.01 range",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T03:19:25+00:00",
-      "timeDisplay": "3:19 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K03D:0-us-oil-may-retrace-into-91-30-93-01-range/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Decline",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T02:45:58+00:00",
-      "timeDisplay": "2:45 AM",
-      "link": "https://www.tradingview.com/news/te_news:548563:0-us-10-year-yield-holds-decline/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T02:19:30+00:00",
-      "timeDisplay": "2:19 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K02F:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Asian stocks hit record high, dollar wobbles on peace deal hopes",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T01:48:20+00:00",
-      "timeDisplay": "1:48 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K03H:0-asian-stocks-hit-record-high-dollar-wobbles-on-peace-deal-hopes/"
-    },
-    {
-      "title": "APA Corporation Q1 Profit Climbs",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T00:39:42+00:00",
-      "timeDisplay": "12:39 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:bb761284b84d1:0-apa-corporation-q1-profit-climbs/"
     }
   ]
 }

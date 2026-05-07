@@ -1,51 +1,179 @@
 {
-  "lastUpdated": "2026-05-07T01:27:12.692306+00:00",
-  "lastUpdatedDisplay": "May 07, 2026 \u2014 01:27 AM UTC",
+  "lastUpdated": "2026-05-07T05:19:02.967872+00:00",
+  "lastUpdatedDisplay": "May 07, 2026 \u2014 05:19 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied to record highs amid hopes for a US-Iran peace deal that sent oil prices tumbling while tech earnings provided additional support. Bitcoin surged above $82K with strong ETF inflows, while bond yields declined and the dollar weakened on de-escalation prospects.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran peace deal hopes directly contradict the embedded oil shock assumption in the current Reflation regime, with oil retreating and bonds rallying instead of continuing stagflationary pressure.",
+    "macroSummary": "Markets are rallying broadly on hopes of a US-Iran peace deal that could reduce Middle East tensions and oil prices, with stocks hitting record highs and the dollar weakening. Bitcoin surged above $82,000 while oil futures declined on prospects of reduced geopolitical risk premiums. Asian markets reached record levels as yuan strengthened to 3-year highs on peace optimism.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Peace deal hopes are directly undermining the Iran-war oil shock embedded in the current regime thesis, with oil prices declining and risk assets rallying in ways inconsistent with reflation concerns.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar slipping on Iran deal hopes approaches potential regime flip threshold"
+        "indicator": "Oil (WTI)",
+        "level": "below $115",
+        "signal": "Oil retracing toward $91-93 range as US-Iran deal prospects reduce geopolitical premiums"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil retreating on US-Iran peace deal prospects contradicts the embedded Iran-war oil shock assumption",
+        "signal": "US-Iran peace deal prospects are reducing the geopolitical oil shock that was embedded in the current regime analysis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US bond yields declining as oil tumbles reverses the long-end stress dynamic",
+        "signal": "Dollar weakening on peace prospects challenges the reflation narrative that typically supports USD strength",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakening on de-escalation hopes approaches DXY 100 regime threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Stocks hitting records on peace prospects supports risk-on but undermines stagflation narrative",
+        "signal": "Oil futures declining toward $91-93 range removes key stagflationary pressure from current setup",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin above $82K with strong ETF inflows shows continued risk appetite",
-        "tag": "SUPPORTS"
+        "signal": "Risk assets rallying to records with Asian stocks at highs suggests risk-on dominance over reflation concerns",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Yuan at 3-year highs indicates capital flows inconsistent with US reflation thesis",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil complex closely - sustained break below key levels invalidates embedded war premium",
-      "Watch bond market reversal - if LQD recovers and yields continue falling, stagflationary undertone dissolving",
-      "Consider reducing cyclical overweight if Iran deal materializes and removes inflation pressure"
+      "Monitor oil prices closely - sustained decline below current levels invalidates the Iran-war shock premise",
+      "Consider reducing BMNR cash-secured put ladder strikes if crypto rally continues on broad risk-on sentiment",
+      "Reassess cyclical equity bias if peace deal materializes and removes stagflationary oil pressure"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Seen in Economic, Political Advantage Vis-a-Vis Iran \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T05:10:00+00:00",
+      "timeDisplay": "5:10 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507000650:0/"
+    },
+    {
+      "title": "THURSDAY WHITE HOUSE SCHEDULE - President Trump hosts the president of Brazil",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T05:03:00+00:00",
+      "timeDisplay": "5:03 AM",
+      "link": "https://www.tradingview.com/news/macenews:a8a1d01a4094b:0-thursday-white-house-schedule-president-trump-hosts-the-president-of-brazil/"
+    },
+    {
+      "title": "Gold Prices Likely Have to Break Above $4,730-$4,750 Range to Sustain Gains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T04:51:00+00:00",
+      "timeDisplay": "4:51 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507000151:0/"
+    },
+    {
+      "title": "Ethereum Price Struggles To Hold Strength, Downside Risks Build",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T04:48:33+00:00",
+      "timeDisplay": "4:48 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:67db13768094b:0-ethereum-price-struggles-to-hold-strength-downside-risks-build/"
+    },
+    {
+      "title": "No stopping AI frenzy in Asia",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K09U:0-no-stopping-ai-frenzy-in-asia/"
+    },
+    {
+      "title": "Fed Chair Powell\u2019s Biggest Success Was Political, Not Economic: El-Erian",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T04:21:14+00:00",
+      "timeDisplay": "4:21 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:1b8ad6d12094b:0/"
+    },
+    {
+      "title": "Bitcoin's rally is gaining respect. How to trade it using options",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T04:01:15+00:00",
+      "timeDisplay": "4:01 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:262877c3f094b:0/"
+    },
+    {
+      "title": "Bitcoin Price Gains Fade After Strong Rally Push Sparks Profit-Taking",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T03:49:17+00:00",
+      "timeDisplay": "3:49 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:15086997f094b:0-bitcoin-price-gains-fade-after-strong-rally-push-sparks-profit-taking/"
+    },
+    {
+      "title": "Yuan rises to 3-year high on Middle East peace hopes, firm PBOC fix",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T03:25:01+00:00",
+      "timeDisplay": "3:25 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K03B:0-yuan-rises-to-3-year-high-on-middle-east-peace-hopes-firm-pboc-fix/"
+    },
+    {
+      "title": "US oil may retrace into $91.30-$93.01 range",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T03:19:25+00:00",
+      "timeDisplay": "3:19 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K03D:0-us-oil-may-retrace-into-91-30-93-01-range/"
+    },
+    {
+      "title": "Singapore Dollar Steady as Iran, U.S. Move Closer on Proposal to Restart Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T02:52:00+00:00",
+      "timeDisplay": "2:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260506019013:0/"
+    },
+    {
+      "title": "US 10-Year Yield Holds Decline",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T02:45:58+00:00",
+      "timeDisplay": "2:45 AM",
+      "link": "https://www.tradingview.com/news/te_news:548563:0-us-10-year-yield-holds-decline/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T02:19:30+00:00",
+      "timeDisplay": "2:19 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K02F:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Bitcoin Reclaims $80K, And $93K Comes Into Focus \u2014 Discover The CME Gap Setup",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T02:00:53+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:1fd820231094b:0-bitcoin-reclaims-80k-and-93k-comes-into-focus-discover-the-cme-gap-setup/"
+    },
+    {
+      "title": "Asian stocks hit record high, dollar wobbles on peace deal hopes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T01:48:20+00:00",
+      "timeDisplay": "1:48 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K03H:0-asian-stocks-hit-record-high-dollar-wobbles-on-peace-deal-hopes/"
+    },
+    {
+      "title": "Dollar Weakens on Middle East Peace Prospects",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T01:44:43+00:00",
+      "timeDisplay": "1:44 AM",
+      "link": "https://www.tradingview.com/news/te_news:548527:0-dollar-weakens-on-middle-east-peace-prospects/"
+    },
     {
       "title": "APA Corporation Q1 Profit Climbs",
       "source": "dpa_afx",
@@ -215,6 +343,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41J18C:0-dollar-slips-on-hopes-of-us-iran-deal-yen-rises-amid-intervention-buzz/"
     },
     {
+      "title": "Hopes for an Imminent End to the US-Iran War Weigh on the Dollar",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-06T19:37:24+00:00",
+      "timeDisplay": "7:37 PM",
+      "link": "https://www.tradingview.com/news/barchart:5e0c22649094b:0-hopes-for-an-imminent-end-to-the-us-iran-war-weigh-on-the-dollar/"
+    },
+    {
       "title": "Bitcoin Reclaims $80K as ETF Wall Holds \u2014 but Saylor\u2019s Sell Signal Rewrites the Hodler Script",
       "source": "bravenewcoin",
       "color": "#00e5ff",
@@ -229,6 +365,14 @@
       "timestamp": "2026-05-06T19:27:46+00:00",
       "timeDisplay": "7:27 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41J13A:0-us-bond-yields-decline-as-oil-tumbles-on-possible-iran-agreement/"
+    },
+    {
+      "title": "Crude Oil Prices Sink on Improved Iran Peace Prospects",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-06T19:19:10+00:00",
+      "timeDisplay": "7:19 PM",
+      "link": "https://www.tradingview.com/news/barchart:11e14b7ab094b:0-crude-oil-prices-sink-on-improved-iran-peace-prospects/"
     },
     {
       "title": "Oil Retreats As Market Weighs New Push for U.S.-Iran Deal \u2014 Market Talk",
@@ -300,7 +444,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-06T17:10:00+00:00",
       "timeDisplay": "5:10 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506010514:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260506010515:0/"
     },
     {
       "title": "Investors turned cautious in April: Schwab",
@@ -309,22 +453,6 @@
       "timestamp": "2026-05-06T17:09:11+00:00",
       "timeDisplay": "5:09 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41J11F:0-investors-turned-cautious-in-april-schwab/"
-    },
-    {
-      "title": "Peter Schiff Warns STRC Crash Could Come Before Strategy Has The Chance To Sell Its Bitcoin",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T17:07:22+00:00",
-      "timeDisplay": "5:07 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:6e3b9d248094b:0/"
-    },
-    {
-      "title": "Analyst Says Bitcoin Is Set To Close This Month In The Red, Here\u2019s Why",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T17:00:30+00:00",
-      "timeDisplay": "5:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:dd575eca0094b:0-analyst-says-bitcoin-is-set-to-close-this-month-in-the-red-here-s-why/"
     },
     {
       "title": "CHI FED'S GOOLDSBEE/MILKEN: 'CRITICAL WE BE CAREFUL' ABOUT ASSUMPTIONS OF FUTURE GROWTH, PRODUCTIVITY; 'BIGGER THE HYPE,' THE MORE RATES NEED TO RISE",
@@ -349,14 +477,6 @@
       "timestamp": "2026-05-06T16:32:46+00:00",
       "timeDisplay": "4:32 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:672b9703e094b:0-ether-tests-2-4k-as-accumulators-add-246k-eth-how-high-can-price-go/"
-    },
-    {
-      "title": "Riot Platforms Goes \u2018Nuclear\u2019 \u2013 RIOT Stock Explodes To 4-Year High After Sealing Deal For Molten Salt AI Power Plants",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T16:15:52+00:00",
-      "timeDisplay": "4:15 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:cabd34616094b:0/"
     },
     {
       "title": "Ag and Soft Commodities Lower Though Iran Deal Still Uncertain \u2014 Market Talk",
@@ -525,126 +645,6 @@
       "timestamp": "2026-05-06T14:00:00+00:00",
       "timeDisplay": "2:00 PM",
       "link": "https://www.tradingview.com/news/zacks:113bf934d094b:0-time-for-short-term-u-s-treasury-etfs/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: UNCERTAINTY TENDS TO DEPRESS HIRING; ENDS Q&A",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:f2bc84cb0094b:0-st-louis-fed-s-musalem-q-a-mississippi-uncertainty-tends-to-depress-hiring-ends-q-a/"
-    },
-    {
-      "title": "Cryptocurrency Breaks Out as Optimism Over War Grows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:59:00+00:00",
-      "timeDisplay": "1:59 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506008566:0/"
-    },
-    {
-      "title": "Oil Falls on Hopes of US\u2013Iran Deal",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:57:21+00:00",
-      "timeDisplay": "1:57 PM",
-      "link": "https://www.tradingview.com/news/te_news:548427:0-oil-falls-on-hopes-of-us-iran-deal/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: UNCERTAINTIES AROUND THE WAR IN IRAN FREQUENTLY MENTIONED BY FIRMS; DURATION, IMPACT UNCERTAIN",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:56:00+00:00",
-      "timeDisplay": "1:56 PM",
-      "link": "https://www.tradingview.com/news/macenews:7ef3978ac094b:0-st-louis-fed-s-musalem-q-a-mississippi-uncertainties-around-the-war-in-iran-frequently-mentioned-by-firms-duration-impact-uncertain/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: 'STILL HARD TO SAY WE'RE IN A PRODUCTIVITY RENAISSANCE;' LOT OF EXPERIMENTATION WITH A.I.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:45:00+00:00",
-      "timeDisplay": "1:45 PM",
-      "link": "https://www.tradingview.com/news/macenews:480b68bb1094b:0-st-louis-fed-s-musalem-q-a-mississippi-still-hard-to-say-we-re-in-a-productivity-renaissance-lot-of-experimentation-with-a-i/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - May 6",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:42:00+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506008404:0/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: REPEATS, COMMITTED TO BRING INFLATION RATE TO 2%; PRODUCTIVITY INSCREASING SINCE '23, NOW AMPLIFIED BY A.I.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:41:00+00:00",
-      "timeDisplay": "1:41 PM",
-      "link": "https://www.tradingview.com/news/macenews:278a3842d094b:0-st-louis-fed-s-musalem-q-a-mississippi-repeats-committed-to-bring-inflation-rate-to-2-productivity-inscreasing-since-23-now-amplified-by-a-i/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: MORE RISKS ON INFLATION SIDE RATHER THAN EMPLOYMENT SIDE; REAL FF RATE AROUND 0.5%; NEUTRAL OR ACCOMMODATIVE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:39:00+00:00",
-      "timeDisplay": "1:39 PM",
-      "link": "https://www.tradingview.com/news/macenews:444d7d8a3094b:0-st-louis-fed-s-musalem-q-a-mississippi-more-risks-on-inflation-side-rather-than-employment-side-real-ff-rate-around-0-5-neutral-or-accommodative/"
-    },
-    {
-      "title": "ST LOUIS FED'S MUSALEM Q&A/MISSISSIPPI: TAILWINDS STRONGER THAN THE HEADWINDS FOR ECONOMY; HAVE A.I. DEMAND BOOM;BUT TARIFFS, MIDEAST ETC",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:36:00+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:e73c04c15094b:0-st-louis-fed-s-musalem-q-a-mississippi-tailwinds-stronger-than-the-headwinds-for-economy-have-a-i-demand-boom-but-tariffs-mideast-etc/"
-    },
-    {
-      "title": "HEADS UP: ST LOUIS FED'S MUSALEM Q&A AT MISSISSIPPI BANKERS EVENT COMING UP AFTER 9:30A ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:19:00+00:00",
-      "timeDisplay": "1:19 PM",
-      "link": "https://www.tradingview.com/news/macenews:7d4f1e404094b:0-heads-up-st-louis-fed-s-musalem-q-a-at-mississippi-bankers-event-coming-up-after-9-30a-et/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - May 6",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:14:00+00:00",
-      "timeDisplay": "1:14 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506008121:0/"
-    },
-    {
-      "title": "US 10-Year Yield Plunges from 9-Month High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:08:44+00:00",
-      "timeDisplay": "1:08 PM",
-      "link": "https://www.tradingview.com/news/te_news:548407:0-us-10-year-yield-plunges-from-9-month-high/"
-    },
-    {
-      "title": "Economic Disaster Is Coming? Top Author Says Hold These Cryptos Or Pay The Price",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T13:00:59+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:2d72afa00094b:0-economic-disaster-is-coming-top-author-says-hold-these-cryptos-or-pay-the-price/"
-    },
-    {
-      "title": "Linea contributes ZK rollup stack to Linux Foundation open-source group",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T12:29:44+00:00",
-      "timeDisplay": "12:29 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:fc0c5368f094b:0-linea-contributes-zk-rollup-stack-to-linux-foundation-open-source-group/"
-    },
-    {
-      "title": "Investors Scale Back BOE Rate-Rise Expectations on Hopes of U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T12:06:00+00:00",
-      "timeDisplay": "12:06 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506007117:0/"
     }
   ]
 }

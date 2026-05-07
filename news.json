@@ -1,45 +1,357 @@
 {
-  "lastUpdated": "2026-05-07T12:23:58.862086+00:00",
-  "lastUpdatedDisplay": "May 07, 2026 \u2014 12:23 PM UTC",
+  "lastUpdated": "2026-05-07T15:26:59.727593+00:00",
+  "lastUpdatedDisplay": "May 07, 2026 \u2014 03:26 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with global stocks trading around record highs while oil falls sharply on Iran-U.S. peace deal optimism and hopes for Strait of Hormuz reopening. Bitcoin and crypto assets rally strongly with $1.7B in ETF inflows over five days, while technology companies continue large-scale layoffs despite citing AI innovation spending.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Peace deal hopes are directly undermining the Iran war oil shock that was embedded in the Reflation regime call, with oil falling sharply and Treasury yields/dollar declining on geopolitical de-escalation.",
+    "macroSummary": "Consumer inflation expectations jumped to 3.64% (1Y) from 3.42%, with spending expectations rising to 5.4% while income growth expectations fell to 2.8%. Oil prices are declining and Treasury yields hit 2-week lows on hopes of US-Iran peace deal progress. Labor market remains stable with jobless claims steady.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Rising consumer inflation expectations support reflation, but falling oil prices and Treasury yields on Iran peace deal hopes contradict the embedded oil shock assumption.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Oil falls sharply on Iran-U.S. peace deal optimism and Strait of Hormuz reopening hopes, directly contradicting the embedded Iran war oil shock assumption",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Treasury yields and dollar decline on geopolitical de-escalation hopes, easing stagflationary pressures",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Global stocks trading around record highs with risk-on sentiment returning as peace optimism lifts markets",
+        "signal": "Consumer 1-year inflation expectations spiked to 3.64% from 3.42%, highest reading in the data series",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin ETFs see massive $1.7B inflows over five days with institutional adoption accelerating, indicating strong risk appetite",
+        "signal": "Oil prices falling on US-Iran peace deal hopes, contradicting the embedded Iran-war oil shock premise",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "10-year Treasury yields fell to 2-week lows as oil decline reduces stagflation pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Consumer spending expectations rose to 5.4% while income growth fell to 2.8%, widening the gap and supporting reflation dynamics",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Technology layoffs surge 37.6% in April with 33,361 cuts despite AI spending rhetoric, showing labor market stress in growth sectors",
+        "signal": "Labor market showing stability with continuing claims declining and job quit expectations remaining elevated",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below recent levels would invalidate the Iran war premium embedded in regime",
-      "Watch Treasury yield behavior - continued decline could signal reflation trade unwinding",
-      "Consider reducing BMNR cash-secured put strike prices if crypto strength continues on institutional inflows"
+      "Monitor oil price action closely - sustained decline below recent levels would invalidate Iran-war oil shock embedded in regime",
+      "Watch for continued Treasury yield compression if Iran deal materializes, could pressure long-end stress assumptions",
+      "BMNR ladder remains appropriate as crypto sentiment stays constructive despite macro uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "Arbitrum vote to release $71M in frozen Kelp exploit ETH set to pass",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:14:15+00:00",
+      "timeDisplay": "3:14 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:56fa8c4bc094b:0-arbitrum-vote-to-release-71m-in-frozen-kelp-exploit-eth-set-to-pass/"
+    },
+    {
+      "title": "NY Engelhard Gold Prices - May 7",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:08:00+00:00",
+      "timeDisplay": "3:08 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507011792:0/"
+    },
+    {
+      "title": "Michael Saylor Says \u2018Buy More Bitcoin Than You Can Sell\u2019 After MSTR Opened Door To BTC Sales",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:07:49+00:00",
+      "timeDisplay": "3:07 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:2cbd16aac094b:0/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR HOUSEHOLD INCOME GROWTH EXPECTATION 2.8% IN APRIL, 2.9% IN MARCH, 2.9% IN FEBRUARY, 2.9% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:01:00+00:00",
+      "timeDisplay": "3:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:f0dda6d4a094b:0-us-new-york-fed-consumer-1-year-household-income-growth-expectation-2-8-in-april-2-9-in-march-2-9-in-february-2-9-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR HOUSEHOLD SPENDING GROWTH EXPECTATION 5.4% IN APRIL, 5.1% IN MARCH, 4.9% IN FEBRUARY, 4.9% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:01:00+00:00",
+      "timeDisplay": "3:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:320746553094b:0-us-new-york-fed-consumer-1-year-household-spending-growth-expectation-5-4-in-april-5-1-in-march-4-9-in-february-4-9-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR EARNINGS GROWTH EXPECTATION 2.7% IN APRIL, 2.4% IN MARCH, 2.5% IN FEBRUARY, 2.7% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:2a2b42d66094b:0-us-new-york-fed-consumer-1-year-earnings-growth-expectation-2-7-in-april-2-4-in-march-2-5-in-february-2-7-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR FOOD PRICE EXPECTATION 5.2% IN APRIL, 6.0% IN MARCH, 5.3% IN FEBRUARY, 5.7% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:2ee02582c094b:0-us-new-york-fed-consumer-1-year-food-price-expectation-5-2-in-april-6-0-in-march-5-3-in-february-5-7-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR GAS PRICE EXPECTATION 5.1% IN APRIL, 9.4% IN MARCH, 4.1% IN FEBRUARY, 2.8% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:d220588b5094b:0-us-new-york-fed-consumer-1-year-gas-price-expectation-5-1-in-april-9-4-in-march-4-1-in-february-2-8-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR INFLATION EXPECTATION 3.64% IN APRIL, 3.42% IN MARCH, 3.00% IN FEBRUARY, 3.09% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:c4b9ef278094b:0-us-new-york-fed-consumer-1-year-inflation-expectation-3-64-in-april-3-42-in-march-3-00-in-february-3-09-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR JOB LOSS EXPECTATION 14.6% IN APRIL, 14.4% IN MARCH, 13.8% IN FEBRUARY, 14.8% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:250300b38094b:0-us-new-york-fed-consumer-1-year-job-loss-expectation-14-6-in-april-14-4-in-march-13-8-in-february-14-8-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR JOB QUIT EXPECTATION 18.2% IN APRIL, 18.3% IN MARCH, 15.9% IN FEBRUARY, 18.7% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:19a28d8b6094b:0-us-new-york-fed-consumer-1-year-job-quit-expectation-18-2-in-april-18-3-in-march-15-9-in-february-18-7-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 1-YEAR RENT PRICE INCREASE EXPECTATION 6.0% IN APRIL, 7.1% IN MARCH, 5.9% IN FEBRUARY, 6.8% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:557262a2e094b:0-us-new-york-fed-consumer-1-year-rent-price-increase-expectation-6-0-in-april-7-1-in-march-5-9-in-february-6-8-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 3-YEAR INFLATION EXPECTATION 3.15% IN APRIL, 3.08% IN MARCH, 3.00% IN FEBRUARY, 2.98% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:ba7cea4fb094b:0-us-new-york-fed-consumer-3-year-inflation-expectation-3-15-in-april-3-08-in-march-3-00-in-february-2-98-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER 5-YEAR INFLATION EXPECTATION 3.01% IN APRIL, 3.05% IN MARCH, 2.98% IN FEBRUARY, 3.00% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:446179749094b:0-us-new-york-fed-consumer-5-year-inflation-expectation-3-01-in-april-3-05-in-march-2-98-in-february-3-00-in-january/"
+    },
+    {
+      "title": "US NEW YORK FED: CONSUMER EXPECTED YEAR-AHEAD HOME PRICE RISE 3.1% IN APRIL, 3.3% IN MARCH, 3.0% IN FEBRUARY, 2.9% IN JANUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T15:00:00+00:00",
+      "timeDisplay": "3:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:0f4af44ac094b:0-us-new-york-fed-consumer-expected-year-ahead-home-price-rise-3-1-in-april-3-3-in-march-3-0-in-february-2-9-in-january/"
+    },
+    {
+      "title": "US yields dip as oil prices continue fall on Iran deal hopes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T14:55:17+00:00",
+      "timeDisplay": "2:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0Y1:0-us-yields-dip-as-oil-prices-continue-fall-on-iran-deal-hopes/"
+    },
+    {
+      "title": "Stocks mixed as oil prices continue pullback on hopes of US-Iran peace deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T14:53:58+00:00",
+      "timeDisplay": "2:53 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K0YT:0-stocks-mixed-as-oil-prices-continue-pullback-on-hopes-of-us-iran-peace-deal/"
+    },
+    {
+      "title": "Thursday is Friday's warm-up act: Labor market data primes the pump",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T14:36:21+00:00",
+      "timeDisplay": "2:36 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0XJ:0-thursday-is-friday-s-warm-up-act-labor-market-data-primes-the-pump/"
+    },
+    {
+      "title": "Tokenized Assets Saw 22% Market Cap Jump in April \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T14:30:00+00:00",
+      "timeDisplay": "2:30 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507011429:0/"
+    },
+    {
+      "title": "Stablecoin Market Cap Finds New High in April \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T14:25:00+00:00",
+      "timeDisplay": "2:25 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507011385:0/"
+    },
+    {
+      "title": "US MAR CONSTRUCTION SPENDING +0.6% VS +0.4% EXPECTED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:fc71193bf094b:0-us-mar-construction-spending-0-6-vs-0-4-expected/"
+    },
+    {
+      "title": "US MARCH CONSTRUCTION SPENDING +1.6% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:dfeb43826094b:0-us-march-construction-spending-1-6-y-y/"
+    },
+    {
+      "title": "Wall Street mixed early as US-Iran deal hopes weigh on oil, energy stocks\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T13:55:51+00:00",
+      "timeDisplay": "1:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0VL:0-wall-street-mixed-early-as-us-iran-deal-hopes-weigh-on-oil-energy-stocks/"
+    },
+    {
+      "title": "Stocks edge up, oil prices continue pullback on peace optimism",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T13:54:33+00:00",
+      "timeDisplay": "1:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0UG:0-stocks-edge-up-oil-prices-continue-pullback-on-peace-optimism/"
+    },
+    {
+      "title": "Samourai Wallet Founder Writes From Prison Asking Bitcoin Community For Help \u2014 Family Is Out Of Options",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:52:09+00:00",
+      "timeDisplay": "1:52 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:14950b26e094b:0-samourai-wallet-founder-writes-from-prison-asking-bitcoin-community-for-help-family-is-out-of-options/"
+    },
+    {
+      "title": "Bitcoin's unusual technical action points to a crypto bull market, says Fundstrat's Tom Lee",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:34:00+00:00",
+      "timeDisplay": "1:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260507014198:0/"
+    },
+    {
+      "title": "Bitcoin Uptrend Still Healthy, But Volume Divergence Raises Questions",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:30:17+00:00",
+      "timeDisplay": "1:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:8b6452207094b:0-bitcoin-uptrend-still-healthy-but-volume-divergence-raises-questions/"
+    },
+    {
+      "title": "MSTR Stock Slips Despite Price Target Hikes \u2013 Retail Questions Whether Saylor Is Selling Bitcoin",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:24:22+00:00",
+      "timeDisplay": "1:24 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:78b5c1843094b:0/"
+    },
+    {
+      "title": "$202 Million Bitcoin Whale Move Ignites Supercycle Buzz as Legendary Signals Flash Bullish",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:21:24+00:00",
+      "timeDisplay": "1:21 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:d62574c37094b:0-202-million-bitcoin-whale-move-ignites-supercycle-buzz-as-legendary-signals-flash-bullish/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - May 7",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:12:00+00:00",
+      "timeDisplay": "1:12 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507010727:0/"
+    },
+    {
+      "title": "US 10-Year Treasury Note Yield Falls to 2-Week Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T13:00:27+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/te_news:548805:0-us-10-year-treasury-note-yield-falls-to-2-week-low/"
+    },
+    {
+      "title": "Benchmark Treasury yield: Still coiling, but history warns calm won\u2019t last",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-07T12:59:53+00:00",
+      "timeDisplay": "12:59 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0PS:0-benchmark-treasury-yield-still-coiling-but-history-warns-calm-won-t-last/"
+    },
+    {
+      "title": "VanEck\u2019s Sigel sees Bitcoin reaching $1M within five years",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:51:19+00:00",
+      "timeDisplay": "12:51 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:73f93e48c094b:0-vaneck-s-sigel-sees-bitcoin-reaching-1m-within-five-years/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED WKLY CLAIMS 180,968, +299; UNADJUSTED INSURED UNEMP RATE TWO WKS AGO 1.1%, -0.1",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:37:00+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:ae196ca5e094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-claims-180-968-299-unadjusted-insured-unemp-rate-two-wks-ago-1-1-0-1/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1.766 MLN, -10,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:d8cc8a5e2094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-766-mln-10-000/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS:  4-WK MOVING AVG   203,250, -4,500; INSURED UNEMP  RATE TWO WKS AGO  1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:b3c4901d1094b:0-us-initial-claims-for-jobless-benefits-4-wk-moving-avg-203-250-4-500-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "US NONFARM PRODUCTIVITY UP 2.9% IN LAST FOUR QUARTERS THROUGH Q1",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:66285cf1f094b:0-us-nonfarm-productivity-up-2-9-in-last-four-quarters-through-q1/"
+    },
+    {
+      "title": "Bitcoin analysts say this level must break for BTC price to confirm bottom",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:26:09+00:00",
+      "timeDisplay": "12:26 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:f1204fb8f094b:0-bitcoin-analysts-say-this-level-must-break-for-btc-price-to-confirm-bottom/"
+    },
+    {
+      "title": "Oil Extends Fall as US-Iran Deal Eyed",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T12:14:27+00:00",
+      "timeDisplay": "12:14 PM",
+      "link": "https://www.tradingview.com/news/te_news:548777:0-oil-extends-fall-as-us-iran-deal-eyed/"
+    },
     {
       "title": "Bitcoin Price Falls. Why Cryptos Aren't Following the Stocks Rally. \u2014 Barrons.com",
       "source": "dow-jones",
@@ -71,14 +383,6 @@
       "timestamp": "2026-05-07T11:50:55+00:00",
       "timeDisplay": "11:50 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41K0XV:0-treasure-global-establishes-digital-asset-treasury-anchored-in-ethereum-as-core-blockchain-infrastructure-asset-with-bitgo-as-licensed-custody-provider/"
-    },
-    {
-      "title": "Bitcoin's unusual technical action points to a crypto bull market, says Fundstrat's Tom Lee",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T11:44:00+00:00",
-      "timeDisplay": "11:44 AM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260507009501:0/"
     },
     {
       "title": "Bitcoin's Rally Pauses as Investors Remain Cautious Over Iran War \u2014 Market Talk",
@@ -121,20 +425,20 @@
       "link": "https://www.tradingview.com/news/stocktwits:4402a5fcc094b:0/"
     },
     {
-      "title": "Chip frenzy goes global",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T10:52:49+00:00",
-      "timeDisplay": "10:52 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0LR:0-chip-frenzy-goes-global/"
-    },
-    {
       "title": "Bitcoin Operates Outside the Regulatory System: Arthur Hayes Take on Crypto and Clarity Act",
       "source": "cryptonews",
       "color": "#00e5ff",
       "timestamp": "2026-05-07T10:29:43+00:00",
       "timeDisplay": "10:29 AM",
       "link": "https://www.tradingview.com/news/cryptonews:3c06326dc094b:0-bitcoin-operates-outside-the-regulatory-system-arthur-hayes-take-on-crypto-and-clarity-act/"
+    },
+    {
+      "title": "TD Cowen Lifts Strategy Price Target to $395 on STRC Funding Shift",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T10:22:00+00:00",
+      "timeDisplay": "10:22 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:bb7d988b5094b:0-td-cowen-lifts-strategy-price-target-to-395-on-strc-funding-shift/"
     },
     {
       "title": "Michael Burry Adds To NVDA, QQQ Puts, Warns AI Trade Resembles Dot-Com Bubble \u2014 \u2018Pattern And Level Is Closer Than Numbers Alone Suggest\u2019",
@@ -151,78 +455,6 @@
       "timestamp": "2026-05-07T09:47:59+00:00",
       "timeDisplay": "9:47 AM",
       "link": "https://www.tradingview.com/news/cryptonews:35d5bdffa094b:0-trump-bitcoin-crypto-mining-company-just-lost-45-million-while-btc-trades-above-80-000-what-went-wrong/"
-    },
-    {
-      "title": "U.S. Treasury Yields, Dollar Decline on Hopes of Strait of Hormuz Reopening \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:47:00+00:00",
-      "timeDisplay": "9:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507003962:0/"
-    },
-    {
-      "title": "US CHALLENGER CRO ANDY CHALLENGER: \u2018TECHNOLOGY COMPANIES CONTINUE TO ANNOUNCE LARGE-SCALE CUTS\u2019",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:32:00+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:b0d7a07a5094b:0-us-challenger-cro-andy-challenger-technology-companies-continue-to-announce-large-scale-cuts/"
-    },
-    {
-      "title": "US CHALLENGER HIRING PLANS YEAR-TO-DATE 60,936 IN 2026 VS 70,058 IN 2025 YEAR-TO-DATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:32:00+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:11dc31ba9094b:0-us-challenger-hiring-plans-year-to-date-60-936-in-2026-vs-70-058-in-2025-year-to-date/"
-    },
-    {
-      "title": "US CHALLENGER LARGEST NUMBER OF HIRING PLANS FOR APRIL IN GOVERNMENT (2,350), TECHNOLOGY (1,980)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:32:00+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:a3795b224094b:0-us-challenger-largest-number-of-hiring-plans-for-april-in-government-2-350-technology-1-980/"
-    },
-    {
-      "title": "US CRO CHALLENGER: TECH COMPANIES \u2018OFTEN CITING AI SPEND AND INNOVATION\u2019",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:32:00+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:f48c7958f094b:0-us-cro-challenger-tech-companies-often-citing-ai-spend-and-innovation/"
-    },
-    {
-      "title": "US CHALLENGER HIRING PLANS -69.4% AT 10,049 IN APRIL VS 32,826 IN MARCH; +2.5% FROM APRIL 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:31:00+00:00",
-      "timeDisplay": "9:31 AM",
-      "link": "https://www.tradingview.com/news/macenews:2841c5bd6094b:0-us-challenger-hiring-plans-69-4-at-10-049-in-april-vs-32-826-in-march-2-5-from-april-2025/"
-    },
-    {
-      "title": "US CHALLENGER JOB CUTS YEAR-TO-DATE 300,749 IN 2026 VS 602,493 IN 2025 YEAR-TO-DATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:31:00+00:00",
-      "timeDisplay": "9:31 AM",
-      "link": "https://www.tradingview.com/news/macenews:88f184d12094b:0-us-challenger-job-cuts-year-to-date-300-749-in-2026-vs-602-493-in-2025-year-to-date/"
-    },
-    {
-      "title": "US CHALLENGER LARGEST NUMBER OF LAYOFFS FOR APRIL IN TECHNOLOGY (33,361), GOVERNMENT (9,149), WAREHOUSING (5,743)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:31:00+00:00",
-      "timeDisplay": "9:31 AM",
-      "link": "https://www.tradingview.com/news/macenews:4878efa11094b:0-us-challenger-largest-number-of-layoffs-for-april-in-technology-33-361-government-9-149-warehousing-5-743/"
-    },
-    {
-      "title": "US CHALLENGER JOB CUTS +37.6% AT 83,387 IN APRIL VS 60,620 IN MARCH; -20.9% FROM APRIL 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:30:00+00:00",
-      "timeDisplay": "9:30 AM",
-      "link": "https://www.tradingview.com/news/macenews:e41c6329b094b:0-us-challenger-job-cuts-37-6-at-83-387-in-april-vs-60-620-in-march-20-9-from-april-2025/"
     },
     {
       "title": "BNY eyes institutional Bitcoin, Ethereum custody for investors in UAE",
@@ -249,44 +481,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:35f53e8d4094b:0/"
     },
     {
-      "title": "US Bitcoin Reserve Plan Nears Major White House Update",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T08:30:06+00:00",
-      "timeDisplay": "8:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6fe5bcfc9094b:0-us-bitcoin-reserve-plan-nears-major-white-house-update/"
-    },
-    {
-      "title": "Spot bitcoin ETFs post five-day inflow streak totaling nearly $1.7 billion",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T07:58:15+00:00",
-      "timeDisplay": "7:58 AM",
-      "link": "https://www.tradingview.com/news/the_block:d47dc2f0a094b:0-spot-bitcoin-etfs-post-five-day-inflow-streak-totaling-nearly-1-7-billion/"
-    },
-    {
-      "title": "VanEck Joins Bitwise in Forecasting $1 Million Bitcoin Price Target",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T07:50:09+00:00",
-      "timeDisplay": "7:50 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:b5cfff474094b:0-vaneck-joins-bitwise-in-forecasting-1-million-bitcoin-price-target/"
-    },
-    {
       "title": "Oil Falls Sharply on Optimism for Iran Peace Breakthrough \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-07T07:45:00+00:00",
       "timeDisplay": "7:45 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260507002941:0/"
-    },
-    {
-      "title": "Dollar, Treasury Yields Turn Lower on Hopes Strait of Hormuz Will Reopen \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T07:39:00+00:00",
-      "timeDisplay": "7:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507002918:0/"
     },
     {
       "title": "Quantum attacks could worsen without proof of ownership: Near One",
@@ -305,30 +505,6 @@
       "link": "https://www.tradingview.com/news/tradingview:f03453995094b:0-xau-usd-gold-prints-gains-above-4-750-as-peace-deal-hopes-boost-demand/"
     },
     {
-      "title": "Bitcoin Eases Slightly After Rally on Iran-U.S. Peace Deal Hopes \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T07:00:00+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507002580:0/"
-    },
-    {
-      "title": "Dollar Trades Steady Amid Uncertainty Over Efforts to End Iran War \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T06:45:00+00:00",
-      "timeDisplay": "6:45 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507002465:0/"
-    },
-    {
-      "title": "VanEck Says $1 Million Bitcoin Is The Base Case \u2014 Here Is What The Data Says",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T06:38:21+00:00",
-      "timeDisplay": "6:38 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:a171e7c7e094b:0-vaneck-says-1-million-bitcoin-is-the-base-case-here-is-what-the-data-says/"
-    },
-    {
       "title": "Comex Gold Futures' Bullish Momentum Has Renewed, Daily Chart Shows \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -343,14 +519,6 @@
       "timestamp": "2026-05-07T06:17:12+00:00",
       "timeDisplay": "6:17 AM",
       "link": "https://www.tradingview.com/news/beincrypto:f77f9c42b094b:0-how-exposed-are-ethereum-and-solana-to-a-potential-quantum-threat/"
-    },
-    {
-      "title": "Bitcoin At $82K, But Metrics Don\u2019t Smile: Network Activity Down, Spot Demand Negative\u2014What\u2019s Next?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T06:00:06+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:3e389f639094b:0-bitcoin-at-82k-but-metrics-don-t-smile-network-activity-down-spot-demand-negative-what-s-next/"
     },
     {
       "title": "Oil Prices Seen as Key Driver of Eurozone Bond Yield Moves \u2014 Market Talk",
@@ -377,14 +545,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260507000650:0/"
     },
     {
-      "title": "THURSDAY WHITE HOUSE SCHEDULE - President Trump hosts the president of Brazil",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T05:03:00+00:00",
-      "timeDisplay": "5:03 AM",
-      "link": "https://www.tradingview.com/news/macenews:a8a1d01a4094b:0-thursday-white-house-schedule-president-trump-hosts-the-president-of-brazil/"
-    },
-    {
       "title": "Gold Prices Likely Have to Break Above $4,730-$4,750 Range to Sustain Gains \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -401,14 +561,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:67db13768094b:0-ethereum-price-struggles-to-hold-strength-downside-risks-build/"
     },
     {
-      "title": "No stopping AI frenzy in Asia",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T04:30:00+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K09U:0-no-stopping-ai-frenzy-in-asia/"
-    },
-    {
       "title": "Fed Chair Powell\u2019s Biggest Success Was Political, Not Economic: El-Erian",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -417,44 +569,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:1b8ad6d12094b:0/"
     },
     {
-      "title": "Bitcoin's rally is gaining respect. How to trade it using options",
-      "source": "cnbctv",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T04:01:15+00:00",
-      "timeDisplay": "4:01 AM",
-      "link": "https://www.tradingview.com/news/cnbctv:262877c3f094b:0/"
-    },
-    {
-      "title": "Bitcoin Price Gains Fade After Strong Rally Push Sparks Profit-Taking",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T03:49:17+00:00",
-      "timeDisplay": "3:49 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:15086997f094b:0-bitcoin-price-gains-fade-after-strong-rally-push-sparks-profit-taking/"
-    },
-    {
-      "title": "Yuan rises to 3-year high on Middle East peace hopes, firm PBOC fix",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T03:25:01+00:00",
-      "timeDisplay": "3:25 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K03B:0-yuan-rises-to-3-year-high-on-middle-east-peace-hopes-firm-pboc-fix/"
-    },
-    {
       "title": "US oil may retrace into $91.30-$93.01 range",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-07T03:19:25+00:00",
       "timeDisplay": "3:19 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K03D:0-us-oil-may-retrace-into-91-30-93-01-range/"
-    },
-    {
-      "title": "Singapore Dollar Steady as Iran, U.S. Move Closer on Proposal to Restart Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T02:52:00+00:00",
-      "timeDisplay": "2:52 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506019013:0/"
     },
     {
       "title": "US 10-Year Yield Holds Decline",
@@ -473,28 +593,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K02F:0-commodities-intraday-targets-key-levels/"
     },
     {
-      "title": "Bitcoin Reclaims $80K, And $93K Comes Into Focus \u2014 Discover The CME Gap Setup",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T02:00:53+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:1fd820231094b:0-bitcoin-reclaims-80k-and-93k-comes-into-focus-discover-the-cme-gap-setup/"
-    },
-    {
       "title": "Asian stocks hit record high, dollar wobbles on peace deal hopes",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-07T01:48:20+00:00",
       "timeDisplay": "1:48 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K03H:0-asian-stocks-hit-record-high-dollar-wobbles-on-peace-deal-hopes/"
-    },
-    {
-      "title": "Dollar Weakens on Middle East Peace Prospects",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T01:44:43+00:00",
-      "timeDisplay": "1:44 AM",
-      "link": "https://www.tradingview.com/news/te_news:548527:0-dollar-weakens-on-middle-east-peace-prospects/"
     },
     {
       "title": "APA Corporation Q1 Profit Climbs",
@@ -535,110 +639,6 @@
       "timestamp": "2026-05-06T23:34:00+00:00",
       "timeDisplay": "11:34 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260506018490:0/"
-    },
-    {
-      "title": "Oil Steadies as US-Iran Deal Eyed",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T23:31:16+00:00",
-      "timeDisplay": "11:31 PM",
-      "link": "https://www.tradingview.com/news/te_news:548492:0-oil-steadies-as-us-iran-deal-eyed/"
-    },
-    {
-      "title": "US oil prices rebound as investors assess prospects for a Middle East peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T22:39:04+00:00",
-      "timeDisplay": "10:39 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41J1OU:0-us-oil-prices-rebound-as-investors-assess-prospects-for-a-middle-east-peace-deal/"
-    },
-    {
-      "title": "Stocks hit records on tech earnings, oil slide from prospect of Iran deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T20:26:28+00:00",
-      "timeDisplay": "8:26 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41J19I:0-stocks-hit-records-on-tech-earnings-oil-slide-from-prospect-of-iran-deal/"
-    },
-    {
-      "title": "Wall Street rallies to record highs on peace talk hopes, robust earnings",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T20:24:44+00:00",
-      "timeDisplay": "8:24 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41J18C:0-wall-street-rallies-to-record-highs-on-peace-talk-hopes-robust-earnings/"
-    },
-    {
-      "title": "REACTION FROM IRAN AWAITED TO PRES TRUMP'S 'I THINK WE WON' AND IRAN AGREED NOT TO DEVELOP A NUCLEAR WEAPON; TRUMP ADDS, 'WE'LL SEE IF WE GET THERE'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T19:44:00+00:00",
-      "timeDisplay": "7:44 PM",
-      "link": "https://www.tradingview.com/news/macenews:aaaebff11094b:0-reaction-from-iran-awaited-to-pres-trump-s-i-think-we-won-and-iran-agreed-not-to-develop-a-nuclear-weapon-trump-adds-we-ll-see-if-we-get-there/"
-    },
-    {
-      "title": "US bond yields decline as oil tumbles on possible Iran agreement",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T19:27:46+00:00",
-      "timeDisplay": "7:27 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41J13A:0-us-bond-yields-decline-as-oil-tumbles-on-possible-iran-agreement/"
-    },
-    {
-      "title": "Crude Oil Prices Sink on Improved Iran Peace Prospects",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T19:19:10+00:00",
-      "timeDisplay": "7:19 PM",
-      "link": "https://www.tradingview.com/news/barchart:11e14b7ab094b:0-crude-oil-prices-sink-on-improved-iran-peace-prospects/"
-    },
-    {
-      "title": "Oil Retreats As Market Weighs New Push for U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T19:11:00+00:00",
-      "timeDisplay": "7:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506011197:0/"
-    },
-    {
-      "title": "Stocks jump, oil slides on tech earnings, Iran peace prospect",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T18:18:09+00:00",
-      "timeDisplay": "6:18 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41J14A:0-stocks-jump-oil-slides-on-tech-earnings-iran-peace-prospect/"
-    },
-    {
-      "title": "Billionaire Reid Hoffman Says Crypto Is \u2018Obvious Answer\u2019 For AI Identity \u2013 Hasn\u2019t Sold Any Bitcoin Since 2014",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T18:16:46+00:00",
-      "timeDisplay": "6:16 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:ce8193047094b:0/"
-    },
-    {
-      "title": "CHI FED'S GOOLSBEE Q&A/MILKEN: WHEN SEE MASSIVE DATA CENTER INVESTMENT WONDER WHEN WILL 'REACH THE LIMITS OF GROWTH'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T17:38:00+00:00",
-      "timeDisplay": "5:38 PM",
-      "link": "https://www.tradingview.com/news/macenews:f3be58305094b:0-chi-fed-s-goolsbee-q-a-milken-when-see-massive-data-center-investment-wonder-when-will-reach-the-limits-of-growth/"
-    },
-    {
-      "title": "Coinbase Perpetual Gold and Silver Futures Go Live \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-06T17:10:00+00:00",
-      "timeDisplay": "5:10 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260506010514:0/"
-    },
-    {
-      "title": "Investors turned cautious in April: Schwab",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-06T17:09:11+00:00",
-      "timeDisplay": "5:09 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41J11F:0-investors-turned-cautious-in-april-schwab/"
     }
   ]
 }

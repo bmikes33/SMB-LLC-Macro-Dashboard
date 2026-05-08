@@ -1,45 +1,99 @@
 {
-  "lastUpdated": "2026-05-08T16:11:41.749713+00:00",
-  "lastUpdatedDisplay": "May 08, 2026 \u2014 04:11 PM UTC",
+  "lastUpdated": "2026-05-08T17:51:17.069302+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 05:51 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Consumer sentiment deteriorated sharply with credit balances surging while current conditions dropped 9% on high price fears. Fed's Goolsbee suggested rates may need to rise if AI productivity assumptions prove premature, while oil remains elevated with Iran tensions persisting. Jobs growth was solid but hiring rates remain weak, and high-yield credit spreads are viewed as too tight by buyers.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Consumer sentiment collapse, credit stress emergence, and Fed hawkish pivot on AI productivity directly contradict the bullish-cyclicals stance while validating stagflationary concerns.",
-    "thresholdWatches": [],
+    "macroSummary": "US data shows mixed signals with Q1 profit growth hitting 29% and solid job growth, but consumer sentiment tanking as credit balances surge and hiring rates remain weak. Fed's Goolsbee warns of potential rate hikes if AI productivity surge creates wealth effects, while oil remains elevated and Treasury yields edge down on Iran ceasefire hopes.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Strong corporate profits and job data support reflation, but consumer sentiment collapse, tight HY spreads warning buyers away, and Fed hawkish pivot on AI wealth effects create crosscurrents.",
+    "thresholdWatches": [
+      {
+        "indicator": "HYG",
+        "level": "< 79",
+        "signal": "US HY spreads described as 'too tight to tempt buyers' suggests credit market stress building"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Consumer sentiment tanks with credit balances surging and current conditions down 9% on price fears",
+        "signal": "Q1 US profit growth at 29% highest in recent years strongly supports corporate earnings cycle",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Consumer sentiment tanks while credit balances surge indicates household stress contradicting healthy reflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Goolsbee warns rates must rise if AI productivity surge proves premature, suggesting hawkish pivot",
+        "signal": "Goolsbee warns of potential rate hikes if AI productivity creates wealth effects, hawkish pivot from current policy path",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "High-yield spreads deemed too tight by buyers, indicating credit market stress building",
-        "tag": "CONTRADICTS"
+        "signal": "HY spreads too tight to tempt buyers suggests credit markets approaching stress levels",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Jobs hiring rate remains weak despite headline growth, showing labor market fragility",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil elevated with Iran tensions persisting, maintaining stagflationary pressure",
+        "signal": "Oil remains elevated with BOE considering rate hikes if Brent stays around $90, supporting stagflationary undertones",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor HYG closely for approach to 79 threshold as credit stress signals emerge",
-      "Reduce BMNR ladder exposure given consumer credit deterioration conflicting with risk-on positioning",
-      "Prepare defensive rotation as multiple regime contradictions surfacing simultaneously"
+      "Monitor HYG levels closely as credit market stress signals emerging from tight spreads",
+      "Reassess BMNR put ladder strikes given mixed regime signals and potential Fed hawkish pivot",
+      "Consider reducing Maturity sector overweight if consumer stress accelerates despite strong corporate earnings"
     ]
   },
   "articles": [
+    {
+      "title": "Q1 US profit growth now seen at 29%, highest in recent years",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T17:21:41+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0YC:0-q1-us-profit-growth-now-seen-at-29-highest-in-recent-years/"
+    },
+    {
+      "title": "Zcash Caps Off Parabolic Week \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T17:04:00+00:00",
+      "timeDisplay": "5:04 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508008815:0/"
+    },
+    {
+      "title": "Analyst Predicts Bitcoin Price Will Top $320,000 After \u2018Cleanest Signal\u2019 Emerged",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T17:00:37+00:00",
+      "timeDisplay": "5:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:b15378129094b:0-analyst-predicts-bitcoin-price-will-top-320-000-after-cleanest-signal-emerged/"
+    },
+    {
+      "title": "History favors more gains after April's surge, Carson Group says\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T16:28:40+00:00",
+      "timeDisplay": "4:28 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0WN:0-history-favors-more-gains-after-april-s-surge-carson-group-says/"
+    },
+    {
+      "title": "US ATLANTA FED GDPNOW MODEL SEES US Q2 GDP GROWTH RATE AT 3.7%, UNCHANGED FROM PREVIOUS ESTIMATE, AFTER LATEST ECONOMIC REPORTS INCLUDING EMPLOYMENT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T16:23:00+00:00",
+      "timeDisplay": "4:23 PM",
+      "link": "https://www.tradingview.com/news/macenews:51c5e42b4094b:0-us-atlanta-fed-gdpnow-model-sees-us-q2-gdp-growth-rate-at-3-7-unchanged-from-previous-estimate-after-latest-economic-reports-including-employment/"
+    },
+    {
+      "title": "Bitcoin bulls battle for $80K control as US jobs data delivers surprise",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T16:18:37+00:00",
+      "timeDisplay": "4:18 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3e2d84198094b:0-bitcoin-bulls-battle-for-80k-control-as-us-jobs-data-delivers-surprise/"
+    },
     {
       "title": "The US consumer: Sentiment tanks as credit balances surge",
       "source": "reuters",
@@ -63,6 +117,22 @@
       "timestamp": "2026-05-08T15:52:18+00:00",
       "timeDisplay": "3:52 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0V4:0-us-hy-spreads-too-tight-to-tempt-buyers/"
+    },
+    {
+      "title": "After 15-Month Investigation, Sydney Darknet Probe Leads to Seizure of 52 Bitcoin",
+      "source": "financemagnates",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:42:34+00:00",
+      "timeDisplay": "3:42 PM",
+      "link": "https://www.tradingview.com/news/financemagnates:d955ae24c094b:0-after-15-month-investigation-sydney-darknet-probe-leads-to-seizure-of-52-bitcoin/"
+    },
+    {
+      "title": "Spot Bitcoin ETFs Pull $1.97 Billion in Biggest Monthly Surge Since November",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:39:01+00:00",
+      "timeDisplay": "3:39 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:6fb26d1d3094b:0-spot-bitcoin-etfs-pull-1-97-billion-in-biggest-monthly-surge-since-november/"
     },
     {
       "title": "Gold Seen Transitioning Away From 'Corrective Phase' \u2014 Market Talk",
@@ -305,14 +375,6 @@
       "link": "https://www.tradingview.com/news/macenews:48d435a2f094b:0-us-consumer-current-conditions-index-47-8-in-may-prelim-vs-52-5-in-april-final/"
     },
     {
-      "title": "US CONSUMER EXPECTATIONS INDEX 48.5 IN MAY PRELIMINARY REPORT VS. 48.1 IN APRIL FINAL (VS. 48.1 MARKETS EXPECTED FOR MAY PRELIMINARY)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:3f458a3e9094b:0-us-consumer-expectations-index-48-5-in-may-preliminary-report-vs-48-1-in-april-final-vs-48-1-markets-expected-for-may-preliminary/"
-    },
-    {
       "title": "Australian police seize $4.1M in Bitcoin tied to darknet market",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -481,22 +543,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:37677289c094b:0-bitcoin-supply-shock-100-000-btc-vanish-from-exchanges-in-under-90-days/"
     },
     {
-      "title": "Bitcoin eyes $80K reclaim as traders say these BTC price support levels must hold",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T11:00:16+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8d21e1d2f094b:0-bitcoin-eyes-80k-reclaim-as-traders-say-these-btc-price-support-levels-must-hold/"
-    },
-    {
-      "title": "Bitcoin Edges Higher as Risk Sentiment Improves Slightly \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T10:55:00+00:00",
-      "timeDisplay": "10:55 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260508004456:0/"
-    },
-    {
       "title": "Oil Broadly Rangebound, With Focus on Peace Efforts \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -511,22 +557,6 @@
       "timestamp": "2026-05-08T10:35:59+00:00",
       "timeDisplay": "10:35 AM",
       "link": "https://www.tradingview.com/news/stocktwits:a002f6546094b:0/"
-    },
-    {
-      "title": "Bitcoin ETFs snap 5-day inflow streak as BTC dips under $80K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T10:20:05+00:00",
-      "timeDisplay": "10:20 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:1449b9c66094b:0-bitcoin-etfs-snap-5-day-inflow-streak-as-btc-dips-under-80k/"
-    },
-    {
-      "title": "This 1 Chart Explains Why Bitcoin Is Winning And Ethereum Is Losing Right Now",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T10:00:55+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:1650038a6094b:0-this-1-chart-explains-why-bitcoin-is-winning-and-ethereum-is-losing-right-now/"
     },
     {
       "title": "Gulf trade shock hits India's industrial exports harder than food shipments",
@@ -615,30 +645,6 @@
       "timestamp": "2026-05-08T05:00:31+00:00",
       "timeDisplay": "5:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:849c83f08094b:0-defi-platform-trustedvolumes-hit-by-6-7m-hack-as-2026-exploits-surge/"
-    },
-    {
-      "title": "Ethereum Price Extends Decline As $2,220 Support Comes Into Play",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T04:58:13+00:00",
-      "timeDisplay": "4:58 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:29e30579a094b:0-ethereum-price-extends-decline-as-2-220-support-comes-into-play/"
-    },
-    {
-      "title": "US oil may retest resistance at $98.49",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T03:13:43+00:00",
-      "timeDisplay": "3:13 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L02F:0-us-oil-may-retest-resistance-at-98-49/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Advance",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T02:54:09+00:00",
-      "timeDisplay": "2:54 AM",
-      "link": "https://www.tradingview.com/news/te_news:549011:0-us-10-year-yield-holds-advance/"
     }
   ]
 }

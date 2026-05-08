@@ -1,51 +1,104 @@
 {
-  "lastUpdated": "2026-05-08T08:15:53.224596+00:00",
-  "lastUpdatedDisplay": "May 08, 2026 \u2014 08:15 AM UTC",
+  "lastUpdated": "2026-05-08T10:13:18.529678+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 10:13 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US-Iran hostilities in the Strait of Hormuz are driving oil prices higher and supporting safe haven demand for gold above $4,700, while the dollar shows mixed performance amid intervention concerns around the yen. Equity markets, particularly AI-driven Asian stocks, continue weekly gains despite geopolitical tensions, while crypto assets face selling pressure near recent highs.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show oil rising on Middle East tensions supporting the reflation narrative, but safe haven flows into gold and mixed dollar performance suggest risk-off undercurrents that could challenge the bullish-cyclicals equity bias.",
+    "macroSummary": "Markets are responding to escalating U.S.-Iran hostilities in the Gulf with oil pushing above $100, gold surging above $4,700, and mixed dollar movements amid intervention concerns. Risk assets show resilience with AI-driven Asian stock gains, while Bitcoin retreats from highs and credit/bond markets face oil-driven pressure.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil above $100 approaches the $115 stagflation threshold while gold's surge above $4,700 suggests deeper inflation/debasement fears than the current Reflation regime implies.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "$115",
-        "signal": "Multiple articles cite oil rising on Hormuz tensions with resistance at $98.49, showing upward pressure toward stagflation threshold"
+        "signal": "Brent topped $100 on Gulf clashes, with oil prices remaining elevated despite trimming some gains"
+      },
+      {
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Multiple headlines cite yen intervention risk capping dollar gains against yen"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil climbing on Gulf/Hormuz clashes with multiple articles citing rising tensions and elevated prices",
+        "signal": "Oil breaking $100 on U.S.-Iran Gulf clashes moves closer to $115 stagflation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold surging above $4,700 on central bank buying and Middle East tensions indicates safe haven demand",
+        "signal": "Gold surging above $4,700 on central bank buying and Middle East tensions suggests extreme debasement hedge demand",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian currencies consolidating with risk-off mood concerns despite AI-driven stock gains shows mixed risk sentiment",
+        "signal": "Eurozone bond yields rising on oil price moves indicates bond market stress from energy-driven inflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar showing mixed performance despite Iran conflict, with yen intervention concerns capping gains",
+        "signal": "Dollar showing mixed performance despite geopolitical tensions, with intervention concerns capping yen gains",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Asian stocks posting AI-driven weekly gains while Bitcoin retreats shows selective risk appetite",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Eurozone bond yields rising as oil prices move up, confirming oil-rates linkage in reflation narrative",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor WTI closely as multiple tension escalations could push toward $115 stagflation threshold",
-      "Consider defensive positioning given strong safe haven flows into gold above $4,700",
-      "Watch BMNR/crypto exposure as Bitcoin and Ethereum showing selling pressure near highs amid risk-off undercurrents"
+      "Monitor oil closely - sustained break above $115 would flip regime to Stagflation dominance",
+      "Watch for any LQD weakness below 107 as bond markets face oil-driven yield pressure",
+      "Consider tightening BMNR put strikes if crypto weakness accelerates amid risk-off rotation"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Treasury Yields, Dollar Decline on Hopes for Middle East De-escalation \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:04:00+00:00",
+      "timeDisplay": "10:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508003759:0/"
+    },
+    {
+      "title": "This 1 Chart Explains Why Bitcoin Is Winning And Ethereum Is Losing Right Now",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:00:55+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:1650038a6094b:0-this-1-chart-explains-why-bitcoin-is-winning-and-ethereum-is-losing-right-now/"
+    },
+    {
+      "title": "Out With the Lamborghinis, In With the Suits: the Changing Face of Cryptoland \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T09:30:00+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508003373:0/"
+    },
+    {
+      "title": "Gulf trade shock hits India's industrial exports harder than food shipments",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T09:28:19+00:00",
+      "timeDisplay": "9:28 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:2b4277e99094b:0-gulf-trade-shock-hits-india-s-industrial-exports-harder-than-food-shipments/"
+    },
+    {
+      "title": "Dollar Little Changed to End the Week",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T09:20:33+00:00",
+      "timeDisplay": "9:20 AM",
+      "link": "https://www.tradingview.com/news/te_news:549206:0-dollar-little-changed-to-end-the-week/"
+    },
+    {
+      "title": "Brent tops $100 on renewed\u00a0Gulf clashes as AI drives Asia stocks to weekly rise",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T08:33:41+00:00",
+      "timeDisplay": "8:33 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0BQ:0-brent-tops-100-on-renewed-gulf-clashes-as-ai-drives-asia-stocks-to-weekly-rise/"
+    },
     {
       "title": "Dollar dips despite U.S.-Iran clashes, yen buoyed by intervention risk",
       "source": "reuters",
@@ -71,6 +124,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260508002373:0/"
     },
     {
+      "title": "JPMorgan Says Bitcoin Is Replacing Gold as Investors\u2019 Top Debasement Hedge\u00a0",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T07:09:47+00:00",
+      "timeDisplay": "7:09 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:48da9be13094b:0-jpmorgan-says-bitcoin-is-replacing-gold-as-investors-top-debasement-hedge/"
+    },
+    {
       "title": "Bitcoin Reclaims Short-Term Holder Cost Basis\u2014What It Means",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -93,6 +154,14 @@
       "timestamp": "2026-05-08T06:41:00+00:00",
       "timeDisplay": "6:41 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260508001985:0/"
+    },
+    {
+      "title": "Bitcoin falls below $80K but market structure still shows resilience",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:30:03+00:00",
+      "timeDisplay": "6:30 AM",
+      "link": "https://www.tradingview.com/news/invezz:749813821094b:0-bitcoin-falls-below-80k-but-market-structure-still-shows-resilience/"
     },
     {
       "title": "Bitcoin Falls as U.S. and Iran Trade Attacks \u2014 Market Talk",
@@ -157,6 +226,14 @@
       "timestamp": "2026-05-08T05:39:00+00:00",
       "timeDisplay": "5:39 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260508000972:0/"
+    },
+    {
+      "title": "Asian stock markets dip as geopolitical risks weigh on investors",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T05:10:41+00:00",
+      "timeDisplay": "5:10 AM",
+      "link": "https://www.tradingview.com/news/invezz:bf4c36613094b:0-asian-stock-markets-dip-as-geopolitical-risks-weigh-on-investors/"
     },
     {
       "title": "Dollar steady as US-Iran hostilities flare, yen steadied by intervention risk",
@@ -439,22 +516,6 @@
       "link": "https://www.tradingview.com/news/macenews:fd25370a9094b:0-fed-officials-point-toward-ending-easing-bias-but-leaving-rates-on-hold/"
     },
     {
-      "title": "Bitcoin slips below $80K despite BTC ETF inflows topping $1B",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T20:05:09+00:00",
-      "timeDisplay": "8:05 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:19a17c079094b:0-bitcoin-slips-below-80k-despite-btc-etf-inflows-topping-1b/"
-    },
-    {
-      "title": "JPMorgan says bitcoin is gaining over gold as debasement trade after Iran conflict",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T20:01:51+00:00",
-      "timeDisplay": "8:01 PM",
-      "link": "https://www.tradingview.com/news/the_block:61068b037094b:0-jpmorgan-says-bitcoin-is-gaining-over-gold-as-debasement-trade-after-iran-conflict/"
-    },
-    {
       "title": "Oil Pick Ups Amid Caution Over U.S.-Iran Peace Efforts \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -583,68 +644,12 @@
       "link": "https://www.tradingview.com/news/macenews:53cef6c5e094b:0-minn-fed-s-kashkari-q-a-nmu-always-ready-to-test-new-ways-to-measure-inflation-core-pce-remains-favored-measure/"
     },
     {
-      "title": "Bitcoin Faces Massive Long Liquidation Imbalance As $15 Billion Sits Below Price",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:00:17+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:d060f6063094b:0-bitcoin-faces-massive-long-liquidation-imbalance-as-15-billion-sits-below-price/"
-    },
-    {
       "title": "HEADS UP: MINN FED'S KASHKARI Q&A AT NORTHERN MICHIGAN UNIVERSITY, CLEVE FED'S HAMMACK Q&A AT OHIO CEO SUMMIT COMING UP AFTER 2P ET",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-05-07T17:52:00+00:00",
       "timeDisplay": "5:52 PM",
       "link": "https://www.tradingview.com/news/macenews:aaa09aa12094b:0-heads-up-minn-fed-s-kashkari-q-a-at-northern-michigan-university-cleve-fed-s-hammack-q-a-at-ohio-ceo-summit-coming-up-after-2p-et/"
-    },
-    {
-      "title": "SBET CEO Says Ethereum Bear Case Is \u2018Very Small\u2019 Amid Institutional Crypto Adoption",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:50:56+00:00",
-      "timeDisplay": "5:50 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:a10ec6918094b:0/"
-    },
-    {
-      "title": "WSJ: SAUDI ARABIA, KUWAIT LIFT RESTRICTIONS ON US USE OF AIRSPACE, OVERFLIGHTS POTENTIALLY ALLOWING RESUMPTION OF OPERATION FREEDOM STRAIT PROTECTION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:46:00+00:00",
-      "timeDisplay": "5:46 PM",
-      "link": "https://www.tradingview.com/news/macenews:1579bdfba094b:0-wsj-saudi-arabia-kuwait-lift-restrictions-on-us-use-of-airspace-overflights-potentially-allowing-resumption-of-operation-freedom-strait-protection/"
-    },
-    {
-      "title": "Samson Mow defends Strategy selling portions of its Bitcoin treasury",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:32:19+00:00",
-      "timeDisplay": "5:32 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a0afc6b16094b:0-samson-mow-defends-strategy-selling-portions-of-its-bitcoin-treasury/"
-    },
-    {
-      "title": "Bitcoin bulls \u2018approaching the ceiling\u2019 near $85K resistance with $1.69B ETF inflow streak and macro tailwinds aligned: analysts",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:21:30+00:00",
-      "timeDisplay": "5:21 PM",
-      "link": "https://www.tradingview.com/news/the_block:fb833e7a5094b:0-bitcoin-bulls-approaching-the-ceiling-near-85k-resistance-with-1-69b-etf-inflow-streak-and-macro-tailwinds-aligned-analysts/"
-    },
-    {
-      "title": "Crude Oil Swings Higher",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:16:00+00:00",
-      "timeDisplay": "5:16 PM",
-      "link": "https://www.tradingview.com/news/te_news:548884:0-crude-oil-swings-higher/"
-    },
-    {
-      "title": "Why Are Bitcoin, Ethereum and XRP Prices Falling Today?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:14:46+00:00",
-      "timeDisplay": "5:14 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:f761da136094b:0-why-are-bitcoin-ethereum-and-xrp-prices-falling-today/"
     }
   ]
 }

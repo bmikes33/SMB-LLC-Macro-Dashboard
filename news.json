@@ -1,56 +1,155 @@
 {
-  "lastUpdated": "2026-05-08T10:13:18.529678+00:00",
-  "lastUpdatedDisplay": "May 08, 2026 \u2014 10:13 AM UTC",
+  "lastUpdated": "2026-05-08T12:01:59.928169+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 12:01 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are responding to escalating U.S.-Iran hostilities in the Gulf with oil pushing above $100, gold surging above $4,700, and mixed dollar movements amid intervention concerns. Risk assets show resilience with AI-driven Asian stock gains, while Bitcoin retreats from highs and credit/bond markets face oil-driven pressure.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil above $100 approaches the $115 stagflation threshold while gold's surge above $4,700 suggests deeper inflation/debasement fears than the current Reflation regime implies.",
+    "macroSummary": "Markets show mixed signals as US-Iran military exchanges push oil above $100 and gold above $4,700, while the dollar weakens for a second straight week despite geopolitical tensions. Bitcoin falls below $80K amid crypto sector rotation, with ETF outflows breaking a 5-day streak, though overall risk sentiment remains cautiously positive with Asian stocks rising on AI optimism.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil above $100 reinforces stagflationary pressures within the reflation regime, but dollar weakness and declining Treasury yields contradict expected reflation dynamics during geopolitical stress.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "$115",
-        "signal": "Brent topped $100 on Gulf clashes, with oil prices remaining elevated despite trimming some gains"
-      },
-      {
-        "indicator": "USDJPY",
-        "level": "160",
-        "signal": "Multiple headlines cite yen intervention risk capping dollar gains against yen"
+        "signal": "Brent crude topped $100 on US-Iran clashes, approaching the stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil breaking $100 on U.S.-Iran Gulf clashes moves closer to $115 stagflation threshold",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Oil above $100 on US-Iran military exchanges reinforces stagflationary oil shock scenario",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold surging above $4,700 on central bank buying and Middle East tensions suggests extreme debasement hedge demand",
+        "signal": "Dollar weakening for second straight week despite geopolitical tensions contradicts typical reflation/risk-off dynamics",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Eurozone bond yields rising on oil price moves indicates bond market stress from energy-driven inflation",
+        "signal": "Treasury yields and dollar declining on Middle East de-escalation hopes suggests markets pricing temporary geopolitical premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar showing mixed performance despite geopolitical tensions, with intervention concerns capping yen gains",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Gold above $4,700 on central bank buying and Middle East tensions shows continued debasement hedge demand",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Asian stocks posting AI-driven weekly gains while Bitcoin retreats shows selective risk appetite",
+        "signal": "Bitcoin below $80K with ETF outflows breaking streak indicates crypto risk-off despite broader equity resilience",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil closely - sustained break above $115 would flip regime to Stagflation dominance",
-      "Watch for any LQD weakness below 107 as bond markets face oil-driven yield pressure",
-      "Consider tightening BMNR put strikes if crypto weakness accelerates amid risk-off rotation"
+      "Monitor oil trajectory toward $115 threshold as US-Iran tensions could accelerate stagflation tilt",
+      "Watch dollar weakness - if DXY approaches 100 despite geopolitical stress, regime assumptions may need revision",
+      "BMNR ladder: crypto weakness below key levels may present better entry points for cash-secured puts"
     ]
   },
   "articles": [
+    {
+      "title": "Why Is WULF Stock On Retail Radar Today? TeraWulf Just Flipped Its Revenue Mix \u2013 HPC Now Outearns Bitcoin Mining",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:55:05+00:00",
+      "timeDisplay": "11:55 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:e3d371b2b094b:0/"
+    },
+    {
+      "title": "Dollar set for second straight weekly fall despite US-Iran clashes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T11:44:13+00:00",
+      "timeDisplay": "11:44 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0JE:0-dollar-set-for-second-straight-weekly-fall-despite-us-iran-clashes/"
+    },
+    {
+      "title": "Four signs that show Ethereum's rally is exhausted at $2.4K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:30:57+00:00",
+      "timeDisplay": "11:30 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:034aad30c094b:0-four-signs-that-show-ethereum-s-rally-is-exhausted-at-2-4k/"
+    },
+    {
+      "title": "Bitcoin Dives Below $80,000. Why the Jobs Report Could Give Cryptos a Boost. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:26:00+00:00",
+      "timeDisplay": "11:26 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508005101:0/"
+    },
+    {
+      "title": "Mantle tokenholders approve 30K ETH Aave credit facility after rsETH exploit",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:22:35+00:00",
+      "timeDisplay": "11:22 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e46e3f6b5094b:0-mantle-tokenholders-approve-30k-eth-aave-credit-facility-after-rseth-exploit/"
+    },
+    {
+      "title": "Central-Bank Buying Supports Gold Prices But Further Gains Are Capped \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:07:00+00:00",
+      "timeDisplay": "11:07 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508004939:0/"
+    },
+    {
+      "title": "Bitcoin Supply Shock: 100,000 BTC Vanish From Exchanges In Under 90 Days",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:00:32+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:37677289c094b:0-bitcoin-supply-shock-100-000-btc-vanish-from-exchanges-in-under-90-days/"
+    },
+    {
+      "title": "Bitcoin eyes $80K reclaim as traders say these BTC price support levels must hold",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T11:00:16+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8d21e1d2f094b:0-bitcoin-eyes-80k-reclaim-as-traders-say-these-btc-price-support-levels-must-hold/"
+    },
+    {
+      "title": "Bitcoin Edges Higher as Risk Sentiment Improves Slightly \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:55:00+00:00",
+      "timeDisplay": "10:55 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508004456:0/"
+    },
+    {
+      "title": "Oil Broadly Rangebound, With Focus on Peace Efforts \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:53:00+00:00",
+      "timeDisplay": "10:53 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508004439:0/"
+    },
+    {
+      "title": "Chip push, crude pull",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T10:42:12+00:00",
+      "timeDisplay": "10:42 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0J6:0-chip-push-crude-pull/"
+    },
+    {
+      "title": "Bitcoin Price Drops Below $80K Support After US-Iran \u2018Love Tap\u2019 Pushes Brent Crude Over $100",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:35:59+00:00",
+      "timeDisplay": "10:35 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:a002f6546094b:0/"
+    },
+    {
+      "title": "Bitcoin ETFs snap 5-day inflow streak as BTC dips under $80K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T10:20:05+00:00",
+      "timeDisplay": "10:20 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:1449b9c66094b:0-bitcoin-etfs-snap-5-day-inflow-streak-as-btc-dips-under-80k/"
+    },
     {
       "title": "U.S. Treasury Yields, Dollar Decline on Hopes for Middle East De-escalation \u2014 Market Talk",
       "source": "dow-jones",
@@ -66,6 +165,22 @@
       "timestamp": "2026-05-08T10:00:55+00:00",
       "timeDisplay": "10:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:1650038a6094b:0-this-1-chart-explains-why-bitcoin-is-winning-and-ethereum-is-losing-right-now/"
+    },
+    {
+      "title": "CZ Says Bitcoin Recovery Could Come Faster This Cycle After Clearing October 2025 Flash Crash Blame",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T09:46:03+00:00",
+      "timeDisplay": "9:46 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:2b51a8050094b:0-cz-says-bitcoin-recovery-could-come-faster-this-cycle-after-clearing-october-2025-flash-crash-blame/"
+    },
+    {
+      "title": "What If the CLARITY Act Fails in July?\u00a0",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T09:32:11+00:00",
+      "timeDisplay": "9:32 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:22e48d325094b:0-what-if-the-clarity-act-fails-in-july/"
     },
     {
       "title": "Out With the Lamborghinis, In With the Suits: the Changing Face of Cryptoland \u2014 WSJ",
@@ -372,14 +487,6 @@
       "link": "https://www.tradingview.com/news/tradingview:1ee0d1164c64b:0-key-facts-eth-2-36-2-41k-bny-adgm-custody-unfreeze-30-765-eth/"
     },
     {
-      "title": "Bitcoin bulls target $115K by December: Does data back the expectation?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T23:56:15+00:00",
-      "timeDisplay": "11:56 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:9917b823b094b:0-bitcoin-bulls-target-115k-by-december-does-data-back-the-expectation/"
-    },
-    {
       "title": "Gold Holds Steady as US-Iran Tensions Persist",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -412,44 +519,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K1ZX:0-oil-jumps-and-stock-futures-slip-on-renewed-us-iran-fighting/"
     },
     {
-      "title": "Bitcoin Cycle Breaks Pattern as On-Chain Metrics Hit 4-Year Low",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T22:44:53+00:00",
-      "timeDisplay": "10:44 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:5fe81fd06094b:0-bitcoin-cycle-breaks-pattern-as-on-chain-metrics-hit-4-year-low/"
-    },
-    {
-      "title": "Analyst Sets $220,000 Minimum Price Target For Bitcoin, But How Will It Get There?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T22:30:09+00:00",
-      "timeDisplay": "10:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:aeef93aac094b:0-analyst-sets-220-000-minimum-price-target-for-bitcoin-but-how-will-it-get-there/"
-    },
-    {
       "title": "US oil prices jump on US-Iran hostilities",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-07T22:10:09+00:00",
       "timeDisplay": "10:10 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K2GS:0-us-oil-prices-jump-on-us-iran-hostilities/"
-    },
-    {
-      "title": "Bitcoin exchange reserves fall to two-year low after $8B exodus",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T21:52:34+00:00",
-      "timeDisplay": "9:52 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8f8a5fb45094b:0-bitcoin-exchange-reserves-fall-to-two-year-low-after-8b-exodus/"
-    },
-    {
-      "title": "JPMorgan Says Strategy Could Buy Up To $30B In Bitcoin This Year\u2013 TD Cowen Lifts Target To $395",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T21:49:43+00:00",
-      "timeDisplay": "9:49 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:40a3680a0094b:0-jpmorgan-says-strategy-could-buy-up-to-30b-in-bitcoin-this-year-td-cowen-lifts-target-to-395/"
     },
     {
       "title": "US COURT OF INTERNATIONAL TRADE RULES AGAINST PRES TRUMP'S LATEST 10% GLOBAL TARIFFS UNDER SECTION 122",
@@ -460,44 +535,12 @@
       "link": "https://www.tradingview.com/news/macenews:77b2ee26a094b:0-us-court-of-international-trade-rules-against-pres-trump-s-latest-10-global-tariffs-under-section-122/"
     },
     {
-      "title": "Dorsey\u2019s Block raises full-year guidance after \u2018strong\u2019 Q1, records $173 million bitcoin remeasurement loss",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T21:16:19+00:00",
-      "timeDisplay": "9:16 PM",
-      "link": "https://www.tradingview.com/news/the_block:090ab9542094b:0-dorsey-s-block-raises-full-year-guidance-after-strong-q1-records-173-million-bitcoin-remeasurement-loss/"
-    },
-    {
-      "title": "Matador Technologies Files Quarterly ATM Program Report Detailing $1.2 Million in Gross Proceeds",
-      "source": "acceswire",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T21:10:00+00:00",
-      "timeDisplay": "9:10 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026-05-07:newsml_ACSgc5zca:0/"
-    },
-    {
       "title": "ETF League Tables: Invesco Loses $3.1B",
       "source": "etfcom",
       "color": "#00e5ff",
       "timestamp": "2026-05-07T21:00:04+00:00",
       "timeDisplay": "9:00 PM",
       "link": "https://www.tradingview.com/news/etfcom:866390a83094b:0-etf-league-tables-invesco-loses-3-1b/"
-    },
-    {
-      "title": "Fund managers double down on Bitcoin as crypto sentiment rebounds \u2014 CoinShares",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T20:55:08+00:00",
-      "timeDisplay": "8:55 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:32b8fa148094b:0-fund-managers-double-down-on-bitcoin-as-crypto-sentiment-rebounds-coinshares/"
-    },
-    {
-      "title": "Two Catalysts \u2013 Why CLARITY and the Strategic Bitcoin Reserve Could Pull Crypto Higher Into Summer",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T20:33:25+00:00",
-      "timeDisplay": "8:33 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:60d9ed341094b:0/"
     },
     {
       "title": "Wall St takes a pit stop: US-Iran peace talks inch along, April jobs numbers on tap",
@@ -602,54 +645,6 @@
       "timestamp": "2026-05-07T18:30:00+00:00",
       "timeDisplay": "6:30 PM",
       "link": "https://www.tradingview.com/news/macenews:defcbd7ce094b:0-cleve-fed-s-hammack-q-a-columbus-uncertainty-aboout-the-economy-translates-into-uncertainty-about-monpol-have-a-strange-balance-in-jobs-infl-key/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/COLUMBUS: ALTHOUGH MONPOL FED'S MAIN JOB, NO.2 IS MONITORING FINANCIAL STABILITY, REASON FED WAS FOUNDED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:23:00+00:00",
-      "timeDisplay": "6:23 PM",
-      "link": "https://www.tradingview.com/news/macenews:8dafd3f1f094b:0-cleve-fed-s-hammack-q-a-columbus-although-monpol-fed-s-main-job-no-2-is-monitoring-financial-stability-reason-fed-was-founded/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/NMU: AGAIN RECOMMENDS BOOK 'WAYS & MEANS' ABOUT CIVIL WAR ECONOMY, FOUNDATION FOR US BANKING SYSTEM; ENDS Q&A",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:13:00+00:00",
-      "timeDisplay": "6:13 PM",
-      "link": "https://www.tradingview.com/news/macenews:9da12926f094b:0-minn-fed-s-kashkari-q-a-nmu-again-recommends-book-ways-means-about-civil-war-economy-foundation-for-us-banking-system-ends-q-a/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/NMU: REPEATS, FED DOESN'T HAVE TOOLS TO ADDRESS INCOME INEQUALITY; FED 'WELL EQUIPPED' TO HANDLE CRISES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:10:00+00:00",
-      "timeDisplay": "6:10 PM",
-      "link": "https://www.tradingview.com/news/macenews:312cf677b094b:0-minn-fed-s-kashkari-q-a-nmu-repeats-fed-doesn-t-have-tools-to-address-income-inequality-fed-well-equipped-to-handle-crises/"
-    },
-    {
-      "title": "S&P 500's 10% Surge Pushes Sentiment Toward Manic Territory",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:09:16+00:00",
-      "timeDisplay": "6:09 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:859478821094b:0-s-p-500-s-10-surge-pushes-sentiment-toward-manic-territory/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/NMU: ALWAYS READY TO TEST NEW WAYS TO MEASURE INFLATION; CORE PCE REMAINS FAVORED MEASURE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T18:06:00+00:00",
-      "timeDisplay": "6:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:53cef6c5e094b:0-minn-fed-s-kashkari-q-a-nmu-always-ready-to-test-new-ways-to-measure-inflation-core-pce-remains-favored-measure/"
-    },
-    {
-      "title": "HEADS UP: MINN FED'S KASHKARI Q&A AT NORTHERN MICHIGAN UNIVERSITY, CLEVE FED'S HAMMACK Q&A AT OHIO CEO SUMMIT COMING UP AFTER 2P ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T17:52:00+00:00",
-      "timeDisplay": "5:52 PM",
-      "link": "https://www.tradingview.com/news/macenews:aaa09aa12094b:0-heads-up-minn-fed-s-kashkari-q-a-at-northern-michigan-university-cleve-fed-s-hammack-q-a-at-ohio-ceo-summit-coming-up-after-2p-et/"
     }
   ]
 }

@@ -1,51 +1,157 @@
 {
-  "lastUpdated": "2026-05-08T14:49:32.983863+00:00",
-  "lastUpdatedDisplay": "May 08, 2026 \u2014 02:49 PM UTC",
+  "lastUpdated": "2026-05-08T16:11:41.749713+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 04:11 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US employment data came in solid but consumer sentiment deteriorated sharply with current conditions dropping 9% on price pressures, while 1-year inflation expectations remain elevated at 4.5%. The dollar fell to 10-week lows amid hopes for US-Iran conflict resolution, though oil prices remain steady and consumers cite ongoing concerns about gas prices and tariff effects.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar weakness and conflict resolution hopes support risk-on, but consumer sentiment collapse and persistent inflation expectations signal stagflationary pressure building.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "DXY at 10-week low amid Iran ceasefire optimism - approaching dollar regime flip threshold"
-      }
-    ],
+    "macroSummary": "Consumer sentiment deteriorated sharply with credit balances surging while current conditions dropped 9% on high price fears. Fed's Goolsbee suggested rates may need to rise if AI productivity assumptions prove premature, while oil remains elevated with Iran tensions persisting. Jobs growth was solid but hiring rates remain weak, and high-yield credit spreads are viewed as too tight by buyers.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Consumer sentiment collapse, credit stress emergence, and Fed hawkish pivot on AI productivity directly contradict the bullish-cyclicals stance while validating stagflationary concerns.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Consumer sentiment plunged with current conditions down 9% as consumers cite being 'buffeted by price pressures' from gas and tariffs",
+        "signal": "Consumer sentiment tanks with credit balances surging and current conditions down 9% on price fears",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "1-year inflation expectations at 4.5% well above pre-Iran war 3.4% level despite modest decline from 4.7%",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "DXY falling to 10-week lows on Iran conflict resolution hopes",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Wall Street rising on solid payrolls despite Middle East tensions and oil price concerns",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Goolsbee warns rates must rise more if Fed delays responding to AI-driven productivity surge and wealth effects",
+        "signal": "Fed's Goolsbee warns rates must rise if AI productivity surge proves premature, suggesting hawkish pivot",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "High-yield spreads deemed too tight by buyers, indicating credit market stress building",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Jobs hiring rate remains weak despite headline growth, showing labor market fragility",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil elevated with Iran tensions persisting, maintaining stagflationary pressure",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - break below 100 invalidates dollar strength assumption in current regime",
-      "Consumer sentiment collapse suggests stagflation pressure mounting - consider reducing BMNR exposure if sentiment continues deteriorating",
-      "Watch for oil price reaction if Iran ceasefire materializes - break below current levels could ease stagflation concerns"
+      "Monitor HYG closely for approach to 79 threshold as credit stress signals emerge",
+      "Reduce BMNR ladder exposure given consumer credit deterioration conflicting with risk-on positioning",
+      "Prepare defensive rotation as multiple regime contradictions surfacing simultaneously"
     ]
   },
   "articles": [
+    {
+      "title": "The US consumer: Sentiment tanks as credit balances surge",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T16:10:16+00:00",
+      "timeDisplay": "4:10 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0WH:0-the-us-consumer-sentiment-tanks-as-credit-balances-surge/"
+    },
+    {
+      "title": "Stocks mixed as investors digest US job growth, chipmaker earnings and elevated oil",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T15:55:10+00:00",
+      "timeDisplay": "3:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0V6:0-stocks-mixed-as-investors-digest-us-job-growth-chipmaker-earnings-and-elevated-oil/"
+    },
+    {
+      "title": "US HY spreads too tight to tempt buyers",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T15:52:18+00:00",
+      "timeDisplay": "3:52 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0V4:0-us-hy-spreads-too-tight-to-tempt-buyers/"
+    },
+    {
+      "title": "Gold Seen Transitioning Away From 'Corrective Phase' \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:39:00+00:00",
+      "timeDisplay": "3:39 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508007855:0/"
+    },
+    {
+      "title": "Bitcoin\u2019s \u2018overbought\u2019 signal flashes price top warning with focus on $78K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:35:23+00:00",
+      "timeDisplay": "3:35 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ac05eaecc094b:0-bitcoin-s-overbought-signal-flashes-price-top-warning-with-focus-on-78k/"
+    },
+    {
+      "title": "Bitcoin price reclaims $80K as traders defend key support zone",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:28:55+00:00",
+      "timeDisplay": "3:28 PM",
+      "link": "https://www.tradingview.com/news/invezz:3cec9eb59094b:0-bitcoin-price-reclaims-80k-as-traders-defend-key-support-zone/"
+    },
+    {
+      "title": "'Altcoin Season' Indicator on the Rise \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:20:00+00:00",
+      "timeDisplay": "3:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508007733:0/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/CNBC ENDED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:16:00+00:00",
+      "timeDisplay": "3:16 PM",
+      "link": "https://www.tradingview.com/news/macenews:ec488ba66094b:0-chi-fed-s-goolsbee-q-a-cnbc-ended/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/CNBC: REPEATS, MORE HYPE ABOUT FUTURE PRODUCTIVITY SURGE BECAUSE OF A.I. THE MORE THE POSSIBILITY OF RATE HIKES",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:14:00+00:00",
+      "timeDisplay": "3:14 PM",
+      "link": "https://www.tradingview.com/news/macenews:54fdbce7a094b:0-chi-fed-s-goolsbee-q-a-cnbc-repeats-more-hype-about-future-productivity-surge-because-of-a-i-the-more-the-possibility-of-rate-hikes/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/CNBC: REPEATS, SKEPTICAL ABOUT USE OF FORWARD GUIDANCE; NEED TO LOOK AT HOUSING SERVICES, FOOD, ENERGY IN ADDITION TO CORE PCE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:12:00+00:00",
+      "timeDisplay": "3:12 PM",
+      "link": "https://www.tradingview.com/news/macenews:1701cf212094b:0-chi-fed-s-goolsbee-q-a-cnbc-repeats-skeptical-about-use-of-forward-guidance-need-to-look-at-housing-services-food-energy-in-addition-to-core-pce/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/CNBC: WHAT'S NOT GOOD ABOUT JOBS IS HIRING RATE; INFL NOT ALL ENERGY; IF ASSUMPTION IS RATES GOING DOWN LEAVES FED IN 'PICKLE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:09:00+00:00",
+      "timeDisplay": "3:09 PM",
+      "link": "https://www.tradingview.com/news/macenews:ff0ac35c6094b:0-chi-fed-s-goolsbee-q-a-cnbc-what-s-not-good-about-jobs-is-hiring-rate-infl-not-all-energy-if-assumption-is-rates-going-down-leaves-fed-in-pickle/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/CNBC: RE JOBS RPT, 'PRETTY MUCH STABLE ... WITHOUT BEING GOOD;' STILL THINK NOT A LOT OF EVIDENCE JOBS MKT FALLING APART",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:07:00+00:00",
+      "timeDisplay": "3:07 PM",
+      "link": "https://www.tradingview.com/news/macenews:35e108a24094b:0-chi-fed-s-goolsbee-q-a-cnbc-re-jobs-rpt-pretty-much-stable-without-being-good-still-think-not-a-lot-of-evidence-jobs-mkt-falling-apart/"
+    },
+    {
+      "title": "Bitcoin Slips Back Below the $80k Mark \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T15:05:00+00:00",
+      "timeDisplay": "3:05 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508007638:0/"
+    },
+    {
+      "title": "BOE Could Raise Interest Rates in 2026 If Brent Stays Around $90 Per Barrel \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T14:59:00+00:00",
+      "timeDisplay": "2:59 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508007557:0/"
+    },
     {
       "title": "Better than bad: An April employment report deep dive",
       "source": "reuters",
@@ -69,6 +175,14 @@
       "timestamp": "2026-05-08T14:39:00+00:00",
       "timeDisplay": "2:39 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260508007418:0/"
+    },
+    {
+      "title": "Treasury Yields Edge Down, Iran Response Awaited",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T14:37:39+00:00",
+      "timeDisplay": "2:37 PM",
+      "link": "https://www.tradingview.com/news/te_news:549303:0-treasury-yields-edge-down-iran-response-awaited/"
     },
     {
       "title": "CLARITY Act Markup Could Reportedly Hit Next Week \u2014 Coinbase CEO Brian Armstrong Says It Won't Change Contract With Circle",
@@ -117,6 +231,14 @@
       "timestamp": "2026-05-08T14:09:38+00:00",
       "timeDisplay": "2:09 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0QJ:0-wall-street-looks-through-pricey-oil-to-cheer-us-job-growth-chipmaker-earnings/"
+    },
+    {
+      "title": "US yields fall after solid jobs report; Iran creasefire eyed",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T14:08:24+00:00",
+      "timeDisplay": "2:08 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0OZ:0-us-yields-fall-after-solid-jobs-report-iran-creasefire-eyed/"
     },
     {
       "title": "MORE US CONSUMER SENTIMENT FOR MAY: 1-YEAR INFLATION EXPECTATIONS DOWN TO 4.5% IN MAY FROM 4.7% IN APRIL BUT WELL ABOVE FEB.'S  3.4%, PRE-IRAN WAR",
@@ -191,22 +313,6 @@
       "link": "https://www.tradingview.com/news/macenews:3f458a3e9094b:0-us-consumer-expectations-index-48-5-in-may-preliminary-report-vs-48-1-in-april-final-vs-48-1-markets-expected-for-may-preliminary/"
     },
     {
-      "title": "US CONSUMER SENTIMENT INDEX 48.2 IN MAY PRELIMINARY REPORT VS. 49.8 IN APRIL FINAL (VS. 49.7 MARKETS EXPECTED FOR MAY PRELIMINARY)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:1fe8bbb83094b:0-us-consumer-sentiment-index-48-2-in-may-preliminary-report-vs-49-8-in-april-final-vs-49-7-markets-expected-for-may-preliminary/"
-    },
-    {
-      "title": "Dollar slips as investors pin hopes on a resolution to the US-Iran conflict",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T13:57:16+00:00",
-      "timeDisplay": "1:57 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L0H7:0-dollar-slips-as-investors-pin-hopes-on-a-resolution-to-the-us-iran-conflict/"
-    },
-    {
       "title": "Australian police seize $4.1M in Bitcoin tied to darknet market",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -223,28 +329,20 @@
       "link": "https://www.tradingview.com/news/chainwire:46cd1c204094b:0-bybit-introduces-24-7-tradfi-perpetual-contracts-trading-for-dozens-of-us-stocks-and-global-etfs/"
     },
     {
-      "title": "Wall Street rises as solid payrolls offset Middle East jitters",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T13:50:49+00:00",
-      "timeDisplay": "1:50 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0R8:0-wall-street-rises-as-solid-payrolls-offset-middle-east-jitters/"
-    },
-    {
-      "title": "South African rand firms on weaker dollar, Ramaphosa court ruling in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T13:37:48+00:00",
-      "timeDisplay": "1:37 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L0J6:0-south-african-rand-firms-on-weaker-dollar-ramaphosa-court-ruling-in-focus/"
-    },
-    {
       "title": "Oil Futures Steady in Early U.S. Trading \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-08T13:30:00+00:00",
       "timeDisplay": "1:30 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260508006833:0/"
+    },
+    {
+      "title": "U.S. Treasury Buys Back $4 Billion of Debt, Why Bullish For Bitcoin Traders",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T13:28:38+00:00",
+      "timeDisplay": "1:28 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:1e78d1110094b:0-u-s-treasury-buys-back-4-billion-of-debt-why-bullish-for-bitcoin-traders/"
     },
     {
       "title": "Sono Group N.V. Completes Exit from Legacy Solar Operations",
@@ -271,22 +369,6 @@
       "link": "https://www.tradingview.com/news/te_news:549269:0-gold-prices-surge-amid-us-iran-ceasefire-optimism/"
     },
     {
-      "title": "Dollar Extends Decline Amid Robust U.S. Labor Indicators \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T13:05:00+00:00",
-      "timeDisplay": "1:05 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260508006531:0/"
-    },
-    {
-      "title": "US stock futures add slightly to gains after latest jobs data\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T13:02:39+00:00",
-      "timeDisplay": "1:02 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0NG:0-us-stock-futures-add-slightly-to-gains-after-latest-jobs-data/"
-    },
-    {
       "title": "Treasury Yields Little Changed After Payrolls",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -301,38 +383,6 @@
       "timestamp": "2026-05-08T12:43:29+00:00",
       "timeDisplay": "12:43 PM",
       "link": "https://www.tradingview.com/news/beincrypto:ab5f343fd094b:0-michael-saylor-backtracks-from-sell-a-kidney-stance-to-selling-bitcoin/"
-    },
-    {
-      "title": "DXY Falls to 10-Week Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T12:41:36+00:00",
-      "timeDisplay": "12:41 PM",
-      "link": "https://www.tradingview.com/news/te_news:549263:0-dxy-falls-to-10-week-low/"
-    },
-    {
-      "title": "MORE U.S. APRIL JOBS: FINANCIAL ACTIVITIES -11K, DOWN 30K IN MARCH & APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T12:37:00+00:00",
-      "timeDisplay": "12:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:f5c63c49b094b:0-more-u-s-april-jobs-financial-activities-11k-down-30k-in-march-april/"
-    },
-    {
-      "title": "MORE U.S. APRIL JOBS: LEISURE & HOSPITALITY +14K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T12:37:00+00:00",
-      "timeDisplay": "12:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:fca90b5fb094b:0-more-u-s-april-jobs-leisure-hospitality-14k/"
-    },
-    {
-      "title": "MORE U.S. APRIL JOBS: INFORMATION -13K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:027f5a031094b:0-more-u-s-april-jobs-information-13k/"
     },
     {
       "title": "Revolut Confirms Bitcoin Price Glitch After App Briefly Shows BTC Near Zero",
@@ -479,52 +529,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:1650038a6094b:0-this-1-chart-explains-why-bitcoin-is-winning-and-ethereum-is-losing-right-now/"
     },
     {
-      "title": "TeraWulf Posts Steep Loss As It Pivots To A.I. Data Centres",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T10:00:00+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:b3dfcc3cd094b:0-terawulf-posts-steep-loss-as-it-pivots-to-a-i-data-centres/"
-    },
-    {
-      "title": "CZ Says Bitcoin Recovery Could Come Faster This Cycle After Clearing October 2025 Flash Crash Blame",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T09:46:03+00:00",
-      "timeDisplay": "9:46 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:2b51a8050094b:0-cz-says-bitcoin-recovery-could-come-faster-this-cycle-after-clearing-october-2025-flash-crash-blame/"
-    },
-    {
-      "title": "What If the CLARITY Act Fails in July?\u00a0",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T09:32:11+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:22e48d325094b:0-what-if-the-clarity-act-fails-in-july/"
-    },
-    {
-      "title": "Out With the Lamborghinis, In With the Suits: the Changing Face of Cryptoland \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T09:30:00+00:00",
-      "timeDisplay": "9:30 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260508003373:0/"
-    },
-    {
       "title": "Gulf trade shock hits India's industrial exports harder than food shipments",
       "source": "moneycontrol",
       "color": "#00e5ff",
       "timestamp": "2026-05-08T09:28:19+00:00",
       "timeDisplay": "9:28 AM",
       "link": "https://www.tradingview.com/news/moneycontrol:2b4277e99094b:0-gulf-trade-shock-hits-india-s-industrial-exports-harder-than-food-shipments/"
-    },
-    {
-      "title": "Coinbase Reports First-Quarter Loss Due To Volatile Crypto ",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T09:08:00+00:00",
-      "timeDisplay": "9:08 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:38eddd11b094b:0-coinbase-reports-first-quarter-loss-due-to-volatile-crypto/"
     },
     {
       "title": "Brent tops $100 on renewed\u00a0Gulf clashes as AI drives Asia stocks to weekly rise",
@@ -629,22 +639,6 @@
       "timestamp": "2026-05-08T02:54:09+00:00",
       "timeDisplay": "2:54 AM",
       "link": "https://www.tradingview.com/news/te_news:549011:0-us-10-year-yield-holds-advance/"
-    },
-    {
-      "title": "Oil higher on Mideast hostilities; AI drives Asian stocks to sparkling weekly gains",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T02:46:52+00:00",
-      "timeDisplay": "2:46 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L00D:0-oil-higher-on-mideast-hostilities-ai-drives-asian-stocks-to-sparkling-weekly-gains/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-08T01:34:39+00:00",
-      "timeDisplay": "1:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L010:0-commodities-intraday-targets-key-levels/"
     }
   ]
 }

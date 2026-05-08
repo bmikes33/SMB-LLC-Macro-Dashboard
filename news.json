@@ -1,51 +1,107 @@
 {
-  "lastUpdated": "2026-05-08T06:25:07.320123+00:00",
-  "lastUpdatedDisplay": "May 08, 2026 \u2014 06:25 AM UTC",
+  "lastUpdated": "2026-05-08T08:15:53.224596+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 08:15 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices jumped on renewed US-Iran military hostilities in the Gulf region, with tensions around the Strait of Hormuz driving safe-haven flows into gold and dollar strength. Despite geopolitical stress, Asian equity markets posted strong weekly gains driven by AI-related optimism, while crypto markets showed mixed action with Bitcoin consolidating near recent highs.",
+    "macroSummary": "US-Iran hostilities in the Strait of Hormuz are driving oil prices higher and supporting safe haven demand for gold above $4,700, while the dollar shows mixed performance amid intervention concerns around the yen. Equity markets, particularly AI-driven Asian stocks, continue weekly gains despite geopolitical tensions, while crypto assets face selling pressure near recent highs.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Oil shock escalation supports the reflation thesis, but safe-haven dollar strength and risk-off undertones in FX markets contradict the bullish-cyclicals equity bias.",
+    "regimePressureReason": "Headlines show oil rising on Middle East tensions supporting the reflation narrative, but safe haven flows into gold and mixed dollar performance suggest risk-off undercurrents that could challenge the bullish-cyclicals equity bias.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "approaching $98.49 resistance",
-        "signal": "Multiple headlines cite oil testing technical resistance levels amid Hormuz tensions"
+        "level": "$115",
+        "signal": "Multiple articles cite oil rising on Hormuz tensions with resistance at $98.49, showing upward pressure toward stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices jumping on US-Iran Gulf hostilities supports embedded war premium assumption",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar firming on geopolitical tensions contradicts risk-on equity flows",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Asian currencies showing risk-off consolidation despite AI-driven equity gains",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Gold rising on safe-haven demand conflicts with pure reflation/growth narrative",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil testing $98.49 resistance with potential for further upside toward $115 threshold",
+        "signal": "Oil climbing on Gulf/Hormuz clashes with multiple articles citing rising tensions and elevated prices",
         "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Gold surging above $4,700 on central bank buying and Middle East tensions indicates safe haven demand",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Asian currencies consolidating with risk-off mood concerns despite AI-driven stock gains shows mixed risk sentiment",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar showing mixed performance despite Iran conflict, with yen intervention concerns capping gains",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Eurozone bond yields rising as oil prices move up, confirming oil-rates linkage in reflation narrative",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil's break above $98.49 - sustained move toward $115 would trigger stagflation tilt dominance",
-      "Watch for VIX response to geopolitical tensions - risk-off Safe haven flows may challenge cyclical equity bias",
-      "BMNR ladder: Consider rolling up strikes if crypto consolidation continues amid macro uncertainty"
+      "Monitor WTI closely as multiple tension escalations could push toward $115 stagflation threshold",
+      "Consider defensive positioning given strong safe haven flows into gold above $4,700",
+      "Watch BMNR/crypto exposure as Bitcoin and Ethereum showing selling pressure near highs amid risk-off undercurrents"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar dips despite U.S.-Iran clashes, yen buoyed by intervention risk",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T08:08:31+00:00",
+      "timeDisplay": "8:08 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41L0DF:0-dollar-dips-despite-u-s-iran-clashes-yen-buoyed-by-intervention-risk/"
+    },
+    {
+      "title": "Gold Futures Above $4,700 on Central-Bank Buying, Middle East Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T07:49:00+00:00",
+      "timeDisplay": "7:49 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508002553:0/"
+    },
+    {
+      "title": "Oil Trims Gains, but U.S.-Iran Attacks Keep Prices Elevated \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T07:23:00+00:00",
+      "timeDisplay": "7:23 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508002373:0/"
+    },
+    {
+      "title": "Bitcoin Reclaims Short-Term Holder Cost Basis\u2014What It Means",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:55:36+00:00",
+      "timeDisplay": "6:55 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:f3e67a73c094b:0-bitcoin-reclaims-short-term-holder-cost-basis-what-it-means/"
+    },
+    {
+      "title": "Indian Central Bank Unlikely to Hike Rates in 2H \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:48:00+00:00",
+      "timeDisplay": "6:48 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508002017:0/"
+    },
+    {
+      "title": "Eurozone Bond Yields Open Higher as Oil Prices Move Up \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:41:00+00:00",
+      "timeDisplay": "6:41 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508001985:0/"
+    },
+    {
+      "title": "Bitcoin Falls as U.S. and Iran Trade Attacks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:25:00+00:00",
+      "timeDisplay": "6:25 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260508001530:0/"
+    },
     {
       "title": "Oil climbs on Gulf clashes as AI drives stocks to weekly rise",
       "source": "reuters",
@@ -55,12 +111,28 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L043:0-oil-climbs-on-gulf-clashes-as-ai-drives-stocks-to-weekly-rise/"
     },
     {
+      "title": "Tom Lee Says Ethereum Price Could Reach $22,000 Leading Next Crypto Rally",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:15:26+00:00",
+      "timeDisplay": "6:15 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:934e6b831094b:0-tom-lee-says-ethereum-price-could-reach-22-000-leading-next-crypto-rally/"
+    },
+    {
       "title": "Dollar Rises After Fresh U.S.-Iran Conflict \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-08T06:07:00+00:00",
       "timeDisplay": "6:07 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260508001364:0/"
+    },
+    {
+      "title": "Bitcoin Found Support Where Recent Buyers Can\u2019t Afford to Lose: Discover the Mechanics",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T06:00:53+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:8911373eb094b:0-bitcoin-found-support-where-recent-buyers-can-t-afford-to-lose-discover-the-mechanics/"
     },
     {
       "title": "Oil Prices Remain Key Factor for Eurozone Bond Market Valuations \u2014 Market Talk",
@@ -93,14 +165,6 @@
       "timestamp": "2026-05-08T05:08:59+00:00",
       "timeDisplay": "5:08 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41L048:0-dollar-steady-as-us-iran-hostilities-flare-yen-steadied-by-intervention-risk/"
-    },
-    {
-      "title": "Bitcoin Found Support Where Recent Buyers Can\u2019t Afford to Lose: Discover the Mechanics",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-08T05:00:53+00:00",
-      "timeDisplay": "5:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:8911373eb094b:0-bitcoin-found-support-where-recent-buyers-can-t-afford-to-lose-discover-the-mechanics/"
     },
     {
       "title": "DeFi Platform TrustedVolumes Hit By $6.7M Hack As 2026 Exploits Surge",
@@ -295,6 +359,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41K2GS:0-us-oil-prices-jump-on-us-iran-hostilities/"
     },
     {
+      "title": "Bitcoin exchange reserves fall to two-year low after $8B exodus",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T21:52:34+00:00",
+      "timeDisplay": "9:52 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8f8a5fb45094b:0-bitcoin-exchange-reserves-fall-to-two-year-low-after-8b-exodus/"
+    },
+    {
       "title": "JPMorgan Says Strategy Could Buy Up To $30B In Bitcoin This Year\u2013 TD Cowen Lifts Target To $395",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -367,12 +439,12 @@
       "link": "https://www.tradingview.com/news/macenews:fd25370a9094b:0-fed-officials-point-toward-ending-easing-bias-but-leaving-rates-on-hold/"
     },
     {
-      "title": "Bitcoin falls under $80K but four-month high in weekly BTC ETF inflows may curb selling",
+      "title": "Bitcoin slips below $80K despite BTC ETF inflows topping $1B",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-07T20:05:09+00:00",
       "timeDisplay": "8:05 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:19a17c079094b:0-bitcoin-falls-under-80k-but-four-month-high-in-weekly-btc-etf-inflows-may-curb-selling/"
+      "link": "https://www.tradingview.com/news/cointelegraph:19a17c079094b:0-bitcoin-slips-below-80k-despite-btc-etf-inflows-topping-1b/"
     },
     {
       "title": "JPMorgan says bitcoin is gaining over gold as debasement trade after Iran conflict",
@@ -573,78 +645,6 @@
       "timestamp": "2026-05-07T17:14:46+00:00",
       "timeDisplay": "5:14 PM",
       "link": "https://www.tradingview.com/news/coinpedia:f761da136094b:0-why-are-bitcoin-ethereum-and-xrp-prices-falling-today/"
-    },
-    {
-      "title": "Stocks dip as oil prices continue pullback on hopes of US-Iran peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T17:11:08+00:00",
-      "timeDisplay": "5:11 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K16C:0-stocks-dip-as-oil-prices-continue-pullback-on-hopes-of-us-iran-peace-deal/"
-    },
-    {
-      "title": "Investors settle into the middle as neutral sentiment jumps - AAII\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T16:45:29+00:00",
-      "timeDisplay": "4:45 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0ZA:0-investors-settle-into-the-middle-as-neutral-sentiment-jumps-aaii/"
-    },
-    {
-      "title": "If The Bitcoin Price Crosses $400,000, Will The Solana Price Reach $1,500?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T16:30:54+00:00",
-      "timeDisplay": "4:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:17ff33b74094b:0-if-the-bitcoin-price-crosses-400-000-will-the-solana-price-reach-1-500/"
-    },
-    {
-      "title": "Tom Lee Says BMNR May Pull Back On Ethereum Buys \u2013 \u2018There\u2019s Other Things To Be Doing In Crypto Right Now\u2019",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T16:06:46+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:95a681b30094b:0/"
-    },
-    {
-      "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.72% IN LATEST WEEK VS. 5.64% LAST WEEK, 5.89% A YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T16:06:00+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:4bd957959094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-72-in-latest-week-vs-5-64-last-week-5-89-a-year-ago/"
-    },
-    {
-      "title": "US FREDDIE MAC 30-YEAR MORTGAGE RATE AVERAGES 6.37% IN LATEST WEEK VS. 6.30% LAST WEEK, 6.76% A YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T16:05:00+00:00",
-      "timeDisplay": "4:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:6b9a26eb5094b:0-us-freddie-mac-30-year-mortgage-rate-averages-6-37-in-latest-week-vs-6-30-last-week-6-76-a-year-ago/"
-    },
-    {
-      "title": "US corporate profits boom answers Wall Street\u2019s biggest question",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T15:41:07+00:00",
-      "timeDisplay": "3:41 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41K11I:0-us-corporate-profits-boom-answers-wall-street-s-biggest-question/"
-    },
-    {
-      "title": "JPMorgan says Strategy\u2019s bitcoin buying could reach $30 billion this year at current pace",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:39:42+00:00",
-      "timeDisplay": "3:39 PM",
-      "link": "https://www.tradingview.com/news/the_block:81adb3986094b:0-jpmorgan-says-strategy-s-bitcoin-buying-could-reach-30-billion-this-year-at-current-pace/"
-    },
-    {
-      "title": "Crude Oil Prices Pressured by Iran Peace Hopes",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T15:30:15+00:00",
-      "timeDisplay": "3:30 PM",
-      "link": "https://www.tradingview.com/news/barchart:ab473b1dc094b:0-crude-oil-prices-pressured-by-iran-peace-hopes/"
     }
   ]
 }

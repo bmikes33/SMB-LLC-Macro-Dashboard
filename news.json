@@ -1,45 +1,123 @@
 {
-  "lastUpdated": "2026-05-07T23:58:23.926255+00:00",
-  "lastUpdatedDisplay": "May 07, 2026 \u2014 11:58 PM UTC",
+  "lastUpdated": "2026-05-08T01:29:57.130091+00:00",
+  "lastUpdatedDisplay": "May 08, 2026 \u2014 01:29 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US-Iran tensions dominate headlines with oil prices jumping and stock futures slipping, though peace talks are reportedly inching along. Fed officials signal ending easing bias while keeping rates on hold, and consumer credit surged well above expectations in March.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Headlines confirm the reflation setup with oil shock from Iran tensions, Fed hawkish pivot, and strong consumer credit growth all supporting the existing regime call.",
-    "thresholdWatches": [],
+    "macroSummary": "US-Iran hostilities flared with Strait of Hormuz clashes driving oil prices higher and strengthening the dollar amid risk-off sentiment. Fed officials signal ending easing bias while keeping rates on hold, as consumer credit surged well above expectations in March. Peace talks are reportedly inching along but remain elusive, creating choppy market conditions.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil spikes from Iran conflict support reflation thesis, but strong risk-off sentiment with dollar strength and equity futures slipping creates tension with bullish-cyclicals positioning.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "approaching $115",
+        "signal": "Multiple reports of oil jumping on renewed US-Iran hostilities in Strait of Hormuz"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil prices jump on renewed US-Iran hostilities, reinforcing the embedded Iran-war oil shock assumption",
+        "signal": "Oil prices jumping on US-Iran Strait of Hormuz clashes, approaching stagflationary threshold levels",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Dollar firming and stock futures slipping on geopolitical tensions signals risk-off sentiment contradicting bullish-cyclicals bias",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Fed officials pointing toward ending easing bias supports reflation regime narrative",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Fed officials point toward ending easing bias while leaving rates on hold, supporting reflation theme",
+        "signal": "Consumer credit surged $24.8B in March vs $12.0B expected, indicating continued economic expansion",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US consumer credit rises 5.8% annual rate in March vs 12.0B expected, showing strong consumer demand",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "JPMorgan says bitcoin gaining over gold as debasement trade after Iran conflict, confirming reflation dynamics",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "US yields rise as crude prices move higher, showing bond market stress consistent with long-end concerns",
-        "tag": "SUPPORTS"
+        "signal": "Muni funds drawing $22.3B as investors rush toward safer yield suggests defensive positioning amid uncertainty",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action for sustained break above $115 WTI threshold",
-      "Watch long-end yields for approach to 30Y 5.10% invalidation level",
-      "BMNR ladder remains appropriate given crypto strength in debasement trade narrative"
+      "Monitor oil prices closely - sustained break above $115 WTI triggers stagflation tilt invalidation",
+      "Consider reducing BMNR ladder aggressiveness if risk-off sentiment persists beyond geopolitical shock",
+      "Watch for VIX approaching 22 level as current risk-off mood could intensify"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar firms as US-Iran hostilities flare, yen steadied by intervention risk",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-08T01:22:25+00:00",
+      "timeDisplay": "1:22 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41L028:0-dollar-firms-as-us-iran-hostilities-flare-yen-steadied-by-intervention-risk/"
+    },
+    {
+      "title": "Dollar Firms Up on Hormuz Clashes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T01:02:52+00:00",
+      "timeDisplay": "1:02 AM",
+      "link": "https://www.tradingview.com/news/te_news:548973:0-dollar-firms-up-on-hormuz-clashes/"
+    },
+    {
+      "title": "The Crypto Industry Is Dying, That Is A Good Thing, Says Anthony Pompliano",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T01:00:13+00:00",
+      "timeDisplay": "1:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:f638c4bb4094b:0-the-crypto-industry-is-dying-that-is-a-good-thing-says-anthony-pompliano/"
+    },
+    {
+      "title": "Asian Currencies Consolidate; May be Weighed by Risk-Off Mood \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T00:45:00+00:00",
+      "timeDisplay": "12:45 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507021480:0/"
+    },
+    {
+      "title": "Oil Rises Amid Signs of Rising Strait of Hormuz Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T00:15:00+00:00",
+      "timeDisplay": "12:15 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260507021421:0/"
+    },
+    {
+      "title": "Key facts: U.S. Makes Seized BTC Reserve; Cowen $140K-$175K; Selling",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T00:05:20+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:07d6fccaf0cdf:0-key-facts-u-s-makes-seized-btc-reserve-cowen-140k-175k-selling/"
+    },
+    {
+      "title": "Key facts: ETH $2.36\u20132.41k; BNY ADGM custody; Unfreeze 30,765 ETH",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-08T00:05:20+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:1ee0d1164c64b:0-key-facts-eth-2-36-2-41k-bny-adgm-custody-unfreeze-30-765-eth/"
+    },
+    {
+      "title": "Bitcoin bulls target $115K by December: Does data back the expectation?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T23:56:15+00:00",
+      "timeDisplay": "11:56 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:9917b823b094b:0-bitcoin-bulls-target-115k-by-december-does-data-back-the-expectation/"
+    },
+    {
+      "title": "Gold Holds Steady as US-Iran Tensions Persist",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-07T23:49:45+00:00",
+      "timeDisplay": "11:49 PM",
+      "link": "https://www.tradingview.com/news/te_news:548944:0-gold-holds-steady-as-us-iran-tensions-persist/"
+    },
     {
       "title": "Gold Rises on Signs of Ongoing U.S.-Iran Tensions \u2014 Market Talk",
       "source": "dow-jones",
@@ -521,28 +599,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260507011429:0/"
     },
     {
-      "title": "Stablecoin Market Cap Finds New High in April \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T14:25:00+00:00",
-      "timeDisplay": "2:25 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260507011385:0/"
-    },
-    {
       "title": "Stocks edge up, oil prices continue pullback on peace optimism",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-07T13:54:33+00:00",
       "timeDisplay": "1:54 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0UG:0-stocks-edge-up-oil-prices-continue-pullback-on-peace-optimism/"
-    },
-    {
-      "title": "Samourai Wallet Founder Writes From Prison Asking Bitcoin Community For Help \u2014 Family Is Out Of Options",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T13:52:09+00:00",
-      "timeDisplay": "1:52 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:14950b26e094b:0-samourai-wallet-founder-writes-from-prison-asking-bitcoin-community-for-help-family-is-out-of-options/"
     },
     {
       "title": "Bitcoin's unusual technical action points to a crypto bull market, says Fundstrat's Tom Lee",
@@ -583,62 +645,6 @@
       "timestamp": "2026-05-07T12:14:27+00:00",
       "timeDisplay": "12:14 PM",
       "link": "https://www.tradingview.com/news/te_news:548777:0-oil-extends-fall-as-us-iran-deal-eyed/"
-    },
-    {
-      "title": "Global stocks mixed, oil falls on peace optimism",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T11:58:52+00:00",
-      "timeDisplay": "11:58 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0Q3:0-global-stocks-mixed-oil-falls-on-peace-optimism/"
-    },
-    {
-      "title": "Treasure Global Establishes Digital Asset Treasury Anchored In Ethereum As Core Blockchain Infrastructure Asset With Bitgo As Licensed Custody Provider",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T11:50:55+00:00",
-      "timeDisplay": "11:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41K0XV:0-treasure-global-establishes-digital-asset-treasury-anchored-in-ethereum-as-core-blockchain-infrastructure-asset-with-bitgo-as-licensed-custody-provider/"
-    },
-    {
-      "title": "Ethereum Price Eyes Mid-Week Bounce as Selling Pressure Craters 85%",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:50f4d6c73094b:0-ethereum-price-eyes-mid-week-bounce-as-selling-pressure-craters-85/"
-    },
-    {
-      "title": "Michael Burry Adds To NVDA, QQQ Puts, Warns AI Trade Resembles Dot-Com Bubble \u2014 \u2018Pattern And Level Is Closer Than Numbers Alone Suggest\u2019",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T10:18:53+00:00",
-      "timeDisplay": "10:18 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:829b6451a094b:0/"
-    },
-    {
-      "title": "BNY eyes institutional Bitcoin, Ethereum custody for investors in UAE",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T09:17:43+00:00",
-      "timeDisplay": "9:17 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:59b8c3077094b:0-bny-eyes-institutional-bitcoin-ethereum-custody-for-investors-in-uae/"
-    },
-    {
-      "title": "Stocks trade around record highs, oil falls on peace optimism",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-07T09:02:05+00:00",
-      "timeDisplay": "9:02 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41K0FT:0-stocks-trade-around-record-highs-oil-falls-on-peace-optimism/"
-    },
-    {
-      "title": "Nasdaq, S&P 500 Futures Rise As Iran Strait Deal Hopes Lift Risk Sentiment: Why ARM, IONQ, DASH, SNAP, ASTS, SOUN Are In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-07T08:30:21+00:00",
-      "timeDisplay": "8:30 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:35f53e8d4094b:0/"
     }
   ]
 }

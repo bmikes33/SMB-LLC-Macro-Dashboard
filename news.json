@@ -1,45 +1,179 @@
 {
-  "lastUpdated": "2026-05-10T17:51:33.373721+00:00",
-  "lastUpdatedDisplay": "May 10, 2026 \u2014 05:51 PM UTC",
-  "articleCount": 26,
+  "lastUpdated": "2026-05-11T01:47:27.351689+00:00",
+  "lastUpdatedDisplay": "May 11, 2026 \u2014 01:47 AM UTC",
+  "articleCount": 33,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin headlines dominate with mixed technical signals around $80K support, whale accumulation reaching 2-year highs, and analyst predictions ranging from $42K crashes to $15K ETH targets. Crypto markets show signs of potential altseason with rising trading volumes, while institutional players like MicroStrategy clarify selective selling conditions.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Crypto market strength and whale accumulation support risk-on sentiment, but analyst warnings of major corrections and consolidation patterns suggest underlying fragility that could amplify if macro invalidation thresholds are breached.",
-    "thresholdWatches": [],
+    "macroSummary": "Dollar strengthened and equities wobbled as Trump rejected Iran's latest peace proposal, escalating Middle East tensions and driving oil higher while gold fell on renewed inflation concerns. Bitcoin held above $80K with strong institutional demand despite crypto-equity decoupling signals, while traditional markets showed mild risk-off behavior amid geopolitical uncertainty.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Dollar strength combined with equity wobbles and geopolitical escalation suggests risk-off undertones that contradict the bullish-cyclicals bias, while oil rises reinforce stagflationary pressures.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "toward $115",
+        "signal": "Oil climbing on Trump's Iran rejection and ongoing Middle East tensions"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Bitcoin whales made biggest accumulation bet in 2 years, showing institutional confidence in risk assets",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Nearly 80% of Bitcoin supply hasn't moved as long-term holders maintain conviction despite volatility",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Analysts predict potential 50% Bitcoin crash to $42K calling current levels a major bull trap",
+        "signal": "Dollar strengthening on US-Iran uncertainty contradicts risk-on equity bias",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin open interest explodes beyond 2025 highs while price consolidates, indicating positioning for major move",
+        "signal": "Share futures wobbling and easing despite mild risk-on sentiment shows equity fragility",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil rising on Middle East tensions escalation moves toward stagflation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Altcoin trading volume surge suggests risk appetite extending beyond blue-chip crypto into speculation",
+        "signal": "Gold falling on renewed inflation concerns confirms reflation pressures",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin decoupling from equities while holding $80K shows crypto resilience amid traditional market stress",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance as crypto strength may indicate continued risk-on flows supporting ETH-linked instruments",
-      "Watch for correlation breakdown between crypto and traditional risk assets if Bitcoin fails $80K support decisively",
-      "Consider tightening short book positions given crypto whale accumulation signaling broader institutional risk appetite"
+      "Monitor oil closely for sustained break above $115 which would flip regime to stagflation-dominant",
+      "Watch dollar strength for approach to DXY 100 regime flip level",
+      "Consider tightening BMNR ladder strikes if crypto continues decoupling from weakening equity sentiment"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin whale address moves $41 million in BTC after 12-year dormancy: onchain data",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T01:05:45+00:00",
+      "timeDisplay": "1:05 AM",
+      "link": "https://www.tradingview.com/news/the_block:1646f59f3094b:0-bitcoin-whale-address-moves-41-million-in-btc-after-12-year-dormancy-onchain-data/"
+    },
+    {
+      "title": "Dollar Strengthens on US-Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T01:03:11+00:00",
+      "timeDisplay": "1:03 AM",
+      "link": "https://www.tradingview.com/news/te_news:549433:0-dollar-strengthens-on-us-iran-uncertainty/"
+    },
+    {
+      "title": "Yen Mostly Weakens Amid Mild Risk-on Sentiment \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T01:03:00+00:00",
+      "timeDisplay": "1:03 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260510000867:0/"
+    },
+    {
+      "title": "Share futures wobble, dollar gains as Gulf talks teeter",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-11T00:48:08+00:00",
+      "timeDisplay": "12:48 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41O005:0-share-futures-wobble-dollar-gains-as-gulf-talks-teeter/"
+    },
+    {
+      "title": "Dollar strengthens as Trump says Iran peace offer 'unacceptable'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-11T00:13:19+00:00",
+      "timeDisplay": "12:13 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41N0AQ:0-dollar-strengthens-as-trump-says-iran-peace-offer-unacceptable/"
+    },
+    {
+      "title": "Key facts: BTC $78\u201380K Hold; MicroStrategy Buys; On\u2011chain Spot Weak",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T00:02:59+00:00",
+      "timeDisplay": "12:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:5807bc9f420c9:0-key-facts-btc-78-80k-hold-microstrategy-buys-on-chain-spot-weak/"
+    },
+    {
+      "title": "Key facts: Binance ETH Inflows Surge; ETH Fails at Multi\u2011Year Cap",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T00:02:59+00:00",
+      "timeDisplay": "12:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:58eb7855ebbf6:0-key-facts-binance-eth-inflows-surge-eth-fails-at-multi-year-cap/"
+    },
+    {
+      "title": "Gold Falls on Renewed Inflation Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T23:47:00+00:00",
+      "timeDisplay": "11:47 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260510000730:0/"
+    },
+    {
+      "title": "Gold Slips as Trump Rejects Iran Response",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T23:46:38+00:00",
+      "timeDisplay": "11:46 PM",
+      "link": "https://www.tradingview.com/news/te_news:549423:0-gold-slips-as-trump-rejects-iran-response/"
+    },
+    {
+      "title": "Oil Rises Amid Signs of Ongoing Middle East Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T23:38:00+00:00",
+      "timeDisplay": "11:38 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260510000724:0/"
+    },
+    {
+      "title": "Oil Climbs as Trump Dismisses Iran Peace Offer",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T23:24:55+00:00",
+      "timeDisplay": "11:24 PM",
+      "link": "https://www.tradingview.com/news/te_news:549421:0-oil-climbs-as-trump-dismisses-iran-peace-offer/"
+    },
+    {
+      "title": "Share futures ease, dollar gains as Gulf talks teeter",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-10T22:55:10+00:00",
+      "timeDisplay": "10:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41N04C:0-share-futures-ease-dollar-gains-as-gulf-talks-teeter/"
+    },
+    {
+      "title": "IRAN UPDATE: IRAN REACTION AWAITED TO PRESIDENT TRUMP'S REJECTION OF THEIR LATEST PROPOSAL AS, IN HIS POST, 'TOTALLY UNACCEPTABLE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T22:25:00+00:00",
+      "timeDisplay": "10:25 PM",
+      "link": "https://www.tradingview.com/news/macenews:57a438837094b:0-iran-update-iran-reaction-awaited-to-president-trump-s-rejection-of-their-latest-proposal-as-in-his-post-totally-unacceptable/"
+    },
+    {
+      "title": "Morgan Stanley\u2019s bitcoin ETF absorbs $194 million in first month with no net daily outflows",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T22:07:53+00:00",
+      "timeDisplay": "10:07 PM",
+      "link": "https://www.tradingview.com/news/the_block:20851d1ba094b:0-morgan-stanley-s-bitcoin-etf-absorbs-194-million-in-first-month-with-no-net-daily-outflows/"
+    },
+    {
+      "title": "Bitcoin Eyes $83,400 But Trump\u2019s Iran Warning and CPI Week Spark Trader Caution",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T19:27:37+00:00",
+      "timeDisplay": "7:27 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:b9f3d3010094b:0-bitcoin-eyes-83-400-but-trump-s-iran-warning-and-cpi-week-spark-trader-caution/"
+    },
+    {
+      "title": "Saylor signals another Bitcoin buy, after hinting at selling in Q1 earnings call",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-10T18:40:00+00:00",
+      "timeDisplay": "6:40 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:d9f7d8609094b:0-saylor-signals-another-bitcoin-buy-after-hinting-at-selling-in-q1-earnings-call/"
+    },
     {
       "title": "Bitcoin Carving Its Own Narrative Away From Equities, Says Coinbase Analyst \u2014 Q2 Outlook Neutral",
       "source": "stocktwits",
@@ -164,8 +298,8 @@
       "title": "Santiment flags risk as crypto bullish talk spikes while BTC holds $80K",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-05-10T05:33:59+00:00",
-      "timeDisplay": "5:33 AM",
+      "timestamp": "2026-05-10T05:40:00+00:00",
+      "timeDisplay": "5:40 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:59b8628ef094b:0-santiment-flags-risk-as-crypto-bullish-talk-spikes-while-btc-holds-80k/"
     },
     {
@@ -175,78 +309,6 @@
       "timestamp": "2026-05-10T02:00:33+00:00",
       "timeDisplay": "2:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:46a26d817094b:0-bitcoin-open-interest-explodes-beyond-2025-all-time-high-levels/"
-    },
-    {
-      "title": "Key facts: Binance 34% futures; MSTR may sell; Nasdaq corr., VanEck ATH",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-10T00:03:17+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:8abeb943b5985:0-key-facts-binance-34-futures-mstr-may-sell-nasdaq-corr-vaneck-ath/"
-    },
-    {
-      "title": "Key facts: Binance ETH shorts -$585M; 30,766 ETH restrained; TVL $45.4B",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-10T00:03:00+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/tradingview:991b1f60ebf8e:0-key-facts-binance-eth-shorts-585m-30-766-eth-restrained-tvl-45-4b/"
-    },
-    {
-      "title": "Analyst Predicts Biggest Bitcoin Bull Trap Of The Cycle, Calls Out 50% Crash To $42,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-10T00:00:07+00:00",
-      "timeDisplay": "12:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:931bd1a8d094b:0-analyst-predicts-biggest-bitcoin-bull-trap-of-the-cycle-calls-out-50-crash-to-42-000/"
-    },
-    {
-      "title": "8 Months To Go: Here\u2019s How Bitcoin Could Trend In 2026 \u2013 Analyst",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T23:00:34+00:00",
-      "timeDisplay": "11:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:349a8c6ea094b:0-8-months-to-go-here-s-how-bitcoin-could-trend-in-2026-analyst/"
-    },
-    {
-      "title": "Seven major Bitcoin mining pools join Stratum V2, working group",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T23:00:19+00:00",
-      "timeDisplay": "11:00 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:84e267664094b:0-seven-major-bitcoin-mining-pools-join-stratum-v2-working-group/"
-    },
-    {
-      "title": "Swiss Bitcoin Reserve Effort Withdrawn After Resistance From Central Bank",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T21:30:57+00:00",
-      "timeDisplay": "9:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:4cb7d07a0094b:0-swiss-bitcoin-reserve-effort-withdrawn-after-resistance-from-central-bank/"
-    },
-    {
-      "title": "Strategy CEO Phong Le says company will sell BTC only in specific cases",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T21:21:00+00:00",
-      "timeDisplay": "9:21 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:c36c8b0fc094b:0-strategy-ceo-phong-le-says-company-will-sell-btc-only-in-specific-cases/"
-    },
-    {
-      "title": "Arbitrum\u2019s $71 million in ETH cleared for Aave transfer as North Korea terrorism creditors retain legal claim",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T21:02:50+00:00",
-      "timeDisplay": "9:02 PM",
-      "link": "https://www.tradingview.com/news/the_block:5f4532d85094b:0-arbitrum-s-71-million-in-eth-cleared-for-aave-transfer-as-north-korea-terrorism-creditors-retain-legal-claim/"
-    },
-    {
-      "title": "Bitcoin Drops To 2 Cents! Revolut Users Report Massive BTC Price Glitch",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-09T18:30:22+00:00",
-      "timeDisplay": "6:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a2da8d9df094b:0-bitcoin-drops-to-2-cents-revolut-users-report-massive-btc-price-glitch/"
     }
   ]
 }

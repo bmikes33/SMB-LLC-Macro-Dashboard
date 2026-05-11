@@ -1,52 +1,162 @@
 {
-  "lastUpdated": "2026-05-11T15:54:24.069354+00:00",
-  "lastUpdatedDisplay": "May 11, 2026 \u2014 03:54 PM UTC",
+  "lastUpdated": "2026-05-11T17:51:56.295612+00:00",
+  "lastUpdatedDisplay": "May 11, 2026 \u2014 05:51 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Iran nuclear talks have stalled with Trump rejecting peace overtures, driving oil higher and supporting gold near three-week highs. US housing market remains sluggish with existing home sales barely unchanged despite modest affordability improvements. Bitcoin holds above $80K amid mixed crypto flows while yields rise on Iran-driven inflation concerns.",
+    "macroSummary": "Oil prices are climbing toward $100 as Trump rejects Iran's peace proposal and warns their ceasefire has only a 1% chance of continuing, while home sales remain sluggish despite slight monthly gains. Crypto markets show mixed signals with Bitcoin holding above $80K amid ETF outflows, and equity markets remain mixed as Iran war concerns persist.",
     "regimePressure": "REINFORCING",
-    "regimePressureReason": "Iran tensions escalating oil prices and inflation fears while housing weakness persists aligns with the embedded oil shock and stagflationary undertones in the current Reflation regime.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Oil surge toward $100 on escalating Iran tensions directly supports the embedded Iran-war oil shock assumption within the Reflation regime.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "$115",
+        "signal": "WTI climbing toward $100 as Trump rejects Iran peace offer, approaching stagflation threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil climbing as Trump rejects Iran peace offer reinforces embedded war premium",
+        "signal": "Oil prices rising toward $100 on Trump's rejection of Iran peace proposal supports Iran-war oil shock thesis",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Yields rising on Iran tensions fanning inflation fears supports Reflation thesis",
+        "signal": "Home sales sluggish at 4.02M units with high borrowing costs weighing on activity indicates rate stress",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Housing sales sluggish despite affordability improvements shows rate sensitivity",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Gold nearing three-week highs contradicts typical risk-on behavior but fits stagflation hedge",
+        "signal": "Mixed equity markets with persistent Iran war worries suggests risk-on momentum may be stalling",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Bitcoin holding above $80K with continued institutional accumulation shows risk asset resilience",
+        "signal": "Bitcoin holding above $80K despite ETF outflows shows crypto resilience amid macro uncertainty",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "German energy conservation measures and Norwegian krone strength on oil gains reflect European inflation pressures",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "BMNR ladder: Monitor for any crypto weakness if geopolitical tensions escalate further",
-      "Watch oil momentum - sustained move toward $115 WTI threshold would accelerate stagflation tilt",
-      "Housing weakness supports duration positioning but monitor for long-end stress acceleration"
+      "Monitor WTI closely as approach to $115 threshold could trigger stagflation regime shift",
+      "BMNR ladder strategy remains appropriate given crypto resilience and reflation backdrop",
+      "Consider reducing duration exposure if oil continues climbing toward threshold levels"
     ]
   },
   "articles": [
     {
-      "title": "PRES TRUMP Q&A AT MATERNA; HEALTH EVENT: RE IRAN, 'THEY JUST CAN'T GET THERE' RE ABANDONING NUCLEAR DEVELOPMENT; AGREED THEN CHANGED THEIR MIND",
+      "title": "Tom Lee Drops $62K Ethereum Target, Says Tether And Jane Street Out-Earn Wall Street's Giants",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T17:47:33+00:00",
+      "timeDisplay": "5:47 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:414760585094b:0/"
+    },
+    {
+      "title": "Zcash Gives Back Some Big Gains From Recent Days \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T17:42:00+00:00",
+      "timeDisplay": "5:42 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260511008162:0/"
+    },
+    {
+      "title": "WTI Crude Rises Toward $100",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T17:22:59+00:00",
+      "timeDisplay": "5:22 PM",
+      "link": "https://www.tradingview.com/news/te_news:549725:0-wti-crude-rises-toward-100/"
+    },
+    {
+      "title": "Oil Market Underestimates Risk to Supply \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T17:21:00+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260511008023:0/"
+    },
+    {
+      "title": "RECAP: White House pool report on President Trump Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T17:18:00+00:00",
+      "timeDisplay": "5:18 PM",
+      "link": "https://www.tradingview.com/news/macenews:86e638aa0094b:0-recap-white-house-pool-report-on-president-trump-q-a/"
+    },
+    {
+      "title": "Sharplink Q1 revenue tops $12 million as it pursues \u2018singles and doubles\u2019 hits in ETH yield",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T16:52:17+00:00",
+      "timeDisplay": "4:52 PM",
+      "link": "https://www.tradingview.com/news/the_block:1d6c899ca094b:0-sharplink-q1-revenue-tops-12-million-as-it-pursues-singles-and-doubles-hits-in-eth-yield/"
+    },
+    {
+      "title": "Is AI\u00a0fueling a tech bubble or just a familiar cycle?",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-11T16:29:45+00:00",
+      "timeDisplay": "4:29 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0ZS:0-is-ai-fueling-a-tech-bubble-or-just-a-familiar-cycle/"
+    },
+    {
+      "title": "Peter Schiff Says Michael Saylor's Strategy Is Running A Ponzi Scheme In Plain Sight \u2014 And The SEC Is Letting It Happen",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T16:15:01+00:00",
+      "timeDisplay": "4:15 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:cc2b21663094b:0/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: 'THINK WE'LL BE FINE' ON TAIWAN; XI 'AN AMAZING MAN;' RULES WITH 'PRETTY MUCH AN IRON FIST;' HE'LL BRING UP TAIWAN MORE THAN I WILL'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T16:11:00+00:00",
+      "timeDisplay": "4:11 PM",
+      "link": "https://www.tradingview.com/news/macenews:cd45e9793094b:0-pres-trump-q-a-think-we-ll-be-fine-on-taiwan-xi-an-amazing-man-rules-with-pretty-much-an-iron-fist-he-ll-bring-up-taiwan-more-than-i-will/"
+    },
+    {
+      "title": "Bitcoin Forms The Same Pattern That Previously Led To A 400% Rally",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T16:00:54+00:00",
+      "timeDisplay": "4:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:73231eefe094b:0-bitcoin-forms-the-same-pattern-that-previously-led-to-a-400-rally/"
+    },
+    {
+      "title": "5 ETF Winners of Last Week ",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T16:00:00+00:00",
+      "timeDisplay": "4:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:0aa7d8e93094b:0-5-etf-winners-of-last-week/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: 'DOING GREAT WITH CHINA;' XI 'WOULD LIKE TO SEE IT DONE,' RE OPENING STRAIT OF HORMUZ; 'I'M WILLING TO TAKE A BULLET FOR THE COUNTRY'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T15:59:00+00:00",
+      "timeDisplay": "3:59 PM",
+      "link": "https://www.tradingview.com/news/macenews:7d7c7dbde094b:0-pres-trump-q-a-doing-great-with-china-xi-would-like-to-see-it-done-re-opening-strait-of-hormuz-i-m-willing-to-take-a-bullet-for-the-country/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: CEASEFIRE WITH IRAN 'UNBELIEVABLY WEAK' WITH 1% CHANCE OF CONTINUING",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T15:50:00+00:00",
+      "timeDisplay": "3:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:4614e9fed094b:0-pres-trump-q-a-ceasefire-with-iran-unbelievably-weak-with-1-chance-of-continuing/"
+    },
+    {
+      "title": "PRES TRUMP Q&A AT MATERNAL HEALTH EVENT: RE IRAN, 'THEY JUST CAN'T GET THERE' RE ABANDONING NUCLEAR DEVELOPMENT; AGREED THEN CHANGED THEIR MIND",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-05-11T15:45:00+00:00",
       "timeDisplay": "3:45 PM",
-      "link": "https://www.tradingview.com/news/macenews:c997ae6ce094b:0-pres-trump-q-a-at-materna-health-event-re-iran-they-just-can-t-get-there-re-abandoning-nuclear-development-agreed-then-changed-their-mind/"
+      "link": "https://www.tradingview.com/news/macenews:c997ae6ce094b:0-pres-trump-q-a-at-maternal-health-event-re-iran-they-just-can-t-get-there-re-abandoning-nuclear-development-agreed-then-changed-their-mind/"
     },
     {
       "title": "Stocks up and dollar steady ahead of US-China meeting, Iran talks hit stalemate",
@@ -86,7 +196,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-11T15:20:00+00:00",
       "timeDisplay": "3:20 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511006792:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260511006791:0/"
     },
     {
       "title": "Home sales, weighed by high borrowing costs, slide sideways\u00a0",
@@ -95,6 +205,14 @@
       "timestamp": "2026-05-11T15:09:30+00:00",
       "timeDisplay": "3:09 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0X6:0-home-sales-weighed-by-high-borrowing-costs-slide-sideways/"
+    },
+    {
+      "title": "Will Lower Crypto Fees Help Morgan Stanley Win Retail Investors?",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T14:53:00+00:00",
+      "timeDisplay": "2:53 PM",
+      "link": "https://www.tradingview.com/news/zacks:45524e7e2094b:0-will-lower-crypto-fees-help-morgan-stanley-win-retail-investors/"
     },
     {
       "title": "War Shock Challenges Gold's Safe Haven Status \u2014 Market Talk",
@@ -329,6 +447,22 @@
       "link": "https://www.tradingview.com/news/the_block:7cd9749f8094b:0-crypto-spring-has-commenced-tom-lee-says-as-bitmine-s-weekly-accumulation-slows-below-100-000-eth-pace/"
     },
     {
+      "title": "Strategy Buys More Bitcoin Despite Signaling Potential Sales",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T13:19:00+00:00",
+      "timeDisplay": "1:19 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:b601ca3af094b:0-strategy-buys-more-bitcoin-despite-signaling-potential-sales/"
+    },
+    {
+      "title": "BitMine Slows Ethereum Purchases",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-11T13:17:00+00:00",
+      "timeDisplay": "1:17 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:154d66b60094b:0-bitmine-slows-ethereum-purchases/"
+    },
+    {
       "title": "Comex Gold Delivery Intentions Breakdown - May 11",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -449,22 +583,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:e2b53b126094b:0/"
     },
     {
-      "title": "Is \u2018Altcoin Season\u2019 Finally Here? Why Bitcoin\u2019s $80K Stagnation Is Good News",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T11:34:49+00:00",
-      "timeDisplay": "11:34 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:1c67f9ade094b:0-is-altcoin-season-finally-here-why-bitcoin-s-80k-stagnation-is-good-news/"
-    },
-    {
-      "title": "Crypto funds log $858M in sixth straight week of inflows: CoinShares",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T11:31:47+00:00",
-      "timeDisplay": "11:31 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8bb77c9fe094b:0-crypto-funds-log-858m-in-sixth-straight-week-of-inflows-coinshares/"
-    },
-    {
       "title": "One Wall Street Veteran Believes AI Could Be Bitcoin\u2019s Biggest Bull Market Yet",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -479,14 +597,6 @@
       "timestamp": "2026-05-11T11:12:09+00:00",
       "timeDisplay": "11:12 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0NC:0-stocks-sag-dollar-firms-as-us-iran-talks-hit-stalemate/"
-    },
-    {
-      "title": "BTC price target becomes $85K next: Five things to know in Bitcoin this week",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T11:05:21+00:00",
-      "timeDisplay": "11:05 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:aa6aa0db4094b:0-btc-price-target-becomes-85k-next-five-things-to-know-in-bitcoin-this-week/"
     },
     {
       "title": "11 weeks and counting",
@@ -535,110 +645,6 @@
       "timestamp": "2026-05-11T09:41:09+00:00",
       "timeDisplay": "9:41 AM",
       "link": "https://www.tradingview.com/news/the_block:5eaf457b1094b:0-global-crypto-funds-log-858m-inflows-in-sixth-straight-positive-week-as-clarity-act-progress-lifts-sentiment-coinshares/"
-    },
-    {
-      "title": "DRAM ETF Is Wall Street\u2019s New AI Obsession Amid Memory Supercycle",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T09:31:26+00:00",
-      "timeDisplay": "9:31 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:19fc5cacf094b:0/"
-    },
-    {
-      "title": "Gold ETFs or EGRs: Where to invest as PM calls for a one-year pause on purchases?",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T09:22:28+00:00",
-      "timeDisplay": "9:22 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:4ce1833f6094b:0-gold-etfs-or-egrs-where-to-invest-as-pm-calls-for-a-one-year-pause-on-purchases/"
-    },
-    {
-      "title": "Oil prices rise $2 as US-Iran talks hit impasse\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T09:18:08+00:00",
-      "timeDisplay": "9:18 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0IJ:0-oil-prices-rise-2-as-us-iran-talks-hit-impasse/"
-    },
-    {
-      "title": "Jewellery traders seek meeting with PM Modi under CTI as gold purchase pause stirs industry concern",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T09:17:05+00:00",
-      "timeDisplay": "9:17 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:3cf1d37ad094b:0-jewellery-traders-seek-meeting-with-pm-modi-under-cti-as-gold-purchase-pause-stirs-industry-concern/"
-    },
-    {
-      "title": "Ether could extend gains despite whale selling pressure",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T09:10:19+00:00",
-      "timeDisplay": "9:10 AM",
-      "link": "https://www.tradingview.com/news/invezz:00d0e141b094b:0-ether-could-extend-gains-despite-whale-selling-pressure/"
-    },
-    {
-      "title": "\u200bHow the West Asia crisis has reshaped India\u2019s gold imports",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T09:04:14+00:00",
-      "timeDisplay": "9:04 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:796f39bcf094b:0-how-the-west-asia-crisis-has-reshaped-india-s-gold-imports/"
-    },
-    {
-      "title": "Stocks steady, dollar firms as US-Iran talks hit stalemate",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T09:01:12+00:00",
-      "timeDisplay": "9:01 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0B5:0-stocks-steady-dollar-firms-as-us-iran-talks-hit-stalemate/"
-    },
-    {
-      "title": "Nasdaq, S&P 500 Futures Dip As Trump-Iran Tensions Lift Crude Oil Prices: Why MU, MRAM, MLTX, DRTS, ASTS Are In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T08:58:25+00:00",
-      "timeDisplay": "8:58 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:8934799cc094b:0/"
-    },
-    {
-      "title": "No plans to increase import duties on gold and silver: Govt source",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T08:51:20+00:00",
-      "timeDisplay": "8:51 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:0247b7fac094b:0-no-plans-to-increase-import-duties-on-gold-and-silver-govt-source/"
-    },
-    {
-      "title": "Circle Raises $222 Million From \u2018Arc Token\u2019 Presale",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T08:46:00+00:00",
-      "timeDisplay": "8:46 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:73f99beeb094b:0-circle-raises-222-million-from-arc-token-presale/"
-    },
-    {
-      "title": "India Asks Locals to Pause Gold Buying in Bid to Shore Up FX Defenses",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T07:56:00+00:00",
-      "timeDisplay": "7:56 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511001756:0-india-asks-locals-to-pause-gold-buying-in-bid-to-shore-up-fx-defenses/"
-    },
-    {
-      "title": "Weak Period for Gold Likely in Absence of Fresh Catalyst \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T07:52:00+00:00",
-      "timeDisplay": "7:52 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511001744:0/"
-    },
-    {
-      "title": "Gilt Yields Rise on Middle East Tensions and U.K. Political Jitters \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T07:22:00+00:00",
-      "timeDisplay": "7:22 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511001559:0/"
     }
   ]
 }

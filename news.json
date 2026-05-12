@@ -1,52 +1,354 @@
 {
-  "lastUpdated": "2026-05-12T11:08:36.732732+00:00",
-  "lastUpdatedDisplay": "May 12, 2026 \u2014 11:08 AM UTC",
+  "lastUpdated": "2026-05-12T13:29:07.780031+00:00",
+  "lastUpdatedDisplay": "May 12, 2026 \u2014 01:29 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with dollar and Treasury yields rising ahead of CPI data, while oil jumps 2% on US-Iran ceasefire tensions. Small business optimism remains below historical averages with labor quality concerns, and Fed's Williams highlights affordability as the top US issue.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil volatility from ceasefire breakdown supports the Iran-war shock thesis, but small business weakness and Fed affordability concerns suggest underlying economic stress that could pressure the reflation narrative.",
-    "thresholdWatches": [],
+    "macroSummary": "April CPI data came in hot with core inflation at 0.4% monthly versus 0.3% expected, driven heavily by energy (40% of headline increase) but also concerning broadening in services and non-energy components. Fed's Goolsbee called it 'worse than expected' and 'not subtle' with particular concern about non-energy price increases, while bond yields climbed and DXY strengthened on the inflation surprise.",
+    "regimePressure": "REINFORCING",
+    "regimePressureReason": "Hot CPI with broad-based price pressures beyond energy confirms the reflation thesis, though the stagflationary undertone is strengthening as bond yields climb while growth concerns persist.",
+    "thresholdWatches": [
+      {
+        "indicator": "Treasury yields",
+        "level": "approaching June highs",
+        "signal": "Yields climbing toward 30Y 5.10% threshold zone on hot inflation data"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil gains 2% on US-Iran ceasefire impasse, reinforcing geopolitical supply shock dynamics",
+        "signal": "Core CPI 0.4% monthly versus 0.3% expected with Fed calling it 'worse than expected' and highlighting concerning non-energy breadth",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Small business optimism below 52-year average for second month with 7-point drop in economic expectations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Fed's Williams identifies affordability as number one US issue, suggesting inflationary pressures are economically damaging",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar and Treasury yields rising ahead of CPI data indicates bond market stress continuation",
+        "signal": "Energy accounted for 40% of headline CPI increase with gasoline up 5.4% monthly and 28.4% yearly, confirming oil shock embedded in prices",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "NFIB reports 18% of small businesses cite labor quality as top problem, indicating structural economic challenges",
-        "tag": "CONTRADICTS"
+        "signal": "Services inflation remains sticky at 0.6% monthly with shelter at 0.6% monthly, showing broad-based price pressures beyond commodities",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bond yields climbing toward June highs and DXY strengthening on hot inflation data, approaching long-end stress thresholds",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Iran ceasefire described as 'on life support' with oil forging higher and potential U.S. gas tax pause reflecting doubts over swift war resolution",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor small business data closely as persistent weakness below historical averages may signal economic deterioration inconsistent with reflation thesis",
-      "Watch CPI print given Treasury yield rise - could accelerate toward 30Y 5.10% threshold if hot",
-      "Consider tightening BMNR ladder strikes if oil volatility continues supporting crypto flight-to-alternative narrative"
+      "Monitor 30Y yield approach to 5.10% threshold as hot CPI data pressures long-end",
+      "BMNR ladder positioning remains appropriate as crypto weakness amid macro uncertainty creates opportunity",
+      "Watch for any VIX spike above 22 if bond market stress translates to equity risk-off"
     ]
   },
   "articles": [
     {
-      "title": "Dollar rises but still not far from pre-war levels, data awaited",
+      "title": "April CPI rises more than expected; bond yields climb",
       "source": "reuters",
       "color": "#ff6d00",
-      "timestamp": "2026-05-12T11:04:08+00:00",
-      "timeDisplay": "11:04 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0SO:0-dollar-rises-but-still-not-far-from-pre-war-levels-data-awaited/"
+      "timestamp": "2026-05-12T13:19:49+00:00",
+      "timeDisplay": "1:19 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0ZT:0-april-cpi-rises-more-than-expected-bond-yields-climb/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/NPR: WORST THING ABOUT CPI REPORT NOT THE HEADLINE BUT THE NON-ENERGY PRICE INCREASES; ENDS Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:19:00+00:00",
+      "timeDisplay": "1:19 PM",
+      "link": "https://www.tradingview.com/news/macenews:dfdb6f0a4094b:0-chi-fed-s-goolsbee-q-a-npr-worst-thing-about-cpi-report-not-the-headline-but-the-non-energy-price-increases-ends-q-a/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/NPR: RE CPI, 'A MOMENT OF SERIOUSNESS;' 'CORE INFLATION IS NOT LOOKING GREAT ... THIS TIME IT'S NOT SUBTLE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:16:00+00:00",
+      "timeDisplay": "1:16 PM",
+      "link": "https://www.tradingview.com/news/macenews:4d6577816094b:0-chi-fed-s-goolsbee-q-a-npr-re-cpi-a-moment-of-seriousness-core-inflation-is-not-looking-great-this-time-it-s-not-subtle/"
+    },
+    {
+      "title": "CHI FED'S GOOLSBEE Q&A/NPR: CPI 'WORSE THAN WHAT WE WERE EXPECTING TODAY AND DEFINITELY WORSE THAN WHAT IT SHOULD BE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:14:00+00:00",
+      "timeDisplay": "1:14 PM",
+      "link": "https://www.tradingview.com/news/macenews:c33317afb094b:0-chi-fed-s-goolsbee-q-a-npr-cpi-worse-than-what-we-were-expecting-today-and-definitely-worse-than-what-it-should-be/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - May 12",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:09:00+00:00",
+      "timeDisplay": "1:09 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512007033:0/"
+    },
+    {
+      "title": "Michael Saylor Says CLARITY Act Markup Could Unlock \u2018Next Wave\u2019 Of Digital Capital",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:08:42+00:00",
+      "timeDisplay": "1:08 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:3ab26ab11094b:0/"
+    },
+    {
+      "title": "\u2018Favorable setup\u2019: TD Cowen sees 106% upside in Sharplink as Galaxy yield fund, broadening Ethereum demand shift risk-reward",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T13:07:53+00:00",
+      "timeDisplay": "1:07 PM",
+      "link": "https://www.tradingview.com/news/the_block:720455c9d094b:0-favorable-setup-td-cowen-sees-106-upside-in-sharplink-as-galaxy-yield-fund-broadening-ethereum-demand-shift-risk-reward/"
+    },
+    {
+      "title": "S&P 500 futures pare losses slightly after CPI\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T13:05:24+00:00",
+      "timeDisplay": "1:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0UZ:0-s-p-500-futures-pare-losses-slightly-after-cpi/"
+    },
+    {
+      "title": "Gold Dips Amid Middle East Tensions and Inflation Pressures",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:55:43+00:00",
+      "timeDisplay": "12:55 PM",
+      "link": "https://www.tradingview.com/news/te_news:550020:0-gold-dips-amid-middle-east-tensions-and-inflation-pressures/"
+    },
+    {
+      "title": "Treasury Yields Approach June Highs Again",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:50:13+00:00",
+      "timeDisplay": "12:50 PM",
+      "link": "https://www.tradingview.com/news/te_news:550018:0-treasury-yields-approach-june-highs-again/"
+    },
+    {
+      "title": "DXY Climbs after Hot Inflation Data",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:41:12+00:00",
+      "timeDisplay": "12:41 PM",
+      "link": "https://www.tradingview.com/news/te_news:550015:0-dxy-climbs-after-hot-inflation-data/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: BEEF & VEAL +2.7% M/M, +14.8% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:38:00+00:00",
+      "timeDisplay": "12:38 PM",
+      "link": "https://www.tradingview.com/news/macenews:8cf6284f5094b:0-more-u-s-april-cpi-beef-veal-2-7-m-m-14-8-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: AIRFARES +2.8% M/M, +20.7% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:37:00+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:d41c6f59e094b:0-more-u-s-april-cpi-airfares-2-8-m-m-20-7-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: GASOLINE +5.4% M/M, +28.4% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:37:00+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/macenews:98a9d27d1094b:0-more-u-s-april-cpi-gasoline-5-4-m-m-28-4-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: UTILITIES AND PUBLIC TRANSPORT +1.0% M/M, +5.0% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:36:00+00:00",
+      "timeDisplay": "12:36 PM",
+      "link": "https://www.tradingview.com/news/macenews:31fc0f10f094b:0-more-u-s-april-cpi-utilities-and-public-transport-1-0-m-m-5-0-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: APPAREL EX FOOTWARE +0.2% M/M, +4.2% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:f3f5eb8b6094b:0-more-u-s-april-cpi-apparel-ex-footware-0-2-m-m-4-2-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: MEDICAL CARE -0.1% M/M, +2.5% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:34:00+00:00",
+      "timeDisplay": "12:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:57850056b094b:0-more-u-s-april-cpi-medical-care-0-1-m-m-2-5-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: TRANSPORT +1.3% M/M, +7.1% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:34:00+00:00",
+      "timeDisplay": "12:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:8af77b77f094b:0-more-u-s-april-cpi-transport-1-3-m-m-7-1-y-y/"
+    },
+    {
+      "title": "Gold Vs Bitcoin \u2013 Ray Dalio Says Central Banks Won\u2019t Touch BTC, Michael Saylor Says That\u2019s The Point",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:33:15+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:af8a90f69094b:0/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: SERVICES +0.6% M/M, +3.4% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:31ef0f456094b:0-more-u-s-april-cpi-services-0-6-m-m-3-4-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: SERVICES LESS RENT OF SHELTER +0.4% M/M, +3.5% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:bd36a2b76094b:0-more-u-s-april-cpi-services-less-rent-of-shelter-0-4-m-m-3-5-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: ENERGY ACCOUNTED FOR 40% OF ALL-ITEMS M/M INCREASE, SAYS BLS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:b6bc0d2bd094b:0-more-u-s-april-cpi-energy-accounted-for-40-of-all-items-m-m-increase-says-bls/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: FOOD +0.5% M/M, +3.2% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:9ac7b010e094b:0-more-u-s-april-cpi-food-0-5-m-m-3-2-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: SHELTER +0.6% M/M, +3.3% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:bb3e10a0e094b:0-more-u-s-april-cpi-shelter-0-6-m-m-3-3-y-y/"
+    },
+    {
+      "title": "MORE U.S. APRIL CPI: ENERGY +3.8% M/M, +17.9% Y/Y",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:2eb5518e9094b:0-more-u-s-april-cpi-energy-3-8-m-m-17-9-y-y/"
+    },
+    {
+      "title": "U.S. APRIL CPI +0.6% M/M (VS +0.6% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:ed0e0b1e4094b:0-u-s-april-cpi-0-6-m-m-vs-0-6-expected/"
+    },
+    {
+      "title": "U.S. APRIL CPI +3.8% Y/Y (VS 3.8% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:dc2497fab094b:0-u-s-april-cpi-3-8-y-y-vs-3-8-expected/"
+    },
+    {
+      "title": "U.S. APRIL CPI EX-FOOD & ENERGY +0.4% M/M (VS +0.3% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:5890ebb04094b:0-u-s-april-cpi-ex-food-energy-0-4-m-m-vs-0-3-expected/"
+    },
+    {
+      "title": "HSBC Raises Brent Forecast, Assuming Hormuz Normalization by End of Third Quarter \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:29:00+00:00",
+      "timeDisplay": "12:29 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512006254:0/"
+    },
+    {
+      "title": "Ethereum Drops Harder Than Bitcoin Ahead Of CPI Report While XRP, Solana Retail Sentiment Climbs",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:16:48+00:00",
+      "timeDisplay": "12:16 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:77d4797ed094b:0/"
+    },
+    {
+      "title": "Bitcoin Bull-Bear Cycle Indicator Flashes Green Ahead of April CPI Print",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:09:42+00:00",
+      "timeDisplay": "12:09 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:5071f964e094b:0-bitcoin-bull-bear-cycle-indicator-flashes-green-ahead-of-april-cpi-print/"
+    },
+    {
+      "title": "Potential Pause on U.S. Gas Tax Reflects Doubts Over Swift End to Iran War \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T12:00:00+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512005776:0/"
+    },
+    {
+      "title": "Wells Fargo lifts Ether ETF holdings in Q1 as Bitcoin positions shift",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T11:48:37+00:00",
+      "timeDisplay": "11:48 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3f1aa2b8e094b:0-wells-fargo-lifts-ether-etf-holdings-in-q1-as-bitcoin-positions-shift/"
+    },
+    {
+      "title": "Bitcoin Stays Under Pressure Amid U.S.-Iran Stalemate \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T11:42:00+00:00",
+      "timeDisplay": "11:42 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512005401:0/"
+    },
+    {
+      "title": "Stocks wilt as oil forges higher; Iran ceasefire 'on life support'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T11:40:27+00:00",
+      "timeDisplay": "11:40 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0U9:0-stocks-wilt-as-oil-forges-higher-iran-ceasefire-on-life-support/"
+    },
+    {
+      "title": "ETH drops below $2,300: can Glamsterdam news stop the selloff?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T11:17:25+00:00",
+      "timeDisplay": "11:17 AM",
+      "link": "https://www.tradingview.com/news/invezz:bb7b40e6a094b:0-eth-drops-below-2-300-can-glamsterdam-news-stop-the-selloff/"
+    },
+    {
+      "title": "Bitdeer Announces April 2026 Production And Operations Update",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T11:07:59+00:00",
+      "timeDisplay": "11:07 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUA6ZSKSW:0-bitdeer-announces-april-2026-production-and-operations-update/"
+    },
+    {
+      "title": "Bhutan\u2019s GMC offers quick licenses, bank accounts to lure crypto firms",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3c54e4a35094b:0-bhutan-s-gmc-offers-quick-licenses-bank-accounts-to-lure-crypto-firms/"
     },
     {
       "title": "Bhutan\u2019s Gelephu Mindfulness City launches fast-track licensing for regulated crypto firms",
@@ -57,84 +359,12 @@
       "link": "https://www.tradingview.com/news/the_block:6ccdd5f70094b:0-bhutan-s-gelephu-mindfulness-city-launches-fast-track-licensing-for-regulated-crypto-firms/"
     },
     {
-      "title": "Ceasefire on life support",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T10:36:25+00:00",
-      "timeDisplay": "10:36 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0Q4:0-ceasefire-on-life-support/"
-    },
-    {
-      "title": "Dollar Moves Look Dictated by Equity Market \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:04:00+00:00",
-      "timeDisplay": "10:04 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260512003529:0/"
-    },
-    {
-      "title": "US NFIB SMALL BUSINESS INDEX: 18% OF OWNERS REPORTED THAT QUALITY OF LABOR WAS THEIR SINGLE MOST IMPORTANT PROBLEM IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:02:00+00:00",
-      "timeDisplay": "10:02 AM",
-      "link": "https://www.tradingview.com/news/macenews:64e3674ca094b:0-us-nfib-small-business-index-18-of-owners-reported-that-quality-of-labor-was-their-single-most-important-problem-in-april/"
-    },
-    {
-      "title": "US NFIB SMALL BUSINESS INDEX: APRIL INDEX BELOW THE 52-YEAR AVERAGE OF 98 FOR SECOND MONTH IN A ROW",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:02:00+00:00",
-      "timeDisplay": "10:02 AM",
-      "link": "https://www.tradingview.com/news/macenews:457004e9d094b:0-us-nfib-small-business-index-april-index-below-the-52-year-average-of-98-for-second-month-in-a-row/"
-    },
-    {
-      "title": "US NFIB UNCERTAINTY INDEX 88 IN APRIL VS 92 IN MARCH; 92 IN APRIL 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:02:00+00:00",
-      "timeDisplay": "10:02 AM",
-      "link": "https://www.tradingview.com/news/macenews:d22a6728f094b:0-us-nfib-uncertainty-index-88-in-april-vs-92-in-march-92-in-april-2025/"
-    },
-    {
-      "title": "US NFIB SMALL BUSINESS INDEX: APRIL LARGEST MOVE DOWN 7 POINTS IN EXPECTATIONS FOR ECONOMY TO IMPROVE TO 4%",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:01:00+00:00",
-      "timeDisplay": "10:01 AM",
-      "link": "https://www.tradingview.com/news/macenews:ce941a60a094b:0-us-nfib-small-business-index-april-largest-move-down-7-points-in-expectations-for-economy-to-improve-to-4/"
-    },
-    {
-      "title": "US NFIB SMALL BUSINESS INDEX: APRIL LARGEST UPWARD 6 POINTS FOR EARNINGS TREND TO -19%",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:01:00+00:00",
-      "timeDisplay": "10:01 AM",
-      "link": "https://www.tradingview.com/news/macenews:ed6b250d9094b:0-us-nfib-small-business-index-april-largest-upward-6-points-for-earnings-trend-to-19/"
-    },
-    {
-      "title": "US NFIB SMALL BUSINESS OPTIMISM INDEX: 7 OF 10 COMPONENTS UP, 3 DOWN IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:01:00+00:00",
-      "timeDisplay": "10:01 AM",
-      "link": "https://www.tradingview.com/news/macenews:20de5dabc094b:0-us-nfib-small-business-optimism-index-7-of-10-components-up-3-down-in-april/"
-    },
-    {
       "title": "Bitmine ETH Holdings Cross 5.2 Million\u2014CEO Announces New Phase For Crypto Markets",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T10:00:41+00:00",
       "timeDisplay": "10:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:c4493cd1f094b:0-bitmine-eth-holdings-cross-5-2-million-ceo-announces-new-phase-for-crypto-markets/"
-    },
-    {
-      "title": "US NATL FEDERATION OF INDEPENDENT BUSINESSES SMALL BUSINESS OPTIMISM INDEX 95.9 IN APRIL VS 95.8 IN MARCH; 95.8 IN APRIL 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T10:00:00+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:7bee8a163094b:0-us-natl-federation-of-independent-businesses-small-business-optimism-index-95-9-in-april-vs-95-8-in-march-95-8-in-april-2025/"
     },
     {
       "title": "India\u2019s forex reserves can cover more than eight months of imports",
@@ -177,14 +407,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:de38da5f7094b:0-ethereum-co-founder-joseph-lubin-names-his-top-two-suspects-for-satoshi-nakamoto/"
     },
     {
-      "title": "Dollar rises but still not far from pre-war levels, await data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T08:45:41+00:00",
-      "timeDisplay": "8:45 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P0HG:0-dollar-rises-but-still-not-far-from-pre-war-levels-await-data/"
-    },
-    {
       "title": "Nasdaq, S&P 500 Futures Wake Up To CPI Jitters As Trump Heads To China With Tech Titans: Why MU, QUBT, ASTS, GME, HIMS, BZFD Are In Focus",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -193,28 +415,28 @@
       "link": "https://www.tradingview.com/news/stocktwits:be48dbddd094b:0/"
     },
     {
+      "title": "Ethereum Foundation Unstakes 21,270 ETH",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T08:37:00+00:00",
+      "timeDisplay": "8:37 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:bac7a8fc0094b:0-ethereum-foundation-unstakes-21-270-eth/"
+    },
+    {
+      "title": "Exodus Movement Sells More Than 1,000 Bitcoin",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T08:26:00+00:00",
+      "timeDisplay": "8:26 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:89665e410094b:0-exodus-movement-sells-more-than-1-000-bitcoin/"
+    },
+    {
       "title": "PM\u2019s push for lower gold consumption, work-from-home to boost realty demand, say analysts",
       "source": "moneycontrol",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T08:15:55+00:00",
       "timeDisplay": "8:15 AM",
       "link": "https://www.tradingview.com/news/moneycontrol:eca70633d094b:0-pm-s-push-for-lower-gold-consumption-work-from-home-to-boost-realty-demand-say-analysts/"
-    },
-    {
-      "title": "MORE FED'S WILLIAMS: BRINGING THE PRICE LEVEL BACK TO 2019 LEVELS WOULD HAVE BEEN VERY COSTLY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T08:14:00+00:00",
-      "timeDisplay": "8:14 AM",
-      "link": "https://www.tradingview.com/news/macenews:5be7d2abf094b:0-more-fed-s-williams-bringing-the-price-level-back-to-2019-levels-would-have-been-very-costly/"
-    },
-    {
-      "title": "NEW YORK FED PRESIDENT JOHN WILLIAMS AT SNB EVENT: AFFORDABILITY IS THE NUMBER ONE ISSUE IN THE U.S. TODAY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T08:14:00+00:00",
-      "timeDisplay": "8:14 AM",
-      "link": "https://www.tradingview.com/news/macenews:86bf08c6d094b:0-new-york-fed-president-john-williams-at-snb-event-affordability-is-the-number-one-issue-in-the-u-s-today/"
     },
     {
       "title": "Whales Just Bet $832 Million on the Ethereum Price Dip, Here\u2019s Why",
@@ -254,7 +476,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-12T07:20:00+00:00",
       "timeDisplay": "7:20 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260512002229:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260512002230:0/"
     },
     {
       "title": "Oil Gains 2% as Fragile U.S.-Iran Cease-Fire Fuels Concerns \u2014 Market Talk",
@@ -313,28 +535,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUC9ZVPZZ:0-falconedge-reports-april-bitcoin-yield-of-1-078/"
     },
     {
-      "title": "Dollar Rises as U.S. And Iran in Stalemate \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T06:37:00+00:00",
-      "timeDisplay": "6:37 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260512001813:0/"
-    },
-    {
       "title": "Crypto Market News Today: BTC, ETH Consolidates, While H & B Prices Lead the Markets",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T06:21:52+00:00",
       "timeDisplay": "6:21 AM",
       "link": "https://www.tradingview.com/news/coinpedia:a85136509094b:0-crypto-market-news-today-btc-eth-consolidates-while-h-b-prices-lead-the-markets/"
-    },
-    {
-      "title": "Dollar rises on fading hopes of Middle East peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T06:06:54+00:00",
-      "timeDisplay": "6:06 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P01X:0-dollar-rises-on-fading-hopes-of-middle-east-peace-deal/"
     },
     {
       "title": "AI rally pauses as Middle East ceasefire goes on 'life support'",
@@ -377,84 +583,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:198cc4e6c094b:0-bitmine-slows-ethereum-buys-targets-december-to-own-5-of-supply/"
     },
     {
-      "title": "Strategy\u2019s Michael Saylor hints at selling 0.2% of Bitcoin while planning to buy 5-10x more",
-      "source": "cryptobriefing",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T04:52:02+00:00",
-      "timeDisplay": "4:52 AM",
-      "link": "https://www.tradingview.com/news/cryptobriefing:635a709c2094b:0-strategy-s-michael-saylor-hints-at-selling-0-2-of-bitcoin-while-planning-to-buy-5-10x-more/"
-    },
-    {
-      "title": "Bitcoin briefly surpasses $82,000 amid easing geopolitical tensions",
-      "source": "cryptobriefing",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T04:35:31+00:00",
-      "timeDisplay": "4:35 AM",
-      "link": "https://www.tradingview.com/news/cryptobriefing:91fef6231094b:0-bitcoin-briefly-surpasses-82-000-amid-easing-geopolitical-tensions/"
-    },
-    {
-      "title": "Peace talks stutter",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T04:34:08+00:00",
-      "timeDisplay": "4:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41P0AJ:0-peace-talks-stutter/"
-    },
-    {
-      "title": "TUESDAY WHTE HOUSE SCHEDULE - President Trump departs for China",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T04:18:00+00:00",
-      "timeDisplay": "4:18 AM",
-      "link": "https://www.tradingview.com/news/macenews:6649d8145094b:0-tuesday-whte-house-schedule-president-trump-departs-for-china/"
-    },
-    {
-      "title": "MARA and CleanSpark Stocks Slide as Bitcoin Losses Sink Quarterly Results",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T04:07:44+00:00",
-      "timeDisplay": "4:07 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:81725f0b7094b:0-mara-and-cleanspark-stocks-slide-as-bitcoin-losses-sink-quarterly-results/"
-    },
-    {
-      "title": "Yuan hovers near three-year high ahead of Trump-Xi summit",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T03:34:30+00:00",
-      "timeDisplay": "3:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P036:0-yuan-hovers-near-three-year-high-ahead-of-trump-xi-summit/"
-    },
-    {
       "title": "Ethereum Price Rejected Near $2,400 Again, Sellers Defend Key Barrier",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T03:08:09+00:00",
       "timeDisplay": "3:08 AM",
       "link": "https://www.tradingview.com/news/newsbtc:2c038fc93094b:0-ethereum-price-rejected-near-2-400-again-sellers-defend-key-barrier/"
-    },
-    {
-      "title": "Bitcoin funding rates turn positive: Is BTC rally to $85K next?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T02:42:27+00:00",
-      "timeDisplay": "2:42 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3e7492896094b:0-bitcoin-funding-rates-turn-positive-is-btc-rally-to-85k-next/"
-    },
-    {
-      "title": "Bitcoin Treasury Strategy Shifts as Michael Saylor Reveals When Strategy Could Sell BTC",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T02:39:10+00:00",
-      "timeDisplay": "2:39 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d0d380076094b:0-bitcoin-treasury-strategy-shifts-as-michael-saylor-reveals-when-strategy-could-sell-btc/"
-    },
-    {
-      "title": "Bitcoin Price Eyes $82K Break, Bulls Prepare For Bigger Rally",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T02:35:43+00:00",
-      "timeDisplay": "2:35 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:00905112b094b:0-bitcoin-price-eyes-82k-break-bulls-prepare-for-bigger-rally/"
     },
     {
       "title": "US oil may retest resistance at $100.21",
@@ -473,52 +607,12 @@
       "link": "https://www.tradingview.com/news/te_news:549815:0-us-10-year-yield-hits-1-week-high/"
     },
     {
-      "title": "Dollar Rises on Ceasefire Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T01:56:53+00:00",
-      "timeDisplay": "1:56 AM",
-      "link": "https://www.tradingview.com/news/te_news:549803:0-dollar-rises-on-ceasefire-uncertainty/"
-    },
-    {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-12T01:39:57+00:00",
       "timeDisplay": "1:39 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P01S:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Dollar steady as Middle East peace hopes recede",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T01:31:26+00:00",
-      "timeDisplay": "1:31 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41P036:0-dollar-steady-as-middle-east-peace-hopes-recede/"
-    },
-    {
-      "title": "Bitcoin Exits \u2018Panic Zone,\u2019 But Capital Inflows Remain Weak",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T01:00:20+00:00",
-      "timeDisplay": "1:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:0515bb6b5094b:0-bitcoin-exits-panic-zone-but-capital-inflows-remain-weak/"
-    },
-    {
-      "title": "CLSK Stock Tumbles After Flagging Over $200M Loss In Bitcoin Holdings",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T00:42:02+00:00",
-      "timeDisplay": "12:42 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:1ec51f63e094b:0/"
-    },
-    {
-      "title": "Top Analyst Confirms The Bearish Target: Bitcoin Could Ease Down To $40,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T00:22:55+00:00",
-      "timeDisplay": "12:22 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:34bcbde66094b:0-top-analyst-confirms-the-bearish-target-bitcoin-could-ease-down-to-40-000/"
     },
     {
       "title": "Oil Edges Higher as Markets Weigh Prolonged Hormuz Strait Closure \u2014 Market Talk",
@@ -551,94 +645,6 @@
       "timestamp": "2026-05-11T23:33:00+00:00",
       "timeDisplay": "11:33 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260511012536:0/"
-    },
-    {
-      "title": "Ethereum Cools Off Below $2,450 \u2013 Lower Leverage Sets The Stage For A Breakout",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T23:30:20+00:00",
-      "timeDisplay": "11:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:32cf7ea3a094b:0-ethereum-cools-off-below-2-450-lower-leverage-sets-the-stage-for-a-breakout/"
-    },
-    {
-      "title": "Oil Holds Gains Amid Ceasefire Doubts",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T23:23:50+00:00",
-      "timeDisplay": "11:23 PM",
-      "link": "https://www.tradingview.com/news/te_news:549758:0-oil-holds-gains-amid-ceasefire-doubts/"
-    },
-    {
-      "title": "Ether price is still stuck below $2.4K: Here is why",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T22:17:27+00:00",
-      "timeDisplay": "10:17 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b4cb7b076094b:0-ether-price-is-still-stuck-below-2-4k-here-is-why/"
-    },
-    {
-      "title": "Veteran analyst says S&P 500 could climb to 8,250 in 2026",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T21:45:51+00:00",
-      "timeDisplay": "9:45 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:c56ad941c094b:0-veteran-analyst-says-s-p-500-could-climb-to-8-250-in-2026/"
-    },
-    {
-      "title": "Ethereum Foundation names three new co-leads to major Protocol cluster",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T21:26:16+00:00",
-      "timeDisplay": "9:26 PM",
-      "link": "https://www.tradingview.com/news/the_block:3b83be25e094b:0-ethereum-foundation-names-three-new-co-leads-to-major-protocol-cluster/"
-    },
-    {
-      "title": "DRAM Powers Another Big Week of ETF Inflows",
-      "source": "etfcom",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T21:00:16+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/etfcom:0b7d50bc5094b:0-dram-powers-another-big-week-of-etf-inflows/"
-    },
-    {
-      "title": "S&P 500, Nasdaq eke out record closing highs along with tech, semis",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T20:22:21+00:00",
-      "timeDisplay": "8:22 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O1C3:0-s-p-500-nasdaq-eke-out-record-closing-highs-along-with-tech-semis/"
-    },
-    {
-      "title": "Oil Gains As Trump Rejects Iran's Response to U.S. Plan \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T19:32:00+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511008762:0/"
-    },
-    {
-      "title": "Strait of Hormuz Closure Pushes Crude Prices Higher",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T19:19:43+00:00",
-      "timeDisplay": "7:19 PM",
-      "link": "https://www.tradingview.com/news/barchart:a9a2f497c094b:0-strait-of-hormuz-closure-pushes-crude-prices-higher/"
-    },
-    {
-      "title": "Dollar edges up as Trump rejects Iran peace move",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T19:12:22+00:00",
-      "timeDisplay": "7:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O145:0-dollar-edges-up-as-trump-rejects-iran-peace-move/"
-    },
-    {
-      "title": "Yields rise as Iran tensions fan inflation fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T19:10:53+00:00",
-      "timeDisplay": "7:10 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41O0PJ:0-yields-rise-as-iran-tensions-fan-inflation-fears/"
     }
   ]
 }

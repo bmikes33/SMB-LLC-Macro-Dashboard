@@ -1,56 +1,187 @@
 {
-  "lastUpdated": "2026-05-12T05:27:15.924539+00:00",
-  "lastUpdatedDisplay": "May 12, 2026 \u2014 05:27 AM UTC",
+  "lastUpdated": "2026-05-12T08:16:05.707286+00:00",
+  "lastUpdatedDisplay": "May 12, 2026 \u2014 08:16 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin rallies to $82,000 amid easing geopolitical tensions but struggles with weak capital inflows, while peace talks stutter and Middle East ceasefire hopes recede. Oil edges higher on prolonged Hormuz closure concerns while the dollar rises on ceasefire uncertainty and 10-year yields hit 1-week highs.",
+    "macroSummary": "Markets show mixed signals as a fragile US-Iran ceasefire creates uncertainty, with oil gaining 2% on supply concerns while Bitcoin briefly touched $82k amid easing tensions. Dollar strength persists on Middle East stalemate and fading peace hopes, while US 10-year yields hit 1-week highs.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show contradictory signals with crypto risk-on behavior against backdrop of deteriorating geopolitical situation and rising yields suggesting reflation pressures persist.",
+    "regimePressureReason": "Oil gains support the embedded war premium while dollar strength and rising yields align with reflation, but ceasefire developments and peace talk momentum could unwind the geopolitical risk premium that's been supporting the regime thesis.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil retesting $100.21 resistance with Hormuz closure concerns, approaching but not yet at stagflation threshold"
-      },
-      {
-        "indicator": "US30Y",
-        "level": "5.10%",
-        "signal": "10-year yields hitting 1-week highs amid inflation worries, suggesting continued long-end pressure"
+        "level": "approaching $100.21 resistance",
+        "signal": "Reuters notes US oil may retest resistance at $100.21, approaching but not breaching the $115 stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin surges to $82,000 on easing geopolitical tensions despite weak capital inflows",
+        "signal": "Fragile US-Iran ceasefire creates uncertainty with oil gaining 2% on supply concerns but Bitcoin rising on easing tensions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Peace talks stuttering and Middle East ceasefire on 'life support' contradicts easing tensions narrative",
+        "signal": "Dollar rises consistently across multiple reports on Middle East stalemate and fading peace deal hopes",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "US 10-year yields hit 1-week high, reinforcing long-end pressure dynamics",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Oil approaches $100.21 resistance level, moving closer to $115 stagflation threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "AI rally pauses and crypto consolidation suggests risk appetite moderation despite overall bullish positioning",
         "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar rising on ceasefire uncertainty while oil holds gains on closure doubts supports reflation thesis",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "US 10-year yields hitting 1-week highs amid inflation worries maintains long-end stress",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Gold rising despite inflation worries shows mixed risk sentiment in traditional havens",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder for crypto volatility as Bitcoin shows weak inflows despite price surge",
-      "Watch oil complex closely as WTI approaches $100 resistance with Hormuz concerns escalating",
-      "Prepare for potential regime shift if geopolitical tensions re-escalate given peace talk failures"
+      "Monitor oil closely - ceasefire fragility could reverse quickly but peace progress would undermine war premium",
+      "Watch for VIX moves if Middle East situation deteriorates or improves dramatically",
+      "BMNR ladder remains appropriate given crypto strength but monitor for ceasefire-driven volatility"
     ]
   },
   "articles": [
+    {
+      "title": "Gold Prices Could Touch New Highs on Macro Uncertainty, Broadening Demand \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:30:00+00:00",
+      "timeDisplay": "7:30 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512002305:0/"
+    },
+    {
+      "title": "Gold Falls Ahead of U.S. Inflation Data \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:22:00+00:00",
+      "timeDisplay": "7:22 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512002240:0/"
+    },
+    {
+      "title": "Bitcoin Falls as Fragile U.S.-Iran Cease-Fire Weighs \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:20:00+00:00",
+      "timeDisplay": "7:20 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512002229:0/"
+    },
+    {
+      "title": "Oil Gains 2% as Fragile U.S.-Iran Cease-Fire Fuels Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:15:00+00:00",
+      "timeDisplay": "7:15 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512002198:0/"
+    },
+    {
+      "title": "Ethereum Foundation hits \u2018Glamsterdam\u2019 milestones, names new protocol leads",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:06:20+00:00",
+      "timeDisplay": "7:06 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:58e40e7f4094b:0-ethereum-foundation-hits-glamsterdam-milestones-names-new-protocol-leads/"
+    },
+    {
+      "title": "Crypto Funds Extend Six-Week Streak With $858M Inflows On CLARITY Act Progress",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T07:00:12+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:28b20239d094b:0-crypto-funds-extend-six-week-streak-with-858m-inflows-on-clarity-act-progress/"
+    },
+    {
+      "title": "Indian PM's Call to Cut Energy Use Signals Policy Changes Ahead \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T06:59:00+00:00",
+      "timeDisplay": "6:59 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512001984:0/"
+    },
+    {
+      "title": "Smarter Web Company Reports Total Bitcoin Holdings Of 2,830 Bitcoin",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T06:44:02+00:00",
+      "timeDisplay": "6:44 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41P01H:0-smarter-web-company-reports-total-bitcoin-holdings-of-2-830-bitcoin/"
+    },
+    {
+      "title": "CLARITY Act Draft Released: What the 309-Page Draft Says About Bitcoin, Staking and Stablecoins",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T06:43:15+00:00",
+      "timeDisplay": "6:43 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:23f663ade094b:0-clarity-act-draft-released-what-the-309-page-draft-says-about-bitcoin-staking-and-stablecoins/"
+    },
+    {
+      "title": "Falconedge Reports April Bitcoin Yield Of 1.078%",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T06:43:04+00:00",
+      "timeDisplay": "6:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUC9ZVPZZ:0-falconedge-reports-april-bitcoin-yield-of-1-078/"
+    },
+    {
+      "title": "Dollar Rises as U.S. And Iran in Stalemate \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T06:37:00+00:00",
+      "timeDisplay": "6:37 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512001813:0/"
+    },
+    {
+      "title": "Crypto Market News Today: BTC, ETH Consolidates, While H & B Prices Lead the Markets",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T06:21:52+00:00",
+      "timeDisplay": "6:21 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:a85136509094b:0-crypto-market-news-today-btc-eth-consolidates-while-h-b-prices-lead-the-markets/"
+    },
+    {
+      "title": "Dollar rises on fading hopes of Middle East peace deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T06:06:54+00:00",
+      "timeDisplay": "6:06 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P01X:0-dollar-rises-on-fading-hopes-of-middle-east-peace-deal/"
+    },
+    {
+      "title": "AI rally pauses as Middle East ceasefire goes on 'life support'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-12T05:51:39+00:00",
+      "timeDisplay": "5:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P040:0-ai-rally-pauses-as-middle-east-ceasefire-goes-on-life-support/"
+    },
+    {
+      "title": "Bitcoin price outlook: is same pattern that caused 400% gains forming again?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T05:42:33+00:00",
+      "timeDisplay": "5:42 AM",
+      "link": "https://www.tradingview.com/news/invezz:d1a804541094b:0-bitcoin-price-outlook-is-same-pattern-that-caused-400-gains-forming-again/"
+    },
+    {
+      "title": "Jewellery industry pitches Gold Monetisation Scheme overhaul, could unlock $90 billion in liquidity",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T05:42:07+00:00",
+      "timeDisplay": "5:42 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:95ee3643c094b:0-jewellery-industry-pitches-gold-monetisation-scheme-overhaul-could-unlock-90-billion-in-liquidity/"
+    },
+    {
+      "title": "BOJ April Meeting Summary Leaves Room for Policy Options \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-12T05:37:00+00:00",
+      "timeDisplay": "5:37 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260512000926:0/"
+    },
     {
       "title": "Bitmine slows Ethereum buys, targets December to own 5% of supply",
       "source": "cointelegraph",
@@ -116,12 +247,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:2c038fc93094b:0-ethereum-price-rejected-near-2-400-again-sellers-defend-key-barrier/"
     },
     {
-      "title": "Bitcoin funding rates turn positive: Is a BTC rally to $85K next?",
+      "title": "Bitcoin funding rates turn positive: Is BTC rally to $85K next?",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T02:42:27+00:00",
       "timeDisplay": "2:42 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3e7492896094b:0-bitcoin-funding-rates-turn-positive-is-a-btc-rally-to-85k-next/"
+      "link": "https://www.tradingview.com/news/cointelegraph:3e7492896094b:0-bitcoin-funding-rates-turn-positive-is-btc-rally-to-85k-next/"
     },
     {
       "title": "Bitcoin Treasury Strategy Shifts as Michael Saylor Reveals When Strategy Could Sell BTC",
@@ -154,14 +285,6 @@
       "timestamp": "2026-05-12T02:24:02+00:00",
       "timeDisplay": "2:24 AM",
       "link": "https://www.tradingview.com/news/te_news:549815:0-us-10-year-yield-hits-1-week-high/"
-    },
-    {
-      "title": "AI rally pauses as Middle East ceasefire goes on 'life support'",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T02:16:29+00:00",
-      "timeDisplay": "2:16 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P022:0-ai-rally-pauses-as-middle-east-ceasefire-goes-on-life-support/"
     },
     {
       "title": "Dollar Rises on Ceasefire Uncertainty",
@@ -300,14 +423,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:4bc32420a094b:0-can-bitcoin-price-cross-200-000-pundit-reveals-3-year-roadmap-for-success/"
     },
     {
-      "title": "Crypto YouTube Crisis: \u201cEven at the 2018 Bear Market, I Had Double the Views\u201d",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T21:49:56+00:00",
-      "timeDisplay": "9:49 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:b17202f26094b:0-crypto-youtube-crisis-even-at-the-2018-bear-market-i-had-double-the-views/"
-    },
-    {
       "title": "Veteran analyst says S&P 500 could climb to 8,250 in 2026",
       "source": "gurufocus",
       "color": "#00e5ff",
@@ -324,14 +439,6 @@
       "link": "https://www.tradingview.com/news/the_block:3b83be25e094b:0-ethereum-foundation-names-three-new-co-leads-to-major-protocol-cluster/"
     },
     {
-      "title": "MARA Q1 revenue drops 18%, says bitcoin mining remains \u2018operational foundation\u2019",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T21:14:02+00:00",
-      "timeDisplay": "9:14 PM",
-      "link": "https://www.tradingview.com/news/the_block:7825a3a2c094b:0-mara-q1-revenue-drops-18-says-bitcoin-mining-remains-operational-foundation/"
-    },
-    {
       "title": "DRAM Powers Another Big Week of ETF Inflows",
       "source": "etfcom",
       "color": "#00e5ff",
@@ -340,44 +447,12 @@
       "link": "https://www.tradingview.com/news/etfcom:0b7d50bc5094b:0-dram-powers-another-big-week-of-etf-inflows/"
     },
     {
-      "title": "Strategy's Michael Saylor raps about how he gets shareholders to pay for bitcoin buys",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T20:45:00+00:00",
-      "timeDisplay": "8:45 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260511009757:0/"
-    },
-    {
-      "title": "Strategy Resumes Bitcoin Buying as \u2018Golden Cross\u2019 Flashes and CLARITY Act Reaches Senate Markup",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T20:38:21+00:00",
-      "timeDisplay": "8:38 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:106f15dd9094b:0/"
-    },
-    {
-      "title": "Strategy May Be Buying Bitcoin Again Despite Q1 Sell Talk",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T20:30:18+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:c9b994e33094b:0-strategy-may-be-buying-bitcoin-again-despite-q1-sell-talk/"
-    },
-    {
       "title": "S&P 500, Nasdaq eke out record closing highs along with tech, semis",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-11T20:22:21+00:00",
       "timeDisplay": "8:22 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O1C3:0-s-p-500-nasdaq-eke-out-record-closing-highs-along-with-tech-semis/"
-    },
-    {
-      "title": "Evening digest: Trump says Iran ceasefire on life support, Oil tops $104",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T19:44:54+00:00",
-      "timeDisplay": "7:44 PM",
-      "link": "https://www.tradingview.com/news/invezz:c801a9fc0094b:0-evening-digest-trump-says-iran-ceasefire-on-life-support-oil-tops-104/"
     },
     {
       "title": "Dollar Edges Higher on Crude Oil Strength",
@@ -442,14 +517,6 @@
       "timestamp": "2026-05-11T18:07:00+00:00",
       "timeDisplay": "6:07 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260511003797:0/"
-    },
-    {
-      "title": "Bitcoin Price Treads Water, XRP and Ethereum Fall. The Crypto Bill May Cause a Rift This Week. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T18:00:00+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511001883:0/"
     },
     {
       "title": "Tom Lee Drops $62K Ethereum Target, Says Tether And Jane Street Out-Earn Wall Street's Giants",
@@ -578,78 +645,6 @@
       "timestamp": "2026-05-11T15:35:00+00:00",
       "timeDisplay": "3:35 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260511006900:0/"
-    },
-    {
-      "title": "Top Analyst Reveals What\u2019s Next For Bitcoin, Ethereum and XRP Prices",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T15:26:40+00:00",
-      "timeDisplay": "3:26 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:20db6a679094b:0-top-analyst-reveals-what-s-next-for-bitcoin-ethereum-and-xrp-prices/"
-    },
-    {
-      "title": "Home sales, weighed by high borrowing costs, slide sideways\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T15:09:30+00:00",
-      "timeDisplay": "3:09 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0X6:0-home-sales-weighed-by-high-borrowing-costs-slide-sideways/"
-    },
-    {
-      "title": "Dollar Erases Early Gains as Stocks Rally",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T14:42:01+00:00",
-      "timeDisplay": "2:42 PM",
-      "link": "https://www.tradingview.com/news/barchart:bd968a46f094b:0-dollar-erases-early-gains-as-stocks-rally/"
-    },
-    {
-      "title": "War Shock Challenges Gold's Safe Haven Status \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T14:39:00+00:00",
-      "timeDisplay": "2:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511006451:0/"
-    },
-    {
-      "title": "Wall Street mixed as Iran worries persist",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T14:31:24+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0VJ:0-wall-street-mixed-as-iran-worries-persist/"
-    },
-    {
-      "title": "Oil Climbs as Trump Rejects Iran Peace Offer",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T14:31:11+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/te_news:549695:0-oil-climbs-as-trump-rejects-iran-peace-offer/"
-    },
-    {
-      "title": "Dollar little changed as Trump rejects Iran peace move",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-11T14:28:23+00:00",
-      "timeDisplay": "2:28 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41O0RU:0-dollar-little-changed-as-trump-rejects-iran-peace-move/"
-    },
-    {
-      "title": "Michael Burry Warns Of A Complete Reversal Of Nasdaq 100: 'Scene Of The Bloody Car Crash, Minutes Before It Happens'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T14:20:08+00:00",
-      "timeDisplay": "2:20 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:3be693f2c094b:0/"
-    },
-    {
-      "title": "Dollar Could Fall if Risk Appetite Improves \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-11T14:14:00+00:00",
-      "timeDisplay": "2:14 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260511006209:0/"
     }
   ]
 }

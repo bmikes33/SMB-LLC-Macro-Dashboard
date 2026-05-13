@@ -1,51 +1,280 @@
 {
-  "lastUpdated": "2026-05-13T11:22:04.250902+00:00",
-  "lastUpdatedDisplay": "May 13, 2026 \u2014 11:22 AM UTC",
+  "lastUpdated": "2026-05-13T13:57:17.453189+00:00",
+  "lastUpdatedDisplay": "May 13, 2026 \u2014 01:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with European stocks rising and crypto rebounding above key levels, while government bond yields remain elevated and oil prices stay firm amid supply constraints. Housing market activity increases despite mortgage rates near 6.5%, and geopolitical tensions from Middle East conflicts continue to support safe haven flows into gold while the dollar strengthens.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Evidence splits between reflation confirmation (firm oil, elevated bond yields, housing resilience) and potential stress signals (dollar strength, persistent yield elevation suggesting bond market strain).",
+    "macroSummary": "US April PPI data delivered a significant inflation shock with headline PPI jumping 1.4% monthly (vs 0.5% expected) and 6.0% yearly, the largest monthly increase since March 2022. The dollar extended gains to one-week highs while Treasury yields hit July highs, as markets grappled with persistent inflation pressures amid ongoing Middle East uncertainty.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "The massive PPI surprise significantly above expectations suggests inflation is re-accelerating rather than moderating, pushing Treasury yields to multi-month highs and strengthening the dollar - both moves that pressure the reflation thesis toward stagflation territory.",
     "thresholdWatches": [
       {
+        "indicator": "US 10Y yields",
+        "level": "July highs",
+        "signal": "Treasury yields hitting multi-month highs after hot PPI data suggests bond market stress building"
+      },
+      {
         "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar at one-week high on Middle East uncertainty and hot US inflation data"
+        "level": "approaching 100",
+        "signal": "Dollar at one-week highs and extending gains after inflation surprise could approach regime flip level"
       }
     ],
     "keySignals": [
       {
-        "signal": "WTI remains firm with supply tightness persisting, supporting reflation narrative",
-        "tag": "SUPPORTS"
+        "signal": "April PPI surged 1.4% monthly vs 0.5% expected, largest increase since March 2022",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Government bond yields remain elevated across US and Europe, consistent with reflation pressures",
-        "tag": "SUPPORTS"
+        "signal": "Core PPI jumped 5.2% yearly vs 4.3% expected, showing broad-based inflation acceleration",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening to one-week high amid hot inflation data, approaching DXY 100 threshold",
+        "signal": "US 10-year Treasury yields reached July highs following the hot inflation data",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Housing market shows resilience with mortgage applications up 15.5% YoY despite 6.46% rates",
-        "tag": "SUPPORTS"
+        "signal": "Dollar extends gains to one-week high on inflation shock and Middle East uncertainty",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "European equities rising as sentiment recovers, supporting risk-on cyclical bias",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin wobbled at $80K after PPI data tripled forecasts, showing risk asset sensitivity to stagflation fears",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely for break above 100 which would signal potential dollar regime flip",
-      "Watch for any signs of credit stress in HYG/LQD given persistent elevated yields",
-      "Consider BMNR ladder adjustments if crypto momentum continues above resistance levels"
+      "Monitor LQD and HYG closely - bond market stress from yield surge could approach credit damage thresholds",
+      "Consider reducing BMNR ladder size if DXY approaches 100 and crypto shows continued stagflation sensitivity",
+      "Watch for 30Y approaching 5.10% level as long-end stress accelerates with persistent inflation surprises"
     ]
   },
   "articles": [
+    {
+      "title": "Hot April producer price number adds to inflation worries",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T13:47:48+00:00",
+      "timeDisplay": "1:47 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q13D:0-hot-april-producer-price-number-adds-to-inflation-worries/"
+    },
+    {
+      "title": "Strategy\u2019s STRC may be fueling recurring mid-month bitcoin rallies, K33 says",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:27:09+00:00",
+      "timeDisplay": "1:27 PM",
+      "link": "https://www.tradingview.com/news/the_block:a1ac56e86094b:0-strategy-s-strc-may-be-fueling-recurring-mid-month-bitcoin-rallies-k33-says/"
+    },
+    {
+      "title": "Crude Futures Steady As Trump Arrives in China \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:20:00+00:00",
+      "timeDisplay": "1:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513007286:0/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - May 13",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:15:00+00:00",
+      "timeDisplay": "1:15 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513007228:0/"
+    },
+    {
+      "title": "Dollar Extends Gains After Higher-Than-Forecast U.S. PPI Data \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:07:00+00:00",
+      "timeDisplay": "1:07 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513007150:0/"
+    },
+    {
+      "title": "Ethereum closes gap with Solana as DEX volumes converge near $45 billion",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:06:02+00:00",
+      "timeDisplay": "1:06 PM",
+      "link": "https://www.tradingview.com/news/the_block:5aff11d2f094b:0-ethereum-closes-gap-with-solana-as-dex-volumes-converge-near-45-billion/"
+    },
+    {
+      "title": "Bitcoin Wobbles At $80K After PPI Data Triples Forecast, Adding To Inflation Fears",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:05:37+00:00",
+      "timeDisplay": "1:05 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:0c712751c094b:0/"
+    },
+    {
+      "title": "US CHICAGO FED CARTS MEASURE: RETAIL SALES EX-AUTOS +0.8% IN APRIL FROM MARCH; UNCHANGED IN APRIL FROM MARCH, INFLATION ADJUSTED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:04:00+00:00",
+      "timeDisplay": "1:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:eb20238e1094b:0-us-chicago-fed-carts-measure-retail-sales-ex-autos-0-8-in-april-from-march-unchanged-in-april-from-march-inflation-adjusted/"
+    },
+    {
+      "title": "US CHICAGO FED CARTS MEASURE: RETAIL SALES EX-AUTOS REVISED  TO +1.9% IN MARCH FROM FEB; -0.1% INFLATION ADJUSTED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T13:04:00+00:00",
+      "timeDisplay": "1:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:d804a22e3094b:0-us-chicago-fed-carts-measure-retail-sales-ex-autos-revised-to-1-9-in-march-from-feb-0-1-inflation-adjusted/"
+    },
+    {
+      "title": "DXY Extends Gains After Hot PPI Report",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:57:52+00:00",
+      "timeDisplay": "12:57 PM",
+      "link": "https://www.tradingview.com/news/te_news:550369:0-dxy-extends-gains-after-hot-ppi-report/"
+    },
+    {
+      "title": "US 10-Year Treasury Note Reaches July-Highs",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:55:26+00:00",
+      "timeDisplay": "12:55 PM",
+      "link": "https://www.tradingview.com/news/te_news:550368:0-us-10-year-treasury-note-reaches-july-highs/"
+    },
+    {
+      "title": "Bitcoin Turns Lower as Trump-Xi Meeting Eyed \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:51:00+00:00",
+      "timeDisplay": "12:51 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513006916:0/"
+    },
+    {
+      "title": "US BLS: APRIL 2026 PPI M/M INCREASE LARGEST SINCE MARCH 2022 (+1.7%)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:f04f50f0b094b:0-us-bls-april-2026-ppi-m-m-increase-largest-since-march-2022-1-7/"
+    },
+    {
+      "title": "US APR PPI EX-FOOD, ENERGY, TRADE SERVICES +4.4% Y/Y VS +3.6% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:8dc19b83c094b:0-us-apr-ppi-ex-food-energy-trade-services-4-4-y-y-vs-3-6-in-mar/"
+    },
+    {
+      "title": "US APR PPI EX-FOOD, ENERGY, TRADE SERVICES +0.6% M/M VS +0.2% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:5ed716e29094b:0-us-apr-ppi-ex-food-energy-trade-services-0-6-m-m-vs-0-2-in-mar/"
+    },
+    {
+      "title": "US APR PPI EX-FOOD AND ENERGY +1.0% M/M VS +0.3% EXPECTED AND +0.2% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:9556c6bd6094b:0-us-apr-ppi-ex-food-and-energy-1-0-m-m-vs-0-3-expected-and-0-2-in-mar/"
+    },
+    {
+      "title": "US APR PPI EX-FOOD AND ENERGY +5.2% Y/Y VS +4.3% EXPECTED AND +3.8% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:e872335ec094b:0-us-apr-ppi-ex-food-and-energy-5-2-y-y-vs-4-3-expected-and-3-8-in-mar/"
+    },
+    {
+      "title": "US APR PPI FINAL DEMAND +1.4% M/M VS +0.5% EXPECTED AND +0.7% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:b28724aa7094b:0-us-apr-ppi-final-demand-1-4-m-m-vs-0-5-expected-and-0-7-in-mar/"
+    },
+    {
+      "title": "US APR PPI FINAL DEMAND +6.0% Y/Y VS +4.8% EXPECTED AND +4.0% IN MAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:454767009094b:0-us-apr-ppi-final-demand-6-0-y-y-vs-4-8-expected-and-4-0-in-mar/"
+    },
+    {
+      "title": "Bitcoin vs XRP: Ripple CTO Reveals the Fatal Incentive Flaw in BTC",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:29:37+00:00",
+      "timeDisplay": "12:29 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:32fbec93c094b:0-bitcoin-vs-xrp-ripple-cto-reveals-the-fatal-incentive-flaw-in-btc/"
+    },
+    {
+      "title": "Bitcoin to $100K in Q2? Strategy\u2019s STRC unlocks potential to buy 3K BTC in two days",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:29:00+00:00",
+      "timeDisplay": "12:29 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5128e2e2a094b:0-bitcoin-to-100k-in-q2-strategy-s-strc-unlocks-potential-to-buy-3k-btc-in-two-days/"
+    },
+    {
+      "title": "Dollar at one-week high on Middle East uncertainty, hot US inflation",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T12:08:27+00:00",
+      "timeDisplay": "12:08 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Q11Z:0-dollar-at-one-week-high-on-middle-east-uncertainty-hot-us-inflation/"
+    },
+    {
+      "title": "Arthur Hayes Calls Zcash His Biggest Non-Bitcoin Bet On The 'Asymmetric' Privacy Trade",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:08:12+00:00",
+      "timeDisplay": "12:08 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:2038e2b83094b:0/"
+    },
+    {
+      "title": "Metaplanet posts $725 million Q1 net loss as bitcoin markdowns outweigh operating gains",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:03:32+00:00",
+      "timeDisplay": "12:03 PM",
+      "link": "https://www.tradingview.com/news/the_block:ccda5f4b2094b:0-metaplanet-posts-725-million-q1-net-loss-as-bitcoin-markdowns-outweigh-operating-gains/"
+    },
+    {
+      "title": "Gold soars by Rs 8,550, silver rises by Rs 20,500 after govt announces import duty hike",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T12:03:30+00:00",
+      "timeDisplay": "12:03 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:94e252e2b094b:0-gold-soars-by-rs-8-550-silver-rises-by-rs-20-500-after-govt-announces-import-duty-hike/"
+    },
+    {
+      "title": "Dollar Could Rise Further Without Resolution to Iran War \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T11:58:00+00:00",
+      "timeDisplay": "11:58 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513006111:0/"
+    },
+    {
+      "title": "Can Ethereum hold $2,300 after JPMorgan\u2019s big blockchain move?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T11:27:04+00:00",
+      "timeDisplay": "11:27 AM",
+      "link": "https://www.tradingview.com/news/invezz:736412158094b:0-can-ethereum-hold-2-300-after-jpmorgan-s-big-blockchain-move/"
+    },
+    {
+      "title": "\u201810 AM Bitcoin Dump\u2019 Firm Jane Street Rotates Millions From IBIT, MSTR Into Ethereum",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T11:23:10+00:00",
+      "timeDisplay": "11:23 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:b2f78d57f094b:0/"
+    },
     {
       "title": "European stocks rise, oil prices steady, government bond yields still high",
       "source": "reuters",
@@ -151,12 +380,12 @@
       "link": "https://www.tradingview.com/news/macenews:83ba05c5c094b:0-us-mortgage-bankers-association-mortgage-applications-index-1-7-in-may-8-week-3-2-vs-4-weeks-ago-15-5-vs-1-year-ago/"
     },
     {
-      "title": "Bitcoin price repeating move with 77% all-time high odds within year: Analyst",
+      "title": "Bitcoin price history suggests 77% odds of new all-time high within a year",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-13T10:58:38+00:00",
       "timeDisplay": "10:58 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:632f8412b094b:0-bitcoin-price-repeating-move-with-77-all-time-high-odds-within-year-analyst/"
+      "link": "https://www.tradingview.com/news/cointelegraph:632f8412b094b:0-bitcoin-price-history-suggests-77-odds-of-new-all-time-high-within-a-year/"
     },
     {
       "title": "WTI Firms as Supply Tightness Persists",
@@ -165,6 +394,14 @@
       "timestamp": "2026-05-13T10:43:36+00:00",
       "timeDisplay": "10:43 AM",
       "link": "https://www.tradingview.com/news/te_news:550342:0-wti-firms-as-supply-tightness-persists/"
+    },
+    {
+      "title": "Jane Street slashes Bitcoin ETF holdings, adds Ether funds in Q1 2026",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T10:32:13+00:00",
+      "timeDisplay": "10:32 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0ec2b0655094b:0-jane-street-slashes-bitcoin-etf-holdings-adds-ether-funds-in-q1-2026/"
     },
     {
       "title": "Fed alert",
@@ -207,14 +444,6 @@
       "link": "https://www.tradingview.com/news/invezz:cfb9f5777094b:0-dogecoin-price-jumps-as-bitcoin-rebounds-above-80k-amid-short-squeeze/"
     },
     {
-      "title": "U.S. Treasury Yields Decline, Dollar Firms \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T09:40:00+00:00",
-      "timeDisplay": "9:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513004073:0/"
-    },
-    {
       "title": "Bitcoin Price Stuck Below 200 EMA at $82,000 in a 2% Volatility Cage. How High Can BTC Go?",
       "source": "financemagnates",
       "color": "#00e5ff",
@@ -239,12 +468,20 @@
       "link": "https://www.tradingview.com/news/moneycontrol:1b29546d5094b:0-higher-gold-import-duty-may-revive-smuggling-past-trends-show/"
     },
     {
-      "title": "Dollar at one-week high on Middle East uncertainty, hot US inflation",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T09:12:17+00:00",
-      "timeDisplay": "9:12 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q0AQ:0-dollar-at-one-week-high-on-middle-east-uncertainty-hot-us-inflation/"
+      "title": "Charles Schwab Launches Crypto Trading For Retail Investors",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T08:47:00+00:00",
+      "timeDisplay": "8:47 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:6a7283808094b:0-charles-schwab-launches-crypto-trading-for-retail-investors/"
+    },
+    {
+      "title": "JPMorgan Chase Files To Launch Tokenized Fund",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T08:33:00+00:00",
+      "timeDisplay": "8:33 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8be7683f0094b:0-jpmorgan-chase-files-to-launch-tokenized-fund/"
     },
     {
       "title": "India Likely to Take More Measures to Curb Gold, Silver Imports \u2014 Market Talk",
@@ -276,7 +513,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-13T07:44:00+00:00",
       "timeDisplay": "7:44 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513003141:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260513003143:0/"
     },
     {
       "title": "Gold Rises Despite Inflation Data, U.S.-Iran Impasse \u2014 Market Talk",
@@ -335,22 +572,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q0CA:0-asia-stocks-turn-green-as-ai-cheer-trumps-iran-inflation-gloom/"
     },
     {
-      "title": "Dollar Rises as U.S.-Iran Stalemate Continues \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T06:44:00+00:00",
-      "timeDisplay": "6:44 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513002601:0/"
-    },
-    {
-      "title": "CFTC Chair Says Bitcoin Ban Has Slim to None Odds as Strategic Reserve Announcement Nears",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T06:36:49+00:00",
-      "timeDisplay": "6:36 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:348dac291094b:0-cftc-chair-says-bitcoin-ban-has-slim-to-none-odds-as-strategic-reserve-announcement-nears/"
-    },
-    {
       "title": "Dollar near one-week high as hot U.S. inflation fans Fed hike bets, peace talks stall",
       "source": "reuters",
       "color": "#ff6d00",
@@ -375,14 +596,6 @@
       "link": "https://www.tradingview.com/news/moneycontrol:2a804e301094b:0-nse-s-electronic-gold-receipts-vs-dhan-s-gold-vault-how-do-the-two-gold-products-stack-up/"
     },
     {
-      "title": "Mysterious Bitcoin Whale Transfers $40 Million After Years Of Silence",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T05:30:29+00:00",
-      "timeDisplay": "5:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:2f2de4e57094b:0-mysterious-bitcoin-whale-transfers-40-million-after-years-of-silence/"
-    },
-    {
       "title": "Gold duty hike not anti-consumer, aimed at moderating non-essential imports, say sources",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -399,52 +612,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:8750276a7094b:0-ethereum-community-launches-security-feature-to-end-blind-signing/"
     },
     {
-      "title": "Locked in a stalemate with Iran, Trump heads to China",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T04:35:00+00:00",
-      "timeDisplay": "4:35 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q085:0-locked-in-a-stalemate-with-iran-trump-heads-to-china/"
-    },
-    {
       "title": "JPMorgan Picks Ethereum Again in New Money Market Fund Filing",
       "source": "beincrypto",
       "color": "#00e5ff",
       "timestamp": "2026-05-13T04:19:46+00:00",
       "timeDisplay": "4:19 AM",
       "link": "https://www.tradingview.com/news/beincrypto:0029fd914094b:0-jpmorgan-picks-ethereum-again-in-new-money-market-fund-filing/"
-    },
-    {
-      "title": "Bitcoin (BTC) Price Holds Strong Above $80K Despite Hot CPI Data\u2014Is Retail Accumulation Returning?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T04:12:01+00:00",
-      "timeDisplay": "4:12 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:655a6347f094b:0-bitcoin-btc-price-holds-strong-above-80k-despite-hot-cpi-data-is-retail-accumulation-returning/"
-    },
-    {
-      "title": "Iran war, AI spending could push Bitcoin back to $126K this year: Hayes",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T04:10:05+00:00",
-      "timeDisplay": "4:10 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a86a88819094b:0-iran-war-ai-spending-could-push-bitcoin-back-to-126k-this-year-hayes/"
-    },
-    {
-      "title": "Arthur Hayes Says The Bitcoin Bull Market Has Begun: $126,000 Is Next",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T04:00:52+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f89cd93b4094b:0-arthur-hayes-says-the-bitcoin-bull-market-has-begun-126-000-is-next/"
-    },
-    {
-      "title": "Phoenix Group Bets on Lyon to Anchor $8 Billion AI Push as BTC Mining Slump Deepens",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T04:00:00+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:845e631e1094b:0-phoenix-group-bets-on-lyon-to-anchor-8-billion-ai-push-as-btc-mining-slump-deepens/"
     },
     {
       "title": "Rupee snaps losing streak, edges higher after government raises gold, silver duties",
@@ -477,174 +650,6 @@
       "timestamp": "2026-05-13T03:22:36+00:00",
       "timeDisplay": "3:22 AM",
       "link": "https://www.tradingview.com/news/moneycontrol:b5c686460094b:0-commodity-corner-crude-slips-below-107-as-middle-east-conflict-persists-gold-holds-decline/"
-    },
-    {
-      "title": "Ethereum Price Slides Back To $2,250, Traders Watch Crucial Support",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T03:18:56+00:00",
-      "timeDisplay": "3:18 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:959ddc304094b:0-ethereum-price-slides-back-to-2-250-traders-watch-crucial-support/"
-    },
-    {
-      "title": "Bitcoin Price Recovery Gains Pace, Can Rally Momentum Return?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T02:41:06+00:00",
-      "timeDisplay": "2:41 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:7b6f9aa53094b:0-bitcoin-price-recovery-gains-pace-can-rally-momentum-return/"
-    },
-    {
-      "title": "US oil cautiously bullish, may retest resistance at $102.94",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T02:40:15+00:00",
-      "timeDisplay": "2:40 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q022:0-us-oil-cautiously-bullish-may-retest-resistance-at-102-94/"
-    },
-    {
-      "title": "US 10Y Yield Nears 11-Month High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T02:32:12+00:00",
-      "timeDisplay": "2:32 AM",
-      "link": "https://www.tradingview.com/news/te_news:550168:0-us-10y-yield-nears-11-month-high/"
-    },
-    {
-      "title": "Strategy Boosts Bitcoin Position With Fresh $206M STRC Injection",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T02:30:13+00:00",
-      "timeDisplay": "2:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:eba37f9f9094b:0-strategy-boosts-bitcoin-position-with-fresh-206m-strc-injection/"
-    },
-    {
-      "title": "Dollar Holds Gains After Hot CPI Report",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T02:12:37+00:00",
-      "timeDisplay": "2:12 AM",
-      "link": "https://www.tradingview.com/news/te_news:550157:0-dollar-holds-gains-after-hot-cpi-report/"
-    },
-    {
-      "title": "Asia markets falter as hot US inflation, shaky Iran ceasefire weigh",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T01:24:08+00:00",
-      "timeDisplay": "1:24 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q01N:0-asia-markets-falter-as-hot-us-inflation-shaky-iran-ceasefire-weigh/"
-    },
-    {
-      "title": "Here\u2019s Why The Bitcoin Price Has Risen 37% Since April And What Could Threaten The Rally",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T01:00:54+00:00",
-      "timeDisplay": "1:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:c03bcc72f094b:0-here-s-why-the-bitcoin-price-has-risen-37-since-april-and-what-could-threaten-the-rally/"
-    },
-    {
-      "title": "Oil prices slip on teetering Iran ceasefire as Trump heads to China",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T00:56:55+00:00",
-      "timeDisplay": "12:56 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41P3DI:0-oil-prices-slip-on-teetering-iran-ceasefire-as-trump-heads-to-china/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T00:37:28+00:00",
-      "timeDisplay": "12:37 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41P2F5:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Oil Slips on Likely Technical Correction \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T00:31:00+00:00",
-      "timeDisplay": "12:31 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260512014259:0/"
-    },
-    {
-      "title": "Gold Edges Higher After U.S. Inflation Surged in April \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T00:26:00+00:00",
-      "timeDisplay": "12:26 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260512014225:0/"
-    },
-    {
-      "title": "Key facts: CLARITY Would Lock ETH Nonsecurity; Bitmine 1M+ ETH; Funds In",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T00:06:54+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/tradingview:b4204616347bb:0-key-facts-clarity-would-lock-eth-nonsecurity-bitmine-1m-eth-funds-in/"
-    },
-    {
-      "title": "Gold Pressured by Strong US Inflation Data",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T23:47:18+00:00",
-      "timeDisplay": "11:47 PM",
-      "link": "https://www.tradingview.com/news/te_news:550108:0-gold-pressured-by-strong-us-inflation-data/"
-    },
-    {
-      "title": "Oil Holds Firm as Iran War Drags On",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T23:37:05+00:00",
-      "timeDisplay": "11:37 PM",
-      "link": "https://www.tradingview.com/news/te_news:550105:0-oil-holds-firm-as-iran-war-drags-on/"
-    },
-    {
-      "title": "US Crude Stockpiles Decline for 4th Week",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T23:10:22+00:00",
-      "timeDisplay": "11:10 PM",
-      "link": "https://www.tradingview.com/news/te_news:550096:0-us-crude-stockpiles-decline-for-4th-week/"
-    },
-    {
-      "title": "India raises gold and silver tariffs to 15% to curb imports, support rupee",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T21:30:30+00:00",
-      "timeDisplay": "9:30 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41P1DO:0-india-raises-gold-and-silver-tariffs-to-15-to-curb-imports-support-rupee/"
-    },
-    {
-      "title": "Stocks fall, oil rallies as Middle East peace hopes fade",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T21:12:46+00:00",
-      "timeDisplay": "9:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P1FO:0-stocks-fall-oil-rallies-as-middle-east-peace-hopes-fade/"
-    },
-    {
-      "title": "Ethereum Is Not Dead: Why Market Experts Are Still Predicting A Rise Above $10,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T20:30:53+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:8b1a4a056094b:0-ethereum-is-not-dead-why-market-experts-are-still-predicting-a-rise-above-10-000/"
-    },
-    {
-      "title": "S&P 500, Nasdaq end lower as inflation fears rise",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T20:29:08+00:00",
-      "timeDisplay": "8:29 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P1G5:0-s-p-500-nasdaq-end-lower-as-inflation-fears-rise/"
-    },
-    {
-      "title": "JPMorgan launching second tokenized money market fund on Ethereum",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T20:00:21+00:00",
-      "timeDisplay": "8:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:34ab97691094b:0-jpmorgan-launching-second-tokenized-money-market-fund-on-ethereum/"
     }
   ]
 }

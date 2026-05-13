@@ -1,51 +1,163 @@
 {
-  "lastUpdated": "2026-05-13T17:58:41.137732+00:00",
-  "lastUpdatedDisplay": "May 13, 2026 \u2014 05:58 PM UTC",
+  "lastUpdated": "2026-05-13T20:01:32.461347+00:00",
+  "lastUpdatedDisplay": "May 13, 2026 \u2014 08:01 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US PPI inflation hit its highest level since 2022, driving bond yields to 42-week highs and pressuring risk assets including Bitcoin below $80K. Fed officials Collins and Kashkari both highlighted that the Iran war has shifted inflation risks to the upside and GDP risks to the downside, with energy normalization expected to take months even if the Strait reopens.",
+    "macroSummary": "US inflation data came in hot with longer-dated yields hitting multi-month highs, while the Senate confirmed Kevin Warsh as new Fed Chair. Fed officials acknowledge Iran war has upended the inflation picture with energy normalization expected to take months even if conflict resolves.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Hot inflation data is pushing long-end yields to multi-decade highs while Fed officials openly discuss potential policy tightening, creating stagflationary undertones that stress the Reflation thesis.",
+    "regimePressureReason": "Hot inflation data driving longer-dated yields to highest since mid-2025 is pushing toward the 30Y 5.10% invalidation threshold, while Fed officials explicitly state Iran war has made inflation fight 'looking worse.'",
     "thresholdWatches": [
       {
-        "indicator": "US 10Y",
-        "level": "42-week high",
-        "signal": "Long-end stress accelerating with hot PPI data driving yields to multi-decade highs"
+        "indicator": "US30Y",
+        "level": "> 5.10%",
+        "signal": "Longer-dated yields hitting highest since mid-2025 on inflation fears approaching long-duration capitulation level"
       }
     ],
     "keySignals": [
       {
-        "signal": "US PPI inflation hits highest since 2022, rattling crypto markets and driving Bitcoin below $80K",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Fed's Collins says Iran war shifted GDP risks downside, inflation upside and policy may need tightening",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US 10Y yields hit 42-week highs as bond market stress intensifies",
+        "signal": "US inflation jumps with longer-dated yields at highest levels since mid-2025, approaching 30Y 5.10% threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Kashkari says inflation fight 'looking worse' and Iran war has 'upended' inflation picture",
+        "signal": "Fed's Kashkari states inflation fight 'looking worse' and Iran war has 'upended' inflation picture",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil inventories fell more than expected, supporting energy price pressure narrative",
-        "tag": "SUPPORTS"
+        "signal": "Energy normalization will take 'months' even if Strait reopens tomorrow according to Fed official",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Kevin Warsh confirmed as new Fed Chairman, replacing Powell, introducing policy uncertainty",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin retreats below $80K as hot inflation data rattles crypto markets",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor 30Y approaching 5.10% threshold - stagflation pressure building",
-      "BMNR ladder may face volatility headwinds if crypto weakness persists with rate fears",
-      "Consider reducing cyclical exposure if bond dysfunction accelerates"
+      "Monitor 30Y yields closely - approaching 5.10% invalidation threshold that would confirm stagflationary pressure",
+      "Consider tightening BMNR put ladder strikes as crypto markets show inflation sensitivity",
+      "Prepare for potential regime shift to Stagflation if long-end stress continues with hot inflation prints"
     ]
   },
   "articles": [
+    {
+      "title": "Longer-dated yields highest since mid-2025 on inflation fears",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T19:39:18+00:00",
+      "timeDisplay": "7:39 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q0YR:0-longer-dated-yields-highest-since-mid-2025-on-inflation-fears/"
+    },
+    {
+      "title": "US dollar rises as inflation jumps; Trump-Xi talks begin",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T19:05:13+00:00",
+      "timeDisplay": "7:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q1EL:0-us-dollar-rises-as-inflation-jumps-trump-xi-talks-begin/"
+    },
+    {
+      "title": "Oil Settles Lower in Choppy Trade \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T19:03:00+00:00",
+      "timeDisplay": "7:03 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513010096:0/"
+    },
+    {
+      "title": "Bitcoin Holder Recovers 5 BTC From 11-Year Locked Wallet Using Claude AI",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:59:27+00:00",
+      "timeDisplay": "6:59 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:7ac20fa13094b:0-bitcoin-holder-recovers-5-btc-from-11-year-locked-wallet-using-claude-ai/"
+    },
+    {
+      "title": "Gold discounts in India breach $200/ounce record amid profit-taking",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:50:32+00:00",
+      "timeDisplay": "6:50 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:a87dd9ea5094b:0-gold-discounts-in-india-breach-200-ounce-record-amid-profit-taking/"
+    },
+    {
+      "title": "FINAL US SENATE VOTE CONFIRMING KEVIN WARSH TO BECOME FED CHAIRMAN 54-45",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:48:00+00:00",
+      "timeDisplay": "6:48 PM",
+      "link": "https://www.tradingview.com/news/macenews:359589378094b:0-final-us-senate-vote-confirming-kevin-warsh-to-become-fed-chairman-54-45/"
+    },
+    {
+      "title": "US SENATE CONFIRMS KEVIN WARSH TO BECOME CHAIRMAN OF THE FEDERAL RESERVE; JEROME POWELL'S CHAIRMANSHIP ENDS FRIDAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:36:00+00:00",
+      "timeDisplay": "6:36 PM",
+      "link": "https://www.tradingview.com/news/macenews:9da51d3bb094b:0-us-senate-confirms-kevin-warsh-to-become-chairman-of-the-federal-reserve-jerome-powell-s-chairmanship-ends-friday/"
+    },
+    {
+      "title": "Bitcoin traders expect \u2018fast move\u2019 to $90K following CLARITY Act vote",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:30:00+00:00",
+      "timeDisplay": "6:30 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:917dd388c094b:0-bitcoin-traders-expect-fast-move-to-90k-following-clarity-act-vote/"
+    },
+    {
+      "title": "Cronos to End BTC App Campaign on June 3rd",
+      "source": "coindar",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:25:06+00:00",
+      "timeDisplay": "6:25 PM",
+      "link": "https://www.tradingview.com/news/coindar:34be0a4d3094b:0-cronos-to-end-btc-app-campaign-on-june-3rd/"
+    },
+    {
+      "title": "US DEM SENATOR FETTERMAN VOTES IN FAVOR OF KEVIN WARSH AS FED CHAIR, REINFORCING EXPECTED GOP MAJORITY APPROVAL",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:16:00+00:00",
+      "timeDisplay": "6:16 PM",
+      "link": "https://www.tradingview.com/news/macenews:272b851c1094b:0-us-dem-senator-fetterman-votes-in-favor-of-kevin-warsh-as-fed-chair-reinforcing-expected-gop-majority-approval/"
+    },
+    {
+      "title": "Cathie Wood's flagship fund is largely missing out on a booming tech-fueled bull run",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:10:00+00:00",
+      "timeDisplay": "6:10 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260513013135:0/"
+    },
+    {
+      "title": "US SENATE CONDUCTING ROLL CALL VOTE ON KEVIN WARSH'S FED CHAIRMANSHIP, EXPECTED TO PASS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:06:00+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/macenews:dfedcaf16094b:0-us-senate-conducting-roll-call-vote-on-kevin-warsh-s-fed-chairmanship-expected-to-pass/"
+    },
+    {
+      "title": "Bitcoin Just Entered A Deceptive Territory, Here\u2019s What You Should Know",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:00:31+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:e5b95e2d9094b:0-bitcoin-just-entered-a-deceptive-territory-here-s-what-you-should-know/"
+    },
+    {
+      "title": "MINN FED'S KASHKARI Q&A/ST PAUL ENDED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T18:00:00+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:106604519094b:0-minn-fed-s-kashkari-q-a-st-paul-ended/"
+    },
     {
       "title": "MINN FED'S KASHKARI Q&A/ST PAUL: EVEN IF STRAIT OPENED TOMORROW, FIRMS SAY NORMALIZATION OF ENERGY WILL TAKE 'MONTHS'",
       "source": "macenews",
@@ -108,7 +220,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-13T16:53:00+00:00",
       "timeDisplay": "4:53 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513009322:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260513009323:0/"
     },
     {
       "title": "BOSTON FED'S COLLINS Q&A/BEC ENDED",
@@ -204,7 +316,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-13T15:37:00+00:00",
       "timeDisplay": "3:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513008552:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260513008551:0/"
     },
     {
       "title": "BOS FED'S COLLINS/BEC: IRAN WAR SHIFTED GDP RISKS TO DOWNSIDE, INFLATION TO UPSIDE;  UNMOORING OF INFL EXPECTATIONS WOULD BE \u2018MORE CONCERNING\u2019",
@@ -279,14 +391,6 @@
       "link": "https://www.tradingview.com/news/macenews:877706c6b094b:0-us-senate-vote-on-installing-kevin-warsh-as-fed-chair-expected-around-2p-et/"
     },
     {
-      "title": "US dollar rises as inflation jumps; Trump-Xi talks begin",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T14:52:59+00:00",
-      "timeDisplay": "2:52 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q16C:0-us-dollar-rises-as-inflation-jumps-trump-xi-talks-begin/"
-    },
-    {
       "title": "Bitcoin pinned near critical support as hot PPI spike compounds rate hike fears: analysts",
       "source": "the_block",
       "color": "#00e5ff",
@@ -343,36 +447,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260513007975:0/"
     },
     {
-      "title": "US EIA DISTILLATES INVENTORIES +0.2 MLN BARRELS IN LATEST WEEK (VS. -2.0 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:bbcafef54094b:0-us-eia-distillates-inventories-0-2-mln-barrels-in-latest-week-vs-2-0-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA CRUDE OIL INVENTORIES -4.3 MLN BARRELS IN LATEST WEEK (VS. -2.0 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:7a474b322094b:0-us-eia-crude-oil-inventories-4-3-mln-barrels-in-latest-week-vs-2-0-mln-markets-expected/"
-    },
-    {
-      "title": "US EIA GASOLINE INVENTORIES -4.1 MLN BARRELS IN LATEST WEEK (VS. -2.6 MLN MARKETS EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:0014aa819094b:0-us-eia-gasoline-inventories-4-1-mln-barrels-in-latest-week-vs-2-6-mln-markets-expected/"
-    },
-    {
-      "title": "MORE BOE'S MANN: TIGHTER MONETARY POLICY COULD TRIGGER GILT MARKET VOLATILITY; SHORT-TERM INVESTORS COULD UNWIND GILT POSITIONS",
-      "source": "macenews",
+      "title": "Crypto Wallet Provider Ledger Puts IPO Plans On Hold",
+      "source": "cryptoprowl",
       "color": "#00e5ff",
       "timestamp": "2026-05-13T14:12:00+00:00",
       "timeDisplay": "2:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:4cce466d9094b:0-more-boe-s-mann-tighter-monetary-policy-could-trigger-gilt-market-volatility-short-term-investors-could-unwind-gilt-positions/"
+      "link": "https://www.tradingview.com/news/cryptoprowl:ebdef988b094b:0-crypto-wallet-provider-ledger-puts-ipo-plans-on-hold/"
     },
     {
       "title": "Longer-dated yields hit 10-month highs on inflation surprise",
@@ -455,14 +535,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:0c712751c094b:0/"
     },
     {
-      "title": "CLARITY Act News: Fresh Draft Is Out \u2013 What Next for Crypto?",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T13:05:31+00:00",
-      "timeDisplay": "1:05 PM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:dfbe14e31094b:0-clarity-act-news-fresh-draft-is-out-what-next-for-crypto/"
-    },
-    {
       "title": "US 10-Year Treasury Note Reaches July-Highs",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -471,44 +543,12 @@
       "link": "https://www.tradingview.com/news/te_news:550368:0-us-10-year-treasury-note-reaches-july-highs/"
     },
     {
-      "title": "Bitcoin Turns Lower as Trump-Xi Meeting Eyed \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:51:00+00:00",
-      "timeDisplay": "12:51 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513006916:0/"
-    },
-    {
-      "title": "Bitcoin vs XRP: Ripple CTO Reveals the Fatal Incentive Flaw in BTC",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:29:37+00:00",
-      "timeDisplay": "12:29 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:32fbec93c094b:0-bitcoin-vs-xrp-ripple-cto-reveals-the-fatal-incentive-flaw-in-btc/"
-    },
-    {
-      "title": "Bitcoin to $100K in Q2? Strategy\u2019s STRC unlocks potential to buy 3K BTC in two days",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:29:00+00:00",
-      "timeDisplay": "12:29 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5128e2e2a094b:0-bitcoin-to-100k-in-q2-strategy-s-strc-unlocks-potential-to-buy-3k-btc-in-two-days/"
-    },
-    {
       "title": "Dollar at one-week high on Middle East uncertainty, hot US inflation",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-13T12:08:27+00:00",
       "timeDisplay": "12:08 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Q11Z:0-dollar-at-one-week-high-on-middle-east-uncertainty-hot-us-inflation/"
-    },
-    {
-      "title": "Arthur Hayes Calls Zcash His Biggest Non-Bitcoin Bet On The 'Asymmetric' Privacy Trade",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:08:12+00:00",
-      "timeDisplay": "12:08 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:2038e2b83094b:0/"
     },
     {
       "title": "Gold soars by Rs 8,550, silver rises by Rs 20,500 after govt announces import duty hike",
@@ -605,46 +645,6 @@
       "timestamp": "2026-05-13T07:31:00+00:00",
       "timeDisplay": "7:31 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260513003091:0/"
-    },
-    {
-      "title": "Quote of the day by John Locke, \"Gold is immutable and indestructible, but...\"",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T07:30:05+00:00",
-      "timeDisplay": "7:30 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:afb06f0a5094b:0-quote-of-the-day-by-john-locke-gold-is-immutable-and-indestructible-but/"
-    },
-    {
-      "title": "Oil Falls as Market Remains in Limbo, Traders Await Trump-Xi Summit \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T07:30:00+00:00",
-      "timeDisplay": "7:30 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513003041:0/"
-    },
-    {
-      "title": "Tighter LRS rules could affect overseas stock investing, property purchases and education remittances",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T07:27:38+00:00",
-      "timeDisplay": "7:27 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:384abc57f094b:0-tighter-lrs-rules-could-affect-overseas-stock-investing-property-purchases-and-education-remittances/"
-    },
-    {
-      "title": "Eurozone Govt Bond Yields Ease, Track U.S. Treasurys \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T07:16:00+00:00",
-      "timeDisplay": "7:16 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513002976:0/"
-    },
-    {
-      "title": "Charles Schwab Launches Bitcoin and Ethereum Trading for Selected U.S. Clients",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T07:14:22+00:00",
-      "timeDisplay": "7:14 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d24e16e3f094b:0-charles-schwab-launches-bitcoin-and-ethereum-trading-for-selected-u-s-clients/"
     }
   ]
 }

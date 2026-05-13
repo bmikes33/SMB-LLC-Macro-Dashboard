@@ -928,7 +928,198 @@ function App() {
               <div className="analysis-scroll">
                 {activeReport ? (
                   <React.Fragment>
-                    {activeReport.type === "valuation" ? (
+                    {activeReport.type === "earnings" ? (
+                    /* ============ EARNINGS REPORT VIEW ============ */
+                    <React.Fragment>
+                    {(() => {
+                      const earnColor = "#2196f3"; // blue — distinct from TA/VAL/MACRO
+                      const verdictMap = {
+                        green: "var(--green)",
+                        cyan: "var(--accent)",
+                        amber: "var(--amber)",
+                        red: "var(--red)",
+                      };
+                      const vColor = verdictMap[activeReport.verdictColor] || "var(--text-muted)";
+                      const badgeColor = (b) => {
+                        if (b === "BEAT") return "var(--green)";
+                        if (b === "MISS") return "var(--red)";
+                        return "var(--amber)";
+                      };
+                      const moveColor = (m) => {
+                        if (m === "RAISED") return "var(--green)";
+                        if (m === "CUT") return "var(--red)";
+                        if (m === "REAFFIRMED") return "var(--accent)";
+                        return "var(--amber)";
+                      };
+                      const flagDot = (m) => {
+                        if (m === "RAISED") return "▲";
+                        if (m === "CUT") return "▼";
+                        if (m === "REAFFIRMED") return "=";
+                        return "~";
+                      };
+                      const rev = activeReport.revenue || {};
+                      const eps = activeReport.eps || {};
+                      const ebitda = activeReport.ebitda || {};
+                      const guide = activeReport.guidance || {};
+                      const km = activeReport.keyMetric || {};
+                      const fw = activeReport.frameworkOverride || {};
+                      const tr = activeReport.tradingRead || {};
+                      return (
+                      <React.Fragment>
+                      {/* HEADER STRIP */}
+                      <div style={{display:"flex",alignItems:"center",gap:14,padding:"10px 14px",background:"var(--bg-secondary)",borderBottom:"1px solid "+earnColor,flexWrap:"wrap"}}>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Earnings Print</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:800,color:earnColor,letterSpacing:.5}}>{activeReport.ticker} · {activeReport.period || "—"}</div>
+                        </div>
+                        <div style={{display:"flex",flexDirection:"column"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Verdict</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,letterSpacing:.5,padding:"2px 8px",borderRadius:3,background:vColor+"20",color:vColor,alignSelf:"flex-start",border:"1px solid "+vColor+"50"}}>{activeReport.verdict || "—"}</div>
+                        </div>
+                        {km.label && (
+                          <div style={{display:"flex",flexDirection:"column"}}>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>{km.label}</div>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:"var(--text-primary)",letterSpacing:.5}}>{km.value} <span style={{color:"var(--green)",fontSize:9,marginLeft:4}}>{km.change || ""}</span></div>
+                          </div>
+                        )}
+                        <a href={"reports/" + activeReport.file} target="_blank" rel="noopener noreferrer" style={{marginLeft:"auto",fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:earnColor,textDecoration:"none",padding:"5px 10px",border:"1px solid "+earnColor,borderRadius:3}}>Open Full Report →</a>
+                      </div>
+                      {/* HEADLINE PUNCHLINE */}
+                      {activeReport.headline && (
+                        <div style={{padding:"10px 20px",background:vColor+"12",borderBottom:"1px solid "+vColor+"40"}}>
+                          <div style={{fontSize:12,color:"var(--text-primary)",lineHeight:1.5,fontStyle:"italic"}}>{activeReport.headline}</div>
+                        </div>
+                      )}
+                      {/* BEAT/MISS SCORECARD — REVENUE, EPS, EBITDA */}
+                      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:1,background:"var(--border)"}}>
+                        {/* REVENUE */}
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Revenue</div>
+                            {rev.badge && <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:badgeColor(rev.badge)+"25",color:badgeColor(rev.badge)}}>{rev.badge}</span>}
+                          </div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:700,color:"var(--text-primary)"}}>{rev.actual || "—"}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-muted)",marginTop:2}}>vs. {rev.consensus || "—"}{rev.yoy ? " · " + rev.yoy + " YoY" : ""}</div>
+                          {rev.deltaPct !== undefined && (
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:badgeColor(rev.badge),marginTop:1}}>{rev.deltaPct >= 0 ? "+" : ""}{rev.deltaPct.toFixed(1)}%</div>
+                          )}
+                        </div>
+                        {/* EPS */}
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>EPS{eps.type ? " (" + eps.type + ")" : ""}</div>
+                            {eps.badge && <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:badgeColor(eps.badge)+"25",color:badgeColor(eps.badge)}}>{eps.badge}</span>}
+                          </div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:700,color:"var(--text-primary)"}}>{eps.actual || "—"}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-muted)",marginTop:2}}>vs. {eps.consensus || "—"}</div>
+                          {eps.deltaPct !== undefined && (
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:badgeColor(eps.badge),marginTop:1}}>{eps.deltaPct >= 0 ? "+" : ""}{eps.deltaPct.toFixed(1)}%</div>
+                          )}
+                        </div>
+                        {/* EBITDA */}
+                        <div style={{background:"var(--bg-secondary)",padding:"10px 14px"}}>
+                          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3}}>
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>Adj. EBITDA</div>
+                            {ebitda.badge && <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:badgeColor(ebitda.badge)+"25",color:badgeColor(ebitda.badge)}}>{ebitda.badge}</span>}
+                          </div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:14,fontWeight:700,color:"var(--text-primary)"}}>{ebitda.actual || "—"}</div>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-muted)",marginTop:2}}>vs. {ebitda.consensus || "—"}</div>
+                          {ebitda.deltaPct !== undefined && (
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:badgeColor(ebitda.badge),marginTop:1}}>{ebitda.deltaPct >= 0 ? "+" : ""}{ebitda.deltaPct.toFixed(1)}%</div>
+                          )}
+                        </div>
+                      </div>
+                      {/* GUIDANCE BOX */}
+                      {(guide.revenueMove || guide.ebitdaMove || guide.newRevenueRange) && (
+                        <div style={{padding:"10px 20px",background:"var(--bg-tertiary)",borderBottom:"1px solid var(--border)"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase",marginBottom:6}}>Guidance</div>
+                          <div style={{display:"flex",gap:18,flexWrap:"wrap"}}>
+                            {guide.revenueMove && (
+                              <div>
+                                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1,marginRight:4}}>REV</span>
+                                <span style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:moveColor(guide.revenueMove),letterSpacing:.5}}>{flagDot(guide.revenueMove)} {guide.revenueMove}</span>
+                                {guide.newRevenueRange && <span style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-secondary)",marginLeft:8}}>{guide.newRevenueRange}</span>}
+                              </div>
+                            )}
+                            {guide.ebitdaMove && (
+                              <div>
+                                <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1,marginRight:4}}>EBITDA</span>
+                                <span style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:moveColor(guide.ebitdaMove),letterSpacing:.5}}>{flagDot(guide.ebitdaMove)} {guide.ebitdaMove}</span>
+                                {guide.newEbitdaRange && <span style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-secondary)",marginLeft:8}}>{guide.newEbitdaRange}</span>}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      )}
+                      {/* REAL STORY HEADLINES */}
+                      {activeReport.realStoryHeadlines && activeReport.realStoryHeadlines.length > 0 && (
+                        <div style={{padding:"12px 20px"}}>
+                          <div className="analysis-title" style={{marginBottom:8}}>The Real Story</div>
+                          {activeReport.realStoryHeadlines.map((h,i) => (
+                            <div key={i} style={{display:"flex",gap:8,padding:"5px 0",borderBottom:i===activeReport.realStoryHeadlines.length-1?"none":"1px solid var(--border)"}}>
+                              <span style={{fontFamily:"var(--font-mono)",fontSize:10,color:earnColor,fontWeight:700,flexShrink:0,minWidth:18}}>{String(i+1).padStart(2,"0")}</span>
+                              <span style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5}}>{h}</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {/* FRAMEWORK OVERRIDE BOX (when applicable) */}
+                      {fw.applies && (
+                        <div style={{padding:"12px 20px",background:"#b388ff10",borderTop:"1px solid #b388ff40",borderBottom:"1px solid #b388ff40"}}>
+                          <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--purple)",letterSpacing:1.5,textTransform:"uppercase",marginBottom:6,fontWeight:700}}>⚙ Lifecycle Framework Override</div>
+                          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:8}}>
+                            <div>
+                              <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase"}}>Screener Says</div>
+                              <div style={{fontFamily:"var(--font-mono)",fontSize:11,color:"var(--text-secondary)",marginTop:2}}>{fw.screenerStage || "—"} · {fw.screenerComposite || "—"}</div>
+                            </div>
+                            <div>
+                              <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1,textTransform:"uppercase"}}>Proposed Stage</div>
+                              <div style={{fontFamily:"var(--font-mono)",fontSize:11,color:"var(--purple)",fontWeight:700,marginTop:2}}>{fw.proposedStage || "—"}</div>
+                            </div>
+                          </div>
+                          {fw.rationale && (
+                            <div style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5,marginTop:4}}>{fw.rationale}</div>
+                          )}
+                          {fw.valuationTool && (
+                            <div style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-muted)",marginTop:6,letterSpacing:.5}}>Right tool: <span style={{color:"var(--purple)",fontWeight:700}}>{fw.valuationTool}</span></div>
+                          )}
+                        </div>
+                      )}
+                      {/* TRADING READ — FRAMEWORK APPLICATION */}
+                      {(tr.earningsRule || tr.bottomLine) && (
+                        <div style={{padding:"12px 20px"}}>
+                          <div className="analysis-title" style={{marginBottom:8}}>Trading Read</div>
+                          {tr.earningsRule && (
+                            <div style={{display:"flex",gap:10,padding:"6px 10px",background:"var(--bg-tertiary)",borderRadius:4,marginBottom:6,borderLeft:"2px solid var(--amber)"}}>
+                              <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--amber)",letterSpacing:1,textTransform:"uppercase",fontWeight:700,minWidth:90,flexShrink:0}}>Earnings Rule</span>
+                              <span style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5}}>{tr.earningsRule}</span>
+                            </div>
+                          )}
+                          {tr.postPrintIV && (
+                            <div style={{display:"flex",gap:10,padding:"6px 10px",background:"var(--bg-tertiary)",borderRadius:4,marginBottom:6,borderLeft:"2px solid var(--accent)"}}>
+                              <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--accent)",letterSpacing:1,textTransform:"uppercase",fontWeight:700,minWidth:90,flexShrink:0}}>Post-Print IV</span>
+                              <span style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5}}>{tr.postPrintIV}</span>
+                            </div>
+                          )}
+                          {tr.longThesisGate && (
+                            <div style={{display:"flex",gap:10,padding:"6px 10px",background:"var(--bg-tertiary)",borderRadius:4,marginBottom:6,borderLeft:"2px solid var(--red)"}}>
+                              <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--red)",letterSpacing:1,textTransform:"uppercase",fontWeight:700,minWidth:90,flexShrink:0}}>Long Gate</span>
+                              <span style={{fontSize:11,color:"var(--text-secondary)",lineHeight:1.5}}>{tr.longThesisGate}</span>
+                            </div>
+                          )}
+                          {tr.bottomLine && (
+                            <div style={{display:"flex",gap:10,padding:"8px 10px",background:vColor+"12",borderRadius:4,marginTop:8,borderLeft:"2px solid "+vColor}}>
+                              <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:vColor,letterSpacing:1,textTransform:"uppercase",fontWeight:700,minWidth:90,flexShrink:0}}>Bottom Line</span>
+                              <span style={{fontSize:11,color:"var(--text-primary)",lineHeight:1.5,fontWeight:500}}>{tr.bottomLine}</span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                      </React.Fragment>
+                      );
+                    })()}
+                    </React.Fragment>
+                    ) : activeReport.type === "valuation" ? (
                     /* ============ VALUATION REPORT VIEW ============ */
                     <React.Fragment>
                     {(() => {
@@ -1238,8 +1429,18 @@ function Reports({ onSelect, activeFile }) {
         // Group accent reflects the LATEST report's type (so user gets visual cue of most recent activity)
         const isMacroGroup = latest.type === "macro";
         const isValGroup = latest.type === "valuation";
+        const isEarnGroup = latest.type === "earnings";
+        const earnColor = "#2196f3"; // blue — distinct from TA (cyan), VAL (purple), MACRO (regime)
+        const earnVerdictColor = (vc) => {
+          if (vc === "green") return "var(--green)";
+          if (vc === "cyan") return "var(--accent)";
+          if (vc === "amber") return "var(--amber)";
+          if (vc === "red") return "var(--red)";
+          return earnColor;
+        };
         const groupAccent = isMacroGroup ? (regimeColors[latest.regime] || latest.regimeColor || "#8b9ab5")
                           : isValGroup ? valColor
+                          : isEarnGroup ? earnVerdictColor(latest.verdictColor)
                           : "var(--accent)";
         // Mixed-type indicator: show small dots for each type present in the group
         const groupTypes = new Set(group.map(r => r.type || "ta"));
@@ -1261,8 +1462,8 @@ function Reports({ onSelect, activeFile }) {
               {groupTypes.size > 1 && (
                 <span style={{display:"flex",gap:3,marginLeft:4}}>
                   {Array.from(groupTypes).sort().map(t => {
-                    const c = t === "macro" ? (regimeColors[latest.regime] || "#8b9ab5") : t === "valuation" ? valColor : "var(--accent)";
-                    const lbl = t === "macro" ? "M" : t === "valuation" ? "V" : "T";
+                    const c = t === "macro" ? (regimeColors[latest.regime] || "#8b9ab5") : t === "valuation" ? valColor : t === "earnings" ? earnColor : "var(--accent)";
+                    const lbl = t === "macro" ? "M" : t === "valuation" ? "V" : t === "earnings" ? "E" : "T";
                     return <span key={t} style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,color:c,opacity:.7}}>{lbl}</span>;
                   })}
                 </span>
@@ -1275,6 +1476,7 @@ function Reports({ onSelect, activeFile }) {
               const isActive = activeFile === r.file;
               const isMacro = r.type === "macro";
               const isVal = r.type === "valuation";
+              const isEarn = r.type === "earnings";
               const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
               const verdictColor = (v) => {
                 if (!v) return "var(--text-muted)";
@@ -1285,8 +1487,10 @@ function Reports({ onSelect, activeFile }) {
               };
               // Verdict resolution: prefer verdictBadge, fall back to verdict field for backwards compat
               const rowVerdict = isVal ? (r.verdictBadge || r.verdict || null) : null;
+              const earnRowColor = isEarn ? earnVerdictColor(r.verdictColor) : null;
               const accentColor = isMacro ? regColor
                                 : isVal ? verdictColor(rowVerdict)
+                                : isEarn ? earnRowColor
                                 : "var(--accent)";
               const upsideColor = (u) => {
                 if (!u) return "var(--text-muted)";
@@ -1295,8 +1499,8 @@ function Reports({ onSelect, activeFile }) {
                 return "var(--text-secondary)";
               };
               // Per-row type tag — moved here from group header
-              const typeLabel = isMacro ? "MACRO" : isVal ? "VAL" : "TA";
-              const typeColor = isMacro ? regColor : isVal ? valColor : "var(--accent)";
+              const typeLabel = isMacro ? "MACRO" : isVal ? "VAL" : isEarn ? "EARN" : "TA";
+              const typeColor = isMacro ? regColor : isVal ? valColor : isEarn ? earnColor : "var(--accent)";
               // Build summary text with fallbacks
               let summaryText;
               if (isMacro) summaryText = r.regime;
@@ -1307,6 +1511,11 @@ function Reports({ onSelect, activeFile }) {
                   summaryText = rowVerdict + " — Base " + upStr;
                 } else if (rowVerdict) summaryText = rowVerdict;
                 else summaryText = "—";
+              } else if (isEarn) {
+                const parts = [];
+                if (r.verdict) parts.push(r.verdict);
+                if (r.period) parts.push(r.period);
+                summaryText = parts.length ? parts.join(" · ") : "—";
               } else summaryText = r.bias || "—";
               // Upside badge fallback: build from upside.base if upsideBadge missing
               const upsideBadgeText = isVal ? (r.upsideBadge || (r.upside && r.upside.base !== undefined ? ((r.upside.base >= 0 ? "+" : "") + r.upside.base.toFixed(1) + "%") : null)) : null;
@@ -1320,14 +1529,14 @@ function Reports({ onSelect, activeFile }) {
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:3,gap:6}}>
                     <div style={{display:"flex",alignItems:"center",gap:6,minWidth:0,flex:1}}>
                       <span style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,letterSpacing:1,padding:"1px 5px",borderRadius:2,background:typeColor+"25",color:typeColor,textTransform:"uppercase",flexShrink:0}}>{typeLabel}</span>
-                      <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:600,color:isMacro?accentColor:isVal?accentColor:biasColor(r.bias),letterSpacing:.3,textTransform:"uppercase",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
+                      <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:600,color:isMacro?accentColor:isVal?accentColor:isEarn?accentColor:biasColor(r.bias),letterSpacing:.3,textTransform:"uppercase",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>
                         {summaryText}
                       </span>
                     </div>
                     <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",flexShrink:0}}>{fmtDate(r.date)}</span>
                   </div>
                   <div style={{display:"flex",gap:8,alignItems:"center",flexWrap:"wrap"}}>
-                    {!isMacro && !isVal && (
+                    {!isMacro && !isVal && !isEarn && (
                       <React.Fragment>
                         <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:confColor(r.confidence)+"20",color:confColor(r.confidence)}}>{r.confidence}</span>
                         {r.bullScore !== undefined && (
@@ -1356,6 +1565,19 @@ function Reports({ onSelect, activeFile }) {
                         )}
                         {r.fcfRealismCheck && r.fcfRealismCheck.ran && r.fcfRealismCheck.flag && r.fcfRealismCheck.flag !== "PASS" && (
                           <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--amber)"}}>fcf-{r.fcfRealismCheck.flag}</span>
+                        )}
+                      </React.Fragment>
+                    )}
+                    {isEarn && (
+                      <React.Fragment>
+                        {r.revenue && r.revenue.badge && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:(r.revenue.badge==="BEAT"?"var(--green)":r.revenue.badge==="MISS"?"var(--red)":"var(--amber)")+"20",color:r.revenue.badge==="BEAT"?"var(--green)":r.revenue.badge==="MISS"?"var(--red)":"var(--amber)"}}>REV {r.revenue.badge}</span>
+                        )}
+                        {r.eps && r.eps.badge && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:.5,padding:"1px 6px",borderRadius:2,background:(r.eps.badge==="BEAT"?"var(--green)":r.eps.badge==="MISS"?"var(--red)":"var(--amber)")+"20",color:r.eps.badge==="BEAT"?"var(--green)":r.eps.badge==="MISS"?"var(--red)":"var(--amber)"}}>EPS {r.eps.badge}</span>
+                        )}
+                        {r.guidance && r.guidance.revenueMove && (
+                          <span style={{fontFamily:"var(--font-mono)",fontSize:9,color:r.guidance.revenueMove==="RAISED"?"var(--green)":r.guidance.revenueMove==="CUT"?"var(--red)":r.guidance.revenueMove==="REAFFIRMED"?"var(--accent)":"var(--amber)"}}>guide {r.guidance.revenueMove.toLowerCase()}</span>
                         )}
                       </React.Fragment>
                     )}

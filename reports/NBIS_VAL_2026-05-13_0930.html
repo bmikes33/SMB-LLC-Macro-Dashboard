@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NBIS — SOTP Valuation — 2026-05-13</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0a0e17;
+  color: #e2e8f0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+.container { max-width: 1280px; margin: 0 auto; }
+
+/* HEADER */
+.header {
+  background: #0f1420;
+  border: 1px solid #1e2a3a;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.ticker-block { display: flex; flex-direction: column; gap: 4px; }
+.ticker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: #00e5ff;
+  letter-spacing: 0.5px;
+}
+.company { font-size: 14px; color: #8b9ab5; }
+.meta { font-size: 11px; color: #4a5976; font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
+
+.price-block { text-align: right; }
+.price-label { font-size: 10px; color: #4a5976; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 1px; }
+.price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.badges { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.badge-verdict {
+  background: #ffab0022;
+  color: #ffab00;
+  border: 1px solid #ffab0055;
+  font-size: 12px;
+}
+.badge-cap-red {
+  background: #ff3d5722;
+  color: #ff3d57;
+  border: 1px solid #ff3d5755;
+}
+.badge-neutral { background: #8b9ab522; color: #8b9ab5; border: 1px solid #8b9ab555; }
+
+/* FAIR VALUE STRIP */
+.fv-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #1e2a3a;
+}
+.fv-cell { text-align: left; }
+.fv-label { font-size: 10px; color: #4a5976; text-transform: uppercase; letter-spacing: 1px; font-family: 'JetBrains Mono', monospace; }
+.fv-value { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 500; color: #e2e8f0; margin: 4px 0; }
+.fv-upside { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; }
+
+/* SECTIONS */
+.section { margin-top: 32px; }
+.section-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #00e5ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #1e2a3a;
+  margin-bottom: 16px;
+}
+.section-body {
+  background: #0f1420;
+  border: 1px solid #1e2a3a;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* TABLES */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: #8b9ab5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: right;
+  padding: 10px 12px;
+  border-bottom: 1px solid #1e2a3a;
+}
+th:first-child { text-align: left; }
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #141926;
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+td:first-child { text-align: left; font-family: 'IBM Plex Sans', sans-serif; color: #8b9ab5; }
+tr:last-child td { border-bottom: none; }
+.row-emphasis td { background: #141926; font-weight: 500; }
+.row-emphasis td:first-child { color: #e2e8f0; }
+
+.note {
+  font-size: 12px;
+  color: #8b9ab5;
+  font-style: italic;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #141926;
+  border-left: 3px solid #00e5ff;
+  border-radius: 4px;
+}
+.caveat {
+  font-size: 12px;
+  color: #ffab00;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #ffab0011;
+  border-left: 3px solid #ffab00;
+  border-radius: 4px;
+}
+.red-flag {
+  font-size: 12px;
+  color: #ff3d57;
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #ff3d5711;
+  border-left: 3px solid #ff3d57;
+  border-radius: 4px;
+}
+
+.green { color: #00e676; }
+.red { color: #ff3d57; }
+.amber { color: #ffab00; }
+.cyan { color: #00e5ff; }
+.muted { color: #4a5976; }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: #141926;
+  border: 1px solid #1e2a3a;
+  border-radius: 6px;
+  padding: 14px 16px;
+}
+.stat-label {
+  font-size: 10px;
+  color: #4a5976;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 4px;
+  color: #e2e8f0;
+}
+
+.flag-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #141926;
+}
+.flag-row:last-child { border-bottom: none; }
+.flag-label { font-size: 13px; color: #8b9ab5; }
+.flag-value { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #e2e8f0; }
+.flag-status {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+}
+
+.method-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 768px) { .method-compare { grid-template-columns: 1fr; } }
+.method-card {
+  background: #141926;
+  border: 1px solid #1e2a3a;
+  border-radius: 6px;
+  padding: 16px;
+}
+.method-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #00e5ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid #1e2a3a;
+  font-size: 10px;
+  color: #4a5976;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+
+.legend {
+  font-size: 11px;
+  color: #4a5976;
+  margin-top: 12px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="ticker-block">
+      <div class="ticker">NBIS</div>
+      <div class="company">Nebius Group N.V. — AI Cloud Infrastructure</div>
+      <div class="meta">SOTP CONSOLIDATED VALUATION · STAGE: HIGH GROWTH · WACC 11% · 2026-05-13 09:30 ET</div>
+    </div>
+    <div class="price-block">
+      <div class="price-label">CURRENT PRICE</div>
+      <div class="price">$211.40</div>
+      <div class="meta">PRE-MKT POST Q1 PRINT</div>
+    </div>
+  </div>
+
+  <div class="badges">
+    <div class="badge badge-verdict">VERDICT: CAP_CAVEAT</div>
+    <div class="badge badge-cap-red">CAP STRUCTURE: RED</div>
+    <div class="badge badge-neutral">FCF CHECK: CAVEAT</div>
+    <div class="badge badge-neutral">DATA QUALITY: 72% DISCLOSED · 25% ALLOCATED · 3% USER</div>
+  </div>
+
+  <div class="fv-strip">
+    <div class="fv-cell">
+      <div class="fv-label">BEAR (2Y DISC.)</div>
+      <div class="fv-value">$152.46</div>
+      <div class="fv-upside" style="color:#ff3d57">-27.9%</div>
+    </div>
+    <div class="fv-cell">
+      <div class="fv-label">BASE (2Y DISC.)</div>
+      <div class="fv-value">$283.81</div>
+      <div class="fv-upside" style="color:#00e676">+34.3%</div>
+    </div>
+    <div class="fv-cell">
+      <div class="fv-label">BULL (2Y DISC.)</div>
+      <div class="fv-value">$643.69</div>
+      <div class="fv-upside" style="color:#00e676">+204.5%</div>
+    </div>
+    <div class="fv-cell">
+      <div class="fv-label">PROB-WT (25/50/25)</div>
+      <div class="fv-value">$340.94</div>
+      <div class="fv-upside" style="color:#00e676">+61.3%</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1: EXECUTIVE SUMMARY -->
+<div class="section">
+  <div class="section-header">§ 1 — Executive Summary</div>
+  <div class="section-body">
+
+    <div class="method-compare">
+      <div class="method-card">
+        <div class="method-title">Method A — 2Y Discounted (Primary)</div>
+        <table>
+          <tr><th>Case</th><th>FV/sh</th><th>Upside</th></tr>
+          <tr><td>Bear</td><td>$152.46</td><td style="color:#ff3d57">-27.9%</td></tr>
+          <tr><td>Base</td><td>$283.81</td><td style="color:#00e676">+34.3%</td></tr>
+          <tr><td>Bull</td><td>$643.69</td><td style="color:#00e676">+204.5%</td></tr>
+          <tr class="row-emphasis"><td>Prob-Wt</td><td>$340.94</td><td style="color:#00e676">+61.3%</td></tr>
+        </table>
+      </div>
+      <div class="method-card">
+        <div class="method-title">Method B — NTM × Multiple (Sanity)</div>
+        <table>
+          <tr><th>Case</th><th>FV/sh</th><th>Upside</th></tr>
+          <tr><td>Bear</td><td>$105.08</td><td style="color:#ff3d57">-50.3%</td></tr>
+          <tr><td>Base</td><td>$152.98</td><td style="color:#ff3d57">-27.6%</td></tr>
+          <tr><td>Bull</td><td>$250.08</td><td style="color:#00e676">+18.3%</td></tr>
+          <tr class="row-emphasis"><td>Prob-Wt</td><td>$165.28</td><td style="color:#ff3d57">-21.8%</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="caveat">
+      <strong>Method A vs Method B gap is large and informative.</strong> Method A (2Y discounted) prices in Year-2 compounding from $3.2B FY26 revenue to $7.5B FY27 base case. Method B applies current multiples to NTM only — and lands -28% below current price. The market is implicitly pricing significant Y2 growth already; if FY27 ARR-to-revenue conversion misses, the stock has meaningful downside even at base multiples.
+    </div>
+
+    <div class="red-flag">
+      <strong>Capital structure is RED.</strong> Coverage ratio of 2.0x (annualized Q1 EBITDA $518M vs annualized interest $255M) is below the 4x threshold. Diluted share count +29.9% YoY signals heavy ongoing dilution to fund the GW-scale build-out. Liquidity ratio at 0.9x (one quarter of cash vs annualized capex run-rate). These are growth-stage funding mechanics, but they constrain how cleanly the SOTP upside can be realized by equity holders.
+    </div>
+
+    <div class="caveat">
+      <strong>FCF Realism Check flags CAVEAT.</strong> 5-year DCF gives $157.08/sh (-25.7%) — 46% BELOW SOTP base case. The heavy negative FCF through Year 3 (data center build-out) destroys present value that the multiple-based SOTP doesn't fully reflect. Multiple compression risk is real if capex normalization runs slower than modeled.
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2: Q1 2026 PRINT & STAGE CLASSIFICATION -->
+<div class="section">
+  <div class="section-header">§ 2 — Q1 2026 Print & Stage Classification</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Metric</th><th>Q1 2025</th><th>Q1 2026</th><th>Change</th><th>Stage Signal</th></tr>
+      <tr><td>Revenue</td><td>$50.9M</td><td>$399.0M</td><td class="green">+684%</td><td>High Growth (≥20%)</td></tr>
+      <tr><td>Gross Margin</td><td>51%</td><td class="green">74%</td><td class="green">+2,300bps</td><td>High Growth (>50%, expanding)</td></tr>
+      <tr><td>Adj EBITDA</td><td>$(53.7)M</td><td class="green">$129.5M</td><td class="green">INFLECTION</td><td>High Growth (just positive)</td></tr>
+      <tr><td>Adj EBITDA Margin</td><td>n/m</td><td class="green">32.5%</td><td>—</td><td>—</td></tr>
+      <tr><td>GAAP Op Loss</td><td>$(120.3)M</td><td>$(128.0)M</td><td>flat</td><td>D&A burden masks Adj profitability</td></tr>
+      <tr><td>D&A</td><td>$49.1M</td><td>$212.0M</td><td>+332%</td><td>Asset base scaling fast</td></tr>
+      <tr><td>Capex (single Q)</td><td>$543.9M</td><td>$2,472.9M</td><td>+355%</td><td>Heavy build-out cycle</td></tr>
+      <tr><td>Deferred Revenue Δ</td><td>+$2.4M</td><td class="cyan">+$3,198M</td><td>n/m</td><td>Customer prepayments (MSFT-anchored)</td></tr>
+      <tr class="row-emphasis"><td>STAGE</td><td colspan="3">HIGH GROWTH — transitioning from Young Growth on GM expansion + Adj EBITDA inflection</td><td>Confirmed</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>Critical Q1 2026 read:</strong> Microsoft $17B multi-year contract (signed Sept 2025) is now fully ramping. The $3.2B deferred revenue inflow this quarter is customer prepayments — locked-in revenue that funds capex without dilution. NVDA $2B investment (March 2026) and the Eigen AI / Clarifai acquisitions strengthen the inference platform. Net income of $621.2M is non-cash dominated by $780.6M gain on revaluation of equity securities (likely ClickHouse mark) — excluded from operating valuation.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: ROUTING & MODE -->
+<div class="section">
+  <div class="section-header">§ 3 — Mode Routing & Stage</div>
+  <div class="section-body">
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-label">Mode</div><div class="stat-value cyan">CONSOLIDATED</div></div>
+      <div class="stat-card"><div class="stat-label">Stage</div><div class="stat-value cyan">HIGH GROWTH</div></div>
+      <div class="stat-card"><div class="stat-label">WACC</div><div class="stat-value">11.0%</div></div>
+      <div class="stat-card"><div class="stat-label">Forecast Horizon</div><div class="stat-value">NTM + 1Y</div></div>
+      <div class="stat-card"><div class="stat-label">Primary Metric</div><div class="stat-value">EV / Revenue</div></div>
+      <div class="stat-card"><div class="stat-label">Anchor</div><div class="stat-value amber">Mgmt Guidance</div></div>
+    </div>
+
+    <div class="note">
+      <strong>Why Consolidated, not SOTP:</strong> The Q1 2026 earnings release does not break out segment-level revenue, GP, or EBITDA. Nebius AI Cloud dominates (Microsoft $17B contract alone is 5x consolidated FY25 revenue). Avride (autonomous vehicles) and TripleTen (edtech) are immaterial. Toloka was deconsolidated Q2 2025 to equity method ($6.4M book). Skill rule triggered: <em>"segment disclosure too sparse — fake-precision SOTP would be worse than honest consolidated."</em>
+    </div>
+
+    <div class="note">
+      <strong>Why Guidance-Anchored, not 8Q Observed Range:</strong> The skill's bear/base/bull from trailing 8Q range is invalid here for two reasons. (1) Microsoft contract signed Sept 2025 + NVDA investment March 2026 materially altered the business — pre-Q4 2025 quarters are a different company. (2) Nebius is a 2024 carve-out from Yandex's non-Russian operations; no clean 8Q history at the current entity definition exists. Anchored instead to management FY26 guidance ($3.0–3.4B revenue, $7–9B YE26 ARR) for Y1, with Y2 (FY27) derived from ARR-exit + continued ramp.
+    </div>
+
+    <div class="note">
+      <strong>Why EV/Revenue, not stage-default EV/GP:</strong> High Growth stage default is EV/Gross Profit. Deviation here because peer set (CRWV 47% GM, IREN ~50% GM blended, APLD ~20% GM) has wildly varying gross margin profiles, making EV/GP percentiles noisier than EV/Revenue. EV/Revenue is the most comparable forward metric across the AI cloud peer set. EV/GP shown as secondary sensitivity in §6.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: PEER SET & MULTIPLES -->
+<div class="section">
+  <div class="section-header">§ 4 — Peer Set, Multiples & WACC</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Peer</th><th>EV ($B)</th><th>FY26E Rev</th><th>EV/FY26E Rev</th><th>TTM GM</th><th>EV/FY26E GP</th></tr>
+      <tr><td>CRWV — CoreWeave</td><td>84.7</td><td>$12.5B</td><td>6.8x</td><td>48%</td><td>14.4x</td></tr>
+      <tr><td>IREN — IREN Ltd</td><td>15.0</td><td>$1.05B</td><td>14.3x</td><td>68%</td><td>21.0x</td></tr>
+      <tr><td>APLD — Applied Digital</td><td>12.4</td><td>$0.40B</td><td>~31x</td><td>20%</td><td>~155x</td></tr>
+      <tr class="row-emphasis"><td>Selected (Bear / Base / Bull)</td><td>—</td><td>—</td><td>10.0x / 14.0x / 22.0x</td><td>—</td><td>(deriv from rev)</td></tr>
+      <tr class="row-emphasis"><td>NBIS Implied Current</td><td>62.85</td><td>$3.2B (mid)</td><td class="amber">19.6x</td><td>74%</td><td class="amber">26.5x</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>NBIS currently trades at a premium to all 3 peers on EV/FY26E Revenue.</strong> The premium reflects: higher gross margin (74% vs CRWV 48%), net cash balance sheet (vs CRWV's $26B net debt), Microsoft anchor + NVDA backing, faster YoY growth (+684% vs CRWV ~+220%). Question is whether the premium is sustainable. CRWV anchors the bear case (most established, most analogous). Base 14x is roughly IREN, conservative for AI-cloud-only premium. Bull 22x reserves upside for sustained margin expansion + ARR overachievement.
+    </div>
+
+    <div class="note">
+      <strong>WACC = 11% (stage default for High Growth).</strong> No per-segment WACC needed in consolidated mode. The Microsoft anchor contract arguably justifies a lower discount rate (de-risked revenue), but the offsetting capex cycle execution risk and heavy dilution support staying at stage default.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: BEAR/BASE/BULL CASE BUILD -->
+<div class="section">
+  <div class="section-header">§ 5 — Bear / Base / Bull Cases — Y1 + Y2</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Case</th><th>Y1 (FY26) Revenue</th><th>Y2 (FY27) Revenue</th><th>GM Assumption</th><th>EV/Rev Multiple</th></tr>
+      <tr><td>Bear</td><td>$3.0B (guide low)</td><td>$5.5B (slow ramp from $7B ARR)</td><td>65%</td><td>10.0x</td></tr>
+      <tr><td>Base</td><td>$3.2B (guide mid)</td><td>$7.5B (steady from $8B ARR exit)</td><td>74% (Q1 actual)</td><td>14.0x</td></tr>
+      <tr><td>Bull</td><td>$3.4B (guide high)</td><td>$11.0B (accelerating from $9B ARR exit)</td><td>78%</td><td>22.0x</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>Y2 anchoring logic:</strong> Management ARR target is $7–9B by YE26. Year-2 revenue is the realized run-rate from that ARR base, with continued growth through FY27. Bear assumes some growth deceleration (ARR underachieves and growth slows). Base assumes ARR hits midpoint and FY27 sees mature growth from that base. Bull assumes ARR overachieves and the contract pipeline (Microsoft tier expansion, new hyperscalers) drives continued >40% growth into FY27.
+    </div>
+
+    <div class="caveat">
+      <strong>Y2 sensitivity dominates the model.</strong> Method A's outcome is highly sensitive to FY27 revenue assumptions. A 25% miss on FY27 base case ($7.5B → $5.6B) collapses base case to roughly bear-case fair value. The Microsoft contract's revenue recognition timing through 2027 is the single most important variable to monitor.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: METHOD A BRIDGE -->
+<div class="section">
+  <div class="section-header">§ 6 — Method A Bridge to Equity (2Y Discounted, Primary)</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Component</th><th>Bear</th><th>Base</th><th>Bull</th></tr>
+      <tr><td>Y2 Revenue (FY27)</td><td>$5.50B</td><td>$7.50B</td><td>$11.00B</td></tr>
+      <tr><td>× EV/Revenue Multiple</td><td>10.0x</td><td>14.0x</td><td>22.0x</td></tr>
+      <tr><td>= Y2 Enterprise Value</td><td>$55.00B</td><td>$105.00B</td><td>$242.00B</td></tr>
+      <tr><td>÷ (1+WACC)² @ 11%</td><td>÷ 1.232</td><td>÷ 1.232</td><td>÷ 1.232</td></tr>
+      <tr><td>= Today's EV</td><td>$44.64B</td><td>$85.22B</td><td>$196.41B</td></tr>
+      <tr><td>+ Equity Method Invts</td><td>+$6M</td><td>+$6M</td><td>+$6M</td></tr>
+      <tr><td>+ Non-Marketable Equity Secs</td><td>+$1.61B</td><td>+$1.61B</td><td>+$1.61B</td></tr>
+      <tr><td>− Total Debt</td><td>−$8.45B</td><td>−$8.45B</td><td>−$8.45B</td></tr>
+      <tr><td>+ Cash & Equivalents</td><td>+$9.30B</td><td>+$9.30B</td><td>+$9.30B</td></tr>
+      <tr><td>− Non-controlling Interest</td><td>−$1M</td><td>−$1M</td><td>−$1M</td></tr>
+      <tr class="row-emphasis"><td>= Equity Fair Value</td><td>$47.11B</td><td>$87.69B</td><td>$198.88B</td></tr>
+      <tr><td>÷ Diluted Shares (309M)</td><td colspan="3" style="text-align:center">(constant)</td></tr>
+      <tr class="row-emphasis"><td>= Fair Value / Share</td><td style="color:#ff3d57">$152.46</td><td style="color:#00e676">$283.81</td><td style="color:#00e676">$643.69</td></tr>
+      <tr><td>Upside vs $211.40</td><td style="color:#ff3d57">-27.9%</td><td style="color:#00e676">+34.3%</td><td style="color:#00e676">+204.5%</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>Equity bridge note:</strong> Non-marketable equity securities of $1.61B includes ClickHouse stake (~28% from Yandex carve-out, marked to fair value after revaluation gains) and residual Toloka exposure. Total debt of $8.45B includes the $4.34B in new convertible notes issued Q1; converts are double-counted (treated as debt while also in diluted share count). Deferred revenue of $4.78B is not on this bridge — it's customer prepayments converting to revenue over time, not a financial liability requiring cash settlement.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7: METHOD B SANITY -->
+<div class="section">
+  <div class="section-header">§ 7 — Method B Sanity Check (NTM × Multiple)</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Component</th><th>Bear</th><th>Base</th><th>Bull</th></tr>
+      <tr><td>NTM Revenue (FY26)</td><td>$3.00B</td><td>$3.20B</td><td>$3.40B</td></tr>
+      <tr><td>× EV/Revenue Multiple</td><td>10.0x</td><td>14.0x</td><td>22.0x</td></tr>
+      <tr><td>= Today's EV</td><td>$30.00B</td><td>$44.80B</td><td>$74.80B</td></tr>
+      <tr><td>+ Bridge adjustments</td><td>+$2.47B</td><td>+$2.47B</td><td>+$2.47B</td></tr>
+      <tr class="row-emphasis"><td>= Equity Fair Value</td><td>$32.47B</td><td>$47.27B</td><td>$77.27B</td></tr>
+      <tr class="row-emphasis"><td>= Fair Value / Share</td><td style="color:#ff3d57">$105.08</td><td style="color:#ff3d57">$152.98</td><td style="color:#00e676">$250.08</td></tr>
+      <tr><td>Upside vs $211.40</td><td style="color:#ff3d57">-50.3%</td><td style="color:#ff3d57">-27.6%</td><td style="color:#00e676">+18.3%</td></tr>
+    </table>
+
+    <div class="caveat">
+      <strong>Method A vs Method B reconciliation:</strong> Method A base says <span class="green">+34% upside</span>. Method B base says <span class="red">−28% downside</span>. The $130/sh delta is the Y2 compounding value — Method A credits FY27 revenue more than 2x FY26 ($7.5B vs $3.2B). The market is implicitly pricing in significant Y2 ramp at current $211.40. If you believe management's $7–9B YE26 ARR target and continued ramp through FY27, Method A is the right read. If you think the multiple compresses as the company matures or growth decelerates, Method B is closer to fair.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8: PROBABILITY-WEIGHTED -->
+<div class="section">
+  <div class="section-header">§ 8 — Probability-Weighted Fair Value (Method A)</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Weighting</th><th>Bear</th><th>Base</th><th>Bull</th><th>Prob-Wt FV</th><th>Upside</th></tr>
+      <tr><td>Default 25/50/25</td><td>25%</td><td>50%</td><td>25%</td><td>$340.94</td><td style="color:#00e676">+61.3%</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>Default weighting is conservative-to-neutral.</strong> Prob-weighted FV of $340.94/sh (+61.3%) is materially above current price, but heavily influenced by the bull case which is itself dependent on sustained multiple expansion AND FY27 revenue overachievement. Stress test: weighting 40/40/20 (bear-heavy) gives prob-wt FV near base case $283.81. Weighting 15/50/35 (bull-leaning) gives $390.06.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9: CAPITAL STRUCTURE -->
+<div class="section">
+  <div class="section-header">§ 9 — Capital Structure Health Check</div>
+  <div class="section-body">
+
+    <div class="flag-row">
+      <div class="flag-label">Net Debt / Annualized EBITDA</div>
+      <div class="flag-value">-1.64x</div>
+      <div class="flag-status" style="background:#00e67622; color:#00e676; border:1px solid #00e67655;">GREEN</div>
+    </div>
+    
+    <div class="flag-row">
+      <div class="flag-label">EBITDA / Interest Coverage</div>
+      <div class="flag-value">2.0x</div>
+      <div class="flag-status" style="background:#ff3d5722; color:#ff3d57; border:1px solid #ff3d5755;">RED</div>
+    </div>
+    
+    <div class="flag-row">
+      <div class="flag-label">Maturity Wall (next 24mo)</div>
+      <div class="flag-value">Needs 20-F</div>
+      <div class="flag-status" style="background:#ffab0022; color:#ffab00; border:1px solid #ffab0055;">AMBER</div>
+    </div>
+    
+    <div class="flag-row">
+      <div class="flag-label">Liquidity vs Capex Run-Rate</div>
+      <div class="flag-value">0.9x capex-quarters</div>
+      <div class="flag-status" style="background:#ffab0022; color:#ffab00; border:1px solid #ffab0055;">AMBER</div>
+    </div>
+    
+    <div class="flag-row">
+      <div class="flag-label">Diluted Share Count YoY</div>
+      <div class="flag-value">+29.9% YoY</div>
+      <div class="flag-status" style="background:#ff3d5722; color:#ff3d57; border:1px solid #ff3d5755;">RED</div>
+    </div>
+    
+    <div class="red-flag" style="margin-top:20px;">
+      <strong>Overall Capital Structure: RED.</strong> Two RED metrics: (1) Interest coverage at 2.0x is below the 4x threshold — annualized Q1 interest expense of $255M against annualized Adj EBITDA of $518M leaves no margin for execution stumbles. Note this is a snapshot of Q1 ramp — coverage should improve materially as ARR ramps through 2026. (2) Diluted share count grew +29.9% YoY (Q1 25 to Q1 26) reflecting heavy ongoing dilution: $4.34B converts + $2.0B prefunded warrants in Q1 alone. The capital intensity required to build out the announced 1.2 GW Pennsylvania factory + Missouri factory implies continued dilution through 2026–2027.
+    </div>
+
+    <div class="caveat">
+      <strong>Maturity wall: Needs 20-F.</strong> The FY2025 20-F filed April 30, 2026 will contain the long-term debt note required for the maturity wall assessment. The recent $4.34B convert issuance has long duration (typically 5-7Y), so near-term refi risk is likely low — but this needs confirmation. Once 20-F is uploaded, re-run for accurate maturity check.
+    </div>
+
+    <div class="note">
+      <strong>Liquidity context — deferred revenue is a structural positive.</strong> Total deferred revenue of $4.78B (current + non-current) represents prepaid customer commitments. This is NOT a financial liability — it converts to revenue as Nebius delivers capacity. The $3.2B inflow in Q1 alone (Microsoft prepayments most likely) means Nebius is being funded by its largest customer, materially reducing the dilution that would otherwise be required to fund the capex cycle. This is meaningfully different from CRWV's model which relies more heavily on debt + equity issuance.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 10: FCF REALISM CHECK -->
+<div class="section">
+  <div class="section-header">§ 10 — FCF Realism Check (Phase 10)</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Year</th><th>Revenue</th><th>Adj EBITDA</th><th>EBITDA Margin</th><th>Capex</th><th>Cash Taxes</th><th>FCF</th><th>PV @ 11%</th></tr>
+      <tr><td>Y1 (2026)</td><td>$3.20B</td><td>$1.12B</td><td>35%</td><td>$7.91B</td><td>$0M</td><td class="red">$-6.79B</td><td class="red">$-6.12B</td></tr>
+      <tr><td>Y2 (2027)</td><td>$7.50B</td><td>$3.00B</td><td>40%</td><td>$6.47B</td><td>$0M</td><td class="red">$-3.47B</td><td class="red">$-2.82B</td></tr>
+      <tr><td>Y3 (2028)</td><td>$11.00B</td><td>$4.62B</td><td>42%</td><td>$5.04B</td><td>$92M</td><td class="red">$-509M</td><td class="red">$-372M</td></tr>
+      <tr><td>Y4 (2029)</td><td>$14.00B</td><td>$6.16B</td><td>44%</td><td>$3.60B</td><td>$353M</td><td class="green">$2.21B</td><td class="green">$1.46B</td></tr>
+      <tr><td>Y5 (2030)</td><td>$16.00B</td><td>$7.20B</td><td>45%</td><td>$2.16B</td><td>$576M</td><td class="green">$4.46B</td><td class="green">$2.65B</td></tr>
+      <tr class="row-emphasis"><td>Terminal Value</td><td>—</td><td>$7.20B × 12.0x</td><td>—</td><td>—</td><td>—</td><td>$86.40B</td><td>$51.27B</td></tr>
+      <tr class="row-emphasis"><td>DCF EV (Sum of PVs)</td><td colspan="6"></td><td>$46.07B</td></tr>
+      <tr class="row-emphasis"><td>DCF Fair Value / Share</td><td colspan="6"></td><td style="color:#ff3d57">$157.08 (-25.7%)</td></tr>
+    </table>
+
+    <table style="margin-top:24px;">
+      <tr><th>Comparison</th><th>Value</th></tr>
+      <tr><td>SOTP Base Case EV (Method A)</td><td>$85.22B</td></tr>
+      <tr><td>DCF EV (5Y + Terminal)</td><td>$46.07B</td></tr>
+      <tr class="row-emphasis"><td>Gap (DCF vs SOTP Base)</td><td style="color:#ff3d57">-45.9%</td></tr>
+      <tr class="row-emphasis"><td>Flag</td><td class="amber">CAVEAT</td></tr>
+    </table>
+
+    <div class="caveat">
+      <strong>FCF flag = CAVEAT.</strong> The 5-year DCF gives an EV of $46.1B — 46% BELOW the SOTP base case EV. The heavy negative FCF through Year 3 ($-6.79B, $-3.47B, $-0.51B) discounts to substantially negative present value. This means the SOTP multiple-based base case implicitly assumes much faster capex normalization than this DCF supports. <strong>The SOTP base case is too aggressive on near-term FCF realization.</strong> The DCF FV of $157.08/sh (-25.7%) is closer to Method B Sanity Check and is a more conservative read on the equity value.
+    </div>
+
+    <div class="note">
+      <strong>Sensitivity to capex normalization:</strong> If FY26 capex comes in at $6B instead of $7.9B (faster normalization, more efficient build), DCF EV rises to ~$53B (still below SOTP). If FY30 capex/EBITDA steady-state is 20% (Maturity-stage, not High Growth 30%), terminal value grows by 50% and DCF EV approaches SOTP base. Bryan's question on this name is fundamentally: <em>how fast can capex normalize?</em>
+    </div>
+
+    <div class="note">
+      <strong>DCF assumptions:</strong> Y1 capex $7.9B (Q1 actual × 4 × 0.8 taper), Y5 capex 30% of EBITDA (High Growth steady-state). D&A 50% → 25% of revenue over 5 years. Effective tax 0% → 18% from Y3. WC neutral (deferred revenue inflow is a positive offset not modeled — would improve DCF further). Terminal EV/EBITDA 12x reflects High Growth → Mature Growth transition multiple compression. WACC 11%.
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 11: KEY RISKS & WATCHLIST -->
+<div class="section">
+  <div class="section-header">§ 11 — Key Risks & Catalysts</div>
+  <div class="section-body">
+    <table>
+      <tr><th>Watch</th><th>Direction</th><th>Why It Matters</th></tr>
+      <tr><td>Microsoft contract ramp pace</td><td>Bullish if accelerates</td><td>Single largest revenue driver; pace dictates FY26 vs guidance</td></tr>
+      <tr><td>YE26 ARR exit (target $7-9B)</td><td>The critical print</td><td>Anchors all Y2 (FY27) revenue assumptions</td></tr>
+      <tr><td>Capex normalization timing</td><td>Bullish if Y2/Y3 tapers</td><td>FCF Realism Check shows capex is the dominant DCF variable</td></tr>
+      <tr><td>Convert dilution / future raises</td><td>Bearish if heavy</td><td>+30% YoY already; further raises = base case FV compression</td></tr>
+      <tr><td>Eigen AI / Clarifai integration</td><td>Bullish if accretive</td><td>$643M Eigen AI deal is meaningful capital deployed</td></tr>
+      <tr><td>Hyperscaler competition (CRWV, IREN, APLD)</td><td>Bearish if intensifies</td><td>Pricing pressure compresses 74% GM toward CRWV's 48%</td></tr>
+      <tr><td>FY2025 20-F (filed 4/30/26)</td><td>Refines cap structure read</td><td>Maturity wall + segment capex disclosure</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 12: METHODOLOGY & PROVENANCE -->
+<div class="section">
+  <div class="section-header">§ 12 — Methodology & Data Provenance</div>
+  <div class="section-body">
+    <div class="note">
+      <strong>Data Provenance Legend:</strong> Disclosed cells from EDGAR filings = plain. Allocated cells (revenue-share methodology) = italic + † marker. User-override cells = bold amber + * marker. <strong>This report: 72% disclosed (Q1 2026 earnings release), 25% allocated (margin/multiple projections derived from peer data + management guidance), 3% user-override (WACC, exit multiple, peer percentiles).</strong>
+    </div>
+
+    <div class="legend">
+      <strong>SOURCES:</strong><br>
+      • Primary: Nebius Q1 2026 Financial Results (6-K filing equivalent), dated May 13, 2026 (today)<br>
+      • Secondary: Management commentary on FY26 guidance ($3.0-3.4B revenue) and YE26 ARR target ($7-9B)<br>
+      • Peer multiples: CRWV current EV/FY26E rev via stockanalysis.com + CNBC ($12-13B 2026 revenue guide), IREN Q3 FY26 earnings call + Yahoo Finance, APLD Q3 FY26 + WallStreetZen<br>
+      • Lifecycle classification: lifecycle_valuation_model.xlsx (NBIS classified as High Growth, Large cap, Technology Services)<br>
+      • Current price $211.40 = pre-market May 13, 2026 (post Q1 print)<br>
+      • Balance sheet figures: Q1 2026 release, balance sheet as of 3/31/26
+    </div>
+
+    <div class="legend">
+      <strong>USER OVERRIDES (logged):</strong><br>
+      • Stage classification: High Growth — accepted (Bryan, May 13 pre-flight)<br>
+      • Peer set: CRWV + IREN + APLD only (Bryan removed NET/SNOW/MDB from initial proposal) — accepted<br>
+      • WACC: 11% (stage default, Bryan accepted)<br>
+      • Phase 10 FCF Realism Check: run (Bryan approved)<br>
+      • Methodology anchor: guidance-anchored (Option A), peer multiples as percentiles — accepted<br>
+      • Multiple selection: 10x / 14x / 22x based on CRWV-IREN-APLD blend with NBIS quality premium
+    </div>
+
+    <div class="legend">
+      <strong>METHODOLOGY DEVIATIONS FROM SKILL DEFAULTS:</strong><br>
+      • <strong>Skip 8Q observed range:</strong> Pre-Q4 2025 quarters reflect different business (pre-Microsoft contract, pre-2024 carve-out structure). Used guidance-anchored cases instead.<br>
+      • <strong>EV/Revenue as primary metric (not EV/Gross Profit):</strong> Peer GM dispersion (CRWV 48%, IREN 68%, APLD 20%) makes EV/GP percentile noisy. EV/Rev is cleaner. EV/GP shown in §4 for cross-reference.<br>
+      • <strong>NTM = FY26, Y2 = FY27 (12-month windows aligned to fiscal year):</strong> Conventional for forward modeling, slight deviation from rolling NTM.<br>
+      • <strong>WC change held neutral in Phase 10 DCF:</strong> Deferred revenue inflows could materially improve FCF if modeled — conservative omission noted.
+    </div>
+
+    <div class="legend">
+      <strong>OPEN ITEMS:</strong><br>
+      • FY2025 20-F (filed 4/30/26) — refines maturity wall + capital structure check<br>
+      • Eigen AI deal terms (cash vs stock breakdown of $643M consideration)<br>
+      • Q2 2026 guidance commentary from earnings call (post-print)<br>
+      • Management Y2 (FY27) explicit guidance — if provided in shareholder letter
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  GENERATED: 2026-05-13 09:30 ET · SMB LLC MACRO DASHBOARD · SOTP VALUATION SKILL v1.2<br>
+  FILENAME: NBIS_VAL_2026-05-13_0930.html
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HLIT Q1 2026 — Earnings vs. Street</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #11161f;
+    --bg-tertiary: #161c28;
+    --border: #1f2937;
+    --border-strong: #2d3748;
+    --text-primary: #e5edf5;
+    --text-secondary: #b8c4d4;
+    --text-muted: #7a8699;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --purple: #b388ff;
+    --green-dim: rgba(0, 230, 118, 0.08);
+    --red-dim: rgba(255, 61, 87, 0.08);
+    --amber-dim: rgba(255, 171, 0, 0.10);
+    --cyan-dim: rgba(0, 229, 255, 0.08);
+    --purple-dim: rgba(179, 136, 255, 0.10);
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 24px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(135deg, #0d1320 0%, #11161f 100%);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .ticker-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background: var(--cyan-dim);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .header h1 {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+  }
+  .header-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* VERDICT BOX */
+  .verdict {
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    border-left: 4px solid var(--green);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .verdict-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--green);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .verdict-text {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  .verdict-text strong { color: var(--green); }
+
+  /* SECTION HEADERS */
+  .section-header {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin: 22px 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* TABLE */
+  .table-wrap {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-strong);
+  }
+  th {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255, 255, 255, 0.015); }
+  .metric-name { font-weight: 600; color: var(--text-primary); }
+  .num-mono { font-family: var(--font-mono); font-weight: 500; color: var(--text-secondary); }
+  .delta-good { font-family: var(--font-mono); color: var(--green); font-weight: 600; }
+  .delta-bad { font-family: var(--font-mono); color: var(--red); font-weight: 600; }
+  .delta-neutral { font-family: var(--font-mono); color: var(--amber); font-weight: 600; }
+  .row-key { background: var(--purple-dim); }
+  .row-key .metric-name { color: var(--purple); }
+  .row-neut { background: var(--cyan-dim); }
+  .row-neut .metric-name { color: var(--cyan); }
+
+  /* STORY CARDS */
+  .story-grid { display: grid; gap: 10px; }
+  .story-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 6px;
+    padding: 12px 16px;
+  }
+  .story-card.flag-amber { border-left-color: var(--amber); }
+  .story-card.flag-red { border-left-color: var(--red); }
+  .story-card.flag-purple { border-left-color: var(--purple); }
+  .story-card.flag-cyan { border-left-color: var(--cyan); }
+  .story-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-right: 8px;
+  }
+  .story-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .story-body {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .story-body strong { color: var(--text-primary); }
+  .hl-red { color: var(--red); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+  .hl-amber { color: var(--amber); font-weight: 600; }
+  .hl-cyan { color: var(--cyan); font-weight: 600; }
+  .hl-purple { color: var(--purple); font-weight: 600; }
+
+  /* FRAMEWORK BOX */
+  .framework-box {
+    background: var(--purple-dim);
+    border: 1px solid rgba(179, 136, 255, 0.3);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  .framework-box .story-body { margin-bottom: 8px; }
+  .framework-box .story-body:last-child { margin-bottom: 0; }
+  .stage-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    margin: 0 2px;
+  }
+  .stage-tag.to { color: var(--green); border-color: var(--green); }
+  .stage-tag.bad { color: var(--red); border-color: var(--red); }
+
+  /* TRADING READ */
+  .trade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .trade-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .trade-card.full { grid-column: 1 / -1; }
+  .trade-label {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .trade-label.warn { color: var(--red); }
+  .trade-label.opp { color: var(--green); }
+  .trade-label.neut { color: var(--amber); }
+  .trade-label.info { color: var(--cyan); }
+  .trade-body { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .trade-body strong { color: var(--text-primary); }
+
+  /* VALUATION BOX */
+  .valuation-box {
+    background: var(--cyan-dim);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 10px;
+  }
+  .val-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .val-calc {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <span class="ticker-badge">NASDAQ: HLIT</span>
+      <h1>Q1 2026 Earnings — vs. Street Expectations</h1>
+    </div>
+    <span class="header-meta">May 11, 2026 · SMB LLC</span>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">✓ Verdict</div>
+    <div class="verdict-text">
+      <strong>Clean beat-and-raise — every box checked.</strong> Broadband revenue beat by 17%, Non-GAAP EPS by 45%, FY26 revenue guide <span class="hl-green">raised $35M at the midpoint</span>, backlog up 87% YoY, customer concentration <em>improving</em>, Video divestiture on track for Q2 close. This is the cleanest print in the comparable cohort. The question is whether the Street has already paid for it — stock is up ~108% YoY into the print.
+    </div>
+  </div>
+
+  <!-- BEAT/MISS TABLE -->
+  <div class="section-header">▸ Beat/Miss Scorecard (Continuing Operations - Broadband)</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:24%">Metric</th>
+          <th style="width:28%">Q1 2026 Actual</th>
+          <th style="width:28%">Street Consensus</th>
+          <th style="width:20%">Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric-name">Broadband Revenue</td>
+          <td class="num-mono">$121.7M (+43% YoY)</td>
+          <td class="num-mono">$102.2M–$104.3M</td>
+          <td class="delta-good">BEAT +17% to +19%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">GAAP EPS (Broadband)</td>
+          <td class="num-mono">$0.10</td>
+          <td class="num-mono">$0.05</td>
+          <td class="delta-good">BEAT +100%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Non-GAAP EPS (Broadband)</td>
+          <td class="num-mono">$0.17</td>
+          <td class="num-mono">$0.117</td>
+          <td class="delta-good">BEAT +45%</td>
+        </tr>
+        <tr>
+          <td class="metric-name">GAAP Operating Profit</td>
+          <td class="num-mono">$20.4M (+191% YoY)</td>
+          <td class="num-mono">~$10M implied</td>
+          <td class="delta-good">BIG BEAT</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Non-GAAP Op Margin</td>
+          <td class="num-mono">21.4% (vs 14.2% YoY)</td>
+          <td class="num-mono">~13-14% modeled</td>
+          <td class="delta-good">BEAT +700+ bps</td>
+        </tr>
+        <tr>
+          <td class="metric-name">GAAP Gross Margin</td>
+          <td class="num-mono">52.3% (vs 54.8% YoY)</td>
+          <td class="num-mono">~51%</td>
+          <td class="delta-good">SLIGHT BEAT</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Total Company EPS (incl. discontinued)</td>
+          <td class="num-mono">GAAP $0.07 / Non-GAAP $0.21</td>
+          <td class="num-mono">$0.12 GAAP</td>
+          <td class="delta-good">BEAT</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">Q2 2026 Rev Guide</td>
+          <td class="num-mono">$115–125M</td>
+          <td class="num-mono">In-line / slight beat</td>
+          <td class="delta-good">SOLID</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">FY26 Rev Guide</td>
+          <td class="num-mono">$475–495M</td>
+          <td class="num-mono">$440–480M (prior)</td>
+          <td class="delta-good">RAISED +$35M @ mid</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">FY26 Non-GAAP EPS Guide</td>
+          <td class="num-mono">$0.57–0.67</td>
+          <td class="num-mono">$0.46–0.63 (prior)</td>
+          <td class="delta-good">RAISED</td>
+        </tr>
+        <tr class="row-neut">
+          <td class="metric-name">Backlog + Deferred Rev</td>
+          <td class="num-mono">$582.1M (60% &lt;12mo)</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">+87% YoY</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VALUATION BOX -->
+  <div class="valuation-box">
+    <div class="val-label">▸ Post-Print Valuation Snapshot (Pre-Reaction)</div>
+    <div class="val-calc">
+      <strong style="color:var(--text-primary)">Pre-print EV:</strong> ~$1.06B · <strong style="color:var(--text-primary)">+$145M Video proceeds (Q2):</strong> → adj EV ~$915M<br>
+      <strong style="color:var(--text-primary)">FY26 Revenue @ midpoint:</strong> $485M → <span class="hl-cyan">EV/Sales ~1.9x post-divestiture</span><br>
+      <strong style="color:var(--text-primary)">FY26 Non-GAAP EBIT @ midpoint:</strong> $94M → <span class="hl-cyan">EV/EBIT ~9.7x post-divestiture</span><br>
+      <strong style="color:var(--text-primary)">FY26 FCF run-rate:</strong> ~$60-70M → <span class="hl-cyan">FCF yield ~6.5-7.5%</span> on adj EV
+    </div>
+  </div>
+
+  <!-- THE REAL STORY -->
+  <div class="section-header">▸ The Real Story — What's Actually Driving the Beat</div>
+  <div class="story-grid">
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">01</span>Customer Diversification Thesis Is Working</div>
+      <div class="story-body">
+        Top 2 customer concentration: <span class="hl-green">67% → 58% YoY</span>. Rest-of-Market revenue: <span class="hl-green">+78% YoY</span>, now 42% of mix (was 33%). This was the bear case for years — "they're a Comcast/Charter prop trade." Q1 actively dismantles it. <strong>Bookings were >50% Rest-of-Market in the quarter.</strong>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">02</span>Backlog Is Now the Story</div>
+      <div class="story-body">
+        <span class="hl-green">$582.1M backlog + deferred (+87% YoY)</span>. CFO disclosed <strong>60% converts within 12 months</strong> = ~$349M of visible revenue. Against FY26 guide midpoint of $485M, that's <span class="hl-cyan">~72% of guide already in backlog</span>. Eliminates near-term execution risk — the raise is well-supported.
+      </div>
+    </div>
+
+    <div class="story-card flag-purple">
+      <div class="story-title"><span class="story-num">03</span>cOS™ Adoption + DOCSIS 4.0 Tailwind</div>
+      <div class="story-body">
+        <span class="hl-purple">150 cOS customers · 45.7M cable modems served</span>. New DOCSIS 4.0 wins called out. Fiber product mix >14% of Appliance & Integration revenue over trailing year. The MSO upgrade cycle (DOCSIS 3.1 → 4.0) is the multi-year tailwind — Harmonic is the only pure-play virtualized vendor at scale.
+      </div>
+    </div>
+
+    <div class="story-card flag-cyan">
+      <div class="story-title"><span class="story-num">04</span>Video Divestiture On the Glidepath</div>
+      <div class="story-body">
+        $145M cash to <strong>MediaKind</strong>, expected Q2 close. APA executed March 20, French works council consultation complete. <span class="hl-cyan">Net cash post-close:</span> $109M cash + $145M proceeds − $108M LT debt = <span class="hl-green">~$146M net cash position</span>. This is a pure-play Broadband co. by Q3 with a fortress balance sheet for the size.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">05</span>OCF Down Hard — Working Capital Reversal</div>
+      <div class="story-body">
+        Operating cash flow: <span class="hl-amber">$31.7M Q1'26 vs $83.6M Q1'25</span>. The Q1'25 was inflated by a massive $79.6M AR collection. Strip that out and core OCF is actually <em>up</em>. Not a real flag, but it'll show ugly in YoY screens. Worth flagging if anyone asks.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">06</span>Buybacks Continue — $43M in Q1</div>
+      <div class="story-body">
+        Bought 4.2M shares ($43M, ~3.8% of float). $122M of the $200M auth complete. Share count <span class="hl-green">111.2M → 108.5M</span>. Mgmt explicit goal: at minimum offset SBC dilution. <strong>Note:</strong> debt was paid down and re-drawn during the quarter ($55M each way) — likely a treasury rotation, not a real net add.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIFECYCLE FRAMEWORK -->
+  <div class="section-header">▸ Through the SMB LLC Lifecycle Framework</div>
+  <div class="framework-box">
+    <div class="story-body">
+      Screener has HLIT at <span class="stage-tag">Young Growth</span> with a <span class="hl-red">"Weak" 3.9 composite</span> — but the screener is reading <strong>stale, dirty data</strong>. TTM rev growth shows <span class="hl-red">−25%</span>, which is the Video divestiture mathematically depressing the trailing comp. <strong>On continuing operations alone, growth is +43% YoY.</strong> The Weak signal is a classic composite-misclassification trap exactly per your framework rule.
+    </div>
+    <div class="story-body" style="margin-top:8px;">
+      ▸ <strong>True stage:</strong> <span class="stage-tag to">Young Growth → High Growth crossover</span>. 43% rev growth, 15.4% Non-GAAP net margin, $30M Q1 FCF, profitable on continuing ops. This is what Young Growth looks like just as it transitions into <span class="stage-tag to">High Growth</span> — revenue accelerating, margins inflecting, cash building.
+    </div>
+    <div class="story-body">
+      ▸ <strong>Right valuation tool per stage:</strong> <span class="hl-cyan">EV/Sales</span> (Young Growth) trending toward <span class="hl-cyan">EV/Gross Profit</span> (High Growth). Post-divestiture EV/Sales of ~1.9x on $485M FY26 guide is <strong>not expensive</strong> for a co. growing 43% with 50%+ gross margins and $146M net cash.
+    </div>
+    <div class="story-body" style="margin-top:8px; padding-top:8px; border-top: 1px dashed rgba(179,136,255,0.3);">
+      <strong>Net:</strong> This is the textbook setup the framework was designed to catch — <span class="hl-purple">a name where the composite signal is being distorted by a one-time corporate action</span> (the Video carve-out). Fundamental story is materially better than the screener's "Weak" tag suggests. Manual override is justified here.
+    </div>
+  </div>
+
+  <!-- TRADING READ -->
+  <div class="section-header">▸ Trading Read — SMB LLC Framework Application</div>
+  <div class="trade-grid">
+
+    <div class="trade-card full">
+      <div class="trade-label info">▸ Setup vs. Recent Comparables</div>
+      <div class="trade-body">
+        Of today's three reviews: <strong>HIMS</strong> = mixed print saved by guide / GLP-1 transition risk. <strong>CLSK</strong> = ugly print, BTC-distorted, no tenant deal. <strong>HLIT</strong> = clean beat-and-raise, customer diversification working, balance sheet about to fortress up via divestiture. HLIT is the only one of the three with no major hair on the print.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label opp">CSP / Long Setup</div>
+      <div class="trade-body">
+        With IV likely to compress off the print and a real beat-and-raise underneath, <strong>CSP at $9-10 strikes</strong> screens attractive on a tactical basis. <span class="hl-amber">Caveat:</span> $1B mid-cap with thin options chain — verify open interest and bid/ask before laddering. Probably too illiquid for your standard tier system.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label warn">Bear Case Risks</div>
+      <div class="trade-body">
+        (a) Stock up ~108% YoY into print — beat could already be in the price, (b) <span class="hl-red">87% backlog growth + raise = high expectations bar</span> set for Q2/Q3 — any single quarter slip punishes, (c) <strong>Q2 guide $115–125M is technically sequentially down from $121.7M Q1</strong> at the midpoint — natural pause that some will dislike, (d) Video close timing risk (could slip to Q3).
+      </div>
+    </div>
+
+    <div class="trade-card full">
+      <div class="trade-label opp">▸ Bottom Line</div>
+      <div class="trade-body">
+        <span class="hl-green">Cleanest of the three Monday prints by a wide margin.</span> The combo of (i) customer diversification accelerating, (ii) 87% backlog growth with 60% &lt;12mo conversion, (iii) raised guidance, (iv) imminent Video cash, and (v) ongoing buybacks creates a <strong>multi-quarter fundamental tailwind</strong>. Per your framework: this is the kind of name where manual override of the screener composite is justified — the "Weak 3.9" is reading divestiture noise, not the business.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>SMB LLC · Earnings Review</span>
+    <span>HLIT · Q1 2026 · 2026-05-11</span>
+  </div>
+
+</body>
+</html>

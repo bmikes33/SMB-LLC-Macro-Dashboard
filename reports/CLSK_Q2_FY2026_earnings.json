@@ -1,0 +1,65 @@
+{
+  "type": "earnings",
+  "file": "CLSK_Q2_FY2026_earnings_review.html",
+  "ticker": "CLSK",
+  "tvSymbol": "NASDAQ:CLSK",
+  "date": "2026-05-11T16:30:00-04:00",
+  "period": "Q2 FY2026",
+  "verdict": "DISAPPOINTING",
+  "verdictColor": "red",
+  "headline": "Optically catastrophic EPS miss (6.6x worse than Street), but ~70% is non-cash BTC mark-to-market. Real story: AI/HPC pivot still has no tenant.",
+  "revenue": {
+    "actual": "$136.4M",
+    "consensus": "$139.9M",
+    "deltaPct": -2.5,
+    "badge": "MISS",
+    "yoy": "-24.9%"
+  },
+  "eps": {
+    "type": "GAAP",
+    "actual": "($1.52)",
+    "consensus": "($0.23)",
+    "deltaPct": -560.9,
+    "badge": "MISS"
+  },
+  "ebitda": {
+    "actual": "($241.2M)",
+    "consensus": "~($50M)",
+    "deltaPct": -382.4,
+    "badge": "MISS"
+  },
+  "guidance": {
+    "revenueMove": "REAFFIRMED",
+    "ebitdaMove": "REAFFIRMED",
+    "newRevenueRange": "Not provided",
+    "newEbitdaRange": "Not provided"
+  },
+  "keyMetric": {
+    "label": "MW Under Contract",
+    "value": "1.8 GW",
+    "change": "doubled YoY"
+  },
+  "realStoryHeadlines": [
+    "Normalized EBITDA (ex-BTC MTM): operational ~$22M positive vs $70M YoY (−69%) — ugly but not catastrophic",
+    "Long-term debt nearly tripled: $645M → $1.79B in 6 months. ~$1.15B is 0% convertible.",
+    "$463M in buybacks while bleeding — treasury stock $145M → $608M. Capital allocation flag.",
+    "94% of stockholders' equity is BTC ($925M / $986M) — leveraged BTC fund with mining + AI option",
+    "NO hyperscaler tenant announced. Only 'leasing progress in Georgia' — power-supply secured, demand-side empty",
+    "Catalyst calendar: B. Riley 5/21, Macquarie AI Infra 6/10, Northland 6/23 — mgmt teeing up the announcement"
+  ],
+  "frameworkOverride": {
+    "applies": true,
+    "screenerStage": "High Growth",
+    "screenerComposite": "6.1 Neutral",
+    "screenerSignal": "Strong Buy (analyst)",
+    "proposedStage": "Mature shell + Young Growth optionality (mixed)",
+    "rationale": "Mining business in isolation = Maturity→Decline (post-halving). AI/HPC pivot in isolation = Young Growth (pre-revenue). Consolidated reality doesn't map cleanly. EV/Rev 4.8x already prices significant pivot success.",
+    "valuationTool": "EV/Sales for AI option, oscillators/range for mining"
+  },
+  "tradingRead": {
+    "earningsRule": "Triggered today — structures across print correctly capped LOW conf. Q3 print is next binary.",
+    "postPrintIV": "IV crush coming. Hyperscaler tease without delivery for 2nd consecutive print → IV stays bid into June conf cycle.",
+    "longThesisGate": "Requires (a) BTC holds ~$80K+, (b) at least one hyperscaler MOU by Q3 FY26 call, (c) no equity raise on top of $1.79B debt.",
+    "bottomLine": "BTC-beta vehicle with embedded AI option. If no deal by 6/23 Northland conf, mentally rebase as pure BTC miner with debt — not transformation play. Co-trigger w/ BMNR ladder freeze rule."
+  }
+}

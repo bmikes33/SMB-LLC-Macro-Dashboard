@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HIMS Q1 2026 — Earnings vs. Street</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #11161f;
+    --bg-tertiary: #161c28;
+    --border: #1f2937;
+    --border-strong: #2d3748;
+    --text-primary: #e5edf5;
+    --text-secondary: #b8c4d4;
+    --text-muted: #7a8699;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --purple: #b388ff;
+    --green-dim: rgba(0, 230, 118, 0.08);
+    --red-dim: rgba(255, 61, 87, 0.08);
+    --amber-dim: rgba(255, 171, 0, 0.10);
+    --cyan-dim: rgba(0, 229, 255, 0.08);
+    --purple-dim: rgba(179, 136, 255, 0.10);
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 24px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(135deg, #0d1320 0%, #11161f 100%);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .ticker-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background: var(--cyan-dim);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .header h1 {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+  }
+  .header-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* VERDICT BOX */
+  .verdict {
+    background: var(--amber-dim);
+    border: 1px solid var(--amber);
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .verdict-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--amber);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .verdict-text {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  .verdict-text strong { color: var(--amber); }
+
+  /* SECTION HEADERS */
+  .section-header {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin: 22px 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* TABLE */
+  .table-wrap {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-strong);
+  }
+  th {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255, 255, 255, 0.015); }
+  .metric-name { font-weight: 600; color: var(--text-primary); }
+  .num-mono { font-family: var(--font-mono); font-weight: 500; color: var(--text-secondary); }
+  .delta-good { font-family: var(--font-mono); color: var(--green); font-weight: 600; }
+  .delta-bad { font-family: var(--font-mono); color: var(--red); font-weight: 600; }
+  .delta-neutral { font-family: var(--font-mono); color: var(--amber); font-weight: 600; }
+  .row-key { background: var(--purple-dim); }
+  .row-key .metric-name { color: var(--purple); }
+
+  /* STORY CARDS */
+  .story-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .story-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 12px 16px;
+  }
+  .story-card.flag-amber { border-left-color: var(--amber); }
+  .story-card.flag-green { border-left-color: var(--green); }
+  .story-card.flag-purple { border-left-color: var(--purple); }
+  .story-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-right: 8px;
+  }
+  .story-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .story-body {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .story-body strong { color: var(--text-primary); }
+  .hl-red { color: var(--red); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+  .hl-amber { color: var(--amber); font-weight: 600; }
+  .hl-cyan { color: var(--cyan); font-weight: 600; }
+
+  /* FRAMEWORK BOX */
+  .framework-box {
+    background: var(--purple-dim);
+    border: 1px solid rgba(179, 136, 255, 0.3);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  .framework-box .story-body { margin-bottom: 8px; }
+  .framework-box .story-body:last-child { margin-bottom: 0; }
+  .stage-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    margin: 0 2px;
+  }
+  .stage-tag.from { color: var(--amber); border-color: var(--amber); }
+  .stage-tag.to { color: var(--green); border-color: var(--green); }
+
+  /* TRADING READ */
+  .trade-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .trade-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .trade-card.full { grid-column: 1 / -1; }
+  .trade-label {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .trade-label.warn { color: var(--red); }
+  .trade-label.opp { color: var(--green); }
+  .trade-label.neut { color: var(--amber); }
+  .trade-body { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <span class="ticker-badge">NYSE: HIMS</span>
+      <h1>Q1 2026 Earnings — vs. Street Expectations</h1>
+    </div>
+    <span class="header-meta">May 11, 2026 · SMB LLC</span>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">⚠ Verdict</div>
+    <div class="verdict-text">
+      <strong>Mixed-to-negative print, saved by the Q2 guide.</strong> Top line missed (barely), bottom line was a disaster vs. consensus, but Q2 revenue guidance came in <span class="hl-green">~7–10% above the Street</span> and FY26 revenue was raised. Market reaction hinges entirely on management's GLP-1 pivot commentary on the call.
+    </div>
+  </div>
+
+  <!-- BEAT/MISS TABLE -->
+  <div class="section-header">▸ Beat/Miss Scorecard</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:24%">Metric</th>
+          <th style="width:28%">Q1 Actual</th>
+          <th style="width:28%">Street Consensus</th>
+          <th style="width:20%">Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric-name">Revenue</td>
+          <td class="num-mono">$608.1M (+4% YoY)</td>
+          <td class="num-mono">~$616.85M (range $608–$632M)</td>
+          <td class="delta-bad">MISS −$8.8M (−1.4%)</td>
+        </tr>
+        <tr>
+          <td class="metric-name">GAAP EPS</td>
+          <td class="num-mono">($0.40)</td>
+          <td class="num-mono">+$0.03</td>
+          <td class="delta-bad">MASSIVE MISS</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Adjusted EPS</td>
+          <td class="num-mono">($0.19)</td>
+          <td class="num-mono">+$0.03</td>
+          <td class="delta-bad">CLEAR MISS</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Adj. EBITDA</td>
+          <td class="num-mono">$44.3M (7.3% mgn)</td>
+          <td class="num-mono">~$80M+ implied (13% mgn)</td>
+          <td class="delta-bad">MISS — margin halved YoY</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Gross Margin</td>
+          <td class="num-mono">65% GAAP / 70% adj</td>
+          <td class="num-mono">~72–73%</td>
+          <td class="delta-bad">300–500 bps light</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Subscribers</td>
+          <td class="num-mono">2.584M (+9% YoY)</td>
+          <td class="num-mono">~2.55M implied</td>
+          <td class="delta-good">SLIGHT BEAT</td>
+        </tr>
+        <tr>
+          <td class="metric-name">ARPU/Mo</td>
+          <td class="num-mono">$80 (−6% YoY)</td>
+          <td class="num-mono">Flat-to-slight-decline</td>
+          <td class="delta-neutral">IN LINE — but decline is the story</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Free Cash Flow</td>
+          <td class="num-mono">$53.0M</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">SOLID — up YoY</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">Q2 Rev Guide</td>
+          <td class="num-mono">$680–700M</td>
+          <td class="num-mono">~$616–650M</td>
+          <td class="delta-good">BIG BEAT (+5–8% over high)</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">FY26 Rev Guide</td>
+          <td class="num-mono">$2.8–3.0B</td>
+          <td class="num-mono">$2.7–2.9B prior</td>
+          <td class="delta-good">RAISED</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">FY26 Adj EBITDA Guide</td>
+          <td class="num-mono">$275–350M</td>
+          <td class="num-mono">$300–375M prior</td>
+          <td class="delta-bad">CUT (margin reset)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- THE REAL STORY -->
+  <div class="section-header">▸ The Real Story — What the Headlines Hide</div>
+  <div class="story-grid">
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">01</span>US Revenue Actually Declined −8% YoY</div>
+      <div class="story-body">
+        US revenue: <span class="hl-red">$529.9M vs. $578.7M</span>. The 4% total growth is <strong>entirely</strong> an international/Eucalyptus story — RoW jumped from $7.3M to $78.2M (<span class="hl-amber">+969%</span>). Strip out international and the core US business is shrinking. This is the single most important number in the release, and they buried it.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">02</span>The Compounded GLP-1 Unwind Is Real and Expensive</div>
+      <div class="story-body">
+        <span class="hl-amber">$33.5M in restructuring charges</span> (inventory writedowns + third-party costs) from the "2026 US WL Announcement" — pivot to branded GLP-1 after the Novo settlement. They're trading higher-margin compounded volume for lower-margin branded distribution. <strong>That's the 800 bps of GM compression.</strong>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">03</span>Quality-of-Revenue Red Flag</div>
+      <div class="story-body">
+        Receivables ballooned from <span class="hl-red">$32.1M → $149.6M</span> in one quarter — a $117M increase against only $22M of YoY revenue growth. Accounts payable also jumped $164M. Working capital flag worth probing on the call (channel stuffing? slow-pay branded GLP-1 partners?).
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">04</span>OpEx Explosion Outside of Marketing</div>
+      <div class="story-body">
+        Marketing was actually down slightly ($222M vs. $231M). But: <span class="hl-red">Ops/Support +53%</span>, <span class="hl-red">Tech/Dev +57%</span>, <span class="hl-red">G&A +126%</span>. Even adjusting for $15M legal settlement + $13M acquisition costs, the cost base is inflating fast.
+      </div>
+    </div>
+
+    <div class="story-card flag-green">
+      <div class="story-title"><span class="story-num">05</span>The Q2 Guide-Up Is the Bull's Hook</div>
+      <div class="story-body">
+        $680–700M is well above Street and implies a <span class="hl-green">sharp re-acceleration</span>. Either branded GLP-1 ramps faster than modeled, or Eucalyptus contribution starts hitting (though guidance <strong>excludes</strong> Eucalyptus — which is odd given the $137.9M acquisition spend already hit in Q1).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIFECYCLE FRAMEWORK -->
+  <div class="section-header">▸ Through the SMB LLC Lifecycle Framework</div>
+  <div class="framework-box">
+    <div class="story-body">
+      Screener has HIMS at <span class="stage-tag">Mature Growth</span> with a <span class="hl-cyan">Neutral 5.3 composite</span>. That tag is now questionable in <strong>both directions</strong>:
+    </div>
+    <div class="story-body" style="margin-top:8px;">
+      ▸ Screener TTM rev growth of 59% is <strong>stale</strong> — Q1 came in at +4%. Forward picture per management's own FY26 guide ($2.8–3.0B vs. FY25 $2.35B) is <span class="hl-green">+19–28% YoY</span> — still <span class="stage-tag to">High Growth</span> territory.
+    </div>
+    <div class="story-body">
+      ▸ But margins just reset hard. FY26 Adj EBITDA margin guide of 10–12% vs. FY25 levels is <span class="hl-red">profitability degradation</span> — atypical of healthy High Growth, more like a forced rebase.
+    </div>
+    <div class="story-body" style="margin-top:8px; padding-top:8px; border-top: 1px dashed rgba(179,136,255,0.3);">
+      <strong>Net:</strong> <span class="hl-cyan">High Growth company in a one-time business model transition</span>, not a clean Mature Growth name. The framework rule that "screener composite heuristics misclassify transitional/distressed names — use for peer multiple reference only" applies here. Right tool per stage table is <strong>EV/GP</strong> (High Growth) — screener shows 3.92x, which is low — but until Street models branded-GLP-1 unit economics with confidence, multiples won't expand.
+    </div>
+  </div>
+
+  <!-- TRADING READ -->
+  <div class="section-header">▸ Trading Read — SMB LLC Framework Application</div>
+  <div class="trade-grid">
+
+    <div class="trade-card full">
+      <div class="trade-label warn">⚠ Earnings Rule Triggered</div>
+      <div class="trade-body">
+        This was the binary event. Any short-premium structures spanning today were correctly capped at LOW confidence per framework rule. That window is now historical — re-evaluate the chart fresh post-print.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label neut">CSP / Short-Premium</div>
+      <div class="trade-body">
+        IV will collapse off this print. If stock holds the <span class="hl-cyan">$25–28 zone</span> post-print and mgmt delivers a credible branded-GLP-1 roadmap on the call, CSPs become attractive. <strong>Wait for Q2 trajectory confirmation</strong> before laddering. Receivables/AP pattern argues for patience.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label warn">Long Thesis Requirements</div>
+      <div class="trade-body">
+        Requires conviction on (a) branded GLP-1 unit economics, (b) Eucalyptus integration not destroying margins further, (c) <span class="hl-red">$974M convertible debt</span> overhang (~6x net debt/EBITDA on guided) not forcing dilution.
+      </div>
+    </div>
+
+    <div class="trade-card full">
+      <div class="trade-label opp">▸ Pre-Call Expectation</div>
+      <div class="trade-body">
+        After-hours direction likely binary on the call commentary. <span class="hl-red">Headline beat-rate optics → bearish.</span> <span class="hl-green">Q2 guide → bullish.</span> The call decides which narrative wins.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>SMB LLC · Earnings Review</span>
+    <span>HIMS · Q1 2026 · 2026-05-11</span>
+  </div>
+
+</body>
+</html>

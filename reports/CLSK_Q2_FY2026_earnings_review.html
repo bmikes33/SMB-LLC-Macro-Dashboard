@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLSK Q2 FY2026 — Earnings vs. Street</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #11161f;
+    --bg-tertiary: #161c28;
+    --border: #1f2937;
+    --border-strong: #2d3748;
+    --text-primary: #e5edf5;
+    --text-secondary: #b8c4d4;
+    --text-muted: #7a8699;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --purple: #b388ff;
+    --green-dim: rgba(0, 230, 118, 0.08);
+    --red-dim: rgba(255, 61, 87, 0.08);
+    --amber-dim: rgba(255, 171, 0, 0.10);
+    --cyan-dim: rgba(0, 229, 255, 0.08);
+    --purple-dim: rgba(179, 136, 255, 0.10);
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 24px;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    border: 1px solid var(--border-strong);
+    background: linear-gradient(135deg, #0d1320 0%, #11161f 100%);
+    padding: 16px 20px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .ticker-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background: var(--cyan-dim);
+    padding: 4px 10px;
+    border-radius: 3px;
+  }
+  .header h1 {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+  }
+  .header-meta {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* VERDICT BOX */
+  .verdict {
+    background: var(--red-dim);
+    border: 1px solid var(--red);
+    border-left: 4px solid var(--red);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .verdict-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .verdict-text {
+    font-size: 14px;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  .verdict-text strong { color: var(--red); }
+
+  /* SECTION HEADERS */
+  .section-header {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin: 22px 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* TABLE */
+  .table-wrap {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr {
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border-strong);
+  }
+  th {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255, 255, 255, 0.015); }
+  .metric-name { font-weight: 600; color: var(--text-primary); }
+  .num-mono { font-family: var(--font-mono); font-weight: 500; color: var(--text-secondary); }
+  .delta-good { font-family: var(--font-mono); color: var(--green); font-weight: 600; }
+  .delta-bad { font-family: var(--font-mono); color: var(--red); font-weight: 600; }
+  .delta-neutral { font-family: var(--font-mono); color: var(--amber); font-weight: 600; }
+  .row-key { background: var(--purple-dim); }
+  .row-key .metric-name { color: var(--purple); }
+  .row-neut { background: var(--cyan-dim); }
+  .row-neut .metric-name { color: var(--cyan); }
+
+  /* STORY CARDS */
+  .story-grid {
+    display: grid;
+    gap: 10px;
+  }
+  .story-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 6px;
+    padding: 12px 16px;
+  }
+  .story-card.flag-amber { border-left-color: var(--amber); }
+  .story-card.flag-green { border-left-color: var(--green); }
+  .story-card.flag-purple { border-left-color: var(--purple); }
+  .story-card.flag-cyan { border-left-color: var(--cyan); }
+  .story-num {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-right: 8px;
+  }
+  .story-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .story-body {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+  .story-body strong { color: var(--text-primary); }
+  .hl-red { color: var(--red); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+  .hl-amber { color: var(--amber); font-weight: 600; }
+  .hl-cyan { color: var(--cyan); font-weight: 600; }
+  .hl-purple { color: var(--purple); font-weight: 600; }
+
+  /* FRAMEWORK BOX */
+  .framework-box {
+    background: var(--purple-dim);
+    border: 1px solid rgba(179, 136, 255, 0.3);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  .framework-box .story-body { margin-bottom: 8px; }
+  .framework-box .story-body:last-child { margin-bottom: 0; }
+  .stage-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-strong);
+    color: var(--text-secondary);
+    margin: 0 2px;
+  }
+  .stage-tag.from { color: var(--amber); border-color: var(--amber); }
+  .stage-tag.to { color: var(--green); border-color: var(--green); }
+  .stage-tag.bad { color: var(--red); border-color: var(--red); }
+
+  /* TRADING READ */
+  .trade-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .trade-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+  }
+  .trade-card.full { grid-column: 1 / -1; }
+  .trade-label {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .trade-label.warn { color: var(--red); }
+  .trade-label.opp { color: var(--green); }
+  .trade-label.neut { color: var(--amber); }
+  .trade-label.info { color: var(--cyan); }
+  .trade-body { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .trade-body strong { color: var(--text-primary); }
+
+  /* NORMALIZATION BOX */
+  .norm-box {
+    background: var(--cyan-dim);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-top: 10px;
+  }
+  .norm-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .norm-calc {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <span class="ticker-badge">NASDAQ: CLSK</span>
+      <h1>Q2 FY2026 Earnings — vs. Street Expectations</h1>
+    </div>
+    <span class="header-meta">May 11, 2026 · SMB LLC</span>
+  </div>
+
+  <!-- VERDICT -->
+  <div class="verdict">
+    <div class="verdict-label">⚠ Verdict</div>
+    <div class="verdict-text">
+      <strong>Optically catastrophic miss, but ~70% of the EPS gap is BTC mark-to-market.</strong> Revenue narrowly missed. EPS was a disaster headline ($1.52 loss vs. $0.23 expected) — but $263M of that is non-cash bitcoin fair-value losses. The real story is the <span class="hl-cyan">AI/HPC pivot</span>, the <span class="hl-red">debt nearly tripling</span> to $1.79B, and operational EBITDA quietly deteriorating ~70% YoY even ex-BTC. This is a <strong style="color:var(--purple)">transformation story trading on BTC beta</strong>.
+    </div>
+  </div>
+
+  <!-- BEAT/MISS TABLE -->
+  <div class="section-header">▸ Beat/Miss Scorecard</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:24%">Metric</th>
+          <th style="width:28%">Q2 FY26 Actual</th>
+          <th style="width:28%">Street Consensus</th>
+          <th style="width:20%">Delta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="metric-name">Revenue</td>
+          <td class="num-mono">$136.4M (−24.9% YoY)</td>
+          <td class="num-mono">$139.9M (−23.0% YoY exp)</td>
+          <td class="delta-bad">MISS −$3.5M (−2.5%)</td>
+        </tr>
+        <tr>
+          <td class="metric-name">GAAP EPS</td>
+          <td class="num-mono">($1.52)</td>
+          <td class="num-mono">($0.23)</td>
+          <td class="delta-bad">MASSIVE MISS (6.6x worse)</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Net Loss</td>
+          <td class="num-mono">($378.3M)</td>
+          <td class="num-mono">~($65M) implied</td>
+          <td class="delta-bad">MASSIVE MISS</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Adj. EBITDA</td>
+          <td class="num-mono">($241.2M)</td>
+          <td class="num-mono">~($50M) implied</td>
+          <td class="delta-bad">MISS — but BTC-distorted</td>
+        </tr>
+        <tr class="row-neut">
+          <td class="metric-name">BTC Fair Value Loss</td>
+          <td class="num-mono">($224.1M)</td>
+          <td class="num-mono">Not modeled</td>
+          <td class="delta-neutral">Non-cash, ASC 350-60</td>
+        </tr>
+        <tr class="row-neut">
+          <td class="metric-name">BTC Collateral Loss</td>
+          <td class="num-mono">($38.8M)</td>
+          <td class="num-mono">Not modeled</td>
+          <td class="delta-neutral">Non-cash</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Cost of Revenue</td>
+          <td class="num-mono">$81.7M (60% of rev)</td>
+          <td class="num-mono">~$75M (~54%)</td>
+          <td class="delta-bad">~600 bps margin slip</td>
+        </tr>
+        <tr>
+          <td class="metric-name">Hashrate (avg monthly)</td>
+          <td class="num-mono">+18% YoY</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">SOLID</td>
+        </tr>
+        <tr>
+          <td class="metric-name">BTC Holdings</td>
+          <td class="num-mono">$925.2M (+14% YoY)</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">SOLID — kept HODL'ing</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">MW Under Contract</td>
+          <td class="num-mono">~1.8 GW total, 585 MW ERCOT-approved</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">DOUBLED YoY</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">Cash</td>
+          <td class="num-mono">$260.3M</td>
+          <td class="num-mono">N/A</td>
+          <td class="delta-good">+$217M vs Sept '25</td>
+        </tr>
+        <tr class="row-key">
+          <td class="metric-name">Long-Term Debt</td>
+          <td class="num-mono">$1.79B</td>
+          <td class="num-mono">$645M (Sept '25)</td>
+          <td class="delta-bad">+$1.14B / +177%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- NORMALIZED EBITDA -->
+  <div class="norm-box">
+    <div class="norm-label">▸ Normalized EBITDA — Stripping Out BTC Mark-to-Market</div>
+    <div class="norm-calc">
+      <strong style="color:var(--text-primary)">Q2 FY26:</strong> Adj EBITDA ($241.2M) + BTC FV Loss $224.1M + BTC Collateral $38.8M = <span class="hl-amber">~$21.7M positive</span><br>
+      <strong style="color:var(--text-primary)">Q2 FY25:</strong> Adj EBITDA ($57.8M) + BTC FV Loss $127.7M + BTC Collateral $0 = <span class="hl-green">~$69.9M positive</span><br>
+      <strong style="color:var(--red)">Underlying operational EBITDA: ~$70M → ~$22M YoY (−69%).</strong> Post-halving mining economics + transformation costs. Still ugly, but not the $241M loss the headline suggests.
+    </div>
+  </div>
+
+  <!-- THE REAL STORY -->
+  <div class="section-header">▸ The Real Story — Beyond the Headlines</div>
+  <div class="story-grid">
+
+    <div class="story-card flag-purple">
+      <div class="story-title"><span class="story-num">01</span>The AI/HPC Pivot Is the Whole Thesis</div>
+      <div class="story-body">
+        Mgmt led with this: <span class="hl-purple">300 MW Brazoria (TX) ERCOT-approved</span>, total 585 MW ERCOT-cleared, <span class="hl-purple">1.8 GW</span> portfolio under contract. CEO explicitly calls out "commercialize our AI/HPC-applicable assets." This is no longer pitched as a bitcoin miner — it's a digital infrastructure / data center developer that happens to mine BTC for cash flow. Re-rating thesis lives here.
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">02</span>Debt Nearly Tripled in 6 Months</div>
+      <div class="story-body">
+        Long-term debt: <span class="hl-red">$645M → $1.79B</span> since Sept 30, 2025. Net of cash + BTC, net debt is ~$603M. Per Q1 FY26 call, ~$1.15B of this is the 0% convertible from November. They're funding AI/HPC buildout + buybacks with paper-thin coupons. Cheap capital — but it's <strong>real dilution risk if BTC drops or HPC commercialization slips</strong>.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">03</span>Buybacks While Bleeding — $463M Spent</div>
+      <div class="story-body">
+        Treasury stock jumped <span class="hl-amber">$145M → $608M</span>. They retired ~30.6M shares (~11% of float) while reporting massive losses. Capital allocation flag: aggressive buyback financed by convertible debt while accumulated deficit ballooned to <span class="hl-red">($913M) from ($126M)</span> in 6 months. Bulls say "buying low," bears say "torching shareholder capital pre-pivot."
+      </div>
+    </div>
+
+    <div class="story-card flag-cyan">
+      <div class="story-title"><span class="story-num">04</span>BTC Holdings = 94% of Stockholders' Equity</div>
+      <div class="story-body">
+        $925M BTC / $986M total equity. This isn't a miner with BTC on the side — it's <span class="hl-cyan">essentially a leveraged BTC fund + mining operator + speculative AI/HPC option</span>. ASC 350-60 mark-to-market means every BTC move hits the P&L hard. Bryan's BMNR ladder freeze rule (BTC −3%/day) directly applies as a co-trigger here.
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">05</span>Mining Economics Are Post-Halving Impaired</div>
+      <div class="story-body">
+        Revenue $136M vs. $182M YoY (−25%) — even with hashrate up 18%. Translation: <span class="hl-red">revenue per EH/s collapsed ~36% YoY</span>. April 2024 halving fully through the comp now. D&A jumped to $116M (was $79M) from new miner deployments. Cost of revenue 60% (was 47%). Pure mining at current BTC/difficulty levels is barely cash-flow positive.
+      </div>
+    </div>
+
+    <div class="story-card flag-green">
+      <div class="story-title"><span class="story-num">06</span>Hyperscaler Tease — Watch the Call</div>
+      <div class="story-body">
+        Prior commentary referenced talks with an <span class="hl-green">"investment-grade hyperscaler"</span>. No commercial announcement in this release — but the ERCOT 300 MW approval is the technical pre-req. Any Sandersville / Brazoria lease announcement on the call (4:30 PM ET) is the binary that could re-rate the stock. Silence = pivot is taking longer than bulls hoped.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LIFECYCLE FRAMEWORK -->
+  <div class="section-header">▸ Through the SMB LLC Lifecycle Framework</div>
+  <div class="framework-box">
+    <div class="story-body">
+      Screener has CLSK at <span class="stage-tag">High Growth</span> with a <span class="hl-cyan">Neutral 6.1 composite</span> and <strong>"Strong Buy"</strong> analyst tag (5 ratings). TTM rev growth +68% is <strong>stale</strong> — Q2 just printed <span class="hl-red">−25% YoY</span>. Screener composite misclassification flag applies again.
+    </div>
+    <div class="story-body" style="margin-top:8px;">
+      ▸ <strong>Mining business in isolation:</strong> <span class="stage-tag bad">Maturity → Decline</span>. Post-halving economics, hashrate-share defense game, commoditized. Per framework: oscillators + range tools, not trend-following.
+    </div>
+    <div class="story-body">
+      ▸ <strong>AI/HPC pivot in isolation:</strong> <span class="stage-tag to">Young Growth</span>. Pre-revenue from segment. Valuation per framework: EV/SAM (TAM optionality), DCF impossible. Driven by news/sentiment — exactly what Murphy describes.
+    </div>
+    <div class="story-body">
+      ▸ <strong>Consolidated reality:</strong> A <span class="hl-purple">Mature Growth shell with Young Growth optionality stapled on</span>, financed by convertible debt and balance-sheet BTC. Framework tools don't cleanly map. EV/Revenue (4.8x) and EV/GP price in significant pivot success already.
+    </div>
+    <div class="story-body" style="margin-top:8px; padding-top:8px; border-top: 1px dashed rgba(179,136,255,0.3);">
+      <strong>Net:</strong> Treat the stock like an <span class="hl-purple">embedded BTC + AI optionality + miner pair-trade</span>, not a single-thesis name. Composite valuation methods will mislead. Trade the catalyst (hyperscaler announcement) and the BTC beta, not the multiple.
+    </div>
+  </div>
+
+  <!-- TRADING READ -->
+  <div class="section-header">▸ Trading Read — SMB LLC Framework Application</div>
+  <div class="trade-grid">
+
+    <div class="trade-card full">
+      <div class="trade-label warn">⚠ Earnings Rule + BMNR Correlation</div>
+      <div class="trade-body">
+        Binary event triggered today. Any short-premium structures across this print were correctly capped at LOW confidence. <strong>Cross-correlation alert:</strong> CLSK BTC-sensitivity is now structural (94% of equity is BTC). If BMNR ladder freeze rule fires (BTC −3% intraday), CLSK is a co-mover with higher beta. Treat them as a combined crypto sleeve for risk-budgeting purposes.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label info">CSP / Short-Premium Setup</div>
+      <div class="trade-body">
+        IV crush coming off this print. <strong>Wait for the call</strong> — hyperscaler color is the binary. If announced, IV stays bid into commissioning. If silent, premium decays into a slow drift. Don't ladder until you've seen the chart's reaction to the 4:30 PM ET call. <span class="hl-amber">Underlying is high-vol crypto-correlated</span> — IBKR maintenance margin will be punitive.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label warn">Long Thesis Requirements</div>
+      <div class="trade-body">
+        (a) BTC holds <span class="hl-amber">~$80K+</span> to keep balance-sheet equity intact, (b) at least one hyperscaler MOU by Q3 FY26 call to validate the pivot, (c) no equity raise on top of the $1.79B debt. <strong>Convertible overhang at $1.15B</strong> is the dilution ceiling.
+      </div>
+    </div>
+
+    <div class="trade-card full">
+      <div class="trade-label opp">▸ The Real Catalyst Calendar</div>
+      <div class="trade-body">
+        Today's earnings call (4:30 PM ET) → <strong>B. Riley conf May 21</strong> → <strong>Macquarie AI Infra conf June 10</strong> → <strong>Northland Growth June 23</strong>. Three back-to-back AI-themed investor events post-print. Mgmt is <span class="hl-purple">clearly setting up to break the hyperscaler news at one of these</span>. The April → June window is the pivot validation window.
+      </div>
+    </div>
+
+    <div class="trade-card full">
+      <div class="trade-label neut">Bottom Line</div>
+      <div class="trade-body">
+        Headline miss is <span class="hl-red">terrible</span>. Normalized story is <span class="hl-amber">mediocre with optionality</span>. Stock won't trade on the print — it'll trade on what mgmt says about HPC commercialization. Until then, this is a <strong>BTC-beta vehicle with an embedded call option on the AI data center pivot</strong>. Position size accordingly to the correlation, not the screener composite.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>SMB LLC · Earnings Review</span>
+    <span>CLSK · Q2 FY2026 · 2026-05-11</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "type": "valuation",
+  "file": "NBIS_VAL_2026-05-13_0930.html",
+  "ticker": "NBIS",
+  "tvSymbol": "NASDAQ:NBIS",
+  "date": "2026-05-13T09:30:00-05:00",
+  "summary": "CAP_CAVEAT \u2014 Base +34.3% / P-Wt +61.3% \u00b7 cap-RED \u00b7 fcf-CAVEAT",
+  "verdictBadge": "CAP_CAVEAT",
+  "upsideBadge": "+34.3%",
+  "mode": "CONSOLIDATED",
+  "segmentCount": 1,
+  "currentPrice": 211.4,
+  "fairValue": {
+    "method": "2Y_discounted",
+    "bear": 152.46,
+    "base": 283.81,
+    "bull": 643.69,
+    "probWeighted": 340.94
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 105.08,
+    "base": 152.98,
+    "bull": 250.08
+  },
+  "upside": {
+    "bear": -27.9,
+    "base": 34.3,
+    "bull": 204.5,
+    "probWeighted": 61.3
+  },
+  "wacc": {
+    "method": "stage_default",
+    "perSegment": {
+      "NBIS_Consolidated": 0.11
+    }
+  },
+  "daAllocationMethod": "n/a_consolidated",
+  "stage": "HIGH_GROWTH",
+  "primaryMetric": "EV/Revenue",
+  "metricRationale": "Stage-default EV/GP deviated to EV/Revenue due to peer GM dispersion (CRWV 48%, IREN 68%, APLD 20%) making GP percentiles noisy",
+  "peers": [
+    "CRWV",
+    "IREN",
+    "APLD"
+  ],
+  "multiples": {
+    "bear_ev_revenue": 10.0,
+    "base_ev_revenue": 14.0,
+    "bull_ev_revenue": 22.0
+  },
+  "anchorMethod": "guidance_anchored_not_8Q",
+  "anchorRationale": "Pre-Q4 2025 quarters reflect different business (pre-Microsoft contract, pre-2024 carve-out). Used FY26 guidance ($3.0-3.4B) + YE26 ARR target ($7-9B) instead.",
+  "capitalStructure": "RED",
+  "capitalStructureFlags": [
+    "Interest coverage 2.0x (RED \u2014 below 4x threshold; should improve as ARR ramps)",
+    "Dilution +29.9% YoY (RED \u2014 heavy capex funding)",
+    "Liquidity 0.9 quarters of capex (AMBER)",
+    "Maturity wall: needs 20-F to verify",
+    "Net cash position (GREEN \u2014 $9.3B cash vs $8.45B debt)"
+  ],
+  "dataQuality": {
+    "disclosedPct": 72,
+    "allocatedPct": 25,
+    "userOverridePct": 3
+  },
+  "verdict": "Undervalued but capital structure caveat",
+  "fcfRealismCheck": {
+    "ran": true,
+    "dcfFairValue": 157.08,
+    "dcfEv": 46.07,
+    "sotpBaseEv": 85.22,
+    "gapToSotp": -45.9,
+    "flag": "CAVEAT"
+  },
+  "notes": "Q1 2026 inflection (Microsoft $17B contract, +684% YoY revenue, GM 51%\u219274%, Adj EBITDA flipped positive). Method A vs Method B gap of $130/sh reflects Y2 compounding dependence \u2014 base case requires sustained ARR ramp through FY27. RED cap structure on dilution + tight coverage. Update with 20-F when uploaded for maturity wall accuracy."
+}

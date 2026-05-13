@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FLNC Q2 FY2026 — Earnings vs. Street</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0a0e17;
+    --bg-secondary: #11161f;
+    --bg-tertiary: #161c28;
+    --border: #1f2937;
+    --border-strong: #2d3748;
+    --text-primary: #e5edf5;
+    --text-secondary: #b8c4d4;
+    --text-muted: #7a8699;
+    --cyan: #00e5ff;
+    --green: #00e676;
+    --red: #ff3d57;
+    --amber: #ffab00;
+    --purple: #b388ff;
+    --green-dim: rgba(0, 230, 118, 0.08);
+    --red-dim: rgba(255, 61, 87, 0.08);
+    --amber-dim: rgba(255, 171, 0, 0.10);
+    --cyan-dim: rgba(0, 229, 255, 0.08);
+    --purple-dim: rgba(179, 136, 255, 0.10);
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-sans); font-size: 13px; line-height: 1.55; padding: 24px; max-width: 920px; margin: 0 auto; }
+  .header { border: 1px solid var(--border-strong); background: linear-gradient(135deg, #0d1320 0%, #11161f 100%); padding: 16px 20px; border-radius: 6px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .ticker-badge { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--cyan); border: 1px solid var(--cyan); background: var(--cyan-dim); padding: 4px 10px; border-radius: 3px; }
+  .header h1 { font-family: var(--font-mono); font-size: 18px; font-weight: 800; letter-spacing: 0.5px; color: var(--text-primary); }
+  .header-meta { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+  .verdict { background: var(--cyan-dim); border: 1px solid var(--cyan); border-left: 4px solid var(--cyan); border-radius: 6px; padding: 14px 18px; margin-bottom: 16px; }
+  .verdict-label { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--cyan); text-transform: uppercase; margin-bottom: 4px; }
+  .verdict-text { font-size: 14px; color: var(--text-primary); line-height: 1.6; }
+  .verdict-text strong { color: var(--cyan); }
+  .section-header { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--cyan); text-transform: uppercase; margin: 22px 0 10px 0; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .table-wrap { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: var(--bg-tertiary); border-bottom: 1px solid var(--border-strong); }
+  th { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: 1.2px; color: var(--text-muted); text-transform: uppercase; padding: 10px 12px; text-align: left; }
+  td { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 12px; vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255, 255, 255, 0.015); }
+  .metric-name { font-weight: 600; color: var(--text-primary); }
+  .num-mono { font-family: var(--font-mono); font-weight: 500; color: var(--text-secondary); }
+  .delta-good { font-family: var(--font-mono); color: var(--green); font-weight: 600; }
+  .delta-bad { font-family: var(--font-mono); color: var(--red); font-weight: 600; }
+  .delta-neutral { font-family: var(--font-mono); color: var(--amber); font-weight: 600; }
+  .row-key { background: var(--purple-dim); }
+  .row-key .metric-name { color: var(--purple); }
+  .row-neut { background: var(--cyan-dim); }
+  .row-neut .metric-name { color: var(--cyan); }
+  .story-grid { display: grid; gap: 10px; }
+  .story-card { background: var(--bg-secondary); border: 1px solid var(--border); border-left: 3px solid var(--green); border-radius: 6px; padding: 12px 16px; }
+  .story-card.flag-amber { border-left-color: var(--amber); }
+  .story-card.flag-red { border-left-color: var(--red); }
+  .story-card.flag-purple { border-left-color: var(--purple); }
+  .story-card.flag-cyan { border-left-color: var(--cyan); }
+  .story-num { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--text-muted); margin-right: 8px; }
+  .story-title { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .story-body { font-size: 12.5px; color: var(--text-secondary); line-height: 1.65; }
+  .story-body strong { color: var(--text-primary); }
+  .hl-red { color: var(--red); font-weight: 600; }
+  .hl-green { color: var(--green); font-weight: 600; }
+  .hl-amber { color: var(--amber); font-weight: 600; }
+  .hl-cyan { color: var(--cyan); font-weight: 600; }
+  .hl-purple { color: var(--purple); font-weight: 600; }
+  .compare-box { background: var(--purple-dim); border: 1px solid rgba(179, 136, 255, 0.3); border-radius: 6px; padding: 14px 18px; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
+  .compare-cell { background: var(--bg-tertiary); border: 1px solid var(--border); border-radius: 4px; padding: 10px 12px; }
+  .compare-header { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 6px; }
+  .compare-header.flnc { color: var(--green); }
+  .compare-header.clsk { color: var(--red); }
+  .compare-body { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+  .framework-box { background: var(--purple-dim); border: 1px solid rgba(179, 136, 255, 0.3); border-radius: 6px; padding: 14px 18px; }
+  .framework-box .story-body { margin-bottom: 8px; }
+  .framework-box .story-body:last-child { margin-bottom: 0; }
+  .stage-tag { display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 2px 8px; border-radius: 3px; background: var(--bg-tertiary); border: 1px solid var(--border-strong); color: var(--text-secondary); margin: 0 2px; }
+  .stage-tag.to { color: var(--green); border-color: var(--green); }
+  .stage-tag.bad { color: var(--red); border-color: var(--red); }
+  .trade-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .trade-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; }
+  .trade-card.full { grid-column: 1 / -1; }
+  .trade-label { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+  .trade-label.warn { color: var(--red); }
+  .trade-label.opp { color: var(--green); }
+  .trade-label.neut { color: var(--amber); }
+  .trade-label.info { color: var(--cyan); }
+  .trade-body { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+  .trade-body strong { color: var(--text-primary); }
+  .footer { margin-top: 20px; padding-top: 12px; border-top: 1px solid var(--border); font-family: var(--font-mono); font-size: 9px; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-left">
+      <span class="ticker-badge">NASDAQ: FLNC</span>
+      <h1>Q2 FY2026 Earnings — vs. Street Expectations</h1>
+    </div>
+    <span class="header-meta">Reported May 6, 2026 · SMB LLC</span>
+  </div>
+
+  <div class="verdict">
+    <div class="verdict-label">⓵ Verdict</div>
+    <div class="verdict-text">
+      <strong>Headline revenue disaster, but the market rewarded the narrative — stock +21.7% to $19.23.</strong> Revenue missed by ~24% ($465M vs. $611M est), but $80M was deferred to Q3 from port delays. The real prize: <span class="hl-purple">two hyperscaler MSAs signed</span>, order intake doubled YoY to $2B, backlog at record $5.6B, FY26 guide reaffirmed. <strong>This is the AI data center BESS thesis actually delivering</strong> — and the cleanest counterpoint to CLSK's empty hyperscaler tease 5 days later.
+    </div>
+  </div>
+
+  <div class="section-header">▸ Beat/Miss Scorecard</div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th style="width:24%">Metric</th><th style="width:28%">Q2 FY26 Actual</th><th style="width:28%">Street Consensus</th><th style="width:20%">Delta</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="metric-name">Revenue</td><td class="num-mono">$464.9M (+7.7% YoY)</td><td class="num-mono">$594M–$628M (range)</td><td class="delta-bad">MISS −24% to −26%</td></tr>
+        <tr class="row-neut"><td class="metric-name">"Normalized" Rev (+$80M deferred)</td><td class="num-mono">~$544.9M</td><td class="num-mono">$611M midpoint</td><td class="delta-neutral">Implied miss ~−11%</td></tr>
+        <tr><td class="metric-name">GAAP EPS</td><td class="num-mono">($0.16)</td><td class="num-mono">($0.16) est</td><td class="delta-neutral">IN LINE</td></tr>
+        <tr><td class="metric-name">Adjusted EPS</td><td class="num-mono">($0.12) / ($0.16)</td><td class="num-mono">($0.18)</td><td class="delta-good">BEAT +12% to +33%</td></tr>
+        <tr><td class="metric-name">Adj. EBITDA</td><td class="num-mono">($9.4M)</td><td class="num-mono">~($25M)</td><td class="delta-good">BEAT — +$21M vs YoY</td></tr>
+        <tr><td class="metric-name">Adj. Gross Margin</td><td class="num-mono">11.1% (vs 10.4% YoY)</td><td class="num-mono">~10%</td><td class="delta-good">SLIGHT BEAT</td></tr>
+        <tr><td class="metric-name">Net Loss</td><td class="num-mono">($29.2M) vs ($41.9M) YoY</td><td class="num-mono">N/A</td><td class="delta-good">−30% loss reduction</td></tr>
+        <tr class="row-key"><td class="metric-name">Order Intake YTD (thru 5/6)</td><td class="num-mono">~$2.0B</td><td class="num-mono">~$1.0B (YoY)</td><td class="delta-good">DOUBLED YoY</td></tr>
+        <tr class="row-key"><td class="metric-name">Backlog at 3/31</td><td class="num-mono">$5.6B (RECORD)</td><td class="num-mono">$5.5B Q1, $5.3B FY25</td><td class="delta-good">+6% QoQ</td></tr>
+        <tr class="row-key"><td class="metric-name">Pipeline</td><td class="num-mono">$31.5B (+35% YTD)</td><td class="num-mono">$23.4B Q4'25</td><td class="delta-good">US 61% / RoW 16%</td></tr>
+        <tr class="row-key"><td class="metric-name">FY26 Rev Guide</td><td class="num-mono">$3.2B–$3.6B (REAFFIRMED)</td><td class="num-mono">$3.4B consensus</td><td class="delta-good">+1% above mid</td></tr>
+        <tr class="row-key"><td class="metric-name">FY26 Adj EBITDA Guide</td><td class="num-mono">$40M–$60M (REAFFIRMED)</td><td class="num-mono">$48.4M consensus</td><td class="delta-good">+3% above mid</td></tr>
+        <tr class="row-key"><td class="metric-name">ARR Target</td><td class="num-mono">~$180M by FY26 end</td><td class="num-mono">$157M current</td><td class="delta-good">+15% trajectory</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-header">▸ The Hyperscaler Pivot — FLNC vs. CLSK Same-Week Read</div>
+  <div class="compare-box">
+    <div class="story-body">
+      <strong>Both names pitched themselves as AI data center infrastructure plays this week.</strong> One delivered, one didn't. Worth keeping side-by-side because the storage/power-infra trade is increasingly going to bifurcate on <em>execution</em>, not <em>promises</em>.
+    </div>
+    <div class="compare-grid">
+      <div class="compare-cell">
+        <div class="compare-header flnc">✓ FLNC (5/6/26)</div>
+        <div class="compare-body">
+          <strong>2 hyperscaler MSAs SIGNED.</strong><br>
+          First order Q3 FY26 (this quarter).<br>
+          Multi-year revenue opp confirmed.<br>
+          Data center pipeline +30% QoQ.<br>
+          Proprietary power-quality solution integrated.<br>
+          <span class="hl-green">Result: +21.7% stock surge</span>
+        </div>
+      </div>
+      <div class="compare-cell">
+        <div class="compare-header clsk">✗ CLSK (5/11/26)</div>
+        <div class="compare-body">
+          "Investment-grade hyperscaler talks" — no MSA.<br>
+          "Leasing progress in Georgia" — no tenant.<br>
+          585 MW ERCOT-cleared, zero customer commits.<br>
+          Two consecutive prints teasing, no deal.<br>
+          Three June investor conferences scheduled.<br>
+          <span class="hl-red">Result: Market awaits proof</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-header">▸ The Real Story — What's Actually Happening</div>
+  <div class="story-grid">
+
+    <div class="story-card flag-purple">
+      <div class="story-title"><span class="story-num">01</span>Hyperscaler MSAs Are the Whole Print</div>
+      <div class="story-body">
+        Mgmt described them as <span class="hl-purple">"chosen from a process involving multiple participants"</span> = competitive RFP win, not a relationship favor. Initial order Q3 FY26 = imminent revenue inflection. This is the catalyst the FLNC long thesis has waited 12+ months for. <strong>The headline rev miss became irrelevant the moment this hit the wire.</strong>
+      </div>
+    </div>
+
+    <div class="story-card">
+      <div class="story-title"><span class="story-num">02</span>Order Intake Doubled — and It's Real Diversification</div>
+      <div class="story-body">
+        $2.0B YTD vs. $1.0B prior year. <span class="hl-green">~50% from first-time customers</span>. This isn't AES/Siemens captive related-party rev (which collapsed from $167M → $40M YoY in Q2 alone). It's external commercial wins. Third-party revenue actually <span class="hl-green">+60% YoY</span> if you decompose the $464.9M total.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">03</span>The $80M "Lost" Revenue — Real but Recoverable</div>
+      <div class="story-body">
+        Port shipping delays pushed ~$80M from Q2 → Q3. Mgmt confirmed shipments received in April, no further delays. If you "normalize" Q2 rev to $544.9M, the miss is ~11% rather than ~24%. <span class="hl-amber">Don't fully discount the miss</span> — Street estimates assumed they'd execute, and they didn't — but it's a timing problem, not a demand problem.
+      </div>
+    </div>
+
+    <div class="story-card flag-amber">
+      <div class="story-title"><span class="story-num">04</span>2H FY26 = 70% of Annual Revenue. Execution Risk Lives Here.</div>
+      <div class="story-body">
+        FY26 guide is $3.2–3.6B. H1 actuals = $940M. That leaves <span class="hl-amber">~$2.3–2.7B for H2 = 70% backloaded</span>. CFO says "production in line with plan, deliveries tracking as expected." But this is a setup where any further logistics or commissioning slip resets the entire FY narrative. <strong>Watch the Q3 print for confirmation, not just the Q2 victory lap.</strong>
+      </div>
+    </div>
+
+    <div class="story-card flag-red">
+      <div class="story-title"><span class="story-num">05</span>Cash Burned Hard — $300M in 6 Months</div>
+      <div class="story-body">
+        Total cash: <span class="hl-red">$714.6M (Sept '25) → $412.9M (Mar '26)</span>. Inventory ballooned <span class="hl-red">$455M → $764M (+68%)</span> to support 2H deliveries. FCF: <span class="hl-red">−$285M H1</span>. They used $220M of liquidity in Q2 alone. CFO says additional Q3 inventory build then "rebuilding toward $900M by FY end." If 2H slips, the cash position gets uncomfortable fast.
+      </div>
+    </div>
+
+    <div class="story-card flag-cyan">
+      <div class="story-title"><span class="story-num">06</span>OBBBA + Domestic Content = Structural Moat</div>
+      <div class="story-body">
+        One Big Beautiful Bill Act: <span class="hl-cyan">Section 48E ITC for storage through 2034</span>. PFE (Prohibited Foreign Entity) restrictions kick in 2026 — <strong>effectively prices Chinese competition out</strong> of the US base ITC. FLNC has fully compliant US supply chain (TN cells, AZ enclosures, SC inverters). Section 45X manufacturing credit through 2032. This is the regulatory tailwind underneath the AI data center demand pull.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section-header">▸ Through the SMB LLC Lifecycle Framework</div>
+  <div class="framework-box">
+    <div class="story-body">
+      Screener has FLNC at <span class="stage-tag">Young Growth</span> with an <span class="hl-red">"Avoid 2.9 composite"</span> and Neutral analyst tag. TTM rev growth +1.2% looks anemic — that's the post-FY24 lap effect. <strong>Forward picture is fundamentally different.</strong>
+    </div>
+    <div class="story-body" style="margin-top:8px;">
+      ▸ FY26 guide of $3.2–3.6B vs. FY25 $2.26B = <span class="hl-green">+41% to +59% YoY revenue growth</span>. That's textbook <span class="stage-tag to">Young Growth → High Growth crossover</span>. The screener composite is misclassifying again — classic transitional-name distortion per framework rules.
+    </div>
+    <div class="story-body">
+      ▸ <strong>Right valuation tool per stage:</strong> <span class="hl-cyan">EV/Sales</span> (Young Growth). Post-print: market cap ~$3.5B at $19.23. Cash $413M, debt $392M, so EV ≈ $3.5B. On $3.4B FY26 guide midpoint = <span class="hl-cyan">EV/Sales ~1.0x</span>. Cheap if guide hits, very cheap if hyperscaler ramp accelerates.
+    </div>
+    <div class="story-body" style="margin-top:8px; padding-top:8px; border-top: 1px dashed rgba(179,136,255,0.3);">
+      <strong>Net:</strong> Another <span class="hl-purple">manual-override-the-screener</span> setup, same pattern as HLIT today. The "Avoid 2.9" composite is reading stale TTM that's about to inflect violently in FY26 H2. Strategic story (hyperscaler MSAs + OBBBA moat + ARR ramp) supports a stage upgrade if Q3 delivers.
+    </div>
+  </div>
+
+  <div class="section-header">▸ Trading Read — SMB LLC Framework Application</div>
+  <div class="trade-grid">
+
+    <div class="trade-card full">
+      <div class="trade-label info">▸ The Post-Print Reality (Print Was 5 Days Ago)</div>
+      <div class="trade-body">
+        FLNC already ripped <strong>+21.7% to ~$19.23</strong> on the print. The easy reaction trade is gone. From here it's a Q3 confirmation play — do they convert the $80M deferred + the first hyperscaler order + the broader $2B order intake into a clean Q3 print? <span class="hl-amber">Risk-reward has changed</span> — bull thesis intact, but you're paying for it now.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label opp">CSP Setup (Tactical)</div>
+      <div class="trade-body">
+        IV crushed post-print but mid-cap renewables IV still elevated structurally. <span class="hl-green">CSPs at $15-17 strikes</span> screen reasonable if you believe the Q3 hyperscaler-order narrative will hold. <strong>Sizing caveat:</strong> high beta to broader storage/renewables sector + tariff/policy headlines + ~50% 1Y vol → keep tier size disciplined.
+      </div>
+    </div>
+
+    <div class="trade-card">
+      <div class="trade-label warn">Bear Case Risks</div>
+      <div class="trade-body">
+        (a) 2H FY26 is <span class="hl-red">70% of guide</span> — execution failure resets the entire FY narrative, (b) Cash position halved in 6 months — another $200M+ Q3 burn possible before rebuild, (c) Related-party rev collapsing (AES/Siemens internal demand drying up?), (d) Tariff timeline — <span class="hl-amber">Section 122 10% tariff expires 7/24/26</span>, after which Chinese imports drop to 28.4% but remain disadvantaged vs. US-compliant supply.
+      </div>
+    </div>
+
+    <div class="trade-card full">
+      <div class="trade-label opp">▸ Bottom Line</div>
+      <div class="trade-body">
+        <span class="hl-purple">This week's most important earnings cross-read:</span> FLNC is the BESS-as-AI-infra thesis with actual paper (2 hyperscaler MSAs). CLSK is the same thesis without paper. <strong>If you want exposure to the storage-for-data-center theme, FLNC is the cleaner expression now</strong> — even after the +21.7% pop. Wait for a pullback or Q3 confirmation; do not chase the post-print high. The framework would call this a Stage Upgrade Candidate pending Q3 execution.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <span>SMB LLC · Earnings Review</span>
+    <span>FLNC · Q2 FY2026 · Reported 2026-05-06</span>
+  </div>
+
+</body>
+</html>

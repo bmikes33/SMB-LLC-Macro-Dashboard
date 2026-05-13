@@ -1,6 +1,341 @@
 {
   "reports": [
     {
+      "type": "valuation",
+      "file": "NBIS_VAL_2026-05-13_0930.html",
+      "ticker": "NBIS",
+      "tvSymbol": "NASDAQ:NBIS",
+      "date": "2026-05-13T09:30:00-05:00",
+      "summary": "CAP_CAVEAT — Base +34.3% / P-Wt +61.3% · cap-RED · fcf-CAVEAT",
+      "verdictBadge": "CAP_CAVEAT",
+      "upsideBadge": "+34.3%",
+      "mode": "CONSOLIDATED",
+      "segmentCount": 1,
+      "currentPrice": 211.4,
+      "fairValue": {
+        "method": "2Y_discounted",
+        "bear": 152.46,
+        "base": 283.81,
+        "bull": 643.69,
+        "probWeighted": 340.94
+      },
+      "fairValueNtm": {
+        "method": "NTM_multiple",
+        "bear": 105.08,
+        "base": 152.98,
+        "bull": 250.08
+      },
+      "upside": {
+        "bear": -27.9,
+        "base": 34.3,
+        "bull": 204.5,
+        "probWeighted": 61.3
+      },
+      "wacc": {
+        "method": "stage_default",
+        "perSegment": {
+          "NBIS_Consolidated": 0.11
+        }
+      },
+      "daAllocationMethod": "n/a_consolidated",
+      "stage": "HIGH_GROWTH",
+      "primaryMetric": "EV/Revenue",
+      "metricRationale": "Stage-default EV/GP deviated to EV/Revenue due to peer GM dispersion (CRWV 48%, IREN 68%, APLD 20%) making GP percentiles noisy",
+      "peers": [
+        "CRWV",
+        "IREN",
+        "APLD"
+      ],
+      "multiples": {
+        "bear_ev_revenue": 10.0,
+        "base_ev_revenue": 14.0,
+        "bull_ev_revenue": 22.0
+      },
+      "anchorMethod": "guidance_anchored_not_8Q",
+      "anchorRationale": "Pre-Q4 2025 quarters reflect different business (pre-Microsoft contract, pre-2024 carve-out). Used FY26 guidance ($3.0-3.4B) + YE26 ARR target ($7-9B) instead.",
+      "capitalStructure": "RED",
+      "capitalStructureFlags": [
+        "Interest coverage 2.0x (RED — below 4x threshold; should improve as ARR ramps)",
+        "Dilution +29.9% YoY (RED — heavy capex funding)",
+        "Liquidity 0.9 quarters of capex (AMBER)",
+        "Maturity wall: needs 20-F to verify",
+        "Net cash position (GREEN — $9.3B cash vs $8.45B debt)"
+      ],
+      "dataQuality": {
+        "disclosedPct": 72,
+        "allocatedPct": 25,
+        "userOverridePct": 3
+      },
+      "verdict": "Undervalued but capital structure caveat",
+      "fcfRealismCheck": {
+        "ran": true,
+        "dcfFairValue": 157.08,
+        "dcfEv": 46.07,
+        "sotpBaseEv": 85.22,
+        "gapToSotp": -45.9,
+        "flag": "CAVEAT"
+      },
+      "notes": "Q1 2026 inflection (Microsoft $17B contract, +684% YoY revenue, GM 51%→74%, Adj EBITDA flipped positive). Method A vs Method B gap of $130/sh reflects Y2 compounding dependence — base case requires sustained ARR ramp through FY27. RED cap structure on dilution + tight coverage. Update with 20-F when uploaded for maturity wall accuracy."
+    },
+    {
+      "type": "earnings",
+      "file": "HLIT_Q1_2026_earnings.html",
+      "ticker": "HLIT",
+      "tvSymbol": "NASDAQ:HLIT",
+      "date": "2026-05-11T17:00:00-04:00",
+      "period": "Q1 2026",
+      "verdict": "CLEAN BEAT-AND-RAISE",
+      "verdictColor": "green",
+      "headline": "Cleanest beat-and-raise of the day — every box checked. Customer concentration improved, backlog +87%, Video divestiture cash imminent.",
+      "revenue": {
+        "actual": "$121.7M",
+        "consensus": "$102.2M-$104.3M",
+        "deltaPct": 17.7,
+        "badge": "BEAT",
+        "yoy": "+43%"
+      },
+      "eps": {
+        "type": "Non-GAAP",
+        "actual": "$0.17",
+        "consensus": "$0.117",
+        "deltaPct": 45.3,
+        "badge": "BEAT"
+      },
+      "ebitda": {
+        "actual": "21.4% op margin",
+        "consensus": "~13-14%",
+        "deltaPct": 50.0,
+        "badge": "BEAT"
+      },
+      "guidance": {
+        "revenueMove": "RAISED",
+        "ebitdaMove": "RAISED",
+        "newRevenueRange": "$475M-$495M",
+        "newEbitdaRange": "$87M-$101M"
+      },
+      "keyMetric": {
+        "label": "Backlog + Deferred Rev",
+        "value": "$582.1M",
+        "change": "+87% YoY"
+      },
+      "realStoryHeadlines": [
+        "Customer diversification thesis working — Top-2 concentration fell 67%→58% YoY; Rest-of-Market bookings now >50% of total",
+        "Backlog $582M with 60% converting in 12mo = ~72% of FY26 guide already visible",
+        "cOS™ adoption: 150 customers serving 45.7M cable modems; DOCSIS 4.0 + fiber wins compounding",
+        "Video divestiture on track: $145M cash to MediaKind, Q2 close → ~$146M net cash post-deal",
+        "Q1 buyback continues — 4.2M shares ($43M); $122M of $200M auth complete"
+      ],
+      "frameworkOverride": {
+        "applies": true,
+        "screenerStage": "Young Growth",
+        "screenerComposite": "3.9 Weak",
+        "screenerSignal": "Weak",
+        "proposedStage": "Young Growth → High Growth crossover",
+        "rationale": "Screener TTM growth shows −25% from Video divestiture mechanically depressing trailing comp. On continuing ops alone: +43% YoY growth, 15.4% Non-GAAP net margin, $30M Q1 FCF.",
+        "valuationTool": "EV/Sales transitioning to EV/Gross Profit"
+      },
+      "tradingRead": {
+        "earningsRule": "Triggered today — structures across print correctly capped LOW conf. Restate for Q2 print (~August).",
+        "postPrintIV": "IV crush expected. Real beat-and-raise underneath. CSP at $9-10 attractive tactically but chain liquidity thin.",
+        "longThesisGate": "Stock up ~108% YoY into print — much of the beat may already be priced. Q2 guide $115-125M is sequentially below Q1 $121.7M.",
+        "bottomLine": "Cleanest of the May 11 cohort by a wide margin. Multi-quarter fundamental tailwind: customer diversification + backlog + divestiture cash + buybacks. Framework override justified."
+      }
+    },
+    {
+      "type": "earnings",
+      "file": "CLSK_Q2_FY2026_earnings_review.html",
+      "ticker": "CLSK",
+      "tvSymbol": "NASDAQ:CLSK",
+      "date": "2026-05-11T16:30:00-04:00",
+      "period": "Q2 FY2026",
+      "verdict": "DISAPPOINTING",
+      "verdictColor": "red",
+      "headline": "Optically catastrophic EPS miss (6.6x worse than Street), but ~70% is non-cash BTC mark-to-market. Real story: AI/HPC pivot still has no tenant.",
+      "revenue": {
+        "actual": "$136.4M",
+        "consensus": "$139.9M",
+        "deltaPct": -2.5,
+        "badge": "MISS",
+        "yoy": "-24.9%"
+      },
+      "eps": {
+        "type": "GAAP",
+        "actual": "($1.52)",
+        "consensus": "($0.23)",
+        "deltaPct": -560.9,
+        "badge": "MISS"
+      },
+      "ebitda": {
+        "actual": "($241.2M)",
+        "consensus": "~($50M)",
+        "deltaPct": -382.4,
+        "badge": "MISS"
+      },
+      "guidance": {
+        "revenueMove": "REAFFIRMED",
+        "ebitdaMove": "REAFFIRMED",
+        "newRevenueRange": "Not provided",
+        "newEbitdaRange": "Not provided"
+      },
+      "keyMetric": {
+        "label": "MW Under Contract",
+        "value": "1.8 GW",
+        "change": "doubled YoY"
+      },
+      "realStoryHeadlines": [
+        "Normalized EBITDA (ex-BTC MTM): operational ~$22M positive vs $70M YoY (−69%) — ugly but not catastrophic",
+        "Long-term debt nearly tripled: $645M → $1.79B in 6 months. ~$1.15B is 0% convertible.",
+        "$463M in buybacks while bleeding — treasury stock $145M → $608M. Capital allocation flag.",
+        "94% of stockholders' equity is BTC ($925M / $986M) — leveraged BTC fund with mining + AI option",
+        "NO hyperscaler tenant announced. Only 'leasing progress in Georgia' — power-supply secured, demand-side empty",
+        "Catalyst calendar: B. Riley 5/21, Macquarie AI Infra 6/10, Northland 6/23 — mgmt teeing up the announcement"
+      ],
+      "frameworkOverride": {
+        "applies": true,
+        "screenerStage": "High Growth",
+        "screenerComposite": "6.1 Neutral",
+        "screenerSignal": "Strong Buy (analyst)",
+        "proposedStage": "Mature shell + Young Growth optionality (mixed)",
+        "rationale": "Mining business in isolation = Maturity→Decline (post-halving). AI/HPC pivot in isolation = Young Growth (pre-revenue). Consolidated reality doesn't map cleanly. EV/Rev 4.8x already prices significant pivot success.",
+        "valuationTool": "EV/Sales for AI option, oscillators/range for mining"
+      },
+      "tradingRead": {
+        "earningsRule": "Triggered today — structures across print correctly capped LOW conf. Q3 print is next binary.",
+        "postPrintIV": "IV crush coming. Hyperscaler tease without delivery for 2nd consecutive print → IV stays bid into June conf cycle.",
+        "longThesisGate": "Requires (a) BTC holds ~$80K+, (b) at least one hyperscaler MOU by Q3 FY26 call, (c) no equity raise on top of $1.79B debt.",
+        "bottomLine": "BTC-beta vehicle with embedded AI option. If no deal by 6/23 Northland conf, mentally rebase as pure BTC miner with debt — not transformation play. Co-trigger w/ BMNR ladder freeze rule."
+      }
+    },
+    {
+      "type": "earnings",
+      "file": "HIMS_Q1_2026_earnings_review.html",
+      "ticker": "HIMS",
+      "tvSymbol": "NYSE:HIMS",
+      "date": "2026-05-11T16:30:00-04:00",
+      "period": "Q1 2026",
+      "verdict": "MIXED",
+      "verdictColor": "amber",
+      "headline": "Top-line missed barely, bottom-line was a disaster — but Q2 guide came in 7-10% above Street and FY revenue was raised.",
+      "revenue": {
+        "actual": "$608.1M",
+        "consensus": "$616.85M",
+        "deltaPct": -1.4,
+        "badge": "MISS",
+        "yoy": "+4%"
+      },
+      "eps": {
+        "type": "adjusted",
+        "actual": "($0.19)",
+        "consensus": "+$0.03",
+        "deltaPct": -733.3,
+        "badge": "MISS"
+      },
+      "ebitda": {
+        "actual": "$44.3M (7.3% mgn)",
+        "consensus": "~$80M (13% mgn)",
+        "deltaPct": -44.6,
+        "badge": "MISS"
+      },
+      "guidance": {
+        "revenueMove": "RAISED",
+        "ebitdaMove": "CUT",
+        "newRevenueRange": "$2.8B-$3.0B",
+        "newEbitdaRange": "$275M-$350M"
+      },
+      "keyMetric": {
+        "label": "Subscribers",
+        "value": "2.584M",
+        "change": "+9% YoY"
+      },
+      "realStoryHeadlines": [
+        "US revenue actually declined −8% YoY ($530M vs $579M) — 4% total growth entirely from Eucalyptus/international",
+        "Compounded GLP-1 unwind: $33.5M restructuring charges drove 800 bps gross margin compression",
+        "Quality-of-revenue flag: receivables ballooned $32M → $150M against just $22M of YoY revenue growth",
+        "OpEx explosion ex-marketing: Ops +53%, Tech +57%, G&A +126%",
+        "Q2 guide $680-700M is the bull's hook — well above Street, implies sharp re-acceleration"
+      ],
+      "frameworkOverride": {
+        "applies": true,
+        "screenerStage": "Mature Growth",
+        "screenerComposite": "5.3 Neutral",
+        "screenerSignal": "Neutral",
+        "proposedStage": "High Growth in business-model transition",
+        "rationale": "TTM rev growth +59% in screener is stale (Q1 +4%). FY guide implies +19-28% YoY. But margin reset to 10-12% Adj EBITDA is atypical for healthy High Growth — forced rebase from GLP-1 pivot.",
+        "valuationTool": "EV/Gross Profit (3.92x — low for High Growth)"
+      },
+      "tradingRead": {
+        "earningsRule": "Triggered today — structures across print correctly capped LOW conf. Q2 print is next binary.",
+        "postPrintIV": "IV will collapse off print. Stock holding $25-28 post-call + credible branded GLP-1 roadmap → CSPs attractive.",
+        "longThesisGate": "Requires conviction on (a) branded GLP-1 unit economics, (b) Eucalyptus integration not destroying margins, (c) $974M convertible debt non-dilution.",
+        "bottomLine": "Direction binary on call commentary. Headline optics bearish; Q2 guide bullish. The call decides which narrative wins."
+      }
+    },
+    {
+      "type": "earnings",
+      "file": "FLNC_Q2_FY2026_earnings_review.html",
+      "ticker": "FLNC",
+      "tvSymbol": "NASDAQ:FLNC",
+      "date": "2026-05-06T16:30:00-04:00",
+      "period": "Q2 FY2026",
+      "verdict": "MIXED-POSITIVE",
+      "verdictColor": "cyan",
+      "headline": "Headline rev disaster, but the market rewarded the narrative — +21.7% on the day. 2 hyperscaler MSAs signed; first order Q3.",
+      "revenue": {
+        "actual": "$464.9M",
+        "consensus": "$594M-$628M",
+        "deltaPct": -24.0,
+        "badge": "MISS",
+        "yoy": "+7.7%"
+      },
+      "eps": {
+        "type": "adjusted",
+        "actual": "($0.12)",
+        "consensus": "($0.18)",
+        "deltaPct": 33.3,
+        "badge": "BEAT"
+      },
+      "ebitda": {
+        "actual": "($9.4M)",
+        "consensus": "~($25M)",
+        "deltaPct": 62.4,
+        "badge": "BEAT"
+      },
+      "guidance": {
+        "revenueMove": "REAFFIRMED",
+        "ebitdaMove": "REAFFIRMED",
+        "newRevenueRange": "$3.2B-$3.6B",
+        "newEbitdaRange": "$40M-$60M"
+      },
+      "keyMetric": {
+        "label": "Backlog (record)",
+        "value": "$5.6B",
+        "change": "+6% QoQ"
+      },
+      "realStoryHeadlines": [
+        "2 hyperscaler MSAs signed — competitive RFP wins, not relationship favors. First order this quarter.",
+        "Order intake doubled YoY to $2B with ~50% from first-time customers — real third-party diversification",
+        "$80M Q2 revenue deferred to Q3 from port delays — normalized rev would have been ~$545M",
+        "2H FY26 = 70% of annual guide — execution risk concentrated in next two quarters",
+        "Cash burned hard: $714M→$413M in 6mo on inventory build for 2H ramp. Liquidity still $900M+.",
+        "OBBBA + PFE restrictions effectively price Chinese competition out of US base ITC — structural moat"
+      ],
+      "frameworkOverride": {
+        "applies": true,
+        "screenerStage": "Young Growth",
+        "screenerComposite": "2.9 Avoid",
+        "screenerSignal": "Avoid",
+        "proposedStage": "Young Growth → High Growth crossover",
+        "rationale": "Screener TTM growth of +1.2% reads stale post-FY24 lap. FY26 guide of $3.2-3.6B vs FY25 $2.26B = +41% to +59% YoY = textbook stage crossover.",
+        "valuationTool": "EV/Sales (1.0x post-print at $19.23 / $3.4B mid)"
+      },
+      "tradingRead": {
+        "earningsRule": "Print was 5 days ago — structures across this print correctly capped LOW conf. Next print (~early August) is next binary.",
+        "postPrintIV": "IV crushed off the print. CSPs at $15-17 reasonable tactically if you believe Q3 hyperscaler narrative holds.",
+        "longThesisGate": "Stock already +21.7% on print. Risk-reward worsened. Need Q3 confirmation of $80M deferred + hyperscaler ramp + intake conversion.",
+        "bottomLine": "Cleanest expression of the BESS-as-AI-infra thesis vs CLSK's empty tease. Wait for pullback or Q3 confirmation; don't chase post-print high."
+      }
+    },
+    {
       "type": "ta",
       "file": "BE_2026-05-04_1807.html",
       "ticker": "BE",

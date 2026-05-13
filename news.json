@@ -1,56 +1,184 @@
 {
-  "lastUpdated": "2026-05-13T05:37:46.348280+00:00",
-  "lastUpdatedDisplay": "May 13, 2026 \u2014 05:37 AM UTC",
+  "lastUpdated": "2026-05-13T08:28:20.078411+00:00",
+  "lastUpdatedDisplay": "May 13, 2026 \u2014 08:28 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as hot U.S. CPI data strengthens the dollar and pushes 10Y yields near 11-month highs, while oil prices slip below $107 on potential Iran ceasefire progress despite ongoing Middle East tensions. Asian markets falter amid inflation concerns and peace talk uncertainty, while Bitcoin holds above $80K and India raises gold/silver duties to 15% to support the rupee.",
+    "macroSummary": "Hot U.S. inflation data is driving dollar strength and pushing bond yields to 11-month highs, while U.S.-Iran tensions persist with stalled peace talks as Trump heads to China summit. Asian markets are mixed with AI optimism competing against inflation concerns, while oil retreats below $107 and India implements gold import tariff hikes to support the rupee.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Hot CPI data driving yields to 11-month highs and strengthening dollar creates stagflationary headwinds, while oil retreat on ceasefire hopes reduces the war premium that was supporting reflation thesis.",
+    "regimePressureReason": "Hot inflation data driving yields to 11-month highs and dollar strength suggests stagflationary pressures are intensifying, while oil retreating below $107 contradicts the embedded Iran-war oil shock assumption.",
     "thresholdWatches": [
       {
-        "indicator": "US 10Y Yield",
-        "level": "Near 11-month high",
-        "signal": "Bond market stress intensifying with hot inflation data"
+        "indicator": "US30Y",
+        "level": "approaching 5.10%",
+        "signal": "10Y yields hitting 11-month highs suggests long-end stress intensifying toward capitulation threshold"
       },
       {
         "indicator": "Oil (WTI)",
-        "level": "Below $107",
-        "signal": "Slipping on Iran ceasefire progress, reducing war premium"
+        "level": "below $107",
+        "signal": "Crude slipping below $107 despite persistent Middle East conflict challenges the embedded Iran-war oil shock premise"
       }
     ],
     "keySignals": [
       {
-        "signal": "US 10Y yield hits 11-month high after hot CPI, amplifying long-duration stress beyond the 30Y at 5% concern",
+        "signal": "Hot U.S. inflation data driving yields to 11-month highs and strengthening dollar suggests stagflationary undertones gaining momentum",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil drops below $107 on Iran ceasefire hopes, potentially removing key stagflationary driver",
+        "signal": "Oil falling below $107 despite ongoing Iran tensions undermines the embedded war premium assumption in current regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthens to one-week high on Fed hike bets, approaching DXY 100 regime flip threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Asian markets falter on hot US inflation and shaky ceasefire, showing risk-off sentiment emerging",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "India raises gold duties to 15% for import curbs, suggesting emerging market currency stress",
+        "signal": "Asian markets showing resilience with AI optimism trumping inflation and geopolitical concerns supports risk-on cyclical bias",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "India implementing gold tariff hikes and rupee strengthening indicates EM policy tightening against commodity inflation pressures",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin holding above $80K despite hot CPI and Ethereum institutional adoption suggest crypto decoupling from traditional risk-off patterns",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY approach to 100 level for potential dollar regime flip signal",
-      "Watch for any 30Y yield breach above 5.10% as bond market dysfunction accelerates",
-      "Consider tightening BMNR ladder strikes if oil war premium continues to fade on ceasefire progress"
+      "Monitor 30Y yield progression toward 5.10% threshold - current 11-month high momentum suggests potential capitulation ahead",
+      "Reassess oil shock assumptions in BMNR strategy given WTI weakness below $107 despite ongoing Iran tensions",
+      "Consider reducing cyclical overweight if stagflationary signals continue strengthening via yields/dollar"
     ]
   },
   "articles": [
+    {
+      "title": "India Likely to Take More Measures to Curb Gold, Silver Imports \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T08:02:00+00:00",
+      "timeDisplay": "8:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513003320:0/"
+    },
+    {
+      "title": "BASIS.pro Is Live: Base58Labs Officially Launches Crypto Arbitrage Platform",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T08:01:52+00:00",
+      "timeDisplay": "8:01 AM",
+      "link": "https://www.tradingview.com/news/chainwire:01a138e17094b:0-basis-pro-is-live-base58labs-officially-launches-crypto-arbitrage-platform/"
+    },
+    {
+      "title": "Ray Dalio Warns Bitcoin Still Lacks What Makes Gold A True Safe Haven",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T08:00:14+00:00",
+      "timeDisplay": "8:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:97499a154094b:0-ray-dalio-warns-bitcoin-still-lacks-what-makes-gold-a-true-safe-haven/"
+    },
+    {
+      "title": "Bitcoin Rises But Middle East Tensions Limit Gains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:44:00+00:00",
+      "timeDisplay": "7:44 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513003141:0/"
+    },
+    {
+      "title": "Gold Rises Despite Inflation Data, U.S.-Iran Impasse \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:31:00+00:00",
+      "timeDisplay": "7:31 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513003091:0/"
+    },
+    {
+      "title": "Quote of the day by John Locke, \"Gold is immutable and indestructible, but...\"",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:30:05+00:00",
+      "timeDisplay": "7:30 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:afb06f0a5094b:0-quote-of-the-day-by-john-locke-gold-is-immutable-and-indestructible-but/"
+    },
+    {
+      "title": "Oil Falls as Market Remains in Limbo, Traders Await Trump-Xi Summit \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:30:00+00:00",
+      "timeDisplay": "7:30 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513003041:0/"
+    },
+    {
+      "title": "Tighter LRS rules could affect overseas stock investing, property purchases and education remittances",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:27:38+00:00",
+      "timeDisplay": "7:27 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:384abc57f094b:0-tighter-lrs-rules-could-affect-overseas-stock-investing-property-purchases-and-education-remittances/"
+    },
+    {
+      "title": "Eurozone Govt Bond Yields Ease, Track U.S. Treasurys \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T07:16:00+00:00",
+      "timeDisplay": "7:16 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513002976:0/"
+    },
+    {
+      "title": "Asia stocks turn green as AI cheer trumps Iran, inflation gloom",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T06:58:38+00:00",
+      "timeDisplay": "6:58 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q0CA:0-asia-stocks-turn-green-as-ai-cheer-trumps-iran-inflation-gloom/"
+    },
+    {
+      "title": "Dollar Rises as U.S.-Iran Stalemate Continues \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T06:44:00+00:00",
+      "timeDisplay": "6:44 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513002601:0/"
+    },
+    {
+      "title": "CFTC Chair Says Bitcoin Ban Has Slim to None Odds as Strategic Reserve Announcement Nears",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T06:36:49+00:00",
+      "timeDisplay": "6:36 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:348dac291094b:0-cftc-chair-says-bitcoin-ban-has-slim-to-none-odds-as-strategic-reserve-announcement-nears/"
+    },
+    {
+      "title": "Dollar near one-week high as hot U.S. inflation fans Fed hike bets, peace talks stall",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T06:04:39+00:00",
+      "timeDisplay": "6:04 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q05C:0-dollar-near-one-week-high-as-hot-u-s-inflation-fans-fed-hike-bets-peace-talks-stall/"
+    },
+    {
+      "title": "India Hikes Tariffs on Gold and Silver to Curb Imports, Aid Rupee",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T05:52:00+00:00",
+      "timeDisplay": "5:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513001531:0-india-hikes-tariffs-on-gold-and-silver-to-curb-imports-aid-rupee/"
+    },
+    {
+      "title": "NSE\u2019s Electronic Gold Receipts vs Dhan\u2019s Gold Vault: How do the two gold products stack up",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T05:47:43+00:00",
+      "timeDisplay": "5:47 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:2a804e301094b:0-nse-s-electronic-gold-receipts-vs-dhan-s-gold-vault-how-do-the-two-gold-products-stack-up/"
+    },
+    {
+      "title": "Mysterious Bitcoin Whale Transfers $40 Billion After Years Of Silence",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T05:30:29+00:00",
+      "timeDisplay": "5:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:2f2de4e57094b:0-mysterious-bitcoin-whale-transfers-40-billion-after-years-of-silence/"
+    },
     {
       "title": "Gold duty hike not anti-consumer, aimed at moderating non-essential imports, say sources",
       "source": "moneycontrol",
@@ -74,14 +202,6 @@
       "timestamp": "2026-05-13T04:35:00+00:00",
       "timeDisplay": "4:35 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q085:0-locked-in-a-stalemate-with-iran-trump-heads-to-china/"
-    },
-    {
-      "title": "Oil prices slip on teetering Iran ceasefire as Trump heads to China",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T04:26:02+00:00",
-      "timeDisplay": "4:26 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q03U:0-oil-prices-slip-on-teetering-iran-ceasefire-as-trump-heads-to-china/"
     },
     {
       "title": "JPMorgan Picks Ethereum Again in New Money Market Fund Filing",
@@ -204,14 +324,6 @@
       "link": "https://www.tradingview.com/news/te_news:550157:0-dollar-holds-gains-after-hot-cpi-report/"
     },
     {
-      "title": "Dollar near one-week high as hot U.S. inflation fans Fed hike bets, peace talks stall",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T01:28:20+00:00",
-      "timeDisplay": "1:28 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Q01W:0-dollar-near-one-week-high-as-hot-u-s-inflation-fans-fed-hike-bets-peace-talks-stall/"
-    },
-    {
       "title": "Asia markets falter as hot US inflation, shaky Iran ceasefire weigh",
       "source": "reuters",
       "color": "#ff6d00",
@@ -226,6 +338,14 @@
       "timestamp": "2026-05-13T01:00:54+00:00",
       "timeDisplay": "1:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:c03bcc72f094b:0-here-s-why-the-bitcoin-price-has-risen-37-since-april-and-what-could-threaten-the-rally/"
+    },
+    {
+      "title": "Oil prices slip on teetering Iran ceasefire as Trump heads to China",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-13T00:56:55+00:00",
+      "timeDisplay": "12:56 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41P3DI:0-oil-prices-slip-on-teetering-iran-ceasefire-as-trump-heads-to-china/"
     },
     {
       "title": "Commodities intraday targets/key levels",
@@ -404,7 +524,7 @@
       "link": "https://www.tradingview.com/news/the_block:581144171094b:0-bitcoin-dominance-rebounds-above-58-signaling-crypto-market-consolidation-phase/"
     },
     {
-      "title": "Trump\u2019s Pick Kevin Warsh To Be Next Fed Head, Clears U.S. Senate Hurdle",
+      "title": "Trump\u2019s Pick Kevin Warsh To Be Next Fed Head, Clears US Senate Hurdle",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-05-12T18:46:56+00:00",
@@ -530,126 +650,6 @@
       "timestamp": "2026-05-12T17:30:07+00:00",
       "timeDisplay": "5:30 PM",
       "link": "https://www.tradingview.com/news/stocktwits:58700bd13094b:0/"
-    },
-    {
-      "title": "CHI FED'S GOOLSBEE/ROCKFORD: REPEATS, NOT ONLY NOT MAKING PROGRESS ON INFLATION IT\u2019S GOING WRONG WAY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T17:30:00+00:00",
-      "timeDisplay": "5:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:7015b09a0094b:0-chi-fed-s-goolsbee-rockford-repeats-not-only-not-making-progress-on-inflation-it-s-going-wrong-way/"
-    },
-    {
-      "title": "CHI FED'S GOOLSBEE/ROCKFORD: SERVICES PART OF CPI \u2018UNEXPECTEDLY DISAPPOINTING;' ONCE WAR OVER, OIL SHOULD COME DOWN AS FAST AS IT WENT UP",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T17:28:00+00:00",
-      "timeDisplay": "5:28 PM",
-      "link": "https://www.tradingview.com/news/macenews:b80d76857094b:0-chi-fed-s-goolsbee-rockford-services-part-of-cpi-unexpectedly-disappointing-once-war-over-oil-should-come-down-as-fast-as-it-went-up/"
-    },
-    {
-      "title": "ATLANTA FED'S INTERIM PRES. VENABLE: IMPOSSIBLE TO SAY HOW MIDEAST ECONOMIC IMPACT WILL PLAY OUT; LONGER IT LASTS, MORE CONCERNED I GET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T17:16:00+00:00",
-      "timeDisplay": "5:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:8e6eea38f094b:0-atlanta-fed-s-interim-pres-venable-impossible-to-say-how-mideast-economic-impact-will-play-out-longer-it-lasts-more-concerned-i-get/"
-    },
-    {
-      "title": "Ethereum derivatives unfazed by DeFi hacks: Can ETH hit $2.6K next?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T17:14:28+00:00",
-      "timeDisplay": "5:14 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3e997fb7c094b:0-ethereum-derivatives-unfazed-by-defi-hacks-can-eth-hit-2-6k-next/"
-    },
-    {
-      "title": "Bitcoin Price Today: Hot CPI Data at 3.8% Threatens Rally as Fed Rate Cut Hopes Fade",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T16:36:08+00:00",
-      "timeDisplay": "4:36 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:671462f9a094b:0-bitcoin-price-today-hot-cpi-data-at-3-8-threatens-rally-as-fed-rate-cut-hopes-fade/"
-    },
-    {
-      "title": "FINAL US SENATE VOTE CONFIRMING KEVIN WARSH AS FED GOV 51-45 WITH CONFIRMATION TO CHAIR TO FOLLOW",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T16:31:00+00:00",
-      "timeDisplay": "4:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:49c7f0cfe094b:0-final-us-senate-vote-confirming-kevin-warsh-as-fed-gov-51-45-with-confirmation-to-chair-to-follow/"
-    },
-    {
-      "title": "US SENATE CONFIRMS KEVIN WARSH AS FED GOV",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T16:24:00+00:00",
-      "timeDisplay": "4:24 PM",
-      "link": "https://www.tradingview.com/news/macenews:945ea27e9094b:0-us-senate-confirms-kevin-warsh-as-fed-gov/"
-    },
-    {
-      "title": "Markets at record highs as hot CPI meets a new Fed chair",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T16:23:04+00:00",
-      "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P17G:0-markets-at-record-highs-as-hot-cpi-meets-a-new-fed-chair/"
-    },
-    {
-      "title": "Stocks wilt as oil rallies; Iran ceasefire 'on life support'",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T16:09:18+00:00",
-      "timeDisplay": "4:09 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P10M:0-stocks-wilt-as-oil-rallies-iran-ceasefire-on-life-support/"
-    },
-    {
-      "title": "US stocks lower midday, with Nasdaq, tech leading declines",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T16:08:23+00:00",
-      "timeDisplay": "4:08 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P177:0-us-stocks-lower-midday-with-nasdaq-tech-leading-declines/"
-    },
-    {
-      "title": "4 Leveraged ETF Winners of Last Week ",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T16:00:00+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/zacks:d7abcf502094b:0-4-leveraged-etf-winners-of-last-week/"
-    },
-    {
-      "title": "AI and Earnings Lift S&P 500 Outlook: ETFs for Long-Term Growth",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T15:56:00+00:00",
-      "timeDisplay": "3:56 PM",
-      "link": "https://www.tradingview.com/news/zacks:8157881be094b:0-ai-and-earnings-lift-s-p-500-outlook-etfs-for-long-term-growth/"
-    },
-    {
-      "title": "'It\u2019s Time To Shitcoin' \u2013 Arthur Hayes Says AI Arms Race, Money Printing Are Fueling The Next Crypto Bull Market",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T15:47:51+00:00",
-      "timeDisplay": "3:47 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:a95c55f52094b:0/"
-    },
-    {
-      "title": "Crude Oil Prices Rally on Doubts Over US-Iran Ceasefire",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-12T15:34:24+00:00",
-      "timeDisplay": "3:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:f59d79ed1094b:0-crude-oil-prices-rally-on-doubts-over-us-iran-ceasefire/"
-    },
-    {
-      "title": "Hot inflation, rising price hike intentions: Two-fer Tuesday has the Iran war written all over it",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-12T15:30:40+00:00",
-      "timeDisplay": "3:30 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41P14Y:0-hot-inflation-rising-price-hike-intentions-two-fer-tuesday-has-the-iran-war-written-all-over-it/"
     }
   ]
 }

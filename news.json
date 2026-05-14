@@ -1,60 +1,348 @@
 {
-  "lastUpdated": "2026-05-14T11:06:18.795271+00:00",
-  "lastUpdatedDisplay": "May 14, 2026 \u2014 11:06 AM UTC",
+  "lastUpdated": "2026-05-14T13:22:14.513072+00:00",
+  "lastUpdatedDisplay": "May 14, 2026 \u2014 01:22 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as Trump-Xi summit dominates headlines with record stock highs but Bitcoin struggles below $80K with major ETF outflows of $635M. Dollar strengthens on growing Fed rate hike expectations while China's yuan hits 3-year highs, creating cross-currents in FX markets.",
+    "macroSummary": "US economic data shows mixed signals with retail sales meeting expectations at +0.5% but jobless claims rising to 190,571. Treasury yields are easing while crypto markets face pressure from regulatory uncertainty around the CLARITY Act vote, with Bitcoin falling below $80K and $109M in long liquidations.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show conflicting signals - equity records support Reflation but growing Fed rate hike expectations and dollar strength suggest monetary tightening pressures that could challenge the regime.",
+    "regimePressureReason": "Easing Treasury yields contradict the reflation thesis while rising jobless claims and crypto weakness suggest risk-off undertones, but retail sales strength and continued equity rotation support the cyclical bias.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Dollar strengthening on growing Fed rate hike expectations suggests monetary tightening ahead",
+        "signal": "Treasury yields easing contradicts reflation expectations and long-end stress narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETF outflows of $635M and struggle below $80K show crypto weakness despite institutional presence",
-        "tag": "NEUTRAL"
+        "signal": "Jobless claims rising to 190,571 with continuing claims up 24,000 suggests labor market softening",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Record stock highs driven by Trump-Xi summit optimism and AI enthusiasm support risk-on sentiment",
+        "signal": "Crypto market weakness with Bitcoin below $80K and major long liquidations indicates risk-off sentiment",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "BofA clients rotating from tech to healthcare while equity inflows continue supports cyclical rotation thesis",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "China's yuan at 3-year highs while stocks retreat creates FX-equity divergence worth monitoring",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Oil remaining elevated amid Iran war supports commodity inflation narrative",
+        "signal": "Import/export price inflation remains elevated with export prices +8.8% YoY maintaining stagflationary undertones",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY approaching 100 threshold as dollar strength on rate hike expectations could signal regime shift",
-      "BMNR ladder may face headwinds if crypto weakness persists - consider tightening strikes",
-      "Watch for yield curve dynamics as Fed rate hike expectations could pressure 2s10s spread"
+      "Monitor BMNR ladder closely as crypto regulatory overhang from CLARITY Act creates volatility in ETH-linked products",
+      "Consider reducing cyclical overweight as treasury yield easing and jobless claims deterioration challenge reflation thesis",
+      "Watch for VIX expansion given crypto weakness and mixed economic signals potentially signaling broader risk-off rotation"
     ]
   },
   "articles": [
     {
-      "title": "Trump Invites Xi To White House In September, Says US-China Relationship Goes Back To America's Founding",
-      "source": "stocktwits",
+      "title": "Comex Gold Delivery Intentions Breakdown - May 14",
+      "source": "dow-jones",
       "color": "#00e5ff",
-      "timestamp": "2026-05-14T10:58:20+00:00",
-      "timeDisplay": "10:58 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:6b3134fb3094b:0/"
+      "timestamp": "2026-05-14T13:17:00+00:00",
+      "timeDisplay": "1:17 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260514007005:0/"
     },
     {
-      "title": "'G2' choreography",
+      "title": "Tech vs. Healthcare: BofA clients rotate as equity inflows continue",
       "source": "reuters",
       "color": "#ff6d00",
-      "timestamp": "2026-05-14T10:41:28+00:00",
-      "timeDisplay": "10:41 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R0OR:0-g2-choreography/"
+      "timestamp": "2026-05-14T13:00:55+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R0QN:0-tech-vs-healthcare-bofa-clients-rotate-as-equity-inflows-continue/"
+    },
+    {
+      "title": "Ethereum Leverage Tells Two Different Stories On Binance And OKX: Traders Face A Fragile Setup",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T13:00:55+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:3ab10ffc2094b:0-ethereum-leverage-tells-two-different-stories-on-binance-and-okx-traders-face-a-fragile-setup/"
+    },
+    {
+      "title": "From $120 To $900,000: The Ethereum Trade That Just Surfaced On-Chain",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:57:41+00:00",
+      "timeDisplay": "12:57 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:a957afd20094b:0-from-120-to-900-000-the-ethereum-trade-that-just-surfaced-on-chain/"
+    },
+    {
+      "title": "Treasury Yields Ease on Thursday",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:57:32+00:00",
+      "timeDisplay": "12:57 PM",
+      "link": "https://www.tradingview.com/news/te_news:550749:0-treasury-yields-ease-on-thursday/"
+    },
+    {
+      "title": "Bitfufu Inc Holds 1,812 Btc As Of April 30, 2026",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T12:48:33+00:00",
+      "timeDisplay": "12:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41R0RD:0-bitfufu-inc-holds-1-812-btc-as-of-april-30-2026/"
+    },
+    {
+      "title": "Gold rises Rs 650 to Rs 1.66 lakh per 10 grams in Delhi",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:48:22+00:00",
+      "timeDisplay": "12:48 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:54ae07e53094b:0-gold-rises-rs-650-to-rs-1-66-lakh-per-10-grams-in-delhi/"
+    },
+    {
+      "title": "Bittensor price drops below $300 as altcoins mirror Bitcoin dip",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:41:18+00:00",
+      "timeDisplay": "12:41 PM",
+      "link": "https://www.tradingview.com/news/invezz:67d216274094b:0-bittensor-price-drops-below-300-as-altcoins-mirror-bitcoin-dip/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: EX GASOLINE +0.3% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:39:00+00:00",
+      "timeDisplay": "12:39 PM",
+      "link": "https://www.tradingview.com/news/macenews:e043ccb8e094b:0-more-u-s-april-retail-sales-ex-gasoline-0-3-m-m/"
+    },
+    {
+      "title": "Crypto Market Falls Ahead Of High-Stakes CLARITY Act Markup, Bitcoin Falls Below $80K",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:37:54+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:9fb22e08b094b:0/"
+    },
+    {
+      "title": "Record high for stocks as Trump meets Xi, pound braces for UK leadership fight",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T12:35:59+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R0K8:0-record-high-for-stocks-as-trump-meets-xi-pound-braces-for-uk-leadership-fight/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED WKLY CLAIMS 190,571, +10,258; UNADJUSTED INSURED UNEMP RATE TWO WKS AGO 1.1%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:2df8e4921094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-claims-190-571-10-258-unadjusted-insured-unemp-rate-two-wks-ago-1-1-unchanged/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: ELECTRONICS & APPLIANCES +1.4% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:34:00+00:00",
+      "timeDisplay": "12:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:44887dae7094b:0-more-u-s-april-retail-sales-electronics-appliances-1-4-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: CLOTHING & ACCESSORIES -1.5% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:2adb86357094b:0-more-u-s-april-retail-sales-clothing-accessories-1-5-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: DEPARTMENT STORES -3.2% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:09173d2c7094b:0-more-u-s-april-retail-sales-department-stores-3-2-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: NONSTORE RETAILERS +1.1% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:f72021ac8094b:0-more-u-s-april-retail-sales-nonstore-retailers-1-1-m-m/"
+    },
+    {
+      "title": "US EXPORT PRICES EX-AGRICULTURE  +3.4% IN APRIL FROM MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:b23dcc4b2094b:0-us-export-prices-ex-agriculture-3-4-in-april-from-march/"
+    },
+    {
+      "title": "US IMPORT PRICES EX-FUEL +0.8% IN APRIL FROM MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:30a73b235094b:0-us-import-prices-ex-fuel-0-8-in-april-from-march/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1.782 MLN, +24,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:f4030e104094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-782-mln-24-000/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: FOOD & BEVERAGE STORES +0.8% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:457e851f3094b:0-more-u-s-april-retail-sales-food-beverage-stores-0-8-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: FOOD AND DRINKING PLACES +0.6% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:a1fc001eb094b:0-more-u-s-april-retail-sales-food-and-drinking-places-0-6-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: FURNITURE & HOME FURNISHING -2.0% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:b3baaeb78094b:0-more-u-s-april-retail-sales-furniture-home-furnishing-2-0-m-m/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS:  4-WK MOVING AVG  203,750,  +750 ; INSURED UNEMP  RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:90a836bea094b:0-us-initial-claims-for-jobless-benefits-4-wk-moving-avg-203-750-750-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: GASOLINE STATIONS +2.8% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:18bc1a7a4094b:0-more-u-s-april-retail-sales-gasoline-stations-2-8-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL RETAIL SALES: MOTOR VEHICLE PARTS & DEALERS -0.4% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:d05f4a67a094b:0-more-u-s-april-retail-sales-motor-vehicle-parts-dealers-0-4-m-m/"
+    },
+    {
+      "title": "U.S. MARCH RETAIL SALES REVISED TO +1.6% M/M (VS +1.7% PREVIOUS REPORT)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:eebcae39b094b:0-u-s-march-retail-sales-revised-to-1-6-m-m-vs-1-7-previous-report/"
+    },
+    {
+      "title": "US IMPORT PRICES +4.2% IN APRIL FROM YEAR AGO; EXPORT PRICES +8.8% FROM YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:ff0477a54094b:0-us-import-prices-4-2-in-april-from-year-ago-export-prices-8-8-from-year-ago/"
+    },
+    {
+      "title": "U.S. APRIL RETAIL SALES +0.5% M/M (VS +0.5% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:ab9e28b62094b:0-u-s-april-retail-sales-0-5-m-m-vs-0-5-expected/"
+    },
+    {
+      "title": "U.S. APRIL RETAIL SALES EX-VEHICLES & GAS +0.5% M/M (VS +0.4% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:30:00+00:00",
+      "timeDisplay": "12:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:b4100e479094b:0-u-s-april-retail-sales-ex-vehicles-gas-0-5-m-m-vs-0-4-expected/"
+    },
+    {
+      "title": "Key facts: Basco $80K Pivot; BTC under $82K; $109M Longs Liquidated",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:15:42+00:00",
+      "timeDisplay": "12:15 PM",
+      "link": "https://www.tradingview.com/news/tradingview:b807c6532fa53:0-key-facts-basco-80k-pivot-btc-under-82k-109m-longs-liquidated/"
+    },
+    {
+      "title": "Key facts: ETH reserves rise; $2,220 support holds; staking cuts lower burn",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:15:14+00:00",
+      "timeDisplay": "12:15 PM",
+      "link": "https://www.tradingview.com/news/tradingview:68face78f8264:0-key-facts-eth-reserves-rise-2-220-support-holds-staking-cuts-lower-burn/"
+    },
+    {
+      "title": "Analysts are watching these Bitcoin price levels ahead of CLARITY Act vote",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T12:14:53+00:00",
+      "timeDisplay": "12:14 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ea9cc79d6094b:0-analysts-are-watching-these-bitcoin-price-levels-ahead-of-clarity-act-vote/"
+    },
+    {
+      "title": "Oil Prices Stabilize",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T11:53:39+00:00",
+      "timeDisplay": "11:53 AM",
+      "link": "https://www.tradingview.com/news/te_news:550724:0-oil-prices-stabilize/"
+    },
+    {
+      "title": "Bitcoin Turns Slightly Lower Amid Inflation Concerns, Iran War \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T11:48:00+00:00",
+      "timeDisplay": "11:48 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260514005226:0/"
+    },
+    {
+      "title": "JPMorgan lifts Bitcoin ETF exposure in Q1, led by BlackRock\u2019s IBIT",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T11:22:22+00:00",
+      "timeDisplay": "11:22 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:795d44f8f094b:0-jpmorgan-lifts-bitcoin-etf-exposure-in-q1-led-by-blackrock-s-ibit/"
+    },
+    {
+      "title": "\u2018Rally without conviction\u2019: Bitcoin ETFs see $630M in outflows as corporate treasury demand drops and resistance builds",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T11:02:51+00:00",
+      "timeDisplay": "11:02 AM",
+      "link": "https://www.tradingview.com/news/the_block:4e94b4fc9094b:0-rally-without-conviction-bitcoin-etfs-see-630m-in-outflows-as-corporate-treasury-demand-drops-and-resistance-builds/"
+    },
+    {
+      "title": "Ethereum faces rising selling pressure: will ETH drop below $2,200?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T11:01:02+00:00",
+      "timeDisplay": "11:01 AM",
+      "link": "https://www.tradingview.com/news/invezz:61916aba9094b:0-ethereum-faces-rising-selling-pressure-will-eth-drop-below-2-200/"
+    },
+    {
+      "title": "Bitcoin Slips Below $80K as Trump-Xi Talks, Inflation Shock Shake Global Markets",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T10:48:02+00:00",
+      "timeDisplay": "10:48 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:56e158828094b:0-bitcoin-slips-below-80k-as-trump-xi-talks-inflation-shock-shake-global-markets/"
     },
     {
       "title": "MEXC Confirms Strong Asset Backing in Hacken-Audited May 2026 Proof of Reserves Report",
@@ -73,14 +361,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:06c680497094b:0-altcoin-season-quietly-starting-analysts-spot-three-bullish-indicators/"
     },
     {
-      "title": "Record high for stocks as Trump meets Xi, pound braces for UK leadership fight",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T09:43:14+00:00",
-      "timeDisplay": "9:43 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R0A5:0-record-high-for-stocks-as-trump-meets-xi-pound-braces-for-uk-leadership-fight/"
-    },
-    {
       "title": "Jewellers could lease India's digital reserves to reduce gold imports: SafeGold's Gaurav Mathur",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -97,6 +377,30 @@
       "link": "https://www.tradingview.com/news/invezz:6edbe6902094b:0-why-is-bitcoin-struggling-below-80k-despite-strong-fund-inflows/"
     },
     {
+      "title": "Bank Of England To Ease Stablecoin Restrictions",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:14:00+00:00",
+      "timeDisplay": "9:14 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:a3076c6cd094b:0-bank-of-england-to-ease-stablecoin-restrictions/"
+    },
+    {
+      "title": "Ethereum App Builder Consensys Delays IPO",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:13:00+00:00",
+      "timeDisplay": "9:13 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:c4f05673d094b:0-ethereum-app-builder-consensys-delays-ipo/"
+    },
+    {
+      "title": "Bullish Earnings Fall Short As Crypto Trading Weakens",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:12:00+00:00",
+      "timeDisplay": "9:12 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:0c425bde5094b:0-bullish-earnings-fall-short-as-crypto-trading-weakens/"
+    },
+    {
       "title": "Bitcoin Faces Major Test As 37% Recovery Collides With Bear Resistance",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -111,14 +415,6 @@
       "timestamp": "2026-05-14T08:52:09+00:00",
       "timeDisplay": "8:52 AM",
       "link": "https://www.tradingview.com/news/stocktwits:f27f37c53094b:0/"
-    },
-    {
-      "title": "China's yuan hits 3-year high, stocks retreat, as investors await details from Trump-Xi summit",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T08:36:45+00:00",
-      "timeDisplay": "8:36 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R0BB:0-china-s-yuan-hits-3-year-high-stocks-retreat-as-investors-await-details-from-trump-xi-summit/"
     },
     {
       "title": "Blockchain.com Unveils Highly Anticipated Crypto-Backed Loans, Bringing Borrowing To Crypto Holders Worldwide",
@@ -169,14 +465,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260514002332:0/"
     },
     {
-      "title": "Dollar lifted by growing odds of Fed rate hikes; Trump-Xi summit under way",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T07:24:33+00:00",
-      "timeDisplay": "7:24 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R0F7:0-dollar-lifted-by-growing-odds-of-fed-rate-hikes-trump-xi-summit-under-way/"
-    },
-    {
       "title": "ENEOS To Buy Chevron's Downstream Businesses In Southeast Asia, Australia For $2.170 Bln",
       "source": "dpa_afx",
       "color": "#00e5ff",
@@ -193,60 +481,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:6f4693fa8094b:0-ny-judge-pushes-back-hearing-for-aave-s-bid-to-unfreeze-71m-in-eth/"
     },
     {
-      "title": "Bitcoin risks slump after hitting \u2018major bear market resistance\u2019: CryptoQuant",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T06:55:13+00:00",
-      "timeDisplay": "6:55 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3d5fd7baf094b:0-bitcoin-risks-slump-after-hitting-major-bear-market-resistance-cryptoquant/"
-    },
-    {
       "title": "Ethereum Holders Take Profits as ETH Price Drops 5%\u2014Is Selling Pressure Starting to Rise?",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-05-14T06:55:01+00:00",
       "timeDisplay": "6:55 AM",
       "link": "https://www.tradingview.com/news/coinpedia:8de37e38a094b:0-ethereum-holders-take-profits-as-eth-price-drops-5-is-selling-pressure-starting-to-rise/"
-    },
-    {
-      "title": "Dollar Eases Slightly as Trump-Xi Meeting in Focus \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T06:44:00+00:00",
-      "timeDisplay": "6:44 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260514001909:0/"
-    },
-    {
-      "title": "Bitcoin Price Crash Today: Here\u2019s What Triggered the Sudden BTC Price Drop",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T06:41:28+00:00",
-      "timeDisplay": "6:41 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:cd24848b7094b:0-bitcoin-price-crash-today-here-s-what-triggered-the-sudden-btc-price-drop/"
-    },
-    {
-      "title": "Bitcoin Risk Appetite Has Crashed Since October 2025: Quantum Signal",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T06:30:18+00:00",
-      "timeDisplay": "6:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:98cf82b2b094b:0-bitcoin-risk-appetite-has-crashed-since-october-2025-quantum-signal/"
-    },
-    {
-      "title": "This Bitcoiner Claims Claude AI Helped Recover 5 BTC Dormant Since 2015, Reopening Lost-Supply Question",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T06:08:41+00:00",
-      "timeDisplay": "6:08 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:6407b1247094b:0-this-bitcoiner-claims-claude-ai-helped-recover-5-btc-dormant-since-2015-reopening-lost-supply-question/"
-    },
-    {
-      "title": "Bitcoin (BTC) Price Loses Critical $80K Level as Crypto Markets Turn Bearish\u2014What\u2019s Next?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T05:54:27+00:00",
-      "timeDisplay": "5:54 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:82cb06746094b:0-bitcoin-btc-price-loses-critical-80k-level-as-crypto-markets-turn-bearish-what-s-next/"
     },
     {
       "title": "Asia stocks gain on AI enthusiasm as Trump meets Xi",
@@ -265,54 +505,6 @@
       "link": "https://www.tradingview.com/news/moneycontrol:f34148cfb094b:0-top-jewellers-push-for-old-gold-exchange-to-unlock-home-reserves/"
     },
     {
-      "title": "Dollar buoyed by rate hike expectations as Trump-Xi summit underway",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T05:30:10+00:00",
-      "timeDisplay": "5:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R062:0-dollar-buoyed-by-rate-hike-expectations-as-trump-xi-summit-underway/"
-    },
-    {
-      "title": "China's yuan hits 3-year high, stocks dip, as investors await details from Trump-Xi summit",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T04:34:35+00:00",
-      "timeDisplay": "4:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R03M:0-china-s-yuan-hits-3-year-high-stocks-dip-as-investors-await-details-from-trump-xi-summit/"
-    },
-    {
-      "title": "AI rally powers on, Trump-Xi summit takes centre stage",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T04:30:00+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R0AB:0-ai-rally-powers-on-trump-xi-summit-takes-centre-stage/"
-    },
-    {
-      "title": "Bitcoin Slips Below $80,000, but 3 Warning Signs Flashed Red First",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T04:28:10+00:00",
-      "timeDisplay": "4:28 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:421eca911094b:0-bitcoin-slips-below-80-000-but-3-warning-signs-flashed-red-first/"
-    },
-    {
-      "title": "AI chatbot Claude helps man recover 5 Bitcoin after finding old seed phrase",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T03:47:33+00:00",
-      "timeDisplay": "3:47 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:9b7210c63094b:0-ai-chatbot-claude-helps-man-recover-5-bitcoin-after-finding-old-seed-phrase/"
-    },
-    {
-      "title": "Bitcoin Miner MARA Stock Under Pressure Following $1.5 Billion Bitcoin Sell-Off",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T03:30:05+00:00",
-      "timeDisplay": "3:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f360b8dd1094b:0-bitcoin-miner-mara-stock-under-pressure-following-1-5-billion-bitcoin-sell-off/"
-    },
-    {
       "title": "Commodity Corner: Crude remains elevated amid Iran war; gold slips on inflation worries",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -329,20 +521,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02K:0-asia-stocks-gain-on-ai-enthusiasm-focus-on-trump-xi-summit/"
     },
     {
-      "title": "POOL REPORT -  BEIJING: A few remarks by President Trump upon beginning his first meeting with China;s Xi; 'You're a great leader'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T03:16:00+00:00",
-      "timeDisplay": "3:16 AM",
-      "link": "https://www.tradingview.com/news/macenews:7279c20e0094b:0-pool-report-beijing-a-few-remarks-by-president-trump-upon-beginning-his-first-meeting-with-china-s-xi-you-re-a-great-leader/"
-    },
-    {
-      "title": "Oil prices broadly stable as Trump-Xi meeting yields talk of cooperation and stability",
+      "title": "Oil prices dip after Iran says dozens of vessels are crossing Hormuz",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-14T03:11:11+00:00",
       "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02B:0-oil-prices-broadly-stable-as-trump-xi-meeting-yields-talk-of-cooperation-and-stability/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02B:0-oil-prices-dip-after-iran-says-dozens-of-vessels-are-crossing-hormuz/"
     },
     {
       "title": "Ethereum Price Flashes Weakness Signals, Pullback Fears Start Rising",
@@ -361,22 +545,6 @@
       "link": "https://www.tradingview.com/news/te_news:550513:0-us-10y-yield-hovers-near-11-month-high/"
     },
     {
-      "title": "Bitcoin Price Dips Further Below $80K\u2014Bears Tighten Grip On Market",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T02:37:55+00:00",
-      "timeDisplay": "2:37 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:4ad3e23a4094b:0-bitcoin-price-dips-further-below-80k-bears-tighten-grip-on-market/"
-    },
-    {
-      "title": "China's yuan hits 3-year high, stocks dip, as Trump-Xi summit begins",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T02:33:27+00:00",
-      "timeDisplay": "2:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R033:0-china-s-yuan-hits-3-year-high-stocks-dip-as-trump-xi-summit-begins/"
-    },
-    {
       "title": "US oil may fall into $97.41-$98.59 range",
       "source": "reuters",
       "color": "#ff6d00",
@@ -385,36 +553,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02S:0-us-oil-may-fall-into-97-41-98-59-range/"
     },
     {
-      "title": "Dollar Holds Firm on Fed Rate Hike Bets",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T02:01:27+00:00",
-      "timeDisplay": "2:01 AM",
-      "link": "https://www.tradingview.com/news/te_news:550497:0-dollar-holds-firm-on-fed-rate-hike-bets/"
-    },
-    {
-      "title": "Previous Bitcoin\u2019s Market Top Was Hidden Behind Sophisticated Whale Distribution \u2014 Analyst Explained",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T02:00:03+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:4c973a68c094b:0-previous-bitcoin-s-market-top-was-hidden-behind-sophisticated-whale-distribution-analyst-explained/"
-    },
-    {
       "title": "Asia stocks rise on AI enthusiasm, focus on Trump-Xi summit",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-14T01:38:33+00:00",
       "timeDisplay": "1:38 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R02O:0-asia-stocks-rise-on-ai-enthusiasm-focus-on-trump-xi-summit/"
-    },
-    {
-      "title": "Dollar boosted by rate expectations, safe-haven flows as Trump, Xi meet",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T01:20:40+00:00",
-      "timeDisplay": "1:20 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R012:0-dollar-boosted-by-rate-expectations-safe-haven-flows-as-trump-xi-meet/"
     },
     {
       "title": "Gold Rises; Defensive Appeal Remains Intact \u2014 Market Talk",
@@ -447,22 +591,6 @@
       "timestamp": "2026-05-14T00:26:45+00:00",
       "timeDisplay": "12:26 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R00E:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Key facts: 2013 BTC Addr $40B Move; STRC Buys Surge; Jane St Cuts ETFs",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T00:05:46+00:00",
-      "timeDisplay": "12:05 AM",
-      "link": "https://www.tradingview.com/news/tradingview:b807c6532fa53:0-key-facts-2013-btc-addr-40b-move-strc-buys-surge-jane-st-cuts-etfs/"
-    },
-    {
-      "title": "Key facts: ETHUSD triangles; open interest up; cup-and-handle $2,700",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T00:04:26+00:00",
-      "timeDisplay": "12:04 AM",
-      "link": "https://www.tradingview.com/news/tradingview:68face78f8264:0-key-facts-ethusd-triangles-open-interest-up-cup-and-handle-2-700/"
     },
     {
       "title": "Gold Weighed Down by Fed Rate Hike Fears",
@@ -511,134 +639,6 @@
       "timestamp": "2026-05-13T20:29:42+00:00",
       "timeDisplay": "8:29 PM",
       "link": "https://www.tradingview.com/news/stocktwits:b33596e30094b:0/"
-    },
-    {
-      "title": "Procedural Vote on E15 Legislation Passes in House \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T20:02:00+00:00",
-      "timeDisplay": "8:02 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513010777:0/"
-    },
-    {
-      "title": "Longer-dated yields highest since mid-2025 on inflation fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T19:39:18+00:00",
-      "timeDisplay": "7:39 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q0YR:0-longer-dated-yields-highest-since-mid-2025-on-inflation-fears/"
-    },
-    {
-      "title": "Dollar Rallies on a Hot US PPI Report",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T19:36:56+00:00",
-      "timeDisplay": "7:36 PM",
-      "link": "https://www.tradingview.com/news/barchart:8a01be47b094b:0-dollar-rallies-on-a-hot-us-ppi-report/"
-    },
-    {
-      "title": "Crude Oil Prices Erase Early Gains as the Dollar Strengthens",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T19:20:41+00:00",
-      "timeDisplay": "7:20 PM",
-      "link": "https://www.tradingview.com/news/barchart:557e76f2a094b:0-crude-oil-prices-erase-early-gains-as-the-dollar-strengthens/"
-    },
-    {
-      "title": "US dollar rises as inflation jumps; Trump-Xi talks begin",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T19:05:13+00:00",
-      "timeDisplay": "7:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q1EL:0-us-dollar-rises-as-inflation-jumps-trump-xi-talks-begin/"
-    },
-    {
-      "title": "Oil Settles Lower in Choppy Trade \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T19:03:00+00:00",
-      "timeDisplay": "7:03 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513010096:0/"
-    },
-    {
-      "title": "Gold discounts in India breach $200/ounce record amid profit-taking",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:50:32+00:00",
-      "timeDisplay": "6:50 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:a87dd9ea5094b:0-gold-discounts-in-india-breach-200-ounce-record-amid-profit-taking/"
-    },
-    {
-      "title": "FINAL US SENATE VOTE CONFIRMING KEVIN WARSH TO BECOME FED CHAIRMAN 54-45",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:48:00+00:00",
-      "timeDisplay": "6:48 PM",
-      "link": "https://www.tradingview.com/news/macenews:359589378094b:0-final-us-senate-vote-confirming-kevin-warsh-to-become-fed-chairman-54-45/"
-    },
-    {
-      "title": "US SENATE CONFIRMS KEVIN WARSH TO BECOME CHAIRMAN OF THE FEDERAL RESERVE; JEROME POWELL'S CHAIRMANSHIP ENDS FRIDAY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:36:00+00:00",
-      "timeDisplay": "6:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:9da51d3bb094b:0-us-senate-confirms-kevin-warsh-to-become-chairman-of-the-federal-reserve-jerome-powell-s-chairmanship-ends-friday/"
-    },
-    {
-      "title": "US DEM SENATOR FETTERMAN VOTES IN FAVOR OF KEVIN WARSH AS FED CHAIR, REINFORCING EXPECTED GOP MAJORITY APPROVAL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:16:00+00:00",
-      "timeDisplay": "6:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:272b851c1094b:0-us-dem-senator-fetterman-votes-in-favor-of-kevin-warsh-as-fed-chair-reinforcing-expected-gop-majority-approval/"
-    },
-    {
-      "title": "Cathie Wood's flagship fund is largely missing out on a booming tech-fueled bull run",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:10:00+00:00",
-      "timeDisplay": "6:10 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260513013135:0/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/ST PAUL ENDED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:00:00+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:106604519094b:0-minn-fed-s-kashkari-q-a-st-paul-ended/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/ST PAUL: EVEN IF STRAIT OPENED TOMORROW, FIRMS SAY NORMALIZATION OF ENERGY WILL TAKE 'MONTHS'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T17:41:00+00:00",
-      "timeDisplay": "5:41 PM",
-      "link": "https://www.tradingview.com/news/macenews:1d1194b23094b:0-minn-fed-s-kashkari-q-a-st-paul-even-if-strait-opened-tomorrow-firms-say-normalization-of-energy-will-take-months/"
-    },
-    {
-      "title": "US SENATE DEBATE ON KEVIN WARSH'S FED CHAIRMANSHIP UNDER WAY; VOTE AROUND  2P ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T17:36:00+00:00",
-      "timeDisplay": "5:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:13768c5b6094b:0-us-senate-debate-on-kevin-warsh-s-fed-chairmanship-under-way-vote-around-2p-et/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/ST PAUL:  UNEMP RATE HAS 'BEEN MOVING SIDEWAYS,' 'LUKEWARM;' INFL FIGHT 'LOOKING WORSE;' MEANWHILE PROFITS UP 'VERY WELL'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T17:32:00+00:00",
-      "timeDisplay": "5:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:a98663060094b:0-minn-fed-s-kashkari-q-a-st-paul-unemp-rate-has-been-moving-sideways-lukewarm-infl-fight-looking-worse-meanwhile-profits-up-very-well/"
-    },
-    {
-      "title": "MINN FED'S KASHKARI Q&A/ST PAUL: INFLATION STILL TOO HIGH; NOW IRAN WAR HAS 'UPENDED' INFLATION PICTURE;  DON'T KNOW HOW LONG STRAIT TO STAY CLOSED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T17:29:00+00:00",
-      "timeDisplay": "5:29 PM",
-      "link": "https://www.tradingview.com/news/macenews:b9fe0d9e5094b:0-minn-fed-s-kashkari-q-a-st-paul-inflation-still-too-high-now-iran-war-has-upended-inflation-picture-don-t-know-how-long-strait-to-stay-closed/"
     }
   ]
 }

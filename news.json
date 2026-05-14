@@ -1,51 +1,141 @@
 {
-  "lastUpdated": "2026-05-14T08:21:39.606772+00:00",
-  "lastUpdatedDisplay": "May 14, 2026 \u2014 08:21 AM UTC",
+  "lastUpdated": "2026-05-14T11:06:18.795271+00:00",
+  "lastUpdatedDisplay": "May 14, 2026 \u2014 11:06 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin falling below $80K amid reduced institutional appetite, while Asian stocks rally on AI enthusiasm as Trump-Xi summit takes center stage. Dollar strengthens on growing Fed rate hike expectations, with US 10Y yields hovering near 11-month highs, while oil remains elevated due to Iran war tensions.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Growing Fed rate hike expectations and US 10Y yields near 11-month highs suggest monetary tightening pressure that contradicts the reflation equity-bullish thesis, while crypto weakness indicates risk appetite deterioration.",
-    "thresholdWatches": [
-      {
-        "indicator": "US 10Y Yield",
-        "level": "Near 11-month high",
-        "signal": "Bond yields approaching levels that could signal long-duration stress acceleration"
-      }
-    ],
+    "macroSummary": "Markets show mixed signals as Trump-Xi summit dominates headlines with record stock highs but Bitcoin struggles below $80K with major ETF outflows of $635M. Dollar strengthens on growing Fed rate hike expectations while China's yuan hits 3-year highs, creating cross-currents in FX markets.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Headlines show conflicting signals - equity records support Reflation but growing Fed rate hike expectations and dollar strength suggest monetary tightening pressures that could challenge the regime.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "US 10Y yields hover near 11-month highs with growing Fed rate hike expectations",
+        "signal": "Dollar strengthening on growing Fed rate hike expectations suggests monetary tightening ahead",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin falls below critical $80K level with institutional risk appetite crashed since October 2025",
-        "tag": "CONTRADICTS"
+        "signal": "Bitcoin ETF outflows of $635M and struggle below $80K show crypto weakness despite institutional presence",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Dollar strengthening on rate hike expectations and safe-haven flows during Trump-Xi summit",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Record stock highs driven by Trump-Xi summit optimism and AI enthusiasm support risk-on sentiment",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Asian stocks rally on AI enthusiasm despite broader risk-off signals in crypto markets",
-        "tag": "MIXED"
+        "signal": "China's yuan at 3-year highs while stocks retreat creates FX-equity divergence worth monitoring",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Oil remains elevated amid Iran war tensions supporting stagflationary undertones",
+        "signal": "Oil remaining elevated amid Iran war supports commodity inflation narrative",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY approach to 100 threshold given dollar strength on rate expectations",
-      "Reassess BMNR cash-secured put ladder strikes given crypto weakness below $80K BTC",
-      "Watch for long-duration capitulation signals if 10Y continues pushing higher toward 30Y stress levels"
+      "Monitor DXY approaching 100 threshold as dollar strength on rate hike expectations could signal regime shift",
+      "BMNR ladder may face headwinds if crypto weakness persists - consider tightening strikes",
+      "Watch for yield curve dynamics as Fed rate hike expectations could pressure 2s10s spread"
     ]
   },
   "articles": [
+    {
+      "title": "Trump Invites Xi To White House In September, Says US-China Relationship Goes Back To America's Founding",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T10:58:20+00:00",
+      "timeDisplay": "10:58 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:6b3134fb3094b:0/"
+    },
+    {
+      "title": "'G2' choreography",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T10:41:28+00:00",
+      "timeDisplay": "10:41 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R0OR:0-g2-choreography/"
+    },
+    {
+      "title": "MEXC Confirms Strong Asset Backing in Hacken-Audited May 2026 Proof of Reserves Report",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T10:27:40+00:00",
+      "timeDisplay": "10:27 AM",
+      "link": "https://www.tradingview.com/news/chainwire:5ea2faa18094b:0-mexc-confirms-strong-asset-backing-in-hacken-audited-may-2026-proof-of-reserves-report/"
+    },
+    {
+      "title": "Altcoin season \u2018quietly\u2019 starting? Analysts spot three bullish indicators",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T10:25:56+00:00",
+      "timeDisplay": "10:25 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:06c680497094b:0-altcoin-season-quietly-starting-analysts-spot-three-bullish-indicators/"
+    },
+    {
+      "title": "Record high for stocks as Trump meets Xi, pound braces for UK leadership fight",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T09:43:14+00:00",
+      "timeDisplay": "9:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R0A5:0-record-high-for-stocks-as-trump-meets-xi-pound-braces-for-uk-leadership-fight/"
+    },
+    {
+      "title": "Jewellers could lease India's digital reserves to reduce gold imports: SafeGold's Gaurav Mathur",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:39:22+00:00",
+      "timeDisplay": "9:39 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:21e9cceb8094b:0-jewellers-could-lease-india-s-digital-reserves-to-reduce-gold-imports-safegold-s-gaurav-mathur/"
+    },
+    {
+      "title": "Why is Bitcoin struggling below $80K despite strong fund inflows?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:31:18+00:00",
+      "timeDisplay": "9:31 AM",
+      "link": "https://www.tradingview.com/news/invezz:6edbe6902094b:0-why-is-bitcoin-struggling-below-80k-despite-strong-fund-inflows/"
+    },
+    {
+      "title": "Bitcoin Faces Major Test As 37% Recovery Collides With Bear Resistance",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T09:00:27+00:00",
+      "timeDisplay": "9:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:9ac6ab401094b:0-bitcoin-faces-major-test-as-37-recovery-collides-with-bear-resistance/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Edge Higher As Trump-Xi Meeting Fuels Optimism: Why NVDA, BABA, CSCO, TSM, KLAR, CRCL Are In Focus Today",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T08:52:09+00:00",
+      "timeDisplay": "8:52 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:f27f37c53094b:0/"
+    },
+    {
+      "title": "China's yuan hits 3-year high, stocks retreat, as investors await details from Trump-Xi summit",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T08:36:45+00:00",
+      "timeDisplay": "8:36 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R0BB:0-china-s-yuan-hits-3-year-high-stocks-retreat-as-investors-await-details-from-trump-xi-summit/"
+    },
+    {
+      "title": "Blockchain.com Unveils Highly Anticipated Crypto-Backed Loans, Bringing Borrowing To Crypto Holders Worldwide",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T08:31:09+00:00",
+      "timeDisplay": "8:31 AM",
+      "link": "https://www.tradingview.com/news/chainwire:536bb9db1094b:0-blockchain-com-unveils-highly-anticipated-crypto-backed-loans-bringing-borrowing-to-crypto-holders-worldwide/"
+    },
+    {
+      "title": "David Bailey\u2019s Nakamoto reports $239 million Q1 loss as bitcoin treasury value slides",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T08:22:42+00:00",
+      "timeDisplay": "8:22 AM",
+      "link": "https://www.tradingview.com/news/the_block:d6553b3e2094b:0-david-bailey-s-nakamoto-reports-239-million-q1-loss-as-bitcoin-treasury-value-slides/"
+    },
     {
       "title": "Jane Street Cuts Bitcoin ETF Exposure By 71%: Why This Could Be Bullish",
       "source": "newsbtc",
@@ -53,6 +143,14 @@
       "timestamp": "2026-05-14T08:10:51+00:00",
       "timeDisplay": "8:10 AM",
       "link": "https://www.tradingview.com/news/newsbtc:b8e6b4778094b:0-jane-street-cuts-bitcoin-etf-exposure-by-71-why-this-could-be-bullish/"
+    },
+    {
+      "title": "Bitcoin ETFs Bleed $635M as BTC Crashes Below $80K",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T07:46:21+00:00",
+      "timeDisplay": "7:46 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:be62f892a094b:0-bitcoin-etfs-bleed-635m-as-btc-crashes-below-80k/"
     },
     {
       "title": "Oil Edges Higher, With Focus on Trump-Xi Meeting \u2014 Market Talk",
@@ -239,6 +337,14 @@
       "link": "https://www.tradingview.com/news/macenews:7279c20e0094b:0-pool-report-beijing-a-few-remarks-by-president-trump-upon-beginning-his-first-meeting-with-china-s-xi-you-re-a-great-leader/"
     },
     {
+      "title": "Oil prices broadly stable as Trump-Xi meeting yields talk of cooperation and stability",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T03:11:11+00:00",
+      "timeDisplay": "3:11 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02B:0-oil-prices-broadly-stable-as-trump-xi-meeting-yields-talk-of-cooperation-and-stability/"
+    },
+    {
       "title": "Ethereum Price Flashes Weakness Signals, Pullback Fears Start Rising",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -391,14 +497,6 @@
       "link": "https://www.tradingview.com/news/etfcom:fb3d3fbb6094b:0-etf-league-tables-invesco-pulls-in-4-9b/"
     },
     {
-      "title": "Nakamoto Reports First Quarter 2026 Results",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T21:00:00+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513012783:0/"
-    },
-    {
       "title": "Canada Rate-Hike Expectations Are Misguided \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -415,36 +513,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:b33596e30094b:0/"
     },
     {
-      "title": "Bitcoin Price on Knife\u2019s Edge: Liquidation Explosion Awaits at $82,000",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T20:14:34+00:00",
-      "timeDisplay": "8:14 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:7bd9d6355094b:0-bitcoin-price-on-knife-s-edge-liquidation-explosion-awaits-at-82-000/"
-    },
-    {
       "title": "Procedural Vote on E15 Legislation Passes in House \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-13T20:02:00+00:00",
       "timeDisplay": "8:02 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260513010777:0/"
-    },
-    {
-      "title": "Retiring With Bitcoin by 2030: Hoax or Real Financial Strategy?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T19:50:00+00:00",
-      "timeDisplay": "7:50 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:60d80f23d094b:0-retiring-with-bitcoin-by-2030-hoax-or-real-financial-strategy/"
-    },
-    {
-      "title": "Whale shorts $70M in crypto and tech: Should Bitcoin traders worry?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T19:44:43+00:00",
-      "timeDisplay": "7:44 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:71dbc81bd094b:0-whale-shorts-70m-in-crypto-and-tech-should-bitcoin-traders-worry/"
     },
     {
       "title": "Longer-dated yields highest since mid-2025 on inflation fears",
@@ -487,14 +561,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260513010096:0/"
     },
     {
-      "title": "Bitcoin Holder Recovers 5 BTC From 11-Year Locked Wallet Using Claude AI",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:59:27+00:00",
-      "timeDisplay": "6:59 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:7ac20fa13094b:0-bitcoin-holder-recovers-5-btc-from-11-year-locked-wallet-using-claude-ai/"
-    },
-    {
       "title": "Gold discounts in India breach $200/ounce record amid profit-taking",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -519,22 +585,6 @@
       "link": "https://www.tradingview.com/news/macenews:9da51d3bb094b:0-us-senate-confirms-kevin-warsh-to-become-chairman-of-the-federal-reserve-jerome-powell-s-chairmanship-ends-friday/"
     },
     {
-      "title": "Bitcoin traders expect \u2018fast move\u2019 to $90K following CLARITY Act vote",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:30:00+00:00",
-      "timeDisplay": "6:30 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:917dd388c094b:0-bitcoin-traders-expect-fast-move-to-90k-following-clarity-act-vote/"
-    },
-    {
-      "title": "Cronos to End BTC App Campaign on June 3rd",
-      "source": "coindar",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:25:06+00:00",
-      "timeDisplay": "6:25 PM",
-      "link": "https://www.tradingview.com/news/coindar:34be0a4d3094b:0-cronos-to-end-btc-app-campaign-on-june-3rd/"
-    },
-    {
       "title": "US DEM SENATOR FETTERMAN VOTES IN FAVOR OF KEVIN WARSH AS FED CHAIR, REINFORCING EXPECTED GOP MAJORITY APPROVAL",
       "source": "macenews",
       "color": "#00e5ff",
@@ -549,14 +599,6 @@
       "timestamp": "2026-05-13T18:10:00+00:00",
       "timeDisplay": "6:10 PM",
       "link": "https://www.tradingview.com/news/DJN_SN20260513013135:0/"
-    },
-    {
-      "title": "US SENATE CONDUCTING ROLL CALL VOTE ON KEVIN WARSH'S FED CHAIRMANSHIP, EXPECTED TO PASS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T18:06:00+00:00",
-      "timeDisplay": "6:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:dfedcaf16094b:0-us-senate-conducting-roll-call-vote-on-kevin-warsh-s-fed-chairmanship-expected-to-pass/"
     },
     {
       "title": "MINN FED'S KASHKARI Q&A/ST PAUL ENDED",
@@ -597,54 +639,6 @@
       "timestamp": "2026-05-13T17:29:00+00:00",
       "timeDisplay": "5:29 PM",
       "link": "https://www.tradingview.com/news/macenews:b9fe0d9e5094b:0-minn-fed-s-kashkari-q-a-st-paul-inflation-still-too-high-now-iran-war-has-upended-inflation-picture-don-t-know-how-long-strait-to-stay-closed/"
-    },
-    {
-      "title": "HEADS UP: MINN FED'S KASHKARI Q&A AT ST. PAUL AREA CHAMBER OF COMMERCE COMING UP AFTER 1:15P ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T17:04:00+00:00",
-      "timeDisplay": "5:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:3b635ed88094b:0-heads-up-minn-fed-s-kashkari-q-a-at-st-paul-area-chamber-of-commerce-coming-up-after-1-15p-et/"
-    },
-    {
-      "title": "Change to Ethereum Staking Could Boost Prices, Says Grayscale \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:58:00+00:00",
-      "timeDisplay": "4:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513009352:0/"
-    },
-    {
-      "title": "BOSTON FED'S COLLINS Q&A/BEC: EXERCISING 'DELIBERATE PATIENCE;' SO HOLDING TO CURRENT POLICY; HARD 'TO TEASE OUT' CURRENT IMPACT OF A.I.",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:33:00+00:00",
-      "timeDisplay": "4:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:36c19f19c094b:0-boston-fed-s-collins-q-a-bec-exercising-deliberate-patience-so-holding-to-current-policy-hard-to-tease-out-current-impact-of-a-i/"
-    },
-    {
-      "title": "Traders say Ethereum ready for a 'strong move' after ETH price taps $2.3K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:29:27+00:00",
-      "timeDisplay": "4:29 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:d6ab9ca66094b:0-traders-say-ethereum-ready-for-a-strong-move-after-eth-price-taps-2-3k/"
-    },
-    {
-      "title": "BOSTON FED'S COLLINS Q&A/BEC: SEEING HEIGHTENING OF UNCERTAINTY; NEED 'HEALTHY DOSE OF HUMILITY;' A LOT OF INDICATORS 'VERY VOLATILE'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:29:00+00:00",
-      "timeDisplay": "4:29 PM",
-      "link": "https://www.tradingview.com/news/macenews:c91a177b8094b:0-boston-fed-s-collins-q-a-bec-seeing-heightening-of-uncertainty-need-healthy-dose-of-humility-a-lot-of-indicators-very-volatile/"
-    },
-    {
-      "title": "BOSTON FED'S COLLINS Q&A/BEC: THE MUCH SLOWER GROWTH IN LABOR SUPPLY IS LINKED TO LOWER GROWTH; 'A LOT THINGS ARE HAPPENING TOGETHER'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:26:00+00:00",
-      "timeDisplay": "4:26 PM",
-      "link": "https://www.tradingview.com/news/macenews:54d4d3807094b:0-boston-fed-s-collins-q-a-bec-the-much-slower-growth-in-labor-supply-is-linked-to-lower-growth-a-lot-things-are-happening-together/"
     }
   ]
 }

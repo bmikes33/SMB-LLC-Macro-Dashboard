@@ -1,45 +1,59 @@
 {
-  "lastUpdated": "2026-05-14T01:25:17.173458+00:00",
-  "lastUpdatedDisplay": "May 14, 2026 \u2014 01:25 AM UTC",
+  "lastUpdated": "2026-05-14T01:50:19.482481+00:00",
+  "lastUpdatedDisplay": "May 14, 2026 \u2014 01:50 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed dynamics with the dollar strengthening on rate hike expectations and safe-haven flows amid Trump-Xi summit talks, while inflation concerns drive longer-dated yields to mid-2025 highs. Kevin Warsh's Senate confirmation as new Fed Chair (54-45 vote) signals potential policy shifts, as Fed officials acknowledge worsening inflation dynamics despite sideways unemployment.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar strength and safe-haven flows suggest some risk-off undertones contradicting pure reflation, while rising rate expectations and inflation fears support the reflationary thesis.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets show mixed signals with equities rising on AI enthusiasm while defensive assets like gold gain on safe-haven demand amid Trump-Xi summit uncertainty. Kevin Warsh confirmed as new Fed Chair with inflation fears driving longer-dated yields to mid-2025 highs, while oil remains choppy despite geopolitical focus.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Defensive asset strength (gold rising on safe-haven flows) combined with surging US inflation and longer-dated yields at mid-2025 highs suggests flight-to-quality dynamics that contradict the bullish-cyclicals reflation thesis.",
+    "thresholdWatches": [
+      {
+        "indicator": "US30Y",
+        "level": "> 5.10%",
+        "signal": "Longer-dated yields hitting mid-2025 highs on inflation fears approaching stagflation threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Dollar rises on safe-haven flows and rate hike expectations, suggesting defensive positioning rather than pure risk-on cyclical rotation",
+        "signal": "Gold rising on defensive appeal and safe-haven flows despite Fed rate hike fears challenges risk-on reflation narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Longer-dated yields hit highest levels since mid-2025 on inflation fears, pressuring duration assets consistent with stagflationary undertones",
-        "tag": "SUPPORTS"
+        "signal": "US inflation jumps driving dollar strength and longer-dated yields to mid-2025 highs",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Kevin Warsh confirmed as Fed Chair with hawkish reputation may signal more aggressive monetary tightening ahead",
-        "tag": "SUPPORTS"
+        "signal": "Asia stocks rise on AI enthusiasm while Trump-Xi summit creates mixed risk appetite",
+        "tag": "MIXED"
       },
       {
-        "signal": "Gold showing defensive appeal and rising despite rate hike fears indicates underlying risk-off sentiment brewing",
+        "signal": "Kevin Warsh Fed Chair confirmation (54-45) introduces policy uncertainty with hawkish reputation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Kashkari notes inflation fight 'looking worse' while unemployment moves sideways, confirming stagflationary pressures",
-        "tag": "SUPPORTS"
+        "signal": "Oil settles lower in choppy trade despite geopolitical summit focus",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY strength closely - safe-haven dollar demand contradicts bullish-cyclicals thesis",
-      "Watch 30Y yield trajectory as longer-duration stress accelerates with Warsh confirmation",
-      "Consider reducing BMNR ladder exposure if defensive flows continue strengthening dollar against risk assets"
+      "Monitor 30Y yield closely - approaching 5.10% stagflation threshold with inflation surging",
+      "Reassess BMNR ladder timing given defensive rotation and safe-haven bid emerging",
+      "Consider reducing cyclical exposure given mixed defensive/growth signals"
     ]
   },
   "articles": [
+    {
+      "title": "Asia stocks rise on AI enthusiasm, focus on Trump-Xi summit",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T01:38:33+00:00",
+      "timeDisplay": "1:38 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R02O:0-asia-stocks-rise-on-ai-enthusiasm-focus-on-trump-xi-summit/"
+    },
     {
       "title": "Dollar boosted by rate expectations, safe-haven flows as Trump, Xi meet",
       "source": "reuters",
@@ -462,7 +476,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-13T15:37:00+00:00",
       "timeDisplay": "3:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513008552:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260513008551:0/"
     },
     {
       "title": "BOS FED'S COLLINS/BEC: IRAN WAR SHIFTED GDP RISKS TO DOWNSIDE, INFLATION TO UPSIDE;  UNMOORING OF INFL EXPECTATIONS WOULD BE \u2018MORE CONCERNING\u2019",
@@ -631,14 +645,6 @@
       "timestamp": "2026-05-13T13:15:00+00:00",
       "timeDisplay": "1:15 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260513007228:0/"
-    },
-    {
-      "title": "Ethereum closes gap with Solana as DEX volumes converge near $45 billion",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T13:06:02+00:00",
-      "timeDisplay": "1:06 PM",
-      "link": "https://www.tradingview.com/news/the_block:5aff11d2f094b:0-ethereum-closes-gap-with-solana-as-dex-volumes-converge-near-45-billion/"
     }
   ]
 }

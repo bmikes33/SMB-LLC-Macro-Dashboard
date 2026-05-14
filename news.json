@@ -1,51 +1,184 @@
 {
-  "lastUpdated": "2026-05-14T01:50:19.482481+00:00",
-  "lastUpdatedDisplay": "May 14, 2026 \u2014 01:50 AM UTC",
+  "lastUpdated": "2026-05-14T05:37:02.699523+00:00",
+  "lastUpdatedDisplay": "May 14, 2026 \u2014 05:37 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with equities rising on AI enthusiasm while defensive assets like gold gain on safe-haven demand amid Trump-Xi summit uncertainty. Kevin Warsh confirmed as new Fed Chair with inflation fears driving longer-dated yields to mid-2025 highs, while oil remains choppy despite geopolitical focus.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Defensive asset strength (gold rising on safe-haven flows) combined with surging US inflation and longer-dated yields at mid-2025 highs suggests flight-to-quality dynamics that contradict the bullish-cyclicals reflation thesis.",
+    "macroSummary": "Markets are focused on ongoing Trump-Xi summit in Beijing while dollar strengthens on Fed rate hike expectations and US yields hover near 11-month highs. Bitcoin and crypto assets are showing weakness below key levels, while AI enthusiasm continues to support equity sentiment despite mixed signals across asset classes.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Dollar strength and Fed rate hike expectations support reflation thesis, but crypto weakness and defensive flows to gold suggest underlying risk concerns are emerging.",
     "thresholdWatches": [
       {
-        "indicator": "US30Y",
-        "level": "> 5.10%",
-        "signal": "Longer-dated yields hitting mid-2025 highs on inflation fears approaching stagflation threshold"
+        "indicator": "US 10Y Yield",
+        "level": "near 11-month high",
+        "signal": "Approaching long-end stress territory that could pressure LQD and 30Y thresholds"
+      },
+      {
+        "indicator": "DXY",
+        "level": "holding firm",
+        "signal": "Dollar strength on Fed expectations approaching 100 regime flip level"
       }
     ],
     "keySignals": [
       {
-        "signal": "Gold rising on defensive appeal and safe-haven flows despite Fed rate hike fears challenges risk-on reflation narrative",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "US inflation jumps driving dollar strength and longer-dated yields to mid-2025 highs",
+        "signal": "US 10-year yields hovering near 11-month highs with Fed rate hike expectations building",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Asia stocks rise on AI enthusiasm while Trump-Xi summit creates mixed risk appetite",
-        "tag": "MIXED"
+        "signal": "Dollar strengthening on rate hike bets and safe-haven flows despite risk-on sentiment elsewhere",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Kevin Warsh Fed Chair confirmation (54-45) introduces policy uncertainty with hawkish reputation",
+        "signal": "Bitcoin falling below $80K with whale distribution patterns and liquidation risks at $82K",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil settles lower in choppy trade despite geopolitical summit focus",
-        "tag": "NEUTRAL"
+        "signal": "Gold showing defensive appeal and rising despite Fed rate hike fears weighing on precious metals",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "AI enthusiasm continuing to support equity markets with Asia stocks rising",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor 30Y yield closely - approaching 5.10% stagflation threshold with inflation surging",
-      "Reassess BMNR ladder timing given defensive rotation and safe-haven bid emerging",
-      "Consider reducing cyclical exposure given mixed defensive/growth signals"
+      "Monitor BMNR ladder closely as crypto weakness below $80K Bitcoin may pressure ETH-linked trust",
+      "Watch for long-end bond stress as 10Y approaches levels that could trigger LQD 107 threshold",
+      "Consider defensive positioning if dollar continues strengthening toward DXY 100 regime flip level"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar buoyed by rate hike expectations as Trump-Xi summit underway",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T05:30:10+00:00",
+      "timeDisplay": "5:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R062:0-dollar-buoyed-by-rate-hike-expectations-as-trump-xi-summit-underway/"
+    },
+    {
+      "title": "China's yuan hits 3-year high, stocks dip, as Trump-Xi summit begins",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T04:34:35+00:00",
+      "timeDisplay": "4:34 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R03M:0-china-s-yuan-hits-3-year-high-stocks-dip-as-trump-xi-summit-begins/"
+    },
+    {
+      "title": "AI rally powers on, Trump-Xi summit takes centre stage",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R0AB:0-ai-rally-powers-on-trump-xi-summit-takes-centre-stage/"
+    },
+    {
+      "title": "Bitcoin Slips Below $80,000, but 3 Warning Signs Flashed Red First",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T04:28:10+00:00",
+      "timeDisplay": "4:28 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:421eca911094b:0-bitcoin-slips-below-80-000-but-3-warning-signs-flashed-red-first/"
+    },
+    {
+      "title": "AI chatbot Claude helps man recover 5 Bitcoin after finding old seed phrase",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T03:47:33+00:00",
+      "timeDisplay": "3:47 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:9b7210c63094b:0-ai-chatbot-claude-helps-man-recover-5-bitcoin-after-finding-old-seed-phrase/"
+    },
+    {
+      "title": "Bitcoin Miner MARA Stock Under Pressure Following $1.5 Billion Bitcoin Sell-Off",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T03:30:05+00:00",
+      "timeDisplay": "3:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:f360b8dd1094b:0-bitcoin-miner-mara-stock-under-pressure-following-1-5-billion-bitcoin-sell-off/"
+    },
+    {
+      "title": "Commodity Corner: Crude remains elevated amid Iran war; gold slips on inflation worries",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T03:26:35+00:00",
+      "timeDisplay": "3:26 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:0be13d9e7094b:0-commodity-corner-crude-remains-elevated-amid-iran-war-gold-slips-on-inflation-worries/"
+    },
+    {
+      "title": "Asia stocks gain on AI enthusiasm, focus on Trump-Xi summit",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T03:17:45+00:00",
+      "timeDisplay": "3:17 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02K:0-asia-stocks-gain-on-ai-enthusiasm-focus-on-trump-xi-summit/"
+    },
+    {
+      "title": "POOL REPORT -  BEIJING: A few remarks by President Trump upon beginning his first meeting with China;s Xi; 'You're a great leader'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T03:16:00+00:00",
+      "timeDisplay": "3:16 AM",
+      "link": "https://www.tradingview.com/news/macenews:7279c20e0094b:0-pool-report-beijing-a-few-remarks-by-president-trump-upon-beginning-his-first-meeting-with-china-s-xi-you-re-a-great-leader/"
+    },
+    {
+      "title": "Oil edges up as investors focus on Trump-Xi meeting in Beijing",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T03:11:11+00:00",
+      "timeDisplay": "3:11 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02B:0-oil-edges-up-as-investors-focus-on-trump-xi-meeting-in-beijing/"
+    },
+    {
+      "title": "Ethereum Price Flashes Weakness Signals, Pullback Fears Start Rising",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T03:08:13+00:00",
+      "timeDisplay": "3:08 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:09be74590094b:0-ethereum-price-flashes-weakness-signals-pullback-fears-start-rising/"
+    },
+    {
+      "title": "US 10Y Yield Hovers Near 11-Month High",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T02:41:12+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/te_news:550513:0-us-10y-yield-hovers-near-11-month-high/"
+    },
+    {
+      "title": "Bitcoin Price Dips Further Below $80K\u2014Bears Tighten Grip On Market",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T02:37:55+00:00",
+      "timeDisplay": "2:37 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:4ad3e23a4094b:0-bitcoin-price-dips-further-below-80k-bears-tighten-grip-on-market/"
+    },
+    {
+      "title": "US oil may fall into $97.41-$98.59 range",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T02:20:00+00:00",
+      "timeDisplay": "2:20 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R02S:0-us-oil-may-fall-into-97-41-98-59-range/"
+    },
+    {
+      "title": "Dollar Holds Firm on Fed Rate Hike Bets",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T02:01:27+00:00",
+      "timeDisplay": "2:01 AM",
+      "link": "https://www.tradingview.com/news/te_news:550497:0-dollar-holds-firm-on-fed-rate-hike-bets/"
+    },
+    {
+      "title": "Previous Bitcoin\u2019s Market Top Was Hidden Behind Sophisticated Whale Distribution \u2014 Analyst Explained",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T02:00:03+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:4c973a68c094b:0-previous-bitcoin-s-market-top-was-hidden-behind-sophisticated-whale-distribution-analyst-explained/"
+    },
     {
       "title": "Asia stocks rise on AI enthusiasm, focus on Trump-Xi summit",
       "source": "reuters",
@@ -205,6 +338,22 @@
       "timestamp": "2026-05-13T19:39:18+00:00",
       "timeDisplay": "7:39 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q0YR:0-longer-dated-yields-highest-since-mid-2025-on-inflation-fears/"
+    },
+    {
+      "title": "Dollar Rallies on a Hot US PPI Report",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T19:36:56+00:00",
+      "timeDisplay": "7:36 PM",
+      "link": "https://www.tradingview.com/news/barchart:8a01be47b094b:0-dollar-rallies-on-a-hot-us-ppi-report/"
+    },
+    {
+      "title": "Crude Oil Prices Erase Early Gains as the Dollar Strengthens",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T19:20:41+00:00",
+      "timeDisplay": "7:20 PM",
+      "link": "https://www.tradingview.com/news/barchart:557e76f2a094b:0-crude-oil-prices-erase-early-gains-as-the-dollar-strengthens/"
     },
     {
       "title": "US dollar rises as inflation jumps; Trump-Xi talks begin",
@@ -375,14 +524,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260513009323:0/"
     },
     {
-      "title": "BOSTON FED'S COLLINS Q&A/BEC ENDED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T16:34:00+00:00",
-      "timeDisplay": "4:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:3efdf0033094b:0-boston-fed-s-collins-q-a-bec-ended/"
-    },
-    {
       "title": "BOSTON FED'S COLLINS Q&A/BEC: EXERCISING 'DELIBERATE PATIENCE;' SO HOLDING TO CURRENT POLICY; HARD 'TO TEASE OUT' CURRENT IMPACT OF A.I.",
       "source": "macenews",
       "color": "#00e5ff",
@@ -509,142 +650,6 @@
       "timestamp": "2026-05-13T15:30:00+00:00",
       "timeDisplay": "3:30 PM",
       "link": "https://www.tradingview.com/news/macenews:ecd35f740094b:0-boston-fed-s-collins-bec-while-not-most-likely-i-could-envision-a-scenario-in-which-some-policy-tightening-is-needed/"
-    },
-    {
-      "title": "Arthur Hayes and the Man Who Called Bitcoin Near $100 Say Buy the Dip",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T15:29:24+00:00",
-      "timeDisplay": "3:29 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:2565ce5de094b:0-arthur-hayes-and-the-man-who-called-bitcoin-near-100-say-buy-the-dip/"
-    },
-    {
-      "title": "Stacks Publishes Bitcoin Staking Whitepaper for Self-Custodial Bitcoin Yield, Backed by $500M Already Paid Out",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T15:24:39+00:00",
-      "timeDisplay": "3:24 PM",
-      "link": "https://www.tradingview.com/news/chainwire:e3fa3f456094b:0-stacks-publishes-bitcoin-staking-whitepaper-for-self-custodial-bitcoin-yield-backed-by-500m-already-paid-out/"
-    },
-    {
-      "title": "HEADS UP': BOSTON FED'S COLLINS REMARKS AT THE BOSTON ECONOMIC CLUB COMING UP AT 11:30A ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T15:15:00+00:00",
-      "timeDisplay": "3:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:1d8c57edf094b:0-heads-up-boston-fed-s-collins-remarks-at-the-boston-economic-club-coming-up-at-11-30a-et/"
-    },
-    {
-      "title": "US 10Y Bond Yield Hits 42-week High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:59:16+00:00",
-      "timeDisplay": "2:59 PM",
-      "link": "https://www.tradingview.com/news/te_news:550395:0-us-10y-bond-yield-hits-42-week-high/"
-    },
-    {
-      "title": "US SENATE VOTE ON INSTALLING KEVIN WARSH AS FED CHAIR EXPECTED AROUND 2P ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:53:00+00:00",
-      "timeDisplay": "2:53 PM",
-      "link": "https://www.tradingview.com/news/macenews:877706c6b094b:0-us-senate-vote-on-installing-kevin-warsh-as-fed-chair-expected-around-2p-et/"
-    },
-    {
-      "title": "Bitcoin pinned near critical support as hot PPI spike compounds rate hike fears: analysts",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:51:34+00:00",
-      "timeDisplay": "2:51 PM",
-      "link": "https://www.tradingview.com/news/the_block:4f3421746094b:0-bitcoin-pinned-near-critical-support-as-hot-ppi-spike-compounds-rate-hike-fears-analysts/"
-    },
-    {
-      "title": "Gold Drops as Inflation Fears Reduce Rate Cut Bets",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:44:55+00:00",
-      "timeDisplay": "2:44 PM",
-      "link": "https://www.tradingview.com/news/te_news:550390:0-gold-drops-as-inflation-fears-reduce-rate-cut-bets/"
-    },
-    {
-      "title": "US Crude Oil Inventories Fall More than Expected",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:41:48+00:00",
-      "timeDisplay": "2:41 PM",
-      "link": "https://www.tradingview.com/news/te_news:550388:0-us-crude-oil-inventories-fall-more-than-expected/"
-    },
-    {
-      "title": "Bitcoin, Ethereum and XRP Price Analysis: What\u2019s Coming Next?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:37:43+00:00",
-      "timeDisplay": "2:37 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:7a61b7765094b:0-bitcoin-ethereum-and-xrp-price-analysis-what-s-coming-next/"
-    },
-    {
-      "title": "Bitcoin Bulls Pin Hopes on MicroStrategy\u2019s STRC and Senate Clarity Act Vote",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:32:16+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:32c38d3e5094b:0-bitcoin-bulls-pin-hopes-on-microstrategy-s-strc-and-senate-clarity-act-vote/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - May 13",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513007975:0/"
-    },
-    {
-      "title": "Crypto Wallet Provider Ledger Puts IPO Plans On Hold",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:12:00+00:00",
-      "timeDisplay": "2:12 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:ebdef988b094b:0-crypto-wallet-provider-ledger-puts-ipo-plans-on-hold/"
-    },
-    {
-      "title": "Longer-dated yields hit 10-month highs on inflation surprise",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T14:11:00+00:00",
-      "timeDisplay": "2:11 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q0WE:0-longer-dated-yields-hit-10-month-highs-on-inflation-surprise/"
-    },
-    {
-      "title": "Hot April producer price number adds to inflation worries",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T14:08:15+00:00",
-      "timeDisplay": "2:08 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q13O:0-hot-april-producer-price-number-adds-to-inflation-worries/"
-    },
-    {
-      "title": "Ethereum Open Interest Rises While Price Pulls Back: Short Squeeze Setup?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:00:47+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:c49740db2094b:0-ethereum-open-interest-rises-while-price-pulls-back-short-squeeze-setup/"
-    },
-    {
-      "title": "Crude Futures Steady As Trump Arrives in China \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T13:20:00+00:00",
-      "timeDisplay": "1:20 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513007286:0/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - May 13",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T13:15:00+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513007228:0/"
     }
   ]
 }

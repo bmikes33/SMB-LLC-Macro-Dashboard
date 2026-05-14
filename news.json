@@ -1,51 +1,117 @@
 {
-  "lastUpdated": "2026-05-13T23:03:16.279868+00:00",
-  "lastUpdatedDisplay": "May 13, 2026 \u2014 11:03 PM UTC",
+  "lastUpdated": "2026-05-14T01:25:17.173458+00:00",
+  "lastUpdatedDisplay": "May 14, 2026 \u2014 01:25 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US inflation surged, driving longer-dated bond yields to mid-2025 highs while global equities and the dollar rose. Kevin Warsh was confirmed as the new Fed Chair with inflation fight 'looking worse' according to Fed officials, while Iran war disruptions continue to complicate the energy outlook.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Soaring inflation with Fed officials stating the inflation fight is 'looking worse' while longer-dated yields hit multi-month highs suggests stagflationary pressures are intensifying beyond the reflation thesis.",
-    "thresholdWatches": [
-      {
-        "indicator": "US30Y",
-        "level": "5.10%",
-        "signal": "Longer-dated yields at highest since mid-2025 on inflation fears approaching critical threshold"
-      }
-    ],
+    "macroSummary": "Markets show mixed dynamics with the dollar strengthening on rate hike expectations and safe-haven flows amid Trump-Xi summit talks, while inflation concerns drive longer-dated yields to mid-2025 highs. Kevin Warsh's Senate confirmation as new Fed Chair (54-45 vote) signals potential policy shifts, as Fed officials acknowledge worsening inflation dynamics despite sideways unemployment.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Dollar strength and safe-haven flows suggest some risk-off undertones contradicting pure reflation, while rising rate expectations and inflation fears support the reflationary thesis.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "US inflation soars with Fed's Kashkari saying inflation fight 'looking worse' and inflation 'still too high'",
+        "signal": "Dollar rises on safe-haven flows and rate hike expectations, suggesting defensive positioning rather than pure risk-on cyclical rotation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Longer-dated bond yields hit highest levels since mid-2025 on inflation fears",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Longer-dated yields hit highest levels since mid-2025 on inflation fears, pressuring duration assets consistent with stagflationary undertones",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Kevin Warsh confirmed as Fed Chair with hawkish reputation amid deteriorating inflation backdrop",
+        "signal": "Kevin Warsh confirmed as Fed Chair with hawkish reputation may signal more aggressive monetary tightening ahead",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Gold showing defensive appeal and rising despite rate hike fears indicates underlying risk-off sentiment brewing",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Iran war has 'upended' inflation picture with energy normalization taking 'months' even if strait reopens",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Global equities rise despite inflation surge, showing resilience of risk assets",
+        "signal": "Fed's Kashkari notes inflation fight 'looking worse' while unemployment moves sideways, confirming stagflationary pressures",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor 30Y yield closely - approaching 5.10% threshold that would signal stagflation acceleration",
-      "Consider tightening BMNR put strikes given crypto volatility amid macro uncertainty",
-      "Evaluate defensive positioning as Fed pivot toward more aggressive stance under Warsh chairmanship"
+      "Monitor DXY strength closely - safe-haven dollar demand contradicts bullish-cyclicals thesis",
+      "Watch 30Y yield trajectory as longer-duration stress accelerates with Warsh confirmation",
+      "Consider reducing BMNR ladder exposure if defensive flows continue strengthening dollar against risk assets"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar boosted by rate expectations, safe-haven flows as Trump, Xi meet",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T01:20:40+00:00",
+      "timeDisplay": "1:20 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R012:0-dollar-boosted-by-rate-expectations-safe-haven-flows-as-trump-xi-meet/"
+    },
+    {
+      "title": "Gold Rises; Defensive Appeal Remains Intact \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T00:58:00+00:00",
+      "timeDisplay": "12:58 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513014179:0/"
+    },
+    {
+      "title": "20 stocks in the S&P 500 of companies with soaring sales and improving profit margins",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T00:43:00+00:00",
+      "timeDisplay": "12:43 AM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260513011447:0/"
+    },
+    {
+      "title": "Oil Edges Higher Ahead of Trump-Xi Summit \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T00:27:00+00:00",
+      "timeDisplay": "12:27 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260513014085:0/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-14T00:26:45+00:00",
+      "timeDisplay": "12:26 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41R00E:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Key facts: 2013 BTC Addr $40B Move; STRC Buys Surge; Jane St Cuts ETFs",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T00:05:46+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/tradingview:b807c6532fa53:0-key-facts-2013-btc-addr-40b-move-strc-buys-surge-jane-st-cuts-etfs/"
+    },
+    {
+      "title": "Key facts: ETHUSD triangles; open interest up; cup-and-handle $2,700",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-14T00:04:26+00:00",
+      "timeDisplay": "12:04 AM",
+      "link": "https://www.tradingview.com/news/tradingview:68face78f8264:0-key-facts-ethusd-triangles-open-interest-up-cup-and-handle-2-700/"
+    },
+    {
+      "title": "Gold Weighed Down by Fed Rate Hike Fears",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T23:53:20+00:00",
+      "timeDisplay": "11:53 PM",
+      "link": "https://www.tradingview.com/news/te_news:550458:0-gold-weighed-down-by-fed-rate-hike-fears/"
+    },
+    {
+      "title": "Oil Steadies as Markets Watch Trump-Xi Talks",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T23:35:18+00:00",
+      "timeDisplay": "11:35 PM",
+      "link": "https://www.tradingview.com/news/te_news:550452:0-oil-steadies-as-markets-watch-trump-xi-talks/"
+    },
     {
       "title": "Global equities rise with the dollar, bond yields as US inflation soars",
       "source": "reuters",
@@ -367,6 +433,14 @@
       "link": "https://www.tradingview.com/news/te_news:550405:0-oil-firms-as-supply-tightness-persists/"
     },
     {
+      "title": "Crude Oil Prices Supported as Hormuz Closure Tightens Global Supplies",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-13T15:51:27+00:00",
+      "timeDisplay": "3:51 PM",
+      "link": "https://www.tradingview.com/news/barchart:62a6cd422094b:0-crude-oil-prices-supported-as-hormuz-closure-tightens-global-supplies/"
+    },
+    {
       "title": "Bitcoin price targets $79K as US PPI inflation hits highest since 2022",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -388,7 +462,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-13T15:37:00+00:00",
       "timeDisplay": "3:37 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260513008551:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260513008552:0/"
     },
     {
       "title": "BOS FED'S COLLINS/BEC: IRAN WAR SHIFTED GDP RISKS TO DOWNSIDE, INFLATION TO UPSIDE;  UNMOORING OF INFL EXPECTATIONS WOULD BE \u2018MORE CONCERNING\u2019",
@@ -495,14 +569,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:7a61b7765094b:0-bitcoin-ethereum-and-xrp-price-analysis-what-s-coming-next/"
     },
     {
-      "title": "20 stocks in the S&P 500 of companies with soaring sales and improving profit margins",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T14:36:00+00:00",
-      "timeDisplay": "2:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260513011447:0/"
-    },
-    {
       "title": "Bitcoin Bulls Pin Hopes on MicroStrategy\u2019s STRC and Senate Clarity Act Vote",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -573,78 +639,6 @@
       "timestamp": "2026-05-13T13:06:02+00:00",
       "timeDisplay": "1:06 PM",
       "link": "https://www.tradingview.com/news/the_block:5aff11d2f094b:0-ethereum-closes-gap-with-solana-as-dex-volumes-converge-near-45-billion/"
-    },
-    {
-      "title": "US 10-Year Treasury Note Reaches July-Highs",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:55:26+00:00",
-      "timeDisplay": "12:55 PM",
-      "link": "https://www.tradingview.com/news/te_news:550368:0-us-10-year-treasury-note-reaches-july-highs/"
-    },
-    {
-      "title": "Dollar at one-week high on Middle East uncertainty, hot US inflation",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T12:08:27+00:00",
-      "timeDisplay": "12:08 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Q11Z:0-dollar-at-one-week-high-on-middle-east-uncertainty-hot-us-inflation/"
-    },
-    {
-      "title": "Gold soars by Rs 8,550, silver rises by Rs 20,500 after govt announces import duty hike",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T12:03:30+00:00",
-      "timeDisplay": "12:03 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:94e252e2b094b:0-gold-soars-by-rs-8-550-silver-rises-by-rs-20-500-after-govt-announces-import-duty-hike/"
-    },
-    {
-      "title": "Can Ethereum hold $2,300 after JPMorgan\u2019s big blockchain move?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T11:27:04+00:00",
-      "timeDisplay": "11:27 AM",
-      "link": "https://www.tradingview.com/news/invezz:736412158094b:0-can-ethereum-hold-2-300-after-jpmorgan-s-big-blockchain-move/"
-    },
-    {
-      "title": "\u201810 AM Bitcoin Dump\u2019 Firm Jane Street Rotates Millions From IBIT, MSTR Into Ethereum",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T11:23:10+00:00",
-      "timeDisplay": "11:23 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:b2f78d57f094b:0/"
-    },
-    {
-      "title": "European stocks rise, oil prices steady, government bond yields still high",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T11:19:47+00:00",
-      "timeDisplay": "11:19 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Q0GO:0-european-stocks-rise-oil-prices-steady-government-bond-yields-still-high/"
-    },
-    {
-      "title": "WTI Firms as Supply Tightness Persists",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T10:43:36+00:00",
-      "timeDisplay": "10:43 AM",
-      "link": "https://www.tradingview.com/news/te_news:550342:0-wti-firms-as-supply-tightness-persists/"
-    },
-    {
-      "title": "European stocks rise as sentiment recovers, but government bond yields, oil still elevated",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-13T10:05:13+00:00",
-      "timeDisplay": "10:05 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Q0NA:0-european-stocks-rise-as-sentiment-recovers-but-government-bond-yields-oil-still-elevated/"
-    },
-    {
-      "title": "Return to 15% gold duty regime rekindles debate: do tariffs curb imports?",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-13T09:24:36+00:00",
-      "timeDisplay": "9:24 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:4db62c822094b:0-return-to-15-gold-duty-regime-rekindles-debate-do-tariffs-curb-imports/"
     }
   ]
 }

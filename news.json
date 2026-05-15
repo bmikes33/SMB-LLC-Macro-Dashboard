@@ -1,51 +1,64 @@
 {
-  "lastUpdated": "2026-05-15T22:54:34.216453+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 10:54 PM UTC",
+  "lastUpdated": "2026-05-15T23:53:31.072329+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 11:53 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bond markets are revolting with Treasury yields surging to one-year highs above 4.6%, driving dollar strength for five straight days and crushing risk assets. Markets are repricing Fed policy with rate hikes back on the table while gold plunges to 6-week lows and crypto falls hard with Bitcoin breaking below $79K.",
+    "macroSummary": "Bond markets are revolting with Treasury yields surging to one-year highs above 4.6%, driving dollar strength for five consecutive days and sparking Fed rate hike speculation. Risk assets are under pressure with Bitcoin falling below $79K, gold hitting 6-week lows, and equity markets declining led by Nasdaq, while oil prices remain elevated on supply concerns.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The bond market revolt with yields at one-year highs and Fed rate hikes being repriced directly contradicts the Reflation regime's assumption of policy accommodation supporting risk assets.",
+    "regimePressureReason": "The bond market revolt with yields at one-year highs and Fed hike bets directly contradicts the Reflation regime's assumption of accommodative monetary policy, while simultaneous risk asset weakness suggests a shift toward stagflationary conditions.",
     "thresholdWatches": [
       {
+        "indicator": "US10Y",
+        "level": "> 4.6%",
+        "signal": "Treasury yields surge to one-year high as bond market revolt prices out rate cuts"
+      },
+      {
         "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar at nearly 1-month high with five straight days of gains as Treasury yields surge"
+        "level": "approaching 100",
+        "signal": "Dollar climbs for fifth straight day reaching nearly 1-month high"
       }
     ],
     "keySignals": [
       {
-        "signal": "Treasury yields surge to one-year high above 4.6% as bond markets revolt and price out rate cuts",
+        "signal": "Bond market revolt with yields at one-year highs is pricing out rate cuts and pricing in Fed hikes",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed rate hikes back on the table according to bond market pricing, contradicting reflation policy accommodation assumption",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar climbing for fifth straight day approaching the 100 threshold that signals regime flip",
+        "signal": "Dollar strength for five consecutive days approaching regime flip threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold plunges to 6-week lows below $2450 as real yields spike higher",
+        "signal": "Risk assets broadly declining with Bitcoin below $79K, gold at 6-week lows, and Nasdaq leading equity decline",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Risk assets broadly declining with Nasdaq leading stock market falls and crypto breaking key support levels",
+        "signal": "Oil prices remain elevated on supply concerns supporting stagflationary narrative",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Fed rate hike expectations emerging as markets price inflation as 'very serious' problem",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Reassess BMNR cash-secured put ladder strikes given crypto weakness and potential vol expansion",
-      "Monitor DXY closely for break above 100 which would invalidate current regime",
-      "Consider reducing cyclical exposure given bond market dysfunction and rising real yields"
+      "Monitor BMNR ladder closely as crypto weakness accelerates - consider tightening strikes or reducing exposure",
+      "Prepare to pivot from bullish-cyclicals bias as bond market dysfunction approaches LQD threshold levels",
+      "Watch DXY 100 level closely as dollar strength approaches regime invalidation threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Latest Inflation Report: What It Could Mean For Bitcoin, Ethereum, And Solana Ahead",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T23:30:09+00:00",
+      "timeDisplay": "11:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:b6f2222ba094b:0-latest-inflation-report-what-it-could-mean-for-bitcoin-ethereum-and-solana-ahead/"
+    },
     {
       "title": "Bitcoin Cannot Clear $82K \u2013 Analyst Explains How Traders Are Using Every Rally to Exit",
       "source": "newsbtc",
@@ -245,6 +258,14 @@
       "timestamp": "2026-05-15T15:33:59+00:00",
       "timeDisplay": "3:33 PM",
       "link": "https://www.tradingview.com/news/moneycontrol:27d1d5732094b:0-interview-higher-gold-duty-may-accelerate-shift-towards-etfs-digital-gold-ajay-garg/"
+    },
+    {
+      "title": "Crude Oil Prices Soar as Global Supplies Continue to Tighten",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T15:28:54+00:00",
+      "timeDisplay": "3:28 PM",
+      "link": "https://www.tradingview.com/news/barchart:bcc1033fb094b:0-crude-oil-prices-soar-as-global-supplies-continue-to-tighten/"
     },
     {
       "title": "The producers: Industrial output, Empire State",
@@ -607,14 +628,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:b3fd0cb14094b:0-strategy-s-main-bitcoin-acquisition-vehicle-sees-massive-1-5b-trading-explosion/"
     },
     {
-      "title": "AI Helps Recover 5 BTC After 11 Years, CoinDCX CEO Issues Warning",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T10:06:11+00:00",
-      "timeDisplay": "10:06 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:ecdc91859094b:0-ai-helps-recover-5-btc-after-11-years-coindcx-ceo-issues-warning/"
-    },
-    {
       "title": "Global shares drop as bond yields jump on inflation worries",
       "source": "reuters",
       "color": "#ff6d00",
@@ -637,14 +650,6 @@
       "timestamp": "2026-05-15T08:28:17+00:00",
       "timeDisplay": "8:28 AM",
       "link": "https://www.tradingview.com/news/te_news:551105:0-us-10y-bond-yield-hits-51-week-high/"
-    },
-    {
-      "title": "Oil Futures Head for Weekly Gain After Trump-Xi Summit \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T07:40:00+00:00",
-      "timeDisplay": "7:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515002088:0/"
     }
   ]
 }

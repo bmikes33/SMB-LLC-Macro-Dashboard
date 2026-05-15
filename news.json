@@ -1,61 +1,88 @@
 {
-  "lastUpdated": "2026-05-15T20:39:50.037161+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 08:39 PM UTC",
+  "lastUpdated": "2026-05-15T21:56:55.411067+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 09:56 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing significant stress with Treasury yields surging to one-year highs above 4.6%, the dollar climbing for five straight days, and oil prices rising on inventory concerns. Equity markets are declining with tech leading losses, while Fed rate hike expectations are building as inflation concerns resurface.",
+    "macroSummary": "Bond markets are experiencing a significant selloff with Treasury yields surging to one-year highs above 4.6%, driven by inflation concerns and markets now pricing in potential Fed rate hikes rather than cuts. Risk assets including Bitcoin, stocks (particularly Nasdaq), and gold are declining sharply as the dollar strengthens for the fifth consecutive day, while oil prices remain elevated on inventory concerns.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached simultaneously with yields surging, dollar strengthening toward 100 level, and markets repricing Fed outlook more hawkishly than the reflation thesis anticipated.",
+    "regimePressureReason": "The bond market revolt with yields at one-year highs and Fed hike expectations directly challenges the Reflation regime's assumption of controlled monetary policy, while risk asset selloffs suggest markets are pricing stagflationary rather than reflationary outcomes.",
     "thresholdWatches": [
       {
         "indicator": "US10Y",
-        "level": "> 4.6%",
-        "signal": "Treasury yields hit one-year highs with breakout momentum building"
+        "level": "4.6%+",
+        "signal": "Treasury yields hit one-year highs with bond market revolt pricing out rate cuts"
       },
       {
         "indicator": "DXY",
         "level": "approaching 100",
-        "signal": "Dollar at nearly one-month high climbing for fifth straight day"
-      },
-      {
-        "indicator": "Oil",
-        "level": "rising on inventory concerns",
-        "signal": "Oil futures settling higher on supply worries adding to inflation backdrop"
+        "signal": "Dollar at nearly 1-month high, climbing for fifth straight day"
       }
     ],
     "keySignals": [
       {
-        "signal": "Treasury yields surge to one-year highs above 4.6% rattling markets",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Dollar climbs for fifth straight day as Fed rate hike bets grow",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "US stocks fall with Nasdaq leading decline as yields jump",
+        "signal": "Bond market revolt with yields surging to one-year highs as markets price in Fed hikes instead of cuts",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Markets repricing Fed outlook as Apollo warns inflation has become 'very serious' problem",
+        "signal": "Dollar strengthening for fifth consecutive day approaching regime-critical 100 level",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Risk assets broadly declining with Bitcoin below $79K, Nasdaq leading stock declines, and gold hitting 6-week lows",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin and crypto markets declining with BTC diving under $79K on bond market stress",
-        "tag": "NEUTRAL"
+        "signal": "Oil futures settling higher on inventory worries maintaining inflationary pressure",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Apollo's Torsten Slok warns inflation has become 'very serious' problem with markets expecting Fed rate hikes",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness and rising yields create dual pressure on ETH-linked positions",
-      "Prepare to reassess regime if DXY breaks 100 or 10Y yields sustain above 4.7%",
-      "Consider reducing cyclical exposure if multiple thresholds breach simultaneously"
+      "Consider reducing BMNR cash-secured put ladder exposure as crypto risk assets under pressure from bond yield surge",
+      "Monitor DXY closely for break above 100 which would invalidate current regime thesis",
+      "Reassess Maturity sector overweight as bond market dysfunction may favor defensive positioning over cyclical plays"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Slips Below $79K as Bond Market Revolt Prices Out Rate Cuts and Puts a Fed Hike Back on the Table",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T21:27:41+00:00",
+      "timeDisplay": "9:27 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:54f9da185094b:0/"
+    },
+    {
+      "title": "Gold traded below 4500 USD/t.oz",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T21:03:31+00:00",
+      "timeDisplay": "9:03 PM",
+      "link": "https://www.tradingview.com/news/te_news:551308:0-gold-traded-below-4500-usd-t-oz/"
+    },
+    {
+      "title": "Gold Hits 6-week Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T21:00:01+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/te_news:551307:0-gold-hits-6-week-low/"
+    },
+    {
+      "title": "AI-fueled rally slips on an oil slick",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T20:48:05+00:00",
+      "timeDisplay": "8:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S191:0-ai-fueled-rally-slips-on-an-oil-slick/"
+    },
     {
       "title": "Why Strategy (MSTR) Stock Is Nosediving",
       "source": "stockstory",
@@ -159,6 +186,14 @@
       "timestamp": "2026-05-15T17:30:52+00:00",
       "timeDisplay": "5:30 PM",
       "link": "https://www.tradingview.com/news/newsbtc:41f3f4825094b:0-what-s-going-on-with-ethereum-and-why-is-price-moving-this-way/"
+    },
+    {
+      "title": "Weekly Wrap: Crypto Falls Alongside Stocks As Treasury Yields Spike",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T17:22:00+00:00",
+      "timeDisplay": "5:22 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:e9a25c3c0094b:0-weekly-wrap-crypto-falls-alongside-stocks-as-treasury-yields-spike/"
     },
     {
       "title": "Apollo\u2019s Torsten Slok Warns Inflation Has Become A \u2018Very Serious\u2019 Problem \u2014 Says Markets Now Expect Fed Rate Hikes",
@@ -601,22 +636,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:52195e23a094b:0/"
     },
     {
-      "title": "Strategy\u2019s Preferred Stock Funds 11,707 Bitcoin Purchases",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T08:57:00+00:00",
-      "timeDisplay": "8:57 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:0d9ca0e0f094b:0-strategy-s-preferred-stock-funds-11-707-bitcoin-purchases/"
-    },
-    {
-      "title": "Gemini Stock Soars 25% As Winklevoss Twins Invest $100 Million",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T08:55:00+00:00",
-      "timeDisplay": "8:55 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:6e44694bb094b:0-gemini-stock-soars-25-as-winklevoss-twins-invest-100-million/"
-    },
-    {
       "title": "US 10Y Bond Yield Hits 51-week High",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -631,30 +650,6 @@
       "timestamp": "2026-05-15T07:40:00+00:00",
       "timeDisplay": "7:40 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260515002088:0/"
-    },
-    {
-      "title": "Why Is Crypto Going Up? Clarity Act Pushes XRP Price to 2-Month High as Bitcoin, Dogecoin and Ethereum Follow",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T07:36:45+00:00",
-      "timeDisplay": "7:36 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:58fadd4f6094b:0-why-is-crypto-going-up-clarity-act-pushes-xrp-price-to-2-month-high-as-bitcoin-dogecoin-and-ethereum-follow/"
-    },
-    {
-      "title": "Ethereum Crushes Rivals With Nearly 900000 Validators Worldwide, Leaves SOL And ADA Behind",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T07:22:50+00:00",
-      "timeDisplay": "7:22 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:f1de50b5a094b:0-ethereum-crushes-rivals-with-nearly-900000-validators-worldwide-leaves-sol-and-ada-behind/"
-    },
-    {
-      "title": "Ethereum TD Sequential Flashes Sell Signal \u2013 Is A New 50% Corrective Phase Starting?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T07:00:11+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:75f77f89c094b:0-ethereum-td-sequential-flashes-sell-signal-is-a-new-50-corrective-phase-starting/"
     }
   ]
 }

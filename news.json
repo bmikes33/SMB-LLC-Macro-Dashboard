@@ -1,56 +1,123 @@
 {
-  "lastUpdated": "2026-05-15T15:11:18.899328+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 03:11 PM UTC",
+  "lastUpdated": "2026-05-15T17:08:07.869409+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 05:08 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Dollar strength accelerated to near one-month highs on growing Fed rate hike expectations, driving yields to one-year highs and pressuring equities with Nasdaq leading declines. Manufacturing data came in surprisingly strong with industrial production beating expectations, while NY Fed manufacturing surveys showed significant price pressures with prices paid index jumping to 62.6 from 51.0.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Dollar strength approaching DXY 100 threshold while rising yields and equity weakness suggest markets are repricing away from reflation toward potential stagflationary dynamics.",
+    "macroSummary": "Markets are pricing in a more hawkish Fed as inflation concerns intensify, with Treasury yields surging to one-year highs and the dollar climbing for five straight days. Risk assets are under pressure with crypto selling off sharply and equities declining despite strong industrial production data showing manufacturing output beating expectations.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The combination of surging yields, dollar strength, and broad risk-off sentiment contradicts the bullish-cyclicals bias, while Apollo's warning that inflation has become 'very serious' suggests the stagflationary undertone is dominating.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "100",
-        "signal": "Dollar at nearly 1-month high with fifth consecutive day of gains on Fed rate hike bets"
-      },
-      {
-        "indicator": "Yields",
-        "level": "One-year high",
-        "signal": "Treasury yields surged to one-year highs on inflation concerns rattling markets"
+        "signal": "Dollar at nearly 1-month high with five-day rally as Fed rate hike bets grow"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar climbing for fifth straight day to near one-month highs on Fed rate hike expectations",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Treasury yields surge to one-year highs on inflation concerns, rattling equity markets",
+        "signal": "Apollo's Torsten Slok warns inflation has become 'very serious' problem with markets now expecting Fed rate hikes",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "NY Fed manufacturing prices paid index jumps to 62.6 from 51.0, signaling accelerating input cost pressures",
+        "signal": "Treasury yields surge to one-year high on inflation concerns with benchmark yield approaching breakout",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks fall with Nasdaq leading decline as yields jump, contradicting bullish-cyclical bias",
+        "signal": "Bitcoin dives under $79K as bond market triggers 3% crypto rout amid risk aversion",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Industrial production beats expectations at +0.7% vs +0.2% expected, supporting economic strength",
+        "signal": "US manufacturing output beats expectations at +0.6% vs +0.1% expected with capacity utilization rising",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Dollar climbing for fifth straight day approaching 100 threshold as Fed repricing accelerates",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as approach to 100 level could trigger dollar regime flip",
-      "Consider tightening BMNR put ladder strikes as crypto weakness emerges on risk-off sentiment",
-      "Reassess cyclical overweight as yields/inflation dynamics pressure growth sectors"
+      "Consider reducing BMNR cash-secured put exposure as crypto weakness may persist in risk-off environment",
+      "Monitor DXY 100 level closely as dollar strength challenges reflation setup",
+      "Reassess cyclicals overweight given yield surge and stagflation concerns gaining prominence"
     ]
   },
   "articles": [
+    {
+      "title": "Apollo\u2019s Torsten Slok Warns Inflation Has Become A \u2018Very Serious\u2019 Problem \u2014 Says Markets Now Expect Fed Rate Hikes",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T16:27:17+00:00",
+      "timeDisplay": "4:27 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:2101706f2094b:0/"
+    },
+    {
+      "title": "Benchmark Treasury yield knocks on the breakout door",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T16:18:52+00:00",
+      "timeDisplay": "4:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S134:0-benchmark-treasury-yield-knocks-on-the-breakout-door/"
+    },
+    {
+      "title": "Ethereum Network Registers Strongest Profit Realization In Weeks \u2014 What This Means",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T16:00:13+00:00",
+      "timeDisplay": "4:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:3298cd977094b:0-ethereum-network-registers-strongest-profit-realization-in-weeks-what-this-means/"
+    },
+    {
+      "title": "Ethereum analysts see \u2018downside risks\u2019 as bears eye 20% ETH price drop",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T15:55:05+00:00",
+      "timeDisplay": "3:55 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5dac1e166094b:0-ethereum-analysts-see-downside-risks-as-bears-eye-20-eth-price-drop/"
+    },
+    {
+      "title": "A hotter inflation backdrop, with a twist for stocks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T15:53:09+00:00",
+      "timeDisplay": "3:53 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S11R:0-a-hotter-inflation-backdrop-with-a-twist-for-stocks/"
+    },
+    {
+      "title": "Interview: Higher gold duty may accelerate shift towards ETFs, digital gold: Ajay Garg",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T15:33:59+00:00",
+      "timeDisplay": "3:33 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:27d1d5732094b:0-interview-higher-gold-duty-may-accelerate-shift-towards-etfs-digital-gold-ajay-garg/"
+    },
+    {
+      "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T15:28:00+00:00",
+      "timeDisplay": "3:28 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515004722:0/"
+    },
+    {
+      "title": "The producers: Industrial output, Empire State",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T15:21:43+00:00",
+      "timeDisplay": "3:21 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S10O:0-the-producers-industrial-output-empire-state/"
+    },
+    {
+      "title": "Bitcoin price dives under $79K as US bond market triggers 3% BTC price rout",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T15:21:21+00:00",
+      "timeDisplay": "3:21 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:f0cceb5d7094b:0-bitcoin-price-dives-under-79k-as-us-bond-market-triggers-3-btc-price-rout/"
+    },
     {
       "title": "Dollar climbs for fifth straight day as Fed rate hike bets grow",
       "source": "reuters",
@@ -74,6 +141,14 @@
       "timestamp": "2026-05-15T14:30:26+00:00",
       "timeDisplay": "2:30 PM",
       "link": "https://www.tradingview.com/news/newsbtc:e38c078ed094b:0-ethereum-price-reaching-4-000-isn-t-a-moonshot-here-s-what-it-is/"
+    },
+    {
+      "title": "Pre-Markets Slide as China Summit Ends Sans Major Commitments",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T14:26:00+00:00",
+      "timeDisplay": "2:26 PM",
+      "link": "https://www.tradingview.com/news/zacks:40c62f71e094b:0-pre-markets-slide-as-china-summit-ends-sans-major-commitments/"
     },
     {
       "title": "Dollar at Nearly 1-Month High",
@@ -252,14 +327,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260515004792:0/"
     },
     {
-      "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T12:41:00+00:00",
-      "timeDisplay": "12:41 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515004722:0/"
-    },
-    {
       "title": "Yields surge to May 2025 highs as oil prices\u00a0and inflation data rattle markets",
       "source": "reuters",
       "color": "#ff6d00",
@@ -404,14 +471,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:b3fd0cb14094b:0-strategy-s-main-bitcoin-acquisition-vehicle-sees-massive-1-5b-trading-explosion/"
     },
     {
-      "title": "A bad case of the bond blues",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T10:50:20+00:00",
-      "timeDisplay": "10:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S0P6:0-a-bad-case-of-the-bond-blues/"
-    },
-    {
       "title": "Indian rupee hits record low past 96/USD as oil surge fans economic worries",
       "source": "reuters",
       "color": "#ff6d00",
@@ -532,14 +591,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260515001634:0/"
     },
     {
-      "title": "Smarter Web Company Posts Total Bitcoin Holdings of 2,840 Bitcoin",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T06:24:36+00:00",
-      "timeDisplay": "6:24 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41R1L0:0-smarter-web-company-posts-total-bitcoin-holdings-of-2-840-bitcoin/"
-    },
-    {
       "title": "Ethereum Dips To $2,250 As Trader Profit-Taking Hits 3-Week High",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -588,68 +639,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:0756dfc0a094b:0-commodity-corner-crude-climbs-above-107-amid-hormuz-concerns-gold-slips-on-inflation-worries/"
     },
     {
-      "title": "Oil prices up 2% as Trump and Iran's comments dent peace hopes",
+      "title": "Oil prices more than 3% as fears of renewed US-Iran combat",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-15T03:11:56+00:00",
       "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-prices-up-2-as-trump-and-iran-s-comments-dent-peace-hopes/"
-    },
-    {
-      "title": "Nvidia earnings alone won't rescue the S&P 500 from its new sell signal",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T03:11:00+00:00",
-      "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260514012707:0/"
-    },
-    {
-      "title": "Ethereum Price Trapped Below $2,320, Recovery Hopes Start Fading",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T02:58:11+00:00",
-      "timeDisplay": "2:58 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:eb1be896c094b:0-ethereum-price-trapped-below-2-320-recovery-hopes-start-fading/"
-    },
-    {
-      "title": "US 10-Year Yield Hits 1-Year High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T02:45:02+00:00",
-      "timeDisplay": "2:45 AM",
-      "link": "https://www.tradingview.com/news/te_news:550935:0-us-10-year-yield-hits-1-year-high/"
-    },
-    {
-      "title": "US yields hit 11-month high on rate-hike bets, inflation fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T02:29:28+00:00",
-      "timeDisplay": "2:29 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41S083:0-us-yields-hit-11-month-high-on-rate-hike-bets-inflation-fears/"
-    },
-    {
-      "title": "The Jane Street Agenda? Ethereum (ETH) Identified As Next Key Target By Experts",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T02:25:08+00:00",
-      "timeDisplay": "2:25 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:e507f5e5a094b:0-the-jane-street-agenda-ethereum-eth-identified-as-next-key-target-by-experts/"
-    },
-    {
-      "title": "Asian shares fall as US yields hit one-year high",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T02:11:00+00:00",
-      "timeDisplay": "2:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R25M:0-asian-shares-fall-as-us-yields-hit-one-year-high/"
-    },
-    {
-      "title": "US oil poised to retest resistance at $103.97",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T02:07:39+00:00",
-      "timeDisplay": "2:07 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03D:0-us-oil-poised-to-retest-resistance-at-103-97/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-prices-more-than-3-as-fears-of-renewed-us-iran-combat/"
     }
   ]
 }

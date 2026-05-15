@@ -1,56 +1,141 @@
 {
-  "lastUpdated": "2026-05-15T19:04:23.829468+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 07:04 PM UTC",
+  "lastUpdated": "2026-05-15T20:39:50.037161+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 08:39 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing significant rate volatility with Treasury yields surging to one-year highs on inflation concerns, driving dollar strength for five consecutive days and sparking Fed rate hike repricing. Industrial production data came in hot at +0.7% vs +0.2% expected, while risk assets including Bitcoin and tech stocks declined on the bond market selloff.",
+    "macroSummary": "Markets are experiencing significant stress with Treasury yields surging to one-year highs above 4.6%, the dollar climbing for five straight days, and oil prices rising on inventory concerns. Equity markets are declining with tech leading losses, while Fed rate hike expectations are building as inflation concerns resurface.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached with Treasury yields at one-year highs, sustained dollar strength, and Apollo's Slok explicitly warning inflation has become 'very serious' with markets now expecting Fed hikes.",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached simultaneously with yields surging, dollar strengthening toward 100 level, and markets repricing Fed outlook more hawkishly than the reflation thesis anticipated.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar climbs for fifth straight day to nearly 1-month high as Fed rate hike bets grow"
+        "indicator": "US10Y",
+        "level": "> 4.6%",
+        "signal": "Treasury yields hit one-year highs with breakout momentum building"
       },
       {
-        "indicator": "Treasury Yields",
-        "level": "One-year high",
-        "signal": "Benchmark Treasury yields knock on breakout door, march higher on inflation concerns"
+        "indicator": "DXY",
+        "level": "approaching 100",
+        "signal": "Dollar at nearly one-month high climbing for fifth straight day"
+      },
+      {
+        "indicator": "Oil",
+        "level": "rising on inventory concerns",
+        "signal": "Oil futures settling higher on supply worries adding to inflation backdrop"
       }
     ],
     "keySignals": [
       {
-        "signal": "Apollo's Torsten Slok warns inflation has become 'very serious' problem with markets now expecting Fed rate hikes",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Treasury yields surge to one-year high rattling markets and driving bond selloff",
+        "signal": "Treasury yields surge to one-year highs above 4.6% rattling markets",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar climbing for fifth straight day approaching DXY 100 regime flip level",
+        "signal": "Dollar climbs for fifth straight day as Fed rate hike bets grow",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Industrial production beats significantly at +0.7% vs +0.2% expected, supporting reflationary data",
-        "tag": "SUPPORTS"
+        "signal": "US stocks fall with Nasdaq leading decline as yields jump",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Risk assets including Bitcoin and Nasdaq declining on rate volatility and inflation repricing",
+        "signal": "Markets repricing Fed outlook as Apollo warns inflation has become 'very serious' problem",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin and crypto markets declining with BTC diving under $79K on bond market stress",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY approaching 100 level for potential dollar regime flip",
-      "Watch for Treasury yield breakouts that could accelerate stagflationary pressure",
-      "Consider BMNR ladder adjustments if crypto correlation with tech selloff persists"
+      "Monitor BMNR ladder closely as crypto weakness and rising yields create dual pressure on ETH-linked positions",
+      "Prepare to reassess regime if DXY breaks 100 or 10Y yields sustain above 4.7%",
+      "Consider reducing cyclical exposure if multiple thresholds breach simultaneously"
     ]
   },
   "articles": [
+    {
+      "title": "Why Strategy (MSTR) Stock Is Nosediving",
+      "source": "stockstory",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:50:54+00:00",
+      "timeDisplay": "7:50 PM",
+      "link": "https://www.tradingview.com/news/stockstory:191a33b72094b:0-why-strategy-mstr-stock-is-nosediving/"
+    },
+    {
+      "title": "Oil Futures Settle Higher on Inventory Worries \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:35:00+00:00",
+      "timeDisplay": "7:35 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515008042:0/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures/Options - May 15",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:34:00+00:00",
+      "timeDisplay": "7:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515007996:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:34:00+00:00",
+      "timeDisplay": "7:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515008017:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futures",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:32:00+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515007940:0/"
+    },
+    {
+      "title": "Yields surge to one-year high as oil prices\u00a0and inflation data rattle markets",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T19:31:07+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S0SQ:0-yields-surge-to-one-year-high-as-oil-prices-and-inflation-data-rattle-markets/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures - May 15",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:31:00+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515007925:0/"
+    },
+    {
+      "title": "The Soaring Stock Market Is Just Getting Started, Don't Miss Out",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T19:17:00+00:00",
+      "timeDisplay": "7:17 PM",
+      "link": "https://www.tradingview.com/news/zacks:51404c6a0094b:0-the-soaring-stock-market-is-just-getting-started-don-t-miss-out/"
+    },
+    {
+      "title": "Dollar climbs for fifth straight day as Treasury yields surge",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T19:15:02+00:00",
+      "timeDisplay": "7:15 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S162:0-dollar-climbs-for-fifth-straight-day-as-treasury-yields-surge/"
+    },
+    {
+      "title": "US 10 Year Note Bond Yield traded above 4.6 percent",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T18:56:20+00:00",
+      "timeDisplay": "6:56 PM",
+      "link": "https://www.tradingview.com/news/te_news:551293:0-us-10-year-note-bond-yield-traded-above-4-6-percent/"
+    },
     {
       "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win \u2014 Barrons.com",
       "source": "dow-jones",
@@ -210,14 +295,6 @@
       "timestamp": "2026-05-15T13:47:47+00:00",
       "timeDisplay": "1:47 PM",
       "link": "https://www.tradingview.com/news/invezz:ca66debc2094b:0-ethereum-eyes-recovery-above-2-300-check-forecast/"
-    },
-    {
-      "title": "Yields surge to one-year high as oil prices\u00a0and inflation data rattle markets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T13:46:27+00:00",
-      "timeDisplay": "1:46 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S0N2:0-yields-surge-to-one-year-high-as-oil-prices-and-inflation-data-rattle-markets/"
     },
     {
       "title": "Canadian Manufacturing Rebounds And Not Just Due to Higher Oil Prices \u2014 Market Talk",
@@ -492,14 +569,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:b3fd0cb14094b:0-strategy-s-main-bitcoin-acquisition-vehicle-sees-massive-1-5b-trading-explosion/"
     },
     {
-      "title": "Indian rupee hits record low past 96/USD as oil surge fans economic worries",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T10:28:05+00:00",
-      "timeDisplay": "10:28 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41S0U9:0-indian-rupee-hits-record-low-past-96-usd-as-oil-surge-fans-economic-worries/"
-    },
-    {
       "title": "AI Helps Recover 5 BTC After 11 Years, CoinDCX CEO Issues Warning",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -548,14 +617,6 @@
       "link": "https://www.tradingview.com/news/cryptoprowl:6e44694bb094b:0-gemini-stock-soars-25-as-winklevoss-twins-invest-100-million/"
     },
     {
-      "title": "Bitcoin Falls on Iran War Tensions, U.S. Rate-Rise Bets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T08:47:00+00:00",
-      "timeDisplay": "8:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515002444:0/"
-    },
-    {
       "title": "US 10Y Bond Yield Hits 51-week High",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -594,62 +655,6 @@
       "timestamp": "2026-05-15T07:00:11+00:00",
       "timeDisplay": "7:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:75f77f89c094b:0-ethereum-td-sequential-flashes-sell-signal-is-a-new-50-corrective-phase-starting/"
-    },
-    {
-      "title": "Dollar Rises as Market Bets on Fed Rate Rises \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T06:47:00+00:00",
-      "timeDisplay": "6:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515001664:0/"
-    },
-    {
-      "title": "Eurozone Government Bond Yields Track Global Peers Higher \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T06:42:00+00:00",
-      "timeDisplay": "6:42 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515001634:0/"
-    },
-    {
-      "title": "Ethereum Dips To $2,250 As Trader Profit-Taking Hits 3-Week High",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T06:00:16+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:3ea623dbd094b:0-ethereum-dips-to-2-250-as-trader-profit-taking-hits-3-week-high/"
-    },
-    {
-      "title": "Middle East Breakthrough Still Seen as Elusive \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T05:59:00+00:00",
-      "timeDisplay": "5:59 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515001038:0/"
-    },
-    {
-      "title": "Higher Bond Yields Don't Seem a Concern for Risk Assets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T05:40:00+00:00",
-      "timeDisplay": "5:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515000967:0/"
-    },
-    {
-      "title": "Asian shares dive as US yields hit one-year high",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T05:38:32+00:00",
-      "timeDisplay": "5:38 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S05S:0-asian-shares-dive-as-us-yields-hit-one-year-high/"
-    },
-    {
-      "title": "Bond Markets Maintain Correlation With Spot Oil Markets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T05:21:00+00:00",
-      "timeDisplay": "5:21 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515000763:0/"
     }
   ]
 }

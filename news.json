@@ -1,51 +1,152 @@
 {
-  "lastUpdated": "2026-05-15T05:42:51.406804+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 05:42 AM UTC",
+  "lastUpdated": "2026-05-15T08:33:44.343647+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 08:33 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US yields hit 11-month highs driving dollar strength and spoiling equity performance globally, with Asian shares diving on rate hike bets and inflation fears. Oil climbs above $107 on Hormuz concerns and Trump's Iran comments while bond-oil correlation remains intact. Fed officials discuss balance sheet policy amid broad risk asset pressure from the yield surge.",
+    "macroSummary": "Oil prices are heading for strong weekly gains above $107 amid Iran nuclear tensions and Middle East concerns. US bond yields have hit 11-month highs driving the dollar to its largest weekly gain in two months, while Asian equities are selling off on rate hike fears and inflation worries.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines explicitly state yields are 'spoiling the equity party' and causing risk assets to dive, contradicting the bullish-cyclicals bias despite oil strength supporting the reflation narrative.",
+    "regimePressureReason": "Rising yields are causing equity selloffs in Asia and pressuring risk assets, while oil above $107 approaches the $115 stagflation threshold amid persistent Iran tensions.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "$115",
-        "signal": "Oil climbs above $107 amid Hormuz concerns, approaching stagflation threshold"
+        "signal": "Crude climbs above $107 amid Hormuz concerns with Iran nuclear tensions escalating"
+      },
+      {
+        "indicator": "US30Y",
+        "level": "5.10%",
+        "signal": "US yields hit 11-month high on rate-hike bets and inflation fears"
       }
     ],
     "keySignals": [
       {
-        "signal": "US yields hit 11-month high driving broad risk asset selloffs globally",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Asian shares dive as yield surge spoils equity party, challenging bullish-cyclicals view",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil climbs above $107 on Iran tensions and Hormuz flow concerns",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar posts largest weekly gain in two months on Fed hike bets",
+        "signal": "Oil trading above $107 with Iran nuclear tensions escalating approaches the $115 stagflation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bond-oil correlation maintains as both inflation fears and geopolitical risk drive rates higher",
+        "signal": "US 10-year yields hit 1-year high driving rate hike expectations and inflation fears",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Asian shares diving as rising US yields spoil the equity party contradicts bullish-cyclicals bias",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar posts largest weekly gain in two months on rising yields and rate hike bets",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bond yields maintain correlation with spot oil markets as geopolitical tensions persist",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto falls (BTC below $80k, ETH below $2320) amid broader risk-off from yields",
-      "Reassess Maturity overweight as yield surge creates duration pain across fixed income",
-      "Watch for VIX 22 break as equity weakness spreads from Asia to US markets"
+      "Monitor oil closely - above $107 and approaching $115 stagflation threshold with Iran tensions",
+      "Watch for 30Y yield breach of 5.10% as yields hit 11-month highs",
+      "Consider tightening BMNR put ladder strikes as crypto weakens amid rising yields"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Futures Head for Weekly Gain After Trump-Xi Summit \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T07:40:00+00:00",
+      "timeDisplay": "7:40 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515002088:0/"
+    },
+    {
+      "title": "Oil Heads for Strong Weekly Gain",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T07:04:25+00:00",
+      "timeDisplay": "7:04 AM",
+      "link": "https://www.tradingview.com/news/te_news:551040:0-oil-heads-for-strong-weekly-gain/"
+    },
+    {
+      "title": "Ethereum TD Sequential Flashes Sell Signal \u2013 Is A New 50% Corrective Phase Starting?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T07:00:11+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:75f77f89c094b:0-ethereum-td-sequential-flashes-sell-signal-is-a-new-50-corrective-phase-starting/"
+    },
+    {
+      "title": "Dollar Rises as Market Bets on Fed Rate Rises \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T06:47:00+00:00",
+      "timeDisplay": "6:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515001664:0/"
+    },
+    {
+      "title": "Eurozone Government Bond Yields Track Global Peers Higher \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T06:42:00+00:00",
+      "timeDisplay": "6:42 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515001634:0/"
+    },
+    {
+      "title": "Smarter Web Company Posts Total Bitcoin Holdings of 2,840 Bitcoin",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T06:24:36+00:00",
+      "timeDisplay": "6:24 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41R1L0:0-smarter-web-company-posts-total-bitcoin-holdings-of-2-840-bitcoin/"
+    },
+    {
+      "title": "Dollar rides rising US yields to largest weekly gain in two months",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T06:24:25+00:00",
+      "timeDisplay": "6:24 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S07C:0-dollar-rides-rising-us-yields-to-largest-weekly-gain-in-two-months/"
+    },
+    {
+      "title": "Oil price strain keeps rupee near record low, state banks' dollar sales cushion",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T06:08:37+00:00",
+      "timeDisplay": "6:08 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41S0FO:0-oil-price-strain-keeps-rupee-near-record-low-state-banks-dollar-sales-cushion/"
+    },
+    {
+      "title": "Top Altcoins To Stack As Bitcoin Price Rallies Above $80K",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T06:07:29+00:00",
+      "timeDisplay": "6:07 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f757c4e6b094b:0-top-altcoins-to-stack-as-bitcoin-price-rallies-above-80k/"
+    },
+    {
+      "title": "Ethereum Dips To $2,250 As Trader Profit-Taking Hits 3-Week High",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T06:00:16+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3ea623dbd094b:0-ethereum-dips-to-2-250-as-trader-profit-taking-hits-3-week-high/"
+    },
+    {
+      "title": "Why is Bitcoin stuck below $82K despite CLARITY Act breakthrough?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T05:59:23+00:00",
+      "timeDisplay": "5:59 AM",
+      "link": "https://www.tradingview.com/news/invezz:a074ee407094b:0-why-is-bitcoin-stuck-below-82k-despite-clarity-act-breakthrough/"
+    },
+    {
+      "title": "Middle East Breakthrough Still Seen as Elusive \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T05:59:00+00:00",
+      "timeDisplay": "5:59 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515001038:0/"
+    },
     {
       "title": "Higher Bond Yields Don't Seem a Concern for Risk Assets \u2014 Market Talk",
       "source": "dow-jones",
@@ -103,12 +204,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:0756dfc0a094b:0-commodity-corner-crude-climbs-above-107-amid-hormuz-concerns-gold-slips-on-inflation-worries/"
     },
     {
-      "title": "Oil rises after Trump says he is losing patience with Iran",
+      "title": "Oil gains after Trump says Xi agrees Iran cannot have nuclear weapons",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-15T03:11:56+00:00",
       "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-rises-after-trump-says-he-is-losing-patience-with-iran/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-gains-after-trump-says-xi-agrees-iran-cannot-have-nuclear-weapons/"
     },
     {
       "title": "Nvidia earnings alone won't rescue the S&P 500 from its new sell signal",
@@ -141,14 +242,6 @@
       "timestamp": "2026-05-15T02:45:02+00:00",
       "timeDisplay": "2:45 AM",
       "link": "https://www.tradingview.com/news/te_news:550935:0-us-10-year-yield-hits-1-year-high/"
-    },
-    {
-      "title": "Strive rallies 5.8% as it clears debt in Q1, unveils daily dividends",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T02:34:46+00:00",
-      "timeDisplay": "2:34 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b8562147b094b:0-strive-rallies-5-8-as-it-clears-debt-in-q1-unveils-daily-dividends/"
     },
     {
       "title": "Bitcoin Falls Below $80,000: Coinbase Sellers To Blame?",
@@ -439,14 +532,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:22ea8da3a094b:0-bitcoin-trades-at-a-discount-on-coinbase-is-a-76k-retest-next/"
     },
     {
-      "title": "Dollar Rallies on Signs of a Resilient US Economy",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T19:32:47+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/barchart:be2314d70094b:0-dollar-rallies-on-signs-of-a-resilient-us-economy/"
-    },
-    {
       "title": "Crude Oil Prices Supported by Closure of Hormuz",
       "source": "barchart",
       "color": "#00e5ff",
@@ -559,92 +644,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:6de3d274e094b:0/"
     },
     {
-      "title": "Kraken Moves kBTC to Chainlink as LayerZero Fallout Spreads",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:20:00+00:00",
-      "timeDisplay": "5:20 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:15909d79e094b:0-kraken-moves-kbtc-to-chainlink-as-layerzero-fallout-spreads/"
-    },
-    {
       "title": "Low-Income Countries Most Vulnerable to Lost Oil Demand \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-14T17:19:00+00:00",
       "timeDisplay": "5:19 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260514009002:0/"
-    },
-    {
-      "title": "Higher Interest Rates for Longer Seen Positive for Stablecoins \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:13:00+00:00",
-      "timeDisplay": "5:13 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260514008974:0/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK AT CONF ON CENTRAL BANKING: MONPOL INDEPENDENCE CRUCIAL FOR BEST CENBANK PERFORMANCE; TRANSPARENCY KEY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:02:00+00:00",
-      "timeDisplay": "5:02 PM",
-      "link": "https://www.tradingview.com/news/macenews:63eb30be8094b:0-cleve-fed-s-hammack-at-conf-on-central-banking-monpol-independence-crucial-for-best-cenbank-performance-transparency-key/"
-    },
-    {
-      "title": "Truist downgrades industrials, citing lagging price momentum",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T17:00:35+00:00",
-      "timeDisplay": "5:00 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R13U:0-truist-downgrades-industrials-citing-lagging-price-momentum/"
-    },
-    {
-      "title": "Sharplink CEO says ETH treasury firms are diverging from Strategy model as Ethereum\u2019s tokenization role expands",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T16:46:01+00:00",
-      "timeDisplay": "4:46 PM",
-      "link": "https://www.tradingview.com/news/the_block:2d0c27524094b:0-sharplink-ceo-says-eth-treasury-firms-are-diverging-from-strategy-model-as-ethereum-s-tokenization-role-expands/"
-    },
-    {
-      "title": "US ATLANTA FED GDPNOW MODEL ESTIMATES Q2 GROWTH RATE AT 4.0% AFTER LATEST ECONOMIC DATA, UP FROM 3.7% PREVIOUSLY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T16:14:00+00:00",
-      "timeDisplay": "4:14 PM",
-      "link": "https://www.tradingview.com/news/macenews:01bebc5e5094b:0-us-atlanta-fed-gdpnow-model-estimates-q2-growth-rate-at-4-0-after-latest-economic-data-up-from-3-7-previously/"
-    },
-    {
-      "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.71% IN LATEST WEEK VS. 5.72% IN PREVIOUS WEEK, 5.92% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T16:13:00+00:00",
-      "timeDisplay": "4:13 PM",
-      "link": "https://www.tradingview.com/news/macenews:453470255094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-71-in-latest-week-vs-5-72-in-previous-week-5-92-year-ago/"
-    },
-    {
-      "title": "US FREDDIE MAC 30-YEAR MORTGAGE RATE AVERAGES 6.36% IN LATEST WEEK VS. 6.37% IN PREVIOUS WEEK, 6.81% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T16:12:00+00:00",
-      "timeDisplay": "4:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:face1f9ac094b:0-us-freddie-mac-30-year-mortgage-rate-averages-6-36-in-latest-week-vs-6-37-in-previous-week-6-81-year-ago/"
-    },
-    {
-      "title": "Equities advance as Trump meets Xi, oil edges down\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T16:07:11+00:00",
-      "timeDisplay": "4:07 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R0WZ:0-equities-advance-as-trump-meets-xi-oil-edges-down/"
-    },
-    {
-      "title": "Who gets the first piece of SpaceX and how big is it?",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T15:46:08+00:00",
-      "timeDisplay": "3:46 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41R1KD:0-who-gets-the-first-piece-of-spacex-and-how-big-is-it/"
     }
   ]
 }

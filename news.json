@@ -1,56 +1,117 @@
 {
-  "lastUpdated": "2026-05-15T08:33:44.343647+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 08:33 AM UTC",
+  "lastUpdated": "2026-05-15T11:08:57.494062+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 11:08 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices are heading for strong weekly gains above $107 amid Iran nuclear tensions and Middle East concerns. US bond yields have hit 11-month highs driving the dollar to its largest weekly gain in two months, while Asian equities are selling off on rate hike fears and inflation worries.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Rising yields are causing equity selloffs in Asia and pressuring risk assets, while oil above $107 approaches the $115 stagflation threshold amid persistent Iran tensions.",
+    "macroSummary": "Global bond yields are surging to multi-month highs driven by inflation fears and rate hike expectations, with the US 10-year hitting a 51-week high. Equity markets are pulling back from record levels as rising yields create headwinds, while oil prices climb above $107 on Iran tensions and Middle East supply concerns.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The bond market is showing clear signs of dysfunction with yields at annual highs and equities breaking down, directly contradicting the bullish-cyclicals thesis and approaching multiple invalidation thresholds.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Crude climbs above $107 amid Hormuz concerns with Iran nuclear tensions escalating"
+        "indicator": "US10Y",
+        "level": "51-week high",
+        "signal": "Multiple articles confirm 10Y at annual highs, approaching long-duration stress levels"
       },
       {
-        "indicator": "US30Y",
-        "level": "5.10%",
-        "signal": "US yields hit 11-month high on rate-hike bets and inflation fears"
+        "indicator": "Oil (WTI)",
+        "level": "$107",
+        "signal": "Oil climbed above $107 on Iran tensions, nearing the $115 stagflation threshold"
+      },
+      {
+        "indicator": "DXY",
+        "level": "Rising strongly",
+        "signal": "Dollar posting largest weekly gain in two months on rising yields"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil trading above $107 with Iran nuclear tensions escalating approaches the $115 stagflation threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "US 10-year yields hit 1-year high driving rate hike expectations and inflation fears",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Asian shares diving as rising US yields spoil the equity party contradicts bullish-cyclicals bias",
+        "signal": "US 10-year yields hit 51-week high with global bond selloff accelerating",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar posts largest weekly gain in two months on rising yields and rate hike bets",
-        "tag": "SUPPORTS"
+        "signal": "Global equities dropping and S&P 500 showing new sell signals despite recent records",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond yields maintain correlation with spot oil markets as geopolitical tensions persist",
-        "tag": "NEUTRAL"
+        "signal": "Oil prices surging above $107 on Iran war tensions and Hormuz supply concerns",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Dollar strength accelerating with largest weekly gain in two months",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Asian markets diving as US yield surge creates global risk-off pressure",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil closely - above $107 and approaching $115 stagflation threshold with Iran tensions",
-      "Watch for 30Y yield breach of 5.10% as yields hit 11-month highs",
-      "Consider tightening BMNR put ladder strikes as crypto weakens amid rising yields"
+      "Reassess BMNR ladder strikes - rising yields creating headwinds for crypto assets",
+      "Consider defensive positioning in short book as equity sell signals emerge",
+      "Monitor bond market stress indicators closely - regime call appears stale"
     ]
   },
   "articles": [
+    {
+      "title": "A bad case of the bond blues",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T10:50:20+00:00",
+      "timeDisplay": "10:50 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S0P6:0-a-bad-case-of-the-bond-blues/"
+    },
+    {
+      "title": "Indian rupee hits record low past 96/USD as oil surge fans economic worries",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T10:28:05+00:00",
+      "timeDisplay": "10:28 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41S0U9:0-indian-rupee-hits-record-low-past-96-usd-as-oil-surge-fans-economic-worries/"
+    },
+    {
+      "title": "Global shares drop as bond yields jump on inflation worries",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T09:06:21+00:00",
+      "timeDisplay": "9:06 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S0I5:0-global-shares-drop-as-bond-yields-jump-on-inflation-worries/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Take A Breather After Record Rally: Why NVDA, MU, CBRS, FIG, GEMI, ONDS, ASTS Are In Focus",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T08:58:11+00:00",
+      "timeDisplay": "8:58 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:52195e23a094b:0/"
+    },
+    {
+      "title": "Dollar rides rising US yields to largest weekly gain in two months",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-15T08:51:05+00:00",
+      "timeDisplay": "8:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41S0K1:0-dollar-rides-rising-us-yields-to-largest-weekly-gain-in-two-months/"
+    },
+    {
+      "title": "Bitcoin Falls on Iran War Tensions, U.S. Rate-Rise Bets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T08:47:00+00:00",
+      "timeDisplay": "8:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515002443:0/"
+    },
+    {
+      "title": "US 10Y Bond Yield Hits 51-week High",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T08:28:17+00:00",
+      "timeDisplay": "8:28 AM",
+      "link": "https://www.tradingview.com/news/te_news:551105:0-us-10y-bond-yield-hits-51-week-high/"
+    },
     {
       "title": "Oil Futures Head for Weekly Gain After Trump-Xi Summit \u2014 Market Talk",
       "source": "dow-jones",
@@ -58,6 +119,22 @@
       "timestamp": "2026-05-15T07:40:00+00:00",
       "timeDisplay": "7:40 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260515002088:0/"
+    },
+    {
+      "title": "Why Is Crypto Going Up? Clarity Act Pushes XRP Price to 2-Month High as Bitcoin, Dogecoin and Ethereum Follow",
+      "source": "financemagnates",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T07:36:45+00:00",
+      "timeDisplay": "7:36 AM",
+      "link": "https://www.tradingview.com/news/financemagnates:58fadd4f6094b:0-why-is-crypto-going-up-clarity-act-pushes-xrp-price-to-2-month-high-as-bitcoin-dogecoin-and-ethereum-follow/"
+    },
+    {
+      "title": "Ethereum Crushes Rivals With Nearly 900000 Validators Worldwide, Leaves SOL And ADA Behind",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T07:22:50+00:00",
+      "timeDisplay": "7:22 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f1de50b5a094b:0-ethereum-crushes-rivals-with-nearly-900000-validators-worldwide-leaves-sol-and-ada-behind/"
     },
     {
       "title": "Oil Heads for Strong Weekly Gain",
@@ -98,14 +175,6 @@
       "timestamp": "2026-05-15T06:24:36+00:00",
       "timeDisplay": "6:24 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41R1L0:0-smarter-web-company-posts-total-bitcoin-holdings-of-2-840-bitcoin/"
-    },
-    {
-      "title": "Dollar rides rising US yields to largest weekly gain in two months",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T06:24:25+00:00",
-      "timeDisplay": "6:24 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S07C:0-dollar-rides-rising-us-yields-to-largest-weekly-gain-in-two-months/"
     },
     {
       "title": "Oil price strain keeps rupee near record low, state banks' dollar sales cushion",
@@ -204,12 +273,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:0756dfc0a094b:0-commodity-corner-crude-climbs-above-107-amid-hormuz-concerns-gold-slips-on-inflation-worries/"
     },
     {
-      "title": "Oil gains after Trump says Xi agrees Iran cannot have nuclear weapons",
+      "title": "Oil prices up 3% after Trump says he is losing patience with Iran",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-15T03:11:56+00:00",
       "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-gains-after-trump-says-xi-agrees-iran-cannot-have-nuclear-weapons/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-prices-up-3-after-trump-says-he-is-losing-patience-with-iran/"
     },
     {
       "title": "Nvidia earnings alone won't rescue the S&P 500 from its new sell signal",
@@ -586,70 +655,6 @@
       "timestamp": "2026-05-14T18:44:00+00:00",
       "timeDisplay": "6:44 PM",
       "link": "https://www.tradingview.com/news/macenews:76b07ef18094b:0-inflation-making-fed-officials-increasingly-prone-to-keep-funds-rate-as-is-if-not-higher/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A:",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T18:11:00+00:00",
-      "timeDisplay": "6:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:84164acdd094b:0-cleve-fed-s-hammack-q-a/"
-    },
-    {
-      "title": "Strive shares jump on \u2018daily dividend company\u2019 strategy as firm goes debt free",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:54:48+00:00",
-      "timeDisplay": "5:54 PM",
-      "link": "https://www.tradingview.com/news/the_block:f5df62b79094b:0-strive-shares-jump-on-daily-dividend-company-strategy-as-firm-goes-debt-free/"
-    },
-    {
-      "title": "JPMorgan says ether and altcoins could keep underperforming bitcoin without stronger activity",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:42:55+00:00",
-      "timeDisplay": "5:42 PM",
-      "link": "https://www.tradingview.com/news/the_block:dc95cad36094b:0-jpmorgan-says-ether-and-altcoins-could-keep-underperforming-bitcoin-without-stronger-activity/"
-    },
-    {
-      "title": "Clarity Act Gets Major Boost as Crypto Bill Gets Bipartisan Support \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:35:00+00:00",
-      "timeDisplay": "5:35 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260514007457:0/"
-    },
-    {
-      "title": "Analyst Says Avoid Bitcoin At All Costs; Here\u2019s What To Do Instead As 50% Crash Looms",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:30:00+00:00",
-      "timeDisplay": "5:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:99c7fc2e8094b:0-analyst-says-avoid-bitcoin-at-all-costs-here-s-what-to-do-instead-as-50-crash-looms/"
-    },
-    {
-      "title": "Pessimism climbs while optimism edges up - AAII",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-14T17:27:05+00:00",
-      "timeDisplay": "5:27 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41R144:0-pessimism-climbs-while-optimism-edges-up-aaii/"
-    },
-    {
-      "title": "COIN Stock Hits Three-Month High Alongside Bitcoin Rally After Senate Panel Advances CLARITY Act",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:26:51+00:00",
-      "timeDisplay": "5:26 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:6de3d274e094b:0/"
-    },
-    {
-      "title": "Low-Income Countries Most Vulnerable to Lost Oil Demand \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-14T17:19:00+00:00",
-      "timeDisplay": "5:19 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260514009002:0/"
     }
   ]
 }

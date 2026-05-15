@@ -1,20 +1,25 @@
 {
-  "lastUpdated": "2026-05-15T17:08:07.869409+00:00",
-  "lastUpdatedDisplay": "May 15, 2026 \u2014 05:08 PM UTC",
+  "lastUpdated": "2026-05-15T19:04:23.829468+00:00",
+  "lastUpdatedDisplay": "May 15, 2026 \u2014 07:04 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are pricing in a more hawkish Fed as inflation concerns intensify, with Treasury yields surging to one-year highs and the dollar climbing for five straight days. Risk assets are under pressure with crypto selling off sharply and equities declining despite strong industrial production data showing manufacturing output beating expectations.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The combination of surging yields, dollar strength, and broad risk-off sentiment contradicts the bullish-cyclicals bias, while Apollo's warning that inflation has become 'very serious' suggests the stagflationary undertone is dominating.",
+    "macroSummary": "Markets are experiencing significant rate volatility with Treasury yields surging to one-year highs on inflation concerns, driving dollar strength for five consecutive days and sparking Fed rate hike repricing. Industrial production data came in hot at +0.7% vs +0.2% expected, while risk assets including Bitcoin and tech stocks declined on the bond market selloff.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached with Treasury yields at one-year highs, sustained dollar strength, and Apollo's Slok explicitly warning inflation has become 'very serious' with markets now expecting Fed hikes.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "100",
-        "signal": "Dollar at nearly 1-month high with five-day rally as Fed rate hike bets grow"
+        "signal": "Dollar climbs for fifth straight day to nearly 1-month high as Fed rate hike bets grow"
+      },
+      {
+        "indicator": "Treasury Yields",
+        "level": "One-year high",
+        "signal": "Benchmark Treasury yields knock on breakout door, march higher on inflation concerns"
       }
     ],
     "keySignals": [
@@ -23,29 +28,53 @@
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields surge to one-year high on inflation concerns with benchmark yield approaching breakout",
-        "tag": "CONTRADICTS"
+        "signal": "Treasury yields surge to one-year high rattling markets and driving bond selloff",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin dives under $79K as bond market triggers 3% crypto rout amid risk aversion",
-        "tag": "CONTRADICTS"
+        "signal": "Dollar climbing for fifth straight day approaching DXY 100 regime flip level",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US manufacturing output beats expectations at +0.6% vs +0.1% expected with capacity utilization rising",
+        "signal": "Industrial production beats significantly at +0.7% vs +0.2% expected, supporting reflationary data",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar climbing for fifth straight day approaching 100 threshold as Fed repricing accelerates",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Risk assets including Bitcoin and Nasdaq declining on rate volatility and inflation repricing",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Consider reducing BMNR cash-secured put exposure as crypto weakness may persist in risk-off environment",
-      "Monitor DXY 100 level closely as dollar strength challenges reflation setup",
-      "Reassess cyclicals overweight given yield surge and stagflation concerns gaining prominence"
+      "Monitor DXY approaching 100 level for potential dollar regime flip",
+      "Watch for Treasury yield breakouts that could accelerate stagflationary pressure",
+      "Consider BMNR ladder adjustments if crypto correlation with tech selloff persists"
     ]
   },
   "articles": [
+    {
+      "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T18:52:00+00:00",
+      "timeDisplay": "6:52 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260515004722:0/"
+    },
+    {
+      "title": "Drake References Bitcoin in His New \u201cIceman\u201d Album",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T17:36:30+00:00",
+      "timeDisplay": "5:36 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:3e3591ed8094b:0-drake-references-bitcoin-in-his-new-iceman-album/"
+    },
+    {
+      "title": "What\u2019s Going On With Ethereum And Why Is Price Moving This Way?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-15T17:30:52+00:00",
+      "timeDisplay": "5:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:41f3f4825094b:0-what-s-going-on-with-ethereum-and-why-is-price-moving-this-way/"
+    },
     {
       "title": "Apollo\u2019s Torsten Slok Warns Inflation Has Become A \u2018Very Serious\u2019 Problem \u2014 Says Markets Now Expect Fed Rate Hikes",
       "source": "stocktwits",
@@ -93,14 +122,6 @@
       "timestamp": "2026-05-15T15:33:59+00:00",
       "timeDisplay": "3:33 PM",
       "link": "https://www.tradingview.com/news/moneycontrol:27d1d5732094b:0-interview-higher-gold-duty-may-accelerate-shift-towards-etfs-digital-gold-ajay-garg/"
-    },
-    {
-      "title": "Coinbase, Robinhood Stocks Lose Momentum After Big Crypto Bill Win \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T15:28:00+00:00",
-      "timeDisplay": "3:28 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515004722:0/"
     },
     {
       "title": "The producers: Industrial output, Empire State",
@@ -532,7 +553,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-15T08:47:00+00:00",
       "timeDisplay": "8:47 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260515002443:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260515002444:0/"
     },
     {
       "title": "US 10Y Bond Yield Hits 51-week High",
@@ -629,22 +650,6 @@
       "timestamp": "2026-05-15T05:21:00+00:00",
       "timeDisplay": "5:21 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260515000763:0/"
-    },
-    {
-      "title": "Commodity Corner: Crude climbs above $107 amid Hormuz concerns; gold slips on inflation worries",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-15T03:29:47+00:00",
-      "timeDisplay": "3:29 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:0756dfc0a094b:0-commodity-corner-crude-climbs-above-107-amid-hormuz-concerns-gold-slips-on-inflation-worries/"
-    },
-    {
-      "title": "Oil prices more than 3% as fears of renewed US-Iran combat",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-15T03:11:56+00:00",
-      "timeDisplay": "3:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41S03V:0-oil-prices-more-than-3-as-fears-of-renewed-us-iran-combat/"
     }
   ]
 }

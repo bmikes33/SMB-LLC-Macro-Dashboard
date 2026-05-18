@@ -1,51 +1,115 @@
 {
-  "lastUpdated": "2026-05-18T16:20:24.287599+00:00",
-  "lastUpdatedDisplay": "May 18, 2026 \u2014 04:20 PM UTC",
+  "lastUpdated": "2026-05-18T18:18:09.409104+00:00",
+  "lastUpdatedDisplay": "May 18, 2026 \u2014 06:18 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with yields rising early then reversing, oil elevated on Iran-Hormuz tensions but retreating on sanctions deal reports, and crypto experiencing significant selling pressure with Bitcoin near month lows. Dollar retreated to 99 on Iran deal hopes while housing data shows modest improvement despite affordability challenges from higher rates.",
+    "macroSummary": "Markets show mixed risk-off signals with crypto experiencing major outflows ($1B) and liquidations ($800M), while oil rebounds 2% on Iran-Hormuz supply concerns and Treasury yields reverse early declines amid fading rate cut hopes. Tech shares slide ahead of Nvidia earnings with chip stocks leading broad equity weakness.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran tensions support the oil shock narrative but dollar weakness and yield reversals contradict reflation pressure, while crypto weakness suggests broader risk-off undertones emerging.",
+    "regimePressureReason": "Headlines split between reflation signals (rising oil, climbing yields, physical asset demand) and emerging risk-off pressure (crypto bloodbath, $1B crypto outflows, tech weakness).",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar retreated to 99 on Iran sanctions deal reports, approaching regime flip threshold"
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "Crypto funds see risk-off sentiment revival, $1B outflows suggest vol pickup"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar retreated to 99 on Iran sanctions deal hopes, testing the 100 regime flip threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Crypto markets in bloodbath with $800M wiped out, Bitcoin at month lows and Ethereum at $2K suggesting risk-off sentiment",
+        "signal": "Crypto funds see $1B outflows as Iran tensions revive risk-off sentiment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields reversed early decline then rose again, showing conflicted fixed income positioning",
-        "tag": "NEUTRAL"
+        "signal": "$800M crypto liquidations with Bitcoin hitting month-low suggests risk asset stress",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil elevated on Hormuz closure but retreating on sanctions waiver reports, creating uncertainty around the Iran shock premium",
-        "tag": "MIXED"
-      },
-      {
-        "signal": "NAHB housing sentiment improved modestly but builders cite higher rates and gas prices as demand dampeners",
+        "signal": "Oil rebounds 2% to two-week high on Iran war supply concerns supporting commodity reflation",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Treasury yields reverse early decline with fading rate cut hopes reinforcing hawkish backdrop",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Dollar retreats on US-Iran sanctions deal report potentially easing geopolitical premium",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor BMNR performance closely as crypto weakness at $2K ETH could pressure the trust below $20 support",
-      "Watch DXY 100 level closely - break below could invalidate reflation regime entirely",
-      "Consider tightening stops on cyclical positions given emerging risk-off signals in crypto and mixed yield action"
+      "BMNR ladder faces dual pressure from crypto risk-off and ETH weakness - monitor $20 level closely",
+      "Watch for VIX break above 22 as crypto stress could spillover to broader risk assets",
+      "Iran-oil dynamic remains supportive but dollar retreat on sanctions deal rumors bears monitoring"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Slides As $590 Million In Bullish Bets Unwind",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T17:32:21+00:00",
+      "timeDisplay": "5:32 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:a746823fd094b:0-bitcoin-slides-as-590-million-in-bullish-bets-unwind/"
+    },
+    {
+      "title": "Tokenized Assets Expected to be Over $1T By 2030 \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T17:22:00+00:00",
+      "timeDisplay": "5:22 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518006337:0/"
+    },
+    {
+      "title": "Stock indexes ease with tech shares while oil prices gain\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T17:21:57+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V0Z7:0-stock-indexes-ease-with-tech-shares-while-oil-prices-gain/"
+    },
+    {
+      "title": "Crypto funds see $1B in outflows as Iran tensions revive risk-off sentiment",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T17:01:07+00:00",
+      "timeDisplay": "5:01 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5d9559421094b:0-crypto-funds-see-1b-in-outflows-as-iran-tensions-revive-risk-off-sentiment/"
+    },
+    {
+      "title": "Chips crumble ahead of Nvidia's Wednesday report",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T16:57:11+00:00",
+      "timeDisplay": "4:57 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V112:0-chips-crumble-ahead-of-nvidia-s-wednesday-report/"
+    },
+    {
+      "title": "Commodities Higher as Traders Want Physical Assets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T16:57:00+00:00",
+      "timeDisplay": "4:57 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518006206:0/"
+    },
+    {
+      "title": "Two more Ethereum Foundation researchers resign amid wave of departures",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T16:50:23+00:00",
+      "timeDisplay": "4:50 PM",
+      "link": "https://www.tradingview.com/news/the_block:303223369094b:0-two-more-ethereum-foundation-researchers-resign-amid-wave-of-departures/"
+    },
+    {
+      "title": "Wall St extends losses as chip stocks slide, Treasury yields climb",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T16:37:01+00:00",
+      "timeDisplay": "4:37 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41V1FF:0-wall-st-extends-losses-as-chip-stocks-slide-treasury-yields-climb/"
+    },
     {
       "title": "U.S. stocks retreat from early gains as yields rise",
       "source": "reuters",
@@ -61,6 +125,14 @@
       "timestamp": "2026-05-18T16:11:01+00:00",
       "timeDisplay": "4:11 PM",
       "link": "https://www.tradingview.com/news/stocktwits:9288919d1094b:0/"
+    },
+    {
+      "title": "Govt officials in agri and rural development ministries not to buy gold for a year",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T16:09:01+00:00",
+      "timeDisplay": "4:09 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:7a9ca61ae094b:0-govt-officials-in-agri-and-rural-development-ministries-not-to-buy-gold-for-a-year/"
     },
     {
       "title": "Bitcoin sell-off continues, KITE bucks bearish market with 10% gains",
@@ -143,6 +215,14 @@
       "link": "https://www.tradingview.com/news/coinpedia:25aa8522b094b:0-bitcoin-repeating-previous-breakdown-structure-is-btc-price-headed-toward-55k-next/"
     },
     {
+      "title": "Yields on longer-dated bonds retreat from overnight year-plus highs",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T14:51:46+00:00",
+      "timeDisplay": "2:51 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41V0JU:0-yields-on-longer-dated-bonds-retreat-from-overnight-year-plus-highs/"
+    },
+    {
       "title": "Dollar retreats on report of US-Iran sanctions deal",
       "source": "reuters",
       "color": "#ff6d00",
@@ -191,12 +271,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260518004872:0/"
     },
     {
-      "title": "Oil rises as Iran war supply concerns outweigh sanctions waiver report",
+      "title": "Oil prices rise 2% to two-week high on Iran war supply concerns",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-18T14:33:27+00:00",
       "timeDisplay": "2:33 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41U078:0-oil-rises-as-iran-war-supply-concerns-outweigh-sanctions-waiver-report/"
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41U078:0-oil-prices-rise-2-to-two-week-high-on-iran-war-supply-concerns/"
     },
     {
       "title": "What scenarios could force the Fed to hike rates this year?\u00a0",
@@ -487,22 +567,6 @@
       "link": "https://www.tradingview.com/news/tradingview:1272c5d8d1801:0-key-facts-bitcoin-76k-25-27m-20x-whale-long-etfs-1b/"
     },
     {
-      "title": "Bitcoin\u2019s $100,000 Target Hits a Wall as Market Reality Undercuts 3 Key Bullish Catalysts",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T12:08:12+00:00",
-      "timeDisplay": "12:08 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:e37346ee3094b:0-bitcoin-s-100-000-target-hits-a-wall-as-market-reality-undercuts-3-key-bullish-catalysts/"
-    },
-    {
-      "title": "\u2018Big dot energy\u2019: Michael Saylor\u2019s Strategy buys another 24,869 BTC for $2 billion as total holdings top 4% of bitcoin supply",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T12:07:08+00:00",
-      "timeDisplay": "12:07 PM",
-      "link": "https://www.tradingview.com/news/the_block:de1acf4b3094b:0-big-dot-energy-michael-saylor-s-strategy-buys-another-24-869-btc-for-2-billion-as-total-holdings-top-4-of-bitcoin-supply/"
-    },
-    {
       "title": "Dollar dips; rising oil and bond yields unsettle investors",
       "source": "reuters",
       "color": "#ff6d00",
@@ -517,14 +581,6 @@
       "timestamp": "2026-05-18T11:53:51+00:00",
       "timeDisplay": "11:53 AM",
       "link": "https://www.tradingview.com/news/dpa_afx:fc5de2cac774f:0-glenfarne-conocophillips-sign-gas-supply-precedent-agreement-for-alaska-lng/"
-    },
-    {
-      "title": "Why Bitcoin's Clarity Act Gains Have Quickly Been Wiped Out \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T11:41:00+00:00",
-      "timeDisplay": "11:41 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260518002770:0/"
     },
     {
       "title": "Global stocks retreat and bonds wilt as oil climbs",
@@ -589,62 +645,6 @@
       "timestamp": "2026-05-18T10:22:29+00:00",
       "timeDisplay": "10:22 AM",
       "link": "https://www.tradingview.com/news/moneycontrol:aa0af668f094b:0-investors-can-now-trade-electronic-gold-receipts-on-nse-5-key-things-to-know/"
-    },
-    {
-      "title": "Oil Prices Largely Explain Movements in Bond Markets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T09:49:00+00:00",
-      "timeDisplay": "9:49 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260518001639:0/"
-    },
-    {
-      "title": "Crude Oil Is Crushing Ethereum Right Now \u2013 Tom Lee Says ETH\u2019s \u2018Biggest Headwind\u2019 Is Sitting In The Persian Gulf",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T09:42:02+00:00",
-      "timeDisplay": "9:42 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:0a4cea8e0094b:0/"
-    },
-    {
-      "title": "Why Is Crypto Going Down? Bitcoin, XRP Price , Ethereum and Dogecoin Fall for 4th Straight Session",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T09:18:25+00:00",
-      "timeDisplay": "9:18 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:6ebeb8f73094b:0-why-is-crypto-going-down-bitcoin-xrp-price-ethereum-and-dogecoin-fall-for-4th-straight-session/"
-    },
-    {
-      "title": "Gold Falls as Middle East Fears Grow \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T07:56:00+00:00",
-      "timeDisplay": "7:56 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260518001002:0/"
-    },
-    {
-      "title": "Oil Trims Earlier Gains But Risks Remain High \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T07:48:00+00:00",
-      "timeDisplay": "7:48 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260518000981:0/"
-    },
-    {
-      "title": "Dollar dips; rising oil and bond yields temper losses",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-18T07:12:16+00:00",
-      "timeDisplay": "7:12 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V0BQ:0-dollar-dips-rising-oil-and-bond-yields-temper-losses/"
-    },
-    {
-      "title": "Verus Ethereum bridge reportedly exploited for $11.6M in latest DeFi attack",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T07:11:30+00:00",
-      "timeDisplay": "7:11 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:5e8d72b6e094b:0-verus-ethereum-bridge-reportedly-exploited-for-11-6m-in-latest-defi-attack/"
     }
   ]
 }

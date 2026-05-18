@@ -1,45 +1,80 @@
 {
-  "lastUpdated": "2026-05-18T21:45:31.935141+00:00",
-  "lastUpdatedDisplay": "May 18, 2026 \u2014 09:45 PM UTC",
+  "lastUpdated": "2026-05-18T22:57:51.727341+00:00",
+  "lastUpdatedDisplay": "May 18, 2026 \u2014 10:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are experiencing risk-off sentiment driven by escalating Iran tensions and rising Treasury yields, with tech stocks and crypto leading declines while oil prices gain. Trump announced holding off on planned Iran strikes due to negotiations, but geopolitical tensions continue pressuring risk assets with crypto seeing $1B outflows and Bitcoin falling below $77K.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Iran tensions are driving classic risk-off behavior in equities and crypto, but oil strength and rising yields align with the reflation theme, creating cross-currents rather than clear regime challenge.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets show risk-off behavior with tech and crypto selling off while oil prices climb on Iran tensions, despite Trump announcing he's holding off on planned Iran strikes due to ongoing negotiations. Treasury yields are rising on the long end while foreign Treasury purchases remain strong, and crypto sees $1B in outflows amid geopolitical uncertainty.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Risk-off sentiment is emerging with crypto outflows, tech selling, and flight to physical assets, while oil spikes suggest geopolitical premium building despite Iran strike delay.",
+    "thresholdWatches": [
+      {
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "Risk-off sentiment emerging with crypto $1B outflows and tech selling but no VIX level specified in articles"
+      },
+      {
+        "indicator": "Oil (WTI)",
+        "level": "$115",
+        "signal": "Oil climbing to two-week highs with Strait of Hormuz remaining closed, no reopening in sight"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Crypto markets experiencing massive risk-off with $1B outflows and Bitcoin tumbling below $77K on Iran tensions",
+        "signal": "Crypto funds see $1B outflows as Iran tensions revive risk-off sentiment, contradicting bullish-cyclical positioning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Tech stocks and Nasdaq leading equity declines as Treasury yields climb, showing growth stock pressure",
+        "signal": "Tech stocks and Nasdaq leading declines while Treasury yields climb, showing growth-defensive rotation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices gaining and oil stocks rising despite some easing, maintaining energy sector strength",
+        "signal": "Oil prices climbing with physical asset demand rising as traders seek tangible exposure amid geopolitical uncertainty",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Foreign Treasury holdings show China reducing positions while UK increases, suggesting demand shifts",
+        "signal": "Bitcoin tumbles below $77K with $590M in bullish bets unwinding on Trump's Iran warning",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Strong foreign Treasury demand with $81.3B net purchases suggests continued safe-haven flows",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Fed's Goolsbee states inflation is 'getting worse' ahead of key policy transition",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto risk-off could accelerate ETH weakness and create better entry points",
-      "Consider reducing cyclical exposure if risk-off sentiment persists beyond Iran headline risk",
-      "Watch for VIX break above 22 if geopolitical tensions escalate further"
+      "Monitor BMNR ladder closely as crypto risk-off could accelerate ETH weakness and improve put strike entries",
+      "Consider reducing cyclical exposure as risk-off sentiment builds across crypto and tech",
+      "Watch oil threshold carefully - sustained move toward $115 would confirm stagflation tilt dominance"
     ]
   },
   "articles": [
+    {
+      "title": "Stocks mostly ease with tech shares while oil prices climb to two-week high",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T22:09:21+00:00",
+      "timeDisplay": "10:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V194:0-stocks-mostly-ease-with-tech-shares-while-oil-prices-climb-to-two-week-high/"
+    },
+    {
+      "title": "Ethereum\u2019s onchain conviction grows as staked ETH rises, even as price underperforms",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T21:51:04+00:00",
+      "timeDisplay": "9:51 PM",
+      "link": "https://www.tradingview.com/news/the_block:052ebcc93094b:0-ethereum-s-onchain-conviction-grows-as-staked-eth-rises-even-as-price-underperforms/"
+    },
+    {
+      "title": "Bitcoin lost its hold on $80K, but three events may send it back sooner than markets expect",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T21:47:48+00:00",
+      "timeDisplay": "9:47 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:58ad3acde094b:0-bitcoin-lost-its-hold-on-80k-but-three-events-may-send-it-back-sooner-than-markets-expect/"
+    },
     {
       "title": "Ohio man sentenced to 9 years for running $10 million crypto Ponzi scheme",
       "source": "the_block",
@@ -473,6 +508,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260518004872:0/"
     },
     {
+      "title": "Dollar Falls as Crude Prices Slide and Stocks Rebound",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T14:34:27+00:00",
+      "timeDisplay": "2:34 PM",
+      "link": "https://www.tradingview.com/news/barchart:8477d6f14094b:0-dollar-falls-as-crude-prices-slide-and-stocks-rebound/"
+    },
+    {
       "title": "Oil prices rise 3% to two-week high on Iran war supply concerns",
       "source": "reuters",
       "color": "#ff6d00",
@@ -577,36 +620,12 @@
       "link": "https://www.tradingview.com/news/macenews:aa63548ec094b:0-us-nahb-32-of-home-builders-offer-a-price-cut-in-may-vs-36-in-april-37-in-may-2025/"
     },
     {
-      "title": "US NATL ASSN OF HOMEBUILDERS/WELLS FARGO HOUSING MARKET INDEX 37 IN MAY VS 34 IN APRIL; 34 IN MAY 2025 (VS. 34 MARKETS EXPECTED FOR MAY 2026)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:a82d034ff094b:0-us-natl-assn-of-homebuilders-wells-fargo-housing-market-index-37-in-may-vs-34-in-april-34-in-may-2025-vs-34-markets-expected-for-may-2026/"
-    },
-    {
-      "title": "Dollar Index Retreats to 99",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:55:04+00:00",
-      "timeDisplay": "1:55 PM",
-      "link": "https://www.tradingview.com/news/te_news:551631:0-dollar-index-retreats-to-99/"
-    },
-    {
       "title": "Gold Rebounds on Iran Deal Hopes",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-05-18T13:50:02+00:00",
       "timeDisplay": "1:50 PM",
       "link": "https://www.tradingview.com/news/te_news:551628:0-gold-rebounds-on-iran-deal-hopes/"
-    },
-    {
-      "title": "Saylor\u2019s Strategy scoops $2B Bitcoin, holdings reach 843,738 BTC",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:44:29+00:00",
-      "timeDisplay": "1:44 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a8824df96094b:0-saylor-s-strategy-scoops-2b-bitcoin-holdings-reach-843-738-btc/"
     },
     {
       "title": "Treasury Yields Ease",
@@ -631,14 +650,6 @@
       "timestamp": "2026-05-18T13:28:01+00:00",
       "timeDisplay": "1:28 PM",
       "link": "https://www.tradingview.com/news/the_block:1a0d780ad094b:0-bitmine-lifts-ether-treasury-to-5-28-million-eth-as-total-holdings-top-12-billion/"
-    },
-    {
-      "title": "Weekly crypto ETP outflows top $1B, ending six-week positive streak amid Iran-linked risk-off: CoinShares",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:22:46+00:00",
-      "timeDisplay": "1:22 PM",
-      "link": "https://www.tradingview.com/news/the_block:7b8d73388094b:0-weekly-crypto-etp-outflows-top-1b-ending-six-week-positive-streak-amid-iran-linked-risk-off-coinshares/"
     }
   ]
 }

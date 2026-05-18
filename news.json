@@ -1,56 +1,221 @@
 {
-  "lastUpdated": "2026-05-18T06:00:21.971300+00:00",
-  "lastUpdatedDisplay": "May 18, 2026 \u2014 06:00 AM UTC",
-  "articleCount": 50,
+  "lastUpdated": "2026-05-18T10:04:20.640309+00:00",
+  "lastUpdatedDisplay": "May 18, 2026 \u2014 10:04 AM UTC",
+  "articleCount": 61,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Global markets are selling off as oil climbs above $112 amid escalating US-Iran tensions and prospects of prolonged Strait of Hormuz closure. Bond yields are surging with US 10-year hitting 16-month highs, while the dollar strengthens to 5-week highs as markets price in Fed rate hike bets due to renewed inflation concerns.",
+    "macroSummary": "Oil prices are climbing due to escalating Iran war tensions, driving bond yields higher and pressuring risk assets including equities and crypto. Bitcoin fell to $77K and Ethereum is experiencing selling pressure, while the dollar remains strong on safe haven demand and rising rate expectations.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil surge past $112 is approaching the $115 stagflation threshold while bond rout and renewed inflation fears are pushing the setup away from clean reflation toward stagflationary stress.",
+    "regimePressureReason": "Multiple headlines show bonds buckling under oil pressure with yields rising sharply, while risk assets are retreating broadly - suggesting the stagflationary undertone is strengthening and potentially approaching invalidation thresholds.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil above $112 with analysts targeting $110.62, nearing stagflation threshold"
+        "level": "approaching $115",
+        "signal": "Multiple references to climbing oil prices from Iran war escalation"
       },
       {
         "indicator": "US30Y",
-        "level": "5.10%",
-        "signal": "US 10-year at 16-month high suggests long-end stress building"
+        "level": "approaching 5.10%",
+        "signal": "Treasury yields rising with no end to Middle East conflict in sight"
+      },
+      {
+        "indicator": "DXY",
+        "level": "approaching 100",
+        "signal": "Dollar staying strong on Iran war tensions and U.S. rate rise bets"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil extends rally above $112 amid Iran war tensions, approaching $115 stagflation threshold",
+        "signal": "Bonds are buckling and wilting under oil price pressure with yields rising sharply",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Global bond rout deepens with US 10-year at 16-month high, suggesting long-duration stress",
+        "signal": "Global stocks retreating broadly as oil climbs, indicating risk-off pressure building",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin and Ethereum selling off hard on Iran war and U.S. rate rise expectations",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strength persisting on safe haven demand and rate rise bets",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar strengthening to 5-week highs on Fed rate hike bets contradicts risk-on reflation setup",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Risk assets (stocks, crypto) selling off globally as oil-led inflation fears override growth optimism",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Markets pricing renewed inflation concerns rather than growth-positive reflation dynamics",
-        "tag": "CONTRADICTS"
+        "signal": "Iran reportedly considering Hormuz insurance scheme paid in Bitcoin, escalating geopolitical oil risks",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor oil closely - sustained break above $115 would flip regime to stagflation-dominant",
-      "Prepare to reduce BMNR put ladder exposure if long-end stress accelerates toward 5.10% 30Y threshold",
-      "Consider defensive positioning as setup shifts from bullish-cyclicals toward stagflationary stress"
+      "Monitor BMNR ladder closely as crypto selling pressure from oil shock may create better entry points",
+      "Prepare for potential regime flip if oil breaks $115 and bonds continue deteriorating",
+      "Consider reducing cyclical exposure if stagflationary pressure continues building"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Prices Largely Explain Movements in Bond Markets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T09:49:00+00:00",
+      "timeDisplay": "9:49 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518001639:0/"
+    },
+    {
+      "title": "Crude Oil Is Crushing Ethereum Right Now \u2013 Tom Lee Says ETH\u2019s \u2018Biggest Headwind\u2019 Is Sitting In The Persian Gulf",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T09:42:02+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:0a4cea8e0094b:0/"
+    },
+    {
+      "title": "Iran-linked report says Hormuz Safe bitcoin-settled insurance platform aims to generate $10 billion",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T09:27:06+00:00",
+      "timeDisplay": "9:27 AM",
+      "link": "https://www.tradingview.com/news/the_block:b435891c0094b:0-iran-linked-report-says-hormuz-safe-bitcoin-settled-insurance-platform-aims-to-generate-10-billion/"
+    },
+    {
+      "title": "French BTC treasury firm Capital B buys $15 million in bitcoin following raise",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T09:01:00+00:00",
+      "timeDisplay": "9:01 AM",
+      "link": "https://www.tradingview.com/news/the_block:f23ddfc47094b:0-french-btc-treasury-firm-capital-b-buys-15-million-in-bitcoin-following-raise/"
+    },
+    {
+      "title": "Global stocks retreat and bonds wilt as oil climbs",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T09:00:31+00:00",
+      "timeDisplay": "9:00 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V0EG:0-global-stocks-retreat-and-bonds-wilt-as-oil-climbs/"
+    },
+    {
+      "title": "Gold Falls as Middle East Fears Grow \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:56:00+00:00",
+      "timeDisplay": "7:56 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518001002:0/"
+    },
+    {
+      "title": "Oil Trims Earlier Gains But Risks Remain High \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:48:00+00:00",
+      "timeDisplay": "7:48 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518000981:0/"
+    },
+    {
+      "title": "Why is Bitcoin Price Down Today? BTC Price Slides to $77K",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:38:25+00:00",
+      "timeDisplay": "7:38 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:e0c504086094b:0-why-is-bitcoin-price-down-today-btc-price-slides-to-77k/"
+    },
+    {
+      "title": "Bitcoin Falls as Iran War, U.S. Rate Rise Bets Weigh \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:25:00+00:00",
+      "timeDisplay": "7:25 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518000881:0/"
+    },
+    {
+      "title": "Dollar dips; rising oil and bond yields temper losses",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-18T07:12:16+00:00",
+      "timeDisplay": "7:12 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V0BQ:0-dollar-dips-rising-oil-and-bond-yields-temper-losses/"
+    },
+    {
+      "title": "Verus Ethereum bridge reportedly exploited for $11.6M in latest DeFi attack",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:11:30+00:00",
+      "timeDisplay": "7:11 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5e8d72b6e094b:0-verus-ethereum-bridge-reportedly-exploited-for-11-6m-in-latest-defi-attack/"
+    },
+    {
+      "title": "Surging oil prices have been driving Ether selling pressure: Tom Lee",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T07:02:06+00:00",
+      "timeDisplay": "7:02 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:9a69167ab094b:0-surging-oil-prices-have-been-driving-ether-selling-pressure-tom-lee/"
+    },
+    {
+      "title": "Ethereum Price Tumbles Hard, Bears Tighten Grip On Market Momentum",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:58:56+00:00",
+      "timeDisplay": "6:58 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:b14aa35f5094b:0-ethereum-price-tumbles-hard-bears-tighten-grip-on-market-momentum/"
+    },
+    {
+      "title": "Reports suggest Iran is mulling Hormuz \u2018insurance\u2019 scheme, paid in Bitcoin",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:53:38+00:00",
+      "timeDisplay": "6:53 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:669a39c1b094b:0-reports-suggest-iran-is-mulling-hormuz-insurance-scheme-paid-in-bitcoin/"
+    },
+    {
+      "title": "Dollar Stays Strong on Iran War Tensions, U.S. Rate Rise Bets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:49:00+00:00",
+      "timeDisplay": "6:49 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518000658:0/"
+    },
+    {
+      "title": "Tom Lee Reveals Why Ethereum Price Is Down",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:32:22+00:00",
+      "timeDisplay": "6:32 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f9c8d4dd9094b:0-tom-lee-reveals-why-ethereum-price-is-down/"
+    },
+    {
+      "title": "H100 Group Interim report January 1 \u2013 March 31, 2026",
+      "source": "modular_finance",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:30:00+00:00",
+      "timeDisplay": "6:30 AM",
+      "link": "https://www.tradingview.com/news/modular_finance:cc12566696ac9:0-h100-group-interim-report-january-1-march-31-2026/"
+    },
+    {
+      "title": "AFX Launches Sovereign Layer 1, Providing an Optimized Execution Environment for On-chain Perp DEXes",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:28:30+00:00",
+      "timeDisplay": "6:28 AM",
+      "link": "https://www.tradingview.com/news/chainwire:233ad925f094b:0-afx-launches-sovereign-layer-1-providing-an-optimized-execution-environment-for-on-chain-perp-dexes/"
+    },
+    {
+      "title": "Bitcoin Price Extends Decline, Downside Pressure Builds Aggressively",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:27:52+00:00",
+      "timeDisplay": "6:27 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:912c174b7094b:0-bitcoin-price-extends-decline-downside-pressure-builds-aggressively/"
+    },
+    {
+      "title": "BTC/USD: Bitcoin Slips Under $77,000 as 200-Day Moving Average Holds Strong",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T06:08:03+00:00",
+      "timeDisplay": "6:08 AM",
+      "link": "https://www.tradingview.com/news/tradingview:d4494b588094b:0-btc-usd-bitcoin-slips-under-77-000-as-200-day-moving-average-holds-strong/"
+    },
     {
       "title": "Bitcoin falls as ETF outflows spike: can bulls save $74K now?",
       "source": "invezz",
@@ -100,6 +265,14 @@
       "link": "https://www.tradingview.com/news/stocktwits:387831ec9094b:0/"
     },
     {
+      "title": "Crypto Market News Today\u2014Bitcoin Slashes While Ethereum & XRP Display Strength",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T05:13:37+00:00",
+      "timeDisplay": "5:13 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:a77707eb0094b:0-crypto-market-news-today-bitcoin-slashes-while-ethereum-xrp-display-strength/"
+    },
+    {
       "title": "Bitcoin slips 1.58% to $76,925 amid macroeconomic pressure; what should investors watch for",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -108,12 +281,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:58e69e7ac094b:0-bitcoin-slips-1-58-to-76-925-amid-macroeconomic-pressure-what-should-investors-watch-for/"
     },
     {
-      "title": "Analysts debate whether Bitcoin is in a \u2018sell in May\u2019 bear market setup",
+      "title": "Analysts debate whether Bitcoin is in \u2018sell in May\u2019 bear market setup",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-18T05:06:21+00:00",
       "timeDisplay": "5:06 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:01c01377f094b:0-analysts-debate-whether-bitcoin-is-in-a-sell-in-may-bear-market-setup/"
+      "link": "https://www.tradingview.com/news/cointelegraph:01c01377f094b:0-analysts-debate-whether-bitcoin-is-in-sell-in-may-bear-market-setup/"
     },
     {
       "title": "Crypto crash: why are Bitcoin Cash, LUNC, Pi Network, WLFI going down?",
@@ -332,14 +505,6 @@
       "link": "https://www.tradingview.com/news/bravenewcoin:266aa80a1094b:0/"
     },
     {
-      "title": "Bitcoin Whale-Retail Delta Drops To ETF-Era Lows As Smart Money Turns Cautious",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T22:00:32+00:00",
-      "timeDisplay": "10:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:391858338094b:0-bitcoin-whale-retail-delta-drops-to-etf-era-lows-as-smart-money-turns-cautious/"
-    },
-    {
       "title": "Crypto Analysts Brace for Risk-Off Monday Open as Trump Teases Iran Nuclear Strike",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -364,62 +529,6 @@
       "link": "https://www.tradingview.com/news/beincrypto:f2b81c076094b:0-japan-s-biggest-brokerages-open-a-new-door-for-bitcoin-and-ethereum-investment/"
     },
     {
-      "title": "Saylor Signals Another Bitcoin Buy as Strategy Pushes STRC Dividend Vote",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T18:29:00+00:00",
-      "timeDisplay": "6:29 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:a822b7867094b:0-saylor-signals-another-bitcoin-buy-as-strategy-pushes-strc-dividend-vote/"
-    },
-    {
-      "title": "Bitcoin\u2019s \u2018Strong Hands\u2019 Return as 15 Million BTC Lockup Meets Critical Fed Week",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T18:19:33+00:00",
-      "timeDisplay": "6:19 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:4ce5cad49094b:0-bitcoin-s-strong-hands-return-as-15-million-btc-lockup-meets-critical-fed-week/"
-    },
-    {
-      "title": "Saylor signals BTC buy as retail holders get push on STRC dividend vote",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T18:01:00+00:00",
-      "timeDisplay": "6:01 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:78cb73c38094b:0-saylor-signals-btc-buy-as-retail-holders-get-push-on-strc-dividend-vote/"
-    },
-    {
-      "title": "Binance Records $1.5 Billion Stablecoin Net Inflow Amid Highly Reactive Market",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T18:00:10+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a17972c90094b:0-binance-records-1-5-billion-stablecoin-net-inflow-amid-highly-reactive-market/"
-    },
-    {
-      "title": "Bitcoin Google Search Interest Sinks Below Bear Market Levels \u2014 Here's What Analysts Say Is Driving The Apathy",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T16:32:56+00:00",
-      "timeDisplay": "4:32 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:c6434ac54094b:0/"
-    },
-    {
-      "title": "Strategic Bitcoin Reserve Hits 'Breakthrough,' Says White House Digital Assets Director Patrick Witt",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T16:02:44+00:00",
-      "timeDisplay": "4:02 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:d2a0a1cc2094b:0/"
-    },
-    {
-      "title": "Michael Saylor Teases Bigger Bitcoin Buy for MicroStrategy as 8-K Filing Looms",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T15:33:43+00:00",
-      "timeDisplay": "3:33 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:8a18a7ab3094b:0-michael-saylor-teases-bigger-bitcoin-buy-for-microstrategy-as-8-k-filing-looms/"
-    },
-    {
       "title": "Italy\u2019s Largest Bank Adds Bitcoin, Eth and XRP Exposure in Q1",
       "source": "cryptoprowl",
       "color": "#00e5ff",
@@ -434,22 +543,6 @@
       "timestamp": "2026-05-17T14:23:17+00:00",
       "timeDisplay": "2:23 PM",
       "link": "https://www.tradingview.com/news/beincrypto:2dcf48791094b:0-50-million-ethereum-short-rocks-the-market-how-will-eth-price-react/"
-    },
-    {
-      "title": "Italy\u2019s largest bank more than doubles crypto holdings to $235M in Q1: Report",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T08:31:02+00:00",
-      "timeDisplay": "8:31 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8c5eac93e094b:0-italy-s-largest-bank-more-than-doubles-crypto-holdings-to-235m-in-q1-report/"
-    },
-    {
-      "title": "How much gold should you actually hold in your investment portfolio for long-term stability",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-17T07:04:12+00:00",
-      "timeDisplay": "7:04 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:4204cef0a094b:0-how-much-gold-should-you-actually-hold-in-your-investment-portfolio-for-long-term-stability/"
     }
   ]
 }

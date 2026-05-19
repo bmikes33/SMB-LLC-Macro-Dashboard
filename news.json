@@ -1,56 +1,80 @@
 {
-  "lastUpdated": "2026-05-19T21:53:36.911380+00:00",
-  "lastUpdatedDisplay": "May 19, 2026 \u2014 09:53 PM UTC",
+  "lastUpdated": "2026-05-19T23:00:26.468716+00:00",
+  "lastUpdatedDisplay": "May 19, 2026 \u2014 11:00 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bond yields climbed to multi-decade highs amid persistent inflation concerns, pressuring equities lower while the dollar strengthened to six-week highs. Bitcoin struggled under $77K as traditional markets faced headwinds, while geopolitical tensions around Iran remained elevated with Trump indicating he was close to military action decisions.",
+    "macroSummary": "US bond yields climbed to multi-decade highs on renewed inflation concerns, with the 30-year hitting levels not seen since 2007, pressuring stocks across sectors. Trump escalated Iran tensions with nuclear weapons rhetoric while reportedly being an hour from attacking Iran, though oil prices eased on diplomatic hopes. Bitcoin struggled under $77K amid ETF outflows and rising real yields, while the dollar strengthened to 6-week highs.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines point toward rising yields, inflation fears, and dollar strength that challenge the bullish-cyclicals stance while approaching key invalidation thresholds.",
+    "regimePressureReason": "Multiple headlines show the 30-year bond approaching the 5.10% invalidation threshold with yields at 2007 highs, while inflation worries are pressuring risk assets and strengthening the dollar toward the 100 DXY watch level.",
     "thresholdWatches": [
       {
         "indicator": "US30Y",
         "level": "5.10%",
-        "signal": "Yield on 30-year bond climbs to highest since 2007, approaching the 5.10% long-duration capitulation threshold"
+        "signal": "Yield on 30-year bond climbs to highest since 2007 per Reuters"
       },
       {
         "indicator": "DXY",
         "level": "100",
-        "signal": "DXY rises to 6-week high on firmer dollar and rate fears, potentially nearing the 100 regime flip level"
+        "signal": "DXY rises to 6-week high according to Trading Economics"
       }
     ],
     "keySignals": [
       {
-        "signal": "US bond yields hitting near 20-year highs with inflation worries pressuring equities broadly lower",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "30-year bond yields climbing to highest since 2007, approaching critical 5.10% invalidation threshold",
+        "signal": "30-year Treasury yields hit highest levels since 2007 on inflation fears",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar strengthening to 6-week highs on rate fears, potentially approaching DXY 100 regime flip level",
+        "signal": "Dollar strengthens to 6-week highs amid inflation and Iran uncertainty",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin unable to break above $77K resistance as traditional market headwinds weigh on risk assets",
+        "signal": "Trump escalated Iran tensions claiming he was an hour from attacking Iran with nuclear weapon concerns",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Stocks falling broadly as inflation worries push yields to new highs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil futures slipping despite Iran tensions as Trump comments suggest potential diplomatic resolution",
+        "signal": "Bitcoin struggles under $77K pressure from rising real yields and ETF outflows",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor 30Y yield closely - approaching 5.10% invalidation threshold that could accelerate stagflation pressure",
-      "Watch DXY approach to 100 level for potential dollar regime flip confirmation",
-      "Consider tightening BMNR cash-secured put strikes if crypto correlation to traditional risk-off continues"
+      "Monitor 30Y yield closely - approaching 5.10% invalidation threshold that would accelerate stagflation pressure",
+      "Watch DXY approach to 100 level for potential dollar regime flip",
+      "Consider tightening BMNR put ladder strikes given crypto weakness from rising real yields"
     ]
   },
   "articles": [
+    {
+      "title": "Same Trade, Different Liquidations: How Exchange Mechanics Decided Bitcoin\u2019s 67-Day Funding Squeeze",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T22:53:24+00:00",
+      "timeDisplay": "10:53 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:105c76ce1094b:0/"
+    },
+    {
+      "title": "Ethereum leads $65 billion RWA race as blockchains compete for institutional tokenization flows",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T22:36:02+00:00",
+      "timeDisplay": "10:36 PM",
+      "link": "https://www.tradingview.com/news/the_block:d171f1e11094b:0-ethereum-leads-65-billion-rwa-race-as-blockchains-compete-for-institutional-tokenization-flows/"
+    },
+    {
+      "title": "Stocks fall as US bond yields rise, oil eases after latest Iran war headlines",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T22:35:40+00:00",
+      "timeDisplay": "10:35 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W1EN:0-stocks-fall-as-us-bond-yields-rise-oil-eases-after-latest-iran-war-headlines/"
+    },
     {
       "title": "Bernstein: Bitcoin miners becoming critical suppliers in AI infrastructure",
       "source": "cointelegraph",
@@ -340,6 +364,14 @@
       "link": "https://www.tradingview.com/news/the_block:f24708f45094b:0-bitcoin-slide-extends-as-record-etf-outflows-and-60-rate-hike-probability-signal-structural-cracks-beneath-the-rally-analysts/"
     },
     {
+      "title": "Dollar Edges Higher and Gold Slumps as T-note Yields Soar",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T14:42:39+00:00",
+      "timeDisplay": "2:42 PM",
+      "link": "https://www.tradingview.com/news/barchart:d63c60e09094b:0-dollar-edges-higher-and-gold-slumps-as-t-note-yields-soar/"
+    },
+    {
       "title": "Wall St slips as inflation fears push yields higher",
       "source": "reuters",
       "color": "#ff6d00",
@@ -362,14 +394,6 @@
       "timestamp": "2026-05-19T14:19:38+00:00",
       "timeDisplay": "2:19 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:ed2e82a7a094b:0-recent-bitcoin-holders-sell-770m-btc-at-a-loss-amid-65k-btc-price-calls/"
-    },
-    {
-      "title": "Bitcoin miner Canaan posts $88.7M net loss in Q1 amid BTC decline",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T14:07:06+00:00",
-      "timeDisplay": "2:07 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:2010d4eda094b:0-bitcoin-miner-canaan-posts-88-7m-net-loss-in-q1-amid-btc-decline/"
     },
     {
       "title": "Bank of Canada Has Ample Room to Be Patient on Rates \u2014 Market Talk",
@@ -626,30 +650,6 @@
       "timestamp": "2026-05-19T09:52:39+00:00",
       "timeDisplay": "9:52 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026-05-19:newsml_Zaw6T2plT:0-zawya-okx-launches-usds-m-options-on-bitcoin-and-ether/"
-    },
-    {
-      "title": "U.S. Treasury Yields Edge Lower, Dollar Turns Higher as Markets Stay Cautious \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T09:40:00+00:00",
-      "timeDisplay": "9:40 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519002747:0/"
-    },
-    {
-      "title": "Ethereum Price Slips 10% Behind Bitcoin as DeFi Engine Loses $43 Billion",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T09:38:29+00:00",
-      "timeDisplay": "9:38 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:8125fbf5d094b:0-ethereum-price-slips-10-behind-bitcoin-as-defi-engine-loses-43-billion/"
-    },
-    {
-      "title": "Nasdaq, S&P 500 Futures Lower As Markets Weigh Trump\u2019s Iran Delay, Sticky Inflation Risks: Why NVDA, META, HD, HIMS Are Keeping Traders Engaged Today",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T09:20:40+00:00",
-      "timeDisplay": "9:20 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:afea85d82094b:0/"
     }
   ]
 }

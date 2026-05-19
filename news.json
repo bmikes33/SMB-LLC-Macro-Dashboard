@@ -1,56 +1,96 @@
 {
-  "lastUpdated": "2026-05-19T20:12:17.621805+00:00",
-  "lastUpdatedDisplay": "May 19, 2026 \u2014 08:12 PM UTC",
+  "lastUpdated": "2026-05-19T21:53:36.911380+00:00",
+  "lastUpdatedDisplay": "May 19, 2026 \u2014 09:53 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bond yields surged to multi-decade highs driven by inflation fears, pressuring equities lower amid geopolitical uncertainty around Iran. Bitcoin and crypto assets declined sharply with record ETF outflows, while the dollar strengthened to six-week highs as markets reassess rate cut expectations.",
+    "macroSummary": "Bond yields climbed to multi-decade highs amid persistent inflation concerns, pressuring equities lower while the dollar strengthened to six-week highs. Bitcoin struggled under $77K as traditional markets faced headwinds, while geopolitical tensions around Iran remained elevated with Trump indicating he was close to military action decisions.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple articles show 30-year yields hitting 2007 highs with inflation fears dominating, while Bitcoin faces structural selling pressure - both developments stress the reflation thesis toward its stagflationary invalidation thresholds.",
+    "regimePressureReason": "Multiple headlines point toward rising yields, inflation fears, and dollar strength that challenge the bullish-cyclicals stance while approaching key invalidation thresholds.",
     "thresholdWatches": [
       {
         "indicator": "US30Y",
-        "level": "> 5.10%",
-        "signal": "30-year yields climbing to highest since 2007 with multiple articles citing inflation fears"
+        "level": "5.10%",
+        "signal": "Yield on 30-year bond climbs to highest since 2007, approaching the 5.10% long-duration capitulation threshold"
       },
       {
         "indicator": "DXY",
-        "level": "approaching 100",
-        "signal": "Dollar rises to 6-week high on firmer rate expectations and Iran uncertainty"
+        "level": "100",
+        "signal": "DXY rises to 6-week high on firmer dollar and rate fears, potentially nearing the 100 regime flip level"
       }
     ],
     "keySignals": [
       {
-        "signal": "30-year Treasury yields hit highest levels since 2007 as inflation worries dominate markets",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Bitcoin faces record ETF outflows with structural selling pressure from recent holders dumping $770M at losses",
+        "signal": "US bond yields hitting near 20-year highs with inflation worries pressuring equities broadly lower",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthens to 6-week highs as rate cut expectations diminish amid inflation fears",
+        "signal": "30-year bond yields climbing to highest since 2007, approaching critical 5.10% invalidation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Equity markets slip broadly as bond yields climb and inflation concerns override risk-on sentiment",
+        "signal": "Dollar strengthening to 6-week highs on rate fears, potentially approaching DXY 100 regime flip level",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin unable to break above $77K resistance as traditional market headwinds weigh on risk assets",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Trump escalates Iran rhetoric while oil eases on potential deal speculation, creating geopolitical cross-currents",
+        "signal": "Oil futures slipping despite Iran tensions as Trump comments suggest potential diplomatic resolution",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely - crypto structural selling and rising yields create dual headwinds for ETH-linked strategies",
-      "Prepare to reduce cyclical equity exposure if 30Y breaks 5.10% decisively, signaling stagflation regime shift",
-      "Watch DXY approach to 100 level for potential dollar regime change confirmation"
+      "Monitor 30Y yield closely - approaching 5.10% invalidation threshold that could accelerate stagflation pressure",
+      "Watch DXY approach to 100 level for potential dollar regime flip confirmation",
+      "Consider tightening BMNR cash-secured put strikes if crypto correlation to traditional risk-off continues"
     ]
   },
   "articles": [
+    {
+      "title": "Bernstein: Bitcoin miners becoming critical suppliers in AI infrastructure",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T21:39:16+00:00",
+      "timeDisplay": "9:39 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e6666a483094b:0-bernstein-bitcoin-miners-becoming-critical-suppliers-in-ai-infrastructure/"
+    },
+    {
+      "title": "Bitcoin Hits \u2018Wall Of Resistance,\u2019 CryptoQuant Research Head Warns",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T21:00:03+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:51e021df4094b:0-bitcoin-hits-wall-of-resistance-cryptoquant-research-head-warns/"
+    },
+    {
+      "title": "$100/Month in Bitcoin Since 2015 Would Have Turned $13,700 Into $632,000, Coinbird Analysis Shows",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T20:52:22+00:00",
+      "timeDisplay": "8:52 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:1f635e332094b:0/"
+    },
+    {
+      "title": "Data shows Bitcoin dip buyers waiting for lower prices: Is $70K BTC\u2019s next stop?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T20:34:45+00:00",
+      "timeDisplay": "8:34 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:688c96f4c094b:0-data-shows-bitcoin-dip-buyers-waiting-for-lower-prices-is-70k-btc-s-next-stop/"
+    },
+    {
+      "title": "Wall St ends lower as inflation worries push up yields",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T20:31:39+00:00",
+      "timeDisplay": "8:31 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W1C3:0-wall-st-ends-lower-as-inflation-worries-push-up-yields/"
+    },
     {
       "title": "Yield on 30-year bond climbs to highest since 2007",
       "source": "reuters",
@@ -340,14 +380,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260519005922:0/"
     },
     {
-      "title": "Lolli launches automatic bitcoin cashback on linked debit and credit card purchases",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:f420af379094b:0-lolli-launches-automatic-bitcoin-cashback-on-linked-debit-and-credit-card-purchases/"
-    },
-    {
       "title": "US NAR CHIEF ECONOMIST YUN: \u2018BUYERS ARE COMING OUT WITH CAUTIOUS OPTIMISM DESPITE INCREASING ECONOMIC UNCERTAINTY\u2019 AND HIGHER RATES",
       "source": "macenews",
       "color": "#00e5ff",
@@ -396,14 +428,6 @@
       "link": "https://www.tradingview.com/news/te_news:551976:0-long-term-yields-surge/"
     },
     {
-      "title": "Strive buys 382 BTC for roughly $30 million, holding spot as ninth-largest bitcoin treasury",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T13:58:06+00:00",
-      "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/the_block:ab918dcb6094b:0-strive-buys-382-btc-for-roughly-30-million-holding-spot-as-ninth-largest-bitcoin-treasury/"
-    },
-    {
       "title": "NY Engelhard Gold Prices - May 19",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -426,14 +450,6 @@
       "timestamp": "2026-05-19T13:51:55+00:00",
       "timeDisplay": "1:51 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0FT:0-20-year-auction-to-test-demand-for-longer-dated-us-debt/"
-    },
-    {
-      "title": "Historical Data Shows How Many Days Are Left Until Bitcoin Price Hits New ATH Above $120,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T13:30:18+00:00",
-      "timeDisplay": "1:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:77195f2b2094b:0-historical-data-shows-how-many-days-are-left-until-bitcoin-price-hits-new-ath-above-120-000/"
     },
     {
       "title": "US stock futures fall with investor focus on Nvidia\u00a0",
@@ -482,14 +498,6 @@
       "timestamp": "2026-05-19T12:57:49+00:00",
       "timeDisplay": "12:57 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0HV:0-yields-tick-lower-after-overnight-dip-in-oil-prices/"
-    },
-    {
-      "title": "Bitcoin Price Falls Below $77K: Why BTC Price Saw a Sharp Sell-off This Week?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:56:49+00:00",
-      "timeDisplay": "12:56 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:bb2fa0f50094b:0-bitcoin-price-falls-below-77k-why-btc-price-saw-a-sharp-sell-off-this-week/"
     },
     {
       "title": "Oil Little Changed as Traders Await Breakthrough in U.S.-Iran Negotiations \u2014 Market Talk",
@@ -642,14 +650,6 @@
       "timestamp": "2026-05-19T09:20:40+00:00",
       "timeDisplay": "9:20 AM",
       "link": "https://www.tradingview.com/news/stocktwits:afea85d82094b:0/"
-    },
-    {
-      "title": "Shares and bonds steady as oil eases on Trump's Iran comments",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T08:35:02+00:00",
-      "timeDisplay": "8:35 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W08P:0-shares-and-bonds-steady-as-oil-eases-on-trump-s-iran-comments/"
     }
   ]
 }

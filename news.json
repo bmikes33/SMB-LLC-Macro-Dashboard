@@ -1,56 +1,85 @@
 {
-  "lastUpdated": "2026-05-18T22:57:51.727341+00:00",
-  "lastUpdatedDisplay": "May 18, 2026 \u2014 10:57 PM UTC",
+  "lastUpdated": "2026-05-19T00:09:51.744809+00:00",
+  "lastUpdatedDisplay": "May 19, 2026 \u2014 12:09 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show risk-off behavior with tech and crypto selling off while oil prices climb on Iran tensions, despite Trump announcing he's holding off on planned Iran strikes due to ongoing negotiations. Treasury yields are rising on the long end while foreign Treasury purchases remain strong, and crypto sees $1B in outflows amid geopolitical uncertainty.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Risk-off sentiment is emerging with crypto outflows, tech selling, and flight to physical assets, while oil spikes suggest geopolitical premium building despite Iran strike delay.",
-    "thresholdWatches": [
-      {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "Risk-off sentiment emerging with crypto $1B outflows and tech selling but no VIX level specified in articles"
-      },
-      {
-        "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil climbing to two-week highs with Strait of Hormuz remaining closed, no reopening in sight"
-      }
-    ],
+    "macroSummary": "Markets showed mixed signals as oil prices fluctuated on Trump's decision to hold off Iran strikes amid ongoing negotiations, while tech stocks fell on rising Treasury yields. Foreign demand for US securities remained solid with $81.3B in net purchases, though crypto markets weakened significantly with major ETH outflows and Bitcoin falling below $80K.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Oil volatility subsiding due to Iran de-escalation contradicts embedded war premium, while rising Treasury yields and tech weakness align with reflation pressures.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Crypto funds see $1B outflows as Iran tensions revive risk-off sentiment, contradicting bullish-cyclical positioning",
+        "signal": "Oil prices retreating as Trump holds off Iran strike and supply disruption concerns ease",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Tech stocks and Nasdaq leading declines while Treasury yields climb, showing growth-defensive rotation",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil prices climbing with physical asset demand rising as traders seek tangible exposure amid geopolitical uncertainty",
+        "signal": "Treasury yields climbing with longer-dated bonds under pressure, consistent with reflation theme",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin tumbles below $77K with $590M in bullish bets unwinding on Trump's Iran warning",
-        "tag": "CONTRADICTS"
+        "signal": "Tech stocks falling and Nasdaq leading equity losses as growth stocks face yield pressure",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Strong foreign Treasury demand with $81.3B net purchases suggests continued safe-haven flows",
+        "signal": "Bitcoin falling below $80K and $590M in bullish bets unwinding suggests crypto risk-off",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Foreign net purchases of US securities at $81.3B shows continued Treasury demand despite yield pressure",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto risk-off could accelerate ETH weakness and improve put strike entries",
-      "Consider reducing cyclical exposure as risk-off sentiment builds across crypto and tech",
-      "Watch oil threshold carefully - sustained move toward $115 would confirm stagflation tilt dominance"
+      "Monitor oil prices for sustained break below recent highs as Iran tensions ease",
+      "Watch BMNR performance amid broader crypto weakness and ETH whale selling",
+      "Consider tech put spreads if Treasury yield pressure continues hitting growth stocks"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Falls as Supply-Disruption Concerns Ease \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T00:05:00+00:00",
+      "timeDisplay": "12:05 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518009040:0/"
+    },
+    {
+      "title": "Retail Bitcoin investor demand falls by 73% as futures selling tops $2B: Are the bears back?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T23:40:51+00:00",
+      "timeDisplay": "11:40 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:23f26f54c094b:0-retail-bitcoin-investor-demand-falls-by-73-as-futures-selling-tops-2b-are-the-bears-back/"
+    },
+    {
+      "title": "Gold Rises Amid Hopes for U.S.-Iran Peace Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T23:37:00+00:00",
+      "timeDisplay": "11:37 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260518008979:0/"
+    },
+    {
+      "title": "Oil Retreats as Trump Holds Off Iran Strike",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T23:36:49+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/te_news:551712:0-oil-retreats-as-trump-holds-off-iran-strike/"
+    },
+    {
+      "title": "Ethereum Whales Flood Binance With 225,000 ETH In Largest Inflow Since 2022",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T23:00:23+00:00",
+      "timeDisplay": "11:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:35c32f6f9094b:0-ethereum-whales-flood-binance-with-225-000-eth-in-largest-inflow-since-2022/"
+    },
     {
       "title": "Stocks mostly ease with tech shares while oil prices climb to two-week high",
       "source": "reuters",
@@ -404,6 +433,14 @@
       "link": "https://www.tradingview.com/news/te_news:551660:0-oil-rebounds/"
     },
     {
+      "title": "Crude Oil Prices Underpinned by Lack of Progress in US-Iran Peace Negotiations",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-18T15:41:04+00:00",
+      "timeDisplay": "3:41 PM",
+      "link": "https://www.tradingview.com/news/barchart:57a6dea39094b:0-crude-oil-prices-underpinned-by-lack-of-progress-in-us-iran-peace-negotiations/"
+    },
+    {
       "title": "Ethereum traders say bears \u2018in control\u2019 after ETH price drop to $2K",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -548,14 +585,6 @@
       "link": "https://www.tradingview.com/news/moneycontrol:f62bf02cc094b:0-what-is-iran-s-hormuz-safe-how-tehran-plans-to-generate-10-billion-using-bitcoin-backed-ship-insurance-system/"
     },
     {
-      "title": "Bitcoin Sell Pressure Cools With 27% Breakout in Sight, But Whales Have Other Plans",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T14:11:23+00:00",
-      "timeDisplay": "2:11 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:ee7b39998094b:0-bitcoin-sell-pressure-cools-with-27-breakout-in-sight-but-whales-have-other-plans/"
-    },
-    {
       "title": "Why Ethereum Is About To Break The Bear Cycle And Rally To $8,000",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -610,46 +639,6 @@
       "timestamp": "2026-05-18T14:00:00+00:00",
       "timeDisplay": "2:00 PM",
       "link": "https://www.tradingview.com/news/macenews:779dcd765094b:0-us-nahb-home-buyer-traffic-index-25-in-may-vs-22-in-april-23-in-may-2025/"
-    },
-    {
-      "title": "US NAHB: 32% OF HOME BUILDERS OFFER A PRICE CUT IN MAY VS 36% IN APRIL; 37% IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:aa63548ec094b:0-us-nahb-32-of-home-builders-offer-a-price-cut-in-may-vs-36-in-april-37-in-may-2025/"
-    },
-    {
-      "title": "Gold Rebounds on Iran Deal Hopes",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:50:02+00:00",
-      "timeDisplay": "1:50 PM",
-      "link": "https://www.tradingview.com/news/te_news:551628:0-gold-rebounds-on-iran-deal-hopes/"
-    },
-    {
-      "title": "Treasury Yields Ease",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:43:41+00:00",
-      "timeDisplay": "1:43 PM",
-      "link": "https://www.tradingview.com/news/te_news:551626:0-treasury-yields-ease/"
-    },
-    {
-      "title": "WHITE HOUSE REACTION AWAITED TO LATEST IRAN PROPOSAL SUBMITTED TO PAKISTAN REPORTEDLY FOCUSED ON AN AGREEMENT TO END THE WAR, BUT NOT NUKE ISSUE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:34:00+00:00",
-      "timeDisplay": "1:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:2d246ca2a094b:0-white-house-reaction-awaited-to-latest-iran-proposal-submitted-to-pakistan-reportedly-focused-on-an-agreement-to-end-the-war-but-not-nuke-issue/"
-    },
-    {
-      "title": "Bitmine lifts ether treasury to 5.28 million ETH as total holdings top $12 billion",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-18T13:28:01+00:00",
-      "timeDisplay": "1:28 PM",
-      "link": "https://www.tradingview.com/news/the_block:1a0d780ad094b:0-bitmine-lifts-ether-treasury-to-5-28-million-eth-as-total-holdings-top-12-billion/"
     }
   ]
 }

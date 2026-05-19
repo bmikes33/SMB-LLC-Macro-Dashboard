@@ -1,56 +1,112 @@
 {
-  "lastUpdated": "2026-05-19T18:20:46.646416+00:00",
-  "lastUpdatedDisplay": "May 19, 2026 \u2014 06:20 PM UTC",
+  "lastUpdated": "2026-05-19T20:12:17.621805+00:00",
+  "lastUpdatedDisplay": "May 19, 2026 \u2014 08:12 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bond yields hit new highs with the 30-year reaching levels not seen since 2007, driving broad market weakness as inflation fears resurface. The dollar strengthens to 6-week highs while crypto assets face significant selling pressure with record Bitcoin ETF outflows. Geopolitical tensions remain elevated with Trump discussing potential Iran military action and NATO considering Hormuz Strait deployment.",
+    "macroSummary": "Bond yields surged to multi-decade highs driven by inflation fears, pressuring equities lower amid geopolitical uncertainty around Iran. Bitcoin and crypto assets declined sharply with record ETF outflows, while the dollar strengthened to six-week highs as markets reassess rate cut expectations.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached or tested, particularly the 30-year yield surge and dollar strength, while crypto weakness suggests broader risk-off sentiment emerging beneath surface reflation dynamics.",
+    "regimePressureReason": "Multiple articles show 30-year yields hitting 2007 highs with inflation fears dominating, while Bitcoin faces structural selling pressure - both developments stress the reflation thesis toward its stagflationary invalidation thresholds.",
     "thresholdWatches": [
       {
         "indicator": "US30Y",
         "level": "> 5.10%",
-        "signal": "30-year bond yields climbing to highest since 2007, approaching long-duration capitulation threshold"
+        "signal": "30-year yields climbing to highest since 2007 with multiple articles citing inflation fears"
       },
       {
         "indicator": "DXY",
         "level": "approaching 100",
-        "signal": "Dollar rises to 6-week high on inflation fears and Iran uncertainty, nearing regime flip level"
+        "signal": "Dollar rises to 6-week high on firmer rate expectations and Iran uncertainty"
       }
     ],
     "keySignals": [
       {
-        "signal": "30-year Treasury yields hit highest levels since 2007 as inflation fears resurface",
+        "signal": "30-year Treasury yields hit highest levels since 2007 as inflation worries dominate markets",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Record Bitcoin ETF outflows and 60% rate-hike probability signal structural cracks beneath rally",
+        "signal": "Bitcoin faces record ETF outflows with structural selling pressure from recent holders dumping $770M at losses",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthens to 6-week highs on inflation and geopolitical concerns",
+        "signal": "Dollar strengthens to 6-week highs as rate cut expectations diminish amid inflation fears",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Wall Street slips broadly as bond yields rise and crypto faces selling pressure",
+        "signal": "Equity markets slip broadly as bond yields climb and inflation concerns override risk-on sentiment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "NATO considering Hormuz deployment signals escalating geopolitical tensions",
-        "tag": "SUPPORTS"
+        "signal": "Trump escalates Iran rhetoric while oil eases on potential deal speculation, creating geopolitical cross-currents",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes closely as crypto weakness accelerates - consider rolling down strikes if BTC breaks $65K support",
-      "Prepare for potential regime shift if 30Y breaks 5.10% decisively - Maturity sector overweight may outperform in stagflationary pivot",
-      "Watch DXY closely approaching 100 level - dollar strength combined with yield surge could trigger broader risk-off cascade"
+      "Monitor BMNR ladder closely - crypto structural selling and rising yields create dual headwinds for ETH-linked strategies",
+      "Prepare to reduce cyclical equity exposure if 30Y breaks 5.10% decisively, signaling stagflation regime shift",
+      "Watch DXY approach to 100 level for potential dollar regime change confirmation"
     ]
   },
   "articles": [
+    {
+      "title": "Yield on 30-year bond climbs to highest since 2007",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T20:09:52+00:00",
+      "timeDisplay": "8:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0XH:0-yield-on-30-year-bond-climbs-to-highest-since-2007/"
+    },
+    {
+      "title": "Inflation worries hit stocks as focus turns to Nvidia results",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T20:09:32+00:00",
+      "timeDisplay": "8:09 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W19M:0-inflation-worries-hit-stocks-as-focus-turns-to-nvidia-results/"
+    },
+    {
+      "title": "Wall St slips as inflation worries push yields higher",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T20:00:48+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W1A7:0-wall-st-slips-as-inflation-worries-push-yields-higher/"
+    },
+    {
+      "title": "Stocks fall as US bond yields climb, oil eases after latest Iran war headlines",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T19:51:08+00:00",
+      "timeDisplay": "7:51 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W1AB:0-stocks-fall-as-us-bond-yields-climb-oil-eases-after-latest-iran-war-headlines/"
+    },
+    {
+      "title": "Bitcoin\u2019s 2026 Market Structure Reveals A Problem Hidden Beneath ETF Growth",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T19:30:27+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:385390225094b:0-bitcoin-s-2026-market-structure-reveals-a-problem-hidden-beneath-etf-growth/"
+    },
+    {
+      "title": "Inflation fears and Iran uncertainty lift the dollar",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-19T19:25:17+00:00",
+      "timeDisplay": "7:25 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0YO:0-inflation-fears-and-iran-uncertainty-lift-the-dollar/"
+    },
+    {
+      "title": "Oil Futures Slip With Market Back on U.S.-Iran Deal Watch \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T19:23:00+00:00",
+      "timeDisplay": "7:23 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519007926:0/"
+    },
     {
       "title": "Nvidia Earnings Could Decide Bitcoin\u2019s Next Move After ETF Selling Wave, Says Wintermute",
       "source": "stocktwits",
@@ -100,14 +156,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41W19U:0-wall-st-slips-as-inflation-worries-push-yields-to-new-highs/"
     },
     {
-      "title": "Yield on 30-year bond climbs to highest since 2007",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T16:23:02+00:00",
-      "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0K3:0-yield-on-30-year-bond-climbs-to-highest-since-2007/"
-    },
-    {
       "title": "Thinking about buying SpaceX? Most other big IPOs have cratered",
       "source": "reuters",
       "color": "#ff6d00",
@@ -154,6 +202,22 @@
       "timestamp": "2026-05-19T15:53:34+00:00",
       "timeDisplay": "3:53 PM",
       "link": "https://www.tradingview.com/news/invezz:96e5e8884094b:0-bitcoin-price-outlook-can-btc-recover-80-000-after-selloff/"
+    },
+    {
+      "title": "Zcash Foundation Reports $36.69M Treasury as ZEC Trades Near Recent Highs",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T15:50:00+00:00",
+      "timeDisplay": "3:50 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:34b3ec7d7094b:0-zcash-foundation-reports-36-69m-treasury-as-zec-trades-near-recent-highs/"
+    },
+    {
+      "title": "New Survey Finds 10% Of U.S. Adults Use Or Own Crypto",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T15:48:00+00:00",
+      "timeDisplay": "3:48 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:b48d2d2a8094b:0-new-survey-finds-10-of-u-s-adults-use-or-own-crypto/"
     },
     {
       "title": "Gold Trades Down on Firmer Dollar, Rate Fears \u2014 Market Talk",
@@ -258,14 +322,6 @@
       "timestamp": "2026-05-19T14:19:38+00:00",
       "timeDisplay": "2:19 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:ed2e82a7a094b:0-recent-bitcoin-holders-sell-770m-btc-at-a-loss-amid-65k-btc-price-calls/"
-    },
-    {
-      "title": "Inflation fears and Iran uncertainty lift the dollar",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T14:12:12+00:00",
-      "timeDisplay": "2:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0L1:0-inflation-fears-and-iran-uncertainty-lift-the-dollar/"
     },
     {
       "title": "Bitcoin miner Canaan posts $88.7M net loss in Q1 amid BTC decline",
@@ -436,22 +492,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:bb2fa0f50094b:0-bitcoin-price-falls-below-77k-why-btc-price-saw-a-sharp-sell-off-this-week/"
     },
     {
-      "title": "Strive Inc Purchases 381.61 Bitcoin At $79,348 Each From May 13-18, 2026",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T12:53:26+00:00",
-      "timeDisplay": "12:53 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN41W03P:0-strive-inc-purchases-381-61-bitcoin-at-79-348-each-from-may-13-18-2026/"
-    },
-    {
-      "title": "$100/Month in Bitcoin Since 2015 Would Have Turned $13,700 Into $632,000, Coinbird Analysis Shows",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:34:32+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/chainwire:9487805db094b:0-100-month-in-bitcoin-since-2015-would-have-turned-13-700-into-632-000-coinbird-analysis-shows/"
-    },
-    {
       "title": "Oil Little Changed as Traders Await Breakthrough in U.S.-Iran Negotiations \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -474,14 +514,6 @@
       "timestamp": "2026-05-19T12:15:00+00:00",
       "timeDisplay": "12:15 PM",
       "link": "https://www.tradingview.com/news/macenews:75f3bec2e094b:0-us-adp-private-payrolls-up-avg-42-250-per-week-in-latest-4-week-period-ended-may-2/"
-    },
-    {
-      "title": "Key facts: ETF $1B Outflows; MSTR Buys 24,869 BTC; CLARITY Cuts $126B",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:14:46+00:00",
-      "timeDisplay": "12:14 PM",
-      "link": "https://www.tradingview.com/news/tradingview:382b91ce77a17:0-key-facts-etf-1b-outflows-mstr-buys-24-869-btc-clarity-cuts-126b/"
     },
     {
       "title": "Key facts: Ether -10%; $300M ETH liquidated; Bitmine buys 71.7k ETH",
@@ -618,38 +650,6 @@
       "timestamp": "2026-05-19T08:35:02+00:00",
       "timeDisplay": "8:35 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W08P:0-shares-and-bonds-steady-as-oil-eases-on-trump-s-iran-comments/"
-    },
-    {
-      "title": "Dollar edges up\u00a0as investors weigh Iran peace hopes against Fed rate outlook",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T08:10:20+00:00",
-      "timeDisplay": "8:10 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W0BF:0-dollar-edges-up-as-investors-weigh-iran-peace-hopes-against-fed-rate-outlook/"
-    },
-    {
-      "title": "Next Couple of Weeks Could Bring U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T08:06:00+00:00",
-      "timeDisplay": "8:06 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519002208:0/"
-    },
-    {
-      "title": "Gold Futures Pressured by Rate Expectations Even as Trump Pauses Strikes \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T07:37:00+00:00",
-      "timeDisplay": "7:37 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519002063:0/"
-    },
-    {
-      "title": "Ethereum Foundation sees 2 more high-profile departures",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T07:04:27+00:00",
-      "timeDisplay": "7:04 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:22328c339094b:0-ethereum-foundation-sees-2-more-high-profile-departures/"
     }
   ]
 }

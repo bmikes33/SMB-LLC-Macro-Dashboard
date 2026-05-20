@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-05-20T05:55:03.516371+00:00",
-  "lastUpdatedDisplay": "May 20, 2026 \u2014 05:55 AM UTC",
+  "lastUpdated": "2026-05-20T08:47:55.039793+00:00",
+  "lastUpdatedDisplay": "May 20, 2026 \u2014 08:47 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Treasury yields edging lower after recent selloffs while Asian stocks continue declining for fourth consecutive day on higher yield concerns. Oil prices are falling on Trump's comments about ending Iran war 'very quickly', while dollar remains near six-week highs on rate hike expectations and geopolitical uncertainty.",
+    "macroSummary": "Markets show mixed signals with oil falling on Trump's comments about ending Iran war quickly, while Treasury yields hold at 16-month highs and the dollar remains at six-week highs on rate hike bets. Bitcoin and crypto assets are experiencing volatility with ETF outflows and social media FUD, while Asian stocks extend losses for fourth consecutive day on higher yield pressures.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Oil weakness from Iran war resolution hopes directly contradicts the embedded oil shock assumption, while bond yields show fragile stabilization rather than continued reflation pressure.",
+    "regimePressureReason": "Trump's Iran war comments are reducing oil prices which contradicts the embedded oil shock assumption, while elevated yields and dollar strength still support reflation elements but with growing risk-off undertones in equities.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Dow Jones notes 160 yen coming back into focus with FX intervention risks rising again"
+        "signal": "FX intervention risks rising again as 160 yen comes back into focus according to Dow Jones"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices falling on Trump's Iran war resolution comments contradicts embedded oil shock premise",
+        "signal": "Oil falling after Trump says US will end Iran war 'very quickly' challenges embedded oil shock assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields edging lower in 'fragile stabilization' after selloff suggests reflation momentum may be stalling",
+        "signal": "US 10-Year Treasury yields holding at 16-month highs supports reflation thesis",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Asian stocks falling for fourth day on higher yields suggests risk-off pressure building",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar at six-week highs on rate hike bets supports hawkish Fed expectations",
-        "tag": "SUPPORTS"
+        "signal": "Dollar at six-week highs on rate hike bets and war uncertainty approaching DXY regime flip level",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Fed's Paulson signals no rate cuts unless sustained inflation progress, keeping restrictive policy",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "USDJPY intervention risks rising again as 160 level comes back into focus",
+        "signal": "USDJPY intervention zone coming back into focus as yen weakens toward 160 level",
         "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below key levels could invalidate oil shock thesis",
-      "Watch for Treasury yield direction after this 'fragile stabilization' - further declines would pressure reflation call",
-      "Prepare for potential USDJPY volatility near 160 intervention zone that could trigger broader risk-off"
+      "Monitor oil price action closely - if WTI continues declining, core stagflation risk may be diminishing",
+      "Watch USDJPY approach to 160 for potential BOJ intervention catalyst",
+      "Consider tightening BMNR put ladder strikes if crypto weakness persists amid broader risk-off"
     ]
   },
   "articles": [
+    {
+      "title": "Wintermute Says Bitcoin Rally Was A Squeeze, Low $70,000s Loom",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T08:30:50+00:00",
+      "timeDisplay": "8:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:62fa4eea7094b:0-wintermute-says-bitcoin-rally-was-a-squeeze-low-70-000s-loom/"
+    },
+    {
+      "title": "Oil Falls as Traders Weigh Trump's Latest Remarks on Iran \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:46:00+00:00",
+      "timeDisplay": "7:46 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520002616:0/"
+    },
+    {
+      "title": "Bitcoin Edges Higher But Iran War Uncertainty Limits Gains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:25:00+00:00",
+      "timeDisplay": "7:25 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520002524:0/"
+    },
+    {
+      "title": "Gold Extends Losses on Rate Fears \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:25:00+00:00",
+      "timeDisplay": "7:25 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520002523:0/"
+    },
+    {
+      "title": "Earn Bitcoin while vaping weed? Cannabis company faces backlash over crypto rewards",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:20:11+00:00",
+      "timeDisplay": "7:20 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:f3775b7a5094b:0-earn-bitcoin-while-vaping-weed-cannabis-company-faces-backlash-over-crypto-rewards/"
+    },
+    {
+      "title": "Dollar Struggles For Direction as Iran War Uncertainty Persists Ahead of Fed Minutes \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:08:00+00:00",
+      "timeDisplay": "7:08 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520001904:0/"
+    },
+    {
+      "title": "Bitcoin Fall Under $77,000 Triggers Spike In Social Media FUD",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T07:00:36+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:f562aea2b094b:0-bitcoin-fall-under-77-000-triggers-spike-in-social-media-fud/"
+    },
+    {
+      "title": "Wintermute Calls Ethereum \u2018Wrong Asset for Macro\u2019 as ETH/BTC Hits 10-Month Low",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T06:43:43+00:00",
+      "timeDisplay": "6:43 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:24f592868094b:0-wintermute-calls-ethereum-wrong-asset-for-macro-as-eth-btc-hits-10-month-low/"
+    },
+    {
+      "title": "XAU/USD: Gold Prices Drop to 7-Week Low as Macro Headwinds Knock Demand",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T06:02:26+00:00",
+      "timeDisplay": "6:02 AM",
+      "link": "https://www.tradingview.com/news/tradingview:5fa80f4c5094b:0-xau-usd-gold-prices-drop-to-7-week-low-as-macro-headwinds-knock-demand/"
+    },
+    {
+      "title": "Bitcoin, Ethereum, XRP outlook as US Senate targets Trump\u2019s Iran war powers",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T05:58:58+00:00",
+      "timeDisplay": "5:58 AM",
+      "link": "https://www.tradingview.com/news/invezz:6a50864a3094b:0-bitcoin-ethereum-xrp-outlook-as-us-senate-targets-trump-s-iran-war-powers/"
+    },
     {
       "title": "U.S. Treasury Yields Edge Lower in Fragile Post-Selloff Stabilization \u2014 Market Talk",
       "source": "dow-jones",
@@ -447,14 +527,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W1AB:0-stocks-fall-as-us-bond-yields-climb-oil-eases-after-latest-iran-war-headlines/"
     },
     {
-      "title": "Dollar Rallies and Gold Falls as T-note Yields Climb",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T19:34:19+00:00",
-      "timeDisplay": "7:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:c1be71509094b:0-dollar-rallies-and-gold-falls-as-t-note-yields-climb/"
-    },
-    {
       "title": "Bitcoin\u2019s 2026 Market Structure Reveals A Problem Hidden Beneath ETF Growth",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -543,38 +615,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W11U:0-stocks-fall-as-us-bond-yields-rise-oil-eases-on-trump-s-iran-comments/"
     },
     {
-      "title": "The Hardware Trap: Why Bitcoin Miners Are Liquidating the Asset They Built",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T16:07:42+00:00",
-      "timeDisplay": "4:07 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:d930cb2c8094b:0-the-hardware-trap-why-bitcoin-miners-are-liquidating-the-asset-they-built/"
-    },
-    {
-      "title": "Bitcoin price stays under $77K as US bond yields near 20-year highs",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T16:00:27+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:441959c12094b:0-bitcoin-price-stays-under-77k-as-us-bond-yields-near-20-year-highs/"
-    },
-    {
-      "title": "Bitcoin Holders Under Little Pressure to Sell Despite ETF Outflow \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T15:54:00+00:00",
-      "timeDisplay": "3:54 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519006777:0/"
-    },
-    {
-      "title": "Bitcoin price outlook: Can BTC recover $80,000 after selloff?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T15:53:34+00:00",
-      "timeDisplay": "3:53 PM",
-      "link": "https://www.tradingview.com/news/invezz:96e5e8884094b:0-bitcoin-price-outlook-can-btc-recover-80-000-after-selloff/"
-    },
-    {
       "title": "Zcash Foundation Reports $36.69M Treasury as ZEC Trades Near Recent Highs",
       "source": "cryptoprowl",
       "color": "#00e5ff",
@@ -605,46 +645,6 @@
       "timestamp": "2026-05-19T15:11:30+00:00",
       "timeDisplay": "3:11 PM",
       "link": "https://www.tradingview.com/news/stocktwits:e43e0fd90094b:0/"
-    },
-    {
-      "title": "Smart Crypto Whale Loads Up On Dogecoin With $2 Million Long Position",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T15:00:51+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:b4a7a2134094b:0-smart-crypto-whale-loads-up-on-dogecoin-with-2-million-long-position/"
-    },
-    {
-      "title": "Tax refund season fuels retail investor frenzy, with May set to smash records",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T14:51:20+00:00",
-      "timeDisplay": "2:51 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41W16U:0-tax-refund-season-fuels-retail-investor-frenzy-with-may-set-to-smash-records/"
-    },
-    {
-      "title": "Ethereum Down From Near-Term High \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T14:51:00+00:00",
-      "timeDisplay": "2:51 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519006307:0/"
-    },
-    {
-      "title": "Wall St slips as inflation fears push yields higher",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T14:38:19+00:00",
-      "timeDisplay": "2:38 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W0WD:0-wall-st-slips-as-inflation-fears-push-yields-higher/"
-    },
-    {
-      "title": "BBG: NATO STARTING TO CONSIDER HORMUZ DEPLOYMENT TO PROTECT SHIPS IF STRAIT STILL BLOCKED IN JULY BUT STILL LACKS NECESSARY UNANIMOUS SUPPORT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T14:20:00+00:00",
-      "timeDisplay": "2:20 PM",
-      "link": "https://www.tradingview.com/news/macenews:2d3b50b24094b:0-bbg-nato-starting-to-consider-hormuz-deployment-to-protect-ships-if-strait-still-blocked-in-july-but-still-lacks-necessary-unanimous-support/"
     }
   ]
 }

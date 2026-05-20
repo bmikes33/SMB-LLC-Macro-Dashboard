@@ -1,56 +1,131 @@
 {
-  "lastUpdated": "2026-05-19T23:00:26.468716+00:00",
-  "lastUpdatedDisplay": "May 19, 2026 \u2014 11:00 PM UTC",
+  "lastUpdated": "2026-05-20T00:14:55.345957+00:00",
+  "lastUpdatedDisplay": "May 20, 2026 \u2014 12:14 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US bond yields climbed to multi-decade highs on renewed inflation concerns, with the 30-year hitting levels not seen since 2007, pressuring stocks across sectors. Trump escalated Iran tensions with nuclear weapons rhetoric while reportedly being an hour from attacking Iran, though oil prices eased on diplomatic hopes. Bitcoin struggled under $77K amid ETF outflows and rising real yields, while the dollar strengthened to 6-week highs.",
+    "macroSummary": "Bond yields surged to multi-decade highs on inflation concerns, with the 30-year Treasury hitting levels not seen since 2007, pressuring equity markets lower. Oil prices eased as traders assessed mixed signals from Iran war developments and Trump administration comments. The dollar strengthened on inflation fears and geopolitical uncertainty while gold declined despite safe-haven demand.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines show the 30-year bond approaching the 5.10% invalidation threshold with yields at 2007 highs, while inflation worries are pressuring risk assets and strengthening the dollar toward the 100 DXY watch level.",
+    "regimePressureReason": "Multiple headlines show 30-year yields hitting 2007 highs and inflation worries dominating, directly approaching the 30Y 5.10% invalidation threshold that signals accelerating stagflation pressure.",
     "thresholdWatches": [
       {
         "indicator": "US30Y",
-        "level": "5.10%",
-        "signal": "Yield on 30-year bond climbs to highest since 2007 per Reuters"
-      },
-      {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "DXY rises to 6-week high according to Trading Economics"
+        "level": "> 5.10%",
+        "signal": "Reuters reports 30-year bond yields climbed to highest since 2007, approaching long-duration capitulation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "30-year Treasury yields hit highest levels since 2007 on inflation fears",
+        "signal": "30-year Treasury yields hit highest levels since 2007 on inflation worries, nearing the 5.10% stagflation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar strengthens to 6-week highs amid inflation and Iran uncertainty",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Trump escalated Iran tensions claiming he was an hour from attacking Iran with nuclear weapon concerns",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Stocks falling broadly as inflation worries push yields to new highs",
+        "signal": "Fed's Paulson indicates no rate cuts unless sustained inflation progress, signaling extended restrictive policy",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin struggles under $77K pressure from rising real yields and ETF outflows",
-        "tag": "NEUTRAL"
+        "signal": "Oil prices easing despite Iran war tensions as traders assess conflicting geopolitical signals",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Equity markets falling as inflation concerns and rising yields pressure risk assets",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strengthening on inflation fears and uncertainty, moving toward potential DXY 100 regime flip level",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor 30Y yield closely - approaching 5.10% invalidation threshold that would accelerate stagflation pressure",
-      "Watch DXY approach to 100 level for potential dollar regime flip",
-      "Consider tightening BMNR put ladder strikes given crypto weakness from rising real yields"
+      "Monitor 30Y Treasury closely - approaching 5.10% invalidation threshold that would accelerate stagflation pressure",
+      "Prepare to adjust BMNR cash-secured put ladder if regime flips from Reflation to Stagflation",
+      "Consider reducing cyclical equity exposure if bond market stress continues and approaches LQD 107 threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Edges Lower as Traders Assess Middle East Developments \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T00:12:00+00:00",
+      "timeDisplay": "12:12 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519010727:0/"
+    },
+    {
+      "title": "PAULSON: IF IRAN WAR TAKES TIME TO RESOLVE, ELEVATED RISKS TO LAST LONGER",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:51:00+00:00",
+      "timeDisplay": "11:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:6dfda8253094b:0-paulson-if-iran-war-takes-time-to-resolve-elevated-risks-to-last-longer/"
+    },
+    {
+      "title": "PAULSON: MILDLY RESTRICTIVE MON POLICY HELPING KEEP TARIFF IMPACT, OIL PRICES IN CHECK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:51:00+00:00",
+      "timeDisplay": "11:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:4fc4c8fdd094b:0-paulson-mildly-restrictive-mon-policy-helping-keep-tariff-impact-oil-prices-in-check/"
+    },
+    {
+      "title": "PAULSON: NO RATE CUTS IF LABOR MKT STAYS IN BALANCE UNLESS SUSTAINED INFL PROGRESS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:51:00+00:00",
+      "timeDisplay": "11:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:bab14a7df094b:0-paulson-no-rate-cuts-if-labor-mkt-stays-in-balance-unless-sustained-infl-progress/"
+    },
+    {
+      "title": "FED'S PAULSON: KEEPING RATES STEADY ALLOWS FED TO ASSESS INFLATION, JOB RISKS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:50:00+00:00",
+      "timeDisplay": "11:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:4c1ca63e8094b:0-fed-s-paulson-keeping-rates-steady-allows-fed-to-assess-inflation-job-risks/"
+    },
+    {
+      "title": "FED'S PAULSON: MONETARY POLICY \u2018APPROPRIATELY POSITIONED TO NAVIGATE CURRENT CHALLENGES'\u2019",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:50:00+00:00",
+      "timeDisplay": "11:50 PM",
+      "link": "https://www.tradingview.com/news/macenews:ca230a2ee094b:0-fed-s-paulson-monetary-policy-appropriately-positioned-to-navigate-current-challenges/"
+    },
+    {
+      "title": "FED'S PAULSON: 'HEALTHY' MARKETS \u2018TAKING ON BOARD\u2019 POSSIBLE TIGHTENING, EXTENDED PAUSE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:49:00+00:00",
+      "timeDisplay": "11:49 PM",
+      "link": "https://www.tradingview.com/news/macenews:4cc37ed63094b:0-fed-s-paulson-healthy-markets-taking-on-board-possible-tightening-extended-pause/"
+    },
+    {
+      "title": "Gold Holds Decline on US-Iran Tensions",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:44:21+00:00",
+      "timeDisplay": "11:44 PM",
+      "link": "https://www.tradingview.com/news/te_news:552047:0-gold-holds-decline-on-us-iran-tensions/"
+    },
+    {
+      "title": "Gold Edges Higher on Possible Technical Recovery \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:34:00+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519010606:0/"
+    },
+    {
+      "title": "Oil Holds Firm on Fresh Trump Threats",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T23:32:08+00:00",
+      "timeDisplay": "11:32 PM",
+      "link": "https://www.tradingview.com/news/te_news:552045:0-oil-holds-firm-on-fresh-trump-threats/"
+    },
     {
       "title": "Same Trade, Different Liquidations: How Exchange Mechanics Decided Bitcoin\u2019s 67-Day Funding Squeeze",
       "source": "bravenewcoin",
@@ -290,6 +365,14 @@
       "timestamp": "2026-05-19T15:38:00+00:00",
       "timeDisplay": "3:38 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260519006644:0/"
+    },
+    {
+      "title": "Crude Oil Prices Pressured on Hopes Diplomacy Can End US-Iran War",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-19T15:37:51+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/barchart:0a40bf4fe094b:0-crude-oil-prices-pressured-on-hopes-diplomacy-can-end-us-iran-war/"
     },
     {
       "title": "DXY Rises to 6-Week High",
@@ -562,94 +645,6 @@
       "timestamp": "2026-05-19T12:08:00+00:00",
       "timeDisplay": "12:08 PM",
       "link": "https://www.tradingview.com/news/macenews:14554736c094b:0-fed-gov-waller-q-a-frankfurt-free-thinking-research-without-time-element-important-for-cenbanks-to-prepare-for-when-instant-crisis-analysis-needed/"
-    },
-    {
-      "title": "HEADS UP: FED GOV WALLER Q&A COMING UP AT INT'L RESEARCH FORUM PANEL IN FRANKFURT, GERMANY AFTER 8A ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T11:54:00+00:00",
-      "timeDisplay": "11:54 AM",
-      "link": "https://www.tradingview.com/news/macenews:c36bebc6a094b:0-heads-up-fed-gov-waller-q-a-coming-up-at-int-l-research-forum-panel-in-frankfurt-germany-after-8a-et/"
-    },
-    {
-      "title": "Shares diverge, bonds steady as oil eases on Trump's Iran comments",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T11:53:48+00:00",
-      "timeDisplay": "11:53 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0FE:0-shares-diverge-bonds-steady-as-oil-eases-on-trump-s-iran-comments/"
-    },
-    {
-      "title": "US stock futures fall on extended chip losses, inflation worries",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T11:50:57+00:00",
-      "timeDisplay": "11:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W0PA:0-us-stock-futures-fall-on-extended-chip-losses-inflation-worries/"
-    },
-    {
-      "title": "Dollar strengthens as investors weigh Fed outlook and Middle East uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T11:36:23+00:00",
-      "timeDisplay": "11:36 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41W0O6:0-dollar-strengthens-as-investors-weigh-fed-outlook-and-middle-east-uncertainty/"
-    },
-    {
-      "title": "Ethereum Staking Surges as ETH Price Consolidates Amid Leadership Turmoil\u2014What\u2019s Next?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T10:38:24+00:00",
-      "timeDisplay": "10:38 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:841af9f13094b:0-ethereum-staking-surges-as-eth-price-consolidates-amid-leadership-turmoil-what-s-next/"
-    },
-    {
-      "title": "US stock futures fall as chips extend slide, inflation worries persist",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T10:12:44+00:00",
-      "timeDisplay": "10:12 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41W0SF:0-us-stock-futures-fall-as-chips-extend-slide-inflation-worries-persist/"
-    },
-    {
-      "title": "U.S. Monetary Policy Backdrop Could Favor Dollar \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T10:05:00+00:00",
-      "timeDisplay": "10:05 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519003029:0/"
-    },
-    {
-      "title": "Is the futures market getting ahead of itself on rate hikes?",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T10:00:00+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41V0FW:0-is-the-futures-market-getting-ahead-of-itself-on-rate-hikes/"
-    },
-    {
-      "title": "Mapping the Market: Benchmark Treasury yields look poised to rise further\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T10:00:00+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41V0TI:0-mapping-the-market-benchmark-treasury-yields-look-poised-to-rise-further/"
-    },
-    {
-      "title": "Warsh's arrival leaves long bonds without a safety net: Mike Dolan",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T10:00:00+00:00",
-      "timeDisplay": "10:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41Q2M1:0-warsh-s-arrival-leaves-long-bonds-without-a-safety-net-mike-dolan/"
-    },
-    {
-      "title": "ZAWYA: OKX launches USDS\u24c8-M options on Bitcoin and Ether",
-      "source": "zawya",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T09:52:39+00:00",
-      "timeDisplay": "9:52 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026-05-19:newsml_Zaw6T2plT:0-zawya-okx-launches-usds-m-options-on-bitcoin-and-ether/"
     }
   ]
 }

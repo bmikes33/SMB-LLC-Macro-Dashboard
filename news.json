@@ -1,51 +1,120 @@
 {
-  "lastUpdated": "2026-05-20T00:14:55.345957+00:00",
-  "lastUpdatedDisplay": "May 20, 2026 \u2014 12:14 AM UTC",
+  "lastUpdated": "2026-05-20T01:54:07.203699+00:00",
+  "lastUpdatedDisplay": "May 20, 2026 \u2014 01:54 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bond yields surged to multi-decade highs on inflation concerns, with the 30-year Treasury hitting levels not seen since 2007, pressuring equity markets lower. Oil prices eased as traders assessed mixed signals from Iran war developments and Trump administration comments. The dollar strengthened on inflation fears and geopolitical uncertainty while gold declined despite safe-haven demand.",
+    "macroSummary": "Oil prices declined on Trump's comments about ending the Iran war quickly, while the dollar strengthened to six-week highs on rate hike expectations and geopolitical uncertainty. Bond yields surged with the 30-year Treasury reaching its highest level since 2007, pressuring equity markets lower amid renewed inflation concerns.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Multiple headlines show 30-year yields hitting 2007 highs and inflation worries dominating, directly approaching the 30Y 5.10% invalidation threshold that signals accelerating stagflation pressure.",
+    "regimePressureReason": "The 30-year yield hitting 2007 highs approaches the 5.10% invalidation threshold and signals accelerating long-duration stress that could flip the regime toward stagflation.",
     "thresholdWatches": [
       {
         "indicator": "US30Y",
         "level": "> 5.10%",
-        "signal": "Reuters reports 30-year bond yields climbed to highest since 2007, approaching long-duration capitulation threshold"
+        "signal": "30-year bond yield climbed to highest since 2007, approaching long-duration capitulation threshold"
+      },
+      {
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "FX intervention risks rising as 160 yen comes back into focus according to market talk"
       }
     ],
     "keySignals": [
       {
-        "signal": "30-year Treasury yields hit highest levels since 2007 on inflation worries, nearing the 5.10% stagflation threshold",
+        "signal": "30-year Treasury yield hits highest level since 2007, nearing the 5.10% invalidation threshold for accelerated stagflation pressure",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Fed's Paulson indicates no rate cuts unless sustained inflation progress, signaling extended restrictive policy",
+        "signal": "Dollar at six-week highs on rate hike bets, moving closer to potential DXY 100 regime flip level",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil prices easing on Trump Iran war resolution comments reduces immediate stagflationary oil shock pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil prices easing despite Iran war tensions as traders assess conflicting geopolitical signals",
-        "tag": "CONTRADICTS"
+        "signal": "Fed's Paulson suggests no rate cuts unless sustained inflation progress, reinforcing higher-for-longer stance",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Equity markets falling as inflation concerns and rising yields pressure risk assets",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar strengthening on inflation fears and uncertainty, moving toward potential DXY 100 regime flip level",
+        "signal": "USDJPY intervention zone (160) back in focus as yen weakens, potential Risk-Off catalyst via carry trade unwind",
         "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor 30Y Treasury closely - approaching 5.10% invalidation threshold that would accelerate stagflation pressure",
-      "Prepare to adjust BMNR cash-secured put ladder if regime flips from Reflation to Stagflation",
-      "Consider reducing cyclical equity exposure if bond market stress continues and approaches LQD 107 threshold"
+      "Monitor 30Y yield closely - approaching 5.10% invalidation threshold that would accelerate stagflation pressure",
+      "Prepare for potential BMNR ladder adjustments if long-duration stress intensifies and approaches bond market dysfunction",
+      "Watch for DXY approach to 100 and USDJPY 160 as potential regime flip catalysts"
     ]
   },
   "articles": [
+    {
+      "title": "Oil prices ease after Trump says US will end Iran war 'very quickly'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T01:35:16+00:00",
+      "timeDisplay": "1:35 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41W1TP:0-oil-prices-ease-after-trump-says-us-will-end-iran-war-very-quickly/"
+    },
+    {
+      "title": "Dollar at six-week high on rate-hike bets, Iran war uncertainty",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T01:34:19+00:00",
+      "timeDisplay": "1:34 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41X037:0-dollar-at-six-week-high-on-rate-hike-bets-iran-war-uncertainty/"
+    },
+    {
+      "title": "USDC Exchange Inflows Hit $350M\u2014Traders Buying The Bitcoin Dip?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T01:30:40+00:00",
+      "timeDisplay": "1:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:e938b5709094b:0-usdc-exchange-inflows-hit-350m-traders-buying-the-bitcoin-dip/"
+    },
+    {
+      "title": "Correction to FX Intervention Market Talk Item",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T01:15:00+00:00",
+      "timeDisplay": "1:15 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519010875:0/"
+    },
+    {
+      "title": "FX Intervention Risks Rising Again as 160 Yen Comes Back Into Focus \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T00:56:00+00:00",
+      "timeDisplay": "12:56 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519010819:0/"
+    },
+    {
+      "title": "Asian Currencies Consolidate; May be Weighed by Risk-Off Mood \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T00:42:00+00:00",
+      "timeDisplay": "12:42 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260519010795:0/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T00:38:30+00:00",
+      "timeDisplay": "12:38 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X00G:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "US Crude Stockpiles Fall More Than Expected: API",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T00:19:37+00:00",
+      "timeDisplay": "12:19 AM",
+      "link": "https://www.tradingview.com/news/te_news:552051:0-us-crude-stockpiles-fall-more-than-expected-api/"
+    },
     {
       "title": "Oil Edges Lower as Traders Assess Middle East Developments \u2014 Market Talk",
       "source": "dow-jones",
@@ -471,14 +540,6 @@
       "link": "https://www.tradingview.com/news/macenews:2d3b50b24094b:0-bbg-nato-starting-to-consider-hormuz-deployment-to-protect-ships-if-strait-still-blocked-in-july-but-still-lacks-necessary-unanimous-support/"
     },
     {
-      "title": "Recent Bitcoin holders sell $770M BTC at a loss amid $65K BTC price calls",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T14:19:38+00:00",
-      "timeDisplay": "2:19 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:ed2e82a7a094b:0-recent-bitcoin-holders-sell-770m-btc-at-a-loss-amid-65k-btc-price-calls/"
-    },
-    {
       "title": "Bank of Canada Has Ample Room to Be Patient on Rates \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -589,62 +650,6 @@
       "timestamp": "2026-05-19T13:06:00+00:00",
       "timeDisplay": "1:06 PM",
       "link": "https://www.tradingview.com/news/macenews:360b910ff094b:0-fed-gov-waller-q-a-frankfurt-ended-having-not-touched-on-future-monpol-or-the-current-economy/"
-    },
-    {
-      "title": "Wall St eyes lower open on extended chip selloff, inflation concerns",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T13:01:46+00:00",
-      "timeDisplay": "1:01 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41W0Z3:0-wall-st-eyes-lower-open-on-extended-chip-selloff-inflation-concerns/"
-    },
-    {
-      "title": "Yields tick lower after overnight dip in oil prices",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-19T12:57:49+00:00",
-      "timeDisplay": "12:57 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41W0HV:0-yields-tick-lower-after-overnight-dip-in-oil-prices/"
-    },
-    {
-      "title": "Oil Little Changed as Traders Await Breakthrough in U.S.-Iran Negotiations \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:25:00+00:00",
-      "timeDisplay": "12:25 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260519004476:0/"
-    },
-    {
-      "title": "US ADP: PRIVATE PAYROLLS UNREVISED AT UP 33,000 AVG. PER WEEK IN 4-WEEK PERIOD ENDED APRIL 28, UNREVISED FROM PREVIOUS REPORT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:16:00+00:00",
-      "timeDisplay": "12:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:df9b5a40f094b:0-us-adp-private-payrolls-unrevised-at-up-33-000-avg-per-week-in-4-week-period-ended-april-28-unrevised-from-previous-report/"
-    },
-    {
-      "title": "US ADP: PRIVATE PAYROLLS UP AVG. 42,250 PER WEEK IN LATEST 4-WEEK PERIOD ENDED MAY 2",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:15:00+00:00",
-      "timeDisplay": "12:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:75f3bec2e094b:0-us-adp-private-payrolls-up-avg-42-250-per-week-in-latest-4-week-period-ended-may-2/"
-    },
-    {
-      "title": "Key facts: Ether -10%; $300M ETH liquidated; Bitmine buys 71.7k ETH",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:14:46+00:00",
-      "timeDisplay": "12:14 PM",
-      "link": "https://www.tradingview.com/news/tradingview:ef8d655e90d60:0-key-facts-ether-10-300m-eth-liquidated-bitmine-buys-71-7k-eth/"
-    },
-    {
-      "title": "FED GOV WALLER Q&A/FRANKFURT:'FREE THINKING' RESEARCH WITHOUT TIME ELEMENT IMPORTANT FOR CENBANKS TO PREPARE FOR WHEN INSTANT CRISIS ANALYSIS NEEDED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-19T12:08:00+00:00",
-      "timeDisplay": "12:08 PM",
-      "link": "https://www.tradingview.com/news/macenews:14554736c094b:0-fed-gov-waller-q-a-frankfurt-free-thinking-research-without-time-element-important-for-cenbanks-to-prepare-for-when-instant-crisis-analysis-needed/"
     }
   ]
 }

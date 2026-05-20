@@ -1,51 +1,144 @@
 {
-  "lastUpdated": "2026-05-20T18:39:20.812641+00:00",
-  "lastUpdatedDisplay": "May 20, 2026 \u2014 06:39 PM UTC",
+  "lastUpdated": "2026-05-20T20:58:13.778269+00:00",
+  "lastUpdatedDisplay": "May 20, 2026 \u2014 08:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices fell sharply below $100 on hopes for a U.S.-Iran deal, while FOMC minutes revealed hawkish sentiment with most participants expecting inflation to take longer to return to 2%. Bond yields declined despite persistent inflation concerns, and EIA data showed larger-than-expected crude inventory draws.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The potential Iran deal removing the oil war premium directly undermines a key pillar of the Reflation regime, with WTI falling below $100 and bond yields declining despite hawkish Fed sentiment.",
+    "macroSummary": "Markets rallied on hopes for U.S.-Iran deal progress, with oil falling below $100 and bond yields declining as war premiums fade. FOMC minutes revealed hawkish undertones with most participants seeing increased inflation risks and longer timeline to 2% target, while crypto markets showed bearish sentiment with Bitcoin mirroring 2022 patterns.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Iran deal hopes are reducing oil war premiums and supporting risk-on moves, but FOMC minutes show increased inflation persistence concerns that could validate the stagflationary undertones.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $100",
-        "signal": "WTI broke below $100 on Iran deal hopes, reversing the war premium that supported Reflation thesis"
+        "indicator": "WTI Oil",
+        "level": "Below $100",
+        "signal": "Oil fell below $100 on U.S.-Iran deal hopes, moving away from the $115 stagflation threshold"
+      },
+      {
+        "indicator": "USDJPY",
+        "level": "Near 160",
+        "signal": "Yen described as 'near danger zone' and 'toward danger zone' suggesting approach to 160 intervention level"
       }
     ],
     "keySignals": [
       {
-        "signal": "WTI crude fell 4.1% below $100 on hopes for U.S.-Iran deal, potentially ending the oil war premium",
+        "signal": "WTI crude fell below $100 on Iran deal hopes, reducing stagflation pressure from oil shock",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond yields declined despite FOMC minutes showing hawkish tilt and inflation persistence concerns",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar dipped on Iran deal hopes, moving away from potential DXY 100 threshold",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "FOMC participants noted increased risk inflation takes longer to return to 2%, with hawkish sentiment dominating",
+        "signal": "FOMC minutes show 'vast majority' see increased risk inflation takes longer to return to 2% than expected",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "EIA crude inventories fell 7.9M barrels vs 2.5M expected, showing continued supply tightness",
-        "tag": "SUPPORTS"
+        "signal": "Bond yields falling and war premium exiting commodities as Iran deal talks progress",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin showing 'extremely bearish' sentiment mirroring 2022 bear market patterns",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "USDJPY approaching 160 intervention zone amid dollar weakness on Iran deal hopes",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained break below $95 could invalidate Reflation thesis entirely",
-      "Reassess BMNR put ladder strikes if bond rally continues on geopolitical de-escalation",
-      "Consider reducing cyclical exposure if Iran deal materializes and removes commodity tailwinds"
+      "Monitor oil trajectory - sustained break below $100 removes key stagflation pillar from thesis",
+      "Watch USDJPY intervention risk at 160 as potential risk-off catalyst for BMNR ladder",
+      "Consider taking profits on cyclical overweight if Iran deal materializes and removes war premium"
     ]
   },
   "articles": [
+    {
+      "title": "Chart of the Day: Ansem\u2019s 2026 thesis is two arrows \u2014 one down, one up",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T20:06:04+00:00",
+      "timeDisplay": "8:06 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:9b8843249094b:0/"
+    },
+    {
+      "title": "Wall Street rallies as attention turns to Nvidia results",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T20:04:30+00:00",
+      "timeDisplay": "8:04 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X1BH:0-wall-street-rallies-as-attention-turns-to-nvidia-results/"
+    },
+    {
+      "title": "Yields fall after Trump signals Iran deal talk progress",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T20:01:49+00:00",
+      "timeDisplay": "8:01 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0YQ:0-yields-fall-after-trump-signals-iran-deal-talk-progress/"
+    },
+    {
+      "title": "CryptoQuant says bitcoin mirrors 2022 bear market pattern as sentiment turns \u2018extremely bearish\u2019",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T19:35:26+00:00",
+      "timeDisplay": "7:35 PM",
+      "link": "https://www.tradingview.com/news/the_block:b4558c5fa094b:0-cryptoquant-says-bitcoin-mirrors-2022-bear-market-pattern-as-sentiment-turns-extremely-bearish/"
+    },
+    {
+      "title": "David Bailey\u2019s Nakamoto bitcoin treasury announces 1-for-40 reverse split as shares hit new lows",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T19:22:08+00:00",
+      "timeDisplay": "7:22 PM",
+      "link": "https://www.tradingview.com/news/the_block:dba662dd5094b:0-david-bailey-s-nakamoto-bitcoin-treasury-announces-1-for-40-reverse-split-as-shares-hit-new-lows/"
+    },
+    {
+      "title": "Bond yields, oil fall amid hopes for Iran deal; stocks up with Nvidia results ahead",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T19:14:47+00:00",
+      "timeDisplay": "7:14 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X18H:0-bond-yields-oil-fall-amid-hopes-for-iran-deal-stocks-up-with-nvidia-results-ahead/"
+    },
+    {
+      "title": "Oil Falls On Renewed Hopes for U.S.-Iran Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T19:06:00+00:00",
+      "timeDisplay": "7:06 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520009545:0/"
+    },
+    {
+      "title": "Dollar dips on hopes for Iran deal, yen near danger zone",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T18:55:29+00:00",
+      "timeDisplay": "6:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0XU:0-dollar-dips-on-hopes-for-iran-deal-yen-near-danger-zone/"
+    },
+    {
+      "title": "Tepid demand for US Treasury auction shows investor jitters over Iran war",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T18:34:28+00:00",
+      "timeDisplay": "6:34 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0YD:0-tepid-demand-for-us-treasury-auction-shows-investor-jitters-over-iran-war/"
+    },
+    {
+      "title": "Gold Rebounds from Near 2-Month Low",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:34:22+00:00",
+      "timeDisplay": "6:34 PM",
+      "link": "https://www.tradingview.com/news/te_news:552408:0-gold-rebounds-from-near-2-month-low/"
+    },
+    {
+      "title": "Dollar Lower on US-Iran Deal Hopes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:26:53+00:00",
+      "timeDisplay": "6:26 PM",
+      "link": "https://www.tradingview.com/news/te_news:552406:0-dollar-lower-on-us-iran-deal-hopes/"
+    },
     {
       "title": "FOMC MINUTES: PARTICIPANTS 'GENERALLY JUDGED' CURRENT POLICY RATE 'WITHIN THE RANGE OF PLAUSIBLE ESTIMATES OF ITS NEUTRAL LEVEL;' 'WELL POSITIONED'",
       "source": "macenews",
@@ -77,6 +170,14 @@
       "timestamp": "2026-05-20T18:10:00+00:00",
       "timeDisplay": "6:10 PM",
       "link": "https://www.tradingview.com/news/macenews:867dadb5a094b:0-fomc-minutes-vast-majority-of-participants-noted-an-increased-risk-that-inflation-would-take-longer-to-return-to-2-than-previously-expected/"
+    },
+    {
+      "title": "Fed Minutes Signal Higher-for-Longer Rates as Bitcoin Faces Pressure",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:08:41+00:00",
+      "timeDisplay": "6:08 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:60a4be191094b:0-fed-minutes-signal-higher-for-longer-rates-as-bitcoin-faces-pressure/"
     },
     {
       "title": "FOMC MINUTES: MORE PARTICIPANTS WANTED TO REMOVE EASING BIAS THAN INDICATED BY NUMBER OF DISSENTS; GENERALLY, HAWKISH SENTIMENTS SEEMED TO DOMINATE",
@@ -455,14 +556,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0GO:0-bond-yields-pause-near-recent-highs-stocks-steady-ahead-of-nvidia-results/"
     },
     {
-      "title": "Dollar rises to six-week high on rate hike bets and war uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T12:24:01+00:00",
-      "timeDisplay": "12:24 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0IG:0-dollar-rises-to-six-week-high-on-rate-hike-bets-and-war-uncertainty/"
-    },
-    {
       "title": "Key facts: ETH at $2,150\u20132,200; $62M ETF outflow; $9.82M leveraged long",
       "source": "tradingview",
       "color": "#00e5ff",
@@ -519,22 +612,6 @@
       "link": "https://www.tradingview.com/news/invezz:238cf9e37094b:0-ethereum-falls-below-key-levels-as-etf-outflows-spark-fresh-selloff-concerns/"
     },
     {
-      "title": "South Carolina governor signs bill protecting Bitcoin miners, banning CBDC",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:21:32+00:00",
-      "timeDisplay": "11:21 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:73395108d094b:0-south-carolina-governor-signs-bill-protecting-bitcoin-miners-banning-cbdc/"
-    },
-    {
-      "title": "\u2018Not all 200-day moving averages are equal\u2019: K33 argues February\u2019s $60K low still marks cycle\u2019s maximum drawdown",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:11:02+00:00",
-      "timeDisplay": "11:11 AM",
-      "link": "https://www.tradingview.com/news/the_block:7548b8ce0094b:0-not-all-200-day-moving-averages-are-equal-k33-argues-february-s-60k-low-still-marks-cycle-s-maximum-drawdown/"
-    },
-    {
       "title": "Bitcoin, Ethereum Rebound Ahead Of Nvidia Earnings, FOMC Minutes After Senate Moves To Limit Trump\u2019s Iran War Powers \u2013 XRP, DOGE Lag Recovery",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -549,14 +626,6 @@
       "timestamp": "2026-05-20T11:00:00+00:00",
       "timeDisplay": "11:00 AM",
       "link": "https://www.tradingview.com/news/macenews:3fb0685d9094b:0-us-mba-30-year-fixed-mortgage-contract-rate-6-56-in-may-15-week-10-bps-vs-1-week-ago-21-bps-vs-4-weeks-ago-36-bps-vs-1-year-ago/"
-    },
-    {
-      "title": "US MBA 5-YEAR ARM MORTGAGE CONTRACT RATE 5.76% IN MAY 15 WEEK; +6 BPS VS 1 WEEK AGO, +28 BPS VS 4 WEEKS AGO, -40 BPS VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:eab5a4cc5094b:0-us-mba-5-year-arm-mortgage-contract-rate-5-76-in-may-15-week-6-bps-vs-1-week-ago-28-bps-vs-4-weeks-ago-40-bps-vs-1-year-ago/"
     },
     {
       "title": "Economists warn costly crude could widen India\u2019s CAD, with one seeing it crossing 2% despite gold curbs",
@@ -581,70 +650,6 @@
       "timestamp": "2026-05-20T09:46:00+00:00",
       "timeDisplay": "9:46 AM",
       "link": "https://www.tradingview.com/news/cryptoprowl:ff83ac5c5094b:0-president-trump-s-truth-social-withdraws-bitcoin-etf-application/"
-    },
-    {
-      "title": "Crypto News Today (May 20): Bitcoin Struggling Below $80K, SOL & XRP ETFs Green as ETH and BTC ETFs Bleed",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:32:07+00:00",
-      "timeDisplay": "9:32 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:3bfbea65e094b:0-crypto-news-today-may-20-bitcoin-struggling-below-80k-sol-xrp-etfs-green-as-eth-and-btc-etfs-bleed/"
-    },
-    {
-      "title": "Bond yields pause near recent peak, stocks steady ahead of Nvidia results",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T09:27:31+00:00",
-      "timeDisplay": "9:27 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X09E:0-bond-yields-pause-near-recent-peak-stocks-steady-ahead-of-nvidia-results/"
-    },
-    {
-      "title": "Middle East Nations' Credit Default Protection Costs Remain High \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:26:00+00:00",
-      "timeDisplay": "9:26 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520003263:0/"
-    },
-    {
-      "title": "Oil Prices Fall for 2nd Day",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:20:07+00:00",
-      "timeDisplay": "9:20 AM",
-      "link": "https://www.tradingview.com/news/te_news:552272:0-oil-prices-fall-for-2nd-day/"
-    },
-    {
-      "title": "Oil Slides 2% as U.S. Pressures Iran While Some Russian Restrictions Are Loosened \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:17:00+00:00",
-      "timeDisplay": "9:17 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520003202:0/"
-    },
-    {
-      "title": "Bitcoin Struggles As Bond Yields Rise ",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:12:00+00:00",
-      "timeDisplay": "9:12 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:08bd0e9b4094b:0-bitcoin-struggles-as-bond-yields-rise/"
-    },
-    {
-      "title": "Nasdaq, S&P 500 Futures Higher As Nvidia Earnings Take Center Stage: Why TSLA, SLS, IBRX, CAVA, POET, BA Are Keeping Traders Engaged Today",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:04:27+00:00",
-      "timeDisplay": "9:04 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:a53f5ffcd094b:0/"
-    },
-    {
-      "title": "Bitcoin Investors are Selling While Ethereum Whales Dump ETH \u2014 What\u2019s Next for BTC & ETH Prices?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T08:06:39+00:00",
-      "timeDisplay": "8:06 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:a87b66420094b:0-bitcoin-investors-are-selling-while-ethereum-whales-dump-eth-what-s-next-for-btc-eth-prices/"
     }
   ]
 }

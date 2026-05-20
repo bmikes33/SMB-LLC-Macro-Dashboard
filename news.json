@@ -1,51 +1,171 @@
 {
-  "lastUpdated": "2026-05-20T16:22:56.840475+00:00",
-  "lastUpdatedDisplay": "May 20, 2026 \u2014 04:22 PM UTC",
+  "lastUpdated": "2026-05-20T18:39:20.812641+00:00",
+  "lastUpdatedDisplay": "May 20, 2026 \u2014 06:39 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with bond yields and oil falling on Iran deal hopes while inflation concerns persist and dollar remains near 6-week highs. Crypto markets face pressure with Ethereum whale selling and ETF outflows threatening key support levels. Energy inventories show larger-than-expected crude drawdowns but weaker distillate demand.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Iran deal hopes are pulling oil lower and easing some inflation fears, but inflation expectations remain elevated and dollar strength suggests ongoing reflation pressures.",
+    "macroSummary": "Oil prices fell sharply below $100 on hopes for a U.S.-Iran deal, while FOMC minutes revealed hawkish sentiment with most participants expecting inflation to take longer to return to 2%. Bond yields declined despite persistent inflation concerns, and EIA data showed larger-than-expected crude inventory draws.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The potential Iran deal removing the oil war premium directly undermines a key pillar of the Reflation regime, with WTI falling below $100 and bond yields declining despite hawkish Fed sentiment.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "WTI down 4.1% on Iran deal hopes, moving away from stagflation threshold"
+        "level": "< $100",
+        "signal": "WTI broke below $100 on Iran deal hopes, reversing the war premium that supported Reflation thesis"
       }
     ],
     "keySignals": [
       {
-        "signal": "WTI crude down 4.1% on Iran deal hopes, reducing stagflation risk from oil shock component",
+        "signal": "WTI crude fell 4.1% below $100 on hopes for U.S.-Iran deal, potentially ending the oil war premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar near 6-week highs maintains reflation pressure despite Iran deal optimism",
+        "signal": "Bond yields declined despite FOMC minutes showing hawkish tilt and inflation persistence concerns",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar dipped on Iran deal hopes, moving away from potential DXY 100 threshold",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "FOMC participants noted increased risk inflation takes longer to return to 2%, with hawkish sentiment dominating",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Atlanta Fed business inflation expectations steady at 2.4% with input costs unchanged, showing persistent underlying price pressures",
+        "signal": "EIA crude inventories fell 7.9M barrels vs 2.5M expected, showing continued supply tightness",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bond yields falling on Iran deal hopes but inflation concerns persist, creating mixed duration signals",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Ethereum facing structural pressure from whale selling and ETF outflows, threatening $2K support critical for BMNR strategy",
-        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as ETH approaches $2K support - whale selling and ETF outflows creating structural headwinds",
-      "Watch oil momentum - Iran deal progress could significantly reduce stagflation risk if WTI continues falling",
-      "Prepare for potential regime shift if Iran deal materializes and oil stays subdued while growth momentum continues"
+      "Monitor oil prices closely - sustained break below $95 could invalidate Reflation thesis entirely",
+      "Reassess BMNR put ladder strikes if bond rally continues on geopolitical de-escalation",
+      "Consider reducing cyclical exposure if Iran deal materializes and removes commodity tailwinds"
     ]
   },
   "articles": [
+    {
+      "title": "FOMC MINUTES: PARTICIPANTS 'GENERALLY JUDGED' CURRENT POLICY RATE 'WITHIN THE RANGE OF PLAUSIBLE ESTIMATES OF ITS NEUTRAL LEVEL;' 'WELL POSITIONED'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:20:00+00:00",
+      "timeDisplay": "6:20 PM",
+      "link": "https://www.tradingview.com/news/macenews:21708c420094b:0-fomc-minutes-participants-generally-judged-current-policy-rate-within-the-range-of-plausible-estimates-of-its-neutral-level-well-positioned/"
+    },
+    {
+      "title": "FOMC MINUTES: 'ALMOST ALL PARTICIPANTS' NOTED IRAN WAR 'COULD PERSIST FOR AN EXTENDED PERIOD' AND EVEN AFTER END, OIL/COMMODITIES PRICES STAY HOT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:14:00+00:00",
+      "timeDisplay": "6:14 PM",
+      "link": "https://www.tradingview.com/news/macenews:977614eb1094b:0-fomc-minutes-almost-all-participants-noted-iran-war-could-persist-for-an-extended-period-and-even-after-end-oil-commodities-prices-stay-hot/"
+    },
+    {
+      "title": "US 10-Year Yield Holds Decline",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:13:17+00:00",
+      "timeDisplay": "6:13 PM",
+      "link": "https://www.tradingview.com/news/te_news:552402:0-us-10-year-yield-holds-decline/"
+    },
+    {
+      "title": "FOMC MINUTES: 'VAST MAJORITY' OF PARTICIPANTS 'NOTED AN INCREASED RISK THAT INFLATION WOULD TAKE LONGER TO RETURN' TO 2% THAN PREVIOUSLY EXPECTED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:10:00+00:00",
+      "timeDisplay": "6:10 PM",
+      "link": "https://www.tradingview.com/news/macenews:867dadb5a094b:0-fomc-minutes-vast-majority-of-participants-noted-an-increased-risk-that-inflation-would-take-longer-to-return-to-2-than-previously-expected/"
+    },
+    {
+      "title": "FOMC MINUTES: MORE PARTICIPANTS WANTED TO REMOVE EASING BIAS THAN INDICATED BY NUMBER OF DISSENTS; GENERALLY, HAWKISH SENTIMENTS SEEMED TO DOMINATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:06:00+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/macenews:838773f26094b:0-fomc-minutes-more-participants-wanted-to-remove-easing-bias-than-indicated-by-number-of-dissents-generally-hawkish-sentiments-seemed-to-dominate/"
+    },
+    {
+      "title": "FOMC MINUTES: LONG-TERM INFLATION EXPECTATIONS AND  JOBS MARKET APPEAR STABLE; ASSET VALUATIONS 'ELECATED;' NEED ADDITIONAL INFO ON IRAN DEVELOPMENTS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T18:03:00+00:00",
+      "timeDisplay": "6:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:fc726c750094b:0-fomc-minutes-long-term-inflation-expectations-and-jobs-market-appear-stable-asset-valuations-elecated-need-additional-info-on-iran-developments/"
+    },
+    {
+      "title": "Yields reverse from Tuesday selloff as inflation concerns persist",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T18:01:25+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0QQ:0-yields-reverse-from-tuesday-selloff-as-inflation-concerns-persist/"
+    },
+    {
+      "title": "Mutual funds mostly avoided big banks in first-quarter",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T17:58:21+00:00",
+      "timeDisplay": "5:58 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X17J:0-mutual-funds-mostly-avoided-big-banks-in-first-quarter/"
+    },
+    {
+      "title": "U.S.-Iran War Premium Exits Grains \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T17:49:00+00:00",
+      "timeDisplay": "5:49 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520009218:0/"
+    },
+    {
+      "title": "T1 Energy soars as solar company attracts attention from AI investors",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T17:32:57+00:00",
+      "timeDisplay": "5:32 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X16A:0-t1-energy-soars-as-solar-company-attracts-attention-from-ai-investors/"
+    },
+    {
+      "title": "MSTR Stock Outperforms Bitcoin While Wall Street Loads Up On Strategy \u2014 Except For Morgan Stanley",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T17:19:30+00:00",
+      "timeDisplay": "5:19 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:d408de5c2094b:0/"
+    },
+    {
+      "title": "First quarter earnings season on track to be strongest since 2021, BofA says",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-20T17:12:02+00:00",
+      "timeDisplay": "5:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X149:0-first-quarter-earnings-season-on-track-to-be-strongest-since-2021-bofa-says/"
+    },
+    {
+      "title": "Zcash Benefiting From Investments in 'Production-Grade Privacy' \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T17:08:00+00:00",
+      "timeDisplay": "5:08 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520009080:0/"
+    },
+    {
+      "title": "Oil Futures Extend Losses on Hopes for U.S.-Iran Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T16:35:00+00:00",
+      "timeDisplay": "4:35 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520008901:0/"
+    },
+    {
+      "title": "WTI Crude Falls Below $100",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T16:27:27+00:00",
+      "timeDisplay": "4:27 PM",
+      "link": "https://www.tradingview.com/news/te_news:552388:0-wti-crude-falls-below-100/"
+    },
     {
       "title": "Bond yields, oil fall amid hopes for Iran deal; stocks gain with Nvidia results ahead",
       "source": "reuters",
@@ -53,6 +173,14 @@
       "timestamp": "2026-05-20T16:19:25+00:00",
       "timeDisplay": "4:19 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X11O:0-bond-yields-oil-fall-amid-hopes-for-iran-deal-stocks-gain-with-nvidia-results-ahead/"
+    },
+    {
+      "title": "Bitcoin sees fresh US sell-off as markets await Nvidia 'biggest earnings event'",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T16:15:44+00:00",
+      "timeDisplay": "4:15 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:c336d42da094b:0-bitcoin-sees-fresh-us-sell-off-as-markets-await-nvidia-biggest-earnings-event/"
     },
     {
       "title": "Ethereum risks breakdown below $2,000 as whale activity fades",
@@ -76,10 +204,10 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-20T15:39:00+00:00",
       "timeDisplay": "3:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520008308:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260520008306:0/"
     },
     {
-      "title": "HIVE Stock On Track To Hit Fresh Six-Month High After Price Target Hike \u2013 Bitcoin Miners Rebound With Crypto Market",
+      "title": "HIVE Stock Hits Six-Month High After Price Target Hike \u2013 Bitcoin Miners Rebound With Crypto Market",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-05-20T15:29:29+00:00",
@@ -141,14 +269,6 @@
       "timestamp": "2026-05-20T14:42:21+00:00",
       "timeDisplay": "2:42 PM",
       "link": "https://www.tradingview.com/news/te_news:552356:0-us-oil-stocks-fall-more-than-expected/"
-    },
-    {
-      "title": "Yields reverse from Tuesday selloff as inflation concerns persist",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T14:41:12+00:00",
-      "timeDisplay": "2:41 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0LZ:0-yields-reverse-from-tuesday-selloff-as-inflation-concerns-persist/"
     },
     {
       "title": "US EIA CRUDE OIL INVENTORIES -7.9 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK (VS. -2.5 MLN MARKETS EXPECTED_",
@@ -316,7 +436,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-20T12:44:00+00:00",
       "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520006072:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260520006070:0/"
     },
     {
       "title": "Twenty One Capital Outlines Operating Plans To Build The Bitcoin Company",
@@ -439,86 +559,6 @@
       "link": "https://www.tradingview.com/news/macenews:eab5a4cc5094b:0-us-mba-5-year-arm-mortgage-contract-rate-5-76-in-may-15-week-6-bps-vs-1-week-ago-28-bps-vs-4-weeks-ago-40-bps-vs-1-year-ago/"
     },
     {
-      "title": "US MBA ADJUSTABLE-RATE MORTGAGE INDEX +6.7% IN MAY 15 WEEK; +13.0% VS 4 WEEKS AGO; +62.4% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:8dc295ca2094b:0-us-mba-adjustable-rate-mortgage-index-6-7-in-may-15-week-13-0-vs-4-weeks-ago-62-4-vs-1-year-ago/"
-    },
-    {
-      "title": "US MBA DEPUTY CHIEF ECONOMIST KAN: \u2018OVERALL APPLICATIONS WERE DOWN TO THE LOWEST LEVEL IN FIVE WEEKS\u2019 IN MORTGAGE MARKET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:e38a1d7b8094b:0-us-mba-deputy-chief-economist-kan-overall-applications-were-down-to-the-lowest-level-in-five-weeks-in-mortgage-market/"
-    },
-    {
-      "title": "US MBA FIXED RATE MORTGAGE INDEX -3.2% IN MAY 15 WEEK; -8.3% VS 4 WEEKS AGO; +15.5% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:a456b36e5094b:0-us-mba-fixed-rate-mortgage-index-3-2-in-may-15-week-8-3-vs-4-weeks-ago-15-5-vs-1-year-ago/"
-    },
-    {
-      "title": "US MBA MORTGAGE PURCHASE INDEX -4.1% IN MAY 15 WEEK; -3.0% VS 4 WEEKS AGO; +8.0% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:522ff8c36094b:0-us-mba-mortgage-purchase-index-4-1-in-may-15-week-3-0-vs-4-weeks-ago-8-0-vs-1-year-ago/"
-    },
-    {
-      "title": "US MBA MORTGAGE REFINANCE INDEX -0.1% IN MAY 15 WEEK; -10.1% VS 4 WEEKS AGO; +34.8% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:fa9403a2e094b:0-us-mba-mortgage-refinance-index-0-1-in-may-15-week-10-1-vs-4-weeks-ago-34-8-vs-1-year-ago/"
-    },
-    {
-      "title": "US MBA: ADJUSTABLE-RATE MORTGAGES 9.6% OF TOTAL MORTGAGE APPLICATIONS IN MAY 15 WEEK VS 8.8% IN PRIOR WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:e4eef3a2d094b:0-us-mba-adjustable-rate-mortgages-9-6-of-total-mortgage-applications-in-may-15-week-vs-8-8-in-prior-week/"
-    },
-    {
-      "title": "US MBA: REFINANCINGS AT 41.9% OF TOTAL MORTGAGE APPLICATIONS IN MAY 15 WEEK VS 40.8% IN PRIOR WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:29c0e9393094b:0-us-mba-refinancings-at-41-9-of-total-mortgage-applications-in-may-15-week-vs-40-8-in-prior-week/"
-    },
-    {
-      "title": "US MORTGAGE BANKERS ASSOCIATION APPLICATIONS INDEX -2.3% IN MAY 15 WEEK; -6.5% VS 4 WEEKS AGO; +18.9% VS 1 YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:d349c259a094b:0-us-mortgage-bankers-association-applications-index-2-3-in-may-15-week-6-5-vs-4-weeks-ago-18-9-vs-1-year-ago/"
-    },
-    {
-      "title": "Bitcoin Price Cracks $80,500: 50 EMA Now Last Defense",
-      "source": "financemagnates",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T10:38:28+00:00",
-      "timeDisplay": "10:38 AM",
-      "link": "https://www.tradingview.com/news/financemagnates:e688dedf2094b:0-bitcoin-price-cracks-80-500-50-ema-now-last-defense/"
-    },
-    {
-      "title": "CAB, Europol secure another 500 BTC likely tied to Irish drug trafficking case",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T10:27:17+00:00",
-      "timeDisplay": "10:27 AM",
-      "link": "https://www.tradingview.com/news/the_block:db63fc663094b:0-cab-europol-secure-another-500-btc-likely-tied-to-irish-drug-trafficking-case/"
-    },
-    {
       "title": "Economists warn costly crude could widen India\u2019s CAD, with one seeing it crossing 2% despite gold curbs",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -533,14 +573,6 @@
       "timestamp": "2026-05-20T09:49:16+00:00",
       "timeDisplay": "9:49 AM",
       "link": "https://www.tradingview.com/news/te_news:552289:0-treasury-yields-hover-near-recent-highs/"
-    },
-    {
-      "title": "Tether Buys SoftBank\u2019s Twenty One Stake as Bitcoin Company Enters Next Phase",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T09:47:00+00:00",
-      "timeDisplay": "9:47 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:2a29b7892094b:0-tether-buys-softbank-s-twenty-one-stake-as-bitcoin-company-enters-next-phase/"
     },
     {
       "title": "President Trump\u2019s Truth Social Withdraws Bitcoin ETF Application",
@@ -613,38 +645,6 @@
       "timestamp": "2026-05-20T08:06:39+00:00",
       "timeDisplay": "8:06 AM",
       "link": "https://www.tradingview.com/news/coinpedia:a87b66420094b:0-bitcoin-investors-are-selling-while-ethereum-whales-dump-eth-what-s-next-for-btc-eth-prices/"
-    },
-    {
-      "title": "Oil Falls as Traders Weigh Trump's Latest Remarks on Iran \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T07:46:00+00:00",
-      "timeDisplay": "7:46 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520002616:0/"
-    },
-    {
-      "title": "Gold Extends Losses on Rate Fears \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T07:25:00+00:00",
-      "timeDisplay": "7:25 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520002523:0/"
-    },
-    {
-      "title": "Wintermute Calls Ethereum \u2018Wrong Asset for Macro\u2019 as ETH/BTC Hits 10-Month Low",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T06:43:43+00:00",
-      "timeDisplay": "6:43 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:24f592868094b:0-wintermute-calls-ethereum-wrong-asset-for-macro-as-eth-btc-hits-10-month-low/"
-    },
-    {
-      "title": "XAU/USD: Gold Prices Drop to 7-Week Low as Macro Headwinds Knock Demand",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T06:02:26+00:00",
-      "timeDisplay": "6:02 AM",
-      "link": "https://www.tradingview.com/news/tradingview:5fa80f4c5094b:0-xau-usd-gold-prices-drop-to-7-week-low-as-macro-headwinds-knock-demand/"
     }
   ]
 }

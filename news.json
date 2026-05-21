@@ -1,45 +1,80 @@
 {
-  "lastUpdated": "2026-05-21T20:18:23.048668+00:00",
-  "lastUpdatedDisplay": "May 21, 2026 \u2014 08:18 PM UTC",
+  "lastUpdated": "2026-05-21T21:56:18.294649+00:00",
+  "lastUpdatedDisplay": "May 21, 2026 \u2014 09:56 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Headlines center on potential Iran nuclear deal progress driving oil prices lower and yields down, though deal signals remain conflicted with Trump stating the US will acquire Iran's enriched uranium. Fed officials maintain cautious stance on rate changes while emphasizing inflation concerns, and crypto markets show mixed performance with Bitcoin facing accumulation weakness.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Iran deal progress is unwinding the oil shock that was embedded in the reflation thesis, with yields falling and oil losing ground - core components of the regime setup are being challenged.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets are reacting to conflicting signals around U.S.-Iran peace deal progress, with yields sliding and oil losing ground on diplomatic hopes while the dollar remains whipsawed by mixed signals. Fed officials maintain hawkish stance with inflation concerns paramount, while mortgage rates continue climbing with 30Y at 6.51% and GDP tracking strong at 4.3%.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Iran peace deal progress is directly undermining the oil shock assumption embedded in the Reflation regime, while Fed hawkishness and rising mortgage rates support the reflation thesis.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil futures losing ground on U.S.-Iran peace deal hopes, potentially removing war premium"
+      },
+      {
+        "indicator": "US30Y",
+        "level": "approach 5.10%",
+        "signal": "Mortgage rates climbing with 30Y mortgage at 6.51% vs 6.36% last week"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil futures losing ground on Iran deal hopes directly contradicts the embedded Iran-war oil shock premise",
+        "signal": "Oil futures declining on U.S.-Iran peace deal optimism directly contradicts embedded Iran-war oil shock assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Yields sliding on Iran deal progress undermines the rates component of reflation positioning",
+        "signal": "Fed's Barkin emphasizes inflation concerns paramount and wouldn't be surprised by additional pressure on jobs or inflation",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "30-year mortgage rates jumped to 6.51% from 6.36% last week, showing continued long-end stress",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Dollar whipsawed by conflicting Iran deal signals suggests geopolitical risk premium unwinding",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Barkin says may 'look past' oil spike if long-term inflation expectations anchored, suggesting transitory view",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar whipsawed by conflicting Iran deal signals shows uncertainty in key regime threshold area",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Bitcoin accumulation trends weakening with $600M realized losses suggests crypto risk-off undertones",
-        "tag": "NEUTRAL"
+        "signal": "Atlanta Fed GDPNow tracking Q2 growth at 4.3% maintains economic resilience narrative",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained decline below recent levels invalidates embedded war premium assumption",
-      "Watch 30Y yields for reversal - if Iran deal materializes, long-end stress may ease contradicting stagflationary setup",
-      "Consider BMNR ladder adjustments if crypto weakness accelerates amid broader risk-asset rotation"
+      "Monitor oil price action closely - peace deal progress could remove key pillar of current regime thesis",
+      "BMNR ladder: Consider tightening strikes if crypto correlation to risk-on strengthens on geopolitical de-escalation",
+      "Watch long-end rates - mortgage rate surge suggests 30Y could test 5.10% threshold despite yield slide headlines"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Dollar Ends Roughly Flat As Optimism On U.S.-Iran Peace Deal Increases",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T21:15:02+00:00",
+      "timeDisplay": "9:15 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:a92c73763b4ff:0-u-s-dollar-ends-roughly-flat-as-optimism-on-u-s-iran-peace-deal-increases/"
+    },
+    {
+      "title": "Chance of new Bitcoin lows \u2018extremely slim\u2019 as long-term holders\u2019 supply tops 15M BTC",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T20:39:54+00:00",
+      "timeDisplay": "8:39 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:de8525048094b:0-chance-of-new-bitcoin-lows-extremely-slim-as-long-term-holders-supply-tops-15m-btc/"
+    },
+    {
+      "title": "If You\u2019re Looking To Bitcoin Above $90,000, This Analyst Says To Watch This Bearish OB Level",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T20:30:52+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:64ae4933d094b:0-if-you-re-looking-to-bitcoin-above-90-000-this-analyst-says-to-watch-this-bearish-ob-level/"
+    },
     {
       "title": "Yields slide on Iran deal progress, economic data",
       "source": "reuters",
@@ -473,22 +508,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y0MR:0-yields-slip-after-unemployment-data-surprises-to-the-upside/"
     },
     {
-      "title": "Ddc Acquires 200 Bitcoin, Lifting Total Holdings To 2,583 Btc Per-Share Bitcoin Exposure Increases Without Dilution",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T13:01:27+00:00",
-      "timeDisplay": "1:01 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUA8YSWMN:0-ddc-acquires-200-bitcoin-lifting-total-holdings-to-2-583-btc-per-share-bitcoin-exposure-increases-without-dilution/"
-    },
-    {
-      "title": "The Last Time Bitcoin Printed This Ugly Candle, It Tanked; Now It Has Returned",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:00:07+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:ba8efa37d094b:0-the-last-time-bitcoin-printed-this-ugly-candle-it-tanked-now-it-has-returned/"
-    },
-    {
       "title": "Gold Slides as US-Iran Deal Hopes Fade",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -631,14 +650,6 @@
       "timestamp": "2026-05-21T07:50:00+00:00",
       "timeDisplay": "7:50 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260521002840:0/"
-    },
-    {
-      "title": "Oil Rebounds After Wednesday's Slide as Trump Signals Progress in Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T07:37:00+00:00",
-      "timeDisplay": "7:37 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521002809:0/"
     }
   ]
 }

@@ -1,51 +1,171 @@
 {
-  "lastUpdated": "2026-05-21T09:28:46.591828+00:00",
-  "lastUpdatedDisplay": "May 21, 2026 \u2014 09:28 AM UTC",
+  "lastUpdated": "2026-05-21T12:37:11.125573+00:00",
+  "lastUpdatedDisplay": "May 21, 2026 \u2014 12:37 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil markets show high volatility with competing narratives of potential Iran peace deal progress versus ongoing war uncertainty, while gold and dollar react to Fed minutes suggesting openness to rate hikes. Equity markets gain support from strong Nvidia earnings and Samsung strike suspension, but crypto shows mixed performance with Bitcoin ETF inflows underperforming in 2026.",
+    "macroSummary": "Markets show mixed signals with Bitcoin declining on ETF outflows and geopolitical tensions, while oil prices remain volatile amid Iran deal hopes and supply concerns. Dollar and Treasury yields are edging higher as Fed minutes suggest openness to rate hikes, though Iran peace deal prospects are providing some cross-currents.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran peace deal hopes are pressuring oil lower and reducing geopolitical risk premium, directly contradicting the embedded war shock assumption, while Fed hawkish signals support the reflation thesis.",
+    "regimePressureReason": "Headlines show competing forces with Iran peace deal hopes potentially reducing oil shock premium while Fed hawkishness and rising yields/dollar support reflation thesis.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Multiple headlines suggest oil trading meaningfully lower with Iran deal progress reducing war premium"
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar approaching April highs with resistance to Iran peace deal hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran peace deal hopes driving oil lower and reducing dollar strength, challenging embedded war shock assumption",
+        "signal": "Fed minutes show policymakers open to rate hikes, driving dollar and Treasury yields higher",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Iran peace deal progress could reduce oil shock premium embedded in current regime assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed minutes show policymakers open to rate hikes, supporting reflation thesis with dollar and rate rise bets",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Oil volatility remains high but multiple sources suggest potential for meaningful declines later this year",
+        "signal": "Dollar showing resistance to Iran peace deal hopes and approaching April highs near 100 threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Equity risk-on continues with Nvidia earnings and labor resolution supporting cyclical momentum",
-        "tag": "SUPPORTS"
+        "signal": "Oil prices remain volatile and sensitive to geopolitical headlines but showing potential for meaningful decline",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETF inflows underperforming in 2026 while crypto shows mixed signals on geopolitical uncertainty",
+        "signal": "Bitcoin ETF outflows of $648M and crypto weakness suggest risk-off undertones despite equity strength",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil closely - sustained break below current levels toward $100 would invalidate embedded Iran war shock",
-      "BMNR ladder may benefit from crypto mixed performance and potential ETF flow normalization",
-      "Watch for yield curve steepening continuation if Fed hawkish stance persists alongside oil decline"
+      "Monitor DXY closely as approach to 100 level could signal dollar regime flip",
+      "Assess BMNR ladder positioning given crypto weakness and potential Iran de-escalation impact on risk assets",
+      "Watch oil price action for sustained break below current levels that could reduce stagflation pressures"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Falls on ETF Outflows, Middle East Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T12:18:00+00:00",
+      "timeDisplay": "12:18 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260521005877:0/"
+    },
+    {
+      "title": "Key facts: BTCUSD Under $77K After $648M Outflows; SpaceX 18,712 BTC ~1.45B",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T12:14:27+00:00",
+      "timeDisplay": "12:14 PM",
+      "link": "https://www.tradingview.com/news/tradingview:880f3bae19acd:0-key-facts-btcusd-under-77k-after-648m-outflows-spacex-18-712-btc-1-45b/"
+    },
+    {
+      "title": "Key facts: Senate Advances CLARITY Act 15-9; ETH Faces $2,211 Resistance",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T12:14:27+00:00",
+      "timeDisplay": "12:14 PM",
+      "link": "https://www.tradingview.com/news/tradingview:d50ae43962ef7:0-key-facts-senate-advances-clarity-act-15-9-eth-faces-2-211-resistance/"
+    },
+    {
+      "title": "\u2018Rally slows into resistance\u2019: Bitcoin stalls below $78,000 as ETF outflows and long liquidations deepen recovery doubts",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T12:00:37+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/the_block:7dfb31cf0094b:0-rally-slows-into-resistance-bitcoin-stalls-below-78-000-as-etf-outflows-and-long-liquidations-deepen-recovery-doubts/"
+    },
+    {
+      "title": "Millionaire Businessman Reveals Where The Real Crypto Value Is, And It\u2019s Not Bitcoin",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T11:30:52+00:00",
+      "timeDisplay": "11:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3e6214cea094b:0-millionaire-businessman-reveals-where-the-real-crypto-value-is-and-it-s-not-bitcoin/"
+    },
+    {
+      "title": "Dollar Approaches April Highs",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T11:24:25+00:00",
+      "timeDisplay": "11:24 AM",
+      "link": "https://www.tradingview.com/news/te_news:552740:0-dollar-approaches-april-highs/"
+    },
+    {
+      "title": "Treasury Yields March Higher",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T11:15:26+00:00",
+      "timeDisplay": "11:15 AM",
+      "link": "https://www.tradingview.com/news/te_news:552733:0-treasury-yields-march-higher/"
+    },
+    {
+      "title": "Oil Prices Back on the Rise",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T10:47:14+00:00",
+      "timeDisplay": "10:47 AM",
+      "link": "https://www.tradingview.com/news/te_news:552720:0-oil-prices-back-on-the-rise/"
+    },
+    {
+      "title": "SpaceX IPO Filing Shows Elon Musk\u2019s Company Holds More Bitcoin Than Tesla",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T10:32:23+00:00",
+      "timeDisplay": "10:32 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:387f81440094b:0/"
+    },
+    {
+      "title": "Dollar Shows Resistance to U.S.-Iran Peace Deal Hopes \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T10:15:00+00:00",
+      "timeDisplay": "10:15 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260521004132:0/"
+    },
+    {
+      "title": "Wife of Sandbox co-founder Sebastien Borget targeted in kidnapping attempt at home in France: report",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T10:12:33+00:00",
+      "timeDisplay": "10:12 AM",
+      "link": "https://www.tradingview.com/news/the_block:b873b8a36094b:0-wife-of-sandbox-co-founder-sebastien-borget-targeted-in-kidnapping-attempt-at-home-in-france-report/"
+    },
+    {
+      "title": "U.S. Treasury Yields, Dollar Edge Higher \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T10:06:00+00:00",
+      "timeDisplay": "10:06 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260521004005:0/"
+    },
+    {
+      "title": "'True cost of living' could be Trump's biggest headache: Mike Dolan",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T10:00:00+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41W1VN:0-true-cost-of-living-could-be-trump-s-biggest-headache-mike-dolan/"
+    },
+    {
+      "title": "Top Altcoins to Buy Before the CLARITY Act Vote",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T09:34:19+00:00",
+      "timeDisplay": "9:34 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f69ba9a8d094b:0-top-altcoins-to-buy-before-the-clarity-act-vote/"
+    },
+    {
+      "title": "Asia's Nontech Exports Remain at Risk if Geopolitical Tensions Escalate \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T09:34:00+00:00",
+      "timeDisplay": "9:34 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260521003647:0/"
+    },
     {
       "title": "Oil Slips in Volatile Trading as Market Remains Sensitive to U.S.-Iran Headlines \u2014 Market Talk",
       "source": "dow-jones",
@@ -53,6 +173,14 @@
       "timestamp": "2026-05-21T09:23:00+00:00",
       "timeDisplay": "9:23 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260521003546:0/"
+    },
+    {
+      "title": "Top Six Altcoins To Stack As CLARITY Act Progresses",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T09:18:26+00:00",
+      "timeDisplay": "9:18 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:807024acc094b:0-top-six-altcoins-to-stack-as-clarity-act-progresses/"
     },
     {
       "title": "Oil Prices Stabilize",
@@ -181,14 +309,6 @@
       "timestamp": "2026-05-21T06:00:04+00:00",
       "timeDisplay": "6:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:01d00f10d094b:0-bitcoin-etf-inflows-are-underperforming-in-2026-data-shows/"
-    },
-    {
-      "title": "'True cost of living' could be Trump's biggest headache: Mike Dolan",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T06:00:00+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L8N41W1VN:0-true-cost-of-living-could-be-trump-s-biggest-headache-mike-dolan/"
     },
     {
       "title": "DRAM, MAGS ETF Issuer Eyes AI Photonics Opportunity With New Optical Stocks Fund",
@@ -399,14 +519,6 @@
       "link": "https://www.tradingview.com/news/newsbtc:fcc1aaf7b094b:0-here-s-how-high-the-ethereum-price-would-be-if-it-matches-the-market-cap-of-gold/"
     },
     {
-      "title": "Bond yields, oil fall amid hopes for Iran deal; stocks end up with chip shares\u00a0",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T21:30:17+00:00",
-      "timeDisplay": "9:30 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X1CP:0-bond-yields-oil-fall-amid-hopes-for-iran-deal-stocks-end-up-with-chip-shares/"
-    },
-    {
       "title": "Elon Musk\u2019s SpaceX holds $1.45 billion worth of bitcoin as firm looks to go public",
       "source": "the_block",
       "color": "#00e5ff",
@@ -437,14 +549,6 @@
       "timestamp": "2026-05-20T20:06:04+00:00",
       "timeDisplay": "8:06 PM",
       "link": "https://www.tradingview.com/news/bravenewcoin:9b8843249094b:0/"
-    },
-    {
-      "title": "Wall Street rallies as attention turns to Nvidia results",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T20:04:30+00:00",
-      "timeDisplay": "8:04 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X1BH:0-wall-street-rallies-as-attention-turns-to-nvidia-results/"
     },
     {
       "title": "Yields fall after Trump signals Iran deal talk progress",
@@ -495,28 +599,12 @@
       "link": "https://www.tradingview.com/news/barchart:f57eb68bd094b:0-crude-oil-prices-plummet-on-speculation-strait-of-hormuz-could-soon-reopen/"
     },
     {
-      "title": "David Bailey\u2019s Nakamoto bitcoin treasury announces 1-for-40 reverse split as shares hit new lows",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T19:22:08+00:00",
-      "timeDisplay": "7:22 PM",
-      "link": "https://www.tradingview.com/news/the_block:dba662dd5094b:0-david-bailey-s-nakamoto-bitcoin-treasury-announces-1-for-40-reverse-split-as-shares-hit-new-lows/"
-    },
-    {
       "title": "Bond yields, oil fall amid hopes for Iran deal; stocks up with Nvidia results ahead",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-20T19:14:47+00:00",
       "timeDisplay": "7:14 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X18H:0-bond-yields-oil-fall-amid-hopes-for-iran-deal-stocks-up-with-nvidia-results-ahead/"
-    },
-    {
-      "title": "Why $60K Is the Ultimate Bitcoin Floor: K33 Research",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T19:09:46+00:00",
-      "timeDisplay": "7:09 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:dc47c7f22094b:0-why-60k-is-the-ultimate-bitcoin-floor-k33-research/"
     },
     {
       "title": "Oil Falls On Renewed Hopes for U.S.-Iran Deal \u2014 Market Talk",
@@ -557,94 +645,6 @@
       "timestamp": "2026-05-20T18:28:05+00:00",
       "timeDisplay": "6:28 PM",
       "link": "https://www.tradingview.com/news/barchart:b0f5128b5094b:0-sugar-prices-erase-early-gains-as-crude-oil-prices-plunge/"
-    },
-    {
-      "title": "Dollar Lower on US-Iran Deal Hopes",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:26:53+00:00",
-      "timeDisplay": "6:26 PM",
-      "link": "https://www.tradingview.com/news/te_news:552406:0-dollar-lower-on-us-iran-deal-hopes/"
-    },
-    {
-      "title": "FOMC MINUTES: PARTICIPANTS 'GENERALLY JUDGED' CURRENT POLICY RATE 'WITHIN THE RANGE OF PLAUSIBLE ESTIMATES OF ITS NEUTRAL LEVEL;' 'WELL POSITIONED'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:20:00+00:00",
-      "timeDisplay": "6:20 PM",
-      "link": "https://www.tradingview.com/news/macenews:21708c420094b:0-fomc-minutes-participants-generally-judged-current-policy-rate-within-the-range-of-plausible-estimates-of-its-neutral-level-well-positioned/"
-    },
-    {
-      "title": "FOMC MINUTES: 'ALMOST ALL PARTICIPANTS' NOTED IRAN WAR 'COULD PERSIST FOR AN EXTENDED PERIOD' AND EVEN AFTER END, OIL/COMMODITIES PRICES STAY HOT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:14:00+00:00",
-      "timeDisplay": "6:14 PM",
-      "link": "https://www.tradingview.com/news/macenews:977614eb1094b:0-fomc-minutes-almost-all-participants-noted-iran-war-could-persist-for-an-extended-period-and-even-after-end-oil-commodities-prices-stay-hot/"
-    },
-    {
-      "title": "FOMC MINUTES: 'VAST MAJORITY' OF PARTICIPANTS 'NOTED AN INCREASED RISK THAT INFLATION WOULD TAKE LONGER TO RETURN' TO 2% THAN PREVIOUSLY EXPECTED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:10:00+00:00",
-      "timeDisplay": "6:10 PM",
-      "link": "https://www.tradingview.com/news/macenews:867dadb5a094b:0-fomc-minutes-vast-majority-of-participants-noted-an-increased-risk-that-inflation-would-take-longer-to-return-to-2-than-previously-expected/"
-    },
-    {
-      "title": "Fed Minutes Signal Higher-for-Longer Rates as Bitcoin Faces Pressure",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:08:41+00:00",
-      "timeDisplay": "6:08 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:60a4be191094b:0-fed-minutes-signal-higher-for-longer-rates-as-bitcoin-faces-pressure/"
-    },
-    {
-      "title": "FOMC MINUTES: MORE PARTICIPANTS WANTED TO REMOVE EASING BIAS THAN INDICATED BY NUMBER OF DISSENTS; GENERALLY, HAWKISH SENTIMENTS SEEMED TO DOMINATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:06:00+00:00",
-      "timeDisplay": "6:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:838773f26094b:0-fomc-minutes-more-participants-wanted-to-remove-easing-bias-than-indicated-by-number-of-dissents-generally-hawkish-sentiments-seemed-to-dominate/"
-    },
-    {
-      "title": "FOMC MINUTES: LONG-TERM INFLATION EXPECTATIONS AND  JOBS MARKET APPEAR STABLE; ASSET VALUATIONS 'ELECATED;' NEED ADDITIONAL INFO ON IRAN DEVELOPMENTS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T18:03:00+00:00",
-      "timeDisplay": "6:03 PM",
-      "link": "https://www.tradingview.com/news/macenews:fc726c750094b:0-fomc-minutes-long-term-inflation-expectations-and-jobs-market-appear-stable-asset-valuations-elecated-need-additional-info-on-iran-developments/"
-    },
-    {
-      "title": "Yields reverse from Tuesday selloff as inflation concerns persist",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T18:01:25+00:00",
-      "timeDisplay": "6:01 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0QQ:0-yields-reverse-from-tuesday-selloff-as-inflation-concerns-persist/"
-    },
-    {
-      "title": "Mutual funds mostly avoided big banks in first-quarter",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T17:58:21+00:00",
-      "timeDisplay": "5:58 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X17J:0-mutual-funds-mostly-avoided-big-banks-in-first-quarter/"
-    },
-    {
-      "title": "U.S.-Iran War Premium Exits Grains \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T17:49:00+00:00",
-      "timeDisplay": "5:49 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520009218:0/"
-    },
-    {
-      "title": "T1 Energy soars as solar company attracts attention from AI investors",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T17:32:57+00:00",
-      "timeDisplay": "5:32 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41X16A:0-t1-energy-soars-as-solar-company-attracts-attention-from-ai-investors/"
     }
   ]
 }

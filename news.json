@@ -1,56 +1,96 @@
 {
-  "lastUpdated": "2026-05-20T23:47:18.159069+00:00",
-  "lastUpdatedDisplay": "May 20, 2026 \u2014 11:47 PM UTC",
+  "lastUpdated": "2026-05-21T01:52:56.593183+00:00",
+  "lastUpdatedDisplay": "May 21, 2026 \u2014 01:52 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets rallied on hopes for a potential U.S.-Iran deal that drove oil and bond yields lower, while FOMC minutes revealed hawkish sentiment with most participants expecting inflation to take longer to reach 2% target. Bitcoin and crypto markets showed mixed signals with institutional accumulation but bearish sentiment patterns emerging.",
+    "macroSummary": "Markets rallied on Nvidia earnings and Iran deal hopes, with yields and oil falling as diplomatic progress signals potential de-escalation. However, FOMC minutes revealed hawkish sentiment with most participants seeing increased inflation risks and desire to remove easing bias, while Bitcoin faces pressure despite SpaceX's $1.45B holdings disclosure.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran deal hopes directly contradict the embedded oil shock premise while FOMC minutes confirm persistent inflation concerns, creating cross-currents in the reflation thesis.",
+    "regimePressureReason": "Iran deal hopes are driving risk-on flows and commodity cooling, which contradicts the war-driven stagflationary setup, while FOMC minutes confirm persistent inflation concerns that support the reflation thesis.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "Sharp drop mentioned",
-        "signal": "Oil fell sharply on renewed U.S.-Iran deal hopes, potentially unwinding war premium"
+        "level": "Below $115",
+        "signal": "Oil falling on Iran deal hopes, moving away from stagflation breakout level"
       },
       {
-        "indicator": "DXY",
-        "level": "Near 100",
-        "signal": "Dollar dips on Iran deal hopes, approaching potential regime flip threshold"
+        "indicator": "2s10s",
+        "level": "Near 0 bps",
+        "signal": "Yields falling across curve on geopolitical de-escalation hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran deal hopes driving oil prices lower and unwinding war premium across commodities",
+        "signal": "Iran deal hopes driving yields and oil lower, contradicting war-premium stagflation narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "FOMC minutes show hawkish tilt with vast majority noting increased risk inflation takes longer to reach 2%",
+        "signal": "FOMC minutes show hawkish tilt with most participants wanting to remove easing bias due to inflation risks",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bond yields falling on Iran deal optimism despite persistent inflation concerns from Fed",
+        "signal": "Equities rallying on tech earnings and risk-on flows from geopolitical de-escalation",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Dollar dipping on Iran deal optimism, moving away from safe-haven strength",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakening on geopolitical developments while approaching 100 threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Equity markets rallying on reduced geopolitical risk and strong earnings expectations",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin facing pressure despite institutional adoption signals from SpaceX disclosure",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained Iran deal progress could invalidate embedded war shock assumption",
-      "Watch DXY approaching 100 level for potential dollar regime flip signal",
-      "BMNR ladder may benefit from continued institutional crypto accumulation despite near-term bearish sentiment"
+      "Monitor oil price action closely - sustained break below recent lows would invalidate war-premium stagflation component",
+      "BMNR ladder may face headwinds if crypto weakness persists despite institutional adoption narratives",
+      "Consider reducing cyclical overweight if Iran deal materializes and removes commodity premium support"
     ]
   },
   "articles": [
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T01:51:28+00:00",
+      "timeDisplay": "1:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y02G:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Shares rally on Nvidia earnings, Samsung strike suspension",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T01:23:14+00:00",
+      "timeDisplay": "1:23 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Y01A:0-shares-rally-on-nvidia-earnings-samsung-strike-suspension/"
+    },
+    {
+      "title": "Dollar rally pauses on Iran deal hopes; yen edges back from intervention zone",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T00:45:40+00:00",
+      "timeDisplay": "12:45 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y00Y:0-dollar-rally-pauses-on-iran-deal-hopes-yen-edges-back-from-intervention-zone/"
+    },
+    {
+      "title": "Oil Futures Rise on Likely Technical Recovery \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T00:10:00+00:00",
+      "timeDisplay": "12:10 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260520012187:0/"
+    },
+    {
+      "title": "Gold Firms Up on Iran Deal Hopes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T23:43:12+00:00",
+      "timeDisplay": "11:43 PM",
+      "link": "https://www.tradingview.com/news/te_news:552450:0-gold-firms-up-on-iran-deal-hopes/"
+    },
     {
       "title": "Gold Edges Lower Amid Slightly Higher U.S. Treasury Yields \u2014 Market Talk",
       "source": "dow-jones",
@@ -356,6 +396,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260520008901:0/"
     },
     {
+      "title": "Slumping Crude Oil Undercuts Ethanol and Sugar Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-20T16:28:31+00:00",
+      "timeDisplay": "4:28 PM",
+      "link": "https://www.tradingview.com/news/barchart:be50f8571094b:0-slumping-crude-oil-undercuts-ethanol-and-sugar-prices/"
+    },
+    {
       "title": "WTI Crude Falls Below $100",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -409,7 +457,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-20T15:39:00+00:00",
       "timeDisplay": "3:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260520008308:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260520008306:0/"
     },
     {
       "title": "HIVE Stock Hits Six-Month High After Price Target Hike \u2013 Bitcoin Miners Rebound With Crypto Market",
@@ -602,54 +650,6 @@
       "timestamp": "2026-05-20T13:19:00+00:00",
       "timeDisplay": "1:19 PM",
       "link": "https://www.tradingview.com/news/macenews:5b6497ce8094b:0-fed-gov-barr-fhn-need-to-ensure-that-new-financial-health-tools-and-behavioral-insights-deliver-to-their-promise-no-monpol-or-current-econ/"
-    },
-    {
-      "title": "This Bitcoin price model targets \u2018conservative\u2019 $255K by year-end",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T13:08:01+00:00",
-      "timeDisplay": "1:08 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:7eede0a3a094b:0-this-bitcoin-price-model-targets-conservative-255k-by-year-end/"
-    },
-    {
-      "title": "HEADS UP: FED GOV BARR REMARKS ON CONSUMER FINANCIAL HEALTH METRICS AT FINANCIAL HEALTH NETWORK CONFERENCE COMING UP AT 9:15A ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T13:04:00+00:00",
-      "timeDisplay": "1:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:9f531f8a7094b:0-heads-up-fed-gov-barr-remarks-on-consumer-financial-health-metrics-at-financial-health-network-conference-coming-up-at-9-15a-et/"
-    },
-    {
-      "title": "Ethereum Price Outlook: Why Whale Selling and ETF Outflows Could Drag ETH Lower",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T13:00:37+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:ba7ef2702094b:0-ethereum-price-outlook-why-whale-selling-and-etf-outflows-could-drag-eth-lower/"
-    },
-    {
-      "title": "Yields inch lower as inflation concerns persist",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T12:54:40+00:00",
-      "timeDisplay": "12:54 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0K8:0-yields-inch-lower-as-inflation-concerns-persist/"
-    },
-    {
-      "title": "Bond yields pause near recent highs, stocks steady ahead of Nvidia results",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-20T12:34:18+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41X0GO:0-bond-yields-pause-near-recent-highs-stocks-steady-ahead-of-nvidia-results/"
-    },
-    {
-      "title": "Key facts: ETH at $2,150\u20132,200; $62M ETF outflow; $9.82M leveraged long",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-20T12:15:31+00:00",
-      "timeDisplay": "12:15 PM",
-      "link": "https://www.tradingview.com/news/tradingview:aac70e99a4f97:0-key-facts-eth-at-2-150-2-200-62m-etf-outflow-9-82m-leveraged-long/"
     }
   ]
 }

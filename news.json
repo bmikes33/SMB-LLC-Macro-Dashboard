@@ -1,45 +1,93 @@
 {
-  "lastUpdated": "2026-05-21T18:18:17.812620+00:00",
-  "lastUpdatedDisplay": "May 21, 2026 \u2014 06:18 PM UTC",
+  "lastUpdated": "2026-05-21T20:18:23.048668+00:00",
+  "lastUpdatedDisplay": "May 21, 2026 \u2014 08:18 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Fed officials express growing inflation concerns while maintaining cautious stance on rate changes, with Richmond Fed's Barkin noting economic resilience but warning of potential pressure on jobs or inflation. Mortgage rates continue climbing with 30-year hitting 6.51%, while geopolitical tensions persist around Iran and prolonged war keeping energy markets unsettled.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Rising mortgage rates and Fed inflation hawkishness support reflation thesis, but officials' cautious rate stance and mixed regional manufacturing data suggest less aggressive reflation momentum than regime implies.",
+    "macroSummary": "Headlines center on potential Iran nuclear deal progress driving oil prices lower and yields down, though deal signals remain conflicted with Trump stating the US will acquire Iran's enriched uranium. Fed officials maintain cautious stance on rate changes while emphasizing inflation concerns, and crypto markets show mixed performance with Bitcoin facing accumulation weakness.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Iran deal progress is unwinding the oil shock that was embedded in the reflation thesis, with yields falling and oil losing ground - core components of the regime setup are being challenged.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "30-year mortgage rates jump to 6.51% from 6.36%, continuing upward pressure on long-end rates",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Richmond Fed's Barkin warns wouldn't be surprised to see additional pressure on jobs or inflation 'or conceivably both'",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Fed officials remain wary of changing funds rate despite inflation concerns, suggesting less aggressive policy tightening",
+        "signal": "Oil futures losing ground on Iran deal hopes directly contradicts the embedded Iran-war oil shock premise",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Kansas City Fed manufacturing index drops to 8 from 10 with employment turning negative at -4",
+        "signal": "Yields sliding on Iran deal progress undermines the rates component of reflation positioning",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar rises as Iran deal doubts cloud outlook, reinforcing geopolitical risk premium",
-        "tag": "SUPPORTS"
+        "signal": "Fed's Barkin says may 'look past' oil spike if long-term inflation expectations anchored, suggesting transitory view",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar whipsawed by conflicting Iran deal signals shows uncertainty in key regime threshold area",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin accumulation trends weakening with $600M realized losses suggests crypto risk-off undertones",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor mortgage rate acceleration as proxy for long-end stress approaching 30Y 5.10% threshold",
-      "BMNR ladder: Consider tightening strikes given mixed Fed signals reducing immediate reflation urgency",
-      "Watch for manufacturing weakness spillover to broader cyclical equity momentum"
+      "Monitor oil prices closely - sustained decline below recent levels invalidates embedded war premium assumption",
+      "Watch 30Y yields for reversal - if Iran deal materializes, long-end stress may ease contradicting stagflationary setup",
+      "Consider BMNR ladder adjustments if crypto weakness accelerates amid broader risk-asset rotation"
     ]
   },
   "articles": [
+    {
+      "title": "Yields slide on Iran deal progress, economic data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T19:48:56+00:00",
+      "timeDisplay": "7:48 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y0NA:0-yields-slide-on-iran-deal-progress-economic-data/"
+    },
+    {
+      "title": "Oil Futures Lose Ground on Hopes for U.S.-Iran Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T19:43:00+00:00",
+      "timeDisplay": "7:43 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260521009856:0/"
+    },
+    {
+      "title": "Dollar whipsawed by conflicting Iran deal signals",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-21T19:18:30+00:00",
+      "timeDisplay": "7:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y12E:0-dollar-whipsawed-by-conflicting-iran-deal-signals/"
+    },
+    {
+      "title": "Bitcoin vs. Ethereum: Why BTC is Winning the Crypto Market in May 2026",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T19:00:00+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:c51a23d6f094b:0-bitcoin-vs-ethereum-why-btc-is-winning-the-crypto-market-in-may-2026/"
+    },
+    {
+      "title": "Mark Cuban Claims Bitcoin Failed As War Hedge \u2013 But Data Shows BTC Outperforming Gold",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T18:54:23+00:00",
+      "timeDisplay": "6:54 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:35b3c8de2094b:0/"
+    },
+    {
+      "title": "Former EF developer Dankrad Feist suggests $1 billion raise to form new Ethereum advocacy group",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T18:27:15+00:00",
+      "timeDisplay": "6:27 PM",
+      "link": "https://www.tradingview.com/news/the_block:b5b07550d094b:0-former-ef-developer-dankrad-feist-suggests-1-billion-raise-to-form-new-ethereum-advocacy-group/"
+    },
     {
       "title": "Gold Higher For Second Consecutive Day \u2014 Market Talk",
       "source": "dow-jones",
@@ -47,6 +95,22 @@
       "timestamp": "2026-05-21T18:15:00+00:00",
       "timeDisplay": "6:15 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260521009443:0/"
+    },
+    {
+      "title": "US Intensifies Operation Economic Fury Targeting Iran\u2019s $7.7 Billion Crypto Network",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T18:06:35+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:60fd21cd9094b:0-us-intensifies-operation-economic-fury-targeting-iran-s-7-7-billion-crypto-network/"
+    },
+    {
+      "title": "Crude Oil Prices Fall",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T18:06:01+00:00",
+      "timeDisplay": "6:06 PM",
+      "link": "https://www.tradingview.com/news/te_news:552850:0-crude-oil-prices-fall/"
     },
     {
       "title": "US Strategic Bitcoin Reserve Bill Reintroduced In Congress As ARMA With 20-Year BTC Hold Requirement",
@@ -342,7 +406,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-21T13:52:00+00:00",
       "timeDisplay": "1:52 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521007261:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260521007260:0/"
     },
     {
       "title": "NY Engelhard Gold Prices - May 21",
@@ -423,30 +487,6 @@
       "timestamp": "2026-05-21T13:00:07+00:00",
       "timeDisplay": "1:00 PM",
       "link": "https://www.tradingview.com/news/newsbtc:ba8efa37d094b:0-the-last-time-bitcoin-printed-this-ugly-candle-it-tanked-now-it-has-returned/"
-    },
-    {
-      "title": "Foundation raises $6.4 million to expand from bitcoin hardware wallets into AI agent authorization",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:00:00+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:7a4fc6ac4094b:0-foundation-raises-6-4-million-to-expand-from-bitcoin-hardware-wallets-into-ai-agent-authorization/"
-    },
-    {
-      "title": "Bitcoin\u2019s \u2018less aggressive demand\u2019 may lead to months of consolidation: Analysis",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T12:49:34+00:00",
-      "timeDisplay": "12:49 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:2917d131c094b:0-bitcoin-s-less-aggressive-demand-may-lead-to-months-of-consolidation-analysis/"
-    },
-    {
-      "title": "DDC Enterprise: Bitcoin Per 1,000 DDC Shrs Increased by 8.4% to 0.0543 >DDC",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521005987_20260521006071:0/"
     },
     {
       "title": "Gold Slides as US-Iran Deal Hopes Fade",
@@ -599,46 +639,6 @@
       "timestamp": "2026-05-21T07:37:00+00:00",
       "timeDisplay": "7:37 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260521002809:0/"
-    },
-    {
-      "title": "Syndicate Labs winds down after 5 years, citing shrinking rollup market",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T07:30:06+00:00",
-      "timeDisplay": "7:30 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a4c9e2c0e094b:0-syndicate-labs-winds-down-after-5-years-citing-shrinking-rollup-market/"
-    },
-    {
-      "title": "Comex Gold Futures Likely to Consolidate, Daily Chart Shows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T07:09:00+00:00",
-      "timeDisplay": "7:09 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521002242:0/"
-    },
-    {
-      "title": "Stocks climb on Nvidia earnings, Samsung strike suspension",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T06:40:23+00:00",
-      "timeDisplay": "6:40 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Y0CC:0-stocks-climb-on-nvidia-earnings-samsung-strike-suspension/"
-    },
-    {
-      "title": "Can Ethereum reclaim $2,200 despite fading ETF demand?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T06:19:55+00:00",
-      "timeDisplay": "6:19 AM",
-      "link": "https://www.tradingview.com/news/invezz:001efa853094b:0-can-ethereum-reclaim-2-200-despite-fading-etf-demand/"
-    },
-    {
-      "title": "Oil Rebounds Amid Inventory Drawdowns, Iran War Uncertainty: Economist Says 'Stay Long'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T06:14:16+00:00",
-      "timeDisplay": "6:14 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:b8a3b570a094b:0/"
     }
   ]
 }

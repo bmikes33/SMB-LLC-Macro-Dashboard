@@ -1,51 +1,69 @@
 {
-  "lastUpdated": "2026-05-22T21:07:09.981980+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 09:07 PM UTC",
+  "lastUpdated": "2026-05-22T22:33:27.512784+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 10:33 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Kevin Warsh was sworn in as new Fed Chair with Trump emphasizing independence while suggesting restraint on rate hikes during economic booms. Markets show mixed signals with shorter-dated yields rising on weak consumer sentiment, dollar near six-week highs on Iran war concerns, and crypto assets under pressure despite institutional adoption momentum.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Rising shorter-dated yields on consumer sentiment weakness and dollar strength suggest reflation concerns, but Fed Chair transition with dovish messaging and crypto weakness indicate potential policy uncertainty.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar near six-week high amid Iran war jitters approaching regime flip threshold"
-      }
-    ],
+    "macroSummary": "Kevin Warsh was sworn in as new Fed Chair with Trump emphasizing independence and reform orientation, while Iran-US tensions persist with Strait of Hormuz blockade continuing amid peace talks. Dollar strengthens to six-week highs on war jitters, consumer sentiment hits all-time lows driving shorter-dated yields higher, and crypto markets show weakness with Bitcoin struggling below $77K and institutional crypto lending slowing.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "All-time low consumer sentiment driving shorter yields higher suggests stagflationary pressures intensifying, while dollar strength and crypto weakness indicate risk-off undertones emerging within the reflation framework.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Shorter-dated yields rising on all-time low consumer sentiment suggests stagflationary pressures building",
+        "signal": "All-time low consumer sentiment driving shorter-dated yields higher suggests stagflationary consumer stress intensifying",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar near six-week highs on Iran war jitters shows flight-to-quality dynamics emerging",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Fed Chair Warsh sworn in with reform mandate and Trump emphasizing rate hike caution supports dovish pivot expectations",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar strength near six-week highs approaches DXY 100 regime invalidation threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "New Fed Chair Warsh sworn in with Trump suggesting dovish bias during economic strength",
+        "signal": "Crypto spot volumes down 14% in April with Bitcoin struggling below $77K despite institutional adoption shows risk asset weakness",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin weakness below $77K despite institutional adoption suggests risk-off undertones",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil rig count increases and Iran tensions persist supporting energy inflation narrative",
+        "signal": "Strait of Hormuz blockade continues with ongoing Iran tensions maintaining oil shock dynamics",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as six-week high approaches 100 regime invalidation level",
-      "Consider tightening BMNR put ladder strikes given crypto weakness and Fed transition uncertainty",
-      "Watch for long-end rates reaction to new Fed Chair's first policy signals"
+      "Monitor BMNR ladder performance as crypto weakness could create better entry points for cash-secured puts",
+      "Consider reducing cyclical overweights if consumer sentiment collapse translates to earnings pressure",
+      "Watch for DXY approaching 100 threshold as dollar strength accelerates"
     ]
   },
   "articles": [
+    {
+      "title": "From Patience To Frustration: Ethereum Social Sentiment Collapses As Price Retests $2,100",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T22:27:43+00:00",
+      "timeDisplay": "10:27 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:1f901bb85094b:0-from-patience-to-frustration-ethereum-social-sentiment-collapses-as-price-retests-2-100/"
+    },
+    {
+      "title": "U.S. Dollar Ticks Higher As Strait Of Hormuz Blockade Continues Amid U.S-Iran Peace Talks",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T21:15:22+00:00",
+      "timeDisplay": "9:15 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:493c4d84a3d4b:0-u-s-dollar-ticks-higher-as-strait-of-hormuz-blockade-continues-amid-u-s-iran-peace-talks/"
+    },
+    {
+      "title": "Kevin Warsh\u2019s Fed Era Could Change Bitcoin Forever \u2013 Here\u2019s The First Signal To Watch",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T21:00:35+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:6aa59fa61094b:0-kevin-warsh-s-fed-era-could-change-bitcoin-forever-here-s-the-first-signal-to-watch/"
+    },
     {
       "title": "U.S. Strategic Bitcoin Reserve Push Returns to Congress as White House Readies Executive Move",
       "source": "bravenewcoin",
@@ -165,6 +183,14 @@
       "timestamp": "2026-05-22T17:37:00+00:00",
       "timeDisplay": "5:37 PM",
       "link": "https://www.tradingview.com/news/macenews:f187b8ba6094b:0-us-ny-fed-nowcast-sees-us-q2-gdp-growth-rate-at-2-6-unchanged-after-this-week-s-economic-reports-as-strong-housing-starts-offsets-weak-philly-fed/"
+    },
+    {
+      "title": "Weekly Wrap: Bitcoin Treads Water As Stocks Rally",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T17:20:00+00:00",
+      "timeDisplay": "5:20 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8df82883b094b:0-weekly-wrap-bitcoin-treads-water-as-stocks-rally/"
     },
     {
       "title": "Liquid NFTs Officially Relaunches on Bitcoin Pizza Day, Marking a New Era for NFT Liquidity",
@@ -391,6 +417,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260522005740:0/"
     },
     {
+      "title": "Dollar Gains and Gold Falls on Hawkish Waller",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:43:42+00:00",
+      "timeDisplay": "2:43 PM",
+      "link": "https://www.tradingview.com/news/barchart:99d4ae714094b:0-dollar-gains-and-gold-falls-on-hawkish-waller/"
+    },
+    {
       "title": "FED GOV WALLER/FRANKFURT: DON'T THINK 'SHOULD CONSIDER RATE INCREASES IN NEAR FUTURE;' 'BUT CAN NO LONGER RULE OUT RATE HIKES FURTHER DOWN THE ROAD'",
       "source": "macenews",
       "color": "#00e5ff",
@@ -495,28 +529,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z0FQ:0-yields-down-after-latest-iran-peace-talk-developments/"
     },
     {
-      "title": "Is Bitcoin Price Setting Up for a $90,000 Rally in June?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T13:11:09+00:00",
-      "timeDisplay": "1:11 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:81603fefa094b:0-is-bitcoin-price-setting-up-for-a-90-000-rally-in-june/"
-    },
-    {
       "title": "Gold price drops to Rs 1.64 lakh/10gm as Iran talks temper market anxiety",
       "source": "moneycontrol",
       "color": "#00e5ff",
       "timestamp": "2026-05-22T13:07:06+00:00",
       "timeDisplay": "1:07 PM",
       "link": "https://www.tradingview.com/news/moneycontrol:3dcebba3a094b:0-gold-price-drops-to-rs-1-64-lakh-10gm-as-iran-talks-temper-market-anxiety/"
-    },
-    {
-      "title": "A Quantum Rally On Wall Street Is Reopening One Of Bitcoin\u2019s Long-Term Biggest Security Fears",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T12:46:07+00:00",
-      "timeDisplay": "12:46 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:77a8100c0094b:0/"
     },
     {
       "title": "Oil Prices Set for Big Weekly Fall",
@@ -621,30 +639,6 @@
       "timestamp": "2026-05-22T07:00:35+00:00",
       "timeDisplay": "7:00 AM",
       "link": "https://www.tradingview.com/news/beincrypto:95cfbd8ff094b:0-725-million-in-ethereum-eth-just-left-whale-wallets-the-timing-is-suspicious/"
-    },
-    {
-      "title": "Ethereum Sentiment Drops Sharply as ETH Price Holds Key Support\u2014Will a Major Move Follow?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T06:31:16+00:00",
-      "timeDisplay": "6:31 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:e65030198094b:0-ethereum-sentiment-drops-sharply-as-eth-price-holds-key-support-will-a-major-move-follow/"
-    },
-    {
-      "title": "5 crypto firms wind down this week amid ongoing market slump",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T03:59:57+00:00",
-      "timeDisplay": "3:59 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:8b7e210a2094b:0-5-crypto-firms-wind-down-this-week-amid-ongoing-market-slump/"
-    },
-    {
-      "title": "Ethereum Price Eyes Breakout Move, Traders Watch Key Resistance Closely",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T03:08:55+00:00",
-      "timeDisplay": "3:08 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:3edd82a8e094b:0-ethereum-price-eyes-breakout-move-traders-watch-key-resistance-closely/"
     }
   ]
 }

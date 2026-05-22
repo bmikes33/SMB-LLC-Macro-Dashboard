@@ -1,51 +1,147 @@
 {
-  "lastUpdated": "2026-05-22T01:54:35.092663+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 01:54 AM UTC",
+  "lastUpdated": "2026-05-22T05:54:19.710509+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 05:54 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are whipsawed by conflicting signals around US-Iran nuclear deal progress, with oil declining on peace hopes while geopolitical tensions persist. The dollar reached six-week highs amid uncertainty, while Fed officials emphasize inflation concerns remain paramount despite potential oil spike normalization.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil decline on Iran deal progress directly contradicts the embedded Iran-war oil shock assumption, while Fed officials' continued inflation focus and dollar strength support reflation thesis components.",
+    "macroSummary": "Markets show mixed signals with dollar at six-week highs amid US-Iran deal uncertainty, while oil prices decline on peace progress hopes and yields slide. Crypto markets face institutional selling pressure with Bitcoin consolidating near lows and multiple firms winding down operations.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil declining on Iran peace deal hopes directly contradicts the embedded Iran-war oil shock assumption, while dollar strength and falling yields challenge the reflation narrative.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil futures losing ground and set for weekly decline on US-Iran deal hopes, potentially unwinding war premium"
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar at six-week high with multiple headlines citing strength amid Iran uncertainty - approaching potential regime flip threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices falling on US-Iran deal progress, contradicting embedded war shock premium in current regime",
+        "signal": "Oil prices tumbling on hopes for US-Iran peace deal progress undermines the embedded war premium assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar at six-week highs amid geopolitical uncertainty, approaching DXY 100 watch level",
+        "signal": "Dollar at six-week highs with sustained strength challenges reflation thesis which typically sees dollar weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Yields sliding despite Iran uncertainty contradicts reflation narrative of rising rate expectations",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Institutional crypto selling pressure and firm wind-downs suggest risk-off sentiment building",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "DXY approaching 100 threshold that would signal dollar regime flip",
         "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Fed officials remain focused on inflation concerns as paramount despite potential oil normalization",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Yields sliding on Iran deal progress and economic data, easing long-end stress",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Richmond Fed's Barkin notes economy remains resilient but inflation worse, willing to look past oil spike if expectations anchored",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained decline below war premium levels invalidates key regime assumption",
-      "Watch DXY approach to 100 level given six-week high momentum",
-      "Consider reducing BMNR ladder aggressiveness if Iran deal reduces crypto safe-haven demand"
+      "Monitor DXY closely as it approaches 100 - dollar regime flip would invalidate current reflation thesis",
+      "Consider tightening BMNR cash-secured put strikes given crypto institutional selling pressure",
+      "Reassess oil-sensitive cyclical positions given Iran peace deal progress potentially removing war premium"
     ]
   },
   "articles": [
+    {
+      "title": "Coinbase premium hits monthly low as institutional selling pressure mounts",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T05:46:24+00:00",
+      "timeDisplay": "5:46 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0a5254244094b:0-coinbase-premium-hits-monthly-low-as-institutional-selling-pressure-mounts/"
+    },
+    {
+      "title": "Dollar perched near six-week top on uncertainty over US-Iran deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T05:34:13+00:00",
+      "timeDisplay": "5:34 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z04O:0-dollar-perched-near-six-week-top-on-uncertainty-over-us-iran-deal/"
+    },
+    {
+      "title": "Dollar holds near six-week high as US data and Iran doubts lift demand",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T04:56:00+00:00",
+      "timeDisplay": "4:56 AM",
+      "link": "https://www.tradingview.com/news/invezz:d5820cba5094b:0-dollar-holds-near-six-week-high-as-us-data-and-iran-doubts-lift-demand/"
+    },
+    {
+      "title": "US lawmakers renew strategic Bitcoin reserve push with ARMA bill",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T04:02:37+00:00",
+      "timeDisplay": "4:02 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:78468c628094b:0-us-lawmakers-renew-strategic-bitcoin-reserve-push-with-arma-bill/"
+    },
+    {
+      "title": "5 crypto firms wind down this week amid ongoing market slump",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T03:59:57+00:00",
+      "timeDisplay": "3:59 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8b7e210a2094b:0-5-crypto-firms-wind-down-this-week-amid-ongoing-market-slump/"
+    },
+    {
+      "title": "China's yuan weakens slightly against dollar as US-Iran talk in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T03:48:29+00:00",
+      "timeDisplay": "3:48 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Z06I:0-china-s-yuan-weakens-slightly-against-dollar-as-us-iran-talk-in-focus/"
+    },
+    {
+      "title": "Ethereum Price Eyes Breakout Move, Traders Watch Key Resistance Closely",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T03:08:55+00:00",
+      "timeDisplay": "3:08 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3edd82a8e094b:0-ethereum-price-eyes-breakout-move-traders-watch-key-resistance-closely/"
+    },
+    {
+      "title": "US 10Y Yield Holds Steady Amid US-Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T02:56:49+00:00",
+      "timeDisplay": "2:56 AM",
+      "link": "https://www.tradingview.com/news/te_news:552930:0-us-10y-yield-holds-steady-amid-us-iran-uncertainty/"
+    },
+    {
+      "title": "Bitcoin Price Consolidates Near Lows As Market Searches For Direction",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T02:54:07+00:00",
+      "timeDisplay": "2:54 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:c5539b214094b:0-bitcoin-price-consolidates-near-lows-as-market-searches-for-direction/"
+    },
+    {
+      "title": "Ark Invest buys another $5 million in Bullish shares as stock slides 3%",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T02:37:27+00:00",
+      "timeDisplay": "2:37 AM",
+      "link": "https://www.tradingview.com/news/the_block:d5bb970a5094b:0-ark-invest-buys-another-5-million-in-bullish-shares-as-stock-slides-3/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T02:05:18+00:00",
+      "timeDisplay": "2:05 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z01B:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Dollar Firms Amid Ongoing US-Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T01:47:32+00:00",
+      "timeDisplay": "1:47 AM",
+      "link": "https://www.tradingview.com/news/te_news:552913:0-dollar-firms-amid-ongoing-us-iran-uncertainty/"
+    },
     {
       "title": "Stocks rise, dollar at six-week high as focus remains on US-Iran talks",
       "source": "reuters",
@@ -143,6 +239,14 @@
       "link": "https://www.tradingview.com/news/cointelegraph:3d2d4ae33094b:0-bitcoin-longs-soar-despite-weak-us-macroeconomic-data-is-82k-btc-next/"
     },
     {
+      "title": "U.S. Puts $2 Billion Behind Quantum Firms as Bitcoin Security Debate Grows",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T22:06:00+00:00",
+      "timeDisplay": "10:06 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:216c62118094b:0-u-s-puts-2-billion-behind-quantum-firms-as-bitcoin-security-debate-grows/"
+    },
+    {
       "title": "Harvard dumps entire ETH position after just one quarter",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -189,6 +293,22 @@
       "timestamp": "2026-05-21T19:43:00+00:00",
       "timeDisplay": "7:43 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260521009856:0/"
+    },
+    {
+      "title": "Dollar Supported by Middle East Uncertainty",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T19:38:27+00:00",
+      "timeDisplay": "7:38 PM",
+      "link": "https://www.tradingview.com/news/barchart:450a3f3b0094b:0-dollar-supported-by-middle-east-uncertainty/"
+    },
+    {
+      "title": "Crude Oil Prices Tumble on Hopes for Iran Peace Progress",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T19:19:25+00:00",
+      "timeDisplay": "7:19 PM",
+      "link": "https://www.tradingview.com/news/barchart:5ac6d51ef094b:0-crude-oil-prices-tumble-on-hopes-for-iran-peace-progress/"
     },
     {
       "title": "Dollar whipsawed by conflicting Iran deal signals",
@@ -359,14 +479,6 @@
       "link": "https://www.tradingview.com/news/macenews:e81aa22bb094b:0-richmond-fed-s-barkin-raleigh-made-sense-to-give-ourselves-some-time-before-setting-sail/"
     },
     {
-      "title": "Mixin Launches Bitcoin Lightning Network Support, Bringing Instant BTC Payments Into Its Wallet",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:19:52+00:00",
-      "timeDisplay": "4:19 PM",
-      "link": "https://www.tradingview.com/news/chainwire:5c9c405ae094b:0-mixin-launches-bitcoin-lightning-network-support-bringing-instant-btc-payments-into-its-wallet/"
-    },
-    {
       "title": "HEADS UP: RICHMOND FED'S REMARKS ON SUPPLY CHAINS AT THE ULI TRIANGLE CAPITAL MARKETS CONFERENCE IN RALEIGH COMING UP AT 12:20P ET",
       "source": "macenews",
       "color": "#00e5ff",
@@ -407,44 +519,12 @@
       "link": "https://www.tradingview.com/news/macenews:2c38baa73094b:0-pres-trump-announces-measure-to-allow-food-firms-to-keep-old-refrigeration-equipment-longer-keeping-old-refrigerant-claiming-to-help-lower-prices/"
     },
     {
-      "title": "MicroStrategy\u2019s Saylor Says Miners No Longer Set Bitcoin Price, Another Force Has Taken Over",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:54:20+00:00",
-      "timeDisplay": "3:54 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:aa176c146094b:0-microstrategy-s-saylor-says-miners-no-longer-set-bitcoin-price-another-force-has-taken-over/"
-    },
-    {
-      "title": "Bitcoin due '5%+' move as analysis stays bullish on BTC price outlook",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:50:16+00:00",
-      "timeDisplay": "3:50 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:fb089c5ee094b:0-bitcoin-due-5-move-as-analysis-stays-bullish-on-btc-price-outlook/"
-    },
-    {
-      "title": "Michael Saylor Says MSTR Could Buy All Remaining Bitcoin Before 2140: Report",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:45:12+00:00",
-      "timeDisplay": "3:45 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:96b1c2b64094b:0/"
-    },
-    {
       "title": "US ATLANTA FED GDPNOW MODEL SEES Q2 GDP GROWTH RATE AT 4.3% AFTER LATEST ECONOMIC REPORTS, UP FROM 4.30% LAST WEEK",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-05-21T15:44:00+00:00",
       "timeDisplay": "3:44 PM",
       "link": "https://www.tradingview.com/news/macenews:cec62db50094b:0-us-atlanta-fed-gdpnow-model-sees-q2-gdp-growth-rate-at-4-3-after-latest-economic-reports-up-from-4-30-last-week/"
-    },
-    {
-      "title": "Bitcoin faces downside risk as leverage builds near $76K support",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:42:37+00:00",
-      "timeDisplay": "3:42 PM",
-      "link": "https://www.tradingview.com/news/invezz:d5e85f60b094b:0-bitcoin-faces-downside-risk-as-leverage-builds-near-76k-support/"
     },
     {
       "title": "Hyperliquid ETFs Gaining Momentum as Price Soars \u2014 Market Talk",
@@ -461,14 +541,6 @@
       "timestamp": "2026-05-21T15:31:11+00:00",
       "timeDisplay": "3:31 PM",
       "link": "https://www.tradingview.com/news/barchart:715e9eeab094b:0-crude-oil-prices-jump-on-doubts-the-strait-of-hormuz-will-reopen/"
-    },
-    {
-      "title": "Dollar rises as Iran deal doubts cloud outlook",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T15:16:59+00:00",
-      "timeDisplay": "3:16 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y0P8:0-dollar-rises-as-iran-deal-doubts-cloud-outlook/"
     },
     {
       "title": "US KANSAS CITY FED MANUFACTURING PRICES PAID INDEX 63 IN MAY VS. 63 IN APRIL",
@@ -493,6 +565,14 @@
       "timestamp": "2026-05-21T15:05:00+00:00",
       "timeDisplay": "3:05 PM",
       "link": "https://www.tradingview.com/news/macenews:0843dcbe7094b:0-us-kansas-city-fed-manufacturing-employment-index-4-in-may-vs-2-in-april/"
+    },
+    {
+      "title": "BitMine Tom Lee Explains Why Ethereum Price Falls When Oil Prices Surge",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-21T15:04:38+00:00",
+      "timeDisplay": "3:04 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:2a7b3b6f7094b:0-bitmine-tom-lee-explains-why-ethereum-price-falls-when-oil-prices-surge/"
     },
     {
       "title": "US KANSAS CITY FED MANUFACTURING NEW ORDERS INDEX 13 IN MAY VS. 12 IN APRIL",
@@ -565,86 +645,6 @@
       "timestamp": "2026-05-21T13:48:00+00:00",
       "timeDisplay": "1:48 PM",
       "link": "https://www.tradingview.com/news/macenews:03e3693ae094b:0-prelim-us-services-pmi-50-9-in-may-vs-51-2-expected-and-51-0-in-april/"
-    },
-    {
-      "title": "US sanctions Sinaloa cartel-linked Ethereum addresses",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:23:22+00:00",
-      "timeDisplay": "1:23 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:ecf73bfbb094b:0-us-sanctions-sinaloa-cartel-linked-ethereum-addresses/"
-    },
-    {
-      "title": "Sinaloa Cartel Linked to Massive Crypto Operation as Feds Seize Millions",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:22:51+00:00",
-      "timeDisplay": "1:22 PM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:af19d2c60094b:0-sinaloa-cartel-linked-to-massive-crypto-operation-as-feds-seize-millions/"
-    },
-    {
-      "title": "Bitcoin, Ethereum Slip After Nvidia Earnings While Oil Surge Spooks Markets",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:18:55+00:00",
-      "timeDisplay": "1:18 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:ff03ba757094b:0/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - May 21",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:16:00+00:00",
-      "timeDisplay": "1:16 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521006909:0/"
-    },
-    {
-      "title": "Yields slip after unemployment data surprises to the upside",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T13:12:30+00:00",
-      "timeDisplay": "1:12 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y0MR:0-yields-slip-after-unemployment-data-surprises-to-the-upside/"
-    },
-    {
-      "title": "Gold Slides as US-Iran Deal Hopes Fade",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T12:25:24+00:00",
-      "timeDisplay": "12:25 PM",
-      "link": "https://www.tradingview.com/news/te_news:552760:0-gold-slides-as-us-iran-deal-hopes-fade/"
-    },
-    {
-      "title": "Key facts: Senate Advances CLARITY Act 15-9; ETH Faces $2,211 Resistance",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T12:14:27+00:00",
-      "timeDisplay": "12:14 PM",
-      "link": "https://www.tradingview.com/news/tradingview:d50ae43962ef7:0-key-facts-senate-advances-clarity-act-15-9-eth-faces-2-211-resistance/"
-    },
-    {
-      "title": "\u2018Rally slows into resistance\u2019: Bitcoin stalls below $78,000 as ETF outflows and long liquidations deepen recovery doubts",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T12:00:37+00:00",
-      "timeDisplay": "12:00 PM",
-      "link": "https://www.tradingview.com/news/the_block:7dfb31cf0094b:0-rally-slows-into-resistance-bitcoin-stalls-below-78-000-as-etf-outflows-and-long-liquidations-deepen-recovery-doubts/"
-    },
-    {
-      "title": "Millionaire Businessman Reveals Where The Real Crypto Value Is, And It\u2019s Not Bitcoin",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T11:30:52+00:00",
-      "timeDisplay": "11:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:3e6214cea094b:0-millionaire-businessman-reveals-where-the-real-crypto-value-is-and-it-s-not-bitcoin/"
-    },
-    {
-      "title": "Treasury Yields March Higher",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T11:15:26+00:00",
-      "timeDisplay": "11:15 AM",
-      "link": "https://www.tradingview.com/news/te_news:552733:0-treasury-yields-march-higher/"
     }
   ]
 }

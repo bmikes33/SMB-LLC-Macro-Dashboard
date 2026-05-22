@@ -1,45 +1,139 @@
 {
-  "lastUpdated": "2026-05-22T17:48:47.893361+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 05:48 PM UTC",
+  "lastUpdated": "2026-05-22T19:39:48.883462+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 07:39 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Kevin Warsh was sworn in as Fed Chair with Trump emphasizing independence and measured rate policy. Fed Governor Waller removed easing bias, stating rate cuts are no more likely than hikes and markets are underpricing prolonged high energy prices. Economic data showed steady growth with NY Fed maintaining 2.6% Q2 GDP forecast while oil rigs increased by 7.",
+    "macroSummary": "Kevin Warsh was sworn in as new Fed Chair with Trump emphasizing independence but cautioning against aggressive rate hikes during economic booms. Dollar strengthened to six-week highs amid Iran tensions while Bitcoin fell below $77K on Fed rate hike risks, and oil markets remained elevated with increased rig counts.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Waller's hawkish shift removing easing bias and warning on energy price risks supports reflation, but his dismissal of near-term rate hikes and consumer sentiment hitting all-time lows creates cross-currents.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Warsh's dovish Fed stance and Trump's anti-rate hike comments support reflation, but dollar strength near regime flip levels and rate hike fears pressuring risk assets create cross-currents.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar at six-week highs amid Iran tensions, approaching regime flip threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Waller removes easing bias, warns markets underpricing prolonged high energy prices",
+        "signal": "Dollar hits six-week high on Iran war jitters, nearing DXY 100 regime flip threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Fed Chair Warsh sworn in with Trump explicitly warning against aggressive rate hikes during economic booms",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Consumer sentiment hits all-time low driving shorter-dated yields higher",
+        "signal": "Bitcoin falls below $77K on Fed rate hike risks despite pro-crypto Fed Chair appointment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Waller states rate cuts no more likely than hikes going forward",
+        "signal": "Oil markets remain elevated with rig count increases, supporting inflationary pressures",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil rig count increases by 7 to 558 total rigs",
+        "signal": "Shorter-dated yields rising on consumer sentiment weakness suggests stagflationary undertones",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Trump tells Warsh not to 'go crazy' with rate hikes when economy is booming",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor consumer sentiment deterioration for potential demand destruction signals",
-      "Watch for oil price action given increased rig count vs Waller's energy price warnings",
-      "Assess BMNR ladder positioning given Fed's new neutral bias and crypto weakness"
+      "Monitor DXY closely - approaching 100 regime flip threshold on Iran tensions",
+      "BMNR ladder may benefit from continued crypto weakness if Fed hawkishness persists",
+      "Watch for oil price action through Memorial Day weekend given geopolitical tensions"
     ]
   },
   "articles": [
+    {
+      "title": "CFTC Commitments: Comex Gold Futures/Options - May 22",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:33:00+00:00",
+      "timeDisplay": "7:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007574:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futs/Opts",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:32:00+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007552:0/"
+    },
+    {
+      "title": "Bitcoin Upper Trendline Resistance Is Holding Price Back, Can It Push It Below $60,000? Analyst Answers",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:30:02+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:2f82ba959094b:0-bitcoin-upper-trendline-resistance-is-holding-price-back-can-it-push-it-below-60-000-analyst-answers/"
+    },
+    {
+      "title": "CFTC Commitments: Comex Gold Futures - May 22",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:30:00+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007489:0/"
+    },
+    {
+      "title": "CFTC Disaggregated Commitments: Comex Gold Futures",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:30:00+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007509:0/"
+    },
+    {
+      "title": "Dollar near six-week high amid Iran war jitters",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T19:13:47+00:00",
+      "timeDisplay": "7:13 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z0MW:0-dollar-near-six-week-high-amid-iran-war-jitters/"
+    },
+    {
+      "title": "Oil Futures Edge Up Ahead of U.S. Long Weekend \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:10:00+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007351:0/"
+    },
+    {
+      "title": "Coinbase and Other Crypto Stocks Are Falling. Several Possible Reasons for the Bad Day. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T19:01:00+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522006972:0/"
+    },
+    {
+      "title": "\u2018Pro-Crypto\u2019 Fed Chair Kevin Warsh Sworn In On Bitcoin Pizza Day, But BTC Continues To Battle $77K \u2014 Retail Traders Caught Off Guard",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T18:16:19+00:00",
+      "timeDisplay": "6:16 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:c76fbfe8f094b:0/"
+    },
+    {
+      "title": "Centralized Crypto Lending Slows in 1Q \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T18:09:00+00:00",
+      "timeDisplay": "6:09 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522007049:0/"
+    },
+    {
+      "title": "Kevin Warsh Pledges \u2018Reform Oriented Federal Reserve\u2019 as New Fed Chair",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T17:52:00+00:00",
+      "timeDisplay": "5:52 PM",
+      "link": "https://www.tradingview.com/news/macenews:a7308d866094b:0-kevin-warsh-pledges-reform-oriented-federal-reserve-as-new-fed-chair/"
+    },
     {
       "title": "US NY FED NOWCAST SEES US Q2 GDP GROWTH RATE AT 2.6%, UNCHANGED AFTER THIS WEEK'S ECONOMIC REPORTS AS STRONG HOUSING STARTS OFFSETS WEAK PHILLY FED",
       "source": "macenews",
@@ -71,6 +165,14 @@
       "timestamp": "2026-05-22T16:54:00+00:00",
       "timeDisplay": "4:54 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260522006687:0/"
+    },
+    {
+      "title": "Crypto and Blockchain Stocks Positioned for Long-Term Growth",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T16:40:00+00:00",
+      "timeDisplay": "4:40 PM",
+      "link": "https://www.tradingview.com/news/zacks:8b1afd7f1094b:0-crypto-and-blockchain-stocks-positioned-for-long-term-growth/"
     },
     {
       "title": "Bitcoin Bull Run \u2018Not There Yet,\u2019 Warns CryptoQuant Founder",
@@ -321,28 +423,12 @@
       "link": "https://www.tradingview.com/news/macenews:ee4ef7d07094b:0-fed-gov-waller-frankfurt-inflation-will-largely-be-determined-by-the-length-of-this-conflict-prepared-to-be-patient-in-holding-policy-steady/"
     },
     {
-      "title": "Dollar near six-week high amid Iran war jitters",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T14:17:02+00:00",
-      "timeDisplay": "2:17 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z0EE:0-dollar-near-six-week-high-amid-iran-war-jitters/"
-    },
-    {
       "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: LONG-RUN INFLATION EXPECTATIONS UP NOTABLY IN MAY AMONG REPUBLICANS, INDEPENDENTS",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-05-22T14:05:00+00:00",
       "timeDisplay": "2:05 PM",
       "link": "https://www.tradingview.com/news/macenews:e4479b1cf094b:0-more-us-consumer-sentiment-from-u-of-michigan-long-run-inflation-expectations-up-notably-in-may-among-republicans-independents/"
-    },
-    {
-      "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: SENTIMENT DROPS IN MAY FOR BOTH REPUBLICANS AND INDEPENDENTS, DEMOCRATS RELATIVELY STABLE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T14:04:00+00:00",
-      "timeDisplay": "2:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:c34a2d45c094b:0-more-us-consumer-sentiment-from-u-of-michigan-sentiment-drops-in-may-for-both-republicans-and-independents-democrats-relatively-stable/"
     },
     {
       "title": "Space X IPO: 'Bad news' for tech stocks but what about Bitcoin?",
@@ -462,7 +548,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-22T11:51:00+00:00",
       "timeDisplay": "11:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260522004200:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260522004199:0/"
     },
     {
       "title": "Kevin Warsh Will Be Sworn-In As Fed Chair Today \u2014 But The Bond Markets Aren't Giving Him A Grand Welcome",
@@ -473,14 +559,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:269721f9d094b:0/"
     },
     {
-      "title": "Germany\u2019s Finance Committee Rejects Bid to End Crypto Tax Exemption",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T11:32:50+00:00",
-      "timeDisplay": "11:32 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:6a9b68ec8094b:0-germany-s-finance-committee-rejects-bid-to-end-crypto-tax-exemption/"
-    },
-    {
       "title": "HYPE Is Up 130% In 2026 \u2014 But This Top Analyst Sees A Dangerous Setup Forming Around $60",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -489,28 +567,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:d708dc70e094b:0-hype-is-up-130-in-2026-but-this-top-analyst-sees-a-dangerous-setup-forming-around-60/"
     },
     {
-      "title": "Geopolitical Risk Rumbles Crypto: Binance Faces Fresh Sanctions Allegations",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T10:40:00+00:00",
-      "timeDisplay": "10:40 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:f82d33c26094b:0-geopolitical-risk-rumbles-crypto-binance-faces-fresh-sanctions-allegations/"
-    },
-    {
       "title": "Billionaire Mark Cuban Sells Bitcoin As \u2018Narrative Disappoints\u2019",
       "source": "cryptoprowl",
       "color": "#00e5ff",
       "timestamp": "2026-05-22T09:57:00+00:00",
       "timeDisplay": "9:57 AM",
       "link": "https://www.tradingview.com/news/cryptoprowl:c6fd8a721094b:0-billionaire-mark-cuban-sells-bitcoin-as-narrative-disappoints/"
-    },
-    {
-      "title": "Trump Media Moves To Sell Bitcoin As Losses Reach $455 Million",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T09:56:00+00:00",
-      "timeDisplay": "9:56 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:a1653164c094b:0-trump-media-moves-to-sell-bitcoin-as-losses-reach-455-million/"
     },
     {
       "title": "Verus bridge exploiter returns $8.5M after bounty offer",
@@ -583,62 +645,6 @@
       "timestamp": "2026-05-22T03:08:55+00:00",
       "timeDisplay": "3:08 AM",
       "link": "https://www.tradingview.com/news/newsbtc:3edd82a8e094b:0-ethereum-price-eyes-breakout-move-traders-watch-key-resistance-closely/"
-    },
-    {
-      "title": "US 10Y Yield Holds Steady Amid US-Iran Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T02:56:49+00:00",
-      "timeDisplay": "2:56 AM",
-      "link": "https://www.tradingview.com/news/te_news:552930:0-us-10y-yield-holds-steady-amid-us-iran-uncertainty/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T02:05:18+00:00",
-      "timeDisplay": "2:05 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z01B:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Nasdaq, S&P 500, Dow Futures Climb As Trump's $2B Quantum Computing Bet Outweighs Iran Jitters: RKLB, IBM, RGTI, NIO In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T02:01:48+00:00",
-      "timeDisplay": "2:01 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:ffff96999094b:0/"
-    },
-    {
-      "title": "Stocks rise, dollar at six-week high as focus remains on US-Iran talks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T01:33:06+00:00",
-      "timeDisplay": "1:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Z039:0-stocks-rise-dollar-at-six-week-high-as-focus-remains-on-us-iran-talks/"
-    },
-    {
-      "title": "Oil Rises Amid High Middle East Tensions \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T00:22:00+00:00",
-      "timeDisplay": "12:22 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521012341:0/"
-    },
-    {
-      "title": "Correct: Gold Edges Lower Amid Mixed Sentiment \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T00:16:00+00:00",
-      "timeDisplay": "12:16 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521012328:0/"
-    },
-    {
-      "title": "Gold Holds Steady Amid US-Iran Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T00:03:08+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/te_news:552882:0-gold-holds-steady-amid-us-iran-uncertainty/"
     }
   ]
 }

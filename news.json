@@ -1,45 +1,67 @@
 {
-  "lastUpdated": "2026-05-22T01:28:36.662537+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 01:28 AM UTC",
+  "lastUpdated": "2026-05-22T01:54:35.092663+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 01:54 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are whipsawing on conflicting signals around US-Iran deal progress, with oil futures declining on peace hopes while geopolitical tensions persist. The dollar remains elevated near six-week highs amid uncertainty, while Fed officials emphasize inflation concerns remain paramount despite potential oil spike volatility.",
+    "macroSummary": "Markets are whipsawed by conflicting signals around US-Iran nuclear deal progress, with oil declining on peace hopes while geopolitical tensions persist. The dollar reached six-week highs amid uncertainty, while Fed officials emphasize inflation concerns remain paramount despite potential oil spike normalization.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran deal progress is cooling oil prices and yields, creating deflationary pressure that contradicts the reflation narrative, while Fed officials' continued inflation focus and resilient economic data support it.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Oil decline on Iran deal progress directly contradicts the embedded Iran-war oil shock assumption, while Fed officials' continued inflation focus and dollar strength support reflation thesis components.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil futures losing ground and set for weekly decline on US-Iran deal hopes, potentially unwinding war premium"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil futures losing ground on US-Iran deal hopes, with crude set for weekly decline despite Middle East tensions",
+        "signal": "Oil prices falling on US-Iran deal progress, contradicting embedded war shock premium in current regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond yields sliding on Iran deal progress and economic data, suggesting deflationary forces emerging",
-        "tag": "CONTRADICTS"
+        "signal": "Dollar at six-week highs amid geopolitical uncertainty, approaching DXY 100 watch level",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar whipsawed by conflicting Iran deal signals but holding near six-week highs",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Fed's Barkin emphasizes inflation concerns remain worse and paramount despite potential oil spike volatility",
+        "signal": "Fed officials remain focused on inflation concerns as paramount despite potential oil normalization",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Trump securing highly enriched uranium from Iran suggests geopolitical de-escalation momentum",
+        "signal": "Yields sliding on Iran deal progress and economic data, easing long-end stress",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Richmond Fed's Barkin notes economy remains resilient but inflation worse, willing to look past oil spike if expectations anchored",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below recent levels would pressure the Iran-war premium embedded in current reflation call",
-      "Watch 10Y yields for continued decline as Iran deal progress could accelerate bond rally and challenge reflation thesis",
-      "Consider tightening BMNR put ladder strikes if crypto weakness persists amid broader risk asset uncertainty"
+      "Monitor oil price action closely - sustained decline below war premium levels invalidates key regime assumption",
+      "Watch DXY approach to 100 level given six-week high momentum",
+      "Consider reducing BMNR ladder aggressiveness if Iran deal reduces crypto safe-haven demand"
     ]
   },
   "articles": [
+    {
+      "title": "Stocks rise, dollar at six-week high as focus remains on US-Iran talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T01:33:06+00:00",
+      "timeDisplay": "1:33 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Z039:0-stocks-rise-dollar-at-six-week-high-as-focus-remains-on-us-iran-talks/"
+    },
+    {
+      "title": "Bitcoin Miners Warn No Bottom Yet, CryptoQuant Says\u2014What On-Chain Metrics Reveal",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T01:30:55+00:00",
+      "timeDisplay": "1:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:56dcbe1c6094b:0-bitcoin-miners-warn-no-bottom-yet-cryptoquant-says-what-on-chain-metrics-reveal/"
+    },
     {
       "title": "Dollar perched near six-week high on uncertainty over US-Iran deal",
       "source": "reuters",
@@ -262,7 +284,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-21T17:04:00+00:00",
       "timeDisplay": "5:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521009047:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260521009046:0/"
     },
     {
       "title": "Raoul Pal Calls Sui\u2019s Free Stablecoin Transfers \u2018A Big Deal\u2019 \u2013 SUI Token Outperforms Bitcoin Amid Crypto Slump",
@@ -623,22 +645,6 @@
       "timestamp": "2026-05-21T11:15:26+00:00",
       "timeDisplay": "11:15 AM",
       "link": "https://www.tradingview.com/news/te_news:552733:0-treasury-yields-march-higher/"
-    },
-    {
-      "title": "MoonPay Expands Institutional Push with New Onchain Trading Platform",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:5535c92df094b:0-moonpay-expands-institutional-push-with-new-onchain-trading-platform/"
-    },
-    {
-      "title": "Oil Prices Back on the Rise",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T10:47:14+00:00",
-      "timeDisplay": "10:47 AM",
-      "link": "https://www.tradingview.com/news/te_news:552720:0-oil-prices-back-on-the-rise/"
     }
   ]
 }

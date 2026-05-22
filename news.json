@@ -1,51 +1,141 @@
 {
-  "lastUpdated": "2026-05-22T05:54:19.710509+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 05:54 AM UTC",
+  "lastUpdated": "2026-05-22T08:43:57.965830+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 08:43 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with dollar at six-week highs amid US-Iran deal uncertainty, while oil prices decline on peace progress hopes and yields slide. Crypto markets face institutional selling pressure with Bitcoin consolidating near lows and multiple firms winding down operations.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil declining on Iran peace deal hopes directly contradicts the embedded Iran-war oil shock assumption, while dollar strength and falling yields challenge the reflation narrative.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar at six-week high with multiple headlines citing strength amid Iran uncertainty - approaching potential regime flip threshold"
-      }
-    ],
+    "macroSummary": "Markets show mixed signals with dollar at six-week highs amid US-Iran deal uncertainty, while oil rises on Middle East tensions and gold faces weekly losses. Bitcoin and crypto markets continue consolidating near recent lows with institutional selling pressure and whale movements suggesting ongoing weakness.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Dollar strength and Iran uncertainty support reflation elements, but crypto weakness and mixed commodity performance (oil up, gold down) suggest underlying risk appetite is more fragmented than pure reflation would indicate.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Oil prices tumbling on hopes for US-Iran peace deal progress undermines the embedded war premium assumption",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar at six-week highs with sustained strength challenges reflation thesis which typically sees dollar weakness",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Yields sliding despite Iran uncertainty contradicts reflation narrative of rising rate expectations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Institutional crypto selling pressure and firm wind-downs suggest risk-off sentiment building",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "DXY approaching 100 threshold that would signal dollar regime flip",
+        "signal": "Dollar at six-week highs amid US-Iran uncertainty, approaching DXY 100 threshold zone",
         "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil climbing 2% on skepticism over US-Iran negotiations supports geopolitical risk premium",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Gold headed for weekly loss despite Middle East tensions contradicts typical safe haven flows",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin institutional selling pressure and Coinbase premium at monthly lows suggests risk-off undercurrents",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Kevin Warsh Fed Chair swearing-in this weekend could shift monetary policy expectations",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as it approaches 100 - dollar regime flip would invalidate current reflation thesis",
-      "Consider tightening BMNR cash-secured put strikes given crypto institutional selling pressure",
-      "Reassess oil-sensitive cyclical positions given Iran peace deal progress potentially removing war premium"
+      "Monitor DXY closely as six-week highs approach the 100 regime flip threshold",
+      "BMNR ladder strategy may face headwinds from continued institutional crypto selling pressure",
+      "Watch oil-gold divergence as potential signal of stagflationary vs reflationary dynamics"
     ]
   },
   "articles": [
+    {
+      "title": "Verus bridge exploiter returns 4,052 ETH, retains $2.8 million bounty: onchain analyst",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T08:29:12+00:00",
+      "timeDisplay": "8:29 AM",
+      "link": "https://www.tradingview.com/news/the_block:34a6defc5094b:0-verus-bridge-exploiter-returns-4-052-eth-retains-2-8-million-bounty-onchain-analyst/"
+    },
+    {
+      "title": "Bitcoin price record 90-day uptrend 'resembles bull market rally:' New analysis",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T08:12:28+00:00",
+      "timeDisplay": "8:12 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:1af9fdcd3094b:0-bitcoin-price-record-90-day-uptrend-resembles-bull-market-rally-new-analysis/"
+    },
+    {
+      "title": "Gold Headed for Weekly Loss on U.S.-Iran Uncertainty, Rate Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:54:00+00:00",
+      "timeDisplay": "7:54 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522002405:0/"
+    },
+    {
+      "title": "Forex market today: Dollar steady, pound weakens after UK data",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:40:52+00:00",
+      "timeDisplay": "7:40 AM",
+      "link": "https://www.tradingview.com/news/invezz:46b6b3c42094b:0-forex-market-today-dollar-steady-pound-weakens-after-uk-data/"
+    },
+    {
+      "title": "Oil Climbs 2% on Skepticism Over U.S.-Iran Negotiations \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:40:00+00:00",
+      "timeDisplay": "7:40 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522002359:0/"
+    },
+    {
+      "title": "Bitcoin Falls as Investors Weigh Conflicting Iran War Headlines \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:28:00+00:00",
+      "timeDisplay": "7:28 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522002300:0/"
+    },
+    {
+      "title": "Dollar holds near six-week high; mixed messages on US-Iran deal feed uncertainty",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T07:22:31+00:00",
+      "timeDisplay": "7:22 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Z0DI:0-dollar-holds-near-six-week-high-mixed-messages-on-us-iran-deal-feed-uncertainty/"
+    },
+    {
+      "title": "$725 Million in Ethereum (ETH) Just Left Whale Wallets: The Timing Is Suspicious",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:00:35+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:95cfbd8ff094b:0-725-million-in-ethereum-eth-just-left-whale-wallets-the-timing-is-suspicious/"
+    },
+    {
+      "title": "New Bitcoin Lows? Analysts Say Chances Are \u2018Extremely Slim\u2019",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:00:22+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:14132fedf094b:0-new-bitcoin-lows-analysts-say-chances-are-extremely-slim/"
+    },
+    {
+      "title": "Ethereum Sentiment Drops Sharply as ETH Price Holds Key Support\u2014Will a Major Move Follow?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T06:31:16+00:00",
+      "timeDisplay": "6:31 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:e65030198094b:0-ethereum-sentiment-drops-sharply-as-eth-price-holds-key-support-will-a-major-move-follow/"
+    },
+    {
+      "title": "FRIDAY-SUNDAY WHITE HOUSE SCHEDULE - President Trump attends the swearing in of Kevin Warsh as chairman of the Federal Reserve (11:00a ET)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T06:11:00+00:00",
+      "timeDisplay": "6:11 AM",
+      "link": "https://www.tradingview.com/news/macenews:4877087a1094b:0-friday-sunday-white-house-schedule-president-trump-attends-the-swearing-in-of-kevin-warsh-as-chairman-of-the-federal-reserve-11-00a-et/"
+    },
+    {
+      "title": "Trump Media\u2019s Bitcoin Stash Shrinks Again as 2,650 BTC Lands on Crypto.com",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T05:59:01+00:00",
+      "timeDisplay": "5:59 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:79e83742e094b:0-trump-media-s-bitcoin-stash-shrinks-again-as-2-650-btc-lands-on-crypto-com/"
+    },
     {
       "title": "Coinbase premium hits monthly low as institutional selling pressure mounts",
       "source": "cointelegraph",
@@ -53,6 +143,14 @@
       "timestamp": "2026-05-22T05:46:24+00:00",
       "timeDisplay": "5:46 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:0a5254244094b:0-coinbase-premium-hits-monthly-low-as-institutional-selling-pressure-mounts/"
+    },
+    {
+      "title": "Bitcoin Pizza Day 2026 Arrived Over $300 Million Lighter Than Last Year",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T05:44:35+00:00",
+      "timeDisplay": "5:44 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:958f2b961094b:0-bitcoin-pizza-day-2026-arrived-over-300-million-lighter-than-last-year/"
     },
     {
       "title": "Dollar perched near six-week top on uncertainty over US-Iran deal",
@@ -351,28 +449,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260521009443:0/"
     },
     {
-      "title": "US Intensifies Operation Economic Fury Targeting Iran\u2019s $7.7 Billion Crypto Network",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T18:06:35+00:00",
-      "timeDisplay": "6:06 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:60fd21cd9094b:0-us-intensifies-operation-economic-fury-targeting-iran-s-7-7-billion-crypto-network/"
-    },
-    {
       "title": "Crude Oil Prices Fall",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-05-21T18:06:01+00:00",
       "timeDisplay": "6:06 PM",
       "link": "https://www.tradingview.com/news/te_news:552850:0-crude-oil-prices-fall/"
-    },
-    {
-      "title": "US Strategic Bitcoin Reserve Bill Reintroduced In Congress As ARMA With 20-Year BTC Hold Requirement",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T17:59:55+00:00",
-      "timeDisplay": "5:59 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:876828f44094b:0/"
     },
     {
       "title": "Fed Officials Remain Wary of Changing Funds Rate, But Inflation Concerns Paramount",
@@ -397,22 +479,6 @@
       "timestamp": "2026-05-21T17:37:00+00:00",
       "timeDisplay": "5:37 PM",
       "link": "https://www.tradingview.com/news/macenews:e6caed3ef094b:0-bbg-us-senate-to-leave-capitol-hill-for-memorial-day-recess-without-voting-on-budget-reconciliation-package-despite-pres-trump-s-june-deadline/"
-    },
-    {
-      "title": "SpaceX Revealed as Top 10 Bitcoin Holder \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T17:04:00+00:00",
-      "timeDisplay": "5:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521009046:0/"
-    },
-    {
-      "title": "Raoul Pal Calls Sui\u2019s Free Stablecoin Transfers \u2018A Big Deal\u2019 \u2013 SUI Token Outperforms Bitcoin Amid Crypto Slump",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:35:15+00:00",
-      "timeDisplay": "4:35 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:2a6ebee08094b:0/"
     },
     {
       "title": "PRES TRUMP Q&A: 'I INHERITED THIS MESS' ON AFFORDABILITY,; REPEATS, WILL BE TRAGIC IF SCOTUS RULES IN FAVOR OF  BIRTHRIGHT CITIZENSHIP",
@@ -453,14 +519,6 @@
       "timestamp": "2026-05-21T16:22:00+00:00",
       "timeDisplay": "4:22 PM",
       "link": "https://www.tradingview.com/news/macenews:855969ad9094b:0-richmond-fed-s-barkin-raleigh-fed-well-positioned-to-respond-as-appropriate-to-keeping-inflation-expectations-anchored-key-to-curb-infl/"
-    },
-    {
-      "title": "Bitcoin accumulation trends weaken as realized losses jump to $600M",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:21:13+00:00",
-      "timeDisplay": "4:21 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:f4f955f1a094b:0-bitcoin-accumulation-trends-weaken-as-realized-losses-jump-to-600m/"
     },
     {
       "title": "RICHMOND FED'S BARKIN/RALEIGH: 'WOULDN'T BE  SURPRISED'TO SEE ADDTIONAL PRESSURE ON JOBS OR INFLATION 'OR CONCEIVABLY BOTH'",
@@ -581,70 +639,6 @@
       "timestamp": "2026-05-21T15:04:00+00:00",
       "timeDisplay": "3:04 PM",
       "link": "https://www.tradingview.com/news/macenews:3113133ae094b:0-us-kansas-city-fed-manufacturing-new-orders-index-13-in-may-vs-12-in-april/"
-    },
-    {
-      "title": "US KANSAS CITY FED MANUFACTURING INDEX 8 IN MAY VS. 10 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:01:00+00:00",
-      "timeDisplay": "3:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:659710f07094b:0-us-kansas-city-fed-manufacturing-index-8-in-may-vs-10-in-april/"
-    },
-    {
-      "title": "Tom Lee Says Ethereum Will Rise When Oil Falls \u2014 And It All Comes Down To Fed Policy",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T14:44:14+00:00",
-      "timeDisplay": "2:44 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:e7ae1af6a094b:0/"
-    },
-    {
-      "title": "US NY FED BANK RESERVE DEMAND ELASTICITY INDEX STAYS CLOSE TO 0 IN MAY, SUGGESTS RESERVES REMAIN ABUNDANT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T14:36:00+00:00",
-      "timeDisplay": "2:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:67142e9fc094b:0-us-ny-fed-bank-reserve-demand-elasticity-index-stays-close-to-0-in-may-suggests-reserves-remain-abundant/"
-    },
-    {
-      "title": "US EIA NATURAL GAS IN STORAGE +101 BLN CUBIC FEET IN LATEST WEEK FROM PREVIOUS WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:505837393094b:0-us-eia-natural-gas-in-storage-101-bln-cubic-feet-in-latest-week-from-previous-week/"
-    },
-    {
-      "title": "Canada Economy Boosted by Higher Oil Price, But Only Up to a Point \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T14:22:00+00:00",
-      "timeDisplay": "2:22 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521007510:0/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - May 21",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:51:00+00:00",
-      "timeDisplay": "1:51 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521007254:0/"
-    },
-    {
-      "title": "PRELIM US MANUFACTURING PMI 55.3 IN MAY VS 53.5 EXPECTED AND 54.5 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:48:00+00:00",
-      "timeDisplay": "1:48 PM",
-      "link": "https://www.tradingview.com/news/macenews:e67729699094b:0-prelim-us-manufacturing-pmi-55-3-in-may-vs-53-5-expected-and-54-5-in-april/"
-    },
-    {
-      "title": "PRELIM US SERVICES PMI 50.9 IN MAY VS 51.2 EXPECTED AND 51.0 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T13:48:00+00:00",
-      "timeDisplay": "1:48 PM",
-      "link": "https://www.tradingview.com/news/macenews:03e3693ae094b:0-prelim-us-services-pmi-50-9-in-may-vs-51-2-expected-and-51-0-in-april/"
     }
   ]
 }

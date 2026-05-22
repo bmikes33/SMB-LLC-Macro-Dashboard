@@ -1,51 +1,275 @@
 {
-  "lastUpdated": "2026-05-22T14:07:20.053850+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 02:07 PM UTC",
+  "lastUpdated": "2026-05-22T15:46:59.416020+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 03:46 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals on Iran peace talks with treasury yields falling for three sessions while dollar holds near six-week highs amid deal uncertainty. Oil prices are set for big weekly losses despite intraday gains on negotiation skepticism, while crypto faces significant outflows with Bitcoin breaking technical support and Ethereum ETFs seeing persistent selling.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Iran peace talk developments are reducing geopolitical risk premium in bonds/oil while dollar strength and rate rise expectations maintain reflation undertones, creating conflicting signals.",
+    "macroSummary": "Fed Governor Waller signals hawkish shift by removing easing bias and warning markets are underpricing prolonged high energy prices, while consumer inflation expectations surge to 4.8% (1-year) and 3.9% (5-year) as Iran war concerns drive oil volatility. Consumer sentiment plunges to 44.8 as cost of living becomes primary concern, though treasury yields fell for third session on Iran peace talk developments.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Consumer inflation expectations are spiking well above target while sentiment crashes, and Waller's hawkish pivot suggests Fed may need to hike rates if energy-driven inflation becomes entrenched.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar near six-week high with potential for further gains if Fed's Waller hints at rate rises"
+        "indicator": "Dollar",
+        "level": "approaching DXY 100",
+        "signal": "Dollar near six-week high amid Iran war jitters"
       }
     ],
     "keySignals": [
       {
+        "signal": "Consumer 1-year inflation expectations jump to 4.8% vs 4.7% prior, with 5-year at 3.9% vs 3.5% prior",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Fed's Waller removes easing bias and warns markets underpricing prolonged high energy prices",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Consumer sentiment crashes to 44.8 vs 49.8 prior as cost of living becomes first-order concern",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar approaching six-week highs on Iran war jitters",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
         "signal": "Treasury yields falling for third session on Iran peace talk developments",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil prices set for big weekly fall despite geopolitical tensions",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar strength persists with Fed rate rise expectations intact",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin ETFs see $1.63B outflows with BlackRock leading selling pressure",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Gold drops as Iran talks temper market anxiety, headed for weekly loss",
-        "tag": "CONTRADICTS"
+        "tag": "MIXED"
       }
     ],
     "actionItems": [
-      "Monitor DXY approaching 100 threshold - potential regime flip signal if breached",
-      "Watch for oil stability below $115 as Iran peace talks progress",
-      "BMNR ladder may face continued pressure from crypto outflows - consider strike adjustments"
+      "Monitor DXY closely as it approaches 100 threshold that would signal dollar regime flip",
+      "Consider reducing BMNR ladder exposure as crypto sentiment weakens amid broader risk-off in consumer confidence",
+      "Prepare for potential Fed policy error scenario as inflation expectations de-anchor while sentiment collapses"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Continues as Leading Indicator for All Markets \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:42:00+00:00",
+      "timeDisplay": "3:42 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522006050:0/"
+    },
+    {
+      "title": "Gas Prices May Limit Spread of Inflationary Pressures in Canada \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:35:00+00:00",
+      "timeDisplay": "3:35 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522006023:0/"
+    },
+    {
+      "title": "MSTR's Michael Saylor Says Selling Bitcoin May Be Necessary To Maximize BTC-Per-Share Over Seven Years",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:22:13+00:00",
+      "timeDisplay": "3:22 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:9913d16a8094b:0/"
+    },
+    {
+      "title": "MSTR\u201ds Michael Saylor Says Selling Bitcoin May Be Necessary To Maximize BTC-Per-Share Over Seven Years",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:20:46+00:00",
+      "timeDisplay": "3:20 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:5995f6d23094b:0/"
+    },
+    {
+      "title": "Jump in Gas Prices Threatens to Eat Into Canadians Spending Elsewhere \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:20:00+00:00",
+      "timeDisplay": "3:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522005948:0/"
+    },
+    {
+      "title": "US KANSAS CITY FED SERVICES BUSINESS ACTIVITY INDEX 10 IN MAY VS. 3 IN APRIL, 15 IN MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:18:00+00:00",
+      "timeDisplay": "3:18 PM",
+      "link": "https://www.tradingview.com/news/macenews:e484a3b6f094b:0-us-kansas-city-fed-services-business-activity-index-10-in-may-vs-3-in-april-15-in-march/"
+    },
+    {
+      "title": "Gold Heads for Second Straight Weekly Decline as Rate Hike Fears Bite",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T15:17:31+00:00",
+      "timeDisplay": "3:17 PM",
+      "link": "https://www.tradingview.com/news/te_news:553159:0-gold-heads-for-second-straight-weekly-decline-as-rate-hike-fears-bite/"
+    },
+    {
+      "title": "Import duty hike to decrease India's gold demand by 50-60 tonnes in 2026: World Gold Council",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:57:19+00:00",
+      "timeDisplay": "2:57 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:616dfa5ed094b:0-import-duty-hike-to-decrease-india-s-gold-demand-by-50-60-tonnes-in-2026-world-gold-council/"
+    },
+    {
+      "title": "USDT Build on Binance May Signal Refreshed Crypto Appetite \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:53:00+00:00",
+      "timeDisplay": "2:53 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522005740:0/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT: DON'T THINK 'SHOULD CONSIDER RATE INCREASES IN NEAR FUTURE;' 'BUT CAN NO LONGER RULE OUT RATE HIKES FURTHER DOWN THE ROAD'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:39:00+00:00",
+      "timeDisplay": "2:39 PM",
+      "link": "https://www.tradingview.com/news/macenews:4f06e8348094b:0-fed-gov-waller-frankfurt-don-t-think-should-consider-rate-increases-in-near-future-but-can-no-longer-rule-out-rate-hikes-further-down-the-road/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT: WANT TO REMOVE 'EASING BIAS' 'TO MAKE IT CLEAR THAT A RATE CUT IS NO MORE LIKELY IN THE FUTURE THAN A RATE INCREASE;'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:35:00+00:00",
+      "timeDisplay": "2:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:65dc9b04b094b:0-fed-gov-waller-frankfurt-want-to-remove-easing-bias-to-make-it-clear-that-a-rate-cut-is-no-more-likely-in-the-future-than-a-rate-increase/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT:  REPEATS, AS SAID, 'I THOUGHT MARKETS WERE UNDERPRICING THE RISK OF PROLONGED HIGH ENERGY PRICES AND I STILL THINK THEY ARE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:32:00+00:00",
+      "timeDisplay": "2:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:95693dab1094b:0-fed-gov-waller-frankfurt-repeats-as-said-i-thought-markets-were-underpricing-the-risk-of-prolonged-high-energy-prices-and-i-still-think-they-are/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT: 'POLICY ISN'T SO SIMPLE' SO MAY HAVE  TO RESPOND TO TRANSITORY SHOCKS IF THEY ARE 'CORRELATED'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:28:00+00:00",
+      "timeDisplay": "2:28 PM",
+      "link": "https://www.tradingview.com/news/macenews:319d8a114094b:0-fed-gov-waller-frankfurt-policy-isn-t-so-simple-so-may-have-to-respond-to-transitory-shocks-if-they-are-correlated/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT: JOBS MKT 'STABILIZED' BUT 'INFLATION 'THE DRIVING FORCE;' 'DO NOT EXPECT TO SUPPORT A CHANGE TO THE POLICY RATE' NEAR TERM",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:25:00+00:00",
+      "timeDisplay": "2:25 PM",
+      "link": "https://www.tradingview.com/news/macenews:edbcda632094b:0-fed-gov-waller-frankfurt-jobs-mkt-stabilized-but-inflation-the-driving-force-do-not-expect-to-support-a-change-to-the-policy-rate-near-term/"
+    },
+    {
+      "title": "FED GOV WALLER/FRANKFURT: 'INFLATION WILL LARGELY BE DETERMINED BY THE LENGTH OF THIS CONFLICT;' 'PREPARED TO BE PATIENT IN HOLDING POLICY' STEADY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:22:00+00:00",
+      "timeDisplay": "2:22 PM",
+      "link": "https://www.tradingview.com/news/macenews:ee4ef7d07094b:0-fed-gov-waller-frankfurt-inflation-will-largely-be-determined-by-the-length-of-this-conflict-prepared-to-be-patient-in-holding-policy-steady/"
+    },
+    {
+      "title": "Dollar near six-week high amid Iran war jitters",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-22T14:17:02+00:00",
+      "timeDisplay": "2:17 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z0EE:0-dollar-near-six-week-high-amid-iran-war-jitters/"
+    },
+    {
+      "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: LONG-RUN INFLATION EXPECTATIONS UP NOTABLY IN MAY AMONG REPUBLICANS, INDEPENDENTS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:05:00+00:00",
+      "timeDisplay": "2:05 PM",
+      "link": "https://www.tradingview.com/news/macenews:e4479b1cf094b:0-more-us-consumer-sentiment-from-u-of-michigan-long-run-inflation-expectations-up-notably-in-may-among-republicans-independents/"
+    },
+    {
+      "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: SENTIMENT DROPS IN MAY FOR BOTH REPUBLICANS AND INDEPENDENTS, DEMOCRATS RELATIVELY STABLE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:04:00+00:00",
+      "timeDisplay": "2:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:c34a2d45c094b:0-more-us-consumer-sentiment-from-u-of-michigan-sentiment-drops-in-may-for-both-republicans-and-independents-democrats-relatively-stable/"
+    },
+    {
+      "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: CONSUMERS WORRY INFLATION WILL INCREASE, PROLIFERATE BEYOND ENERGY PRICES",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:03:00+00:00",
+      "timeDisplay": "2:03 PM",
+      "link": "https://www.tradingview.com/news/macenews:abe69ecb6094b:0-more-us-consumer-sentiment-from-u-of-michigan-consumers-worry-inflation-will-increase-proliferate-beyond-energy-prices/"
+    },
+    {
+      "title": "MORE US CONSUMER SENTIMENT FROM U. OF MICHIGAN: COST OF LIVING IS 1ST ORDER CONCERN AS SENTIMENT DROPS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:02:00+00:00",
+      "timeDisplay": "2:02 PM",
+      "link": "https://www.tradingview.com/news/macenews:16bb7d2d5094b:0-more-us-consumer-sentiment-from-u-of-michigan-cost-of-living-is-1st-order-concern-as-sentiment-drops/"
+    },
+    {
+      "title": "CORRECT: US CONSUMER 5-YEAR INFLATION EXPECTATIONS 3.9% IN MAY FINAL REPORT VS. 3.4% PRELIM, 3.5% IN APRIL (VS. 3.4% MARKETS EXPECTED FOR MAY FINAL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:406199089094b:0-correct-us-consumer-5-year-inflation-expectations-3-9-in-may-final-report-vs-3-4-prelim-3-5-in-april-vs-3-4-markets-expected-for-may-final/"
+    },
+    {
+      "title": "US CONFERENCE BOARD LEADING INDICATOR INDEX +0.8% IN OCT 2025-APR 2026 VS +0.5% IN APR 2025-OCT 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:0fcf3ffef094b:0-us-conference-board-leading-indicator-index-0-8-in-oct-2025-apr-2026-vs-0-5-in-apr-2025-oct-2025/"
+    },
+    {
+      "title": "US CONSUMER 1-YEAR INFLATION EXPECTATIONS 4.8% IN MAY FINAL REPORT VS. 4.5% PRELIMINARY, 4.7% IN APRIL FINAL (VS. 4.5% MARKETS EXPECTED FOR MAY FINAL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:4b9ab80d4094b:0-us-consumer-1-year-inflation-expectations-4-8-in-may-final-report-vs-4-5-preliminary-4-7-in-april-final-vs-4-5-markets-expected-for-may-final/"
+    },
+    {
+      "title": "US CONFERENCE BOARD APR LEADING INDICATOR INDEX +0.1% (-0.3% EXPECTED) VS -0.6% IN MARCH AND +0.3% IN FEBRUARY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:11f5dae54094b:0-us-conference-board-apr-leading-indicator-index-0-1-0-3-expected-vs-0-6-in-march-and-0-3-in-february/"
+    },
+    {
+      "title": "US CONSUMER SENTIMENT CURRENT CONDITIONS INDEX 45.8 IN MAY FINAL REPORT VS. 47.8 PRELIMINARY, 52.5 IN APRIL FINAL",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:d11caf2d6094b:0-us-consumer-sentiment-current-conditions-index-45-8-in-may-final-report-vs-47-8-preliminary-52-5-in-april-final/"
+    },
+    {
+      "title": "US CONSUMER SENTIMENT EXPECTATIONS INDEX 44.1 IN MAY FINAL REPORT VS. 48.5 PRELIMINARY, 48.1 IN APRIL FINAL",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:6a2cff7ef094b:0-us-consumer-sentiment-expectations-index-44-1-in-may-final-report-vs-48-5-preliminary-48-1-in-april-final/"
+    },
+    {
+      "title": "US CONSUMER SENTIMENT INDEX 44.8 IN MAY FINAL REPORT VS. 48.2 PRELIMINARY, 49.8 IN APRIL FINAL (VS. 48.2 MARKETS EXPECTED FOR MAY FINAL)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:c67230830094b:0-us-consumer-sentiment-index-44-8-in-may-final-report-vs-48-2-preliminary-49-8-in-april-final-vs-48-2-markets-expected-for-may-final/"
+    },
+    {
+      "title": "Space X IPO: 'Bad news' for tech stocks but what about Bitcoin?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T13:54:47+00:00",
+      "timeDisplay": "1:54 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:17305ea7b094b:0-space-x-ipo-bad-news-for-tech-stocks-but-what-about-bitcoin/"
+    },
     {
       "title": "NY Engelhard Gold Prices - May 22",
       "source": "dow-jones",
@@ -85,6 +309,14 @@
       "timestamp": "2026-05-22T13:11:58+00:00",
       "timeDisplay": "1:11 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z0FQ:0-yields-down-after-latest-iran-peace-talk-developments/"
+    },
+    {
+      "title": "Is Bitcoin Price Setting Up for a $90,000 Rally in June?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T13:11:09+00:00",
+      "timeDisplay": "1:11 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:81603fefa094b:0-is-bitcoin-price-setting-up-for-a-90-000-rally-in-june/"
     },
     {
       "title": "Gold price drops to Rs 1.64 lakh/10gm as Iran talks temper market anxiety",
@@ -148,15 +380,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-22T11:51:00+00:00",
       "timeDisplay": "11:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260522004199:0/"
-    },
-    {
-      "title": "Dollar nears six-week high; mixed signals on US-Iran deal feed uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T11:47:12+00:00",
-      "timeDisplay": "11:47 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Z0PA:0-dollar-nears-six-week-high-mixed-signals-on-us-iran-deal-feed-uncertainty/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260522004200:0/"
     },
     {
       "title": "Kevin Warsh Will Be Sworn-In As Fed Chair Today \u2014 But The Bond Markets Aren't Giving Him A Grand Welcome",
@@ -183,12 +407,20 @@
       "link": "https://www.tradingview.com/news/newsbtc:d708dc70e094b:0-hype-is-up-130-in-2026-but-this-top-analyst-sees-a-dangerous-setup-forming-around-60/"
     },
     {
-      "title": "Dollar Remains Strong on U.S. Data, Safe-Haven Demand \u2014 Market Talk",
-      "source": "dow-jones",
+      "title": "Geopolitical Risk Rumbles Crypto: Binance Faces Fresh Sanctions Allegations",
+      "source": "cryptoprowl",
       "color": "#00e5ff",
-      "timestamp": "2026-05-22T10:54:00+00:00",
-      "timeDisplay": "10:54 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260522003688:0/"
+      "timestamp": "2026-05-22T10:40:00+00:00",
+      "timeDisplay": "10:40 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:f82d33c26094b:0-geopolitical-risk-rumbles-crypto-binance-faces-fresh-sanctions-allegations/"
+    },
+    {
+      "title": "Billionaire Mark Cuban Sells Bitcoin As \u2018Narrative Disappoints\u2019",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T09:57:00+00:00",
+      "timeDisplay": "9:57 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:c6fd8a721094b:0-billionaire-mark-cuban-sells-bitcoin-as-narrative-disappoints/"
     },
     {
       "title": "Trump Media Moves To Sell Bitcoin As Losses Reach $455 Million",
@@ -213,14 +445,6 @@
       "timestamp": "2026-05-22T09:32:03+00:00",
       "timeDisplay": "9:32 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:d22007d77094b:0-verus-bridge-exploiter-returns-8-5m-after-bounty-offer/"
-    },
-    {
-      "title": "Dollar Could Rise if Fed's Waller Hints at Rate Rises \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T09:28:00+00:00",
-      "timeDisplay": "9:28 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260522002992:0/"
     },
     {
       "title": "Cathie Wood\u2019s Ark Invest Loads Up On Bullish Stock ",
@@ -279,14 +503,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260522002405:0/"
     },
     {
-      "title": "Forex market today: Dollar steady, pound weakens after UK data",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T07:40:52+00:00",
-      "timeDisplay": "7:40 AM",
-      "link": "https://www.tradingview.com/news/invezz:46b6b3c42094b:0-forex-market-today-dollar-steady-pound-weakens-after-uk-data/"
-    },
-    {
       "title": "Oil Climbs 2% on Skepticism Over U.S.-Iran Negotiations \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -303,36 +519,12 @@
       "link": "https://www.tradingview.com/news/coinpedia:43fc1e1bf094b:0-bitcoin-etfs-see-1-63b-outflows-as-blackrock-leads-selling-pressure/"
     },
     {
-      "title": "Bitcoin Falls as Investors Weigh Conflicting Iran War Headlines \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T07:28:00+00:00",
-      "timeDisplay": "7:28 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260522002300:0/"
-    },
-    {
-      "title": "Dollar holds near six-week high; mixed messages on US-Iran deal feed uncertainty",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T07:22:31+00:00",
-      "timeDisplay": "7:22 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N41Z0DI:0-dollar-holds-near-six-week-high-mixed-messages-on-us-iran-deal-feed-uncertainty/"
-    },
-    {
       "title": "$725 Million in Ethereum (ETH) Just Left Whale Wallets: The Timing Is Suspicious",
       "source": "beincrypto",
       "color": "#00e5ff",
       "timestamp": "2026-05-22T07:00:35+00:00",
       "timeDisplay": "7:00 AM",
       "link": "https://www.tradingview.com/news/beincrypto:95cfbd8ff094b:0-725-million-in-ethereum-eth-just-left-whale-wallets-the-timing-is-suspicious/"
-    },
-    {
-      "title": "New Bitcoin Lows? Analysts Say Chances Are \u2018Extremely Slim\u2019",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T07:00:22+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:14132fedf094b:0-new-bitcoin-lows-analysts-say-chances-are-extremely-slim/"
     },
     {
       "title": "Ethereum Sentiment Drops Sharply as ETH Price Holds Key Support\u2014Will a Major Move Follow?",
@@ -351,68 +543,12 @@
       "link": "https://www.tradingview.com/news/macenews:4877087a1094b:0-friday-sunday-white-house-schedule-president-trump-attends-the-swearing-in-of-kevin-warsh-as-chairman-of-the-federal-reserve-11-00a-et/"
     },
     {
-      "title": "Trump Media\u2019s Bitcoin Stash Shrinks Again as 2,650 BTC Lands on Crypto.com",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T05:59:01+00:00",
-      "timeDisplay": "5:59 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:79e83742e094b:0-trump-media-s-bitcoin-stash-shrinks-again-as-2-650-btc-lands-on-crypto-com/"
-    },
-    {
-      "title": "Coinbase premium hits monthly low as institutional selling pressure mounts",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T05:46:24+00:00",
-      "timeDisplay": "5:46 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:0a5254244094b:0-coinbase-premium-hits-monthly-low-as-institutional-selling-pressure-mounts/"
-    },
-    {
-      "title": "Bitcoin Pizza Day 2026 Arrived Over $300 Million Lighter Than Last Year",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T05:44:35+00:00",
-      "timeDisplay": "5:44 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:958f2b961094b:0-bitcoin-pizza-day-2026-arrived-over-300-million-lighter-than-last-year/"
-    },
-    {
-      "title": "Dollar perched near six-week top on uncertainty over US-Iran deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T05:34:13+00:00",
-      "timeDisplay": "5:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z04O:0-dollar-perched-near-six-week-top-on-uncertainty-over-us-iran-deal/"
-    },
-    {
-      "title": "Dollar holds near six-week high as US data and Iran doubts lift demand",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T04:56:00+00:00",
-      "timeDisplay": "4:56 AM",
-      "link": "https://www.tradingview.com/news/invezz:d5820cba5094b:0-dollar-holds-near-six-week-high-as-us-data-and-iran-doubts-lift-demand/"
-    },
-    {
-      "title": "US lawmakers renew strategic Bitcoin reserve push with ARMA bill",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T04:02:37+00:00",
-      "timeDisplay": "4:02 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:78468c628094b:0-us-lawmakers-renew-strategic-bitcoin-reserve-push-with-arma-bill/"
-    },
-    {
       "title": "5 crypto firms wind down this week amid ongoing market slump",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-05-22T03:59:57+00:00",
       "timeDisplay": "3:59 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:8b7e210a2094b:0-5-crypto-firms-wind-down-this-week-amid-ongoing-market-slump/"
-    },
-    {
-      "title": "China's yuan weakens slightly against dollar as US-Iran talk in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T03:48:29+00:00",
-      "timeDisplay": "3:48 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Z06I:0-china-s-yuan-weakens-slightly-against-dollar-as-us-iran-talk-in-focus/"
     },
     {
       "title": "Ethereum Price Eyes Breakout Move, Traders Watch Key Resistance Closely",
@@ -447,28 +583,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:ffff96999094b:0/"
     },
     {
-      "title": "Dollar Firms Amid Ongoing US-Iran Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-22T01:47:32+00:00",
-      "timeDisplay": "1:47 AM",
-      "link": "https://www.tradingview.com/news/te_news:552913:0-dollar-firms-amid-ongoing-us-iran-uncertainty/"
-    },
-    {
       "title": "Stocks rise, dollar at six-week high as focus remains on US-Iran talks",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-22T01:33:06+00:00",
       "timeDisplay": "1:33 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Z039:0-stocks-rise-dollar-at-six-week-high-as-focus-remains-on-us-iran-talks/"
-    },
-    {
-      "title": "Dollar perched near six-week high on uncertainty over US-Iran deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-22T01:07:06+00:00",
-      "timeDisplay": "1:07 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z00M:0-dollar-perched-near-six-week-high-on-uncertainty-over-us-iran-deal/"
     },
     {
       "title": "Oil Rises Amid High Middle East Tensions \u2014 Market Talk",
@@ -525,126 +645,6 @@
       "timestamp": "2026-05-21T22:02:48+00:00",
       "timeDisplay": "10:02 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:462d8d8ee094b:0-harvard-dumps-entire-eth-position-after-just-one-quarter/"
-    },
-    {
-      "title": "U.S. Dollar Ends Roughly Flat As Optimism On U.S.-Iran Peace Deal Increases",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T21:15:02+00:00",
-      "timeDisplay": "9:15 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:a92c73763b4ff:0-u-s-dollar-ends-roughly-flat-as-optimism-on-u-s-iran-peace-deal-increases/"
-    },
-    {
-      "title": "Yields slide on Iran deal progress, economic data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T19:48:56+00:00",
-      "timeDisplay": "7:48 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y0NA:0-yields-slide-on-iran-deal-progress-economic-data/"
-    },
-    {
-      "title": "Oil Futures Lose Ground on Hopes for U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T19:43:00+00:00",
-      "timeDisplay": "7:43 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521009856:0/"
-    },
-    {
-      "title": "Dollar Supported by Middle East Uncertainty",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T19:38:27+00:00",
-      "timeDisplay": "7:38 PM",
-      "link": "https://www.tradingview.com/news/barchart:450a3f3b0094b:0-dollar-supported-by-middle-east-uncertainty/"
-    },
-    {
-      "title": "Crude Oil Prices Tumble on Hopes for Iran Peace Progress",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T19:19:25+00:00",
-      "timeDisplay": "7:19 PM",
-      "link": "https://www.tradingview.com/news/barchart:5ac6d51ef094b:0-crude-oil-prices-tumble-on-hopes-for-iran-peace-progress/"
-    },
-    {
-      "title": "Dollar whipsawed by conflicting Iran deal signals",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T19:18:30+00:00",
-      "timeDisplay": "7:18 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y12E:0-dollar-whipsawed-by-conflicting-iran-deal-signals/"
-    },
-    {
-      "title": "Mark Cuban Claims Bitcoin Failed As War Hedge \u2013 But Data Shows BTC Outperforming Gold",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T18:54:23+00:00",
-      "timeDisplay": "6:54 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:35b3c8de2094b:0/"
-    },
-    {
-      "title": "Former EF developer Dankrad Feist suggests $1 billion raise to form new Ethereum advocacy group",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T18:27:15+00:00",
-      "timeDisplay": "6:27 PM",
-      "link": "https://www.tradingview.com/news/the_block:b5b07550d094b:0-former-ef-developer-dankrad-feist-suggests-1-billion-raise-to-form-new-ethereum-advocacy-group/"
-    },
-    {
-      "title": "Gold Higher For Second Consecutive Day \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T18:15:00+00:00",
-      "timeDisplay": "6:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521009443:0/"
-    },
-    {
-      "title": "Crude Oil Prices Fall",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T18:06:01+00:00",
-      "timeDisplay": "6:06 PM",
-      "link": "https://www.tradingview.com/news/te_news:552850:0-crude-oil-prices-fall/"
-    },
-    {
-      "title": "Fed Officials Remain Wary of Changing Funds Rate, But Inflation Concerns Paramount",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T17:47:00+00:00",
-      "timeDisplay": "5:47 PM",
-      "link": "https://www.tradingview.com/news/macenews:457e3979b094b:0-fed-officials-remain-wary-of-changing-funds-rate-but-inflation-concerns-paramount/"
-    },
-    {
-      "title": "Prolonged War Putting Energy Normalcy Further Away \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T17:40:00+00:00",
-      "timeDisplay": "5:40 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260521009245:0/"
-    },
-    {
-      "title": "BBG: US SENATE TO LEAVE CAPITOL HILL FOR MEMORIAL DAY RECESS WITHOUT VOTING ON BUDGET, RECONCILIATION PACKAGE DESPITE PRES TRUMP'S JUNE DEADLINE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T17:37:00+00:00",
-      "timeDisplay": "5:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:e6caed3ef094b:0-bbg-us-senate-to-leave-capitol-hill-for-memorial-day-recess-without-voting-on-budget-reconciliation-package-despite-pres-trump-s-june-deadline/"
-    },
-    {
-      "title": "PRES TRUMP Q&A: 'I INHERITED THIS MESS' ON AFFORDABILITY,; REPEATS, WILL BE TRAGIC IF SCOTUS RULES IN FAVOR OF  BIRTHRIGHT CITIZENSHIP",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:34:00+00:00",
-      "timeDisplay": "4:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:943529277094b:0-pres-trump-q-a-i-inherited-this-mess-on-affordability-repeats-will-be-tragic-if-scotus-rules-in-favor-of-birthright-citizenship/"
-    },
-    {
-      "title": "RICHMOND FED'S BARKIN/RALEIGH:  MAY \u2018LOOK PAST\u2019 OIL SPIKE IF L-TERM INFL EXPECTATIONS ANCHORED;  ECON \u2018REMAINS REMARKABLY RESILIENT,\u2019 INFL WORSE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:26:00+00:00",
-      "timeDisplay": "4:26 PM",
-      "link": "https://www.tradingview.com/news/macenews:691652f06094b:0-richmond-fed-s-barkin-raleigh-may-look-past-oil-spike-if-l-term-infl-expectations-anchored-econ-remains-remarkably-resilient-infl-worse/"
     }
   ]
 }

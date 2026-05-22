@@ -1,45 +1,104 @@
 {
-  "lastUpdated": "2026-05-22T08:43:57.965830+00:00",
-  "lastUpdatedDisplay": "May 22, 2026 \u2014 08:43 AM UTC",
+  "lastUpdated": "2026-05-22T11:35:30.702534+00:00",
+  "lastUpdatedDisplay": "May 22, 2026 \u2014 11:35 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with dollar at six-week highs amid US-Iran deal uncertainty, while oil rises on Middle East tensions and gold faces weekly losses. Bitcoin and crypto markets continue consolidating near recent lows with institutional selling pressure and whale movements suggesting ongoing weakness.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar strength and Iran uncertainty support reflation elements, but crypto weakness and mixed commodity performance (oil up, gold down) suggest underlying risk appetite is more fragmented than pure reflation would indicate.",
-    "thresholdWatches": [],
+    "macroSummary": "Dollar strength dominates across multiple sources, reaching six-week highs amid US-Iran deal uncertainty and potential Fed hawkishness from incoming Chair Warsh. Risk assets show mixed signals with equity futures rising on quantum computing optimism while crypto faces institutional selling pressure and Bitcoin ETF outflows of $1.63B.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Strong dollar surge toward DXY 100 threshold while institutional crypto selling and bond market stability contradict the reflation narrative's typical asset flow patterns.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar at six-week highs with multiple sources citing continued strength - approaching regime flip threshold"
+      },
+      {
+        "indicator": "Oil",
+        "level": "$115",
+        "signal": "Oil climbing 2% on US-Iran negotiation skepticism but still below stagflation danger zone"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Dollar at six-week highs amid US-Iran uncertainty, approaching DXY 100 threshold zone",
+        "signal": "Dollar strength reaching six-week highs approaches DXY 100 regime invalidation threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil climbing 2% on skepticism over US-Iran negotiations supports geopolitical risk premium",
+        "signal": "Bitcoin ETFs see $1.63B outflows with institutional selling pressure mounting",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "10Y yields holding steady amid uncertainty rather than rising with reflation expectations",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil rising 2% on Iran deal skepticism supports geopolitical premium embedded in regime",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold headed for weekly loss despite Middle East tensions contradicts typical safe haven flows",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin institutional selling pressure and Coinbase premium at monthly lows suggests risk-off undercurrents",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Kevin Warsh Fed Chair swearing-in this weekend could shift monetary policy expectations",
+        "signal": "Equity futures climbing on quantum computing theme despite broader uncertainty",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely as six-week highs approach the 100 regime flip threshold",
-      "BMNR ladder strategy may face headwinds from continued institutional crypto selling pressure",
-      "Watch oil-gold divergence as potential signal of stagflationary vs reflationary dynamics"
+      "Monitor DXY closely - dollar strength nearing 100 level that would invalidate current regime assumptions",
+      "BMNR ladder at risk from crypto institutional selling - consider tightening strikes or reducing exposure",
+      "Prepare for potential regime shift if dollar breaks 100 with continued crypto weakness"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar Remains Strong on U.S. Data, Safe-Haven Demand \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T10:54:00+00:00",
+      "timeDisplay": "10:54 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522003688:0/"
+    },
+    {
+      "title": "South Korea May Ban Planned 22% Crypto Tax After Investor Backlash Grows",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T09:43:51+00:00",
+      "timeDisplay": "9:43 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f0f669b1a094b:0-south-korea-may-ban-planned-22-crypto-tax-after-investor-backlash-grows/"
+    },
+    {
+      "title": "Verus bridge exploiter returns $8.5M after bounty offer",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T09:32:03+00:00",
+      "timeDisplay": "9:32 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:d22007d77094b:0-verus-bridge-exploiter-returns-8-5m-after-bounty-offer/"
+    },
+    {
+      "title": "Dollar Could Rise if Fed's Waller Hints at Rate Rises \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T09:28:00+00:00",
+      "timeDisplay": "9:28 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260522002992:0/"
+    },
+    {
+      "title": "Saylor Says Bitcoin Could Triple S&P 500 Returns: \u2018We Expect 30%\u2019",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T09:00:17+00:00",
+      "timeDisplay": "9:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:92650c586094b:0-saylor-says-bitcoin-could-triple-s-p-500-returns-we-expect-30/"
+    },
+    {
+      "title": "Nasdaq, S&P 500 Futures Rise As Quantum Stocks Stay Red-Hot, All Eyes On Warsh Fed Swearing-In: Why IBM, RGTI, QBTS, INFQ, AMD, RKLB Are In Focus",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T08:49:43+00:00",
+      "timeDisplay": "8:49 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:146e4b0ba094b:0/"
+    },
     {
       "title": "Verus bridge exploiter returns 4,052 ETH, retains $2.8 million bounty: onchain analyst",
       "source": "the_block",
@@ -55,6 +114,14 @@
       "timestamp": "2026-05-22T08:12:28+00:00",
       "timeDisplay": "8:12 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:1af9fdcd3094b:0-bitcoin-price-record-90-day-uptrend-resembles-bull-market-rally-new-analysis/"
+    },
+    {
+      "title": "Michael Saylor Says Bitcoin Will Outperform the S&P 500 Over Time",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:55:56+00:00",
+      "timeDisplay": "7:55 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:bfd27856a094b:0-michael-saylor-says-bitcoin-will-outperform-the-s-p-500-over-time/"
     },
     {
       "title": "Gold Headed for Weekly Loss on U.S.-Iran Uncertainty, Rate Concerns \u2014 Market Talk",
@@ -79,6 +146,14 @@
       "timestamp": "2026-05-22T07:40:00+00:00",
       "timeDisplay": "7:40 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260522002359:0/"
+    },
+    {
+      "title": "Bitcoin ETFs See $1.63B Outflows as BlackRock Leads Selling Pressure",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T07:36:36+00:00",
+      "timeDisplay": "7:36 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:43fc1e1bf094b:0-bitcoin-etfs-see-1-63b-outflows-as-blackrock-leads-selling-pressure/"
     },
     {
       "title": "Bitcoin Falls as Investors Weigh Conflicting Iran War Headlines \u2014 Market Talk",
@@ -233,6 +308,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Z01B:0-commodities-intraday-targets-key-levels/"
     },
     {
+      "title": "Nasdaq, S&P 500, Dow Futures Climb As Trump's $2B Quantum Computing Bet Outweighs Iran Jitters: RKLB, IBM, RGTI, NIO In Focus",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-22T02:01:48+00:00",
+      "timeDisplay": "2:01 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:ffff96999094b:0/"
+    },
+    {
       "title": "Dollar Firms Amid Ongoing US-Iran Uncertainty",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -361,22 +444,6 @@
       "link": "https://www.tradingview.com/news/dpa_afx:a92c73763b4ff:0-u-s-dollar-ends-roughly-flat-as-optimism-on-u-s-iran-peace-deal-increases/"
     },
     {
-      "title": "Chance of new Bitcoin lows \u2018extremely slim\u2019 as long-term holders\u2019 supply tops 15M BTC",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T20:39:54+00:00",
-      "timeDisplay": "8:39 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:de8525048094b:0-chance-of-new-bitcoin-lows-extremely-slim-as-long-term-holders-supply-tops-15m-btc/"
-    },
-    {
-      "title": "If You\u2019re Looking To Bitcoin Above $90,000, This Analyst Says To Watch This Bearish OB Level",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T20:30:52+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:64ae4933d094b:0-if-you-re-looking-to-bitcoin-above-90-000-this-analyst-says-to-watch-this-bearish-ob-level/"
-    },
-    {
       "title": "Yields slide on Iran deal progress, economic data",
       "source": "reuters",
       "color": "#ff6d00",
@@ -415,14 +482,6 @@
       "timestamp": "2026-05-21T19:18:30+00:00",
       "timeDisplay": "7:18 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N41Y12E:0-dollar-whipsawed-by-conflicting-iran-deal-signals/"
-    },
-    {
-      "title": "Bitcoin vs. Ethereum: Why BTC is Winning the Crypto Market in May 2026",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T19:00:00+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/zacks:c51a23d6f094b:0-bitcoin-vs-ethereum-why-btc-is-winning-the-crypto-market-in-may-2026/"
     },
     {
       "title": "Mark Cuban Claims Bitcoin Failed As War Hedge \u2013 But Data Shows BTC Outperforming Gold",
@@ -487,14 +546,6 @@
       "timestamp": "2026-05-21T16:34:00+00:00",
       "timeDisplay": "4:34 PM",
       "link": "https://www.tradingview.com/news/macenews:943529277094b:0-pres-trump-q-a-i-inherited-this-mess-on-affordability-repeats-will-be-tragic-if-scotus-rules-in-favor-of-birthright-citizenship/"
-    },
-    {
-      "title": "Trump Says US Will Get Highly Enriched Uranium From Iran \u2014 'We Don't Need It, We Don't Want It... But We're Not Going To Let Them Have It'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T16:33:24+00:00",
-      "timeDisplay": "4:33 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:044d8aef3094b:0/"
     },
     {
       "title": "RICHMOND FED'S BARKIN/RALEIGH:  MAY \u2018LOOK PAST\u2019 OIL SPIKE IF L-TERM INFL EXPECTATIONS ANCHORED;  ECON \u2018REMAINS REMARKABLY RESILIENT,\u2019 INFL WORSE",
@@ -599,46 +650,6 @@
       "timestamp": "2026-05-21T15:31:11+00:00",
       "timeDisplay": "3:31 PM",
       "link": "https://www.tradingview.com/news/barchart:715e9eeab094b:0-crude-oil-prices-jump-on-doubts-the-strait-of-hormuz-will-reopen/"
-    },
-    {
-      "title": "US KANSAS CITY FED MANUFACTURING PRICES PAID INDEX 63 IN MAY VS. 63 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:06:00+00:00",
-      "timeDisplay": "3:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:e53206153094b:0-us-kansas-city-fed-manufacturing-prices-paid-index-63-in-may-vs-63-in-april/"
-    },
-    {
-      "title": "Argentina's road back to MSCI is no straight line",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-21T15:05:56+00:00",
-      "timeDisplay": "3:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N41Y1KV:0-argentina-s-road-back-to-msci-is-no-straight-line/"
-    },
-    {
-      "title": "US KANSAS CITY FED MANUFACTURING EMPLOYMENT INDEX -4 IN MAY VS. 2 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:05:00+00:00",
-      "timeDisplay": "3:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:0843dcbe7094b:0-us-kansas-city-fed-manufacturing-employment-index-4-in-may-vs-2-in-april/"
-    },
-    {
-      "title": "BitMine Tom Lee Explains Why Ethereum Price Falls When Oil Prices Surge",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:04:38+00:00",
-      "timeDisplay": "3:04 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:2a7b3b6f7094b:0-bitmine-tom-lee-explains-why-ethereum-price-falls-when-oil-prices-surge/"
-    },
-    {
-      "title": "US KANSAS CITY FED MANUFACTURING NEW ORDERS INDEX 13 IN MAY VS. 12 IN APRIL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-21T15:04:00+00:00",
-      "timeDisplay": "3:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:3113133ae094b:0-us-kansas-city-fed-manufacturing-new-orders-index-13-in-may-vs-12-in-april/"
     }
   ]
 }

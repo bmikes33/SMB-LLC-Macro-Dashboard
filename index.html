@@ -919,6 +919,9 @@ function App() {
                   </div>
                 )}
               </div>
+            ) : activeReport && activeReport.type === "regime-hmm" ? (
+              /* ============ REGIME-HMM REPORT VIEW ============ */
+              <RegimeHmmView r={activeReport} />
             ) : (
               /* ============ TA REPORT VIEW (existing) ============ */
               <React.Fragment>
@@ -1339,6 +1342,109 @@ function App() {
 }
 // REPORTS FEED COMPONENT — reads from reports/index.json
 // Grouped by ticker, newest-first, all collapsed by default, search filter.
+function RegimeHmmView({ r }) {
+  const VOLC = { calm:"#00e676", moderate:"#ffab00", elevated:"#ff6d00", extreme:"#ff3d57" };
+  const STATES = ["calm","moderate","elevated","extreme"];
+  const rc = r.regimeColor || "#00e5ff";
+  const post = r.currentPosterior || {};
+  const fc = r.forecast || {};
+  const trust = r.forecastTrust || {};
+  const cal = (r.calibration && r.calibration["20d"]) || null;
+  const lbl = (t) => <div style={{fontFamily:"var(--font-mono)",fontSize:9,color:"var(--text-muted)",letterSpacing:1.5,textTransform:"uppercase"}}>{t}</div>;
+  const pct = (x) => (x===undefined||x===null) ? "—" : Math.round(x*100)+"%";
+  return (
+    <div className="analysis-scroll" style={{overflowY:"auto"}}>
+      {/* HEADER */}
+      <div style={{padding:"16px 20px",background:"var(--bg-secondary)",borderBottom:"2px solid "+rc}}>
+        <div style={{display:"flex",alignItems:"center",gap:20,flexWrap:"wrap"}}>
+          <div>
+            {lbl("Regime Engine · HMM cross-check")}
+            <div style={{fontFamily:"var(--font-mono)",fontSize:24,fontWeight:800,color:rc,letterSpacing:1,textTransform:"uppercase",marginTop:4}}>{r.currentRegime5 || "—"}</div>
+          </div>
+          <div>
+            {lbl("Vol State")}
+            <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:VOLC[r.currentVolState]||"#8b9ab5",textTransform:"uppercase",marginTop:6}}>{r.currentVolState||"—"}</div>
+          </div>
+          <div>
+            {lbl("GARCH Vol (ann)")}
+            <div style={{fontFamily:"var(--font-mono)",fontSize:13,fontWeight:700,color:"var(--purple)",marginTop:6}}>{r.garchVolAnn!==undefined?r.garchVolAnn+"%":"—"}</div>
+          </div>
+          <div style={{flex:1,minWidth:160}}>
+            {lbl("Rates")}
+            <div style={{fontFamily:"var(--font-mono)",fontSize:11,fontWeight:700,color:"var(--text-secondary)",marginTop:6}}>
+              {r.y10!==undefined&&r.y10!==null?("10y "+r.y10+"%"):"10y —"} · {r.y10ChgBp!==undefined?((r.y10ChgBp>=0?"+":"")+r.y10ChgBp+"bp/20d"):""} · {r.s2s10Bp!==undefined&&r.s2s10Bp!==null?("2s10s "+(r.s2s10Bp>=0?"+":"")+r.s2s10Bp+"bp"):""}
+            </div>
+          </div>
+          <a href={"reports/"+r.file} target="_blank" rel="noopener noreferrer" style={{fontFamily:"var(--font-mono)",fontSize:9,fontWeight:700,letterSpacing:1,textTransform:"uppercase",color:rc,textDecoration:"none",padding:"5px 10px",border:"1px solid "+rc,borderRadius:3}}>Open Full Report →</a>
+        </div>
+      </div>
+      {/* CURRENT POSTERIOR BARS */}
+      <div style={{padding:"14px 20px"}}>
+        <div className="analysis-title" style={{marginBottom:8}}>Current State Posterior</div>
+        {STATES.map(s => (
+          <div key={s} style={{display:"flex",alignItems:"center",gap:10,marginBottom:5}}>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,color:VOLC[s],width:80,textTransform:"uppercase"}}>{s}</span>
+            <div style={{flex:1,height:14,background:"var(--bg-tertiary)",borderRadius:3,overflow:"hidden"}}>
+              <div style={{height:"100%",width:((post[s]||0)*100)+"%",background:VOLC[s],opacity:.7}} />
+            </div>
+            <span style={{fontFamily:"var(--font-mono)",fontSize:10,color:"var(--text-secondary)",width:40,textAlign:"right"}}>{pct(post[s])}</span>
+          </div>
+        ))}
+      </div>
+      {/* FORWARD FORECAST */}
+      <div style={{padding:"4px 20px 14px"}}>
+        <div className="analysis-title" style={{marginBottom:6}}>Forward-State Forecast</div>
+        <div style={{fontSize:11,color:"var(--text-muted)",fontStyle:"italic",marginBottom:8}}>Calibrated to empirical history ≤20d. 60d shown for context only.</div>
+        <table style={{width:"100%",borderCollapse:"collapse",fontFamily:"var(--font-mono)",fontSize:11}}>
+          <thead><tr>
+            <th style={{textAlign:"left",color:"var(--text-muted)",padding:"4px 6px",borderBottom:"1px solid var(--border)"}}>Horizon</th>
+            {STATES.map(s => <th key={s} style={{textAlign:"right",color:VOLC[s],padding:"4px 6px",borderBottom:"1px solid var(--border)",textTransform:"uppercase"}}>{s}</th>)}
+            <th style={{textAlign:"right",color:"var(--text-muted)",padding:"4px 6px",borderBottom:"1px solid var(--border)"}}>Trust</th>
+          </tr></thead>
+          <tbody>
+            {["5d","20d","60d"].map(h => {
+              const low = (trust[h]||"").indexOf("LOW")===0;
+              return (
+                <tr key={h} style={{opacity:low?.55:1}}>
+                  <td style={{padding:"4px 6px",borderBottom:"1px solid var(--border)",color:"var(--text-secondary)"}}>{h}</td>
+                  {STATES.map(s => <td key={s} style={{textAlign:"right",padding:"4px 6px",borderBottom:"1px solid var(--border)",color:"var(--text-primary)"}}>{fc[h]?pct(fc[h][s]):"—"}</td>)}
+                  <td style={{textAlign:"right",padding:"4px 6px",borderBottom:"1px solid var(--border)",color:low?"var(--amber)":"var(--green)"}}>{low?"LOW":(trust[h]||"—")}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {cal && cal.empirical && (
+          <div style={{fontSize:10,color:"var(--text-muted)",marginTop:8}}>
+            20d calibration — model {pct(cal.model&&cal.model.calm)} calm vs empirical {pct(cal.empirical.calm)} calm{cal.nDays?(" (n="+cal.nDays+" days)"):""}
+          </div>
+        )}
+      </div>
+      {/* CRISIS VERDICT */}
+      {r.crisisVerdict && (
+        <div style={{padding:"4px 20px 14px"}}>
+          <div className="analysis-title" style={{marginBottom:6}}>Crisis Verdict <span style={{fontWeight:400,color:"var(--text-muted)",fontSize:10}}>(elevated+extreme share)</span></div>
+          <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
+            {Object.keys(r.crisisVerdict).map(k => {
+              const v = r.crisisVerdict[k]; const ok = v>0.5;
+              return <span key={k} style={{fontFamily:"var(--font-mono)",fontSize:10,fontWeight:700,padding:"3px 8px",borderRadius:3,background:(ok?"#00e676":"#ff3d57")+"20",color:ok?"#00e676":"#ff3d57"}}>{k} {Math.round(v*100)}%</span>;
+            })}
+          </div>
+        </div>
+      )}
+      {/* CAVEATS */}
+      {r.caveats && r.caveats.length>0 && (
+        <div style={{padding:"4px 20px 20px"}}>
+          <div className="analysis-title" style={{marginBottom:6}}>Caveats</div>
+          <ul style={{margin:0,paddingLeft:18,fontSize:11,color:"var(--text-secondary)",lineHeight:1.7}}>
+            {r.caveats.map((c,i) => <li key={i}>{c}</li>)}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Reports({ onSelect, activeFile }) {
   const [reports, setReports] = React.useState(null);
   const [error, setError] = React.useState(null);
@@ -1462,8 +1568,8 @@ function Reports({ onSelect, activeFile }) {
               {groupTypes.size > 1 && (
                 <span style={{display:"flex",gap:3,marginLeft:4}}>
                   {Array.from(groupTypes).sort().map(t => {
-                    const c = t === "macro" ? (regimeColors[latest.regime] || "#8b9ab5") : t === "valuation" ? valColor : t === "earnings" ? earnColor : "var(--accent)";
-                    const lbl = t === "macro" ? "M" : t === "valuation" ? "V" : t === "earnings" ? "E" : "T";
+                    const c = t === "macro" ? (regimeColors[latest.regime] || "#8b9ab5") : t === "valuation" ? valColor : t === "earnings" ? earnColor : t === "regime-hmm" ? "#00e5ff" : "var(--accent)";
+                    const lbl = t === "macro" ? "M" : t === "valuation" ? "V" : t === "earnings" ? "E" : t === "regime-hmm" ? "R" : "T";
                     return <span key={t} style={{fontFamily:"var(--font-mono)",fontSize:8,fontWeight:700,color:c,opacity:.7}}>{lbl}</span>;
                   })}
                 </span>
@@ -1477,6 +1583,7 @@ function Reports({ onSelect, activeFile }) {
               const isMacro = r.type === "macro";
               const isVal = r.type === "valuation";
               const isEarn = r.type === "earnings";
+              const isRegime = r.type === "regime-hmm";
               const regColor = isMacro ? (regimeColors[r.regime] || r.regimeColor || "#8b9ab5") : null;
               const verdictColor = (v) => {
                 if (!v) return "var(--text-muted)";
@@ -1499,8 +1606,8 @@ function Reports({ onSelect, activeFile }) {
                 return "var(--text-secondary)";
               };
               // Per-row type tag — moved here from group header
-              const typeLabel = isMacro ? "MACRO" : isVal ? "VAL" : isEarn ? "EARN" : "TA";
-              const typeColor = isMacro ? regColor : isVal ? valColor : isEarn ? earnColor : "var(--accent)";
+              const typeLabel = isMacro ? "MACRO" : isVal ? "VAL" : isEarn ? "EARN" : isRegime ? "REGIME" : "TA";
+              const typeColor = isMacro ? regColor : isVal ? valColor : isEarn ? earnColor : isRegime ? (r.regimeColor || "#00e5ff") : "var(--accent)";
               // Build summary text with fallbacks
               let summaryText;
               if (isMacro) summaryText = r.regime;
@@ -1516,7 +1623,8 @@ function Reports({ onSelect, activeFile }) {
                 if (r.verdict) parts.push(r.verdict);
                 if (r.period) parts.push(r.period);
                 summaryText = parts.length ? parts.join(" · ") : "—";
-              } else summaryText = r.bias || "—";
+              } else if (isRegime) summaryText = (r.currentRegime5 || r.currentVolState || "—");
+              else summaryText = r.bias || "—";
               // Upside badge fallback: build from upside.base if upsideBadge missing
               const upsideBadgeText = isVal ? (r.upsideBadge || (r.upside && r.upside.base !== undefined ? ((r.upside.base >= 0 ? "+" : "") + r.upside.base.toFixed(1) + "%") : null)) : null;
               return (

@@ -1,6 +1,274 @@
 {
   "reports": [
     {
+      "type": "regime-hmm",
+      "file": "REGIME_2026-05-24_0407.html",
+      "ticker": "REGIME-HMM",
+      "tvSymbol": null,
+      "date": "2026-05-24T04:07:59-05:00",
+      "dataSpan": [
+        "2016-08-31",
+        "2026-05-22"
+      ],
+      "nObs": 2988,
+      "emissionsUsed": [
+        "spy_ret",
+        "spy_rvol",
+        "hyglqd_chg",
+        "move_z",
+        "vix_term",
+        "dxy_chg"
+      ],
+      "logLik": -17727.0,
+      "currentVolState": "calm",
+      "currentPosterior": {
+        "calm": 0.998,
+        "moderate": 0.002,
+        "elevated": 0.0,
+        "extreme": 0.0
+      },
+      "currentRegime5": "Reflation",
+      "regimeColor": "#00e5ff",
+      "y10": 4.56,
+      "y10ChgBp": 18.0,
+      "s2s10Bp": 43.0,
+      "garchVol1d": 0.68,
+      "garchVolAnn": 10.8,
+      "volShares": {
+        "calm": 0.322,
+        "moderate": 0.328,
+        "elevated": 0.279,
+        "extreme": 0.071
+      },
+      "forecast": {
+        "5d": {
+          "calm": 0.862,
+          "moderate": 0.114,
+          "elevated": 0.021,
+          "extreme": 0.002
+        },
+        "20d": {
+          "calm": 0.609,
+          "moderate": 0.29,
+          "elevated": 0.081,
+          "extreme": 0.021
+        },
+        "60d": {
+          "calm": 0.389,
+          "moderate": 0.355,
+          "elevated": 0.2,
+          "extreme": 0.057
+        }
+      },
+      "forecastTrust": {
+        "5d": "HIGH",
+        "20d": "HIGH",
+        "60d": "LOW (first-order Markov frays; mean-reverts faster than markets)"
+      },
+      "calibration": {
+        "5d": {
+          "model": {
+            "calm": 0.862,
+            "moderate": 0.114,
+            "elevated": 0.021,
+            "extreme": 0.002
+          },
+          "empirical": {
+            "calm": 0.866,
+            "moderate": 0.11,
+            "elevated": 0.021,
+            "extreme": 0.003
+          },
+          "nDays": 957
+        },
+        "20d": {
+          "model": {
+            "calm": 0.609,
+            "moderate": 0.29,
+            "elevated": 0.081,
+            "extreme": 0.021
+          },
+          "empirical": {
+            "calm": 0.591,
+            "moderate": 0.275,
+            "elevated": 0.113,
+            "extreme": 0.021
+          },
+          "nDays": 943
+        },
+        "60d": {
+          "model": {
+            "calm": 0.389,
+            "moderate": 0.355,
+            "elevated": 0.2,
+            "extreme": 0.057
+          },
+          "empirical": {
+            "calm": 0.481,
+            "moderate": 0.246,
+            "elevated": 0.217,
+            "extreme": 0.055
+          },
+          "nDays": 943
+        }
+      },
+      "transition": [
+        {
+          "from": "calm",
+          "to": {
+            "calm": {
+              "p": 0.973,
+              "n": 935,
+              "thin": false
+            },
+            "moderate": {
+              "p": 0.023,
+              "n": 22,
+              "thin": true
+            },
+            "elevated": {
+              "p": 0.004,
+              "n": 4,
+              "thin": true
+            },
+            "extreme": {
+              "p": 0.0,
+              "n": 0,
+              "thin": false
+            }
+          }
+        },
+        {
+          "from": "moderate",
+          "to": {
+            "calm": {
+              "p": 0.019,
+              "n": 19,
+              "thin": true
+            },
+            "moderate": {
+              "p": 0.966,
+              "n": 947,
+              "thin": false
+            },
+            "elevated": {
+              "p": 0.007,
+              "n": 7,
+              "thin": true
+            },
+            "extreme": {
+              "p": 0.007,
+              "n": 7,
+              "thin": true
+            }
+          }
+        },
+        {
+          "from": "elevated",
+          "to": {
+            "calm": {
+              "p": 0.008,
+              "n": 7,
+              "thin": true
+            },
+            "moderate": {
+              "p": 0.013,
+              "n": 11,
+              "thin": true
+            },
+            "elevated": {
+              "p": 0.97,
+              "n": 810,
+              "thin": false
+            },
+            "extreme": {
+              "p": 0.008,
+              "n": 7,
+              "thin": true
+            }
+          }
+        },
+        {
+          "from": "extreme",
+          "to": {
+            "calm": {
+              "p": 0.0,
+              "n": 0,
+              "thin": false
+            },
+            "moderate": {
+              "p": 0.0,
+              "n": 0,
+              "thin": false
+            },
+            "elevated": {
+              "p": 0.066,
+              "n": 14,
+              "thin": true
+            },
+            "extreme": {
+              "p": 0.934,
+              "n": 197,
+              "thin": false
+            }
+          }
+        }
+      ],
+      "crisisVerdict": {
+        "2018-Q4": 0.9,
+        "2020-COVID": 0.94,
+        "2022-bear": 1.0
+      },
+      "profiles": [
+        {
+          "vol": "calm",
+          "share": 0.322,
+          "spy_ret": 0.09,
+          "spy_rvol": 7.07,
+          "hyglqd_chg": -0.0,
+          "move_z": -0.44,
+          "vix_term": 0.83,
+          "dxy_chg": 0.01
+        },
+        {
+          "vol": "moderate",
+          "share": 0.328,
+          "spy_ret": 0.04,
+          "spy_rvol": 11.25,
+          "hyglqd_chg": 0.05,
+          "move_z": -0.66,
+          "vix_term": 0.89,
+          "dxy_chg": 0.04
+        },
+        {
+          "vol": "elevated",
+          "share": 0.279,
+          "spy_ret": 0.04,
+          "spy_rvol": 17.83,
+          "hyglqd_chg": 0.06,
+          "move_z": 0.96,
+          "vix_term": 0.92,
+          "dxy_chg": 0.06
+        },
+        {
+          "vol": "extreme",
+          "share": 0.071,
+          "spy_ret": -0.15,
+          "spy_rvol": 35.46,
+          "hyglqd_chg": -0.28,
+          "move_z": 1.43,
+          "vix_term": 1.04,
+          "dxy_chg": -0.28
+        }
+      ],
+      "caveats": [
+        "4 states are a volatility ladder, not directional. Risk/flavor come from the mapping layer.",
+        "Transition matrix is descriptive only; do not read it as multi-step truth past ~20 trading days.",
+        "DXY is the weakest-separating emission this cycle.",
+        "Cross-check against discretionary macro-regime-analysis; disagreement is itself signal."
+      ]
+    },
+    {
       "type": "valuation",
       "file": "NBIS_VAL_2026-05-13_0930.html",
       "ticker": "NBIS",

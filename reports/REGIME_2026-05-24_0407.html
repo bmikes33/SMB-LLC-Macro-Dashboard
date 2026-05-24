@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset=utf-8>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=JetBrains+Mono:wght@400;600&display=swap" rel=stylesheet>
+<style>
+body{background:#0a0e17;color:#e2e8f0;font-family:'IBM Plex Sans',sans-serif;margin:0;padding:28px;max-width:1000px}
+h1,h2,.mono,td,th{font-family:'JetBrains Mono',monospace} h1{font-size:20px;color:#00e5ff;margin:0 0 4px}
+.sub{color:#8b9ab5;font-size:12px;margin-bottom:20px}
+.card{background:#0f1420;border:1px solid #1e2a3a;border-radius:8px;padding:18px;margin:14px 0}
+.big{font-size:30px;font-weight:600;color:#00e5ff} .lbl{color:#8b9ab5;font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px} td,th{padding:6px 8px;border-bottom:1px solid #1e2a3a;text-align:right}
+th:first-child,td:first-child{text-align:left} th{color:#8b9ab5;font-weight:600} .trust{color:#ffab00}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px} ul{font-size:12px;color:#8b9ab5;line-height:1.7}
+</style></head><body>
+<h1>SMB LLC — Regime Engine (HMM)</h1>
+<div class=sub>2026-05-24T04:07:59-05:00 · data 2016-08-31 → 2026-05-22 · 2988 obs · emissions: spy_ret, spy_rvol, hyglqd_chg, move_z, vix_term, dxy_chg</div>
+<div class=grid>
+<div class=card><div class=lbl>Mapped Regime</div><div class=big>Reflation</div>
+<div class=mono style='color:#8b9ab5;font-size:12px'>vol state: calm</div></div>
+<div class=card><div class=lbl>Rates</div><div class=mono style='font-size:15px'>10y 4.56% &nbsp; +18bp/20d<br>2s10s +43bp</div></div>
+<div class=card><div class=lbl>GARCH Vol (ann)</div><div class=big style='color:#b388ff'>10.8%</div></div>
+</div>
+<div class=card><div class=lbl>Current posterior</div><div style='margin-top:8px;font-size:14px'><b style='color:#00e676'>calm</b> 99% · <b style='color:#ffab00'>moderate</b> 0% · <b style='color:#ff6d00'>elevated</b> 0% · <b style='color:#ff3d57'>extreme</b> 0%</div></div>
+<div class=card><div class=lbl>Forward-state forecast (from current state)</div>
+<table><tr><th>horizon</th><th>calm</th><th>moderate</th><th>elevated</th><th>extreme</th><th>trust</th></tr><tr><td>5d</td><td>86%</td><td>11%</td><td>2%</td><td>0%</td><td class='trust'>HIGH</td></tr><tr><td>20d</td><td>60%</td><td>28%</td><td>8%</td><td>2%</td><td class='trust'>HIGH</td></tr><tr><td>60d</td><td>38%</td><td>35%</td><td>20%</td><td>5%</td><td class='trust'>LOW (first-order Markov frays; mean-reverts faster than markets)</td></tr></table>
+<div style='color:#8b9ab5;font-size:11px;margin-top:8px'>Calibrated to empirical history ≤20d. 60d shown for context only.</div></div>
+<div class=card><div class=lbl>Vol-state profiles (emission means, original units)</div>
+<table><tr><th>state</th><th>share</th><th>spy_ret</th><th>spy_rvol</th><th>hyglqd_chg</th><th>move_z</th><th>vix_term</th><th>dxy_chg</th></tr><tr><td style='color:#00e676'>calm</td><td>32%</td><td>0.09</td><td>7.07</td><td>-0.0</td><td>-0.44</td><td>0.83</td><td>0.01</td></tr><tr><td style='color:#ffab00'>moderate</td><td>32%</td><td>0.04</td><td>11.25</td><td>0.05</td><td>-0.66</td><td>0.89</td><td>0.04</td></tr><tr><td style='color:#ff6d00'>elevated</td><td>27%</td><td>0.04</td><td>17.83</td><td>0.06</td><td>0.96</td><td>0.92</td><td>0.06</td></tr><tr><td style='color:#ff3d57'>extreme</td><td>7%</td><td>-0.15</td><td>35.46</td><td>-0.28</td><td>1.43</td><td>1.04</td><td>-0.28</td></tr></table></div>
+<div class=card><div class=lbl>Crisis verdict (elevated+extreme share)</div><div class=mono style='margin-top:8px'>2018-Q4 90% · 2020-COVID 94% · 2022-bear 100%</div></div>
+<div class=card><div class=lbl>Caveats</div><ul><li>4 states are a volatility ladder, not directional. Risk/flavor come from the mapping layer.</li><li>Transition matrix is descriptive only; do not read it as multi-step truth past ~20 trading days.</li><li>DXY is the weakest-separating emission this cycle.</li><li>Cross-check against discretionary macro-regime-analysis; disagreement is itself signal.</li></ul></div>
+</body></html>

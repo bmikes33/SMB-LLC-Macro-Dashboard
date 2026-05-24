@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVDA — SOTP Fundamental Valuation — Q1 FY27 (3-Segment)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0e17;--bg2:#0f1420;--bg3:#141926;--tx:#e2e8f0;--tx2:#8b9ab5;--tx3:#4a5976;--bd:#1e2a3a;
+    --cy:#00e5ff;--gr:#00e676;--rd:#ff3d57;--am:#ffab00;--pu:#b388ff;--mono:'JetBrains Mono',monospace;--sans:'IBM Plex Sans',sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--tx);font-family:var(--sans);line-height:1.55;font-size:14px;padding:32px 20px 80px}
+  .wrap{max-width:1080px;margin:0 auto}
+  h1,h2,h3,.mono{font-family:var(--mono)}
+  .sec-h{font-family:var(--mono);text-transform:uppercase;letter-spacing:2.5px;color:var(--cy);font-size:13px;font-weight:700;border-bottom:1px solid var(--bd);padding-bottom:8px;margin:38px 0 18px;display:flex;align-items:center;gap:10px}
+  .sec-h .n{color:var(--tx3);font-weight:400}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .pos{color:var(--gr)}.neg{color:var(--rd)}.am{color:var(--am)}.cy{color:var(--cy)}.pu{color:var(--pu)}.mut{color:var(--tx3)}.t2{color:var(--tx2)}
+  .alloc{font-style:italic;color:var(--tx2)}.ovr{font-weight:700;color:var(--am)}
+  .hdr{background:linear-gradient(135deg,#0f1420,#0a0e17);border:1px solid var(--bd);border-radius:10px;padding:26px 28px;position:relative;overflow:hidden}
+  .hdr::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--cy)}
+  .hdr .tk{font-family:var(--mono);font-size:30px;font-weight:700;letter-spacing:1px}
+  .hdr .sub{color:var(--tx2);font-size:13px;margin-top:2px}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .badge{font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:5px;border:1px solid;font-weight:600}
+  .b-under{color:var(--gr);border-color:var(--gr);background:rgba(0,230,118,.08)}
+  .b-green{color:var(--gr);border-color:rgba(0,230,118,.4);background:rgba(0,230,118,.06)}
+  .b-am{color:var(--am);border-color:rgba(255,171,0,.4);background:rgba(255,171,0,.06)}
+  .b-neut{color:var(--tx2);border-color:var(--bd);background:var(--bg3)}
+  .hgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--bd);border:1px solid var(--bd);border-radius:8px;margin-top:22px;overflow:hidden}
+  .hcell{background:var(--bg2);padding:14px 16px}
+  .hcell .l{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);font-family:var(--mono)}
+  .hcell .v{font-family:var(--mono);font-size:22px;font-weight:700;margin-top:5px}
+  .hcell .v small{font-size:12px;font-weight:400}
+  table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+  th,td{text-align:right;padding:9px 12px;border-bottom:1px solid var(--bd)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--tx3);font-weight:500;background:var(--bg3)}
+  tbody tr:hover{background:rgba(255,255,255,.015)}
+  .tbl-wrap{border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+  td.bear{color:var(--rd)}td.bull{color:var(--gr)}
+  .row-tot{background:var(--bg3);font-weight:700}.row-tot td{border-top:2px solid var(--bd)}
+  .seg-hs{border-left:3px solid var(--cy)}.seg-ac{border-left:3px solid var(--pu)}.seg-ed{border-left:3px solid var(--tx3)}
+  p{color:var(--tx);margin:10px 0}
+  .note{background:var(--bg2);border-left:3px solid var(--bd);padding:12px 16px;border-radius:0 6px 6px 0;margin:14px 0;font-size:13px;color:var(--tx2)}
+  .note.cy{border-left-color:var(--cy)}.note.am{border-left-color:var(--am)}.note.rd{border-left-color:var(--rd)}.note.gr{border-left-color:var(--gr)}.note.pu{border-left-color:var(--pu)}
+  .note b{color:var(--tx)}
+  .flag-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+  .dg{background:var(--gr)}.da{background:var(--am)}.dr{background:var(--rd)}
+  ul{margin:10px 0 10px 4px;list-style:none}
+  li{padding:4px 0 4px 18px;position:relative;color:var(--tx2)}
+  li::before{content:'▸';position:absolute;left:0;color:var(--cy)}
+  .legend{font-size:11px;color:var(--tx3);font-family:var(--mono);margin:6px 0 0}
+  .legend .alloc{color:var(--tx2)}.legend .ovr{color:var(--am)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:720px){.two{grid-template-columns:1fr}}
+  .kpi-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .kpi{background:var(--bg2);border:1px solid var(--bd);border-radius:6px;padding:8px 12px;font-family:var(--mono);font-size:12px}
+  .kpi span{color:var(--tx3);font-size:10px;display:block;text-transform:uppercase;letter-spacing:1px}
+  .bar{height:26px;display:flex;border-radius:5px;overflow:hidden;margin-top:8px;border:1px solid var(--bd)}
+  .bar div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:600;color:#0a0e17}
+  .foot{margin-top:50px;padding-top:16px;border-top:1px solid var(--bd);color:var(--tx3);font-size:11px;font-family:var(--mono)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div class="tk">NVDA <span class="t2" style="font-size:15px">· NVIDIA Corp</span></div>
+    <div class="sub">SOTP Fundamental Valuation — 3-segment (Hyperscale / ACIE / Edge) · Q1 FY2027 print, recast framework · 9Q disclosed</div>
+    <div class="badges">
+      <span class="badge b-under">Verdict: Modestly Undervalued</span>
+      <span class="badge b-green">● Cap Structure: GREEN</span>
+      <span class="badge b-am">⚠ Cyclical · multiple-sensitive</span>
+      <span class="badge b-neut">FCF realism: not triggered</span>
+    </div>
+    <div class="hgrid">
+      <div class="hcell"><div class="l">Current Price</div><div class="v">$220.61</div></div>
+      <div class="hcell"><div class="l">FV Base · 2Y Disc</div><div class="v pos">$241.5 <small>+9.5%</small></div></div>
+      <div class="hcell"><div class="l">FV Bear → Bull</div><div class="v"><span class="neg">$119</span> <small>→</small> <span class="pos">$428</span></div></div>
+      <div class="hcell"><div class="l">Prob-Wt (25/50/25)</div><div class="v pos">$257.5 <small>+16.7%</small></div></div>
+      <div class="hcell"><div class="l">Segments</div><div class="v">3 <small>SOTP</small></div></div>
+    </div>
+  </div>
+
+  <!-- 01 -->
+  <div class="sec-h"><span class="n">01</span> Executive Summary</div>
+  <p>This replaces the earlier consolidated read. NVIDIA recast 9 quarters under its new framework, disclosing revenue for three sub-segments — <b class="cy">Hyperscale</b>, <b class="pu">ACIE</b> (AI Clouds, Industrial &amp; Enterprise), and <b class="mut">Edge Computing</b>. No single sub-segment exceeds 90%, so a genuine SOTP is warranted. The constraint: NVIDIA discloses segment <b>revenue only</b> — segment EBITDA margins are allocated (anchored to the 65.6% consolidated operating margin + structural reality that Edge is a far lower-margin mix).</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Case</th><th>2Y Discounted (primary)</th><th>vs Price</th><th>NTM × Multiple (check)</th><th>vs Price</th></tr></thead>
+    <tbody>
+      <tr><td class="bear">Bear</td><td class="num">$119.0</td><td class="num neg">−46.1%</td><td class="num">$135.1</td><td class="num neg">−38.8%</td></tr>
+      <tr><td>Base</td><td class="num">$241.5</td><td class="num pos">+9.5%</td><td class="num">$233.5</td><td class="num pos">+5.8%</td></tr>
+      <tr><td class="bull">Bull</td><td class="num">$427.9</td><td class="num pos">+94.0%</td><td class="num">$372.9</td><td class="num pos">+69.0%</td></tr>
+      <tr class="row-tot"><td>Prob-Wt</td><td class="num">$257.5</td><td class="num pos">+16.7%</td><td class="num mut">—</td><td class="num mut">—</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note am"><b>What changed vs the consolidated read ($261.7 base → $241.5 base):</b> segmenting de-rates Edge to its true economics (~35% margin, ~12x multiple) instead of blending it at Data Center economics. That haircut (~$20/share) is the cost of honesty. The base now shows only ~9.5% upside — <b>modestly undervalued, approaching fair</b> — and the result is highly sensitive to the Data Center multiple (the soft input). Prob-weighted +16.7% holds the bullish tilt only because the bull case is so large.</div>
+
+  <!-- 02 segment map -->
+  <div class="sec-h"><span class="n">02</span> Segment Lifecycle Map</div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Segment</th><th>TTM Rev</th><th>% Rev</th><th>Last QoQ</th><th>Stage</th><th>Forecast</th><th>Metric / WACC</th></tr></thead>
+    <tbody>
+      <tr class="seg-hs"><td><b class="cy">Hyperscale</b></td><td class="num">$125.9B</td><td class="num">49.7%</td><td class="num pos">+12.0%</td><td>High Growth*</td><td>2Y</td><td>EV/EBITDA · 11%</td></tr>
+      <tr class="seg-ac"><td><b class="pu">ACIE</b></td><td class="num">$104.0B</td><td class="num">41.0%</td><td class="num pos">+31.1%</td><td>High Growth*</td><td>2Y</td><td>EV/EBITDA · 11%</td></tr>
+      <tr class="seg-ed"><td><b class="mut">Edge Computing</b></td><td class="num">$23.6B</td><td class="num">9.3%</td><td class="num pos">+9.6%</td><td>Maturity</td><td>2Y</td><td>EV/EBITDA · 9%</td></tr>
+      <tr class="row-tot"><td>Consolidated</td><td class="num">$253.5B</td><td class="num">100%</td><td class="num pos">+20%</td><td>—</td><td>—</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><b>*Stage note:</b> Hyperscale and ACIE both grow &gt;40% with Maturity-grade (~68%) margins — a hybrid no single framework row fits. Classified High Growth (growth dominates), valued on EV/EBITDA (override of the High-Growth→EV/Gross-Profit default; EV/GP is the wrong frame for a 68%-margin unit). Edge fits Maturity cleanly. <b>ACIE</b> is lumpy (YoY across 5q: +81/+10/+20/+73/+74%) — the +31% last-QoQ reflects the sovereign/enterprise ramp; management guides Hyperscale to stay ~50% of Data Center with ACIE the other ~50%, so the two are modeled on parallel growth paths.</div>
+
+  <!-- 03 D&A / margin allocation -->
+  <div class="sec-h"><span class="n">03</span> Margin &amp; D&amp;A Allocation <span class="t2" style="font-size:11px;letter-spacing:0">(the key methodology choice here)</span></div>
+  <p>NVIDIA discloses no segment-level profit, so segment EBITDA margins are <b>allocated</b>, not disclosed. Two-step anchor:</p>
+  <ul>
+    <li><b>Edge ≈ 35%</b> EBITDA margin <span class="alloc">†</span> — structurally lower (gaming/PC/console/workstation/auto/robotics; ~50–55% GM, far higher opex intensity than Data Center).</li>
+    <li><b>Data Center (Hyperscale = ACIE) ≈ 68%</b> <span class="alloc">†</span> — same Blackwell architecture across both sub-markets, so no basis to split margin between them. They differ on growth, cyclicality, and assigned multiple — not margin.</li>
+    <li><b>Internal consistency check:</b> 92.2% × 68% + 7.8% × 35% = <span class="num">65.4%</span>, reproducing the disclosed 65.6% consolidated operating margin. <span class="t2">D&amp;A is immaterial (capex ~1% of EBITDA; asset-light), so EBITDA ≈ EBIT.</span></li>
+  </ul>
+  <div class="note am"><b>Consequence:</b> because HS and ACIE carry the same margin, the entire value difference between them flows from the <b>multiple</b> assigned (Section 4). That makes the ACIE-premium assumption the second-most-important lever after the Data Center base multiple.</div>
+
+  <!-- 04 multiples -->
+  <div class="sec-h"><span class="n">04</span> Multiples &amp; WACC <span class="t2" style="font-size:11px;letter-spacing:0">(proposed — override to re-run)</span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Segment</th><th>Bear (25th)</th><th>Base (50th)</th><th>Bull (75th)</th><th>WACC</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr class="seg-hs"><td><b class="cy">Hyperscale</b></td><td class="num bear">14.0x</td><td class="num">20.0x</td><td class="num bull">28.0x</td><td class="num">11%</td><td class="t2" style="text-align:left">Cyclical, hyperscaler-concentrated</td></tr>
+      <tr class="seg-ac"><td><b class="pu">ACIE</b></td><td class="num bear">15.0x</td><td class="num">22.0x</td><td class="num bull">32.0x</td><td class="num">11%</td><td class="t2" style="text-align:left">Premium for sovereign/enterprise optionality + lower single-customer concentration</td></tr>
+      <tr class="seg-ed"><td><b class="mut">Edge</b></td><td class="num bear">9.0x</td><td class="num">12.0x</td><td class="num bull">16.0x</td><td class="num">9%</td><td class="t2" style="text-align:left">Maturity consumer/auto/gaming semis</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note am"><b>Softest inputs.</b> NVDA trades ~19.8x NTM / ~32x TTM EBITDA consolidated today. The blended base SOTP multiple (~21x) is a slight premium to NVDA's current NTM multiple — i.e. the +9.5% base upside is essentially the bet that the market's cyclicality/China discount narrows. <span class="alloc">General-knowledge anchored †</span> — a clean live peer table couldn't be pulled. <b>The ACIE +2x premium over Hyperscale is a judgment call:</b> set them equal and ACIE/HS contributions converge near 50/50; rate ACIE below HS (lumpier, less proven) and Hyperscale becomes the larger value driver.</div>
+
+  <!-- 05/06 cases -->
+  <div class="sec-h"><span class="n">05–06</span> Bear / Base / Bull EBITDA Cases (Year 2)</div>
+  <p class="t2">Forward revenue built off the disclosed Q2 guide ($91.0B) via per-segment sequential paths; Year 2 applies a decelerating regime. EBITDA = revenue × allocated margin. Year-2 EBITDA shown (drives the primary method).</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Segment</th><th>NTM Rev (base)</th><th>Y2 Rev (base)</th><th>Y2 EBITDA Bear</th><th>Y2 EBITDA Base</th><th>Y2 EBITDA Bull</th></tr></thead>
+    <tbody>
+      <tr class="seg-hs"><td><b class="cy">Hyperscale</b></td><td class="num alloc">$194.3B†</td><td class="num alloc">$248.0B†</td><td class="num bear">$119.6B</td><td class="num">$168.6B</td><td class="num bull">$210.0B</td></tr>
+      <tr class="seg-ac"><td><b class="pu">ACIE</b></td><td class="num alloc">$193.2B†</td><td class="num alloc">$247.0B†</td><td class="num bear">$118.1B</td><td class="num">$167.9B</td><td class="num bull">$209.1B</td></tr>
+      <tr class="seg-ed"><td><b class="mut">Edge</b></td><td class="num alloc">$28.5B†</td><td class="num alloc">$32.2B†</td><td class="num bear">$8.3B</td><td class="num">$11.3B</td><td class="num bull">$14.4B</td></tr>
+      <tr class="row-tot"><td>Total</td><td class="num">$416.0B</td><td class="num">$527.2B</td><td class="num bear">$246.0B</td><td class="num">$347.8B</td><td class="num bull">$433.5B</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">NTM total ($416B base) ties to the $91B Q2 guide annualized-and-grown. SBC held strict in base/bear (added back only in bull); low risk here since diluted share count <b>fell</b> Y/Y (24,611M → 24,391M) and NVDA stopped excluding SBC from non-GAAP as of Q1 FY27.</div>
+
+  <!-- 07 bridge -->
+  <div class="sec-h"><span class="n">07</span> Bridge to Equity — 2Y Discounted (Primary, Base Case)</div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Segment</th><th>Y2 EBITDA</th><th>× Mult</th><th>Y2 EV</th><th>÷ (1+WACC)²</th><th>Today's EV</th></tr></thead>
+    <tbody>
+      <tr class="seg-hs"><td><b class="cy">Hyperscale</b></td><td class="num">$168.6B</td><td class="num">20.0x</td><td class="num">$3,372B</td><td class="num">1.2321</td><td class="num">$2,737B</td></tr>
+      <tr class="seg-ac"><td><b class="pu">ACIE</b></td><td class="num">$167.9B</td><td class="num">22.0x</td><td class="num">$3,695B</td><td class="num">1.2321</td><td class="num">$2,999B</td></tr>
+      <tr class="seg-ed"><td><b class="mut">Edge</b></td><td class="num">$11.3B</td><td class="num">12.0x</td><td class="num">$135B</td><td class="num">1.1881</td><td class="num">$114B</td></tr>
+      <tr class="row-tot"><td>Σ Enterprise Value</td><td colspan="4"></td><td class="num">$5,850B</td></tr>
+      <tr><td>+ Net cash (cash $50.3B − debt $8.5B)</td><td colspan="4"></td><td class="num">+$41.8B</td></tr>
+      <tr><td>= Equity value</td><td colspan="4"></td><td class="num">$5,892B</td></tr>
+      <tr><td>÷ Diluted shares</td><td colspan="4"></td><td class="num">24,391M</td></tr>
+      <tr class="row-tot"><td>Fair value / share (base)</td><td colspan="4"></td><td class="num pos">$241.5</td></tr>
+    </tbody>
+  </table></div>
+  <div class="sec-h" style="border:none;margin:22px 0 8px;color:var(--tx2);font-size:11px">Value contribution (base, discounted EV)</div>
+  <div class="bar">
+    <div style="width:46.8%;background:var(--cy)">Hyperscale 46.8%</div>
+    <div style="width:51.3%;background:var(--pu)">ACIE 51.3%</div>
+    <div style="width:1.9%;background:var(--tx3);font-size:9px">Edge</div>
+  </div>
+  <div class="note pu"><b>The headline insight from segmenting:</b> the entire NVDA thesis is Data Center — <b>~98% of value</b>, split roughly 50/50 between Hyperscale and ACIE. <b>Edge is 1.9% of EV</b> despite being 9% of revenue; it is a rounding error to the valuation. And <b>ACIE — the diversification / sovereign-AI story — is now the single largest value driver</b> (51.3%), a fact completely invisible in the consolidated view. If you believe sovereign/enterprise AI demand is more durable (and less hyperscaler-capex-cyclical) than the bears think, ACIE is where that conviction gets expressed.</div>
+
+  <!-- 08 method comp -->
+  <div class="sec-h"><span class="n">08</span> Method Comparison — NTM × Multiple (Sanity Check)</div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Case</th><th>2Y Disc (A)</th><th>NTM × Mult (B)</th><th>A − B</th></tr></thead>
+    <tbody>
+      <tr><td class="bear">Bear</td><td class="num">$119.0</td><td class="num">$135.1</td><td class="num neg">−11.9%</td></tr>
+      <tr><td>Base</td><td class="num">$241.5</td><td class="num">$233.5</td><td class="num pos">+3.5%</td></tr>
+      <tr><td class="bull">Bull</td><td class="num">$427.9</td><td class="num">$372.9</td><td class="num pos">+14.8%</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">A &gt; B in base/bull (second-year compounding adds value — high-grower signature); A &lt; B in bear (the WACC discount on a near-flat Year-2 outweighs growth). The narrow +3.5% base gap says the forward multiple is doing most of the work in the central case — consistent with a business this large where the multiple, not the growth slope, dominates value.</div>
+
+  <!-- 09 prob wt -->
+  <div class="sec-h"><span class="n">09</span> Probability-Weighted Fair Value</div>
+  <div class="kpi-row">
+    <div class="kpi"><span>Weights</span>25 / 50 / 25 (default)</div>
+    <div class="kpi"><span>Prob-Wt FV</span>$257.5</div>
+    <div class="kpi"><span>Upside vs $220.61</span><span class="pos">+16.7%</span></div>
+    <div class="kpi"><span>Bear-tilt 40/40/20</span>~$230 (+4%)</div>
+    <div class="kpi"><span>Bull-tilt 20/40/40</span>~$298 (+35%)</div>
+  </div>
+  <p class="t2">Most sensitive to bear weight. If you read the macro as late-cycle for AI capex, a heavier bear pulls the weighted FV toward fair value (~$230).</p>
+
+  <!-- 10 cap structure -->
+  <div class="sec-h"><span class="n">10</span> Capital Structure Health Check <span class="badge b-green" style="margin-left:8px">GREEN</span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Metric</th><th>Value</th><th>Band</th><th>Flag</th></tr></thead>
+    <tbody>
+      <tr><td>Net Debt / TTM EBITDA</td><td class="num">net cash (−$41.8B)</td><td class="t2">&lt;2.0x</td><td><span class="flag-dot dg"></span>Green</td></tr>
+      <tr><td>EBITDA / Interest</td><td class="num">&gt;600x</td><td class="t2">&gt;8x</td><td><span class="flag-dot dg"></span>Green</td></tr>
+      <tr><td>Maturity wall (24mo)</td><td class="num">&lt;$1B of $8.5B</td><td class="t2">&lt;10%</td><td><span class="flag-dot dg"></span>Green</td></tr>
+      <tr><td>Liquidity</td><td class="num">$50.3B cash + ~$190B/yr FCF</td><td class="t2">&gt;2x</td><td><span class="flag-dot dg"></span>Green</td></tr>
+      <tr><td>Diluted share 3y trend</td><td class="num">declining</td><td class="t2">&lt;3%</td><td><span class="flag-dot dg"></span>Green</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note gr">Pristine — net cash ~$42B, D/E 0.07x, new $80B buyback (+$39B remaining), dividend $0.01→$0.25. Watch (not a flag): $119.0B supply commitments + $30.0B cloud commitments — demand-backed, FCF-covered. No caveat on the verdict.</div>
+
+  <!-- 11 fcf -->
+  <div class="sec-h"><span class="n">11</span> FCF Realism Check — Not Triggered</div>
+  <p>Capex/EBITDA anomalously <b>low</b> (~1%), FCF conversion strong, no liquidity flag — a DCF would re-derive the multiples-based SOTP. Skipped by design.</p>
+
+  <!-- 12 provenance -->
+  <div class="sec-h"><span class="n">12</span> Methodology &amp; Provenance</div>
+  <div class="note"><b>Data provenance:</b> ~75% disclosed · ~25% allocated · 0% user-override.<br>
+  <span class="legend">Disclosed = plain · <span class="alloc">Allocated/estimated = italic †</span> · <span class="ovr">User-override = bold amber *</span></span></div>
+  <ul>
+    <li><b>Disclosed:</b> 9 quarters of segment revenue (Hyperscale/ACIE/Edge), recast framework (8-K trend supplemental); consolidated margins, operating income, EPS, FCF, cash, debt, share count, Q2 guide, capital-return actions.</li>
+    <li><b class="alloc">Allocated †:</b> segment EBITDA margins (HS/ACIE 68%, Edge 35%, anchored to reproduce consolidated 65.6%); forward sequential growth paths; multiple bands; ACIE multiple premium.</li>
+    <li><b>Improvement vs prior run:</b> growth cases are now anchored to disclosed 9Q segment revenue rather than a single consolidated line — margins remain the only major allocated input.</li>
+    <li><b>Freshness:</b> latest filing set (qtr ended Apr 26, 2026); next print Aug 26, 2026. No EDGAR/TV conflicts.</li>
+    <li><b>No macro overlay</b> — unadjusted fundamental fair value; apply your regime/intermarket overlay separately.</li>
+  </ul>
+  <div class="note rd"><b>⚠ Cyclical caveat:</b> the trailing 9Q span only the AI build-out up-cycle. The −46% bear is a <i>modeled</i> digestion, not an <i>observed</i> trough — a real semi down-cycle (hyperscaler capex pause, inventory correction, permanent China loss) could break below it. The +9.5% base upside is thin and rests on the Data Center multiple holding vs NVDA's current ~19.8x NTM. This is closer to <b>fairly-valued-with-optionality</b> than a deep-value setup.</div>
+
+  <div class="foot">
+    SMB LLC · SOTP Fundamental Valuation · NVDA · 3-segment (Hyperscale/ACIE/Edge) · Generated 2026-05-20 17:15 ET · Primary: 2Y EBITDA discounted · Standalone fundamental output, no macro overlay.<br>
+    Not investment advice. Every multiple, WACC, margin allocation, and forward case is a proposed input — override any and I will re-run.
+  </div>
+
+</div>
+</body>
+</html>

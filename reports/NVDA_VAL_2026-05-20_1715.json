@@ -1,0 +1,65 @@
+{
+  "type": "valuation",
+  "file": "NVDA_VAL_2026-05-20_1715.html",
+  "ticker": "NVDA",
+  "tvSymbol": "NASDAQ:NVDA",
+  "date": "2026-05-20T17:15:00-05:00",
+  "summary": "UNDERVALUED — Base +9.5% / P-Wt +16.7%",
+  "verdictBadge": "UNDERVALUED",
+  "upsideBadge": "+9.5%",
+  "mode": "SOTP",
+  "segmentCount": 3,
+  "currentPrice": 220.61,
+  "fairValue": {
+    "method": "2Y_discounted",
+    "bear": 119.00,
+    "base": 241.50,
+    "bull": 427.90,
+    "probWeighted": 257.50
+  },
+  "fairValueNtm": {
+    "method": "NTM_multiple",
+    "bear": 135.10,
+    "base": 233.50,
+    "bull": 372.90
+  },
+  "upside": {
+    "bear": -46.1,
+    "base": 9.5,
+    "bull": 94.0,
+    "probWeighted": 16.7
+  },
+  "wacc": {
+    "method": "stage_default",
+    "perSegment": {
+      "Hyperscale": 0.11,
+      "ACIE": 0.11,
+      "EdgeComputing": 0.09
+    }
+  },
+  "daAllocationMethod": "n/a_consolidated_margins_allocated_to_segments",
+  "capitalStructure": "GREEN",
+  "capitalStructureFlags": [],
+  "dataQuality": {
+    "disclosedPct": 75,
+    "allocatedPct": 25,
+    "userOverridePct": 0
+  },
+  "verdict": "UNDERVALUED",
+  "fcfRealismCheck": {
+    "ran": true,
+    "dcfFairValue": 275.30,
+    "gapToSotp": 14.0,
+    "flag": "PASS",
+    "terminalPctOfEv": 83,
+    "exitMultiple": 18.8,
+    "report": "NVDA_DCF_2026-05-20_1830.html",
+    "note": "DCF +14% above SOTP base -> SOTP conservative. 83% terminal-driven; only sensitive driver is exit multiple (+/-2x = +/-$24/sh). Capex override applied (~4% of EBITDA vs 40% stage default) given fabless/asset-light model."
+  },
+  "segments": {
+    "Hyperscale": {"ttmRev": 125.9, "stage": "High Growth", "evMultBase": 20.0, "evContribPctBase": 46.8},
+    "ACIE": {"ttmRev": 104.0, "stage": "High Growth", "evMultBase": 22.0, "evContribPctBase": 51.3},
+    "EdgeComputing": {"ttmRev": 23.6, "stage": "Maturity", "evMultBase": 12.0, "evContribPctBase": 1.9}
+  },
+  "notes": "Rebuilt as true 3-segment SOTP off 9Q recast disclosed revenue (Hyperscale/ACIE/Edge); supersedes the earlier consolidated run (base $261.7 -> $241.5). No sub-segment >90% so SOTP warranted. Segment EBITDA margins ALLOCATED (HS/ACIE 68%, Edge 35%) to reproduce consolidated 65.6% op margin; segment revenue disclosed. Value is ~98% Data Center, ~50/50 Hyperscale/ACIE; Edge is 1.9% of EV. ACIE is the single largest value driver (51.3%) on a +2x multiple premium for sovereign/enterprise optionality (judgment call, tunable). Base upside thin (+9.5%) and highly sensitive to Data Center multiple vs NVDA's current ~19.8x NTM. Cyclical caveat: 9Q spans only AI up-cycle; -46% bear is modeled, not observed."
+}

@@ -1,45 +1,195 @@
 {
-  "lastUpdated": "2026-05-24T17:57:39.873622+00:00",
-  "lastUpdatedDisplay": "May 24, 2026 \u2014 05:57 PM UTC",
-  "articleCount": 19,
+  "lastUpdated": "2026-05-25T01:58:05.571228+00:00",
+  "lastUpdatedDisplay": "May 25, 2026 \u2014 01:58 AM UTC",
+  "articleCount": 31,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Crypto markets show significant weakness with Bitcoin falling below $80,217 and Ethereum under $2,100, causing massive unrealized losses including $8 billion for Tom Lee's BMNR position. Despite bearish technical signals and analyst forecasts of further declines to $60K, there are reports of a US-Iran peace deal being signed which has helped Bitcoin recover somewhat.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "The reported US-Iran peace deal directly contradicts the regime's embedded Iran-war oil shock assumption, while crypto weakness suggests broader risk-off sentiment despite the bullish-cyclicals equity bias.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets are rallying on prospects of a U.S.-Iran deal that would reopen the Strait of Hormuz, driving oil prices down 5% and weakening the dollar amid broad risk-on sentiment. Crypto markets remain under pressure with Bitcoin testing technical support and BMNR's Ethereum position showing $7-8 billion in unrealized losses.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The Iran deal prospect directly attacks the oil shock foundation of the current regime, with WTI falling 5% and risk-on flows contradicting the stagflationary undertone.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil falling 5% on Iran deal prospects moves away from stagflation threshold"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "US-Iran peace deal reportedly signed, removing geopolitical oil shock premium",
+        "signal": "Oil down 5% on Iran deal prospects directly reverses the war premium embedded in current regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin below short-term holder cost basis at $80,217 with head-and-shoulders pattern formation",
+        "signal": "Dollar weakness and risk-on flows in Asian currencies contradict stagflationary undertones",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bond prices soaring signals potential structural shift away from reflation dynamics",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "BMNR sitting on $7-8B unrealized losses as ETH weakens below $2,100",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Tom Lee's BMNR sitting on $8 billion unrealized losses as Ethereum trades under $2,100",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Kevin Warsh Fed chair appointment expected to cut rates despite Bitcoin weakness",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Analysts forecasting Bitcoin crash to $60K level, revisiting 2026 lows",
+        "signal": "Gold rising 1.4% on deal hopes shows safe-haven demand shifting from inflation hedge to geopolitical hedge",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR cash-secured put ladder closely given $8B unrealized losses and potential Russell 1000 inclusion impact",
-      "Reassess oil shock assumptions if US-Iran peace deal confirmed - could reduce stagflationary pressure",
-      "Watch for broader risk-off spillover from crypto weakness into equity cyclicals"
+      "Monitor WTI for sustained break below current levels as Iran deal develops",
+      "Reassess BMNR cash-secured put ladder strikes given mounting unrealized losses",
+      "Watch for regime flip signals as oil shock unwinds and risk-on flows accelerate"
     ]
   },
   "articles": [
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T01:41:39+00:00",
+      "timeDisplay": "1:41 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N422014:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Dollar Retreats on Iran Deal Optimism",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T01:06:20+00:00",
+      "timeDisplay": "1:06 AM",
+      "link": "https://www.tradingview.com/news/te_news:553251:0-dollar-retreats-on-iran-deal-optimism/"
+    },
+    {
+      "title": "Asian Currencies Mostly Strengthen Amid Risk-On Sentiment \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T01:02:00+00:00",
+      "timeDisplay": "1:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000532:0/"
+    },
+    {
+      "title": "Dollar slumps as signs of deal to reopen Hormuz spur risk appetite",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T00:24:01+00:00",
+      "timeDisplay": "12:24 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N422004:0-dollar-slumps-as-signs-of-deal-to-reopen-hormuz-spur-risk-appetite/"
+    },
+    {
+      "title": "Gold Rises in Iran Deal Hopes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:47:40+00:00",
+      "timeDisplay": "11:47 PM",
+      "link": "https://www.tradingview.com/news/te_news:553223:0-gold-rises-in-iran-deal-hopes/"
+    },
+    {
+      "title": "Pullback in Oil Prices Could Temper Inflation Expectations \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:46:00+00:00",
+      "timeDisplay": "11:46 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000440:0/"
+    },
+    {
+      "title": "Gold, Silver Rise on Hopes for U.S.-Iran Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:45:00+00:00",
+      "timeDisplay": "11:45 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000438:0/"
+    },
+    {
+      "title": "Oil Falls Amid Prospects for Reopening of Strait of Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:34:00+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000428:0/"
+    },
+    {
+      "title": "Oil Declines on Iran Deal Prospects",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:28:08+00:00",
+      "timeDisplay": "11:28 PM",
+      "link": "https://www.tradingview.com/news/te_news:553221:0-oil-declines-on-iran-deal-prospects/"
+    },
+    {
+      "title": "Spot Gold Rises 1.4%, Spot Silver Gains 3.5%",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:11:00+00:00",
+      "timeDisplay": "11:11 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000363_20260524000366:0/"
+    },
+    {
+      "title": "Spot Gold, Spot Silver Rise on Hopes of U.S.-Iran Deal",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T23:10:00+00:00",
+      "timeDisplay": "11:10 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000363_20260524000363:0/"
+    },
+    {
+      "title": "Crude Oil Falls 5%",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T22:35:58+00:00",
+      "timeDisplay": "10:35 PM",
+      "link": "https://www.tradingview.com/news/te_news:553214:0-crude-oil-falls-5/"
+    },
+    {
+      "title": "Soaring bond prices signal 'structural' shift and Bitcoin 'supercycle': Analyst",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T22:12:55+00:00",
+      "timeDisplay": "10:12 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:d1ce0f255094b:0-soaring-bond-prices-signal-structural-shift-and-bitcoin-supercycle-analyst/"
+    },
+    {
+      "title": "Buterin fires back at Ethereum Foundation critics, recommits to neutrality",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T20:43:42+00:00",
+      "timeDisplay": "8:43 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:7f49a000d094b:0-buterin-fires-back-at-ethereum-foundation-critics-recommits-to-neutrality/"
+    },
+    {
+      "title": "Bitcoin Price Could Fall To $72.5K Before Next Rebound \u2014 Here\u2019s Why",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T19:00:00+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:5d03c9451094b:0-bitcoin-price-could-fall-to-72-5k-before-next-rebound-here-s-why/"
+    },
+    {
+      "title": "Vitalik Buterin Signals Ethereum Foundation Power Cut, ETH Sales Reduced in Major Shift",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T18:32:38+00:00",
+      "timeDisplay": "6:32 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:94d70499f094b:0-vitalik-buterin-signals-ethereum-foundation-power-cut-eth-sales-reduced-in-major-shift/"
+    },
+    {
+      "title": "Vitalik Buterin says Ethereum Foundation will be a \u2018smaller ship,\u2019 sell less ETH amid researcher exodus",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T18:01:27+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/the_block:2c2fa296e094b:0-vitalik-buterin-says-ethereum-foundation-will-be-a-smaller-ship-sell-less-eth-amid-researcher-exodus/"
+    },
+    {
+      "title": "Ledn Sees $1 Trillion Market for Bitcoin-Backed Loans",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-24T16:49:00+00:00",
+      "timeDisplay": "4:49 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8f64b7596094b:0-ledn-sees-1-trillion-market-for-bitcoin-backed-loans/"
+    },
     {
       "title": "Tom Lee\u2019s BMNR Is Sitting On $8 Billion In Unrealized Losses On Its Ethereum Position, Eyes A Russell 1000 Inclusion",
       "source": "stocktwits",
@@ -137,60 +287,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:609a83ca4094b:0-why-is-bitcoin-falling-despite-pro-crypto-kevin-warsh-becoming-fed-chair/"
     },
     {
-      "title": "This Week in Crypto: Bitcoin Swing, Iran Deal, Cardano Risk and More",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T01:43:33+00:00",
-      "timeDisplay": "1:43 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:24dbc8203094b:0-this-week-in-crypto-bitcoin-swing-iran-deal-cardano-risk-and-more/"
-    },
-    {
-      "title": "70% of all crypto wrench attacks happen in France: Report",
+      "title": "Bitcoin bounces as Trump prepares to announce \u2018negotiated\u2019 Iran deal",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-05-23T23:07:19+00:00",
-      "timeDisplay": "11:07 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:2049b31c2094b:0-70-of-all-crypto-wrench-attacks-happen-in-france-report/"
-    },
-    {
-      "title": "Bitcoin Recovers as US-Iran Peace Deal Reportedly Signed, Altcoins Gain Big",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-23T21:42:29+00:00",
-      "timeDisplay": "9:42 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:0e8bff787094b:0-bitcoin-recovers-as-us-iran-peace-deal-reportedly-signed-altcoins-gain-big/"
-    },
-    {
-      "title": "Analyst Highlights Ethereum \u2018Kill Zone\u2019 That Shows The Best Time To Buy",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-23T21:00:45+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:cba7f99f7094b:0-analyst-highlights-ethereum-kill-zone-that-shows-the-best-time-to-buy/"
-    },
-    {
-      "title": "Analysts forecast a Bitcoin crash to the $60K level, revisiting 2026 low",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-23T20:49:12+00:00",
-      "timeDisplay": "8:49 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:eaea54b8a094b:0-analysts-forecast-a-bitcoin-crash-to-the-60k-level-revisiting-2026-low/"
-    },
-    {
-      "title": "Bitcoin Could Be Entering Critical Pullback Phase Below This Level",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-23T20:00:55+00:00",
-      "timeDisplay": "8:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:2faf2f2c4094b:0-bitcoin-could-be-entering-critical-pullback-phase-below-this-level/"
-    },
-    {
-      "title": "Warsh will cut rates, despite consensus view of rate hikes: Analyst",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-23T18:20:14+00:00",
-      "timeDisplay": "6:20 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b22d4b31e094b:0-warsh-will-cut-rates-despite-consensus-view-of-rate-hikes-analyst/"
+      "timestamp": "2026-05-24T03:20:00+00:00",
+      "timeDisplay": "3:20 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:6761e1b42094b:0-bitcoin-bounces-as-trump-prepares-to-announce-negotiated-iran-deal/"
     }
   ]
 }

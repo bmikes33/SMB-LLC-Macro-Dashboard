@@ -1,48 +1,53 @@
 {
-  "lastUpdated": "2026-05-25T17:40:25.154302+00:00",
-  "lastUpdatedDisplay": "May 25, 2026 \u2014 05:40 PM UTC",
-  "articleCount": 67,
+  "lastUpdated": "2026-05-25T19:24:26.778347+00:00",
+  "lastUpdatedDisplay": "May 25, 2026 \u2014 07:24 PM UTC",
+  "articleCount": 66,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices are falling sharply on reports of U.S.-Iran diplomatic progress potentially resolving Hormuz Strait tensions, while the dollar weakens and risk assets rally with U.S. stocks hitting all-time highs. Bitcoin and crypto markets show institutional rotation with major ETF outflows and notable selling from institutional holders, though analysts frame this as rotation rather than wholesale exit.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "The Iran-oil shock that was embedded in the current regime thesis is rapidly unwinding with diplomatic progress, while risk-on sentiment is strengthening rather than showing stagflationary stress.",
+    "macroSummary": "Major developments include a U.S.-Iran diplomatic breakthrough creating optimism for Hormuz Strait security, leading to sharp oil price declines and dollar weakness. Bitcoin and crypto markets show institutional rotation with BlackRock IBIT shedding $1B, MicroStrategy pausing BTC purchases for bond buybacks, and large-scale whale selling across Bitcoin and Ethereum.",
+    "regimePressure": "CHALLENGING",
+    "regimePressureReason": "The Iran deal breakthrough directly undermines the embedded oil shock assumption in the current regime, while dollar weakness and oil collapse contradict the stagflationary undertones that define this Reflation call.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "< $115",
-        "signal": "Oil prices tumbling on U.S.-Iran deal prospects, potentially reversing the embedded war premium"
+        "signal": "Oil prices tumbling on U.S.-Iran deal prospects removes the war premium that supported stagflationary positioning"
+      },
+      {
+        "indicator": "DXY",
+        "level": "< 100",
+        "signal": "Dollar extending falls on Iran deal optimism approaches the regime flip threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices retreating sharply on U.S.-Iran diplomatic progress, undermining the embedded war shock in current regime thesis",
+        "signal": "U.S.-Iran progress toward deal removes Hormuz risk premium from oil markets, contradicting embedded war shock in regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakening broadly against euro, sterling, and risk currencies as geopolitical tensions ease",
+        "signal": "Oil price collapse and dollar weakness signal potential unwind of stagflationary pressures",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "U.S. stocks breaching all-time highs suggests pure risk-on rather than stagflationary equity dynamics",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Major Bitcoin institutional outflows from BlackRock IBIT ($1B) and MicroStrategy strategy shifts signal crypto rotation",
+        "signal": "Institutional crypto rotation with BlackRock IBIT outflows and MicroStrategy strategy shift shows risk asset rebalancing",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Ethereum whale opening $100M short position as ETH fails to reclaim $2,150 shows crypto weakness persisting",
+        "signal": "Bitcoin rejected at 200-MA while facing institutional selling pressure from multiple large holders",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Ethereum showing technical weakness with $100M whale short position opened as price fails to reclaim $2150",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained decline below war premium levels invalidates key regime assumption",
-      "Watch dollar weakness against threshold levels as geopolitical risk premium unwinds",
-      "Consider reducing BMNR put ladder size if pure risk-on environment emerges rather than stagflationary backdrop"
+      "Monitor oil futures closely - sustained break below recent lows invalidates Iran war shock embedded in current regime",
+      "Watch DXY approach to 100 threshold as dollar weakness accelerates on geopolitical de-escalation",
+      "Reassess BMNR ladder positioning if crypto institutional rotation accelerates amid changing macro backdrop"
     ]
   },
   "articles": [
@@ -93,6 +98,14 @@
       "timestamp": "2026-05-25T14:39:26+00:00",
       "timeDisplay": "2:39 PM",
       "link": "https://www.tradingview.com/news/beincrypto:305dd6229094b:0-blackrock-ibit-sheds-1-billion-in-bitcoin-as-larry-fink-quote-misleads-traders/"
+    },
+    {
+      "title": "BitMine Purchases 60,000 Ethereum As Price Languishes",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T14:32:00+00:00",
+      "timeDisplay": "2:32 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:16ce7c5e5094b:0-bitmine-purchases-60-000-ethereum-as-price-languishes/"
     },
     {
       "title": "Coinbase CEO\u2019s finance wishlist mirrors company\u2019s product roadmap",
@@ -565,22 +578,6 @@
       "timestamp": "2026-05-24T20:43:42+00:00",
       "timeDisplay": "8:43 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:7f49a000d094b:0-buterin-fires-back-at-ethereum-foundation-critics-recommits-to-neutrality/"
-    },
-    {
-      "title": "Vitalik Buterin Signals Ethereum Foundation Power Cut, ETH Sales Reduced in Major Shift",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T18:32:38+00:00",
-      "timeDisplay": "6:32 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:94d70499f094b:0-vitalik-buterin-signals-ethereum-foundation-power-cut-eth-sales-reduced-in-major-shift/"
-    },
-    {
-      "title": "Vitalik Buterin says Ethereum Foundation will be a \u2018smaller ship,\u2019 sell less ETH amid researcher exodus",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T18:01:27+00:00",
-      "timeDisplay": "6:01 PM",
-      "link": "https://www.tradingview.com/news/the_block:2c2fa296e094b:0-vitalik-buterin-says-ethereum-foundation-will-be-a-smaller-ship-sell-less-eth-amid-researcher-exodus/"
     }
   ]
 }

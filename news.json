@@ -1,45 +1,75 @@
 {
-  "lastUpdated": "2026-05-25T22:05:13.885037+00:00",
-  "lastUpdatedDisplay": "May 25, 2026 \u2014 10:05 PM UTC",
-  "articleCount": 65,
+  "lastUpdated": "2026-05-25T23:37:48.557748+00:00",
+  "lastUpdatedDisplay": "May 25, 2026 \u2014 11:37 PM UTC",
+  "articleCount": 61,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices are tumbling on reports of U.S.-Iran deal progress, driving dollar weakness and broader risk-on sentiment with U.S. stocks hitting all-time highs. Bitcoin faces institutional selling pressure with ETF outflows exceeding $1B, rejection at 200-MA around $76K, and major holders like MicroStrategy pausing purchases to focus on bond repurchases. Ethereum shows similar weakness with whale short positions opening and Foundation downsizing discussions.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran deal progress directly undermines the embedded oil shock assumption in the current regime, while broad risk-on sentiment contradicts the stagflationary undertone thesis.",
-    "thresholdWatches": [],
+    "macroSummary": "Oil prices are tumbling on U.S.-Iran deal optimism with prospects of Hormuz stability, driving dollar weakness and broader risk-on sentiment in traditional markets. Crypto markets show institutional rotation patterns with significant ETF outflows, whale shorting activity, and corporate treasury strategy shifts, while equity markets breach all-time highs.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil collapse on Iran deal progress directly contradicts the embedded Iran-war oil shock assumption in the current regime, while dollar weakness challenges DXY positioning.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil prices tumbling on U.S.-Iran Hormuz deal optimism removes stagflationary oil shock component"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil prices tumbling on U.S.-Iran deal progress directly contradicts the embedded Iran-war oil shock assumption",
+        "signal": "Oil prices collapse on U.S.-Iran deal progress undermines embedded war premium assumptions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakening broadly as risk-on sentiment drives equities to all-time highs challenges stagflationary narrative",
+        "signal": "Dollar extending falls on deal prospects moves away from reflation-typical DXY strength",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin institutional selling with $1B+ ETF outflows and MicroStrategy pausing purchases shows crypto risk-off despite broader equity strength",
+        "signal": "U.S. stocks breaching all-time highs with risk-on flows supports equity bullishness",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Institutional crypto rotation and ETF outflows suggest risk appetite shifting to traditional equities",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Major Ethereum whale opening $100M short position signals institutional bearishness on ETH specifically",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Broad currency strength against dollar (euro, sterling, riskier currencies rising) indicates risk-on flow acceleration",
-        "tag": "CONTRADICTS"
+        "signal": "Euro, sterling, and riskier currencies rising versus weaker dollar indicates broad risk-on sentiment",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained decline below recent range invalidates war premium embedded in regime",
-      "Reassess BMNR ladder strikes if ETH weakness persists amid broader crypto institutional rotation",
-      "Consider regime reassessment if Iran deal materializes and removes geopolitical oil premium entirely"
+      "Monitor oil price levels for sustained break below $115 threshold as Iran deal materializes",
+      "Watch DXY approaching 100 level given dollar weakness on geopolitical de-escalation",
+      "Consider BMNR ladder adjustments if crypto institutional flows continue rotating to traditional equity ATHs"
     ]
   },
   "articles": [
+    {
+      "title": "Buterin Calls Ethereum\u2019s High-TPS Race \u201cA Route to Mediocrity\u201d as Capital Rotates to Hyperliquid and Zcash",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T22:34:27+00:00",
+      "timeDisplay": "10:34 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:b7f08e327094b:0/"
+    },
+    {
+      "title": "The Bitcoin Billion-Dollar Dump: Here\u2019s Why The BTC Price Keeps Crashing",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T22:30:06+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:2fa4f86cc094b:0-the-bitcoin-billion-dollar-dump-here-s-why-the-btc-price-keeps-crashing/"
+    },
+    {
+      "title": "3 Things to Know About Kevin Warsh, the New Fed Chair",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:97d8f7646094b:0-3-things-to-know-about-kevin-warsh-the-new-fed-chair/"
+    },
     {
       "title": "Crypto Today Looks Like Nvidia Before AI Went Mainstream, Jeff Park Says",
       "source": "newsbtc",
@@ -297,22 +327,6 @@
       "link": "https://www.tradingview.com/news/invezz:67c37afd8094b:0-can-ethereum-avoid-a-breakdown-as-momentum-weakens-near-2-100/"
     },
     {
-      "title": "Strategy Pauses Bitcoin Buying as $1.5B Bond Repurchase Takes Priority",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-25T10:17:00+00:00",
-      "timeDisplay": "10:17 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:e9e1c7327094b:0-strategy-pauses-bitcoin-buying-as-1-5b-bond-repurchase-takes-priority/"
-    },
-    {
-      "title": "Bitcoin News: Has Saylor Just Changed the MicroStrategy Playbook?",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-25T10:16:08+00:00",
-      "timeDisplay": "10:16 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:5f8a77d55094b:0-bitcoin-news-has-saylor-just-changed-the-microstrategy-playbook/"
-    },
-    {
       "title": "Oil slump, central bank support manifest in rupee\u2019s three-day winning streak",
       "source": "reuters",
       "color": "#ff6d00",
@@ -519,46 +533,6 @@
       "timestamp": "2026-05-24T23:45:00+00:00",
       "timeDisplay": "11:45 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260524000438:0/"
-    },
-    {
-      "title": "Oil Falls Amid Prospects for Reopening of Strait of Hormuz \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T23:34:00+00:00",
-      "timeDisplay": "11:34 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260524000428:0/"
-    },
-    {
-      "title": "Oil Declines on Iran Deal Prospects",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T23:28:08+00:00",
-      "timeDisplay": "11:28 PM",
-      "link": "https://www.tradingview.com/news/te_news:553221:0-oil-declines-on-iran-deal-prospects/"
-    },
-    {
-      "title": "Spot Gold Rises 1.4%, Spot Silver Gains 3.5%",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T23:11:00+00:00",
-      "timeDisplay": "11:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260524000363_20260524000366:0/"
-    },
-    {
-      "title": "Spot Gold, Spot Silver Rise on Hopes of U.S.-Iran Deal",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T23:10:00+00:00",
-      "timeDisplay": "11:10 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260524000363_20260524000363:0/"
-    },
-    {
-      "title": "Crude Oil Falls 5%",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T22:35:58+00:00",
-      "timeDisplay": "10:35 PM",
-      "link": "https://www.tradingview.com/news/te_news:553214:0-crude-oil-falls-5/"
     }
   ]
 }

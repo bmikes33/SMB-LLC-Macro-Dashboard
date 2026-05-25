@@ -1,45 +1,59 @@
 {
-  "lastUpdated": "2026-05-25T15:47:59.961349+00:00",
-  "lastUpdatedDisplay": "May 25, 2026 \u2014 03:47 PM UTC",
+  "lastUpdated": "2026-05-25T17:40:25.154302+00:00",
+  "lastUpdatedDisplay": "May 25, 2026 \u2014 05:40 PM UTC",
   "articleCount": 67,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Oil prices tumbled sharply on optimism about US-Iran deal progress regarding the Hormuz Strait, causing the dollar to weaken and risk assets to rally with US stocks hitting all-time highs. Bitcoin and crypto markets showed mixed signals with significant ETF outflows totaling over $2 billion in two weeks, while MicroStrategy paused Bitcoin purchases to focus on bond repurchases.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil collapse and dollar weakness contradict the Iran-war premium embedded in the current regime, while equity ATHs support risk-on sentiment but crypto outflows suggest rotation rather than broad risk appetite.",
-    "thresholdWatches": [],
+    "macroSummary": "Oil prices are falling sharply on reports of U.S.-Iran diplomatic progress potentially resolving Hormuz Strait tensions, while the dollar weakens and risk assets rally with U.S. stocks hitting all-time highs. Bitcoin and crypto markets show institutional rotation with major ETF outflows and notable selling from institutional holders, though analysts frame this as rotation rather than wholesale exit.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "The Iran-oil shock that was embedded in the current regime thesis is rapidly unwinding with diplomatic progress, while risk-on sentiment is strengthening rather than showing stagflationary stress.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil prices tumbling on U.S.-Iran deal prospects, potentially reversing the embedded war premium"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil prices tumbling on US-Iran Hormuz deal optimism directly contradicts the Iran-war oil shock assumption in current regime",
+        "signal": "Oil prices retreating sharply on U.S.-Iran diplomatic progress, undermining the embedded war shock in current regime thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar extending falls as geopolitical tensions ease, moving away from safe haven demand",
+        "signal": "Dollar weakening broadly against euro, sterling, and risk currencies as geopolitical tensions ease",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US stocks breaching all-time highs supports continued risk-on equity momentum",
-        "tag": "SUPPORTS"
+        "signal": "U.S. stocks breaching all-time highs suggests pure risk-on rather than stagflationary equity dynamics",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETFs shed $2.26 billion in two weeks indicating institutional rotation out of crypto",
+        "signal": "Major Bitcoin institutional outflows from BlackRock IBIT ($1B) and MicroStrategy strategy shifts signal crypto rotation",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "MicroStrategy pausing Bitcoin purchases for treasury bond focus suggests defensive positioning by major crypto adopter",
-        "tag": "CONTRADICTS"
+        "signal": "Ethereum whale opening $100M short position as ETH fails to reclaim $2,150 shows crypto weakness persisting",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained break below key levels invalidates Iran-war premium thesis",
-      "Watch DXY for approach to 100 threshold as dollar weakens on geopolitical easing",
-      "Consider reducing BMNR ladder size given crypto institutional outflows and rotation signals"
+      "Monitor oil price action closely - sustained decline below war premium levels invalidates key regime assumption",
+      "Watch dollar weakness against threshold levels as geopolitical risk premium unwinds",
+      "Consider reducing BMNR put ladder size if pure risk-on environment emerges rather than stagflationary backdrop"
     ]
   },
   "articles": [
+    {
+      "title": "The Institutional Bitcoin Exit Is Real: Analyst Exposes Who\u2019s On The Wrong Side Of The Trade",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T16:30:26+00:00",
+      "timeDisplay": "4:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:e247c8395094b:0-the-institutional-bitcoin-exit-is-real-analyst-exposes-who-s-on-the-wrong-side-of-the-trade/"
+    },
     {
       "title": "Here\u2019s how attackers drained $3.2M from Safe wallets on Ethereum and Base",
       "source": "invezz",
@@ -87,6 +101,14 @@
       "timestamp": "2026-05-25T14:28:12+00:00",
       "timeDisplay": "2:28 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:4ec409b73094b:0-coinbase-ceo-s-finance-wishlist-mirrors-company-s-product-roadmap/"
+    },
+    {
+      "title": "Bitcoin Price Analysis: The Final Shock Coming Towards $60K?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T14:27:58+00:00",
+      "timeDisplay": "2:27 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:debac2359094b:0-bitcoin-price-analysis-the-final-shock-coming-towards-60k/"
     },
     {
       "title": "Crude Futures Retreat As U.S.-Iran Progress Toward Deal \u2014 Market Talk",
@@ -143,6 +165,14 @@
       "timestamp": "2026-05-25T13:13:24+00:00",
       "timeDisplay": "1:13 PM",
       "link": "https://www.tradingview.com/news/coinpedia:c65bff676094b:0-ethereum-whale-opens-100m-short-position-as-eth-fails-to-reclaim-2150/"
+    },
+    {
+      "title": "Ethereum Foundation To Shrink In Size, Says ETH Co-Founder",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T13:06:00+00:00",
+      "timeDisplay": "1:06 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:950874865094b:0-ethereum-foundation-to-shrink-in-size-says-eth-co-founder/"
     },
     {
       "title": "Over 60% of Albertans Indicate No Interest in Separation From Canada \u2014 Market Talk",
@@ -297,28 +327,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260525000879:0/"
     },
     {
-      "title": "Bitcoin Price Rally Over $77,300 Amid Easing U.S.-Iran Conflict",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-25T09:30:49+00:00",
-      "timeDisplay": "9:30 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:05663befa094b:0-bitcoin-price-rally-over-77-300-amid-easing-u-s-iran-conflict/"
-    },
-    {
       "title": "BitMine Considered For Russell 1000 Inclusion",
       "source": "cryptoprowl",
       "color": "#00e5ff",
       "timestamp": "2026-05-25T09:19:00+00:00",
       "timeDisplay": "9:19 AM",
       "link": "https://www.tradingview.com/news/cryptoprowl:b4768a68e094b:0-bitmine-considered-for-russell-1000-inclusion/"
-    },
-    {
-      "title": "Bitcoin ETFs Lose $2.26 Billion In Two Weeks",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-25T09:12:00+00:00",
-      "timeDisplay": "9:12 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:0e01443d9094b:0-bitcoin-etfs-lose-2-26-billion-in-two-weeks/"
     },
     {
       "title": "Robinhood\u2019s Top Crypto Executive Departs Company",
@@ -567,14 +581,6 @@
       "timestamp": "2026-05-24T18:01:27+00:00",
       "timeDisplay": "6:01 PM",
       "link": "https://www.tradingview.com/news/the_block:2c2fa296e094b:0-vitalik-buterin-says-ethereum-foundation-will-be-a-smaller-ship-sell-less-eth-amid-researcher-exodus/"
-    },
-    {
-      "title": "Tom Lee\u2019s BMNR Is Sitting On $8 Billion In Unrealized Losses On Its Ethereum Position, Eyes A Russell 1000 Inclusion",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T16:08:08+00:00",
-      "timeDisplay": "4:08 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:f6a9c25eb094b:0/"
     }
   ]
 }

@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-05-25T01:58:05.571228+00:00",
-  "lastUpdatedDisplay": "May 25, 2026 \u2014 01:58 AM UTC",
-  "articleCount": 31,
+  "lastUpdated": "2026-05-25T06:22:07.814091+00:00",
+  "lastUpdatedDisplay": "May 25, 2026 \u2014 06:22 AM UTC",
+  "articleCount": 40,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are rallying on prospects of a U.S.-Iran deal that would reopen the Strait of Hormuz, driving oil prices down 5% and weakening the dollar amid broad risk-on sentiment. Crypto markets remain under pressure with Bitcoin testing technical support and BMNR's Ethereum position showing $7-8 billion in unrealized losses.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran deal prospect directly attacks the oil shock foundation of the current regime, with WTI falling 5% and risk-on flows contradicting the stagflationary undertone.",
+    "macroSummary": "Headlines are dominated by prospects of a US-Iran deal to reopen the Strait of Hormuz, driving oil prices down 5%, weakening the dollar, and spurring risk-on sentiment across Asian currencies and equities. Crypto markets show mixed signals with Ethereum gaining momentum while Bitcoin faces resistance, and Tom Lee's BMNR position sits on $8 billion in unrealized losses.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "The Iran deal optimism is directly undermining key Reflation pillars - oil falling 5% threatens the embedded war premium while dollar weakness contradicts the stagflationary undertone.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil falling 5% on Iran deal prospects moves away from stagflation threshold"
+        "level": "falling from $115",
+        "signal": "5% oil decline on Iran deal hopes pressures the war-premium component of the Reflation thesis"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil down 5% on Iran deal prospects directly reverses the war premium embedded in current regime",
+        "signal": "Oil prices falling 5% on Iran deal prospects directly contradicts the embedded oil shock assumption in current regime",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakness and risk-on flows in Asian currencies contradict stagflationary undertones",
+        "signal": "Dollar slumping on Middle East peace hopes undermines stagflationary undertone within Reflation thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bond prices soaring signals potential structural shift away from reflation dynamics",
-        "tag": "CONTRADICTS"
+        "signal": "Risk-on sentiment driving Asian currency strength and equity rallies supports cyclical bullish bias",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "BMNR sitting on $7-8B unrealized losses as ETH weakens below $2,100",
-        "tag": "NEUTRAL"
+        "signal": "Tom Lee's BMNR sitting on $8 billion unrealized losses signals major stress in ETH-linked positioning",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold rising 1.4% on deal hopes shows safe-haven demand shifting from inflation hedge to geopolitical hedge",
+        "signal": "Bond prices soaring signals potential structural shift that could pressure long-end stress narrative",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor WTI for sustained break below current levels as Iran deal develops",
-      "Reassess BMNR cash-secured put ladder strikes given mounting unrealized losses",
-      "Watch for regime flip signals as oil shock unwinds and risk-on flows accelerate"
+      "Monitor BMNR ladder closely given $8B unrealized losses - consider position sizing adjustments",
+      "Watch oil complex for sustained break below war-premium levels that could invalidate Reflation thesis",
+      "Reassess DXY positioning as dollar weakness on Iran deal could approach regime invalidation threshold"
     ]
   },
   "articles": [
+    {
+      "title": "Ethereum Price Builds Momentum For Another Bullish Surge Ahead",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T05:28:02+00:00",
+      "timeDisplay": "5:28 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:499b59a08094b:0-ethereum-price-builds-momentum-for-another-bullish-surge-ahead/"
+    },
+    {
+      "title": "Rupee gains to two-week high, forward premiums dip as oil prices slump",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T05:14:36+00:00",
+      "timeDisplay": "5:14 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N422079:0-rupee-gains-to-two-week-high-forward-premiums-dip-as-oil-prices-slump/"
+    },
+    {
+      "title": "Dollar softer as signs of deal to reopen Hormuz spur risk appetite",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T05:06:20+00:00",
+      "timeDisplay": "5:06 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N422068:0-dollar-softer-as-signs-of-deal-to-reopen-hormuz-spur-risk-appetite/"
+    },
+    {
+      "title": "Will they or won't they?",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42206E:0-will-they-or-won-t-they/"
+    },
+    {
+      "title": "China's yuan advances to 3-year high as investors weigh prospects of US-Iran deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T04:26:23+00:00",
+      "timeDisplay": "4:26 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42202N:0-china-s-yuan-advances-to-3-year-high-as-investors-weigh-prospects-of-us-iran-deal/"
+    },
+    {
+      "title": "MONDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T04:00:00+00:00",
+      "timeDisplay": "4:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:aa7f30ee6094b:0-monday-white-house-schedule-subject-to-additions-during-the-day/"
+    },
+    {
+      "title": "Bitcoin Price Climbs Into Resistance As Bears Defend Critical Levels",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T03:13:58+00:00",
+      "timeDisplay": "3:13 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3cee2de16094b:0-bitcoin-price-climbs-into-resistance-as-bears-defend-critical-levels/"
+    },
+    {
+      "title": "Rupee to extend rally on US-Iran deal hopes, RBI Governor's remarks aid sentiment",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T02:54:43+00:00",
+      "timeDisplay": "2:54 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42201P:0-rupee-to-extend-rally-on-us-iran-deal-hopes-rbi-governor-s-remarks-aid-sentiment/"
+    },
+    {
+      "title": "Stocks rise sharply, oil and dollar slip on Middle East peace hopes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-25T02:37:07+00:00",
+      "timeDisplay": "2:37 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N422001:0-stocks-rise-sharply-oil-and-dollar-slip-on-middle-east-peace-hopes/"
+    },
+    {
+      "title": "Iran Deal Progress Could Trigger Reversal in Dollar Positioning \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-25T02:35:00+00:00",
+      "timeDisplay": "2:35 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260524000682:0/"
+    },
     {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
@@ -285,14 +365,6 @@
       "timestamp": "2026-05-24T09:02:25+00:00",
       "timeDisplay": "9:02 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:609a83ca4094b:0-why-is-bitcoin-falling-despite-pro-crypto-kevin-warsh-becoming-fed-chair/"
-    },
-    {
-      "title": "Bitcoin bounces as Trump prepares to announce \u2018negotiated\u2019 Iran deal",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-24T03:20:00+00:00",
-      "timeDisplay": "3:20 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6761e1b42094b:0-bitcoin-bounces-as-trump-prepares-to-announce-negotiated-iran-deal/"
     }
   ]
 }

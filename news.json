@@ -1,45 +1,85 @@
 {
-  "lastUpdated": "2026-05-26T19:15:35.458153+00:00",
-  "lastUpdatedDisplay": "May 26, 2026 \u2014 07:15 PM UTC",
+  "lastUpdated": "2026-05-26T21:09:41.509554+00:00",
+  "lastUpdatedDisplay": "May 26, 2026 \u2014 09:09 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with Bitcoin volatility hitting 9-month lows amid $1B ETF outflows, while Iran tensions continue affecting energy markets despite WTI crude falling on peace deal hopes. Dallas Fed manufacturing data shows modest improvement with employment turning positive, but inflation pressures persist with prices paid index jumping to 42.7.",
+    "macroSummary": "Markets show mixed signals as US-Iran tensions oscillate between strike escalations and potential peace deal hopes, with yields falling on ceasefire optimism while dollar strengthens on military actions. Crypto markets face continued pressure with Bitcoin rangebound below $78K amid low volatility and significant ETF outflows, while oil prices recover some losses despite overall weakness on peace deal speculation.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran peace deal hopes are cooling oil pressures while manufacturing shows signs of stabilization, but persistent inflation expectations at 6.2% and rising input costs suggest reflation forces remain active.",
+    "regimePressureReason": "Iran tensions create contradictory flows - peace deal hopes are cooling yields (anti-reflationary) while military strikes support dollar strength and oil recovery (reflationary), with crypto weakness adding to risk-off undertones.",
     "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "WTI crude falls on Iran peace deal hopes, reducing immediate stagflation pressure from energy sector",
+        "signal": "US yields falling on Iran peace deal hopes directly contradicts reflationary pressure from geopolitical tensions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dallas Fed prices paid index jumps to 42.7 from 37.0, indicating ongoing input cost inflation",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Consumer 1-year inflation expectations hold steady at 6.2%, well above Fed target",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin volatility hits 9-month low with major ETF outflows suggesting risk appetite cooling",
+        "signal": "Dollar strengthening on US strikes against Iran while broader bearish USD outlook emerges shows conflicted currency dynamics",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Manufacturing employment turns positive at 0.2 vs -0.9 prior, showing labor market resilience",
+        "signal": "Oil recovering but still falling overall on peace deal speculation reduces stagflationary energy pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin volatility at 9-month lows with $1 billion ETF outflows indicates risk-off sentiment in crypto despite equity resilience",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Dallas Fed manufacturing employment turning positive suggests some economic momentum recovery",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor Iran peace deal developments closely - sustained de-escalation could reduce oil risk premium significantly",
-      "BMNR ladder may benefit from crypto volatility compression, but watch for further ETF outflow pressure",
-      "Consider reducing cyclical exposure if Iran tensions continue to ease and energy inflation moderates"
+      "Monitor BMNR performance closely as crypto weakness and low ETH volatility may compress option premiums in put ladder strategy",
+      "Watch for oil price direction confirmation - sustained weakness below geopolitical floors would reduce stagflation thesis",
+      "Prepare for potential regime reassessment if Iran peace deal materializes and breaks oil/yield dynamics"
     ]
   },
   "articles": [
+    {
+      "title": "US yields fall on hopes potential Strait of Hormuz deal can cool inflation",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-26T20:18:25+00:00",
+      "timeDisplay": "8:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4230Z8:0-us-yields-fall-on-hopes-potential-strait-of-hormuz-deal-can-cool-inflation/"
+    },
+    {
+      "title": "Dollar climbs as US strikes on Iran dent ceasefire optimism",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-26T19:56:30+00:00",
+      "timeDisplay": "7:56 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N423104:0-dollar-climbs-as-us-strikes-on-iran-dent-ceasefire-optimism/"
+    },
+    {
+      "title": "Ethereum Volatility Hits Multi-Month Low: Rally Next or Further Downside?",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T19:53:55+00:00",
+      "timeDisplay": "7:53 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:b33ea8bf1094b:0-ethereum-volatility-hits-multi-month-low-rally-next-or-further-downside/"
+    },
+    {
+      "title": "Cryptocurrencies Add to Losses in Afternoon Trading \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T19:22:00+00:00",
+      "timeDisplay": "7:22 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260526007721:0/"
+    },
+    {
+      "title": "Oil Recovers Some Losses on U.S.-Iran Skirmishes \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T19:17:00+00:00",
+      "timeDisplay": "7:17 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260526007685:0/"
+    },
     {
       "title": "Bitcoin Volatility Hits 9-Month Low As $1 Billion ETF Outflows Mount",
       "source": "gurufocus",
@@ -199,6 +239,14 @@
       "timestamp": "2026-05-26T15:13:43+00:00",
       "timeDisplay": "3:13 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4230OJ:0-dollar-firms-as-fresh-us-strikes-dim-iran-ceasefire-hopes/"
+    },
+    {
+      "title": "Strive Asset Management Lifts Bitcoin Holdings To 16,500 Tokens  ",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T15:13:00+00:00",
+      "timeDisplay": "3:13 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:af23dcb1e094b:0-strive-asset-management-lifts-bitcoin-holdings-to-16-500-tokens/"
     },
     {
       "title": "Strategy buys back $1.5B of debt at discount, cuts outstanding notes to $6.7B",
@@ -377,14 +425,6 @@
       "link": "https://www.tradingview.com/news/the_block:e50f20d53094b:0-bitmine-capitalizes-on-ethereum-price-drop-buys-over-100-000-eth-as-5-supply-goal-nears/"
     },
     {
-      "title": "Small-Cap Stock Riot Platforms Is Surfing The A.I. Infrastructure Wave",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T13:37:00+00:00",
-      "timeDisplay": "1:37 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:ca36bbc85094b:0-small-cap-stock-riot-platforms-is-surfing-the-a-i-infrastructure-wave/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - May 26",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -399,14 +439,6 @@
       "timestamp": "2026-05-26T13:13:28+00:00",
       "timeDisplay": "1:13 PM",
       "link": "https://www.tradingview.com/news/moneycontrol:19ce62f64094b:0-gold-drops-rs-2-800-to-rs-1-62-lakh-per-10gm-amid-uncertainties-on-west-asia-peace-deal/"
-    },
-    {
-      "title": "Bitcoin Price Could Be Entering a Dangerous Zone, Here\u2019s Why",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T13:12:47+00:00",
-      "timeDisplay": "1:12 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:50b1677c4094b:0-bitcoin-price-could-be-entering-a-dangerous-zone-here-s-why/"
     },
     {
       "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.39 Million Tokens, and Total Crypto and Total Cash Holdings of $12.3 Billion",
@@ -487,6 +519,14 @@
       "timestamp": "2026-05-26T12:55:00+00:00",
       "timeDisplay": "12:55 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260526004418:0/"
+    },
+    {
+      "title": "Many Canadians Plan to Spend Less This Summer as Fuel Costs Bite \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T12:37:00+00:00",
+      "timeDisplay": "12:37 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260526004225:0/"
     },
     {
       "title": "Key facts: ETH Fails $2,150; $222.8M Outflows; Harvard Exit, Goldman -70%",
@@ -599,46 +639,6 @@
       "timestamp": "2026-05-26T04:48:39+00:00",
       "timeDisplay": "4:48 AM",
       "link": "https://www.tradingview.com/news/newsbtc:a6e368826094b:0-ethereum-price-buying-pressure-softens-traders-turn-increasingly-cautious/"
-    },
-    {
-      "title": "Imminent Hike Unlikely for Thai Central Bank \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T03:44:00+00:00",
-      "timeDisplay": "3:44 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260525003321:0/"
-    },
-    {
-      "title": "Gold Eases as Middle East Uncertainty Persists",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T02:55:58+00:00",
-      "timeDisplay": "2:55 AM",
-      "link": "https://www.tradingview.com/news/te_news:553593:0-gold-eases-as-middle-east-uncertainty-persists/"
-    },
-    {
-      "title": "Oil Edges Up on Middle East Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T02:30:45+00:00",
-      "timeDisplay": "2:30 AM",
-      "link": "https://www.tradingview.com/news/te_news:553579:0-oil-edges-up-on-middle-east-uncertainty/"
-    },
-    {
-      "title": "US 10-Year Yield Declines in Catch-Up Trade",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T02:16:48+00:00",
-      "timeDisplay": "2:16 AM",
-      "link": "https://www.tradingview.com/news/te_news:553568:0-us-10-year-yield-declines-in-catch-up-trade/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-26T02:02:09+00:00",
-      "timeDisplay": "2:02 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42301G:0-commodities-intraday-targets-key-levels/"
     }
   ]
 }

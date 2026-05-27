@@ -1,53 +1,48 @@
 {
-  "lastUpdated": "2026-05-27T22:55:32.600023+00:00",
-  "lastUpdatedDisplay": "May 27, 2026 \u2014 10:55 PM UTC",
+  "lastUpdated": "2026-05-27T23:58:48.643998+00:00",
+  "lastUpdatedDisplay": "May 27, 2026 \u2014 11:58 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Headlines are dominated by hopes for a U.S.-Iran deal that could ease oil tensions, though President Trump later cast doubt on any imminent agreement while maintaining maximum pressure on Iran. Fed Governor Cook highlighted upside inflation risks and readiness to raise rates if disinflation stalls, while crypto markets show mixed signals with Bitcoin struggling and Ethereum positioning for potential moves.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Iran deal hopes initially pressured oil prices and supported risk-on sentiment, but Trump's rejection of concessions and Fed hawkish tilt on inflation create cross-currents that neither strongly confirm nor challenge the Reflation regime.",
+    "macroSummary": "Market sentiment whipsawed on U.S.-Iran deal hopes that ultimately failed to materialize, with oil initially falling then recovering as Trump maintained maximum pressure stance. Fed's Cook highlighted inflation moving in wrong direction with core PCE at 3.3% while warning of potential rate hikes if disinflation stalls.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Iran deal failure restores oil shock risks while Fed's hawkish inflation warnings and yen sliding toward intervention zone create multiple stagflationary pressure points.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen slides toward intervention zone as Iran war tensions lift dollar despite deal hopes"
-      },
-      {
-        "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil futures fall on U.S.-Iran agreement hopes, though Trump later rejected easing sanctions"
+        "signal": "Yen slides toward intervention zone amid Iran war tensions lifting dollar"
       }
     ],
     "keySignals": [
       {
-        "signal": "Fed's Cook says inflation moving in wrong direction with core PCE at 3.3%, prepared to raise rates if no disinflation",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Oil futures fall on U.S.-Iran deal hopes but Trump rejects easing sanctions and maintains maximum pressure",
+        "signal": "Fed's Cook warns inflation moving wrong direction with core PCE at 3.3%, prepared to raise rates if no disinflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar ticks higher and Treasury yields recover as Iran deal fails to materialize after initial optimism",
-        "tag": "NEUTRAL"
+        "signal": "U.S.-Iran deal hopes collapsed as Trump maintains maximum pressure without concessions, restoring oil shock risk",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Yen slides toward intervention zone as geopolitical tensions support dollar strength",
+        "signal": "Yen sliding toward 160 intervention zone as dollar strengthens on Middle East tensions",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin struggles to hold uptrend with miner inflows to exchanges suggesting selling pressure",
+        "signal": "Oil futures initially fell on Iran deal hopes but recovered as diplomatic breakthrough failed to materialize",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Treasury yields and dollar recovered after Iran deal speculation proved premature",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil volatility around Iran deal developments for Stagflation threshold breaks",
-      "Watch USDJPY intervention zone approach as potential Risk-Off catalyst",
-      "Prepare for potential Fed hawkish pivot if Cook's inflation concerns broaden to other officials"
+      "Monitor USDJPY closely approaching 160 intervention threshold - potential Risk-Off catalyst",
+      "Reassess BMNR ladder strikes given renewed stagflationary pressures from Iran situation",
+      "Prepare for potential regime shift as oil shock risk persists alongside Fed hawkishness"
     ]
   },
   "articles": [
@@ -412,6 +407,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260527006016:0/"
     },
     {
+      "title": "Crude Oil Prices Slide on US-Iran Peace Optimism",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T15:31:00+00:00",
+      "timeDisplay": "3:31 PM",
+      "link": "https://www.tradingview.com/news/barchart:e8e04822b094b:0-crude-oil-prices-slide-on-us-iran-peace-optimism/"
+    },
+    {
       "title": "Yen nears intervention level; dollar edges higher as Iran conflict weighs on markets",
       "source": "reuters",
       "color": "#ff6d00",
@@ -642,14 +645,6 @@
       "timestamp": "2026-05-27T11:29:26+00:00",
       "timeDisplay": "11:29 AM",
       "link": "https://www.tradingview.com/news/the_block:091edbaf6094b:0-security-researchers-flag-ongoing-stake-dao-exploit-after-attacker-mints-trillions-of-vsdcrv/"
-    },
-    {
-      "title": "Cryptos Slip As Bitcoin Spot ETF Outflows Swell",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T11:26:28+00:00",
-      "timeDisplay": "11:26 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:824cf51b36afa:0-cryptos-slip-as-bitcoin-spot-etf-outflows-swell/"
     }
   ]
 }

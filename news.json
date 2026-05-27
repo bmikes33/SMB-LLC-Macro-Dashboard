@@ -1,51 +1,88 @@
 {
-  "lastUpdated": "2026-05-27T21:19:48.226952+00:00",
-  "lastUpdatedDisplay": "May 27, 2026 \u2014 09:19 PM UTC",
+  "lastUpdated": "2026-05-27T22:55:32.600023+00:00",
+  "lastUpdatedDisplay": "May 27, 2026 \u2014 10:55 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets experienced whipsaw action as initial optimism about a potential U.S.-Iran deal drove oil lower and risk assets higher, but Trump's cabinet meeting comments dashed those hopes, causing Treasury yields and the dollar to recover. Fed's Cook signaled a hawkish tilt, noting inflation moving in the wrong direction with core PCE at 3.3% and risks tilted toward higher inflation.",
+    "macroSummary": "Headlines are dominated by hopes for a U.S.-Iran deal that could ease oil tensions, though President Trump later cast doubt on any imminent agreement while maintaining maximum pressure on Iran. Fed Governor Cook highlighted upside inflation risks and readiness to raise rates if disinflation stalls, while crypto markets show mixed signals with Bitcoin struggling and Ethereum positioning for potential moves.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran deal hopes temporarily eased oil pressure but Trump's hardline stance restored geopolitical risk, while Fed's Cook's hawkish comments on rising inflation risks support the reflation narrative.",
+    "regimePressureReason": "Iran deal hopes initially pressured oil prices and supported risk-on sentiment, but Trump's rejection of concessions and Fed hawkish tilt on inflation create cross-currents that neither strongly confirm nor challenge the Reflation regime.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen slides toward intervention zone as Iran war tensions lift dollar"
+        "signal": "Yen slides toward intervention zone as Iran war tensions lift dollar despite deal hopes"
+      },
+      {
+        "indicator": "Oil (WTI)",
+        "level": "$115",
+        "signal": "Oil futures fall on U.S.-Iran agreement hopes, though Trump later rejected easing sanctions"
       }
     ],
     "keySignals": [
       {
-        "signal": "Fed's Cook notes inflation 'clearly moving in the wrong direction' with core PCE at 3.3% and risks tilted toward higher inflation",
+        "signal": "Fed's Cook says inflation moving in wrong direction with core PCE at 3.3%, prepared to raise rates if no disinflation",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil futures fell on U.S.-Iran deal hopes but recovered after Trump dashed deal prospects at cabinet meeting",
+        "signal": "Oil futures fall on U.S.-Iran deal hopes but Trump rejects easing sanctions and maintains maximum pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar ticks higher and Treasury yields recover as Iran deal fails to materialize after initial optimism",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Yen sliding toward BOJ intervention zone as geopolitical tensions support dollar strength",
+        "signal": "Yen slides toward intervention zone as geopolitical tensions support dollar strength",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Treasury yields and dollar recovered after initial decline as Iran deal hopes faded",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Fed's Cook prepared to raise rates if no disinflation occurs, signaling potential policy tightening",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin struggles to hold uptrend with miner inflows to exchanges suggesting selling pressure",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely as approach to 160 intervention zone could trigger risk-off catalyst",
-      "Watch for oil price stability around current levels - sustained moves toward $115 would confirm stagflation tilt",
-      "BMNR ladder strategy may face pressure from hawkish Fed stance and rising rate expectations"
+      "Monitor oil volatility around Iran deal developments for Stagflation threshold breaks",
+      "Watch USDJPY intervention zone approach as potential Risk-Off catalyst",
+      "Prepare for potential Fed hawkish pivot if Cook's inflation concerns broaden to other officials"
     ]
   },
   "articles": [
+    {
+      "title": "Glassnode Warns Nearly 30% Of Bitcoin Supply Could Face Future Quantum Risks",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T22:30:01+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:c82d7d166094b:0-glassnode-warns-nearly-30-of-bitcoin-supply-could-face-future-quantum-risks/"
+    },
+    {
+      "title": "Bitcoin miner inflows to Binance soar as BTC struggles to hold uptrend: Is $70K next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T22:04:13+00:00",
+      "timeDisplay": "10:04 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:f6e1db593094b:0-bitcoin-miner-inflows-to-binance-soar-as-btc-struggles-to-hold-uptrend-is-70k-next/"
+    },
+    {
+      "title": "US Crude Inventories Extend Decline",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T21:41:13+00:00",
+      "timeDisplay": "9:41 PM",
+      "link": "https://www.tradingview.com/news/te_news:554184:0-us-crude-inventories-extend-decline/"
+    },
+    {
+      "title": "3 Massive Things That Could Happen After SpaceX Goes Public in June 2026",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T21:30:00+00:00",
+      "timeDisplay": "9:30 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:c5815ee57094b:0-3-massive-things-that-could-happen-after-spacex-goes-public-in-june-2026/"
+    },
     {
       "title": "U.S. Dollar Ticks Higher As Crude Oil Plunges Amid Rising Optimism On A U.S.-Iran Deal",
       "source": "dpa_afx",
@@ -228,7 +265,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-27T18:04:00+00:00",
       "timeDisplay": "6:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260527007502:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260527007503:0/"
     },
     {
       "title": "Treasury Yields, Dollar Recover as U.S.-Iran Deal Fails to Materialize \u2014 Market Talk",
@@ -372,7 +409,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-27T15:33:00+00:00",
       "timeDisplay": "3:33 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260527006017:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260527006016:0/"
     },
     {
       "title": "Yen nears intervention level; dollar edges higher as Iran conflict weighs on markets",
@@ -511,28 +548,12 @@
       "link": "https://www.tradingview.com/news/macenews:089219b0e094b:0-us-richmond-fed-manufacturing-new-orders-index-17-in-may-vs-8-in-april-4-in-march/"
     },
     {
-      "title": "Bitcoin\u2019s 35% Crash Signal Just Returned But a Whale Bought $66 Million Anyway",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:501872802094b:0-bitcoin-s-35-crash-signal-just-returned-but-a-whale-bought-66-million-anyway/"
-    },
-    {
       "title": "Gold Falls as Optimism Over Swift U.S.-Iran Agreement Fades \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-27T13:51:00+00:00",
       "timeDisplay": "1:51 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260527005138:0/"
-    },
-    {
-      "title": "Elon Musk\u2019s SpaceX Bitcoin Holdings Could Eclipse Public Companies After IPO Despite Tiny Valuation Share, Grayscale Says",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T13:36:17+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:9b0f182be094b:0-elon-musk-s-spacex-bitcoin-holdings-could-eclipse-public-companies-after-ipo-despite-tiny-valuation-share-grayscale-says/"
     },
     {
       "title": "Gold Prices Fall Nearly 2%",
@@ -583,14 +604,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4240LL:0-benchmark-treasury-yield-breakout-fails-range-reasserts/"
     },
     {
-      "title": "China\u2019s top court to study rules for crypto and AI cases",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T12:58:46+00:00",
-      "timeDisplay": "12:58 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:aa0fd6ef6094b:0-china-s-top-court-to-study-rules-for-crypto-and-ai-cases/"
-    },
-    {
       "title": "WTI Plunges as Iran Pledges Hormuz Shipping Recovery",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -637,14 +650,6 @@
       "timestamp": "2026-05-27T11:26:28+00:00",
       "timeDisplay": "11:26 AM",
       "link": "https://www.tradingview.com/news/dpa_afx:824cf51b36afa:0-cryptos-slip-as-bitcoin-spot-etf-outflows-swell/"
-    },
-    {
-      "title": "China Just Put A Two-Year Expiry Date On Crypto Access For 1.4 Billion People",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T11:04:21+00:00",
-      "timeDisplay": "11:04 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6b6d515f5094b:0-china-just-put-a-two-year-expiry-date-on-crypto-access-for-1-4-billion-people/"
     }
   ]
 }

@@ -1,45 +1,59 @@
 {
-  "lastUpdated": "2026-05-26T22:47:13.952045+00:00",
-  "lastUpdatedDisplay": "May 26, 2026 \u2014 10:47 PM UTC",
+  "lastUpdated": "2026-05-27T00:01:25.718365+00:00",
+  "lastUpdatedDisplay": "May 27, 2026 \u2014 12:01 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US-Iran tensions escalated with fresh US strikes dimming ceasefire hopes, causing mixed market reactions with oil recovering some losses and dollar firming. Bitcoin and crypto markets showed continued weakness with massive ETF outflows, collapsing volumes, and volatility hitting multi-month lows amid ranging price action.",
+    "macroSummary": "Markets show mixed signals as US-Iran tensions continue with fresh strikes dampening ceasefire hopes, while oil prices fall on peace deal speculation and bond yields ease. Dollar firms amid geopolitical uncertainty, while crypto markets experience significant volume collapses and continued weakness below key levels.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran escalation supports oil/reflation dynamics but crypto weakness and falling bond yields suggest risk-off undertones emerging within the broader reflation framework.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Oil falling despite ongoing Iran strikes contradicts the war premium thesis, while bond yields easing suggests disinflation forces may be winning over reflation.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar firming amid Iran strikes but bearish outlook noted - watch for sustained move toward 100"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Fresh US strikes on Iran escalate tensions and dim ceasefire hopes, supporting continued oil price elevation",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Bitcoin ETF outflows mount to $1 billion with spot volume collapsing 81% since October, indicating crypto market stress",
+        "signal": "Oil prices falling despite fresh US strikes on Iran contradicts embedded war premium assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US bond yields falling on hopes of Strait of Hormuz deal cooling inflation pressures",
+        "signal": "Bond yields easing on inflation cooling hopes challenges reflation thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar firming as geopolitical tensions increase, but some sources cite bearish USD outlook",
+        "signal": "Dollar firming but bearish outlook emerging approaches DXY 100 threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Crypto volatility at multi-month lows with massive volume collapse suggests risk appetite waning",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bill Dudley warns missed 2% inflation targets could undermine Fed confidence",
         "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Oil recovering losses on US-Iran skirmishes but WTI crude also reported falling on peace deal hopes",
-        "tag": "MIXED"
       }
     ],
     "actionItems": [
-      "Monitor BMNR performance closely given crypto sector weakness and ETH volatility at multi-month lows",
-      "Watch for potential crypto correlation breaks if geopolitical tensions continue escalating",
-      "Consider tightening stops on cyclical positions if bond yield declines persist despite Iran tensions"
+      "Monitor oil closely - if WTI continues falling despite Iran escalation, war premium thesis is breaking down",
+      "Watch DXY approach to 100 level as dollar shows mixed signals",
+      "BMNR ladder may face headwinds if crypto weakness persists with low volatility regime"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Steadies Amid Ongoing US-Iran Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T23:40:31+00:00",
+      "timeDisplay": "11:40 PM",
+      "link": "https://www.tradingview.com/news/te_news:553858:0-oil-steadies-amid-ongoing-us-iran-uncertainty/"
+    },
     {
       "title": "Bitcoin Spot Volume Collapses 81% Since October 10: History Points To A Rare Setup",
       "source": "newsbtc",
@@ -177,6 +191,14 @@
       "link": "https://www.tradingview.com/news/cointelegraph:51c0e9a3a094b:0-bitcoin-liquidation-hunts-control-btc-at-77k-amid-new-iran-peace-deal-doubts/"
     },
     {
+      "title": "Sugar Prices Pressured by Weakness in Crude Oil",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T16:26:06+00:00",
+      "timeDisplay": "4:26 PM",
+      "link": "https://www.tradingview.com/news/barchart:3ceadde74094b:0-sugar-prices-pressured-by-weakness-in-crude-oil/"
+    },
+    {
       "title": "Oil Extends Gains As Strikes Add Tension to U.S.-Iran Talks \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -215,6 +237,14 @@
       "timestamp": "2026-05-26T15:49:11+00:00",
       "timeDisplay": "3:49 PM",
       "link": "https://www.tradingview.com/news/stocktwits:8540d0763094b:0-strategy-cuts-convertible-debt-by-18-bitmine-stakes-10b-in-eth-mstr-and-bmnr-move-high/"
+    },
+    {
+      "title": "Crude Oil Prices Fall on Hopes US-Iran War Near an End",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-26T15:37:13+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/barchart:26d43d31b094b:0-crude-oil-prices-fall-on-hopes-us-iran-war-near-an-end/"
     },
     {
       "title": "Bitcoin Volume Crashes 81%, But That Could Actually Be Bullish for BTC Price",
@@ -615,30 +645,6 @@
       "timestamp": "2026-05-26T07:19:00+00:00",
       "timeDisplay": "7:19 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260526000873:0/"
-    },
-    {
-      "title": "Ethereum Price Roadmap For The Rest Of 2026: Bull, Base, And Bear Scenarios Unpacked",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T07:00:16+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:b4587a090094b:0-ethereum-price-roadmap-for-the-rest-of-2026-bull-base-and-bear-scenarios-unpacked/"
-    },
-    {
-      "title": "Oil Rises 2% as U.S. Strikes on Iran Raise Uncertainty \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-26T06:43:00+00:00",
-      "timeDisplay": "6:43 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260526000685:0/"
-    },
-    {
-      "title": "US bonds rally on hope Strait deal cools inflation",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-26T06:01:19+00:00",
-      "timeDisplay": "6:01 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N423055:0-us-bonds-rally-on-hope-strait-deal-cools-inflation/"
     }
   ]
 }

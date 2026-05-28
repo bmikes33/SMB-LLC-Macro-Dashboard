@@ -1,51 +1,67 @@
 {
-  "lastUpdated": "2026-05-28T21:53:21.983341+00:00",
-  "lastUpdatedDisplay": "May 28, 2026 \u2014 09:53 PM UTC",
+  "lastUpdated": "2026-05-28T23:12:16.822194+00:00",
+  "lastUpdatedDisplay": "May 28, 2026 \u2014 11:12 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets are responding positively to reports of a US-Iran ceasefire deal outline, with the dollar weakening, yields falling, and oil markets anticipating increased supply from strait reopening. Treasury Secretary Bessent emphasized oil market rebalancing and substantial price declines already underway, while economic data shows modest inventory draws and stable inflation readings.",
+    "macroSummary": "Reports of a potential US-Iran ceasefire deal are driving dollar weakness, falling yields, and rising hopes for oil market normalization as Treasury Secretary Bessent suggests 2,000 trapped tankers could resume Strait traffic. Bitcoin rallied back above $73K on peace deal hopes while Ethereum continues struggling below $2,000, and oil inventories declined less than expected as markets await confirmation of the agreement.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The Iran ceasefire progress directly undermines the oil shock premise of the Reflation regime, with Bessent explicitly stating oil prices have come down substantially and will continue falling.",
+    "regimePressureReason": "The potential Iran deal directly challenges the war-premium oil shock that was embedded in the Reflation regime, with Bessent explicitly stating oil will be 'very well supplied' and prices will come down substantially.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Bessent says oil prices down substantially with 2,000 trapped tankers ready to flow through strait"
+        "indicator": "DXY",
+        "level": "< 100",
+        "signal": "Dollar falling on Iran deal reports - approaching potential regime flip threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "US-Iran ceasefire deal outline causing dollar weakness and yield declines, contradicting reflation dynamics",
+        "signal": "Bessent says oil market will be 'very well supplied' after 2,000 tankers resume Strait traffic, contradicting war-premium oil assumptions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bessent states oil market already balancing and prices will improve significantly after strait reopens",
+        "signal": "Dollar weakening on Iran ceasefire reports approaches DXY 100 regime flip threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "US yields falling as Iran deal reduces geopolitical risk premium embedded in rates",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin recovering above $73K on Iran peace hopes while crypto regulation uncertainty persists",
+        "signal": "Bitcoin whale and dolphin accumulation stalled with weak demand despite peace rally",
         "tag": "NEUTRAL"
       },
       {
-        "signal": "Crude inventories fell 3.3M barrels, less supportive for oil prices than expected larger draw",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Atlanta Fed GDPNow revised down to 3.8% from 4.3%, showing some growth moderation",
-        "tag": "NEUTRAL"
+        "signal": "Oil inventories declined less than expected as market anticipates supply normalization",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained break below recent lows would invalidate the Iran war shock premise",
-      "BMNR ladder may benefit from crypto recovery on geopolitical relief, but watch for regulatory overhang",
-      "Reassess cyclical equity exposure if Iran deal materializes and removes oil premium"
+      "Monitor DXY closely for break below 100 as Iran deal could trigger dollar regime shift",
+      "Reassess BMNR ladder timing as crypto showing mixed signals despite peace rally",
+      "Prepare for potential regime shift away from Reflation if oil war premium fully unwinds"
     ]
   },
   "articles": [
+    {
+      "title": "Fidelity Digital Assets highlights 'growing evidence' of shift from dollar-based systems",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T22:32:50+00:00",
+      "timeDisplay": "10:32 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:21b02256b094b:0-fidelity-digital-assets-highlights-growing-evidence-of-shift-from-dollar-based-systems/"
+    },
+    {
+      "title": "Bit Digital buys $20M worth of Ethereum, expands treasury to 158K ETH",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T21:32:40+00:00",
+      "timeDisplay": "9:32 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0f96e39a4094b:0-bit-digital-buys-20m-worth-of-ethereum-expands-treasury-to-158k-eth/"
+    },
     {
       "title": "Gemini Seeks To Reverse $5 Million Crypto Settlement",
       "source": "gurufocus",
@@ -74,8 +90,8 @@
       "title": "Trump claims he can \u2018future proof\u2019 crypto regulation with CLARITY Act",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-05-28T20:32:42+00:00",
-      "timeDisplay": "8:32 PM",
+      "timestamp": "2026-05-28T20:35:00+00:00",
+      "timeDisplay": "8:35 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:2cf1f40c2094b:0-trump-claims-he-can-future-proof-crypto-regulation-with-clarity-act/"
     },
     {
@@ -543,14 +559,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4250ZE:0-us-yields-ease-off-highs-on-middling-economic-data/"
     },
     {
-      "title": "Bitcoin bids farewell to CME futures gaps with $67K still on the radar",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T13:52:26+00:00",
-      "timeDisplay": "1:52 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:bf2cd282f094b:0-bitcoin-bids-farewell-to-cme-futures-gaps-with-67k-still-on-the-radar/"
-    },
-    {
       "title": "Gold prices pare losses after US inflation data",
       "source": "reuters",
       "color": "#ff6d00",
@@ -637,14 +645,6 @@
       "timestamp": "2026-05-28T11:50:07+00:00",
       "timeDisplay": "11:50 AM",
       "link": "https://www.tradingview.com/news/newsbtc:f377b6d9b094b:0-samsung-just-bet-408-million-on-south-korea-s-top-crypto-exchange-and-it-s-not-alone/"
-    },
-    {
-      "title": "Top Bank Says Ethereum\u2019s Slump May Be Masking Major Upside",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T11:43:00+00:00",
-      "timeDisplay": "11:43 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:3e1fd7c97094b:0-top-bank-says-ethereum-s-slump-may-be-masking-major-upside/"
     }
   ]
 }

@@ -1,56 +1,357 @@
 {
-  "lastUpdated": "2026-05-28T09:45:46.129140+00:00",
-  "lastUpdatedDisplay": "May 28, 2026 \u2014 09:45 AM UTC",
+  "lastUpdated": "2026-05-28T12:57:57.816211+00:00",
+  "lastUpdatedDisplay": "May 28, 2026 \u2014 12:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Fresh US airstrikes on Iran have triggered significant risk-off sentiment across markets, with Bitcoin falling to six-week lows near $72,000, gold hitting two-month lows despite traditional safe-haven status, and oil climbing on escalating Middle East tensions. The dollar is strengthening to one-week highs while Treasury yields rise as investors price in heightened inflation risks from the conflict.",
+    "macroSummary": "Mixed economic data shows Q1 GDP revised down to 1.6% vs 2.1% expected while April PCE inflation came in as expected at 3.8% y/y, with core PCE at 3.3%. Risk assets including Bitcoin and Ethereum are selling off amid geopolitical tensions and ETF outflows, while jobless claims ticked higher.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The Iran conflict escalation is generating classic stagflationary pressures (rising oil, rising yields, risk-off in equities) while crypto assets are experiencing significant outflows and liquidations, challenging the reflation thesis.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil (WTI)",
-        "level": "toward $115",
-        "signal": "Oil climbing on renewed US-Iran tensions, approaching stagflation threshold"
-      },
-      {
-        "indicator": "US30Y",
-        "level": "toward 5.10%",
-        "signal": "Treasury yields rising amid new Mideast strikes and inflation fears"
-      }
-    ],
+    "regimePressureReason": "GDP downward revision to 1.6% combined with persistent 3.8% PCE inflation and risk asset selloffs suggests stagflationary pressures are building rather than clean reflation.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Bitcoin ETF outflows accelerating with BlackRock seeing second-largest outflows since debut",
+        "signal": "Q1 GDP revised sharply lower to 1.6% vs 2.1% expected, indicating growth momentum weakening",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crypto liquidations approaching $1 billion in 24 hours as risk-off sentiment dominates",
+        "signal": "PCE inflation holding at 3.8% y/y with Q1 core PCE jumping to 4.4% vs 2.7% in Q4",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold hitting two-month lows despite geopolitical tensions, suggesting inflation fears trumping safe-haven demand",
+        "signal": "Bitcoin falls below $75K with near-record ETF outflows of $733M amid geopolitical tensions",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar strengthening to one-week highs as Gulf tensions flare",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Real disposable personal income declined 0.5% m/m while savings rate compressed to 2.6%",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil climbing on renewed US-Iran tensions, feeding inflation expectations",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Core capital goods orders fell 1.1% in April, suggesting business investment cooling",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR trust performance closely as crypto risk-off accelerates - consider tightening put strike selection",
-      "Prepare for potential regime shift if oil breaks toward $115 or yields approach 5.10% on sustained Iran escalation",
-      "Watch for VIX move above 22 if equity risk-off spreads beyond crypto markets"
+      "Consider reducing BMNR ladder exposure as crypto showing institutional outflow stress",
+      "Monitor for stagflation regime shift given weak growth + persistent inflation combination",
+      "Prepare for potential defensive positioning if growth continues to disappoint"
     ]
   },
   "articles": [
+    {
+      "title": "PCE Report: Fed's Preferred Inflation Gauge Rises 3.8% In April, Q1 GDP Revised Downward To 1.6%",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:48:47+00:00",
+      "timeDisplay": "12:48 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:22a10b218094b:0-pce-report-fed-s-preferred-inflation-gauge-rises-3-8-in-april-q1-gdp-revised-downward-to-1-6/"
+    },
+    {
+      "title": "HEADS UP: NYFED'S WILLIAMS REMARKS IN ICELAND ON PRODUCTIVITY COMING UP AT 8:55A ET",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:41:00+00:00",
+      "timeDisplay": "12:41 PM",
+      "link": "https://www.tradingview.com/news/macenews:c7266547e094b:0-heads-up-nyfed-s-williams-remarks-in-iceland-on-productivity-coming-up-at-8-55a-et/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED WKLY INITIAL CLAIMS 191,134, +4,796; UNADJUSTED INSURED UEMP RATE TWO WKS AGO 1.1%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:2919d90a8094b:0-us-initial-claims-for-jobless-benefits-unadjusted-wkly-initial-claims-191-134-4-796-unadjusted-insured-uemp-rate-two-wks-ago-1-1-unchanged/"
+    },
+    {
+      "title": "US Q1 CORE PCE PRICE INDEX +4.4% VS +2.7% IN Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:a6633b2da094b:0-us-q1-core-pce-price-index-4-4-vs-2-7-in-q4/"
+    },
+    {
+      "title": "US Q1 PCE PRICE INDEX +4.5% VS +2.9% IN Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:35:00+00:00",
+      "timeDisplay": "12:35 PM",
+      "link": "https://www.tradingview.com/news/macenews:dd4f9979a094b:0-us-q1-pce-price-index-4-5-vs-2-9-in-q4/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: MARCH INCOME +0.5% M/M (VS +0.6% PREVIOUS REPORT)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:34:00+00:00",
+      "timeDisplay": "12:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:9beea18eb094b:0-more-u-s-april-personal-income-spending-march-income-0-5-m-m-vs-0-6-previous-report/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: MARCH SPENDING +0.3% M/M (VS +0.9% PREVIOUS REPORT)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:34:00+00:00",
+      "timeDisplay": "12:34 PM",
+      "link": "https://www.tradingview.com/news/macenews:21d8ffdb3094b:0-more-u-s-april-personal-income-spending-march-spending-0-3-m-m-vs-0-9-previous-report/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: GOODS SPENDING -0.1% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:3e465db49094b:0-more-u-s-april-personal-income-spending-goods-spending-0-1-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: SAVINGS RATE 2.6% VS 3.2% (MARCH ORIGINALLY REPORTED 3.6%)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:255a0b99c094b:0-more-u-s-april-personal-income-spending-savings-rate-2-6-vs-3-2-march-originally-reported-3-6/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: SERVICES SPENDING +0.2% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:33:00+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/macenews:180a479c9094b:0-more-u-s-april-personal-income-spending-services-spending-0-2-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: DISPOSABLE PERSONAL INCOME -0.1% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:5ff216898094b:0-more-u-s-april-personal-income-spending-disposable-personal-income-0-1-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: REAL DISPOSABLE PERSONAL INCOME -0.5% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:a3087acbd094b:0-more-u-s-april-personal-income-spending-real-disposable-personal-income-0-5-m-m/"
+    },
+    {
+      "title": "MORE U.S. APRIL PERSONAL INCOME/SPENDING: REAL PERSONAL SPENDING +0.1% M/M",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:881d0a125094b:0-more-u-s-april-personal-income-spending-real-personal-spending-0-1-m-m/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: CONTINUING CLAIMS TWO WKS AGO 1.786 MLN, +15,000",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:32:00+00:00",
+      "timeDisplay": "12:32 PM",
+      "link": "https://www.tradingview.com/news/macenews:1cf3db7fd094b:0-us-initial-claims-for-jobless-benefits-continuing-claims-two-wks-ago-1-786-mln-15-000/"
+    },
+    {
+      "title": "Bitcoin Falls as Geopolitical Tensions, ETF Outflows Weigh \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260528005092:0/"
+    },
+    {
+      "title": "U.S. APRIL CORE PCE PRICE INDEX +0.2% M/M (VS +0.3% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:aedc95ec2094b:0-u-s-april-core-pce-price-index-0-2-m-m-vs-0-3-expected/"
+    },
+    {
+      "title": "U.S. APRIL CORE PCE PRICE INDEX +3.3% Y/Y (VS +3.3% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:cf4f1fb35094b:0-u-s-april-core-pce-price-index-3-3-y-y-vs-3-3-expected/"
+    },
+    {
+      "title": "U.S. APRIL PCE PRICE INDEX +0.4% M/M (VS +0.5% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:ef253f84a094b:0-u-s-april-pce-price-index-0-4-m-m-vs-0-5-expected/"
+    },
+    {
+      "title": "U.S. APRIL PCE PRICE INDEX +3.8% Y/Y (VS +3.8% EXPECTED)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:b74d7e60a094b:0-u-s-april-pce-price-index-3-8-y-y-vs-3-8-expected/"
+    },
+    {
+      "title": "US CORE CAPITAL GOODS ORDERS -1.1% IN APRIL FROM MARCH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:60655fb7d094b:0-us-core-capital-goods-orders-1-1-in-april-from-march/"
+    },
+    {
+      "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: 4-WK MOVING AVG  209,000, +6,250 ; INSURED UNEMP RATE TWO WKS AGO 1.2%, UNCHANGED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:c00bc51fa094b:0-us-initial-claims-for-jobless-benefits-4-wk-moving-avg-209-000-6-250-insured-unemp-rate-two-wks-ago-1-2-unchanged/"
+    },
+    {
+      "title": "US Q1 GDP SECOND ESTIMATE +1.6% VS +2.1% EXPECTED AND +0.5% Q4",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:31:00+00:00",
+      "timeDisplay": "12:31 PM",
+      "link": "https://www.tradingview.com/news/macenews:3b1fd2dab094b:0-us-q1-gdp-second-estimate-1-6-vs-2-1-expected-and-0-5-q4/"
+    },
+    {
+      "title": "Standard Chartered compares Ethereum to Amazon during 2001 dot-com bubble burst, says ETH will catch up to internal metrics",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:27:14+00:00",
+      "timeDisplay": "12:27 PM",
+      "link": "https://www.tradingview.com/news/the_block:5922bdef3094b:0-standard-chartered-compares-ethereum-to-amazon-during-2001-dot-com-bubble-burst-says-eth-will-catch-up-to-internal-metrics/"
+    },
+    {
+      "title": "BlackRock Bitcoin ETF sees near-record outflows as BTC dips below $75K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:22:53+00:00",
+      "timeDisplay": "12:22 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:31ad4ae1a094b:0-blackrock-bitcoin-etf-sees-near-record-outflows-as-btc-dips-below-75k/"
+    },
+    {
+      "title": "GPUS Stock Dips After Hyperscale Data Halts Dilution For $5M Buyback \u2013 Retail Rejoices",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:20:24+00:00",
+      "timeDisplay": "12:20 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:99c95e6a5094b:0-gpus-stock-dips-after-hyperscale-data-halts-dilution-for-5m-buyback-retail-rejoices/"
+    },
+    {
+      "title": "Key facts: ETHUSD $240M Liquidations; ETFs Outflow $67M; TVL ~$116B",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:16:47+00:00",
+      "timeDisplay": "12:16 PM",
+      "link": "https://www.tradingview.com/news/tradingview:6849f5c5718a5:0-key-facts-ethusd-240m-liquidations-etfs-outflow-67m-tvl-116b/"
+    },
+    {
+      "title": "Key facts: BTC Liq $935M; ETF outflows $733M; EMAs breached; LTHs buy",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:15:15+00:00",
+      "timeDisplay": "12:15 PM",
+      "link": "https://www.tradingview.com/news/tradingview:c7a649a1af55f:0-key-facts-btc-liq-935m-etf-outflows-733m-emas-breached-lths-buy/"
+    },
+    {
+      "title": "Mystery Bitcoin burn destroys 107 BTC worth about $8.5M",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T12:09:09+00:00",
+      "timeDisplay": "12:09 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:9e129b03c094b:0-mystery-bitcoin-burn-destroys-107-btc-worth-about-8-5m/"
+    },
+    {
+      "title": "Gold at two-month low as US-Iran strikes boost inflation fears, PCE data on tap",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-28T12:08:10+00:00",
+      "timeDisplay": "12:08 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4250GW:0-gold-at-two-month-low-as-us-iran-strikes-boost-inflation-fears-pce-data-on-tap/"
+    },
+    {
+      "title": "Samsung Just Bet $408 Million On South Korea\u2019s Top Crypto Exchange \u2014 And It\u2019s Not Alone",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T11:50:07+00:00",
+      "timeDisplay": "11:50 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:f377b6d9b094b:0-samsung-just-bet-408-million-on-south-korea-s-top-crypto-exchange-and-it-s-not-alone/"
+    },
+    {
+      "title": "Standard Chartered Says Ethereum Could 20X After ETH\u2019s Brutal Crash Below $2,000",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T11:40:25+00:00",
+      "timeDisplay": "11:40 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:a50155317094b:0-standard-chartered-says-ethereum-could-20x-after-eth-s-brutal-crash-below-2-000/"
+    },
+    {
+      "title": "What is the HUID code in gold and why should you check it even on hallmarked jewellery?",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T11:22:43+00:00",
+      "timeDisplay": "11:22 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:86f5b86ac094b:0-what-is-the-huid-code-in-gold-and-why-should-you-check-it-even-on-hallmarked-jewellery/"
+    },
+    {
+      "title": "GDP, PCE, Jobless Claims Could Decide Crypto\u2019s Next Move, While Ethereum Takes A Bigger Hit Than Bitcoin Amid Selloff",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T11:06:45+00:00",
+      "timeDisplay": "11:06 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:522f79522094b:0-gdp-pce-jobless-claims-could-decide-crypto-s-next-move-while-ethereum-takes-a-bigger-hit-than-bitcoin-amid-selloff/"
+    },
+    {
+      "title": "Palm Oil Ends Higher on Strength in Crude \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T10:57:00+00:00",
+      "timeDisplay": "10:57 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260528003535:0/"
+    },
+    {
+      "title": "Bitcoin drops to $72,643 as Middle East tensions flare",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T10:47:14+00:00",
+      "timeDisplay": "10:47 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:a8c9c0091094b:0-bitcoin-drops-to-72-643-as-middle-east-tensions-flare/"
+    },
+    {
+      "title": "When Will Bitcoin Price Hit $100K Again?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T10:22:24+00:00",
+      "timeDisplay": "10:22 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:58e0b13bf094b:0-when-will-bitcoin-price-hit-100k-again/"
+    },
+    {
+      "title": "Inflation challenges US Treasuries' traditional role in portfolios",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-28T10:00:00+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4230PX:0-inflation-challenges-us-treasuries-traditional-role-in-portfolios/"
+    },
+    {
+      "title": "Nearly $1B Wiped From Crypto Markets As Bitcoin Slips To $73K  \u2013 It\u2019s Just A 'Cooldown', Says Michael van de Poppe",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T09:59:25+00:00",
+      "timeDisplay": "9:59 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:836495339094b:0-nearly-1b-wiped-from-crypto-markets-as-bitcoin-slips-to-73k-it-s-just-a-cooldown-says-michael-van-de-poppe/"
+    },
+    {
+      "title": "Crypto liquidations hit $935M as Bitcoin price dips to $72.6K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T09:44:14+00:00",
+      "timeDisplay": "9:44 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:7dd313372094b:0-crypto-liquidations-hit-935m-as-bitcoin-price-dips-to-72-6k/"
+    },
     {
       "title": "Gold at two-month lows as US-Iran strikes boost inflation fears, PCE data on tap",
       "source": "reuters",
@@ -60,12 +361,20 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42509Z:0-gold-at-two-month-lows-as-us-iran-strikes-boost-inflation-fears-pce-data-on-tap/"
     },
     {
-      "title": "U.S. Treasury Yields, Dollar Rise as Quick Middle East Peace Prospects Weaken \u2014 Market Talk",
-      "source": "dow-jones",
+      "title": "Top Altcoins To Stack Now For 50X Gains",
+      "source": "coinpedia",
       "color": "#00e5ff",
-      "timestamp": "2026-05-28T09:02:00+00:00",
-      "timeDisplay": "9:02 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528002087:0/"
+      "timestamp": "2026-05-28T09:14:32+00:00",
+      "timeDisplay": "9:14 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:e0e5e8a29094b:0-top-altcoins-to-stack-now-for-50x-gains/"
+    },
+    {
+      "title": "Crypto News Today (May 28): Crypto Crashing as BTC Nears $70K as Blackrock Dumps Over $500M Bitcoin",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T09:08:43+00:00",
+      "timeDisplay": "9:08 AM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:a37e572ba094b:0-crypto-news-today-may-28-crypto-crashing-as-btc-nears-70k-as-blackrock-dumps-over-500m-bitcoin/"
     },
     {
       "title": "Is the 'debasement trade' dead? Outflows from gold and bitcoin ETFs suggest investors are moving on",
@@ -90,14 +399,6 @@
       "timestamp": "2026-05-28T08:30:00+00:00",
       "timeDisplay": "8:30 AM",
       "link": "https://www.tradingview.com/news/beincrypto:1726496f5094b:0-ethereum-price-prediction-what-to-expect-from-eth-in-june-2026/"
-    },
-    {
-      "title": "Dollar edges up with Iran conflict, US rate outlook in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T08:26:47+00:00",
-      "timeDisplay": "8:26 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4250HN:0-dollar-edges-up-with-iran-conflict-us-rate-outlook-in-focus/"
     },
     {
       "title": "Gold hits two-month low as US-Iran tension stokes inflation and rate hike fears",
@@ -132,20 +433,20 @@
       "link": "https://www.tradingview.com/news/cnbctv:78acef507094b:0/"
     },
     {
-      "title": "CFTC seeks to vacate $5M Gemini penalty under revised crypto policy",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T07:00:46+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/invezz:50e3375df094b:0-cftc-seeks-to-vacate-5m-gemini-penalty-under-revised-crypto-policy/"
-    },
-    {
       "title": "Bitcoin Has Outpaced XRP Since 2017, According To Analyst",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-05-28T07:00:20+00:00",
       "timeDisplay": "7:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:2599250a0094b:0-bitcoin-has-outpaced-xrp-since-2017-according-to-analyst/"
+    },
+    {
+      "title": "Crypto markets shed $80B after fresh US strikes on Iran",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-28T06:54:24+00:00",
+      "timeDisplay": "6:54 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:8e419dbe7094b:0-crypto-markets-shed-80b-after-fresh-us-strikes-on-iran/"
     },
     {
       "title": "BTC/USD: Bitcoin Sinks to Six-Week Low of $72,000 as ETF Outflows Knock Prices",
@@ -164,28 +465,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260528001328:0/"
     },
     {
-      "title": "Dollar Rises on Renewed U.S.-Iran Tensions \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T06:35:00+00:00",
-      "timeDisplay": "6:35 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528001270:0/"
-    },
-    {
       "title": "Will Bitcoin Price Rally After the CLARITY Act Passes? Expert Says \u2018No\u2019\u00a0",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-05-28T06:33:13+00:00",
       "timeDisplay": "6:33 AM",
       "link": "https://www.tradingview.com/news/coinpedia:401f206df094b:0-will-bitcoin-price-rally-after-the-clarity-act-passes-expert-says-no/"
-    },
-    {
-      "title": "Dollar climbs to one-week high as Gulf tensions flare",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T06:26:24+00:00",
-      "timeDisplay": "6:26 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42506A:0-dollar-climbs-to-one-week-high-as-gulf-tensions-flare/"
     },
     {
       "title": "Crypto Liquidations Nears $1 Billion in 24 Hours as US Strikes Iran Again",
@@ -204,38 +489,6 @@
       "link": "https://www.tradingview.com/news/te_news:554322:0-oil-climbs-on-renewed-us-iran-tensions/"
     },
     {
-      "title": "Bitcoin falls below $73,000 as BlackRock\u2019s BTC ETF sees second-largest outflows since debut",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T06:06:40+00:00",
-      "timeDisplay": "6:06 AM",
-      "link": "https://www.tradingview.com/news/the_block:5f7a5900d094b:0-bitcoin-falls-below-73-000-as-blackrock-s-btc-etf-sees-second-largest-outflows-since-debut/"
-    },
-    {
-      "title": "Bitcoin Dips Below $73K To Six-Week Low Even As Trump Declares US \u2018Crypto Capital Of The World'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T06:01:53+00:00",
-      "timeDisplay": "6:01 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:8c2d93b0c094b:0-bitcoin-dips-below-73k-to-six-week-low-even-as-trump-declares-us-crypto-capital-of-the-world/"
-    },
-    {
-      "title": "Cathie Wood Doubles Down On $1.25 Million Bitcoin Target",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T06:00:09+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:f01033497094b:0-cathie-wood-doubles-down-on-1-25-million-bitcoin-target/"
-    },
-    {
-      "title": "Why is Bitcoin price going down today?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T05:40:52+00:00",
-      "timeDisplay": "5:40 AM",
-      "link": "https://www.tradingview.com/news/invezz:aa8b9c41e094b:0-why-is-bitcoin-price-going-down-today/"
-    },
-    {
       "title": "U.S. Treasury Yields Rise Amid New Mideast Strikes \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -244,52 +497,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260528000848:0/"
     },
     {
-      "title": "Shares retreat, oil rebounds as Gulf hostilities heat up",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T05:32:48+00:00",
-      "timeDisplay": "5:32 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N425044:0-shares-retreat-oil-rebounds-as-gulf-hostilities-heat-up/"
-    },
-    {
       "title": "Crypto Crash Alert: Why Are Bitcoin, Ethereum and XRP Prices Falling Today?",
       "source": "coinpedia",
       "color": "#00e5ff",
       "timestamp": "2026-05-28T05:12:40+00:00",
       "timeDisplay": "5:12 AM",
       "link": "https://www.tradingview.com/news/coinpedia:13ad0c1fa094b:0-crypto-crash-alert-why-are-bitcoin-ethereum-and-xrp-prices-falling-today/"
-    },
-    {
-      "title": "Bitcoin funding spike shows longs defending $70K: Will ETF outflows reverse bulls\u2019 efforts?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T05:09:22+00:00",
-      "timeDisplay": "5:09 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:34153e25d094b:0-bitcoin-funding-spike-shows-longs-defending-70k-will-etf-outflows-reverse-bulls-efforts/"
-    },
-    {
-      "title": "Bitcoin\u2019s 4-Year Rhythm Is Still Playing Out, Says Crypto CEO",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T05:00:16+00:00",
-      "timeDisplay": "5:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:211cea54d094b:0-bitcoin-s-4-year-rhythm-is-still-playing-out-says-crypto-ceo/"
-    },
-    {
-      "title": "Pound falls against Dollar amid escalating US-Iran tensions",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T04:39:43+00:00",
-      "timeDisplay": "4:39 AM",
-      "link": "https://www.tradingview.com/news/invezz:ba2270c26094b:0-pound-falls-against-dollar-amid-escalating-us-iran-tensions/"
-    },
-    {
-      "title": "Bitcoin falls below $73K as US airstrikes on Iran trigger $1B liquidations",
-      "source": "cryptobriefing",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T04:30:10+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/cryptobriefing:e53a1c01d094b:0-bitcoin-falls-below-73k-as-us-airstrikes-on-iran-trigger-1b-liquidations/"
     },
     {
       "title": "Here\u2019s why the crypto market is crashing today",
@@ -308,68 +521,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42504R:0-gold-hits-two-month-low-as-us-iran-tension-stokes-inflation-fears/"
     },
     {
-      "title": "Dollar index climbs as US-Iran tensions escalate",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T04:16:31+00:00",
-      "timeDisplay": "4:16 AM",
-      "link": "https://www.tradingview.com/news/invezz:d031b3000094b:0-dollar-index-climbs-as-us-iran-tensions-escalate/"
-    },
-    {
-      "title": "Bitcoin Sends An Unusual Signal After Miner Inflows Top 20,000 BTC \u2013 Analyst Explains The Setup",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T04:00:45+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:8dc0569ac094b:0-bitcoin-sends-an-unusual-signal-after-miner-inflows-top-20-000-btc-analyst-explains-the-setup/"
-    },
-    {
       "title": "US yields rise as oil jumps on fresh strikes in Middle East",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-28T04:00:20+00:00",
       "timeDisplay": "4:00 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42504O:0-us-yields-rise-as-oil-jumps-on-fresh-strikes-in-middle-east/"
-    },
-    {
-      "title": "THURSDAY WHITE HOUSE SCHEDULE: Subject to additions during the day; Treasury Secretary Bessent briefs press at 2p ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T04:00:00+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/macenews:965fc7c26094b:0-thursday-white-house-schedule-subject-to-additions-during-the-day-treasury-secretary-bessent-briefs-press-at-2p-et/"
-    },
-    {
-      "title": "Dollar firms to one-week high as Gulf tensions flare, yen nears intervention zone",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T03:50:41+00:00",
-      "timeDisplay": "3:50 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42503Z:0-dollar-firms-to-one-week-high-as-gulf-tensions-flare-yen-nears-intervention-zone/"
-    },
-    {
-      "title": "US Dollar near one-week high as US-Iran tensions flare, yen nears intervention zone",
-      "source": "cnbctv",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T03:50:41+00:00",
-      "timeDisplay": "3:50 AM",
-      "link": "https://www.tradingview.com/news/cnbctv:f0bd4b6df094b:0/"
-    },
-    {
-      "title": "Yuan slips as US-Iran tensions cloud outlook for peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T03:34:57+00:00",
-      "timeDisplay": "3:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42503X:0-yuan-slips-as-us-iran-tensions-cloud-outlook-for-peace-deal/"
-    },
-    {
-      "title": "Shares falter, oil gains as Gulf hostilities heat up",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T03:14:53+00:00",
-      "timeDisplay": "3:14 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42502T:0-shares-falter-oil-gains-as-gulf-hostilities-heat-up/"
     },
     {
       "title": "US 10Y Yield Climbs on Renewed US-Iran Tensions",
@@ -388,68 +545,12 @@
       "link": "https://www.tradingview.com/news/newsbtc:b8daf22a9094b:0-ethereum-price-struggles-near-key-levels-as-market-sentiment-weakens/"
     },
     {
-      "title": "Bitcoin Pulls Back, But Futures Traders Turn Bullish: Long Squeeze Setup?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T03:00:07+00:00",
-      "timeDisplay": "3:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:62da3ab16094b:0-bitcoin-pulls-back-but-futures-traders-turn-bullish-long-squeeze-setup/"
-    },
-    {
-      "title": "Bitcoin Slips Amid Renewed U.S.-Iran Tensions \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T02:51:00+00:00",
-      "timeDisplay": "2:51 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260527011361:0/"
-    },
-    {
-      "title": "Dollar Edges Higher on US-Iran Tensions",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T02:42:17+00:00",
-      "timeDisplay": "2:42 AM",
-      "link": "https://www.tradingview.com/news/te_news:554259:0-dollar-edges-higher-on-us-iran-tensions/"
-    },
-    {
-      "title": "CHI FED'S GOOLSBEE/BOJ INSTITUTE: SUPPLY SHOCKS CAN ADD TO INFLATION PRESSURE FROM PRODUCTIVITY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T02:35:00+00:00",
-      "timeDisplay": "2:35 AM",
-      "link": "https://www.tradingview.com/news/macenews:5831307f9094b:0-chi-fed-s-goolsbee-boj-institute-supply-shocks-can-add-to-inflation-pressure-from-productivity/"
-    },
-    {
-      "title": "CHI FED'S GOOLSBEE/BOJ INSTITUTE: FASTER PRODUCTIVITY CAN CAUSE OVERHEATING, REQUIRE HIGHER RATES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T02:31:00+00:00",
-      "timeDisplay": "2:31 AM",
-      "link": "https://www.tradingview.com/news/macenews:c0319e67f094b:0-chi-fed-s-goolsbee-boj-institute-faster-productivity-can-cause-overheating-require-higher-rates/"
-    },
-    {
-      "title": "Dollar near one-week high as US-Iran tensions flare, yen nears intervention zone",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T01:33:57+00:00",
-      "timeDisplay": "1:33 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42503F:0-dollar-near-one-week-high-as-us-iran-tensions-flare-yen-nears-intervention-zone/"
-    },
-    {
       "title": "Gold eases as US-Iran tensions cloud interest rate outlook",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-05-28T01:32:52+00:00",
       "timeDisplay": "1:32 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42503S:0-gold-eases-as-us-iran-tensions-cloud-interest-rate-outlook/"
-    },
-    {
-      "title": "Asia shares take a breather as Gulf hostilities drag on",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T01:31:43+00:00",
-      "timeDisplay": "1:31 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42427U:0-asia-shares-take-a-breather-as-gulf-hostilities-drag-on/"
     },
     {
       "title": "Commodities intraday targets/key levels",
@@ -476,60 +577,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260527011032:0/"
     },
     {
-      "title": "FED GOV JEFFERSON/BOJ INSTITUTE: WATCHING WHETHER HIGHER ENERGY PRICES WILL START TO WEIGH ON CONSUMER SPENDING",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T00:11:00+00:00",
-      "timeDisplay": "12:11 AM",
-      "link": "https://www.tradingview.com/news/macenews:94306550d094b:0-fed-gov-jefferson-boj-institute-watching-whether-higher-energy-prices-will-start-to-weigh-on-consumer-spending/"
-    },
-    {
       "title": "Gold Holds Losses on US-Iran Deadlock",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-05-28T00:10:21+00:00",
       "timeDisplay": "12:10 AM",
       "link": "https://www.tradingview.com/news/te_news:554206:0-gold-holds-losses-on-us-iran-deadlock/"
-    },
-    {
-      "title": "FED GOV JEFFERSON/BOJ INSTITUTE: AM OPTIMISTIC ABOUT A.I.'S PROMISE TO DRIVE PRODUCTIVITY AND GROWTH; MONITORING EFFECTS ON JOBS AND INFLATION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T00:09:00+00:00",
-      "timeDisplay": "12:09 AM",
-      "link": "https://www.tradingview.com/news/macenews:4d4298d3b094b:0-fed-gov-jefferson-boj-institute-am-optimistic-about-a-i-s-promise-to-drive-productivity-and-growth-monitoring-effects-on-jobs-and-inflation/"
-    },
-    {
-      "title": "FED GOV JEFFERSON/BOJ INSTITUTE: EXPECT MORE MODEST GROWTH THIS YEAR 'AS HOUSEHOLDS FACE HIGH ENERGY COSTS;' EXPECT INFLATION TO DECLINE LATER THIS YR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T00:06:00+00:00",
-      "timeDisplay": "12:06 AM",
-      "link": "https://www.tradingview.com/news/macenews:2e1abc582094b:0-fed-gov-jefferson-boj-institute-expect-more-modest-growth-this-year-as-households-face-high-energy-costs-expect-inflation-to-decline-later-this-yr/"
-    },
-    {
-      "title": "FED GOV JEFFERSON/BOJ INSTITUTE: HOLDING POLICY RATE STEADY 'LEAVES US WELL POSITIONED;' HAVE NOT PREJUDGED THE NEXT FOMC MEETING",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T00:03:00+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/macenews:643883af5094b:0-fed-gov-jefferson-boj-institute-holding-policy-rate-steady-leaves-us-well-positioned-have-not-prejudged-the-next-fomc-meeting/"
-    },
-    {
-      "title": "FED GOV JEFFERSON/BOJ INSTITUTE: VIEW RISKS TO INFLATION 'TILTED TO THE UPSIDE;' EXPECT INFLATION TO DECLINE LATER THIS YEAR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T00:01:00+00:00",
-      "timeDisplay": "12:01 AM",
-      "link": "https://www.tradingview.com/news/macenews:ccbb9d8b9094b:0-fed-gov-jefferson-boj-institute-view-risks-to-inflation-tilted-to-the-upside-expect-inflation-to-decline-later-this-year/"
-    },
-    {
-      "title": "HEADS UP' FED GOV JEFFEERSON'S REMARKS TO THE BANK OF JAPAN iNSTITUTE COMING UP AT 8P ET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T23:53:00+00:00",
-      "timeDisplay": "11:53 PM",
-      "link": "https://www.tradingview.com/news/macenews:3c760009d094b:0-heads-up-fed-gov-jeffeerson-s-remarks-to-the-bank-of-japan-institute-coming-up-at-8p-et/"
     },
     {
       "title": "Oil Rises on US-Iran Deal Uncertainties",
@@ -548,84 +601,12 @@
       "link": "https://www.tradingview.com/news/te_news:554184:0-us-crude-inventories-extend-decline/"
     },
     {
-      "title": "FED'S COOK Q&A/STANFORD: ADVICE TO GRADUATES, STILL NEED THE SKILLS TO BE A PROBLEMSOLVER; LOT OF SUBJECTS, INCLUDING PHILOSOPHY, TO REMAIN USEFUL",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:43:00+00:00",
-      "timeDisplay": "8:43 PM",
-      "link": "https://www.tradingview.com/news/macenews:d7536303c094b:0-fed-s-cook-q-a-stanford-advice-to-graduates-still-need-the-skills-to-be-a-problemsolver-lot-of-subjects-including-philosophy-to-remain-useful/"
-    },
-    {
-      "title": "FED'S COOK Q&A/STANFORD: EXPECTS WARSH WILL \u2018KEEP SPIRIT ALIVE\u2019 OF FED STAFF DATA ANALYSIS; COOK AI EFFECTS ON FED DUAL MANDATE \u2018HIGHLY UNCERTAIN\u2019",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:37:00+00:00",
-      "timeDisplay": "8:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:f002d93d8094b:0-fed-s-cook-q-a-stanford-expects-warsh-will-keep-spirit-alive-of-fed-staff-data-analysis-cook-ai-effects-on-fed-dual-mandate-highly-uncertain/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: FED RESEARCH SHOWS A.I. LLMS MAKE MORE RATIONAL MKT DECISIONS THAN HUMANS; USE BEIGE BOOK ANECDOTES FOR FORECASTING; 'SYSTEMATIC'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:22:00+00:00",
-      "timeDisplay": "8:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:9f73b872b094b:0-fed-s-cook-stanford-fed-research-shows-a-i-llms-make-more-rational-mkt-decisions-than-humans-use-beige-book-anecdotes-for-forecasting-systematic/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD:  MIDDLE EAST UNCERTAINTY COULD SOFTEN DEMAND, HURT LABOR MARKET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:15:00+00:00",
-      "timeDisplay": "8:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:2ff601b62094b:0-fed-s-cook-stanford-middle-east-uncertainty-could-soften-demand-hurt-labor-market/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: REMAIN OPTIMISTIC ABOUT GROWTH, WITH THE HELP OF A.I.; SHOULD BOOST PRODUCTIVITY; NOW, RISKS TILTED TOWARD HIGHER INFLATION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:12:00+00:00",
-      "timeDisplay": "8:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:1724923dc094b:0-fed-s-cook-stanford-remain-optimistic-about-growth-with-the-help-of-a-i-should-boost-productivity-now-risks-tilted-toward-higher-inflation/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: PREPARED TO RAISE RATES IF NO DISINFLATION; ALSO COULD LOWER RATES IF JOBS MKT DETERIORATES; MEANWHILE SHOULD HOLD POLICY STEADY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:09:00+00:00",
-      "timeDisplay": "8:09 PM",
-      "link": "https://www.tradingview.com/news/macenews:61489e91a094b:0-fed-s-cook-stanford-prepared-to-raise-rates-if-no-disinflation-also-could-lower-rates-if-jobs-mkt-deteriorates-meanwhile-should-hold-policy-steady/"
-    },
-    {
       "title": "Growth Story for Hyperliquid Seen as Strong \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-05-27T20:08:00+00:00",
       "timeDisplay": "8:08 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260527008988:0/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: LABOR  MKT 'APPEARS LARGELY STABLE;' RE A.I., COULD BE APPROACHING THE MOST SIGNIFICANT REORGANIZATION OF WORK IN GENERATIONS'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:07:00+00:00",
-      "timeDisplay": "8:07 PM",
-      "link": "https://www.tradingview.com/news/macenews:d26cd8537094b:0-fed-s-cook-stanford-labor-mkt-appears-largely-stable-re-a-i-could-be-approaching-the-most-significant-reorganization-of-work-in-generations/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: REPEATS, INFLATION 'CLEARLY MOVING IN THE WRONG DIRECTION;' EXCLUDING FOOD AND ENERGY, CORE PCE INFLATION ESTIMATED TO BE +3.3%",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:04:00+00:00",
-      "timeDisplay": "8:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:fb5930e5a094b:0-fed-s-cook-stanford-repeats-inflation-clearly-moving-in-the-wrong-direction-excluding-food-and-energy-core-pce-inflation-estimated-to-be-3-3/"
-    },
-    {
-      "title": "FED'S COOK/STANFORD: A.I. CAN BE A RISK TO FINANCIAL FIRMS, ALGORITHMIC TRADING, 'ENDOGENOUS MODEL COLLUSION,' MKT MANIPULATION, MKT CONCENTRATION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-27T20:01:00+00:00",
-      "timeDisplay": "8:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:33ccc4735094b:0-fed-s-cook-stanford-a-i-can-be-a-risk-to-financial-firms-algorithmic-trading-endogenous-model-collusion-mkt-manipulation-mkt-concentration/"
     },
     {
       "title": "Vitalik Buterin Pauses Essays to Write Decentralized Governance Sci-Fi Novel",
@@ -636,20 +617,28 @@
       "link": "https://www.tradingview.com/news/beincrypto:bd0a575e8094b:0-vitalik-buterin-pauses-essays-to-write-decentralized-governance-sci-fi-novel/"
     },
     {
-      "title": "FED'S COOK/STANFORD: RE A.I., 'THE URGENCY IS REAL,' NEED GUARDRAILS, EXPERIENCE, STRONG GOVERNANCE, RISK MANAGEMENTS; BUT PROCEEDING WITH 'OPTIMISM'",
-      "source": "macenews",
+      "title": "Crude Oil Prices Sink as Hormuz-Reopening Talks Continue",
+      "source": "barchart",
       "color": "#00e5ff",
-      "timestamp": "2026-05-27T19:58:00+00:00",
-      "timeDisplay": "7:58 PM",
-      "link": "https://www.tradingview.com/news/macenews:1240deab0094b:0-fed-s-cook-stanford-re-a-i-the-urgency-is-real-need-guardrails-experience-strong-governance-risk-managements-but-proceeding-with-optimism/"
+      "timestamp": "2026-05-27T19:21:26+00:00",
+      "timeDisplay": "7:21 PM",
+      "link": "https://www.tradingview.com/news/barchart:4330aed33094b:0-crude-oil-prices-sink-as-hormuz-reopening-talks-continue/"
     },
     {
-      "title": "HEADS UP: FED GOV COOK REMARKS AT STANFORD U COMING UP AT 3:55P ET",
-      "source": "macenews",
+      "title": "Oil Futures Fall on Hopes for U.S.-Iran Agreement \u2014 Market Talk",
+      "source": "dow-jones",
       "color": "#00e5ff",
-      "timestamp": "2026-05-27T19:45:00+00:00",
-      "timeDisplay": "7:45 PM",
-      "link": "https://www.tradingview.com/news/macenews:fac85f75a094b:0-heads-up-fed-gov-cook-remarks-at-stanford-u-coming-up-at-3-55p-et/"
+      "timestamp": "2026-05-27T19:20:00+00:00",
+      "timeDisplay": "7:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260527008252:0/"
+    },
+    {
+      "title": "Ether bears at risk of $2B squeeze as short positions build around $2K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-27T19:17:05+00:00",
+      "timeDisplay": "7:17 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ae1905fe5094b:0-ether-bears-at-risk-of-2b-squeeze-as-short-positions-build-around-2k/"
     }
   ]
 }

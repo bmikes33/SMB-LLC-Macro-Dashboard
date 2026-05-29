@@ -1,45 +1,267 @@
 {
-  "lastUpdated": "2026-05-29T13:51:15.043352+00:00",
-  "lastUpdatedDisplay": "May 29, 2026 \u2014 01:51 PM UTC",
+  "lastUpdated": "2026-05-29T16:40:26.280285+00:00",
+  "lastUpdatedDisplay": "May 29, 2026 \u2014 04:40 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Fed officials express caution about persistent oil shocks and inflation progress stalling, while markets are rallying on tentative US-Iran ceasefire optimism that could ease oil prices. Trade data shows mixed signals with strong exports but rising inventories, and crypto markets show mild rebounds amid broader risk-on sentiment.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Iran ceasefire optimism directly contradicts the embedded oil shock assumption in the current regime, while Fed officials simultaneously warn about persistent oil price risks and stalled inflation progress.",
-    "thresholdWatches": [],
+    "macroSummary": "Markets are responding positively to developing U.S.-Iran ceasefire negotiations, with oil prices falling, the dollar weakening, and gold rallying on safe-haven unwinding. Chicago PMI surged to 62.7 versus 49.2 prior, showing unexpected economic strength, while Fed officials signal cautious policy stance given persistent inflation and oil shock uncertainties.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Iran ceasefire developments directly challenge the oil shock foundation of the Reflation regime, with crude falling and dollar weakening as geopolitical premium unwinds.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil continuing lower on U.S.-Iran agreement hopes, potentially undermining stagflationary oil shock premise"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Tentative US-Iran deal hopes driving oil tumble and stock gains, potentially unwinding the embedded Iran-war oil shock premise",
+        "signal": "Oil prices falling on U.S.-Iran ceasefire optimism, potentially removing key stagflationary driver",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Fed's Bowman warns persistent oil price hikes could alter view toward rate hikes, reinforcing stagflationary concerns",
-        "tag": "SUPPORTS"
+        "signal": "Dollar set for second weekly loss amid ceasefire developments, approaching DXY regime threshold",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Fed officials note inflation progress has 'stalled' and cite risks of being behind the curve due to policy lags",
-        "tag": "SUPPORTS"
+        "signal": "Chicago PMI surged to 62.7 vs 49.2 prior (highest since Jan 2022), showing economic acceleration beyond reflation expectations",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Strong April capital goods exports (+7.5%) and consumer goods exports (+7.8%) suggest resilient economic activity",
-        "tag": "SUPPORTS"
+        "signal": "Fed's Bowman warns persistent oil price hikes could alter view toward rate hikes, but oil shock may be dissipating",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Gold set for third monthly fall as inflation concerns linger, indicating persistent reflation expectations",
-        "tag": "SUPPORTS"
+        "signal": "Gold rallying on safe-haven unwinding rather than inflation hedging, suggesting risk-on rotation",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely as Iran ceasefire developments could invalidate the embedded war premium assumption",
-      "Assess BMNR ladder positioning if geopolitical risk premium unwinds and crypto correlation shifts",
-      "Watch for confirmation of Iran deal progress which could shift regime from Reflation toward Risk-On"
+      "Monitor oil price action closely - sustained break below $115 invalidates core regime thesis",
+      "Watch DXY approach to 100 level as dollar weakness accelerates on ceasefire optimism",
+      "Consider BMNR ladder adjustments if geopolitical premium continues unwinding"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar set for second weekly loss amid U.S.-Iran ceasefire deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-29T16:29:52+00:00",
+      "timeDisplay": "4:29 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4260VG:0-dollar-set-for-second-weekly-loss-amid-u-s-iran-ceasefire-deal/"
+    },
+    {
+      "title": "TEXT: Pres Trump's post on Iran saying he is involved in a Situation Room discussion of whether to make 'final detemination' on tentative Iran deal",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T16:16:00+00:00",
+      "timeDisplay": "4:16 PM",
+      "link": "https://www.tradingview.com/news/macenews:fd5835355094b:0-text-pres-trump-s-post-on-iran-saying-he-is-involved-in-a-situation-room-discussion-of-whether-to-make-final-detemination-on-tentative-iran-deal/"
+    },
+    {
+      "title": "CFTC Approves Bitcoin Perpetual Futures Trading in U.S. at Coinbase, Kalshi \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T16:13:00+00:00",
+      "timeDisplay": "4:13 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529007436:0/"
+    },
+    {
+      "title": "CFTC approves first regulated Bitcoin perpetual contract in US",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T16:10:18+00:00",
+      "timeDisplay": "4:10 PM",
+      "link": "https://www.tradingview.com/news/invezz:ab866f84c094b:0-cftc-approves-first-regulated-bitcoin-perpetual-contract-in-us/"
+    },
+    {
+      "title": "Gold Extend Gains as Investors Await U.S.-Iran Deal News \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T16:02:00+00:00",
+      "timeDisplay": "4:02 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529007273:0/"
+    },
+    {
+      "title": "Fund Traders Trim Grain Positions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:59:00+00:00",
+      "timeDisplay": "3:59 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529007158:0/"
+    },
+    {
+      "title": "Cryptocurrencies Appear Detached From Stocks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:55:00+00:00",
+      "timeDisplay": "3:55 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529007132:0/"
+    },
+    {
+      "title": "Ethereum analysts say \u2018downside pressure\u2019 remains as $1.8K becomes key",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:50:08+00:00",
+      "timeDisplay": "3:50 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5db46fff3094b:0-ethereum-analysts-say-downside-pressure-remains-as-1-8k-becomes-key/"
+    },
+    {
+      "title": "Gold rebounds Rs 1,600; silver rallies Rs 5,000 on US-Iran deal hopes",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:46:18+00:00",
+      "timeDisplay": "3:46 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:b20c451fd094b:0-gold-rebounds-rs-1-600-silver-rallies-rs-5-000-on-us-iran-deal-hopes/"
+    },
+    {
+      "title": "Gold gains on US-Iran ceasefire optimism but set for monthly drop",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-29T15:44:37+00:00",
+      "timeDisplay": "3:44 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4260MP:0-gold-gains-on-us-iran-ceasefire-optimism-but-set-for-monthly-drop/"
+    },
+    {
+      "title": "Kalshi To Launch Crypto Perpetual Futures \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:40:00+00:00",
+      "timeDisplay": "3:40 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529007028:0/"
+    },
+    {
+      "title": "Can Ethereum Reclaim Its 2021 Highs Against Bitcoin As Fundamentals Strengthen?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:30:00+00:00",
+      "timeDisplay": "3:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:901e6fdc6094b:0-can-ethereum-reclaim-its-2021-highs-against-bitcoin-as-fundamentals-strengthen/"
+    },
+    {
+      "title": "Gold is up by 2%",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:08:03+00:00",
+      "timeDisplay": "3:08 PM",
+      "link": "https://www.tradingview.com/news/te_news:555024:0-gold-is-up-by-2/"
+    },
+    {
+      "title": "Strategy Moved $30 Million In Bitcoin To Coinbase \u2014 Is Michael Saylor Preparing to Sell?",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T15:06:56+00:00",
+      "timeDisplay": "3:06 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:b2f405664094b:0-strategy-moved-30-million-in-bitcoin-to-coinbase-is-michael-saylor-preparing-to-sell/"
+    },
+    {
+      "title": "Institutional Crypto Exec Warns MicroStrategy\u2019s Bitcoin Capital Loop Is Breaking",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:52:31+00:00",
+      "timeDisplay": "2:52 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:e83164c51094b:0-institutional-crypto-exec-warns-microstrategy-s-bitcoin-capital-loop-is-breaking/"
+    },
+    {
+      "title": "Gold Rises on Ceasefire Hopes but Heads for 2% Monthly Drop",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:37:43+00:00",
+      "timeDisplay": "2:37 PM",
+      "link": "https://www.tradingview.com/news/te_news:555016:0-gold-rises-on-ceasefire-hopes-but-heads-for-2-monthly-drop/"
+    },
+    {
+      "title": "Bitcoin ETFs bleed $2.8B in record nine-day outflow streak",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:20:32+00:00",
+      "timeDisplay": "2:20 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:a1192d9c5094b:0-bitcoin-etfs-bleed-2-8b-in-record-nine-day-outflow-streak/"
+    },
+    {
+      "title": "Oil Stockpiling Efforts Seen Supporting Crude Prices \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:20:00+00:00",
+      "timeDisplay": "2:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529006217:0/"
+    },
+    {
+      "title": "Dollar Near 2-Week Lows, Still on Track for Monthly Gain",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:16:17+00:00",
+      "timeDisplay": "2:16 PM",
+      "link": "https://www.tradingview.com/news/te_news:555012:0-dollar-near-2-week-lows-still-on-track-for-monthly-gain/"
+    },
+    {
+      "title": "Oil Continues Lower on Hopes for U.S.-Iran Agreement \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:15:00+00:00",
+      "timeDisplay": "2:15 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529006165:0/"
+    },
+    {
+      "title": "Bitcoin Has Hit A Ceiling, Analyst Says No Buying Until Price Hits This Level",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T14:00:36+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:694beef0c094b:0-bitcoin-has-hit-a-ceiling-analyst-says-no-buying-until-price-hits-this-level/"
+    },
+    {
+      "title": "US 10-Year Treasury Yield Holds Near 4.45%, Still Higher for May",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T13:56:03+00:00",
+      "timeDisplay": "1:56 PM",
+      "link": "https://www.tradingview.com/news/te_news:555002:0-us-10-year-treasury-yield-holds-near-4-45-still-higher-for-may/"
+    },
+    {
+      "title": "NY Engelhard Gold Prices - May 29",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T13:55:00+00:00",
+      "timeDisplay": "1:55 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260529005956:0/"
+    },
+    {
+      "title": "US yields edge lower to end the week on hopes for Iran deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-05-29T13:54:04+00:00",
+      "timeDisplay": "1:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4260UL:0-us-yields-edge-lower-to-end-the-week-on-hopes-for-iran-deal/"
+    },
+    {
+      "title": "US CHICAGO PMI: MAY RISE IN INDEX DRIVEN BY NEW ORDERS, PRODUCTION, ORDER BACKLOGS, SUPPLIER DELIVERIES, OFFSET MARGINALLY BY LOWER EMPLOYMENT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T13:54:00+00:00",
+      "timeDisplay": "1:54 PM",
+      "link": "https://www.tradingview.com/news/macenews:9a11c5eb7094b:0-us-chicago-pmi-may-rise-in-index-driven-by-new-orders-production-order-backlogs-supplier-deliveries-offset-marginally-by-lower-employment/"
+    },
+    {
+      "title": "US CHICAGO PMI 62.7 IN MAY VS. 49.2 IN APRIL (VS. 51.2 MARKETS EXPECTED), HIGHEST SINCE JAN. 2022",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T13:52:00+00:00",
+      "timeDisplay": "1:52 PM",
+      "link": "https://www.tradingview.com/news/macenews:9d90a3ac8094b:0-us-chicago-pmi-62-7-in-may-vs-49-2-in-april-vs-51-2-markets-expected-highest-since-jan-2022/"
+    },
+    {
+      "title": "PHILLY FED'S PAULSON Q&A/NJ CHAMBER: IMPRESSED BY RESILIENCE OF ECONOMY, STABILITY OF JOBS; ENDS Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-29T13:51:00+00:00",
+      "timeDisplay": "1:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:e17b10038094b:0-philly-fed-s-paulson-q-a-nj-chamber-impressed-by-resilience-of-economy-stability-of-jobs-ends-q-a/"
+    },
     {
       "title": "PHILLY FED'S PAULSON Q&A/NJ CHAMBER:  MORE PEOPLE LOOKING FOR JOBS IN NJ THAN NAT'L AVG; HEALTH CARE 'A BRIGHT SPOT;' A.I. A 'WOW' FACTOR, TIMESAVER",
       "source": "macenews",
@@ -95,14 +317,6 @@
       "timestamp": "2026-05-29T13:19:00+00:00",
       "timeDisplay": "1:19 PM",
       "link": "https://www.tradingview.com/news/macenews:3218dc70c094b:0-fed-gov-bowman-reykjavik-jobs-mkt-remains-vulnerable-to-oil-shock-econ-benefiting-from-a-i-investment-inflation-progress-stalled/"
-    },
-    {
-      "title": "Gold gains on US-Iran ceasefire optimism but set for monthly drop",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-29T13:17:07+00:00",
-      "timeDisplay": "1:17 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4260EC:0-gold-gains-on-us-iran-ceasefire-optimism-but-set-for-monthly-drop/"
     },
     {
       "title": "Comex Gold Delivery Intentions Breakdown - May 29",
@@ -209,30 +423,6 @@
       "link": "https://www.tradingview.com/news/macenews:6d1fd1853094b:0-more-u-s-april-wholesale-inventories-0-5-m-m-to-938-6-billion/"
     },
     {
-      "title": "U.S. APRIL RETAIL INVENTORIES +0.7% M/M TO $827.3 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:ed8e5c214094b:0-u-s-april-retail-inventories-0-7-m-m-to-827-3-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL GOODS EXPORTS +4.0% TO 219.7 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:125332586094b:0-more-u-s-april-goods-exports-4-0-to-219-7-billion/"
-    },
-    {
-      "title": "U.S. APRIL GOODS IMPORTS +1.9% TO $302.1 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:2c9391b9e094b:0-u-s-april-goods-imports-1-9-to-302-1-billion/"
-    },
-    {
       "title": "The Mistake Investors Are Making About Ethereum That Could Cost Them Money; Analyst",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -310,7 +500,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-05-29T10:58:00+00:00",
       "timeDisplay": "10:58 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260529003240:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260529003239:0/"
     },
     {
       "title": "IRAN UPDATE: REACT TO TENTATIVE IRAN DEAL STILL AWAITED FROM PRES TRUMP AND IRAN; US SECTY OF STATE RUBIO MEETS IN D.C. W/PAKISTANI FOREIGN MIN 10A ET",
@@ -361,14 +551,6 @@
       "link": "https://www.tradingview.com/news/99Bitcoins:1fb1d9696094b:0-crypto-news-today-may-29-btc-holds-above-73k-as-monthly-close-volatility-approaches/"
     },
     {
-      "title": "CryptoQuant Says Bitcoin Whale Buying Has Stalled as Demand Weakens",
-      "source": "cryptonews",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T09:13:15+00:00",
-      "timeDisplay": "9:13 AM",
-      "link": "https://www.tradingview.com/news/cryptonews:fd43218a1094b:0-cryptoquant-says-bitcoin-whale-buying-has-stalled-as-demand-weakens/"
-    },
-    {
       "title": "Global bonds take wild ride in May as Iran war shocks market",
       "source": "reuters",
       "color": "#ff6d00",
@@ -383,14 +565,6 @@
       "timestamp": "2026-05-29T08:33:18+00:00",
       "timeDisplay": "8:33 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N426097:0-gold-on-track-for-third-monthly-loss-as-traders-focus-on-us-iran-ceasefire/"
-    },
-    {
-      "title": "Arca CIO Warns Strategy\u2019s Bitcoin Bet Has \u2018Gotten Out Of Hand\u2019",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T08:30:47+00:00",
-      "timeDisplay": "8:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:708af1b33094b:0-arca-cio-warns-strategy-s-bitcoin-bet-has-gotten-out-of-hand/"
     },
     {
       "title": "$7.5 Billion in Bitcoin and Ethereum Options Expire Today",
@@ -417,14 +591,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260529001623:0/"
     },
     {
-      "title": "Could Strategy Be Forced to Sell Bitcoin? Top Investor Sounds Alarm",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T07:48:02+00:00",
-      "timeDisplay": "7:48 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:5d3899aee094b:0-could-strategy-be-forced-to-sell-bitcoin-top-investor-sounds-alarm/"
-    },
-    {
       "title": "Oil Headed for Sharp Weekly Losses on U.S.-Iran Deal Optimism \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -439,22 +605,6 @@
       "timestamp": "2026-05-29T07:19:47+00:00",
       "timeDisplay": "7:19 AM",
       "link": "https://www.tradingview.com/news/tradingview:9e53d7a4f094b:0-xau-usd-gold-jumps-3-to-reclaim-4-500-after-touching-a-two-month-low/"
-    },
-    {
-      "title": "Bitcoin Recovers Only Slightly as U.S.-Iran Deal Remains Uncertain \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T07:01:00+00:00",
-      "timeDisplay": "7:01 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260529001374:0/"
-    },
-    {
-      "title": "Bitcoin Price Prediction for June 2026: Institutional Exodus Foreshadows a Crash?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T07:00:00+00:00",
-      "timeDisplay": "7:00 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:8ff754307094b:0-bitcoin-price-prediction-for-june-2026-institutional-exodus-foreshadows-a-crash/"
     },
     {
       "title": "Gold on track for third straight monthly loss; traders assess US-Iran ceasefire reports",
@@ -473,28 +623,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260529001165:0/"
     },
     {
-      "title": "Bitcoin Tests Critical Support As Bearish Signals Point To $60,000 Retest",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T06:00:09+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:8c4416d4b094b:0-bitcoin-tests-critical-support-as-bearish-signals-point-to-60-000-retest/"
-    },
-    {
       "title": "Crypto Faces Nearly $1 Billion In Liquidations As Bitcoin, Ethereum Crash",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-05-29T05:00:29+00:00",
       "timeDisplay": "5:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:9b2f16166094b:0-crypto-faces-nearly-1-billion-in-liquidations-as-bitcoin-ethereum-crash/"
-    },
-    {
-      "title": "Bitcoin\u2019s major holders halt buys as demand slows: CryptoQuant",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T04:33:46+00:00",
-      "timeDisplay": "4:33 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:177c73452094b:0-bitcoin-s-major-holders-halt-buys-as-demand-slows-cryptoquant/"
     },
     {
       "title": "Gold edges higher as investors assess US-Iran ceasefire deal reports",
@@ -505,140 +639,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N426042:0-gold-edges-higher-as-investors-assess-us-iran-ceasefire-deal-reports/"
     },
     {
-      "title": "Bitcoin\u2019s Famous CME Gap Playbook May Be Nearing Its End",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T04:00:15+00:00",
-      "timeDisplay": "4:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:940e76ef6094b:0-bitcoin-s-famous-cme-gap-playbook-may-be-nearing-its-end/"
-    },
-    {
       "title": "Ethereum Price Warning Signals Strengthen, Downside Risks Stay Elevated",
       "source": "newsbtc",
       "color": "#00e5ff",
       "timestamp": "2026-05-29T03:18:31+00:00",
       "timeDisplay": "3:18 AM",
       "link": "https://www.tradingview.com/news/newsbtc:bab9b5e7b094b:0-ethereum-price-warning-signals-strengthen-downside-risks-stay-elevated/"
-    },
-    {
-      "title": "Gold edges higher as investors weigh US-Iran ceasefire deal reports",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-29T03:00:37+00:00",
-      "timeDisplay": "3:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42601M:0-gold-edges-higher-as-investors-weigh-us-iran-ceasefire-deal-reports/"
-    },
-    {
-      "title": "S&P 500, Nasdaq Futures Pull Back After Trump Wants 'Couple Days To Think' About Iran Ceasefire Deal: ASTS, DELL, BB, SMCI In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T02:50:38+00:00",
-      "timeDisplay": "2:50 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:d18ffa028094b:0-s-p-500-nasdaq-futures-pull-back-after-trump-wants-couple-days-to-think-about-iran-ceasefire-deal-asts-dell-bb-smci-in-focus/"
-    },
-    {
-      "title": "Oil Supply Likely to Recover Gradually in Event of U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T02:45:00+00:00",
-      "timeDisplay": "2:45 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528011998:0/"
-    },
-    {
-      "title": "US 10-Year Yield Edges Lower",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T02:44:41+00:00",
-      "timeDisplay": "2:44 AM",
-      "link": "https://www.tradingview.com/news/te_news:554703:0-us-10-year-yield-edges-lower/"
-    },
-    {
-      "title": "Gold Futures' Technical Signals Turning Constructive \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T02:35:00+00:00",
-      "timeDisplay": "2:35 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528011991:0/"
-    },
-    {
-      "title": "Ethereum Breakdown Deepens: Can ETH Hold The Crucial $1,930 Lifeline?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T02:00:02+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:26e00c8cf094b:0-ethereum-breakdown-deepens-can-eth-hold-the-crucial-1-930-lifeline/"
-    },
-    {
-      "title": "Gold edges higher as investors weigh US-Iran ceasefire deal reports, Fed rate outlook",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-29T01:22:11+00:00",
-      "timeDisplay": "1:22 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42601X:0-gold-edges-higher-as-investors-weigh-us-iran-ceasefire-deal-reports-fed-rate-outlook/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-29T01:07:08+00:00",
-      "timeDisplay": "1:07 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42600W:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Gold Holds Gains Amid US-Iran Peace Optimism",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T00:04:57+00:00",
-      "timeDisplay": "12:04 AM",
-      "link": "https://www.tradingview.com/news/te_news:554646:0-gold-holds-gains-amid-us-iran-peace-optimism/"
-    },
-    {
-      "title": "Oil Falls on Optimism Over Potential U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-29T00:03:00+00:00",
-      "timeDisplay": "12:03 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528011731:0/"
-    },
-    {
-      "title": "Oil Set for Steep Monthly Loss",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T23:49:46+00:00",
-      "timeDisplay": "11:49 PM",
-      "link": "https://www.tradingview.com/news/te_news:554638:0-oil-set-for-steep-monthly-loss/"
-    },
-    {
-      "title": "Gold Edges Lower as Traders Assess Potential U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T23:39:00+00:00",
-      "timeDisplay": "11:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260528011660:0/"
-    },
-    {
-      "title": "Bit Digital buys $20M worth of Ethereum, expands treasury to 158K ETH",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T21:32:40+00:00",
-      "timeDisplay": "9:32 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:0f96e39a4094b:0-bit-digital-buys-20m-worth-of-ethereum-expands-treasury-to-158k-eth/"
-    },
-    {
-      "title": "US yields fall as US, Iran near deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-05-28T19:32:49+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42518Y:0-us-yields-fall-as-us-iran-near-deal/"
-    },
-    {
-      "title": "Crude Oil Prices Rise as US-Iran Peace Deal Not Yet Realized",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-28T19:18:52+00:00",
-      "timeDisplay": "7:18 PM",
-      "link": "https://www.tradingview.com/news/barchart:ae04efeac094b:0-crude-oil-prices-rise-as-us-iran-peace-deal-not-yet-realized/"
     }
   ]
 }

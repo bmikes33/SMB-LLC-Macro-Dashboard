@@ -1,37 +1,203 @@
 {
-  "lastUpdated": "2026-05-31T18:00:03.791366+00:00",
-  "lastUpdatedDisplay": "May 31, 2026 \u2014 06:00 PM UTC",
-  "articleCount": 16,
+  "lastUpdated": "2026-06-01T02:07:21.915204+00:00",
+  "lastUpdatedDisplay": "Jun 01, 2026 \u2014 02:07 AM UTC",
+  "articleCount": 31,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin headlines show mixed technical outlook with spot ETF outflows of $2.97B, rising long-term holder accumulation to record 15.8M, and analyst debates over whether current levels represent bull trap or recovery opportunity. Sentiment data shows most positive ratio for 2026 despite price weakness, with technical analysis pointing to key support/resistance levels around $65K-$78K range.",
-    "regimePressure": "NEUTRAL",
-    "regimePressureReason": "Headlines are crypto-specific technical analysis without clear macro regime implications, focusing on Bitcoin price action rather than broader reflation/stagflation dynamics.",
-    "thresholdWatches": [],
-    "keySignals": [
+    "macroSummary": "Markets show mixed signals with dollar strength weighing on gold while oil rises amid ongoing Iran deal uncertainty and potential Strait of Hormuz disruptions. Asian equities surge despite geopolitical tensions, while crypto markets face selling pressure with Bitcoin ETFs losing $2.97B and analysts warning of prolonged downtrends through 2027.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Dollar strength and oil rises support reflation thesis, but crypto weakness and mixed risk asset performance suggest underlying tension in the risk-on narrative.",
+    "thresholdWatches": [
       {
-        "signal": "Spot Bitcoin ETFs lost $2.97B indicating institutional risk-off behavior in crypto space",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Record 15.8M Bitcoin long-term holders suggests underlying accumulation despite price decline",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Bitcoin sentiment reaches most positive ratio for 2026 despite recent price weakness",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Analysts debate prolonged downtrend through 2027 versus potential rally to $300K target levels",
-        "tag": "NEUTRAL"
+        "indicator": "Oil (WTI)",
+        "level": "approaching $115",
+        "signal": "Oil rises on US-Iran deal uncertainty and Strait of Hormuz closure concerns"
       }
     ],
-    "actionItems": []
+    "keySignals": [
+      {
+        "signal": "Dollar rises amid Iran deal uncertainty, pressuring gold lower",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Oil advances on geopolitical tensions and Strait of Hormuz disruption risks",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Asian shares surge despite geopolitical caution, showing resilient risk appetite",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Bitcoin ETFs lose $2.97B with analysts warning of prolonged downtrend through 2027",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Crypto markets showing structural weakness despite broader risk-on environment",
+        "tag": "CONTRADICTS"
+      }
+    ],
+    "actionItems": [
+      "Monitor oil prices approaching $115 threshold for potential stagflation acceleration",
+      "Reassess BMNR ladder timing given crypto sector weakness diverging from equity strength",
+      "Watch for dollar continuation above key levels that could pressure risk assets"
+    ]
   },
   "articles": [
+    {
+      "title": "Gold slips on stronger dollar, oil; Trump's decision on Iran ceasefire in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-01T01:59:05+00:00",
+      "timeDisplay": "1:59 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N429024:0-gold-slips-on-stronger-dollar-oil-trump-s-decision-on-iran-ceasefire-in-focus/"
+    },
+    {
+      "title": "Dollar Rises Amid Iran Deal Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T01:49:41+00:00",
+      "timeDisplay": "1:49 AM",
+      "link": "https://www.tradingview.com/news/te_news:555152:0-dollar-rises-amid-iran-deal-uncertainty/"
+    },
+    {
+      "title": "Gold Declines as Uncertainty Clouds U.S.-Iran Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T01:33:00+00:00",
+      "timeDisplay": "1:33 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260531000696:0/"
+    },
+    {
+      "title": "Nasdaq, S&P 500, Dow Futures Edge Higher Even As Trump Keeps Iran Deal In Limbo: BBAI, SPCE, SOFI, IBM In Focus",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T01:29:43+00:00",
+      "timeDisplay": "1:29 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:d45df72ea094b:0-nasdaq-s-p-500-dow-futures-edge-higher-even-as-trump-keeps-iran-deal-in-limbo-bbai-spce-sofi-ibm-in-focus/"
+    },
+    {
+      "title": "India is our North Star: Coinbase\u2019s John O\u2019Loghlen on market re-entry and expansion",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T01:26:23+00:00",
+      "timeDisplay": "1:26 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:d4a611a89094b:0-india-is-our-north-star-coinbase-s-john-o-loghlen-on-market-re-entry-and-expansion/"
+    },
+    {
+      "title": "Asian shares surge despite Trump's Iran deal caution",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T01:06:23+00:00",
+      "timeDisplay": "1:06 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:961dc03e8094b:0/"
+    },
+    {
+      "title": "Dollar steadies as markets await signals on Iran war, central banks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-01T00:37:09+00:00",
+      "timeDisplay": "12:37 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42900T:0-dollar-steadies-as-markets-await-signals-on-iran-war-central-banks/"
+    },
+    {
+      "title": "Gold Holds Steady Amid Iran Deal Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T00:15:18+00:00",
+      "timeDisplay": "12:15 AM",
+      "link": "https://www.tradingview.com/news/te_news:555107:0-gold-holds-steady-amid-iran-deal-uncertainty/"
+    },
+    {
+      "title": "Oil Rises on US-Iran Deal Uncertainty",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T23:38:03+00:00",
+      "timeDisplay": "11:38 PM",
+      "link": "https://www.tradingview.com/news/te_news:555094:0-oil-rises-on-us-iran-deal-uncertainty/"
+    },
+    {
+      "title": "Oil Rises Amid Few Signs of Strait of Hormuz's Reopening \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T23:36:00+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260531000502:0/"
+    },
+    {
+      "title": "Saylor\u2019s \u2018Working Better\u2019 Tease Signals Fresh Strategy Bitcoin Buy Days Before Pivotal STRC Vote",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T23:00:21+00:00",
+      "timeDisplay": "11:00 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:bb9751710094b:0/"
+    },
+    {
+      "title": "$1.47 Million in Satoshi Era Bitcoin Moves After Nearly 16 Years",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:4add29d8e094b:0-1-47-million-in-satoshi-era-bitcoin-moves-after-nearly-16-years/"
+    },
+    {
+      "title": "Dev helps rescue $2 million locked in 2016 ICO contract for nine years with whitehat exploit",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T21:34:48+00:00",
+      "timeDisplay": "9:34 PM",
+      "link": "https://www.tradingview.com/news/the_block:39e85f37f094b:0-dev-helps-rescue-2-million-locked-in-2016-ico-contract-for-nine-years-with-whitehat-exploit/"
+    },
+    {
+      "title": "Michael Saylor\u2019s Post Fuels New Bitcoin Purchase Speculation for MicroStrategy",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T21:00:00+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:c78b78bef094b:0-michael-saylor-s-post-fuels-new-bitcoin-purchase-speculation-for-microstrategy/"
+    },
+    {
+      "title": "This Week in Crypto: MicroStrategy\u2019s Bitcoin Fears Fade, $500M Claude Bill, Thiel Stock Halves",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T20:58:10+00:00",
+      "timeDisplay": "8:58 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:c8a7f05d4094b:0-this-week-in-crypto-microstrategy-s-bitcoin-fears-fade-500m-claude-bill-thiel-stock-halves/"
+    },
+    {
+      "title": "Bit Digital Raises Ethereum Holdings to 158K ETH After New Purchase",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T20:28:00+00:00",
+      "timeDisplay": "8:28 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8caaa3fbf094b:0-bit-digital-raises-ethereum-holdings-to-158k-eth-after-new-purchase/"
+    },
+    {
+      "title": "Strategy's Michael Saylor teases BTC buy with 'working better' tweet",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T20:00:12+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:cf175275b094b:0-strategy-s-michael-saylor-teases-btc-buy-with-working-better-tweet/"
+    },
+    {
+      "title": "Insider Reveals Real Reason Ethereum Is Down 65% vs Bitcoin Since The Merge",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T19:42:27+00:00",
+      "timeDisplay": "7:42 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:60b34aa8c094b:0-insider-reveals-real-reason-ethereum-is-down-65-vs-bitcoin-since-the-merge/"
+    },
+    {
+      "title": "Bitcoin\u2019s First CME Gap-Free Monday Puts a Popular Trading Signal to the Test",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T17:46:49+00:00",
+      "timeDisplay": "5:46 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:dd08a0787094b:0-bitcoin-s-first-cme-gap-free-monday-puts-a-popular-trading-signal-to-the-test/"
+    },
     {
       "title": "Kraken \u2018plans\u2019 regulated perp contracts as rivals are quick off the blocks",
       "source": "cointelegraph",
@@ -39,6 +205,14 @@
       "timestamp": "2026-05-31T17:40:00+00:00",
       "timeDisplay": "5:40 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:b1a40e8a1094b:0-kraken-plans-regulated-perp-contracts-as-rivals-are-quick-off-the-blocks/"
+    },
+    {
+      "title": "Adam Back Flags Bitcoin\u2019s 200-Week Average as a Structural Bull Signal",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-05-31T17:06:24+00:00",
+      "timeDisplay": "5:06 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:13d688069094b:0-adam-back-flags-bitcoin-s-200-week-average-as-a-structural-bull-signal/"
     },
     {
       "title": "Bitcoin preps 3% May downside, but US PMI data may boost BTC price",
@@ -119,46 +293,6 @@
       "timestamp": "2026-05-31T03:00:19+00:00",
       "timeDisplay": "3:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:6e0b01445094b:0-bitcoin-faces-prolonged-downtrend-through-2027-analyst-warns/"
-    },
-    {
-      "title": "Why The Bitcoin Price Won\u2019t Hit $100,000 Again This Year",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-31T02:00:53+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:87bb7f68d094b:0-why-the-bitcoin-price-won-t-hit-100-000-again-this-year/"
-    },
-    {
-      "title": "Bitcoin Recovery Rally Or Bull Trap? These Key Levels Hold The Answer",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-31T01:00:32+00:00",
-      "timeDisplay": "1:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:e8659c99c094b:0-bitcoin-recovery-rally-or-bull-trap-these-key-levels-hold-the-answer/"
-    },
-    {
-      "title": "Bitcoin is at \u2018pivotal level\u2019 as $65K downside risk looms: Analyst",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-31T00:58:32+00:00",
-      "timeDisplay": "12:58 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:ce6d57ebf094b:0-bitcoin-is-at-pivotal-level-as-65k-downside-risk-looms-analyst/"
-    },
-    {
-      "title": "Bitcoin Short-Term Holders Move 107,760 BTC In A Single Day \u2014 Details",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-30T23:00:28+00:00",
-      "timeDisplay": "11:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:227a1e5b3094b:0-bitcoin-short-term-holders-move-107-760-btc-in-a-single-day-details/"
-    },
-    {
-      "title": "The Bitcoin \u2018Dream Entry\u2019 To Wait For Before The Run-Up To $300,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-30T18:30:36+00:00",
-      "timeDisplay": "6:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:1b27d7ae4094b:0-the-bitcoin-dream-entry-to-wait-for-before-the-run-up-to-300-000/"
     }
   ]
 }

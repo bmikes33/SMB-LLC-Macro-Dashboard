@@ -1,58 +1,282 @@
 {
-  "lastUpdated": "2026-06-01T14:43:08.294642+00:00",
-  "lastUpdatedDisplay": "Jun 01, 2026 \u2014 02:43 PM UTC",
+  "lastUpdated": "2026-06-01T18:35:28.918491+00:00",
+  "lastUpdatedDisplay": "Jun 01, 2026 \u2014 06:35 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Iran halted peace talks, driving oil prices up over 5% and strengthening the dollar and Treasury yields amid renewed geopolitical tensions. US manufacturing data showed mixed signals with ISM at 54.0 (highest since May 2022) but 69% of comments were negative, citing Iran war supply chain impacts and pricing volatility. Gold fell nearly 2% on inflation worries while Bitcoin hit 7-week lows after MicroStrategy's first BTC sale since 2022.",
-    "regimePressure": "REINFORCING",
-    "regimePressureReason": "Iran talk collapse escalates the embedded oil shock, manufacturing strength supports cyclical equity bias, and rising yields/dollar align with reflation dynamics despite some cross-currents.",
+    "macroSummary": "Markets are experiencing dual pressure from escalating Middle East tensions as Iran reportedly halts truce talks with Israel, while cryptocurrency markets face significant selling pressure led by MicroStrategy's first Bitcoin sale since 2022. Manufacturing data shows rising input costs and supply chain disruptions from the Iran conflict, with ISM noting price increases across materials from computer chips to resins.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Headlines show accelerating stagflationary pressures with manufacturing costs rising due to Middle East conflict while risk assets (crypto, equities) face selling pressure, suggesting the reflation thesis may be shifting toward its stagflationary invalidation scenario.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "$115",
-        "signal": "Oil extending gains 5%+ on Iran developments approaches stagflation acceleration threshold"
+        "signal": "Trump announces Israel-Hezbollah halt but Iran breaks off talks, maintaining oil price pressure from supply disruption fears"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran halting talks drives oil up 5%+ with direct supply chain impacts hitting 42% of ISM respondents",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar and Treasury yields rising on geopolitical escalation reinforces reflation positioning",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "ISM Manufacturing at 54.0 (highest since May 2022) with new orders at 56.8 supports cyclical strength",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Gold falling 2% on inflation fears contradicts typical safe-haven demand during geopolitical stress",
+        "signal": "ISM reports broad-based price increases in manufacturing from computer chips to resins directly due to Middle East war, hitting supply chains and raising costs",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Manufacturing sentiment 69% negative despite strong headline numbers suggests underlying fragility",
+        "signal": "Iran reportedly halts US truce talks and Israel escalates Hezbollah attacks, intensifying geopolitical risk and oil supply concerns",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strengthening and gold falling 2% as markets parse fragile Middle East peace talks, showing flight to dollar safety",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "MicroStrategy's first Bitcoin sale since 2022 triggers crypto selloff with Bitcoin hitting 7-week lows, signaling risk-off sentiment in speculative assets",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Manufacturing sector shows pent-up demand and new orders rising, with employment improving and prices moving in right direction according to ISM",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained break above $115 would flip to stagflation dominance",
-      "BMNR ladder benefits from Ethereum accumulation trend but watch crypto weakness from risk-off flows",
-      "Maintain cyclical overweight but prepare for volatility spike if geopolitical situation deteriorates further"
+      "Monitor oil prices closely - sustained break above $115 would confirm stagflation tilt dominance per invalidation threshold",
+      "Watch DXY strength as dollar flight-to-safety could approach 100 regime flip level",
+      "BMNR ladder may face pressure if crypto weakness spreads to ETH - consider tightening put strikes"
     ]
   },
   "articles": [
     {
-      "title": "Gold falls nearly 2% with inflation worries rising on Middle East conflict",
+      "title": "Saylor's Strategy Sells Bitcoin for First Time Since 2022 \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T18:20:00+00:00",
+      "timeDisplay": "6:20 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601007196:0/"
+    },
+    {
+      "title": "Gold falls with inflation worries rising on Middle East conflict",
       "source": "reuters",
       "color": "#ff6d00",
-      "timestamp": "2026-06-01T14:35:00+00:00",
-      "timeDisplay": "2:35 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4290J5:0-gold-falls-nearly-2-with-inflation-worries-rising-on-middle-east-conflict/"
+      "timestamp": "2026-06-01T18:15:33+00:00",
+      "timeDisplay": "6:15 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4290SP:0-gold-falls-with-inflation-worries-rising-on-middle-east-conflict/"
+    },
+    {
+      "title": "Strategy Sells Bitcoin for First Time Since 2022 as Shares Drop 6%",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T18:05:37+00:00",
+      "timeDisplay": "6:05 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:43a22ffad094b:0-strategy-sells-bitcoin-for-first-time-since-2022-as-shares-drop-6/"
+    },
+    {
+      "title": "Oil Pulls Back as Trump Says Israel, Hezbollah to Halt Attacks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T17:56:00+00:00",
+      "timeDisplay": "5:56 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601007076:0/"
+    },
+    {
+      "title": "Bitcoin Outlook Hinges On A Handful Of Critical Price Zones",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T17:30:54+00:00",
+      "timeDisplay": "5:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:fc7a7aa38094b:0-bitcoin-outlook-hinges-on-a-handful-of-critical-price-zones/"
+    },
+    {
+      "title": "Strategy Sells Bitcoin for First Time Since 2022 to Fund Dividends",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T17:23:22+00:00",
+      "timeDisplay": "5:23 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:9d0a4ab81094b:0-strategy-sells-bitcoin-for-first-time-since-2022-to-fund-dividends/"
+    },
+    {
+      "title": "Bitcoin 'Rage Quitting' Sends It Slumping. Where Does It Go From Here? \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T17:19:00+00:00",
+      "timeDisplay": "5:19 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601006913:0/"
+    },
+    {
+      "title": "Stronger fundamentals set this market apart from the dot-com bubble \u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-01T17:11:10+00:00",
+      "timeDisplay": "5:11 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42910P:0-stronger-fundamentals-set-this-market-apart-from-the-dot-com-bubble/"
+    },
+    {
+      "title": "Correction to Hyperliquid Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:54:00+00:00",
+      "timeDisplay": "4:54 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601006747:0/"
+    },
+    {
+      "title": "Why are Bitcoin, Ethereum and XRP Prices Crashing Today?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:50:34+00:00",
+      "timeDisplay": "4:50 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:e16849433094b:0-why-are-bitcoin-ethereum-and-xrp-prices-crashing-today/"
+    },
+    {
+      "title": "Strategy bitcoin sale timing throws wrench into $20 million Polymarket pool",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:40:18+00:00",
+      "timeDisplay": "4:40 PM",
+      "link": "https://www.tradingview.com/news/the_block:6cea84bc2094b:0-strategy-bitcoin-sale-timing-throws-wrench-into-20-million-polymarket-pool/"
+    },
+    {
+      "title": "Strategy's stock drops after rare bitcoin sale tests 'never sell' narrative",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:31:00+00:00",
+      "timeDisplay": "4:31 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260601008884:0/"
+    },
+    {
+      "title": "IRAN UPDATE: CONFUSION AS UNCONFIRMED RPT IRAN BREAKS OFF TRUCE TALKS BECAUSE OF ISRAEL ATTACKS ON HEZBOLLAH; ISRAEL ESCALATES ATTACKS; TRUMP: 'RELAX'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:21:00+00:00",
+      "timeDisplay": "4:21 PM",
+      "link": "https://www.tradingview.com/news/macenews:6372ccb95094b:0-iran-update-confusion-as-unconfirmed-rpt-iran-breaks-off-truce-talks-because-of-israel-attacks-on-hezbollah-israel-escalates-attacks-trump-relax/"
+    },
+    {
+      "title": "Cryptos Drop Amid Strategy's Bitcoin Sales, Suspended U.S.-Iran Talks",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:03:24+00:00",
+      "timeDisplay": "4:03 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:4a95bd51d08f8:0-cryptos-drop-amid-strategy-s-bitcoin-sales-suspended-u-s-iran-talks/"
+    },
+    {
+      "title": "Bank of Canada's Credibility Faces Prolonged Test from Mideast \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T16:03:00+00:00",
+      "timeDisplay": "4:03 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601006150:0/"
+    },
+    {
+      "title": "Senators Cynthia Lummis, Tim Scott Press For CLARITY Act Passage \u2013 Reportedly Eye Push After July 4",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:59:07+00:00",
+      "timeDisplay": "3:59 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:f4dce616e094b:0-senators-cynthia-lummis-tim-scott-press-for-clarity-act-passage-reportedly-eye-push-after-july-4/"
+    },
+    {
+      "title": "Hyperliquid Hits Record as ETFs Inflows Continue \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:53:00+00:00",
+      "timeDisplay": "3:53 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601005943:0/"
+    },
+    {
+      "title": "Are Ethereum OGs jumping ship? Here's what the data says",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:44:00+00:00",
+      "timeDisplay": "3:44 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:ea83203b2094b:0-are-ethereum-ogs-jumping-ship-here-s-what-the-data-says/"
+    },
+    {
+      "title": "Gold Slides 2% on Firmer Dollar, Rising Crude \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:26:00+00:00",
+      "timeDisplay": "3:26 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601005682:0/"
+    },
+    {
+      "title": "Gold falls nearly 2% with inflation worries rising on Middle East conflict",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:25:54+00:00",
+      "timeDisplay": "3:25 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:ce65a7a75094b:0-gold-falls-nearly-2-with-inflation-worries-rising-on-middle-east-conflict/"
+    },
+    {
+      "title": "US yields rise after report of Iran negotiation halt\u00a0",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-01T15:24:23+00:00",
+      "timeDisplay": "3:24 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4290XI:0-us-yields-rise-after-report-of-iran-negotiation-halt/"
+    },
+    {
+      "title": "Late May Woes Look to Extend Into June for Crypto \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:17:00+00:00",
+      "timeDisplay": "3:17 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601005609:0/"
+    },
+    {
+      "title": "Iran Reportedly Halts US Talks, Vows to Block Hormuz \u2014 BTC Drops to 7-Week Low With Retail Blaming Michael Saylor",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:11:49+00:00",
+      "timeDisplay": "3:11 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:4710143bd094b:0-iran-reportedly-halts-us-talks-vows-to-block-hormuz-btc-drops-to-7-week-low-with-retail-blaming-michael-saylor/"
+    },
+    {
+      "title": "Stalled U.S-Iran Peace Talks Rattle Global Markets",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T15:10:11+00:00",
+      "timeDisplay": "3:10 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:c4a38dcf81163:0-stalled-u-s-iran-peace-talks-rattle-global-markets/"
+    },
+    {
+      "title": "US ISM\u2019S SPENCE: US IS PROTECTED A LITTLE BIT FROM SUPPLY SHORTAGES OF MATERIALS VS. ASIA BUT HIGH PRICES CAN LEAD TO TIGHT SUPPLY AND IMPACT OUTPUT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:56:00+00:00",
+      "timeDisplay": "2:56 PM",
+      "link": "https://www.tradingview.com/news/macenews:c52e56a88094b:0-us-ism-s-spence-us-is-protected-a-little-bit-from-supply-shortages-of-materials-vs-asia-but-high-prices-can-lead-to-tight-supply-and-impact-output/"
+    },
+    {
+      "title": "US ISM\u2019S SPENCE ON MANUFACTURING: PRICES ARE UP FOR JUST ABOUT EVERYTHING FROM COMPUTER CHIPS TO RESINS DUE TO MIDEAST WAR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:54:00+00:00",
+      "timeDisplay": "2:54 PM",
+      "link": "https://www.tradingview.com/news/macenews:4090d6a87094b:0-us-ism-s-spence-on-manufacturing-prices-are-up-for-just-about-everything-from-computer-chips-to-resins-due-to-mideast-war/"
+    },
+    {
+      "title": "Money in Bitcoin ETFs Keep Flowing Out \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:47:00+00:00",
+      "timeDisplay": "2:47 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601005279:0/"
+    },
+    {
+      "title": "Dollar rises as markets parse fragile Middle East peace talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-01T14:44:18+00:00",
+      "timeDisplay": "2:44 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4290G1:0-dollar-rises-as-markets-parse-fragile-middle-east-peace-talks/"
+    },
+    {
+      "title": "Strategy Sells Bitcoin for First Time Since 2022. The Stock Is Sliding. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:42:00+00:00",
+      "timeDisplay": "2:42 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260601003612:0/"
     },
     {
       "title": "Strategy (MSTR) falls after Bitcoin sale even as Mizuho cuts price target",
@@ -101,6 +325,14 @@
       "timestamp": "2026-06-01T14:16:00+00:00",
       "timeDisplay": "2:16 PM",
       "link": "https://www.tradingview.com/news/macenews:5ab359f7a094b:0-us-ism-manufacturing-report-iran-war-starting-to-hit-supply-chain-directly-raise-costs-causing-shipment-delays-uncertainties/"
+    },
+    {
+      "title": "Recovery hopes fade as Kelp DAO hacker launders nearly all $220M in stolen funds",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:09:52+00:00",
+      "timeDisplay": "2:09 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:39d1abcd2094b:0-recovery-hopes-fade-as-kelp-dao-hacker-launders-nearly-all-220m-in-stolen-funds/"
     },
     {
       "title": "Treasury Yields, Dollar Rise on Reports Tehran Is Exiting Talks \u2014 Market Talk",
@@ -215,14 +447,6 @@
       "link": "https://www.tradingview.com/news/baystreet:b1c442266094b:0-is-the-oil-boom-over/"
     },
     {
-      "title": "Bitcoin Hits 7-Week Low After Report of Iran Halting Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T13:58:00+00:00",
-      "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601004745:0/"
-    },
-    {
       "title": "Gold declines Rs 2,500 to Rs 1.6 lakh/10g amid fresh US-Iran tensions",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -231,28 +455,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:06b6d1e12094b:0-gold-declines-rs-2-500-to-rs-1-6-lakh-10g-amid-fresh-us-iran-tensions/"
     },
     {
-      "title": "Dollar Strengthens as Iran Suspends Negotiation Messaging",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T13:55:48+00:00",
-      "timeDisplay": "1:55 PM",
-      "link": "https://www.tradingview.com/news/te_news:555412:0-dollar-strengthens-as-iran-suspends-negotiation-messaging/"
-    },
-    {
       "title": "Oil Extends Gains on Report Iran Is Halting Talks \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-01T13:55:00+00:00",
       "timeDisplay": "1:55 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260601004725:0/"
-    },
-    {
-      "title": "Strategy sells 32 BTC in first Bitcoin sale since 2022; Stock falls on open",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T13:50:00+00:00",
-      "timeDisplay": "1:50 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:c8facac04094b:0-strategy-sells-32-btc-in-first-bitcoin-sale-since-2022-stock-falls-on-open/"
     },
     {
       "title": "Treasury Yields March Higher",
@@ -327,14 +535,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260601004421:0/"
     },
     {
-      "title": "Strategy Sells Bitcoin for First Time Since 2022. The Stock Is Sliding. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T13:12:00+00:00",
-      "timeDisplay": "1:12 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601003612:0/"
-    },
-    {
       "title": "Gold dips with inflation worries rising on Middle East conflict",
       "source": "reuters",
       "color": "#ff6d00",
@@ -349,14 +549,6 @@
       "timestamp": "2026-06-01T12:54:47+00:00",
       "timeDisplay": "12:54 PM",
       "link": "https://www.tradingview.com/news/chainwire:eed1eb9f7094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-5-42-million-tokens-and-total-crypto-and-total-cash-holdings-of-11-6-billion/"
-    },
-    {
-      "title": "Bitcoin weakens near $72K as ETF outflows, stalled whale buying and macro uncertainty weigh on prices: analysts",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:49:29+00:00",
-      "timeDisplay": "12:49 PM",
-      "link": "https://www.tradingview.com/news/the_block:5f43ec7dc094b:0-bitcoin-weakens-near-72k-as-etf-outflows-stalled-whale-buying-and-macro-uncertainty-weigh-on-prices-analysts/"
     },
     {
       "title": "Tom Lee Says Crypto Investors Are 'Rage Quitting' After Mark Cuban Dumped All His Bitcoin",
@@ -383,38 +575,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUA2M9SM9:0-bitmine-immersion-technologies-announces-eth-holdings-reach-5-42-million-tokens-and-total-crypto-and-total-cash-holdings-of-11-6-billion/"
     },
     {
-      "title": "Breaking: Strategy Sells 32 Bitcoin for First Time Since 2022",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:31:42+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:3930bab09094b:0-breaking-strategy-sells-32-bitcoin-for-first-time-since-2022/"
-    },
-    {
-      "title": "Bitcoin Diverges From Stocks, Losing Out to AI Rally \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601003661:0/"
-    },
-    {
-      "title": "Michael Saylor\u2019s Strategy Sells 32 Bitcoin For $2.5 Million For The First Time Since 2022",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:25:54+00:00",
-      "timeDisplay": "12:25 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:4a21e6840094b:0-michael-saylor-s-strategy-sells-32-bitcoin-for-2-5-million-for-the-first-time-since-2022/"
-    },
-    {
-      "title": "Key facts: CFTC OKs BTC Perps; Spot ETFs AUM < $100B; $1.26B Block Loss",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:13:47+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:9c8cd5a446009:0-key-facts-cftc-oks-btc-perps-spot-etfs-aum-100b-1-26b-block-loss/"
-    },
-    {
       "title": "Gold falls as renewed Middle East tensions fuel inflation fears",
       "source": "reuters",
       "color": "#ff6d00",
@@ -423,76 +583,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4290CZ:0-gold-falls-as-renewed-middle-east-tensions-fuel-inflation-fears/"
     },
     {
-      "title": "Michael Saylor\u2019s Strategy sells 32 bitcoin for $2.5 million as total holdings drop to 843,706 BTC",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:09:32+00:00",
-      "timeDisplay": "12:09 PM",
-      "link": "https://www.tradingview.com/news/the_block:2f185b1c0094b:0-michael-saylor-s-strategy-sells-32-bitcoin-for-2-5-million-as-total-holdings-drop-to-843-706-btc/"
-    },
-    {
-      "title": "MicroStrategy Sells Bitcoin For the First Time Since 2022, Hands Trader a $200,000 Win",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:09:15+00:00",
-      "timeDisplay": "12:09 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:ded1f5bce094b:0-microstrategy-sells-bitcoin-for-the-first-time-since-2022-hands-trader-a-200-000-win/"
-    },
-    {
-      "title": "Michael Saylor\u2019s Strategy Falls After Mizuho Cuts Bitcoin Forecast, Trims MSTR Target \u2013 'Crypto Winter Remains Intact'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T12:05:46+00:00",
-      "timeDisplay": "12:05 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:436ad9208094b:0-michael-saylor-s-strategy-falls-after-mizuho-cuts-bitcoin-forecast-trims-mstr-target-crypto-winter-remains-intact/"
-    },
-    {
-      "title": "Dollar Appears Suspended Between Optimism And Skepticism Over U.S.-Iran Deal \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T11:58:00+00:00",
-      "timeDisplay": "11:58 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601003009:0/"
-    },
-    {
-      "title": "Dollar in holding pattern as markets await progress on Middle East peace talks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T11:54:47+00:00",
-      "timeDisplay": "11:54 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N4290P3:0-dollar-in-holding-pattern-as-markets-await-progress-on-middle-east-peace-talks/"
-    },
-    {
       "title": "Oil Rises on US-Iran Deal Uncertainty",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-06-01T11:52:41+00:00",
       "timeDisplay": "11:52 AM",
       "link": "https://www.tradingview.com/news/te_news:555375:0-oil-rises-on-us-iran-deal-uncertainty/"
-    },
-    {
-      "title": "Bitcoin ETPs post largest 2026 outflow as crypto funds bleed $1.67B",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T11:50:13+00:00",
-      "timeDisplay": "11:50 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:c23d7a133094b:0-bitcoin-etps-post-largest-2026-outflow-as-crypto-funds-bleed-1-67b/"
-    },
-    {
-      "title": "Bitcoin Falls Amid Fears Over U.S.-Iran Conflict \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T11:42:00+00:00",
-      "timeDisplay": "11:42 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601002868:0/"
-    },
-    {
-      "title": "How Low Will Bitcoin Go in June? Bitcoin Analyst Reveals",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T11:41:31+00:00",
-      "timeDisplay": "11:41 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:0ff88e906094b:0-how-low-will-bitcoin-go-in-june-bitcoin-analyst-reveals/"
     },
     {
       "title": "TokenInsight Report: MEXC Ranks No. 1 Globally in Silver Futures Liquidity, Leading Across Multiple Metrics",
@@ -549,102 +645,6 @@
       "timestamp": "2026-06-01T07:38:37+00:00",
       "timeDisplay": "7:38 AM",
       "link": "https://www.tradingview.com/news/stocktwits:c12590fa7094b:0-nvda-stock-set-for-strong-open-today-ceo-unveils-first-pc-chips-at-computex-2026/"
-    },
-    {
-      "title": "Oil Rises 3% on U.S.-Iran Strikes, Deal Uncertainty \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T07:33:00+00:00",
-      "timeDisplay": "7:33 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601000995:0/"
-    },
-    {
-      "title": "Gold slips on stronger dollar, oil as markets await Trump decision on Iran",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T07:24:19+00:00",
-      "timeDisplay": "7:24 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42906X:0-gold-slips-on-stronger-dollar-oil-as-markets-await-trump-decision-on-iran/"
-    },
-    {
-      "title": "Dollar Rises After U.S. And Iran Exchange Fresh Blows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T06:45:00+00:00",
-      "timeDisplay": "6:45 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260601000778:0/"
-    },
-    {
-      "title": "Gold slips on stronger dollar, oil as markets await Trump decision on Iran proposal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T05:30:00+00:00",
-      "timeDisplay": "5:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N429058:0-gold-slips-on-stronger-dollar-oil-as-markets-await-trump-decision-on-iran-proposal/"
-    },
-    {
-      "title": "Ethereum Price Slide May Not Be Over Yet\u2014More Losses Loom",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T03:18:22+00:00",
-      "timeDisplay": "3:18 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6ab45477f094b:0-ethereum-price-slide-may-not-be-over-yet-more-losses-loom/"
-    },
-    {
-      "title": "MONDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T02:32:00+00:00",
-      "timeDisplay": "2:32 AM",
-      "link": "https://www.tradingview.com/news/macenews:d88ff6d9f094b:0-monday-white-house-schedule-subject-to-additions-during-the-day/"
-    },
-    {
-      "title": "US 10-Year Yield Rises on Iran Deal Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T02:28:48+00:00",
-      "timeDisplay": "2:28 AM",
-      "link": "https://www.tradingview.com/news/te_news:555174:0-us-10-year-yield-rises-on-iran-deal-uncertainty/"
-    },
-    {
-      "title": "Gold slips on stronger dollar, oil; Trump's decision on Iran ceasefire in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T01:59:05+00:00",
-      "timeDisplay": "1:59 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N429024:0-gold-slips-on-stronger-dollar-oil-trump-s-decision-on-iran-ceasefire-in-focus/"
-    },
-    {
-      "title": "Gold Declines as Uncertainty Clouds U.S.-Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T01:33:00+00:00",
-      "timeDisplay": "1:33 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260531000696:0/"
-    },
-    {
-      "title": "Nasdaq, S&P 500, Dow Futures Edge Higher Even As Trump Keeps Iran Deal In Limbo: BBAI, SPCE, SOFI, IBM In Focus",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T01:29:43+00:00",
-      "timeDisplay": "1:29 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:d45df72ea094b:0-nasdaq-s-p-500-dow-futures-edge-higher-even-as-trump-keeps-iran-deal-in-limbo-bbai-spce-sofi-ibm-in-focus/"
-    },
-    {
-      "title": "Gold Holds Steady Amid Iran Deal Uncertainty",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T00:15:18+00:00",
-      "timeDisplay": "12:15 AM",
-      "link": "https://www.tradingview.com/news/te_news:555107:0-gold-holds-steady-amid-iran-deal-uncertainty/"
-    },
-    {
-      "title": "Oil Rises Amid Few Signs of Strait of Hormuz's Reopening \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-05-31T23:36:00+00:00",
-      "timeDisplay": "11:36 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260531000502:0/"
     }
   ]
 }

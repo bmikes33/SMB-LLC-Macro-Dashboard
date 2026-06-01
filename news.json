@@ -1,45 +1,77 @@
 {
-  "lastUpdated": "2026-06-01T21:58:02.631224+00:00",
-  "lastUpdatedDisplay": "Jun 01, 2026 \u2014 09:58 PM UTC",
+  "lastUpdated": "2026-06-01T23:37:50.134957+00:00",
+  "lastUpdatedDisplay": "Jun 01, 2026 \u2014 11:37 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "MicroStrategy conducted its first Bitcoin sale since 2022, triggering crypto market weakness with Bitcoin falling to 7-week lows. Middle East tensions escalated as Iran reportedly halted US talks and threatened to block the Strait of Hormuz, driving oil prices higher and strengthening the dollar. Manufacturing data showed continued expansion but with elevated costs due to geopolitical conflicts.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Headlines show reinforcing elements (stronger dollar, rising yields, manufacturing expansion, elevated oil) but also stress signals (crypto volatility, gold falling on inflation fears, Iran escalation threatening supply chains).",
-    "thresholdWatches": [],
+    "macroSummary": "MicroStrategy conducted its first Bitcoin sale since 2022, triggering crypto market weakness with Bitcoin falling below $71K and broader crypto selloff. Middle East tensions escalated with reports of Iran breaking off truce talks and continued Strait of Hormuz disruption, driving dollar strength, higher oil prices, and rising US yields. Manufacturing data showed continued expansion but with elevated costs from the conflict.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Rising yields, stronger dollar, and oil price elevation from escalating Iran conflict are moving toward multiple stagflationary invalidation thresholds, while crypto weakness suggests broader risk asset stress.",
+    "thresholdWatches": [
+      {
+        "indicator": "US30Y",
+        "level": "> 5.10%",
+        "signal": "Yields rising on Iran negotiation halt reports - approaching long-duration capitulation threshold"
+      },
+      {
+        "indicator": "Oil (WTI)",
+        "level": "> $115",
+        "signal": "Oil prices remaining elevated on Strait of Hormuz closure and Iran conflict escalation"
+      },
+      {
+        "indicator": "DXY",
+        "level": "> 100",
+        "signal": "Dollar advancing strongly on Middle East uncertainty and Iran talks breakdown"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Dollar strengthening significantly as Strait of Hormuz remains shut and Iran halts US negotiations",
-        "tag": "SUPPORTS"
+        "signal": "Iran reportedly breaks off truce talks with Israel escalating attacks, Strait of Hormuz remains shut",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "US yields rising on uncertainty around Iran talks and Middle East conflict escalation",
-        "tag": "SUPPORTS"
+        "signal": "US yields rising on Iran negotiation uncertainty, testing stagflationary boundaries",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Manufacturing PMI expanded for 5th straight month but costs remain elevated due to Mideast conflict",
-        "tag": "SUPPORTS"
+        "signal": "Dollar strengthening significantly on Middle East fragility and geopolitical risk",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold falling 2% despite geopolitical tensions as inflation worries and stronger dollar dominate",
+        "signal": "MicroStrategy Bitcoin sale triggers crypto weakness, suggesting broader risk asset stress emerging",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "MicroStrategy's first Bitcoin sale since 2022 triggering broad crypto selloff and testing institutional adoption narrative",
-        "tag": "NEUTRAL"
+        "signal": "Manufacturing costs elevated from Middle East conflict despite expansion, confirming stagflationary undertones",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance given crypto volatility and potential ETH correlation breakdown",
-      "Watch for oil price action above $115 WTI level as Iran threatens Hormuz blockade",
-      "Consider reducing cyclical exposure if geopolitical risk premium starts pricing into broader equity markets"
+      "Monitor BMNR ladder closely as crypto weakness may accelerate if broader risk-off emerges",
+      "Prepare to reduce cyclical exposure if 30Y yield breaks 5.10% or DXY breaks 100",
+      "Watch for VIX move above 22 as geopolitical escalation could trigger risk-off regime flip"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin bulls eye fresh positions after BTC price drops under $71K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T22:54:07+00:00",
+      "timeDisplay": "10:54 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:68338f288094b:0-bitcoin-bulls-eye-fresh-positions-after-btc-price-drops-under-71k/"
+    },
+    {
+      "title": "Polymarket Faces Backlash Over MicroStrategy Bitcoin Sale Dispute",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T21:50:46+00:00",
+      "timeDisplay": "9:50 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:86f6120db094b:0-polymarket-faces-backlash-over-microstrategy-bitcoin-sale-dispute/"
+    },
     {
       "title": "Strategy Sells Bitcoin for First Time Since 2022. The Stock Is Sliding. \u2014 Barrons.com",
       "source": "dow-jones",
@@ -140,8 +172,8 @@
       "title": "Strategy's BTC sale turns Bitcoin treasury into market stress test",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-06-01T18:20:40+00:00",
-      "timeDisplay": "6:20 PM",
+      "timestamp": "2026-06-01T18:25:00+00:00",
+      "timeDisplay": "6:25 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:3d089ac82094b:0-strategy-s-btc-sale-turns-bitcoin-treasury-into-market-stress-test/"
     },
     {
@@ -313,20 +345,20 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260601005609:0/"
     },
     {
-      "title": "Iran Reportedly Halts US Talks, Vows to Block Hormuz \u2014 BTC Drops to 7-Week Low With Retail Blaming Michael Saylor",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-01T15:11:49+00:00",
-      "timeDisplay": "3:11 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:4710143bd094b:0-iran-reportedly-halts-us-talks-vows-to-block-hormuz-btc-drops-to-7-week-low-with-retail-blaming-michael-saylor/"
-    },
-    {
       "title": "Stalled U.S-Iran Peace Talks Rattle Global Markets",
       "source": "dpa_afx",
       "color": "#00e5ff",
       "timestamp": "2026-06-01T15:10:11+00:00",
       "timeDisplay": "3:10 PM",
       "link": "https://www.tradingview.com/news/dpa_afx:c4a38dcf81163:0-stalled-u-s-iran-peace-talks-rattle-global-markets/"
+    },
+    {
+      "title": "Dollar Rises on Hawkish Rally in Oil Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-01T14:57:04+00:00",
+      "timeDisplay": "2:57 PM",
+      "link": "https://www.tradingview.com/news/barchart:2d07b133f094b:0-dollar-rises-on-hawkish-rally-in-oil-prices/"
     },
     {
       "title": "US ISM\u2019S SPENCE: US IS PROTECTED A LITTLE BIT FROM SUPPLY SHORTAGES OF MATERIALS VS. ASIA BUT HIGH PRICES CAN LEAD TO TIGHT SUPPLY AND IMPACT OUTPUT",
@@ -623,22 +655,6 @@
       "timestamp": "2026-06-01T12:47:00+00:00",
       "timeDisplay": "12:47 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260601003905:0/"
-    },
-    {
-      "title": "Bitmine Immersion Technologies Announces ETH Holdings Reach 5.42 Million Tokens, And Total Crypto And Total Cash Holdings Of $11.6 Billion",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T12:40:18+00:00",
-      "timeDisplay": "12:40 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_TUA2M9SM9:0-bitmine-immersion-technologies-announces-eth-holdings-reach-5-42-million-tokens-and-total-crypto-and-total-cash-holdings-of-11-6-billion/"
-    },
-    {
-      "title": "Gold falls as renewed Middle East tensions fuel inflation fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-01T12:11:03+00:00",
-      "timeDisplay": "12:11 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N4290CZ:0-gold-falls-as-renewed-middle-east-tensions-fuel-inflation-fears/"
     }
   ]
 }

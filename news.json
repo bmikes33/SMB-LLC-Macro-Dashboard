@@ -1,51 +1,144 @@
 {
-  "lastUpdated": "2026-06-03T00:25:28.864098+00:00",
-  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 12:25 AM UTC",
+  "lastUpdated": "2026-06-03T02:16:23.095807+00:00",
+  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 02:16 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Bitcoin and crypto markets experienced sharp declines with BTC falling below $70K amid $1+ billion in liquidations, while oil prices rose above $93 as US-Iran peace talks stalled. Strong US jobs data pressured gold lower and supported dollar stability, creating mixed signals across risk assets.",
+    "macroSummary": "Crypto markets experienced significant selling pressure with Bitcoin falling below $70K and Ethereum dropping to $1,840, while oil continued climbing above $93 amid stalled US-Iran peace talks and ongoing Middle East tensions. The dollar strengthened with USDJPY approaching the critical 160 level, while gold showed mixed performance despite haven demand from geopolitical risks.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Crypto risk-off behavior contradicts the bullish-cyclicals bias, while oil's rise on geopolitical tension reinforces stagflationary pressures that could challenge the reflation regime's sustainability.",
+    "regimePressureReason": "Risk assets are showing stress with crypto crashes and USDJPY nearing intervention levels, while oil's continued rise above $93 approaches the $115 stagflation threshold, creating headwinds for the bullish-cyclicals thesis.",
     "thresholdWatches": [
       {
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Yen slipped to key 160 level as Gulf hostilities boost dollar, approaching BOJ intervention zone"
+      },
+      {
         "indicator": "Oil (WTI)",
-        "level": "approaching $115",
-        "signal": "WTI above $93 and climbing on Iran peace talk failures - approaching stagflation threshold"
+        "level": "$93+",
+        "signal": "Crude oil rises above $93 for third straight session as Iran peace talks stall, moving toward $115 stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin crashed below $70K with $1+ billion crypto liquidations suggesting risk-off sentiment",
+        "signal": "Bitcoin and Ethereum experiencing severe selling pressure with $176B wiped from crypto markets in broad risk-off move",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil rises above $93 on stalled US-Iran peace talks, approaching stagflation threshold at $115",
+        "signal": "USDJPY approaching 160 intervention level as dollar strengthens on Middle East tensions",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Strong US jobs data pressured gold lower and kept dollar stable, supporting reflation narrative",
-        "tag": "SUPPORTS"
+        "signal": "Oil climbing above $93 with US-Iran peace talks stalling, moving closer to stagflation territory",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Crypto market liquidations and ETF outflows signal broader risk appetite deterioration",
+        "signal": "Crypto ETF outflows hitting $3.5B signal institutional risk reduction despite reflation narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil's third straight session of gains on geopolitical tensions reinforces inflationary pressures",
-        "tag": "CONTRADICTS"
+        "signal": "Gold showing mixed performance despite geopolitical tensions suggests haven demand competing with reflation dynamics",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trusts",
-      "Prepare to reduce cyclical exposure if oil breaks toward $100+ on sustained geopolitical escalation",
-      "Watch for VIX expansion if crypto weakness spreads to broader equity markets"
+      "Monitor BMNR ladder closely as ETH weakness at $1,840 may accelerate put assignment risk",
+      "Prepare for potential regime shift if USDJPY breaks 160 or oil sustains above $100",
+      "Consider reducing cyclical exposure if crypto weakness spreads to broader risk assets"
     ]
   },
   "articles": [
+    {
+      "title": "Crypto Treasury Flows Lose Steam, Marking Deepest Drop Since 2024",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T02:00:37+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:6fe5d957c094b:0-crypto-treasury-flows-lose-steam-marking-deepest-drop-since-2024/"
+    },
+    {
+      "title": "Ethereum Price Gets Crushed To $1,840 Amid Relentless Selling Pressure",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:58:38+00:00",
+      "timeDisplay": "1:58 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:0d3f1ce84094b:0-ethereum-price-gets-crushed-to-1-840-amid-relentless-selling-pressure/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T01:51:39+00:00",
+      "timeDisplay": "1:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B02H:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "WSJ: WARSH CHOOSES TWO INTERIM POLICY ADVISERS, ONE OF WHOM, PAUL WINFREE, WROTE 'PROJECT 2025' CHAPTER ON FED, RECOMMENDING DROPPING JOBS MANDATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:48:00+00:00",
+      "timeDisplay": "1:48 AM",
+      "link": "https://www.tradingview.com/news/macenews:6cd6b0aa3094b:0-wsj-warsh-chooses-two-interim-policy-advisers-one-of-whom-paul-winfree-wrote-project-2025-chapter-on-fed-recommending-dropping-jobs-mandate/"
+    },
+    {
+      "title": "Gold Prices Fall Amid Weak Haven Demand \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:31:00+00:00",
+      "timeDisplay": "1:31 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260602009262:0/"
+    },
+    {
+      "title": "Gold eases on stronger oil as fresh Mideast hostilities erupt",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T01:23:34+00:00",
+      "timeDisplay": "1:23 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42B01K:0-gold-eases-on-stronger-oil-as-fresh-mideast-hostilities-erupt/"
+    },
+    {
+      "title": "Bitcoin Price In Freefall As Panic Sweeps Through The Market",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:14:16+00:00",
+      "timeDisplay": "1:14 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:53ded31fe094b:0-bitcoin-price-in-freefall-as-panic-sweeps-through-the-market/"
+    },
+    {
+      "title": "Gold Futures' Technical Backdrop Likely Improved, Charts Show \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:02:00+00:00",
+      "timeDisplay": "1:02 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260602009198:0/"
+    },
+    {
+      "title": "Bitcoin Falls Below $72,000 After Strategy Reports First BTC Sale In Years",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:00:51+00:00",
+      "timeDisplay": "1:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:d7b0a0f31094b:0-bitcoin-falls-below-72-000-after-strategy-reports-first-btc-sale-in-years/"
+    },
+    {
+      "title": "WEDNESDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T00:50:00+00:00",
+      "timeDisplay": "12:50 AM",
+      "link": "https://www.tradingview.com/news/macenews:b36c272cf094b:0-wednesday-white-house-schedule-subject-to-additions-during-the-day/"
+    },
+    {
+      "title": "Yen slips to key 160 level as Gulf hostilities boost dollar",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T00:44:15+00:00",
+      "timeDisplay": "12:44 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B009:0-yen-slips-to-key-160-level-as-gulf-hostilities-boost-dollar/"
+    },
     {
       "title": "Gold Slips on Strong US Jobs Data",
       "source": "trading-economics",
@@ -287,14 +380,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:0371185f9094b:0-bitcoin-sale-sparks-eth-outperformance-debate-as-strategy-breaks-long-held-narrative/"
     },
     {
-      "title": "Bitcoin Crashes Below $68K, Triggering $1.23B Crypto Liquidations \u2014 Analyst Flags 6 Reasons Why 'BTC Is Playing Its Own Game'",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T17:08:40+00:00",
-      "timeDisplay": "5:08 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:f55dccc6b094b:0-bitcoin-crashes-below-68k-triggering-1-23b-crypto-liquidations-analyst-flags-6-reasons-why-btc-is-playing-its-own-game/"
-    },
-    {
       "title": "Why Is Crypto Crashing Today?",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -309,14 +394,6 @@
       "timestamp": "2026-06-02T16:57:00+00:00",
       "timeDisplay": "4:57 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260602006076:0/"
-    },
-    {
-      "title": "Bitcoin\u2019s inflation-hedging promise in tatters after slipping below $70,000",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:50:14+00:00",
-      "timeDisplay": "4:50 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:6ca2f61c5094b:0-bitcoin-s-inflation-hedging-promise-in-tatters-after-slipping-below-70-000/"
     },
     {
       "title": "MSTR Bitcoin Sale May Mark Turning Point For Ethereum \u2013 With BMNR, SBET Stocks Poised To Benefit, Says Standard Chartered",
@@ -573,78 +650,6 @@
       "timestamp": "2026-06-02T13:48:59+00:00",
       "timeDisplay": "1:48 PM",
       "link": "https://www.tradingview.com/news/the_block:ab2276853094b:0-materially-softer-demand-bitcoin-hits-two-month-low-below-69-000-amid-institutional-outflow-streak-fading-onchain-interest/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - June 2",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:48:00+00:00",
-      "timeDisplay": "1:48 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602004447:0/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:   LABOR MKT GENERALLY BALANCED; ENDS Q&A",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:27:00+00:00",
-      "timeDisplay": "1:27 PM",
-      "link": "https://www.tradingview.com/news/macenews:7ac45313a094b:0-cleve-fed-s-hammack-q-a-city-club-labor-mkt-generally-balanced-ends-q-a/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:  PLENTY OF DOUBLE-DIGIT INFLATION AROUND THE GLOBE AND CAN SEE HOW THAT AFFECTS ECONOMIES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:26:00+00:00",
-      "timeDisplay": "1:26 PM",
-      "link": "https://www.tradingview.com/news/macenews:f40aae9fc094b:0-cleve-fed-s-hammack-q-a-city-club-plenty-of-double-digit-inflation-around-the-globe-and-can-see-how-that-affects-economies/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:  WHEN MAKE SERVICES CHEAPER, VIA SPREADSHEETS AND A.I. FOR ACCOUNTING, THEN SOCIETY TENDS TO WANT MORE OF THEM",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:22:00+00:00",
-      "timeDisplay": "1:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:458c5e661094b:0-cleve-fed-s-hammack-q-a-city-club-when-make-services-cheaper-via-spreadsheets-and-a-i-for-accounting-then-society-tends-to-want-more-of-them/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:  'IT MAY BE THE TIME THAT WE HAVE TO ACT SOON' SO WATCHING ALL INFLATION INDICATORS OF PRICE PRESSURES CAREFULLY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:19:00+00:00",
-      "timeDisplay": "1:19 PM",
-      "link": "https://www.tradingview.com/news/macenews:9194e1f17094b:0-cleve-fed-s-hammack-q-a-city-club-it-may-be-the-time-that-we-have-to-act-soon-so-watching-all-inflation-indicators-of-price-pressures-carefully/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Jun 2",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:16:00+00:00",
-      "timeDisplay": "1:16 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602004158:0/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:  FED'S BLUNT INSTRUMENTS 'NOT VERY GOOD AT DEALING WITH DIFFERENTIALS,' LIKE K-SHAPED ECONOMY THO IMPORTANT TO CARE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:15:00+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:8e0bbef83094b:0-cleve-fed-s-hammack-q-a-city-club-fed-s-blunt-instruments-not-very-good-at-dealing-with-differentials-like-k-shaped-economy-tho-important-to-care/"
-    },
-    {
-      "title": "Oil Moves Lower Awaiting Clarity on U.S.-Iran Talks \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:11:00+00:00",
-      "timeDisplay": "1:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602004085:0/"
-    },
-    {
-      "title": "CLEVE FED'S HAMMACK Q&A/CITY CLUB:  EXPECT 'REALLY ROBUST DISCUSSION' AT UPCOMING FOMC;' FOMC CAN BE 'KIND OF BORING;' FED PROVIDES BLANKETS IF COLD",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T13:11:00+00:00",
-      "timeDisplay": "1:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:46e9c4d8d094b:0-cleve-fed-s-hammack-q-a-city-club-expect-really-robust-discussion-at-upcoming-fomc-fomc-can-be-kind-of-boring-fed-provides-blankets-if-cold/"
     }
   ]
 }

@@ -1,56 +1,448 @@
 {
-  "lastUpdated": "2026-06-03T07:27:52.616833+00:00",
-  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 07:27 AM UTC",
+  "lastUpdated": "2026-06-03T12:26:42.353261+00:00",
+  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 12:26 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Fresh US-Iran military strikes have driven oil prices higher for a third consecutive session while strengthening the dollar and pressuring risk assets. Bitcoin has crashed below $66,000 with $1.85 billion in liquidations as crypto faces massive outflows to AI-focused equities, while bond yields rise on oil-driven inflation concerns.",
+    "macroSummary": "US labor data shows modest payroll growth at +122K while mortgage activity weakens despite rate retreats. Crypto markets face significant stress with $1.8B in liquidations as Bitcoin falls below $65K amid geopolitical tensions, while USDJPY approaches 160 and dollar strengthens.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The Iran conflict escalation is driving oil higher and strengthening the dollar toward key thresholds, while massive risk-off flows out of crypto suggest broader risk appetite deterioration that contradicts the bullish-cyclicals stance.",
+    "regimePressureReason": "Multiple invalidation thresholds are being tested with USDJPY at 160 intervention zone and crypto stress suggesting risk-off pressure building despite modest labor resilience.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen languishing at key 160 level as Gulf hostilities boost dollar strength"
+        "signal": "Yen falls to 160 level prompting Japanese official warnings - at BOJ intervention threshold"
       },
       {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar rising after renewed US-Iran conflict with multiple mentions of dollar strength"
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "Crypto liquidations and geopolitical tensions suggest volatility pressure building"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin crashes below $66,000 with $1.85B liquidations as crypto suffers massive outflows to equities",
+        "signal": "USDJPY hits 160 triggering Japanese official warnings at critical intervention threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Bitcoin crashes below $65K with $1.8B crypto liquidations showing risk-off stress",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil climbing for third straight session on Middle East fighting, driving bond yields higher",
+        "signal": "Mortgage applications decline despite rate retreats indicating housing market weakness",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Dollar strengthening amid Middle East tensions supports safe haven flows",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "ADP payrolls at +122K vs +105K shows modest labor market resilience",
         "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar strengthening significantly on renewed US-Iran conflict, approaching key thresholds",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "USDJPY at critical 160 level where BOJ intervention historically occurs",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Gold falling despite Middle East tensions due to weak haven demand and dollar strength",
-        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto liquidations and ETH weakness to $1,840 may accelerate put exercise risk",
-      "Prepare for potential regime flip if DXY breaks 100 or USDJPY intervention triggers broader risk-off cascade",
-      "Consider reducing cyclical exposure as oil-driven stagflationary pressures mount amid deteriorating risk appetite"
+      "Monitor USDJPY intervention risk - BOJ action could trigger risk-off cascade affecting BMNR",
+      "Prepare to reduce put ladder exposure if VIX breaks 22 confirming risk-off transition",
+      "Watch crypto correlation breakdown as potential early signal of broader risk asset stress"
     ]
   },
   "articles": [
+    {
+      "title": "US ADP PRIVATE PAYROLLS +122K IN MAY VS +105K IN APRIL (PREV +109K); GOODS-PRODUCERS +8K, SERVICE PROVIDERS +114K",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T12:18:00+00:00",
+      "timeDisplay": "12:18 PM",
+      "link": "https://www.tradingview.com/news/macenews:7cf549847094b:0-us-adp-private-payrolls-122k-in-may-vs-105k-in-april-prev-109k-goods-producers-8k-service-providers-114k/"
+    },
+    {
+      "title": "Key facts: US Bitcoin ETFs 11\u2011Day $3.5B Outflows; BTC Falls 6.4%; Schwab Adds Spot Trading",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T12:13:54+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:284314068e4c2:0-key-facts-us-bitcoin-etfs-11-day-3-5b-outflows-btc-falls-6-4-schwab-adds-spot-trading/"
+    },
+    {
+      "title": "Key facts: ETHUSD levels; CLARITY; Bitmine 5.42M ETH, $8.9B loss",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T12:13:54+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:450c02ea8482b:0-key-facts-ethusd-levels-clarity-bitmine-5-42m-eth-8-9b-loss/"
+    },
+    {
+      "title": "Forget Gold ETFs \u2014 This Blockchain Company Just Filed To Bring A New Kind Of Gold To 30 European Markets",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T12:00:33+00:00",
+      "timeDisplay": "12:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:4cec37768094b:0-forget-gold-etfs-this-blockchain-company-just-filed-to-bring-a-new-kind-of-gold-to-30-european-markets/"
+    },
+    {
+      "title": "Yen falls to 160 level, prompting warnings from Japanese officials",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T11:50:22+00:00",
+      "timeDisplay": "11:50 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42B0NY:0-yen-falls-to-160-level-prompting-warnings-from-japanese-officials/"
+    },
+    {
+      "title": "Gold falls on stronger dollar, oil amid renewed Middle East hostilities",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T11:38:01+00:00",
+      "timeDisplay": "11:38 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B0HB:0-gold-falls-on-stronger-dollar-oil-amid-renewed-middle-east-hostilities/"
+    },
+    {
+      "title": "STRC Falls Below $97 as Latest Bitcoin Sale Challenges MicroStrategy\u2019s Capital Turbine",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:34:26+00:00",
+      "timeDisplay": "11:34 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:83275aac6094b:0-strc-falls-below-97-as-latest-bitcoin-sale-challenges-microstrategy-s-capital-turbine/"
+    },
+    {
+      "title": "ETF Flows, Geopolitics Continue To Drag Down Crypto Prices",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:23:53+00:00",
+      "timeDisplay": "11:23 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:4f8c710d577be:0-etf-flows-geopolitics-continue-to-drag-down-crypto-prices/"
+    },
+    {
+      "title": "Bitcoin Stays Under Pressure Amid U.S.-Iran Tensions \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:14:00+00:00",
+      "timeDisplay": "11:14 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603003330:0/"
+    },
+    {
+      "title": "Crypto Failed as an Asset Class, Say Economist Alex Kruger",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:02:10+00:00",
+      "timeDisplay": "11:02 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:7e3d62384094b:0-crypto-failed-as-an-asset-class-say-economist-alex-kruger/"
+    },
+    {
+      "title": "Bitcoin Dumps Below $65K, Spurring $1.8B Wipeout Before Recovery \u2013 Analysts Debate The Cause, While Retail Blames Saylor",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:01:44+00:00",
+      "timeDisplay": "11:01 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:60015a125094b:0-bitcoin-dumps-below-65k-spurring-1-8b-wipeout-before-recovery-analysts-debate-the-cause-while-retail-blames-saylor/"
+    },
+    {
+      "title": "Ben Cowen Sees October Low Scenario For BTC: \u2018Bitcoin Does Not Have A Monopoly On 4-Year Cycle\u2019",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:35+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:968be7f35094b:0-ben-cowen-sees-october-low-scenario-for-btc-bitcoin-does-not-have-a-monopoly-on-4-year-cycle/"
+    },
+    {
+      "title": "US MBA 30-YEAR FIXED CONTRACT MORTGAGE RATE 6.57% IN MAY 29 WEEK; -8 BPS VS 1 WEEK AGO, +12 BPS VS 4 WEEKS AGO, -35 BPS VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:275063c1a094b:0-us-mba-30-year-fixed-contract-mortgage-rate-6-57-in-may-29-week-8-bps-vs-1-week-ago-12-bps-vs-4-weeks-ago-35-bps-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA 5-YEAR ARM CONTRACT MORTGAGE RATE 5.82% IN MAY 29 WEEK; +1 BPS VS 1 WEEK AGO, +22 BPS VS 4 WEEKS AGO, -32 BPS VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:41d96ae33094b:0-us-mba-5-year-arm-contract-mortgage-rate-5-82-in-may-29-week-1-bps-vs-1-week-ago-22-bps-vs-4-weeks-ago-32-bps-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA ADJUSTABLE-RATE MORTGAGE INDEX -12.3% IN MAY 29 WEEK; -14.8% VS 4 WEEKS AGO; +33.5% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:ff6dbcc44094b:0-us-mba-adjustable-rate-mortgage-index-12-3-in-may-29-week-14-8-vs-4-weeks-ago-33-5-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA DEPUTY CHIEF ECONOMIST KAN: RETREAT IN INTEREST RATES \u2018DID NOT LEAD TO AN INCREASE IN MORTGAGE APPLICATIONS\u2019 IN LATEST WEEK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:cc911bd01094b:0-us-mba-deputy-chief-economist-kan-retreat-in-interest-rates-did-not-lead-to-an-increase-in-mortgage-applications-in-latest-week/"
+    },
+    {
+      "title": "US MBA FIXED RATE MORTGAGE INDEX -1.5% IN MAY 29 WEEK; -11.0% VS 4 WEEKS AGO; +10.0% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:bb9485f4c094b:0-us-mba-fixed-rate-mortgage-index-1-5-in-may-29-week-11-0-vs-4-weeks-ago-10-0-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA KAN: MORTGAGE PURCHASE APPLICATIONS SLOWEST SINCE APRIL, \u2018REFINANCE ACTIVITY WAS AT ITS WEAKEST SINCE LAST JUNE\u2019",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:669934821094b:0-us-mba-kan-mortgage-purchase-applications-slowest-since-april-refinance-activity-was-at-its-weakest-since-last-june/"
+    },
+    {
+      "title": "US MBA MORTGAGE PURCHASE INDEX -2.9% IN MAY 29 WEEK; -3.7% VS 4 WEEKS AGO; +6.3% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:df4207b95094b:0-us-mba-mortgage-purchase-index-2-9-in-may-29-week-3-7-vs-4-weeks-ago-6-3-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA MORTGAGE REFINANCE INDEX -2.3% IN MAY 29 WEEK; -20.7% VS 4 WEEKS AGO; +20.3% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:8e19d1fc4094b:0-us-mba-mortgage-refinance-index-2-3-in-may-29-week-20-7-vs-4-weeks-ago-20-3-vs-1-year-ago/"
+    },
+    {
+      "title": "US MBA: ADJUSTABLE-RATE MORTGAGES 8.5% OF TOTAL MORTGAGE APPLICATIONS IN MAY 29 WEEK VS 9.4% IN PRIOR WEEK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:6c0a3cd95094b:0-us-mba-adjustable-rate-mortgages-8-5-of-total-mortgage-applications-in-may-29-week-vs-9-4-in-prior-week/"
+    },
+    {
+      "title": "US MBA: REFINANCINGS AT 38.0% OF TOTAL MORTGAGE APPLICATIONS IN MAY 29 WEEK VS 37.5% IN PRIOR WEEK",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:528cbe9a0094b:0-us-mba-refinancings-at-38-0-of-total-mortgage-applications-in-may-29-week-vs-37-5-in-prior-week/"
+    },
+    {
+      "title": "US MORTGAGE BANKERS ASSN MORTGAGE APPLICATIONS INDEX -2.5% IN MAY 29 WEEK; -11.4% VS 4 WEEKS AGO; +11.7% VS 1 YEAR AGO",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T11:00:00+00:00",
+      "timeDisplay": "11:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:32fbcdc7d094b:0-us-mortgage-bankers-assn-mortgage-applications-index-2-5-in-may-29-week-11-4-vs-4-weeks-ago-11-7-vs-1-year-ago/"
+    },
+    {
+      "title": "The Coldest Crypto Winter Ever? Bloomberg Analyst Theory Fuels a Heated Debate",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T10:52:10+00:00",
+      "timeDisplay": "10:52 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:b240e177b094b:0-the-coldest-crypto-winter-ever-bloomberg-analyst-theory-fuels-a-heated-debate/"
+    },
+    {
+      "title": "Bitcoin's crash to $65K triggers $1.8B in crypto liquidations",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T10:48:51+00:00",
+      "timeDisplay": "10:48 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e8deeaedb094b:0-bitcoin-s-crash-to-65k-triggers-1-8b-in-crypto-liquidations/"
+    },
+    {
+      "title": "Trump Claims Iran Has Committed To No Nuclear Weapons \u2013 Says He\u2019s 'Getting Along Quite Well\u2019 With Supreme Leader Khamenei",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T10:37:39+00:00",
+      "timeDisplay": "10:37 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:e73373a61094b:0-trump-claims-iran-has-committed-to-no-nuclear-weapons-says-he-s-getting-along-quite-well-with-supreme-leader-khamenei/"
+    },
+    {
+      "title": "Bitcoin has hit 'max fear' below $67K as analysis sees BTC price rebound",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T10:16:46+00:00",
+      "timeDisplay": "10:16 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:cab2761bc094b:0-bitcoin-has-hit-max-fear-below-67k-as-analysis-sees-btc-price-rebound/"
+    },
+    {
+      "title": "CoinShares Bull Case Sees Ethereum Hitting $14,135 By 2031",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T10:00:54+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:b141dd66c094b:0-coinshares-bull-case-sees-ethereum-hitting-14-135-by-2031/"
+    },
+    {
+      "title": "Crypto News Today (June 3): $1.8Bn in Liquidations as BTC Crashes Below $67K",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:55:26+00:00",
+      "timeDisplay": "9:55 AM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:d3e4c408f094b:0-crypto-news-today-june-3-1-8bn-in-liquidations-as-btc-crashes-below-67k/"
+    },
+    {
+      "title": "U.S. Treasury Yields, Dollar Rise as Mideast Tensions Continue \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:52:00+00:00",
+      "timeDisplay": "9:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603002288:0/"
+    },
+    {
+      "title": "US CHALLENGER CRO ANDY CHALLENGER: IN ADDITION TO AI, \u2018SHARP RISE IN (JOB) CUTS TIED TO ACQUISITIONS AND MERGERS\u2019, BANKRUPTCY-RELATED LOSSES",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:43:00+00:00",
+      "timeDisplay": "9:43 AM",
+      "link": "https://www.tradingview.com/news/macenews:2a108cd51094b:0-us-challenger-cro-andy-challenger-in-addition-to-ai-sharp-rise-in-job-cuts-tied-to-acquisitions-and-mergers-bankruptcy-related-losses/"
+    },
+    {
+      "title": "RoboStrategy CEO Explains Why He Shifted Focus From Crypto To Physical AI \u2013 Calls RoboStrategy The \u2018MicroStrategy Of Robotics\u2019",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:42:42+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:62b0c0467094b:0-robostrategy-ceo-explains-why-he-shifted-focus-from-crypto-to-physical-ai-calls-robostrategy-the-microstrategy-of-robotics/"
+    },
+    {
+      "title": "Can Ethereum price reclaim $2000?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:42:07+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/invezz:c4e0f32b7094b:0-can-ethereum-price-reclaim-2000/"
+    },
+    {
+      "title": "US CHALLENGER HIRING PLANS YEAR-TO-DATE 80,472 IN 2026 VS 79,741 IN 2025 YEAR-TO-DATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:42:00+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/macenews:2764d678d094b:0-us-challenger-hiring-plans-year-to-date-80-472-in-2026-vs-79-741-in-2025-year-to-date/"
+    },
+    {
+      "title": "US CHALLENGER LARGEST NUMBER OF HIRING PLANS FOR MAY IN TECHNOLOGY (11,250), ELECTRONICS (3,158)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:42:00+00:00",
+      "timeDisplay": "9:42 AM",
+      "link": "https://www.tradingview.com/news/macenews:5617b3332094b:0-us-challenger-largest-number-of-hiring-plans-for-may-in-technology-11-250-electronics-3-158/"
+    },
+    {
+      "title": "US CHALLENGER HIRING PLANS +94.4% AT 19,536 IN MAY VS 10,049 IN APRIL; +361.2% FROM MAY 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:41:00+00:00",
+      "timeDisplay": "9:41 AM",
+      "link": "https://www.tradingview.com/news/macenews:3e8b20ea2094b:0-us-challenger-hiring-plans-94-4-at-19-536-in-may-vs-10-049-in-april-361-2-from-may-2025/"
+    },
+    {
+      "title": "US CHALLENGER JOB CUTS YEAR-TO-DATE 397,755 IN 2026 VS 696,309 IN 2025 YEAR-TO-DATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:41:00+00:00",
+      "timeDisplay": "9:41 AM",
+      "link": "https://www.tradingview.com/news/macenews:802670afa094b:0-us-challenger-job-cuts-year-to-date-397-755-in-2026-vs-696-309-in-2025-year-to-date/"
+    },
+    {
+      "title": "US CHALLENGER JOB CUTS +16.3% AT 97,006 IN MAY VS 83,387 IN APRIL; +3.4% FROM MAY 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:40:00+00:00",
+      "timeDisplay": "9:40 AM",
+      "link": "https://www.tradingview.com/news/macenews:161451530094b:0-us-challenger-job-cuts-16-3-at-97-006-in-may-vs-83-387-in-april-3-4-from-may-2025/"
+    },
+    {
+      "title": "US CHALLENGER JOB CUTS FOR MAY LED BY TECHNOLOGY (38,242), TRANSPORTATION (6,909), SERVICES (6,268)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:40:00+00:00",
+      "timeDisplay": "9:40 AM",
+      "link": "https://www.tradingview.com/news/macenews:c8d6e0e07094b:0-us-challenger-job-cuts-for-may-led-by-technology-38-242-transportation-6-909-services-6-268/"
+    },
+    {
+      "title": "US CHALLENGER: REASONS FOR JOB CUTS LED BY ARTIFICIAL INTELLIGENCE (38,579), ECONOMIC CONDITIONS (16,587), CLOSING (14,546)",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:40:00+00:00",
+      "timeDisplay": "9:40 AM",
+      "link": "https://www.tradingview.com/news/macenews:db04ec2f5094b:0-us-challenger-reasons-for-job-cuts-led-by-artificial-intelligence-38-579-economic-conditions-16-587-closing-14-546/"
+    },
+    {
+      "title": "Treasury Yields March Higher as Rising Oil Prices Weigh on Inflation",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:33:09+00:00",
+      "timeDisplay": "9:33 AM",
+      "link": "https://www.tradingview.com/news/te_news:556130:0-treasury-yields-march-higher-as-rising-oil-prices-weigh-on-inflation/"
+    },
+    {
+      "title": "Can Sugarcane Actually Power Bitcoin? Inside Tether New Brazil Mining Play",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:17:48+00:00",
+      "timeDisplay": "9:17 AM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:01784e952094b:0-can-sugarcane-actually-power-bitcoin-inside-tether-new-brazil-mining-play/"
+    },
+    {
+      "title": "Bitcoin Traders Bet on Deeper Crash, Eyeing $55K Level Next",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T09:03:04+00:00",
+      "timeDisplay": "9:03 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:f1f6b5675094b:0-bitcoin-traders-bet-on-deeper-crash-eyeing-55k-level-next/"
+    },
+    {
+      "title": "Exclusive: Micha\u00ebl van de Poppe Names 3 Altcoins He\u2019s Betting on Ahead of the CLARITY Act",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T08:56:37+00:00",
+      "timeDisplay": "8:56 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:5367d87d7094b:0-exclusive-micha-l-van-de-poppe-names-3-altcoins-he-s-betting-on-ahead-of-the-clarity-act/"
+    },
+    {
+      "title": "Explained: How 'Bitcoin is the new gold' trade is starting to crack",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T08:13:47+00:00",
+      "timeDisplay": "8:13 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:307a16bc2094b:0/"
+    },
+    {
+      "title": "Bitcoin Price Crash: Ex-SoftBank CFO Sees \u2018No Concerns\u2019 For Crypto Despite Mega IPO Capital-Drain Fears, Pins Hope On CLARITY Act",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T08:03:50+00:00",
+      "timeDisplay": "8:03 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:f9ce5b8e1094b:0-bitcoin-price-crash-ex-softbank-cfo-sees-no-concerns-for-crypto-despite-mega-ipo-capital-drain-fears-pins-hope-on-clarity-act/"
+    },
+    {
+      "title": "Gold Falls as U.S.-Iran Hostilities Push Oil Higher \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T07:52:00+00:00",
+      "timeDisplay": "7:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603001652:0/"
+    },
+    {
+      "title": "Oil Climbs on Fresh U.S.-Iran Hostilities \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T07:36:00+00:00",
+      "timeDisplay": "7:36 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603001557:0/"
+    },
+    {
+      "title": "West Main Self Storage Increases Bitcoin Holdings to 14.767 BTC",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T07:23:32+00:00",
+      "timeDisplay": "7:23 AM",
+      "link": "https://www.tradingview.com/news/binance_news:bc1330c6d094b:0-west-main-self-storage-increases-bitcoin-holdings-to-14-767-btc/"
+    },
     {
       "title": "Gold Coming Under Pressure Before U.S. Non-Farm Payrolls Report \u2014 Market Talk",
       "source": "dow-jones",
@@ -68,14 +460,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B08V:0-gold-eases-as-middle-east-tensions-lift-oil-us-economic-data-in-focus/"
     },
     {
-      "title": "US dollar resilient as traders brace for key economic updates",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T07:13:54+00:00",
-      "timeDisplay": "7:13 AM",
-      "link": "https://www.tradingview.com/news/invezz:7eb3d1747094b:0-us-dollar-resilient-as-traders-brace-for-key-economic-updates/"
-    },
-    {
       "title": "Bitcoin Falls After Fresh Attacks Between U.S. and Iran \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -84,12 +468,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260603001381:0/"
     },
     {
-      "title": "RBI rejects report of gold sale, says physical stock remains unchanged at 880.52 tonnes",
+      "title": "RBI denies selling gold, says holdings unchanged at 880.52 tonnes",
       "source": "moneycontrol",
       "color": "#00e5ff",
       "timestamp": "2026-06-03T06:53:23+00:00",
       "timeDisplay": "6:53 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:d79bd912c094b:0-rbi-rejects-report-of-gold-sale-says-physical-stock-remains-unchanged-at-880-52-tonnes/"
+      "link": "https://www.tradingview.com/news/moneycontrol:d79bd912c094b:0-rbi-denies-selling-gold-says-holdings-unchanged-at-880-52-tonnes/"
     },
     {
       "title": "BTC/USD: Bitcoin Slumps to $65,000 as Record Run in Stocks Drains Risk Liquidity",
@@ -108,22 +492,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260603001220:0/"
     },
     {
-      "title": "Dollar Rises After Renewed U.S.-Iran Conflict \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T06:34:00+00:00",
-      "timeDisplay": "6:34 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603001189:0/"
-    },
-    {
-      "title": "Indian rupee hits one-week low as crude surges; RBI likely steps in",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T06:32:48+00:00",
-      "timeDisplay": "6:32 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42B0EP:0-indian-rupee-hits-one-week-low-as-crude-surges-rbi-likely-steps-in/"
-    },
-    {
       "title": "Here\u2019s why the crypto market is crashing and liquidations are rising",
       "source": "invezz",
       "color": "#00e5ff",
@@ -132,12 +500,12 @@
       "link": "https://www.tradingview.com/news/invezz:aade9985c094b:0-here-s-why-the-crypto-market-is-crashing-and-liquidations-are-rising/"
     },
     {
-      "title": "Bitcoin falls below $66K as US and Iran launch new strikes",
-      "source": "cointelegraph",
+      "title": "Crypto Crash Today: Why Bitcoin, Ethereum, XRP and Major Altcoins Are Falling",
+      "source": "coinpedia",
       "color": "#00e5ff",
-      "timestamp": "2026-06-03T06:18:37+00:00",
-      "timeDisplay": "6:18 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6735e03ef094b:0-bitcoin-falls-below-66k-as-us-and-iran-launch-new-strikes/"
+      "timestamp": "2026-06-03T06:17:10+00:00",
+      "timeDisplay": "6:17 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:b7eb0ddf4094b:0-crypto-crash-today-why-bitcoin-ethereum-xrp-and-major-altcoins-are-falling/"
     },
     {
       "title": "Bitcoin briefly dips below $66,000 as ETF outflows, geopolitical fears weigh on crypto",
@@ -146,14 +514,6 @@
       "timestamp": "2026-06-03T06:04:13+00:00",
       "timeDisplay": "6:04 AM",
       "link": "https://www.tradingview.com/news/the_block:c6cf54e44094b:0-bitcoin-briefly-dips-below-66-000-as-etf-outflows-geopolitical-fears-weigh-on-crypto/"
-    },
-    {
-      "title": "Bitcoin falls to four-month low as $1.85B liquidation rattles market",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T06:01:14+00:00",
-      "timeDisplay": "6:01 AM",
-      "link": "https://www.tradingview.com/news/invezz:a2e585123094b:0-bitcoin-falls-to-four-month-low-as-1-85b-liquidation-rattles-market/"
     },
     {
       "title": "Ethereum Ready For The \u2018Final Dip\u2019? Analysts Call For New Lows As Price Retests $1,900",
@@ -172,14 +532,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260603000861:0/"
     },
     {
-      "title": "Peter Schiff Predicts a Brutal Bitcoin Crash to $20,000 and Sparks Heated Backlash",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T05:46:17+00:00",
-      "timeDisplay": "5:46 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:f5f27fd32094b:0-peter-schiff-predicts-a-brutal-bitcoin-crash-to-20-000-and-sparks-heated-backlash/"
-    },
-    {
       "title": "Reports of gold sale by RBI to save forex reserves false, says CNBC-TV18",
       "source": "moneycontrol",
       "color": "#00e5ff",
@@ -188,28 +540,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:8eb791189094b:0-reports-of-gold-sale-by-rbi-to-save-forex-reserves-false-says-cnbc-tv18/"
     },
     {
-      "title": "Bitcoin Bulls Crushed: Sub-$70,000 Crash Flushes $428M In Longs",
-      "source": "newsbtc",
+      "title": "Bitmine's Ethereum Holdings Face Larger Unrealized Losses Than Strategy's Bitcoin",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-03T05:00:37+00:00",
-      "timeDisplay": "5:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:2590a548e094b:0-bitcoin-bulls-crushed-sub-70-000-crash-flushes-428m-in-longs/"
-    },
-    {
-      "title": "Yen languishes at key 160 level as Gulf hostilities boost dollar",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T04:59:12+00:00",
-      "timeDisplay": "4:59 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B062:0-yen-languishes-at-key-160-level-as-gulf-hostilities-boost-dollar/"
-    },
-    {
-      "title": "Oil up on Middle East fighting while AI bulls carry stocks higher",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T04:49:13+00:00",
-      "timeDisplay": "4:49 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B05C:0-oil-up-on-middle-east-fighting-while-ai-bulls-carry-stocks-higher/"
+      "timestamp": "2026-06-03T04:45:20+00:00",
+      "timeDisplay": "4:45 AM",
+      "link": "https://www.tradingview.com/news/binance_news:9e0419ba3094b:0-bitmine-s-ethereum-holdings-face-larger-unrealized-losses-than-strategy-s-bitcoin/"
     },
     {
       "title": "Crypto turns \u2018contrarian bet\u2019 as AI stocks draw investor attention: Bitwise",
@@ -218,14 +554,6 @@
       "timestamp": "2026-06-03T04:31:07+00:00",
       "timeDisplay": "4:31 AM",
       "link": "https://www.tradingview.com/news/cointelegraph:3680a7f68094b:0-crypto-turns-contrarian-bet-as-ai-stocks-draw-investor-attention-bitwise/"
-    },
-    {
-      "title": "Marvell, a fitting name for the latest AI darling",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T04:30:00+00:00",
-      "timeDisplay": "4:30 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B059:0-marvell-a-fitting-name-for-the-latest-ai-darling/"
     },
     {
       "title": "Gold holds steady amid Middle East tensions, US economic data in focus",
@@ -252,14 +580,6 @@
       "link": "https://www.tradingview.com/news/te_news:555941:0-oil-climbs-for-third-straight-session/"
     },
     {
-      "title": "Fresh Gulf hostilities set to weigh on rupee, traders eye central bank cushion",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T02:46:41+00:00",
-      "timeDisplay": "2:46 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B03U:0-fresh-gulf-hostilities-set-to-weigh-on-rupee-traders-eye-central-bank-cushion/"
-    },
-    {
       "title": "US 10-Year Yield Steadies",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -268,28 +588,20 @@
       "link": "https://www.tradingview.com/news/te_news:555938:0-us-10-year-yield-steadies/"
     },
     {
-      "title": "Bitcoin Crash Explained: Binance Research Blames Outflows Toward US Equities",
-      "source": "newsbtc",
+      "title": "Bitcoin and Ethereum Drop Over 6% as RWA Sector Rises",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-03T02:30:57+00:00",
-      "timeDisplay": "2:30 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:deeb1aa0d094b:0-bitcoin-crash-explained-binance-research-blames-outflows-toward-us-equities/"
+      "timestamp": "2026-06-03T02:31:37+00:00",
+      "timeDisplay": "2:31 AM",
+      "link": "https://www.tradingview.com/news/binance_news:229540f5f094b:0-bitcoin-and-ethereum-drop-over-6-as-rwa-sector-rises/"
     },
     {
-      "title": "Dollar Holds Steady Amid US-Iran Impasse",
-      "source": "trading-economics",
+      "title": "Ethereum Bull Faces $47 Million Unrealized Loss with 120,000 ETH Long Position",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-03T02:03:28+00:00",
-      "timeDisplay": "2:03 AM",
-      "link": "https://www.tradingview.com/news/te_news:555915:0-dollar-holds-steady-amid-us-iran-impasse/"
-    },
-    {
-      "title": "Crypto Treasury Flows Lose Steam, Marking Deepest Drop Since 2024",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T02:00:37+00:00",
-      "timeDisplay": "2:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:6fe5d957c094b:0-crypto-treasury-flows-lose-steam-marking-deepest-drop-since-2024/"
+      "timestamp": "2026-06-03T02:21:34+00:00",
+      "timeDisplay": "2:21 AM",
+      "link": "https://www.tradingview.com/news/binance_news:21d16eae9094b:0-ethereum-bull-faces-47-million-unrealized-loss-with-120-000-eth-long-position/"
     },
     {
       "title": "Ethereum Price Gets Crushed To $1,840 Amid Relentless Selling Pressure",
@@ -300,20 +612,20 @@
       "link": "https://www.tradingview.com/news/newsbtc:0d3f1ce84094b:0-ethereum-price-gets-crushed-to-1-840-amid-relentless-selling-pressure/"
     },
     {
+      "title": "BitMine Acquires 25,000 ETH Amid Institutional Sell-Off",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T01:53:32+00:00",
+      "timeDisplay": "1:53 AM",
+      "link": "https://www.tradingview.com/news/binance_news:27811d28a094b:0-bitmine-acquires-25-000-eth-amid-institutional-sell-off/"
+    },
+    {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-06-03T01:51:39+00:00",
       "timeDisplay": "1:51 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B02H:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "WSJ: WARSH CHOOSES TWO INTERIM POLICY ADVISERS, ONE OF WHOM, PAUL WINFREE, WROTE 'PROJECT 2025' CHAPTER ON FED, RECOMMENDING DROPPING JOBS MANDATE",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T01:48:00+00:00",
-      "timeDisplay": "1:48 AM",
-      "link": "https://www.tradingview.com/news/macenews:6cd6b0aa3094b:0-wsj-warsh-chooses-two-interim-policy-advisers-one-of-whom-paul-winfree-wrote-project-2025-chapter-on-fed-recommending-dropping-jobs-mandate/"
     },
     {
       "title": "Gold Prices Fall Amid Weak Haven Demand \u2014 Market Talk",
@@ -332,324 +644,12 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42B01K:0-gold-eases-on-stronger-oil-as-fresh-mideast-hostilities-erupt/"
     },
     {
-      "title": "Bitcoin Price In Freefall As Panic Sweeps Through The Market",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T01:14:16+00:00",
-      "timeDisplay": "1:14 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:53ded31fe094b:0-bitcoin-price-in-freefall-as-panic-sweeps-through-the-market/"
-    },
-    {
       "title": "Gold Futures' Technical Backdrop Likely Improved, Charts Show \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-03T01:02:00+00:00",
       "timeDisplay": "1:02 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260602009198:0/"
-    },
-    {
-      "title": "Bitcoin Falls Below $72,000 After Strategy Reports First BTC Sale In Years",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T01:00:51+00:00",
-      "timeDisplay": "1:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:d7b0a0f31094b:0-bitcoin-falls-below-72-000-after-strategy-reports-first-btc-sale-in-years/"
-    },
-    {
-      "title": "WEDNESDAY WHITE HOUSE SCHEDULE - Subject to additions during the day",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T00:50:00+00:00",
-      "timeDisplay": "12:50 AM",
-      "link": "https://www.tradingview.com/news/macenews:b36c272cf094b:0-wednesday-white-house-schedule-subject-to-additions-during-the-day/"
-    },
-    {
-      "title": "Yen slips to key 160 level as Gulf hostilities boost dollar",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T00:44:15+00:00",
-      "timeDisplay": "12:44 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B009:0-yen-slips-to-key-160-level-as-gulf-hostilities-boost-dollar/"
-    },
-    {
-      "title": "Gold Slips on Strong US Jobs Data",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T00:02:02+00:00",
-      "timeDisplay": "12:02 AM",
-      "link": "https://www.tradingview.com/news/te_news:555881:0-gold-slips-on-strong-us-jobs-data/"
-    },
-    {
-      "title": "Bitcoin Loses $70K While 10,300 BTC Leave Mt. Gox-Linked Addresses \u2013 Details",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T00:00:15+00:00",
-      "timeDisplay": "12:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:34caf2ca4094b:0-bitcoin-loses-70k-while-10-300-btc-leave-mt-gox-linked-addresses-details/"
-    },
-    {
-      "title": "Oil Rises Amid Signs of U.S.-Iran Peace Talks Stalling \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T23:41:00+00:00",
-      "timeDisplay": "11:41 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602009005:0/"
-    },
-    {
-      "title": "US Crude Stockpiles Fall for 7th Week",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T23:34:07+00:00",
-      "timeDisplay": "11:34 PM",
-      "link": "https://www.tradingview.com/news/te_news:555873:0-us-crude-stockpiles-fall-for-7th-week/"
-    },
-    {
-      "title": "6 Questions Investors Must Ask as Elon Musk Locks 100% SpaceX Shares Before IPO",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T22:23:41+00:00",
-      "timeDisplay": "10:23 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:49a8a8120094b:0-6-questions-investors-must-ask-as-elon-musk-locks-100-spacex-shares-before-ipo/"
-    },
-    {
-      "title": "Was MicroStrategy and Saylor Right to Sell Some Bitcoin? The Maximalism Debate",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T22:00:00+00:00",
-      "timeDisplay": "10:00 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:47fe3c7f6094b:0-was-microstrategy-and-saylor-right-to-sell-some-bitcoin-the-maximalism-debate/"
-    },
-    {
-      "title": "Crypto correction vaporized $176B in investor funds: Are bears back in control?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T21:16:33+00:00",
-      "timeDisplay": "9:16 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:f74d691ea094b:0-crypto-correction-vaporized-176b-in-investor-funds-are-bears-back-in-control/"
-    },
-    {
-      "title": "U.S. Dollar Ends Roughly Flat As Trump Rejects Halt In U.S.-Iran Talks",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T21:13:34+00:00",
-      "timeDisplay": "9:13 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:857cd9673e22f:0-u-s-dollar-ends-roughly-flat-as-trump-rejects-halt-in-u-s-iran-talks/"
-    },
-    {
-      "title": "Experts Warn Bitcoin Has a MicroStrategy Problem as BTC and MSTR Stock Sink",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T21:06:50+00:00",
-      "timeDisplay": "9:06 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:26c729930094b:0-experts-warn-bitcoin-has-a-microstrategy-problem-as-btc-and-mstr-stock-sink/"
-    },
-    {
-      "title": "Ethereum Coinbase Premium Hits Lowest Level Since February \u2013 Traders Are Watching",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T21:00:11+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:16e86d65d094b:0-ethereum-coinbase-premium-hits-lowest-level-since-february-traders-are-watching/"
-    },
-    {
-      "title": "Crude Oil Rises Above $93",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T20:34:29+00:00",
-      "timeDisplay": "8:34 PM",
-      "link": "https://www.tradingview.com/news/te_news:555850:0-crude-oil-rises-above-93/"
-    },
-    {
-      "title": "Dollar Recovers on US Labor Market Strength",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:34:04+00:00",
-      "timeDisplay": "7:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:a8185940b094b:0-dollar-recovers-on-us-labor-market-strength/"
-    },
-    {
-      "title": "Crypto Crash Wipes Out 7% in 24 Hours: What\u2019s Next?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:30:46+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:a399c8c6c094b:0-crypto-crash-wipes-out-7-in-24-hours-what-s-next/"
-    },
-    {
-      "title": "Bitwise CIO Matt Hougan calls crypto a \u2018contrarian bet\u2019",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:28:40+00:00",
-      "timeDisplay": "7:28 PM",
-      "link": "https://www.tradingview.com/news/the_block:4f3ef9265094b:0-bitwise-cio-matt-hougan-calls-crypto-a-contrarian-bet/"
-    },
-    {
-      "title": "Dollar in tight range as traders eye Middle East peace talks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T19:21:27+00:00",
-      "timeDisplay": "7:21 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42A0O0:0-dollar-in-tight-range-as-traders-eye-middle-east-peace-talks/"
-    },
-    {
-      "title": "Crude Oil Prices Rally on US-Iran Peace Uncertainty",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:14:05+00:00",
-      "timeDisplay": "7:14 PM",
-      "link": "https://www.tradingview.com/news/barchart:e53533000094b:0-crude-oil-prices-rally-on-us-iran-peace-uncertainty/"
-    },
-    {
-      "title": "Oil Futures Rise As Deal With Iran Remains Elusive \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:14:00+00:00",
-      "timeDisplay": "7:14 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602006651:0/"
-    },
-    {
-      "title": "Gold Finishes Higher, But Inflation Worries Persist \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T19:06:00+00:00",
-      "timeDisplay": "7:06 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602006615:0/"
-    },
-    {
-      "title": "US yields dip as job openings jump, oil prices remain volatile",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T19:00:12+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42A12N:0-us-yields-dip-as-job-openings-jump-oil-prices-remain-volatile/"
-    },
-    {
-      "title": "Gold steadies with focus on Middle East developments, US economic data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T18:23:36+00:00",
-      "timeDisplay": "6:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42A0VS:0-gold-steadies-with-focus-on-middle-east-developments-us-economic-data/"
-    },
-    {
-      "title": "The Last Time Ethereum Did This Against Bitcoin, It Exploded Above $4,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T18:00:35+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a53c50a16094b:0-the-last-time-ethereum-did-this-against-bitcoin-it-exploded-above-4-000/"
-    },
-    {
-      "title": "5 Quantum Q-Day Takeaways From Top Crypto Security Experts",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T17:57:31+00:00",
-      "timeDisplay": "5:57 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:d7e29a3d6094b:0-5-quantum-q-day-takeaways-from-top-crypto-security-experts/"
-    },
-    {
-      "title": "Bitcoin Sale Sparks ETH Outperformance Debate as Strategy Breaks Long-Held Narrative",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T17:15:18+00:00",
-      "timeDisplay": "5:15 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:0371185f9094b:0-bitcoin-sale-sparks-eth-outperformance-debate-as-strategy-breaks-long-held-narrative/"
-    },
-    {
-      "title": "Why Is Crypto Crashing Today?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T17:03:44+00:00",
-      "timeDisplay": "5:03 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:0c2b24ef0094b:0-why-is-crypto-crashing-today/"
-    },
-    {
-      "title": "Oil Futures Turn Higher in Cautious Trading \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:57:00+00:00",
-      "timeDisplay": "4:57 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602006076:0/"
-    },
-    {
-      "title": "MSTR Bitcoin Sale May Mark Turning Point For Ethereum \u2013 With BMNR, SBET Stocks Poised To Benefit, Says Standard Chartered",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:29:27+00:00",
-      "timeDisplay": "4:29 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:02cb24f71094b:0-mstr-bitcoin-sale-may-mark-turning-point-for-ethereum-with-bmnr-sbet-stocks-poised-to-benefit-says-standard-chartered/"
-    },
-    {
-      "title": "Standard Chartered Flags Ethereum Breakout Phase With MicroStrategy as the Trigger",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:18:50+00:00",
-      "timeDisplay": "4:18 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:3899c39db094b:0-standard-chartered-flags-ethereum-breakout-phase-with-microstrategy-as-the-trigger/"
-    },
-    {
-      "title": "Trump Signs Executive Order For Early Government Access To Advanced AI Models",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:08:56+00:00",
-      "timeDisplay": "4:08 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:9ba83107b094b:0-trump-signs-executive-order-for-early-government-access-to-advanced-ai-models/"
-    },
-    {
-      "title": "Oil Prices Slide on Improved US-Iran Peace Prospects",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T15:39:33+00:00",
-      "timeDisplay": "3:39 PM",
-      "link": "https://www.tradingview.com/news/barchart:82073baab094b:0-oil-prices-slide-on-improved-us-iran-peace-prospects/"
-    },
-    {
-      "title": "Gold firms with focus on Middle East developments, US economic data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T15:35:40+00:00",
-      "timeDisplay": "3:35 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42A0O7:0-gold-firms-with-focus-on-middle-east-developments-us-economic-data/"
-    },
-    {
-      "title": "US yields lower after data as oil prices ease",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T15:24:48+00:00",
-      "timeDisplay": "3:24 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42A0X3:0-us-yields-lower-after-data-as-oil-prices-ease/"
-    },
-    {
-      "title": "Ethereum Signals Strength As Citigroup Eyes $5.5 Trillion Tokenized Asset Boom",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T15:00:36+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:762347f60094b:0-ethereum-signals-strength-as-citigroup-eyes-5-5-trillion-tokenized-asset-boom/"
-    },
-    {
-      "title": "Gold Overtakes Treasurys as No. 1 Asset in Foreign Reserves \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T14:59:00+00:00",
-      "timeDisplay": "2:59 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602005039:0/"
-    },
-    {
-      "title": "WTI Wavers as Markets Assess US-Iran Peace Prospects",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T14:57:51+00:00",
-      "timeDisplay": "2:57 PM",
-      "link": "https://www.tradingview.com/news/te_news:555813:0-wti-wavers-as-markets-assess-us-iran-peace-prospects/"
-    },
-    {
-      "title": "Charles Schwab Unveils 24/7 Crypto Futures Trading",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T14:54:00+00:00",
-      "timeDisplay": "2:54 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:e3d5b1d32094b:0-charles-schwab-unveils-24-7-crypto-futures-trading/"
     }
   ]
 }

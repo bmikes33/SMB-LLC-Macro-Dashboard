@@ -1,56 +1,328 @@
 {
-  "lastUpdated": "2026-06-03T17:58:37.245961+00:00",
-  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 05:58 PM UTC",
+  "lastUpdated": "2026-06-03T21:19:56.684502+00:00",
+  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 09:19 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Energy markets are rallying on escalating U.S.-Iran tensions in the Gulf with crude inventories falling sharply and yields rising on inflation concerns. Bitcoin and crypto assets are experiencing significant selling pressure with BTC dropping below $66k amid institutional liquidations and broad risk-off sentiment. Auto sales data shows modest improvement year-over-year while the dollar index hits 8-week highs.",
+    "macroSummary": "Gulf tensions escalate with Iran-US standoff over Strait of Hormuz as Trump pursues negotiations while maintaining blockade threats. Fed's Logan signals potential rate hikes due to persistent inflation concerns and accommodative financial conditions, while crypto markets suffer major selloffs with Bitcoin hitting three-month lows.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "While oil rallies support the reflation thesis, the broad crypto selloff, rising yields on inflation fears rather than growth optimism, and dollar strength suggest risk-off pressure building within the reflation framework.",
+    "regimePressureReason": "Fed officials are shifting hawkish on potential rate hikes due to inflation persistence, directly challenging the reflation regime's assumption of policy accommodation supporting risk assets.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar index hits 8-week high, approaching potential regime flip threshold"
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Yen hits 160 level prompting Japanese official warnings about potential intervention"
       },
       {
-        "indicator": "Oil (WTI)",
-        "level": "$115",
-        "signal": "Oil extending gains on Gulf tensions and large crude inventory drawdown"
+        "indicator": "VIX",
+        "level": "> 22",
+        "signal": "No direct VIX data but renewed Gulf tensions and crypto selloffs suggest volatility pressures"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar index reaches 8-week highs amid Gulf tensions and inflation fears",
+        "signal": "Dallas Fed's Logan warns may need rate hikes 'to fully restore price stability' and sees financial conditions as 'accommodative'",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "USDJPY touches 160 intervention zone as dollar strengthens on Gulf tensions and hawkish Fed rhetoric",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil rallying on U.S.-Iran strikes and 8.0 million barrel crude inventory decline",
+        "signal": "Bitcoin falls 4% to three-month lows in $160 billion crypto selloff, signaling risk-off rotation",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil gains on escalating Iran-US tensions over Strait of Hormuz blockade threats",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin drops below $66k with institutional selling from BlackRock and major liquidations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "U.S. yields advancing on Gulf tensions rather than growth expectations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Privacy coins gaining while Bitcoin weakens suggests defensive rotation in crypto",
-        "tag": "CONTRADICTS"
+        "signal": "US yields climb on Gulf tensions while precious metals slide on dollar strength",
+        "tag": "MIXED"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder closely as crypto weakness may accelerate if dollar breaks 100",
-      "Consider reducing cyclical exposure if oil approaches $115 while risk assets deteriorate",
-      "Watch for VIX expansion if current risk-off pressure in crypto spreads to broader equities"
+      "Monitor BMNR ladder closely as crypto weakness may accelerate put assignments",
+      "Prepare for potential regime shift if Fed hawkishness continues - cyclical overweight at risk",
+      "Watch for yen intervention catalyst at 160 level which could trigger broader risk-off"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Dollar Advances Amid Renewed Gulf Tensions, ADP Data Release",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T21:14:46+00:00",
+      "timeDisplay": "9:14 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:eef36551c5cbd:0-u-s-dollar-advances-amid-renewed-gulf-tensions-adp-data-release/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO ENDED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T21:04:00+00:00",
+      "timeDisplay": "9:04 PM",
+      "link": "https://www.tradingview.com/news/macenews:361b3cf9e094b:0-dallas-fed-s-logan-q-a-el-paso-ended/"
+    },
+    {
+      "title": "Bitcoin falls 4% to over three-month low",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T20:58:03+00:00",
+      "timeDisplay": "8:58 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN42B0U1:0-bitcoin-falls-4-to-over-three-month-low/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: REPEATS, INFL TOO HIGH 'AND 'SEE FURTHER UPSIDE RISKS;' NOT SURE POLICY IS VERY RESTRICTIVE; NEED 'MILDLY RESTRICTIVE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:51:00+00:00",
+      "timeDisplay": "8:51 PM",
+      "link": "https://www.tradingview.com/news/macenews:2aaece59c094b:0-dallas-fed-s-logan-q-a-el-paso-repeats-infl-too-high-and-see-further-upside-risks-not-sure-policy-is-very-restrictive-need-mildly-restrictive/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: THE BORDER AREA IN EL PASO REGION IS ONE COMMUNITY MADE UP OF MEXICO AND USA; MEXICO TOP TRADE PARTNER",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:47:00+00:00",
+      "timeDisplay": "8:47 PM",
+      "link": "https://www.tradingview.com/news/macenews:18d295b87094b:0-dallas-fed-s-logan-q-a-el-paso-the-border-area-in-el-paso-region-is-one-community-made-up-of-mexico-and-usa-mexico-top-trade-partner/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: TOURED A FACTORY IN MEXICO; A.I. DEMAND HAS AFFECTED TRADE FLOWS, LABOR SHORTAGES; USMACA HAS DAMPENED TARIFFS IMPACT",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:43:00+00:00",
+      "timeDisplay": "8:43 PM",
+      "link": "https://www.tradingview.com/news/macenews:50457fce1094b:0-dallas-fed-s-logan-q-a-el-paso-toured-a-factory-in-mexico-a-i-demand-has-affected-trade-flows-labor-shortages-usmaca-has-dampened-tariffs-impact/"
+    },
+    {
+      "title": "The Crypto Winter Turns Colder as Bitcoin Extends Its Slide \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:40:00+00:00",
+      "timeDisplay": "8:40 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603008737:0/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: IRAN WAR, BLOCKADE, 'BIGGEST DISRUPTION OF ENERGY IN HISTORY;' NOT ONLY OIL AFFECTED; IMPACT DEPENDS ON DURATION",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:40:00+00:00",
+      "timeDisplay": "8:40 PM",
+      "link": "https://www.tradingview.com/news/macenews:14779e0d5094b:0-dallas-fed-s-logan-q-a-el-paso-iran-war-blockade-biggest-disruption-of-energy-in-history-not-only-oil-affected-impact-depends-on-duration/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: REPEATS, LABOR MKT 'STABLE AND BALANCED;' DATA CENTERS CREATING 'SIGNIFICANT DEMAND' FOR LABOR",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:36:00+00:00",
+      "timeDisplay": "8:36 PM",
+      "link": "https://www.tradingview.com/news/macenews:4fee64ec1094b:0-dallas-fed-s-logan-q-a-el-paso-repeats-labor-mkt-stable-and-balanced-data-centers-creating-significant-demand-for-labor/"
+    },
+    {
+      "title": "Ethereum\u2019s Multi-Year Support Test Could Shape Its Next Big Move",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:30:52+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:8c13069b5094b:0-ethereum-s-multi-year-support-test-could-shape-its-next-big-move/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: IMMEDIATELY UPON SIGNING MOU STRAIT WILL BE REOPENED; REPEATS, 'LOVED' WEAPONIZATION FUND TO COMPENSATE THOSE ABUSED BY BIDEN ADMIN",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:30:00+00:00",
+      "timeDisplay": "8:30 PM",
+      "link": "https://www.tradingview.com/news/macenews:60387d81a094b:0-pres-trump-q-a-immediately-upon-signing-mou-strait-will-be-reopened-repeats-loved-weaponization-fund-to-compensate-those-abused-by-biden-admin/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: US BLOCKADE MAY BE MORE POWERFUL THAN BOMBS; 'IT COULD WORK OUT' WITH IRAN; WHETHER OR NOT, NEGOTIATING 'VERY POWERFUL DEAL'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:28:00+00:00",
+      "timeDisplay": "8:28 PM",
+      "link": "https://www.tradingview.com/news/macenews:9c5a1545b094b:0-pres-trump-q-a-us-blockade-may-be-more-powerful-than-bombs-it-could-work-out-with-iran-whether-or-not-negotiating-very-powerful-deal/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: TRYING TO 'SEPARATE' ISSUE OF LEBANON WITH REOPENING STRAIT OF HORMUZ; ISRAEL'S 'BEEN A GREAT PARTNER;' STOPPED 'BLOWING UP' MIDEAST",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:26:00+00:00",
+      "timeDisplay": "8:26 PM",
+      "link": "https://www.tradingview.com/news/macenews:044fe52e0094b:0-pres-trump-q-a-trying-to-separate-issue-of-lebanon-with-reopening-strait-of-hormuz-israel-s-been-a-great-partner-stopped-blowing-up-mideast/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: IRAN DID AGREE TO GIVE UP ENRICHED URANIUM STOCKS IN IRAN, THEN DIDN'T AGREE; BURIED BENEATH A MOUNTAIN; 'WANT TO GET IT'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:23:00+00:00",
+      "timeDisplay": "8:23 PM",
+      "link": "https://www.tradingview.com/news/macenews:a823b5bf5094b:0-pres-trump-q-a-iran-did-agree-to-give-up-enriched-uranium-stocks-in-iran-then-didn-t-agree-buried-beneath-a-mountain-want-to-get-it/"
+    },
+    {
+      "title": "PRES TRUMP Q&A: 'ANYTHING CAN HAPPEN' WITH IRAN; COULD 'WIPE EVERYBODY OUT' BUT DON'T WANT TO DO IT; 'HAD TO TAKE A DETOUR'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:18:00+00:00",
+      "timeDisplay": "8:18 PM",
+      "link": "https://www.tradingview.com/news/macenews:71d3787a1094b:0-pres-trump-q-a-anything-can-happen-with-iran-could-wipe-everybody-out-but-don-t-want-to-do-it-had-to-take-a-detour/"
+    },
+    {
+      "title": "Bitcoin's $160 Billion Slide Puts Strategy's Tiny Sale In Focus",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:11:59+00:00",
+      "timeDisplay": "8:11 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:11993b455094b:0-bitcoin-s-160-billion-slide-puts-strategy-s-tiny-sale-in-focus/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO:  'FINANCIAL CONDITIONS ARE ACCOMMODATIVE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:00:00+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:9ff7ddbdb094b:0-dallas-fed-s-logan-q-a-el-paso-financial-conditions-are-accommodative/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO:  MAY NEED RATE HIKES \u2018TO FULLY RESTORES PRICE STABILITY\u2019, BALANCE DUAL MANDATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:00:00+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:0d4b79cc3094b:0-dallas-fed-s-logan-q-a-el-paso-may-need-rate-hikes-to-fully-restores-price-stability-balance-dual-mandate/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO:  PERSISTENT HIGH INFLATION COULD LEAD TO UNANCHORED INFLATION EXPECTATIONS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:00:00+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:c5c3319f7094b:0-dallas-fed-s-logan-q-a-el-paso-persistent-high-inflation-could-lead-to-unanchored-inflation-expectations/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: ECONOMY \u2018STRONG\u2019; LABOR MARKET \u2018STABLE AND BROADLY BALANCED\u2019",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:00:00+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:f90bdcccd094b:0-dallas-fed-s-logan-q-a-el-paso-economy-strong-labor-market-stable-and-broadly-balanced/"
+    },
+    {
+      "title": "DALLAS FED'S LOGAN Q&A/EL PASO: \u2019INCREASINGLY CONCERNED HIGHER INTEREST RATES COULD BE NECESSARY LATER THIS YEAR\u2019",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T20:00:00+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:97a944446094b:0-dallas-fed-s-logan-q-a-el-paso-increasingly-concerned-higher-interest-rates-could-be-necessary-later-this-year/"
+    },
+    {
+      "title": "The Quantum Bitcoin Paradox: Attack the Network, Kill the Prize",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T19:56:08+00:00",
+      "timeDisplay": "7:56 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:ce7dd2550094b:0-the-quantum-bitcoin-paradox-attack-the-network-kill-the-prize/"
+    },
+    {
+      "title": "HEADS UP: DALLAS FED'S LOGAN REMARKS AT THE UNIVERSITY OF TEXAS AT EL PASO COMING UP AT 4P ET FOLLOWED BY Q&A",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T19:45:00+00:00",
+      "timeDisplay": "7:45 PM",
+      "link": "https://www.tradingview.com/news/macenews:7de602f98094b:0-heads-up-dallas-fed-s-logan-remarks-at-the-university-of-texas-at-el-paso-coming-up-at-4p-et-followed-by-q-a/"
+    },
+    {
+      "title": "Precious Metals Slide as Dollar Gets Stronger \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T19:45:00+00:00",
+      "timeDisplay": "7:45 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603007388:0/"
+    },
+    {
+      "title": "Yen dips to 160 level, prompting warnings from Japanese officials",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T19:27:02+00:00",
+      "timeDisplay": "7:27 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B0Q3:0-yen-dips-to-160-level-prompting-warnings-from-japanese-officials/"
+    },
+    {
+      "title": "Oil Settles Higher as U.S.-Iran Exchanges Increase Tension \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T19:10:00+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603007259:0/"
+    },
+    {
+      "title": "US yields climb on latest flare in Gulf tensions",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-03T19:01:48+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42B153:0-us-yields-climb-on-latest-flare-in-gulf-tensions/"
+    },
+    {
+      "title": "US ISM Services Sector Activity Picks Up in May but Faces Mideast Conflict's Higher Costs of Fuels, Other Oil Products; Employment Remains Weak",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:43:00+00:00",
+      "timeDisplay": "6:43 PM",
+      "link": "https://www.tradingview.com/news/macenews:25d5ebd27094b:0-us-ism-services-sector-activity-picks-up-in-may-but-faces-mideast-conflict-s-higher-costs-of-fuels-other-oil-products-employment-remains-weak/"
+    },
+    {
+      "title": "FED'S BEIGE BOOK: PHILLY FED DISTRICT 'DECLINED SLIGHTLY;' SAN FRANCISCO DISTRICT REPORTED 'UNCHANGED ON NET'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:17:00+00:00",
+      "timeDisplay": "6:17 PM",
+      "link": "https://www.tradingview.com/news/macenews:dc1ff5ba5094b:0-fed-s-beige-book-philly-fed-district-declined-slightly-san-francisco-district-reported-unchanged-on-net/"
+    },
+    {
+      "title": "Oil Gains Again After Mideast Clashes \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:14:00+00:00",
+      "timeDisplay": "6:14 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260603007013:0/"
+    },
+    {
+      "title": "FED'S BEIGE BOOK: ABILITY TO PASS ON HIGHER COSTS' REMAINED MIXED; NON LABOR COSTS 'CONTINUED TO RISE FASTER THAN SELLING PRICES;",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:14:00+00:00",
+      "timeDisplay": "6:14 PM",
+      "link": "https://www.tradingview.com/news/macenews:d0fa150b9094b:0-fed-s-beige-book-ability-to-pass-on-higher-costs-remained-mixed-non-labor-costs-continued-to-rise-faster-than-selling-prices/"
+    },
+    {
+      "title": "FED'S BEIGE BOOK: 'EMPLOYMENT SHOWED LITTLE TO NO CHANGE IN 11 DISTRICTS WHILE ONE  REPORTED 'MODEST GROWTH'\\;' PRICES UP 'MODERATE TO STRONG PACE'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:11:00+00:00",
+      "timeDisplay": "6:11 PM",
+      "link": "https://www.tradingview.com/news/macenews:fce647060094b:0-fed-s-beige-book-employment-showed-little-to-no-change-in-11-districts-while-one-reported-modest-growth-prices-up-moderate-to-strong-pace/"
+    },
+    {
+      "title": "FED'S BEIGE BOOK: MORTGAGES, CONSUMER AND AGRICULTURAL LOAN DELINQUENCIES UP; SEE ELEVATED UNCERTAINTY; WEAKER CONSUMER 'WEIGHED ON SENTIMENT'",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:08:00+00:00",
+      "timeDisplay": "6:08 PM",
+      "link": "https://www.tradingview.com/news/macenews:28281e94b094b:0-fed-s-beige-book-mortgages-consumer-and-agricultural-loan-delinquencies-up-see-elevated-uncertainty-weaker-consumer-weighed-on-sentiment/"
+    },
+    {
+      "title": "FED'S BEIGE BOOK: CONSUMER SPENDING 'INCREASINGLY BIFURCATED;' SEEING AFFORDABILITY PRESSURES, INCREASED CREDIT CARD USAGE; AUTOS SOFTER; MFG UP",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T18:05:00+00:00",
+      "timeDisplay": "6:05 PM",
+      "link": "https://www.tradingview.com/news/macenews:0d15886c9094b:0-fed-s-beige-book-consumer-spending-increasingly-bifurcated-seeing-affordability-pressures-increased-credit-card-usage-autos-softer-mfg-up/"
+    },
     {
       "title": "Gold slips on bets of higher rates as war fuels inflation fears",
       "source": "reuters",
@@ -58,6 +330,14 @@
       "timestamp": "2026-06-03T17:52:49+00:00",
       "timeDisplay": "5:52 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B0XP:0-gold-slips-on-bets-of-higher-rates-as-war-fuels-inflation-fears/"
+    },
+    {
+      "title": "Raoul Pal Shuts Down \u2018Crypto Is Dead\u2019 Narrative With One Chart",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T17:51:38+00:00",
+      "timeDisplay": "5:51 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:aaf56bdc4094b:0-raoul-pal-shuts-down-crypto-is-dead-narrative-with-one-chart/"
     },
     {
       "title": "The Bitcoin Bear Market Is Over: Here\u2019s Where We Are In The Cycle",
@@ -108,14 +388,6 @@
       "link": "https://www.tradingview.com/news/the_block:03bc74992094b:0-bessent-backs-summer-push-for-clarity-act-says-bitcoin-reserve-moving-at-deliberate-speed/"
     },
     {
-      "title": "Dollar Index Hits 8-week High",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T16:35:06+00:00",
-      "timeDisplay": "4:35 PM",
-      "link": "https://www.tradingview.com/news/te_news:556236:0-dollar-index-hits-8-week-high/"
-    },
-    {
       "title": "Senator Cynthia Lummis Says Jamie Dimon Is 'Absolutely Wrong' On CLARITY Act, Hasn't Read The Bill",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -124,12 +396,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:1bd7d55ab094b:0-senator-cynthia-lummis-says-jamie-dimon-is-absolutely-wrong-on-clarity-act-hasn-t-read-the-bill/"
     },
     {
-      "title": "Oil Gains Again After Mideast Clashes \u2014 WSJ",
-      "source": "dow-jones",
+      "title": "Bitcoin Price Faces Fresh Pressure as BlackRock and Winklevoss Wallet Moves Spark Speculation",
+      "source": "coinpedia",
       "color": "#00e5ff",
-      "timestamp": "2026-06-03T16:15:00+00:00",
-      "timeDisplay": "4:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603006444:0/"
+      "timestamp": "2026-06-03T16:25:15+00:00",
+      "timeDisplay": "4:25 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:faba423e5094b:0-bitcoin-price-faces-fresh-pressure-as-blackrock-and-winklevoss-wallet-moves-spark-speculation/"
     },
     {
       "title": "Bitcoin copying 2022 'almost perfectly' as trader sees key support failing",
@@ -204,30 +476,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:eabc23b20094b:0-real-vision-analyst-reveals-why-buying-bitcoin-at-60-000s-is-a-once-in-cycle-opportunity/"
     },
     {
-      "title": "US BEA DOMESTIC MOTOR VEHICLES SALES 12.4 MLN IN MAY VS 12.3 MLN IN APRIL; 12.1 MLN IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T15:12:00+00:00",
-      "timeDisplay": "3:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:d8cd21787094b:0-us-bea-domestic-motor-vehicles-sales-12-4-mln-in-may-vs-12-3-mln-in-april-12-1-mln-in-may-2025/"
-    },
-    {
-      "title": "US BEA LIGHT TRUCK SALES 13.4 MLN IN MAY VS 13.3 MLN IN APRIL; 12.9 MLN IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T15:12:00+00:00",
-      "timeDisplay": "3:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:b096ced46094b:0-us-bea-light-truck-sales-13-4-mln-in-may-vs-13-3-mln-in-april-12-9-mln-in-may-2025/"
-    },
-    {
-      "title": "US BEA PASSENGER CAR SALES 2.7 MLN IN MAY VS 2.7 MLN IN APRIL; 2.7 MLN IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T15:12:00+00:00",
-      "timeDisplay": "3:12 PM",
-      "link": "https://www.tradingview.com/news/macenews:705e39bc4094b:0-us-bea-passenger-car-sales-2-7-mln-in-may-vs-2-7-mln-in-april-2-7-mln-in-may-2025/"
-    },
-    {
       "title": "Oil Extends Gains after EIA Data",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -236,36 +484,12 @@
       "link": "https://www.tradingview.com/news/te_news:556215:0-oil-extends-gains-after-eia-data/"
     },
     {
-      "title": "US BEA TOTAL MOTOR VEHICLES SALES 16.1 MLN IN MAY VS 16.0 MLN IN APRIL; 15.6 MLN IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T15:11:00+00:00",
-      "timeDisplay": "3:11 PM",
-      "link": "https://www.tradingview.com/news/macenews:26bcc987f094b:0-us-bea-total-motor-vehicles-sales-16-1-mln-in-may-vs-16-0-mln-in-april-15-6-mln-in-may-2025/"
-    },
-    {
       "title": "US yields advance as tensions in Gulf flare",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-06-03T15:07:33+00:00",
       "timeDisplay": "3:07 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42B0Y7:0-us-yields-advance-as-tensions-in-gulf-flare/"
-    },
-    {
-      "title": "Bitcoin Sell-Off Fears Rise as BlackRock and Winklevoss Twins Move 7,000 BTC",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:53:11+00:00",
-      "timeDisplay": "2:53 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:454d404b2094b:0-bitcoin-sell-off-fears-rise-as-blackrock-and-winklevoss-twins-move-7-000-btc/"
-    },
-    {
-      "title": "Bitwise Model Suggests Bitcoin Fair Value at $224,000 as Sovereign Hedge",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:52:12+00:00",
-      "timeDisplay": "2:52 PM",
-      "link": "https://www.tradingview.com/news/binance_news:253c081cb094b:0-bitwise-model-suggests-bitcoin-fair-value-at-224-000-as-sovereign-hedge/"
     },
     {
       "title": "Privacy Coins Gain Amid BTC Weakness \u2014 Market Talk",
@@ -284,108 +508,12 @@
       "link": "https://www.tradingview.com/news/te_news:556208:0-us-crude-oil-inventories-fall-more-than-expected/"
     },
     {
-      "title": "Economist Alex Kr\u00fcger Calls Crypto A 'Failed Asset Class' \u2014 But Says Bitcoin And Blockchain Still Matter",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:38:18+00:00",
-      "timeDisplay": "2:38 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:e70a58875094b:0-economist-alex-kr-ger-calls-crypto-a-failed-asset-class-but-says-bitcoin-and-blockchain-still-matter/"
-    },
-    {
       "title": "Oil Up 1% as U.S.-Iran Strikes Cloud Hormuz Reopening Prospects \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-03T14:32:00+00:00",
       "timeDisplay": "2:32 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260603005431:0/"
-    },
-    {
-      "title": "US EIA DISTILLATES INVENTORIES UP 1.5 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:32:00+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:c2084eec2094b:0-us-eia-distillates-inventories-up-1-5-mln-barrels-in-latest-week-from-previous-week/"
-    },
-    {
-      "title": "US EIA GASOLINE INVENTORIES UP 3.4 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:31:00+00:00",
-      "timeDisplay": "2:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:e33daf56b094b:0-us-eia-gasoline-inventories-up-3-4-mln-barrels-in-latest-week-from-previous-week/"
-    },
-    {
-      "title": "Here\u2019s Why The Bitcoin Price Is Crashing And What To Expect Next",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:30:50+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:651ef0289094b:0-here-s-why-the-bitcoin-price-is-crashing-and-what-to-expect-next/"
-    },
-    {
-      "title": "US EIA CRUDE OIL INVENTORIES DOWN 8.0 MLN BARRELS IN LATEST WEEK FROM PREVIOUS WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:30:00+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:825d65e3b094b:0-us-eia-crude-oil-inventories-down-8-0-mln-barrels-in-latest-week-from-previous-week/"
-    },
-    {
-      "title": "US ISM\u2019S MILLER: HIGHER INVENTORIES IN SERVICES APPEAR TO BE FROM BOTH PHYSICAL BUILDUP AND HIGHER PRICES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:29:00+00:00",
-      "timeDisplay": "2:29 PM",
-      "link": "https://www.tradingview.com/news/macenews:a376bbac2094b:0-us-ism-s-miller-higher-inventories-in-services-appear-to-be-from-both-physical-buildup-and-higher-prices/"
-    },
-    {
-      "title": "US ISM\u2019S MILLER: EXPECTED TO SEE MUCH SLOWER SUPPLY DELIVERIES IN MAY REPORT AMID RISING FUEL, TRANSPORTATION COSTS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:28:00+00:00",
-      "timeDisplay": "2:28 PM",
-      "link": "https://www.tradingview.com/news/macenews:6018dfc0e094b:0-us-ism-s-miller-expected-to-see-much-slower-supply-deliveries-in-may-report-amid-rising-fuel-transportation-costs/"
-    },
-    {
-      "title": "Yen hovers near 160 level, prompting warnings from Japanese officials",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-03T14:23:58+00:00",
-      "timeDisplay": "2:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42B0KF:0-yen-hovers-near-160-level-prompting-warnings-from-japanese-officials/"
-    },
-    {
-      "title": "US ISM\u2019S MILLER: HIGHER COSTS OF PETROLEUM ALREADY CREATING DOWNWARD PRESSURE ON ECON ACTIVITY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:19:00+00:00",
-      "timeDisplay": "2:19 PM",
-      "link": "https://www.tradingview.com/news/macenews:661a5004a094b:0-us-ism-s-miller-higher-costs-of-petroleum-already-creating-downward-pressure-on-econ-activity/"
-    },
-    {
-      "title": "US ISMS\u2019 MILLER: I CANNOT SEE ANY INCREASE IN INTEREST RATES BY FED, WAIT AND SEE UNDER NEW FED CHAIR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:17:00+00:00",
-      "timeDisplay": "2:17 PM",
-      "link": "https://www.tradingview.com/news/macenews:cc5fc6ee9094b:0-us-isms-miller-i-cannot-see-any-increase-in-interest-rates-by-fed-wait-and-see-under-new-fed-chair/"
-    },
-    {
-      "title": "US ISM\u2019S MILLER: MAY REPORT, DECLINE IN EMPLOYMENT INDEX, SHOWS RELUCTANCE TO HIRE IN SERVICES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:17:00+00:00",
-      "timeDisplay": "2:17 PM",
-      "link": "https://www.tradingview.com/news/macenews:c7d34db82094b:0-us-ism-s-miller-may-report-decline-in-employment-index-shows-reluctance-to-hire-in-services/"
-    },
-    {
-      "title": "CRCL, COIN Stocks Dip After Report Suggests Coinbase Is Mulling Entry Into New Stablecoin Platform Backed By Stripe, Visa, Mastercard",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:16:05+00:00",
-      "timeDisplay": "2:16 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:9c8b097fd094b:0-crcl-coin-stocks-dip-after-report-suggests-coinbase-is-mulling-entry-into-new-stablecoin-platform-backed-by-stripe-visa-mastercard/"
     },
     {
       "title": "NY Engelhard Gold Prices - June 3",
@@ -396,84 +524,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260603005267:0/"
     },
     {
-      "title": "US ISM\u2019S MILLER: INVENTORY BUILDUP IN SERVICES SECTOR IS AS PLANNED",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:16:00+00:00",
-      "timeDisplay": "2:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:4936c25e7094b:0-us-ism-s-miller-inventory-buildup-in-services-sector-is-as-planned/"
-    },
-    {
-      "title": "FED GOV BARR/COMMUNITY BANKERS: WATCHING VERY CAREFULLY TO SEE IF INFLATION EXPECTATIONS COME BACK DOWN; EVENT ENDS",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:15:00+00:00",
-      "timeDisplay": "2:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:6c0f10949094b:0-fed-gov-barr-community-bankers-watching-very-carefully-to-see-if-inflation-expectations-come-back-down-event-ends/"
-    },
-    {
       "title": "Gold Pressured by Higher Rates Expectations While Investors Await U.S. Data \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-03T14:14:00+00:00",
       "timeDisplay": "2:14 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260603005253:0/"
-    },
-    {
-      "title": "Rate-Rise Bets, Stronger U.S. Growth Boost Dollar \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:11:00+00:00",
-      "timeDisplay": "2:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603005233:0/"
-    },
-    {
-      "title": "US ISM MAY SERVICES REPORT: FOR 3RD MONTH IN A ROW, NO COMMODITIES LISTED AS DOWN IN PRICE; ALUMINUM, COPPER, FUELS, SOFTWARE LICENSING ALL UP",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:06:00+00:00",
-      "timeDisplay": "2:06 PM",
-      "link": "https://www.tradingview.com/news/macenews:f02b67b1f094b:0-us-ism-may-services-report-for-3rd-month-in-a-row-no-commodities-listed-as-down-in-price-aluminum-copper-fuels-software-licensing-all-up/"
-    },
-    {
-      "title": "US ISM SERVICES REPORT: MOST INDUSTRIES SAY STAFFING FLAT IN MAY; THOSE WITH HIRING FREEZES NOT BACKFILLING VACANCIES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:05:00+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:32492375f094b:0-us-ism-services-report-most-industries-say-staffing-flat-in-may-those-with-hiring-freezes-not-backfilling-vacancies/"
-    },
-    {
-      "title": "US NONDURABLE PETROLEUM SHIPMENTS +4.1% IN APRIL VS +X10.7% IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:05:00+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:d61c8f89e094b:0-us-nondurable-petroleum-shipments-4-1-in-april-vs-x10-7-in-march/"
-    },
-    {
-      "title": "US DURABLE GOODS ORDERS EX TRANSPORTATION +1.3% IN APRIL (PREV +1.6%) VS 1.8% IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:04:00+00:00",
-      "timeDisplay": "2:04 PM",
-      "link": "https://www.tradingview.com/news/macenews:5d0dc843f094b:0-us-durable-goods-orders-ex-transportation-1-3-in-april-prev-1-6-vs-1-8-in-march/"
-    },
-    {
-      "title": "US DURABLE GOODS ORDERS +8.0% IN APRIL (PREV +7.9%) VS +1.3% IN MARCH",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:03:00+00:00",
-      "timeDisplay": "2:03 PM",
-      "link": "https://www.tradingview.com/news/macenews:a472f116a094b:0-us-durable-goods-orders-8-0-in-april-prev-7-9-vs-1-3-in-march/"
-    },
-    {
-      "title": "US NONDURABLE GOODS ORDERS +1.4% IN APRIL VS +2.3% IN MARCH (PREV +2.1%)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T14:03:00+00:00",
-      "timeDisplay": "2:03 PM",
-      "link": "https://www.tradingview.com/news/macenews:ab2f00056094b:0-us-nondurable-goods-orders-1-4-in-april-vs-2-3-in-march-prev-2-1/"
     },
     {
       "title": "Shift in Crypto Investments as Funds Move from Bitcoin and Ether",
@@ -594,62 +650,6 @@
       "timestamp": "2026-06-03T09:42:07+00:00",
       "timeDisplay": "9:42 AM",
       "link": "https://www.tradingview.com/news/invezz:c4e0f32b7094b:0-can-ethereum-price-reclaim-2000/"
-    },
-    {
-      "title": "Kraken To Offer IPO Access To Retail Investors",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T09:34:00+00:00",
-      "timeDisplay": "9:34 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:b3a9c2014094b:0-kraken-to-offer-ipo-access-to-retail-investors/"
-    },
-    {
-      "title": "Treasury Yields March Higher as Rising Oil Prices Weigh on Inflation",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T09:33:09+00:00",
-      "timeDisplay": "9:33 AM",
-      "link": "https://www.tradingview.com/news/te_news:556130:0-treasury-yields-march-higher-as-rising-oil-prices-weigh-on-inflation/"
-    },
-    {
-      "title": "Visa And Mastercard Collaborate On New Stablecoin Platform",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T09:09:00+00:00",
-      "timeDisplay": "9:09 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:eec25bc2a094b:0-visa-and-mastercard-collaborate-on-new-stablecoin-platform/"
-    },
-    {
-      "title": "Exclusive: Micha\u00ebl van de Poppe Names 3 Altcoins He\u2019s Betting on Ahead of the CLARITY Act",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T08:56:37+00:00",
-      "timeDisplay": "8:56 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:5367d87d7094b:0-exclusive-micha-l-van-de-poppe-names-3-altcoins-he-s-betting-on-ahead-of-the-clarity-act/"
-    },
-    {
-      "title": "Gold Falls as U.S.-Iran Hostilities Push Oil Higher \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T07:52:00+00:00",
-      "timeDisplay": "7:52 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603001652:0/"
-    },
-    {
-      "title": "Oil Climbs on Fresh U.S.-Iran Hostilities \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T07:36:00+00:00",
-      "timeDisplay": "7:36 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603001557:0/"
-    },
-    {
-      "title": "Gold Coming Under Pressure Before U.S. Non-Farm Payrolls Report \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-03T07:18:00+00:00",
-      "timeDisplay": "7:18 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260603001450:0/"
     }
   ]
 }

@@ -1,51 +1,107 @@
 {
-  "lastUpdated": "2026-06-02T22:32:48.372161+00:00",
-  "lastUpdatedDisplay": "Jun 02, 2026 \u2014 10:32 PM UTC",
+  "lastUpdated": "2026-06-03T00:25:28.864098+00:00",
+  "lastUpdatedDisplay": "Jun 03, 2026 \u2014 12:25 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Crypto markets experienced severe selling with Bitcoin falling below $70K and $176B wiped from crypto market cap amid $1+ billion in liquidations. Oil prices rose above $93 as Iran peace talks remain stalled, while US yields dipped on mixed economic data and gold held steady amid Middle East tensions.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Oil strength and Iran tensions support reflation themes, but crypto crash suggests risk asset stress that could spill into broader equity markets.",
+    "macroSummary": "Bitcoin and crypto markets experienced sharp declines with BTC falling below $70K amid $1+ billion in liquidations, while oil prices rose above $93 as US-Iran peace talks stalled. Strong US jobs data pressured gold lower and supported dollar stability, creating mixed signals across risk assets.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Crypto risk-off behavior contradicts the bullish-cyclicals bias, while oil's rise on geopolitical tension reinforces stagflationary pressures that could challenge the reflation regime's sustainability.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "approaching $115",
-        "signal": "WTI above $93 with Iran deal remaining elusive - sustained move toward $115 would trigger stagflation dominance"
+        "signal": "WTI above $93 and climbing on Iran peace talk failures - approaching stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Crypto liquidations exceed $1B with Bitcoin below $70K indicating potential risk asset contagion brewing",
+        "signal": "Bitcoin crashed below $70K with $1+ billion crypto liquidations suggesting risk-off sentiment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil rises above $93 as Iran peace talks fail to progress, supporting energy-driven reflation narrative",
+        "signal": "Oil rises above $93 on stalled US-Iran peace talks, approaching stagflation threshold at $115",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Strong US jobs data pressured gold lower and kept dollar stable, supporting reflation narrative",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "US yields dipping despite oil strength suggests bond market resilience against reflation pressures",
+        "signal": "Crypto market liquidations and ETF outflows signal broader risk appetite deterioration",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold steady amid Middle East tensions while crypto crashes shows flight-to-quality dynamics emerging",
+        "signal": "Oil's third straight session of gains on geopolitical tensions reinforces inflationary pressures",
         "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Standard Chartered flags potential Ethereum breakout phase with BMNR positioned to benefit from institutional rotation",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder performance closely - crypto crash may present better entry points for cash-secured puts",
-      "Watch for equity market contagion from crypto liquidations, particularly in growth/tech sectors",
-      "Prepare for potential oil spike toward $115 threshold if Iran situation deteriorates further"
+      "Monitor BMNR ladder closely as crypto weakness may pressure ETH-linked trusts",
+      "Prepare to reduce cyclical exposure if oil breaks toward $100+ on sustained geopolitical escalation",
+      "Watch for VIX expansion if crypto weakness spreads to broader equity markets"
     ]
   },
   "articles": [
+    {
+      "title": "Gold Slips on Strong US Jobs Data",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T00:02:02+00:00",
+      "timeDisplay": "12:02 AM",
+      "link": "https://www.tradingview.com/news/te_news:555881:0-gold-slips-on-strong-us-jobs-data/"
+    },
+    {
+      "title": "Bitcoin Loses $70K While 10,300 BTC Leave Mt. Gox-Linked Addresses \u2013 Details",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-03T00:00:15+00:00",
+      "timeDisplay": "12:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:34caf2ca4094b:0-bitcoin-loses-70k-while-10-300-btc-leave-mt-gox-linked-addresses-details/"
+    },
+    {
+      "title": "Oil Rises Amid Signs of U.S.-Iran Peace Talks Stalling \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T23:41:00+00:00",
+      "timeDisplay": "11:41 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260602009005:0/"
+    },
+    {
+      "title": "Oil Climbs for Third Straight Session",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T23:36:08+00:00",
+      "timeDisplay": "11:36 PM",
+      "link": "https://www.tradingview.com/news/te_news:555875:0-oil-climbs-for-third-straight-session/"
+    },
+    {
+      "title": "US Crude Stockpiles Fall for 7th Week",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T23:34:07+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/te_news:555873:0-us-crude-stockpiles-fall-for-7th-week/"
+    },
+    {
+      "title": "6 Questions Investors Must Ask as Elon Musk Locks 100% SpaceX Shares Before IPO",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T22:23:41+00:00",
+      "timeDisplay": "10:23 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:49a8a8120094b:0-6-questions-investors-must-ask-as-elon-musk-locks-100-spacex-shares-before-ipo/"
+    },
+    {
+      "title": "Was MicroStrategy and Saylor Right to Sell Some Bitcoin? The Maximalism Debate",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:47fe3c7f6094b:0-was-microstrategy-and-saylor-right-to-sell-some-bitcoin-the-maximalism-debate/"
+    },
     {
       "title": "Crypto correction vaporized $176B in investor funds: Are bears back in control?",
       "source": "cointelegraph",
@@ -263,28 +319,12 @@
       "link": "https://www.tradingview.com/news/moneycontrol:6ca2f61c5094b:0-bitcoin-s-inflation-hedging-promise-in-tatters-after-slipping-below-70-000/"
     },
     {
-      "title": "Analyst Reveals Why Bitcoin Price Must Crash To $42,000 First",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:30:59+00:00",
-      "timeDisplay": "4:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:dd54dd8c3094b:0-analyst-reveals-why-bitcoin-price-must-crash-to-42-000-first/"
-    },
-    {
       "title": "MSTR Bitcoin Sale May Mark Turning Point For Ethereum \u2013 With BMNR, SBET Stocks Poised To Benefit, Says Standard Chartered",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-06-02T16:29:27+00:00",
       "timeDisplay": "4:29 PM",
       "link": "https://www.tradingview.com/news/stocktwits:02cb24f71094b:0-mstr-bitcoin-sale-may-mark-turning-point-for-ethereum-with-bmnr-sbet-stocks-poised-to-benefit-says-standard-chartered/"
-    },
-    {
-      "title": "Solana Plummets as Memecoin Appetite Fades \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T16:26:00+00:00",
-      "timeDisplay": "4:26 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260602005919:0/"
     },
     {
       "title": "Standard Chartered Flags Ethereum Breakout Phase With MicroStrategy as the Trigger",
@@ -301,6 +341,14 @@
       "timestamp": "2026-06-02T16:08:56+00:00",
       "timeDisplay": "4:08 PM",
       "link": "https://www.tradingview.com/news/stocktwits:9ba83107b094b:0-trump-signs-executive-order-for-early-government-access-to-advanced-ai-models/"
+    },
+    {
+      "title": "Oil Prices Slide on Improved US-Iran Peace Prospects",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-02T15:39:33+00:00",
+      "timeDisplay": "3:39 PM",
+      "link": "https://www.tradingview.com/news/barchart:82073baab094b:0-oil-prices-slide-on-improved-us-iran-peace-prospects/"
     },
     {
       "title": "Gold firms with focus on Middle East developments, US economic data",
@@ -597,54 +645,6 @@
       "timestamp": "2026-06-02T13:11:00+00:00",
       "timeDisplay": "1:11 PM",
       "link": "https://www.tradingview.com/news/macenews:46e9c4d8d094b:0-cleve-fed-s-hammack-q-a-city-club-expect-really-robust-discussion-at-upcoming-fomc-fomc-can-be-kind-of-boring-fed-provides-blankets-if-cold/"
-    },
-    {
-      "title": "Key facts: Bitmine Adds ~26.5K ETH; Futures Net-Buy; Buterin Tranche Plan",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T12:14:21+00:00",
-      "timeDisplay": "12:14 PM",
-      "link": "https://www.tradingview.com/news/tradingview:400aa7041be38:0-key-facts-bitmine-adds-26-5k-eth-futures-net-buy-buterin-tranche-plan/"
-    },
-    {
-      "title": "Gold climbs as lower oil eases inflation, rate-hike fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-02T11:46:08+00:00",
-      "timeDisplay": "11:46 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42A0EE:0-gold-climbs-as-lower-oil-eases-inflation-rate-hike-fears/"
-    },
-    {
-      "title": "Gold rebounds Rs 1,050 on firm global cues; silver rises Rs 1,300",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T11:22:41+00:00",
-      "timeDisplay": "11:22 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:16e4991c9094b:0-gold-rebounds-rs-1-050-on-firm-global-cues-silver-rises-rs-1-300/"
-    },
-    {
-      "title": "Treasury Yields Ease",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T10:57:28+00:00",
-      "timeDisplay": "10:57 AM",
-      "link": "https://www.tradingview.com/news/te_news:555769:0-treasury-yields-ease/"
-    },
-    {
-      "title": "Standard Chartered Says Strategy Sale May Mark Start of Ether Rebound",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T10:56:00+00:00",
-      "timeDisplay": "10:56 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:de26c917b094b:0-standard-chartered-says-strategy-sale-may-mark-start-of-ether-rebound/"
-    },
-    {
-      "title": "Vitalik Buterin proposes options-based synthetic assets to avoid liquidations and reduce reliance on real-time oracles",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-02T10:31:02+00:00",
-      "timeDisplay": "10:31 AM",
-      "link": "https://www.tradingview.com/news/the_block:f0ae02b29094b:0-vitalik-buterin-proposes-options-based-synthetic-assets-to-avoid-liquidations-and-reduce-reliance-on-real-time-oracles/"
     }
   ]
 }

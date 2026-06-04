@@ -1,51 +1,80 @@
 {
-  "lastUpdated": "2026-06-04T22:18:06.909057+00:00",
-  "lastUpdatedDisplay": "Jun 04, 2026 \u2014 10:18 PM UTC",
+  "lastUpdated": "2026-06-04T23:44:04.749613+00:00",
+  "lastUpdatedDisplay": "Jun 04, 2026 \u2014 11:44 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show de-escalation themes with Middle East ceasefire hopes driving dollar weakness, falling oil prices, and declining Treasury yields. Bitcoin crashed 21% amid crypto selloffs and institutional outflows, while Fed officials remain cautious on rate moves given inflation still above target.",
+    "macroSummary": "Middle East de-escalation signs are emerging, leading to oil pullbacks and Treasury yield declines ahead of payrolls data. Bitcoin and crypto markets are experiencing significant selling pressure with BTC approaching 52-week lows amid MicroStrategy concerns. Fed officials remain cautious on rate moves while expressing concern about persistent inflation above 2% target.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Middle East de-escalation is unwinding the Iran oil shock that underpinned reflation fears, with oil retreating and yields falling as geopolitical premium deflates.",
+    "regimePressureReason": "De-escalation in Middle East is unwinding the oil shock that was a key pillar of the reflation regime, while Treasury yields are declining and the dollar is slipping from recent highs.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Yen touched 160 intervention zone amid dollar weakness from Iran talks"
+        "signal": "Yen touched 160 level amid Iran ceasefire talks and dollar weakness"
+      },
+      {
+        "indicator": "Oil",
+        "level": "< $115",
+        "signal": "Oil futures retreating after 3-session winning streak on Middle East de-escalation hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil futures retreat after 3-session winning streak as Middle East tensions ease",
+        "signal": "Middle East de-escalation signs emerging, causing oil pullback and dollar weakness",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields decline ahead of payrolls data with bond market relief from geopolitical cooling",
+        "signal": "Treasury yields declining ahead of payrolls data as geopolitical tensions ease",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar slips from two-month high amid Iran ceasefire talks and falling bond yields",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Fed's Schmid warns inflation still too high at 5 years in, must cut to 2% target",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "USDJPY touches 160 BOJ intervention threshold as dollar weakens on de-escalation",
+        "signal": "USDJPY touching 160 intervention zone amid yen strength on ceasefire hopes",
         "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Fed's Schmid warns about prolonged oil impact on inflation but notes uncertainty over war duration",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Bitcoin approaching 52-week lows with crypto market cap erasing $2T amid institutional selling",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained break below recent lows would signal Iran premium unwinding",
-      "Watch for BMNR stability as crypto selloff creates broader risk-off undertones despite equity resilience",
-      "Consider taking profits on cyclical positions if Middle East de-escalation continues deflating reflation premium"
+      "Monitor oil price action closely - sustained weakness below recent highs would contradict stagflationary setup",
+      "Watch Treasury yield direction into payrolls - continued decline pressures reflation thesis",
+      "Consider BMNR ladder adjustments if crypto weakness persists as flight-to-quality emerges"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Edges Lower Amid Mixed Middle East Developments \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T23:34:00+00:00",
+      "timeDisplay": "11:34 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260604009152:0/"
+    },
+    {
+      "title": "Bitcoin\u2019s Great Wealth Transfer May Fuel Next Rally, Says CryptoQuant CEO",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T22:30:01+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:30ad33304094b:0-bitcoin-s-great-wealth-transfer-may-fuel-next-rally-says-cryptoquant-ceo/"
+    },
+    {
+      "title": "Jim Cramer Hints Michael Saylor \u201cMurdered Bitcoin\u201d as MicroStrategy Navigates a Sea of FUD",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T22:00:00+00:00",
+      "timeDisplay": "10:00 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:8733ab38f094b:0-jim-cramer-hints-michael-saylor-murdered-bitcoin-as-microstrategy-navigates-a-sea-of-fud/"
+    },
     {
       "title": "U.S. Dollar Ended Flat As Middle East De-escalation Signs Emerge",
       "source": "dpa_afx",
@@ -319,6 +348,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260604005497:0/"
     },
     {
+      "title": "Lebanon-Israel Ceasefire Knocks Crude Oil Prices Lower",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T15:30:30+00:00",
+      "timeDisplay": "3:30 PM",
+      "link": "https://www.tradingview.com/news/barchart:b6981ee02094b:0-lebanon-israel-ceasefire-knocks-crude-oil-prices-lower/"
+    },
+    {
       "title": "Jobless claims, Challenger layoffs, labor costs/productivity: Over to you, May jobs report",
       "source": "reuters",
       "color": "#ff6d00",
@@ -413,22 +450,6 @@
       "timestamp": "2026-06-04T14:31:00+00:00",
       "timeDisplay": "2:31 PM",
       "link": "https://www.tradingview.com/news/macenews:3b6b41f0f094b:0-us-eia-natural-gas-in-storage-up-95-bln-cubic-feet-in-latest-week-from-previous-week-vs-99-bln-markets-expected-as-injection-season-continues/"
-    },
-    {
-      "title": "Bitcoin Slump Is a 'Capital Rotation' to AI, Strategy's Michael Saylor Says \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T14:25:00+00:00",
-      "timeDisplay": "2:25 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260604005022:0/"
-    },
-    {
-      "title": "Bitcoin price hits 200-week trendline amid record ETF outflows and liquidations",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T14:23:11+00:00",
-      "timeDisplay": "2:23 PM",
-      "link": "https://www.tradingview.com/news/invezz:3aa51d90c094b:0-bitcoin-price-hits-200-week-trendline-amid-record-etf-outflows-and-liquidations/"
     },
     {
       "title": "Dollar slips from two-month high amid Iran talks, yen trades near 160",
@@ -596,7 +617,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-06-04T09:20:00+00:00",
       "timeDisplay": "9:20 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260604002119:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260604002120:0/"
     },
     {
       "title": "Ethereum Buying Falls 80% as ETF Outflows Hit a 17-Session Streak",
@@ -629,22 +650,6 @@
       "timestamp": "2026-06-04T07:38:14+00:00",
       "timeDisplay": "7:38 AM",
       "link": "https://www.tradingview.com/news/te_news:556453:0-oil-prices-fall-on-thursday/"
-    },
-    {
-      "title": "Tom Lee Sees Ethereum at $250,000 as AI and Tokenization Reshape Finance",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T07:30:01+00:00",
-      "timeDisplay": "7:30 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:55c2763b0094b:0-tom-lee-sees-ethereum-at-250-000-as-ai-and-tokenization-reshape-finance/"
-    },
-    {
-      "title": "Ethereum Crashes 60% As Analysts Dump ETH And Rotate Into These Altcoins",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T06:08:53+00:00",
-      "timeDisplay": "6:08 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:8b485377d094b:0-ethereum-crashes-60-as-analysts-dump-eth-and-rotate-into-these-altcoins/"
     }
   ]
 }

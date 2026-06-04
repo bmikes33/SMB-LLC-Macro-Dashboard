@@ -1,51 +1,115 @@
 {
-  "lastUpdated": "2026-06-04T18:33:46.907779+00:00",
-  "lastUpdatedDisplay": "Jun 04, 2026 \u2014 06:33 PM UTC",
+  "lastUpdated": "2026-06-04T20:55:10.272704+00:00",
+  "lastUpdatedDisplay": "Jun 04, 2026 \u2014 08:55 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Fed's Schmid signals ongoing concern about persistent inflation above 2% target, emphasizing readiness to react if oil-driven price pressures spread beyond energy to broader goods. Middle East ceasefire hopes are pressuring dollar and bond yields lower, while Bitcoin continues severe selloff toward 52-week lows with crypto market cap erasing $2 trillion.",
+    "macroSummary": "Markets show mixed signals with Treasury yields and oil prices pulling back amid Middle East ceasefire hopes, while Bitcoin crashes 21% and crypto markets lose $2 trillion in market cap. Fed officials remain cautious on rate moves, emphasizing inflation concerns and war-driven oil risks.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Fed rhetoric reinforces stagflationary concerns about persistent inflation and oil impacts, but ceasefire hopes are easing bond yields and dollar strength which contradicts the reflation stress signals.",
+    "regimePressureReason": "Bond yields falling and oil retreating contradict reflation pressures, while Fed hawkish concerns about persistent inflation and geopolitical risks support the thesis.",
     "thresholdWatches": [
       {
-        "indicator": "DXY",
-        "level": "< 100",
-        "signal": "Dollar weakening on ceasefire hopes approaches regime flip threshold"
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Yen touched 160 level, entering BOJ intervention zone that could trigger risk-off"
       }
     ],
     "keySignals": [
       {
-        "signal": "Fed's Schmid highlights inflation still 'too high' after 5 years and warns of reaction if oil blockade spreads to broader goods",
+        "signal": "Treasury yields declining ahead of payrolls data, contradicting reflation bond stress narrative",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Oil futures retreating after 3-session winning streak, easing stagflationary pressure",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "USDJPY touching 160 approaches critical intervention threshold for risk-off catalyst",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Fed's Schmid emphasizes inflation too high and war-driven oil risks requiring potential policy response",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bond yields falling and dollar pressured lower on Middle East ceasefire hopes contradicts reflation stress narrative",
+        "signal": "Mortgage rates declining (30Y to 6.48% from 6.53%) suggests some bond market relief",
         "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin approaching 52-week lows with $2T crypto market cap erasure suggests broad risk-off rather than selective equity rotation",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Mortgage rates declining (30Y from 6.53% to 6.48%) indicates some long-end pressure relief",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil market described as 'on edge' with deal uncertainty maintaining energy price volatility",
-        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely - approaching 100 threshold that would signal dollar regime flip",
-      "Watch for bond yield direction confirmation - current decline challenges long-end stress thesis",
-      "Consider BMNR ladder adjustment if crypto weakness reflects broader risk-off rather than sector rotation"
+      "Monitor USDJPY closely around 160 level for potential BOJ intervention triggering risk-off",
+      "Consider BMNR ladder adjustments as crypto weakness may create better entry points",
+      "Watch tomorrow's payrolls for confirmation of yield decline sustainability"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin fell 21% after Strategy\u2019s debt buyback news\u2014 Is a Terra Luna-style doom loop next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T20:37:58+00:00",
+      "timeDisplay": "8:37 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:2593e5e17094b:0-bitcoin-fell-21-after-strategy-s-debt-buyback-news-is-a-terra-luna-style-doom-loop-next/"
+    },
+    {
+      "title": "Professional investors dumped 52K BTC worth of ETFs in Q1, filings show",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T19:53:33+00:00",
+      "timeDisplay": "7:53 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:2b12909a3094b:0-professional-investors-dumped-52k-btc-worth-of-etfs-in-q1-filings-show/"
+    },
+    {
+      "title": "Treasury Yields Decline Ahead of U.S. Payrolls \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T19:46:00+00:00",
+      "timeDisplay": "7:46 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260604006962:0/"
+    },
+    {
+      "title": "Oil Futures Retreat After 3-Session Winning Streak \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T19:38:00+00:00",
+      "timeDisplay": "7:38 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260604006926:0/"
+    },
+    {
+      "title": "US yields dip after data as oil prices pull back",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-04T19:31:03+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42C11E:0-us-yields-dip-after-data-as-oil-prices-pull-back/"
+    },
+    {
+      "title": "$92 Billion Hedge Fund Founder Drops 5 Hard Truths Crypto Investors Ignore",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T19:30:00+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:213cd31f2094b:0-92-billion-hedge-fund-founder-drops-5-hard-truths-crypto-investors-ignore/"
+    },
+    {
+      "title": "Fed Officials Not Ready To Move Rates Either Way as Iran Uncertainty Continues",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T19:21:00+00:00",
+      "timeDisplay": "7:21 PM",
+      "link": "https://www.tradingview.com/news/macenews:c971512a5094b:0-fed-officials-not-ready-to-move-rates-either-way-as-iran-uncertainty-continues/"
+    },
+    {
+      "title": "Yen touches 160, dollar slips from two-month high amid Iran talks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-04T19:18:55+00:00",
+      "timeDisplay": "7:18 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42C0JV:0-yen-touches-160-dollar-slips-from-two-month-high-amid-iran-talks/"
+    },
     {
       "title": "Gold climbs as Middle East ceasefire hopes pressure dollar, bond yields",
       "source": "reuters",
@@ -247,6 +311,22 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42C0VB:0-jobless-claims-challenger-layoffs-labor-costs-productivity-over-to-you-may-jobs-report/"
     },
     {
+      "title": "Strategy\u2019s Michael Saylor Blames A.I. Stocks For Bitcoin\u2019s Decline",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T15:23:00+00:00",
+      "timeDisplay": "3:23 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8f1ff7c7d094b:0-strategy-s-michael-saylor-blames-a-i-stocks-for-bitcoin-s-decline/"
+    },
+    {
+      "title": "Kalshi Is Building A Prediction Market Terminal For Professional Traders",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-04T15:17:00+00:00",
+      "timeDisplay": "3:17 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:9ace7cade094b:0-kalshi-is-building-a-prediction-market-terminal-for-professional-traders/"
+    },
+    {
       "title": "Bankless Co-Founder Reveals New Crypto Portfolio After Ethereum Sale",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -351,44 +431,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260604004940:0/"
     },
     {
-      "title": "Bitcoin\u2019s $60K Range Seen As Potential Long-Term Accumulation Zone, Analyst Says",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T14:00:11+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:47770aaab094b:0-bitcoin-s-60k-range-seen-as-potential-long-term-accumulation-zone-analyst-says/"
-    },
-    {
-      "title": "\u2018The rally that wasn\u2019t\u2019: Bitcoin slides 14% in one week as ETF outflows, Strategy sale and oil prices hit sentiment",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T13:58:53+00:00",
-      "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/the_block:9dc2750e3094b:0-the-rally-that-wasn-t-bitcoin-slides-14-in-one-week-as-etf-outflows-strategy-sale-and-oil-prices-hit-sentiment/"
-    },
-    {
       "title": "Dollar Could Fall if U.S. Jobless Rate Rises Unexpectedly \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-04T13:55:00+00:00",
       "timeDisplay": "1:55 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260604004815:0/"
-    },
-    {
-      "title": "Standard Chartered\u2019s Kendrick keeps $100,000 Bitcoin call amid crypto turmoil",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T13:42:49+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/invezz:603693c0d094b:0-standard-chartered-s-kendrick-keeps-100-000-bitcoin-call-amid-crypto-turmoil/"
-    },
-    {
-      "title": "NewGen Adds to K25.ai Investment as AI Prediction Market Push Deepens",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T13:41:00+00:00",
-      "timeDisplay": "1:41 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:ff419498d094b:0-newgen-adds-to-k25-ai-investment-as-ai-prediction-market-push-deepens/"
     },
     {
       "title": "Dollar Eases But Hovers Close to 2-Month Highs",
@@ -431,14 +479,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:92032a5b8094b:0-tom-lee-s-bitmine-seeks-300-million-raise-to-buy-more-ethereum/"
     },
     {
-      "title": "Coinbase and Better fund first bitcoin-backed mortgage, plan nationwide rollout soon",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T12:40:00+00:00",
-      "timeDisplay": "12:40 PM",
-      "link": "https://www.tradingview.com/news/the_block:f8cbe8d18094b:0-coinbase-and-better-fund-first-bitcoin-backed-mortgage-plan-nationwide-rollout-soon/"
-    },
-    {
       "title": "US INITIAL CLAIMS FOR JOBLESS BENEFITS: UNADJUSTED INITIAL CLAIMS 187,978, -121; UNADJUSTED INSURED UNEMP RATE TWO WKS AGO 1.1%, UNCHANGED",
       "source": "macenews",
       "color": "#00e5ff",
@@ -477,14 +517,6 @@
       "timestamp": "2026-06-04T12:32:00+00:00",
       "timeDisplay": "12:32 PM",
       "link": "https://www.tradingview.com/news/macenews:3b11853fe094b:0-more-u-s-revised-q1-productivity-business-productivity-0-1-annualised-vs-0-6-previous/"
-    },
-    {
-      "title": "MORE U.S. REVISED Q1 PRODUCTIVITY: MANUFACTURING +3.2% ANNUALISED (VS +3.6% PREVIOUS)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T12:32:00+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/macenews:3b144f22d094b:0-more-u-s-revised-q1-productivity-manufacturing-3-2-annualised-vs-3-6-previous/"
     },
     {
       "title": "Standard Chartered Cuts Ethereum Target 47% as ETH Slips Below $1,800",
@@ -613,38 +645,6 @@
       "timestamp": "2026-06-04T06:08:53+00:00",
       "timeDisplay": "6:08 AM",
       "link": "https://www.tradingview.com/news/coinpedia:8b485377d094b:0-ethereum-crashes-60-as-analysts-dump-eth-and-rotate-into-these-altcoins/"
-    },
-    {
-      "title": "Bitmine eyes dividend-paying preferred shares, echoing Strategy\u2019s playbook",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T05:34:46+00:00",
-      "timeDisplay": "5:34 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:a760b27c1094b:0-bitmine-eyes-dividend-paying-preferred-shares-echoing-strategy-s-playbook/"
-    },
-    {
-      "title": "Crypto Is A \u2018Failed\u2019 Asset Class, Says Renowned Economist",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T05:00:42+00:00",
-      "timeDisplay": "5:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:63fd04be1094b:0-crypto-is-a-failed-asset-class-says-renowned-economist/"
-    },
-    {
-      "title": "BitMine Tests Saylor\u2019s Capital Strategy While Sitting on $8 Billion ETH Loss",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T04:29:02+00:00",
-      "timeDisplay": "4:29 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:286a0eadf094b:0-bitmine-tests-saylor-s-capital-strategy-while-sitting-on-8-billion-eth-loss/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Firm",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-04T02:41:58+00:00",
-      "timeDisplay": "2:41 AM",
-      "link": "https://www.tradingview.com/news/te_news:556320:0-us-10-year-yield-holds-firm/"
     }
   ]
 }

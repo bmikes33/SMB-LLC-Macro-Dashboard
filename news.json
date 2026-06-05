@@ -1,51 +1,80 @@
 {
-  "lastUpdated": "2026-06-05T19:49:32.048237+00:00",
-  "lastUpdatedDisplay": "Jun 05, 2026 \u2014 07:49 PM UTC",
+  "lastUpdated": "2026-06-05T21:22:25.494347+00:00",
+  "lastUpdatedDisplay": "Jun 05, 2026 \u2014 09:22 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Strong US jobs data drove dollar strength and pushed USDJPY through 160, while robust economic indicators lifted GDP growth forecasts. Bitcoin crashed below $60,000 for the first time since Trump's election win, triggering massive ETF outflows and $62 billion in treasury stock losses. Gold fell 3% as the strong employment data cemented expectations for higher interest rates.",
+    "macroSummary": "Strong US jobs data drove dollar strength and pushed USDJPY through 160, while oil fell on stalled Iran talks and weaker demand. Bitcoin crashed below $60,000 for the first time since Trump's election, with crypto ETFs seeing massive outflows and gold declining 3% as robust employment data cemented higher rate expectations.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Strong jobs data and higher rate expectations directly contradict the reflation narrative, while USDJPY breaking through 160 hits a critical BOJ intervention threshold that could trigger risk-off sentiment.",
+    "regimePressureReason": "Multiple invalidation thresholds are being approached or breached, with USDJPY hitting the 160 intervention zone and strong jobs data shifting rate expectations contrary to the reflation thesis.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
         "level": "160",
-        "signal": "Dollar strength after jobs data pushed yen through 160 level, hitting BOJ intervention zone"
+        "signal": "Dollar strength pushed yen through 160 level after strong US jobs data - at BOJ intervention zone"
+      },
+      {
+        "indicator": "Oil (WTI)",
+        "level": "falling",
+        "signal": "Oil falls as Iran talks stall and demand weakens - moving away from stagflation pressure"
       }
     ],
     "keySignals": [
       {
-        "signal": "Strong US jobs data cement bets on higher rates, contradicting reflation thesis of falling rates",
+        "signal": "Strong US NFP data drove dollar advances and cemented higher rate bets, contradicting reflationary dovish expectations",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "USDJPY breaks through 160 threshold, entering BOJ intervention zone that could trigger risk-off",
+        "signal": "USDJPY broke through 160 intervention threshold on dollar strength",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Bitcoin crashes below $60K with $10B ETF outflows, suggesting broad risk-off sentiment building",
+        "signal": "Oil falling on stalled Iran talks and demand weakness reduces stagflation pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold falls 3% on rate outlook, typical response to hawkish pivot rather than reflation",
+        "signal": "Gold tumbled 3% on robust jobs data and higher rate outlook, showing disinflationary pricing",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "NY Fed raises Q2 GDP estimate to 2.7% and Q3 to 2.5% on strong data",
-        "tag": "NEUTRAL"
+        "signal": "Crypto market collapse with Bitcoin below $60k suggests risk-off undercurrents emerging",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY closely for BOJ intervention - any action could trigger broader risk-off cascade",
-      "Consider tightening BMNR put strikes as crypto weakness may accelerate if risk-off takes hold",
-      "Reassess regime classification - strong jobs/higher rates narrative challenges current reflation call"
+      "Monitor USDJPY 160 level for BOJ intervention which could trigger risk-off cascade",
+      "Reassess BMNR ladder positioning given crypto market stress and potential regime shift",
+      "Consider reducing cyclical exposure as strong jobs data may drive more hawkish Fed policy"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Dollar Advances Amid Stronger-Than-Anticipated US NFP Data",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T21:14:43+00:00",
+      "timeDisplay": "9:14 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:56dbc5eedf95e:0-u-s-dollar-advances-amid-stronger-than-anticipated-us-nfp-data/"
+    },
+    {
+      "title": "Hyperliquid Strategies Stays Profitable: Strategy And Bitmine Record Losses Above $10 Billion",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T21:04:00+00:00",
+      "timeDisplay": "9:04 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:9f62139b1094b:0-hyperliquid-strategies-stays-profitable-strategy-and-bitmine-record-losses-above-10-billion/"
+    },
+    {
+      "title": "WTI Falls as Iran Talks Stall and Demand Weakens",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T19:49:53+00:00",
+      "timeDisplay": "7:49 PM",
+      "link": "https://www.tradingview.com/news/te_news:557006:0-wti-falls-as-iran-talks-stall-and-demand-weakens/"
+    },
     {
       "title": "Dollar firms after strong US jobs data, pushes yen through 160 level",
       "source": "reuters",
@@ -279,6 +308,14 @@
       "link": "https://www.tradingview.com/news/cointelegraph:b1b0056e4094b:0-saylor-says-bitcoin-needs-disciplined-expansion-as-analysts-weigh-demand-reset/"
     },
     {
+      "title": "Weekly Wrap: Bitcoin Hits Two-Year Low Amid Relentless Selling",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T16:09:00+00:00",
+      "timeDisplay": "4:09 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:09aba2b3c094b:0-weekly-wrap-bitcoin-hits-two-year-low-amid-relentless-selling/"
+    },
+    {
       "title": "Inside the Fall Behind Bitcoin ETFs",
       "source": "zacks",
       "color": "#00e5ff",
@@ -287,28 +324,12 @@
       "link": "https://www.tradingview.com/news/zacks:21ef11509094b:0-inside-the-fall-behind-bitcoin-etfs/"
     },
     {
-      "title": "Bitcoin Crashes Near $60,000: $62B In Treasuries Erased, Analyst Sees Potential Bottom Ahead",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:57:45+00:00",
-      "timeDisplay": "3:57 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:8ec3357fa094b:0-bitcoin-crashes-near-60-000-62b-in-treasuries-erased-analyst-sees-potential-bottom-ahead/"
-    },
-    {
       "title": "Goldman Sachs' Mueller-Glissman Reportedly Calls Tech Selloff \u2018A Healthy Sign\u2019: \u2018Probably Not A Bad Idea To See A Bit Of Consolidation\u2019",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-06-05T15:50:32+00:00",
       "timeDisplay": "3:50 PM",
       "link": "https://www.tradingview.com/news/stocktwits:0836c9775094b:0-goldman-sachs-mueller-glissman-reportedly-calls-tech-selloff-a-healthy-sign-probably-not-a-bad-idea-to-see-a-bit-of-consolidation/"
-    },
-    {
-      "title": "Bitcoin teases 'seller exhaustion' as BTC price downside reaches $60.3K",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:43:14+00:00",
-      "timeDisplay": "3:43 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:502b92e36094b:0-bitcoin-teases-seller-exhaustion-as-btc-price-downside-reaches-60-3k/"
     },
     {
       "title": "Rainbows and unicorns with a dash of Debbie Downer: A May employment report deep dive",
@@ -629,22 +650,6 @@
       "timestamp": "2026-06-05T12:31:00+00:00",
       "timeDisplay": "12:31 PM",
       "link": "https://www.tradingview.com/news/macenews:ff00c770e094b:0-u-s-may-average-work-week-34-3-hours-vs-34-3-expected/"
-    },
-    {
-      "title": "U.S. MAY MANUFACTURING PAYROLLS +7K (VS +1K EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:36d6b68b8094b:0-u-s-may-manufacturing-payrolls-7k-vs-1k-expected/"
-    },
-    {
-      "title": "Key facts: Ether 17-Day ETF Outflows; BitMine $300M Raise 5% ETH 9.5%",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:13:45+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:5ea3e50e34a1f:0-key-facts-ether-17-day-etf-outflows-bitmine-300m-raise-5-eth-9-5/"
     }
   ]
 }

@@ -1,56 +1,88 @@
 {
-  "lastUpdated": "2026-06-05T21:22:25.494347+00:00",
-  "lastUpdatedDisplay": "Jun 05, 2026 \u2014 09:22 PM UTC",
+  "lastUpdated": "2026-06-05T22:40:45.605513+00:00",
+  "lastUpdatedDisplay": "Jun 05, 2026 \u2014 10:40 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Strong US jobs data drove dollar strength and pushed USDJPY through 160, while oil fell on stalled Iran talks and weaker demand. Bitcoin crashed below $60,000 for the first time since Trump's election, with crypto ETFs seeing massive outflows and gold declining 3% as robust employment data cemented higher rate expectations.",
+    "macroSummary": "Bitcoin crashed below $60,000 for the first time since Trump's election win, triggering massive crypto liquidations and ETF outflows exceeding $10 billion. Strong US jobs data drove dollar strength past 160 yen while pushing gold down 3% on higher rate expectations. Oil declined as Iran conflict talks stalled but demand weakened, countering geopolitical support.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Multiple invalidation thresholds are being approached or breached, with USDJPY hitting the 160 intervention zone and strong jobs data shifting rate expectations contrary to the reflation thesis.",
+    "regimePressureReason": "The strong jobs data is driving dollar strength past the 160 yen threshold and pushing rate expectations higher, directly contradicting the reflation setup while oil is falling despite Iran tensions.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
-        "level": "160",
-        "signal": "Dollar strength pushed yen through 160 level after strong US jobs data - at BOJ intervention zone"
+        "level": "> 160",
+        "signal": "Dollar firmed after strong jobs data, pushing yen through 160 level per Reuters"
       },
       {
-        "indicator": "Oil (WTI)",
-        "level": "falling",
-        "signal": "Oil falls as Iran talks stall and demand weakens - moving away from stagflation pressure"
+        "indicator": "DXY",
+        "level": "approaching 100",
+        "signal": "Dollar advances amid stronger-than-anticipated NFP data suggesting regime flip risk"
       }
     ],
     "keySignals": [
       {
-        "signal": "Strong US NFP data drove dollar advances and cemented higher rate bets, contradicting reflationary dovish expectations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "USDJPY broke through 160 intervention threshold on dollar strength",
+        "signal": "USDJPY broke through 160 on strong NFP data, hitting BOJ intervention zone",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil falling on stalled Iran talks and demand weakness reduces stagflation pressure",
+        "signal": "Oil falling despite Iran talks stalling as demand weakens, contradicting stagflation narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold tumbled 3% on robust jobs data and higher rate outlook, showing disinflationary pricing",
+        "signal": "Gold tumbled 3% on robust jobs data cementing higher rate bets, opposite of reflation trade",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crypto market collapse with Bitcoin below $60k suggests risk-off undercurrents emerging",
+        "signal": "Strong NFP data boosting GDP nowcasts to 2.7% Q2 and 2.5% Q3, supporting growth over stagflation",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Crypto market collapse with Bitcoin below $60K and $10B+ ETF outflows signals broader risk-off",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY 160 level for BOJ intervention which could trigger risk-off cascade",
-      "Reassess BMNR ladder positioning given crypto market stress and potential regime shift",
-      "Consider reducing cyclical exposure as strong jobs data may drive more hawkish Fed policy"
+      "Monitor USDJPY intervention risk - BOJ action could trigger broader risk-off cascading to equities",
+      "Reassess BMNR ladder strikes given crypto collapse - may need wider spreads or pause new positions",
+      "Consider reducing cyclical exposure if dollar strength continues - contradicts reflation thesis"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin\u2019s Crash Has Broken Below A 4-Month Support, But There\u2019s Still One More Play Left",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T22:30:15+00:00",
+      "timeDisplay": "10:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:f46959c40094b:0-bitcoin-s-crash-has-broken-below-a-4-month-support-but-there-s-still-one-more-play-left/"
+    },
+    {
+      "title": "Chart of the Day: Bitcoin Falls Back to the Line That Has Marked Every Cycle Bottom",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T22:29:29+00:00",
+      "timeDisplay": "10:29 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:c66fdbac2094b:0/"
+    },
+    {
+      "title": "ETH falls to 13-month low on Zcash bug news and Bitcoin drop to sub-$60K: Is $1.4K next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T22:18:29+00:00",
+      "timeDisplay": "10:18 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:5e1d7bd9b094b:0-eth-falls-to-13-month-low-on-zcash-bug-news-and-bitcoin-drop-to-sub-60k-is-1-4k-next/"
+    },
+    {
+      "title": "Bitcoin is suffering from an 'attention' deficit, as momentum traders have moved on",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T21:58:00+00:00",
+      "timeDisplay": "9:58 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260605008541:0/"
+    },
     {
       "title": "U.S. Dollar Advances Amid Stronger-Than-Anticipated US NFP Data",
       "source": "dpa_afx",
@@ -66,6 +98,14 @@
       "timestamp": "2026-06-05T21:04:00+00:00",
       "timeDisplay": "9:04 PM",
       "link": "https://www.tradingview.com/news/newsbtc:9f62139b1094b:0-hyperliquid-strategies-stays-profitable-strategy-and-bitmine-record-losses-above-10-billion/"
+    },
+    {
+      "title": "After Cardano\u2019s Meltdown, Could XRP and Ethereum Be Next?",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T20:53:36+00:00",
+      "timeDisplay": "8:53 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:900d334d1094b:0-after-cardano-s-meltdown-could-xrp-and-ethereum-be-next/"
     },
     {
       "title": "WTI Falls as Iran Talks Stall and Demand Weakens",
@@ -300,28 +340,12 @@
       "link": "https://www.tradingview.com/news/beincrypto:649fddedf094b:0-bitcoin-falls-below-60-000-on-binance-and-coinbase-for-first-time-since-2024/"
     },
     {
-      "title": "Saylor says Bitcoin needs \u2018disciplined expansion\u2019 as analysts weigh demand reset",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:09:40+00:00",
-      "timeDisplay": "4:09 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b1b0056e4094b:0-saylor-says-bitcoin-needs-disciplined-expansion-as-analysts-weigh-demand-reset/"
-    },
-    {
       "title": "Weekly Wrap: Bitcoin Hits Two-Year Low Amid Relentless Selling",
       "source": "cryptoprowl",
       "color": "#00e5ff",
       "timestamp": "2026-06-05T16:09:00+00:00",
       "timeDisplay": "4:09 PM",
       "link": "https://www.tradingview.com/news/cryptoprowl:09aba2b3c094b:0-weekly-wrap-bitcoin-hits-two-year-low-amid-relentless-selling/"
-    },
-    {
-      "title": "Inside the Fall Behind Bitcoin ETFs",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:00:00+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/zacks:21ef11509094b:0-inside-the-fall-behind-bitcoin-etfs/"
     },
     {
       "title": "Goldman Sachs' Mueller-Glissman Reportedly Calls Tech Selloff \u2018A Healthy Sign\u2019: \u2018Probably Not A Bad Idea To See A Bit Of Consolidation\u2019",
@@ -370,6 +394,14 @@
       "timestamp": "2026-06-05T14:51:15+00:00",
       "timeDisplay": "2:51 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0IN:0-hot-jobs-data-fuels-fed-rate-hike-bets-lifts-yields/"
+    },
+    {
+      "title": "Dollar Jumps on US Labor Market Strength",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T14:35:27+00:00",
+      "timeDisplay": "2:35 PM",
+      "link": "https://www.tradingview.com/news/barchart:2e8f3b47b094b:0-dollar-jumps-on-us-labor-market-strength/"
     },
     {
       "title": "Gold falls over 2% as robust US jobs data cements bets on higher rates",
@@ -618,38 +650,6 @@
       "timestamp": "2026-06-05T12:32:00+00:00",
       "timeDisplay": "12:32 PM",
       "link": "https://www.tradingview.com/news/macenews:23d552d08094b:0-more-u-s-may-jobs-construction-17k/"
-    },
-    {
-      "title": "MARCH PAYROLLS REVISED UP by 29K TO +214K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:71bfb7ca5094b:0-march-payrolls-revised-up-by-29k-to-214k/"
-    },
-    {
-      "title": "U.S. MAY AVERAGE HOURLY EARNINGS +0.3% M/M (VS +0.3% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:f9dfd6444094b:0-u-s-may-average-hourly-earnings-0-3-m-m-vs-0-3-expected/"
-    },
-    {
-      "title": "U.S. MAY AVERAGE HOURLY EARNINGS +3.4% M/M (VS +3.4% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:89ada56a1094b:0-u-s-may-average-hourly-earnings-3-4-m-m-vs-3-4-expected/"
-    },
-    {
-      "title": "U.S. MAY AVERAGE WORK WEEK 34.3 HOURS (VS 34.3 EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:ff00c770e094b:0-u-s-may-average-work-week-34-3-hours-vs-34-3-expected/"
     }
   ]
 }

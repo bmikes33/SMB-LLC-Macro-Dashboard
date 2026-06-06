@@ -1,71 +1,271 @@
 {
-  "lastUpdated": "2026-06-06T00:03:45.586948+00:00",
-  "lastUpdatedDisplay": "Jun 06, 2026 \u2014 12:03 AM UTC",
-  "articleCount": 75,
+  "lastUpdated": "2026-06-06T18:04:06.499405+00:00",
+  "lastUpdatedDisplay": "Jun 06, 2026 \u2014 06:04 PM UTC",
+  "articleCount": 41,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Strong US jobs data drove dollar strength and pushed USD/JPY through 160, while oil fell on Iran talks progress and demand concerns. Bitcoin crashed below $60,000 with massive liquidations, and gold tumbled 3% as robust employment data cemented higher rate expectations.",
-    "regimePressure": "CHALLENGING",
-    "regimePressureReason": "Strong jobs data is pushing rates higher and strengthening the dollar toward key thresholds, while oil weakness contradicts the Iran war premium embedded in the reflation call.",
+    "macroSummary": "Crypto markets are experiencing significant selling pressure with Bitcoin falling below $60K and Ethereum hitting 13-month lows, driven by massive liquidations and large wallet movements from Ethereum co-founder Joseph Lubin. U.S. dollar is strengthening after strong NFP data and pushing USDJPY through 160, while oil prices are falling as Iran talks stall and demand weakens.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Strong dollar surge past critical 160 USDJPY level and falling oil prices directly contradict the reflation setup, while crypto weakness suggests broader risk-off dynamics emerging.",
     "thresholdWatches": [
       {
         "indicator": "USDJPY",
-        "level": "160",
-        "signal": "Reuters reports USD/JPY pushed through 160 level after strong jobs data, entering BOJ intervention zone"
+        "level": "> 160",
+        "signal": "Dollar firms after strong jobs data, pushes yen through 160 intervention zone"
       },
       {
         "indicator": "DXY",
         "level": "approaching 100",
-        "signal": "Dollar advancing on stronger-than-anticipated NFP data, moving toward regime flip threshold"
+        "signal": "U.S. Dollar advances amid stronger-than-anticipated NFP data"
       }
     ],
     "keySignals": [
       {
-        "signal": "USD/JPY breached 160 intervention zone after strong jobs data, creating Risk-Off catalyst potential",
+        "signal": "USDJPY breaks through 160 intervention zone on strong dollar rally",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar strength accelerating toward 100 level on robust NFP, approaching regime flip threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "WTI falling as Iran talks progress and demand weakens, contradicting embedded war premium",
+        "signal": "Oil prices falling as Iran talks stall and demand weakens, contrary to sustained war premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold tumbled 3% on rate outlook from strong jobs data, confirming hawkish monetary conditions",
+        "signal": "Dollar strengthening significantly after strong NFP data, approaching regime flip territory",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin collapse below $60K with massive liquidations suggests broader risk asset stress",
+        "signal": "Crypto liquidations and institutional selling pressure indicate broader risk-off sentiment",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin holding above major support despite tech rout shows some resilience",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor USDJPY intervention risk - BOJ action could trigger yen carry unwind and broader Risk-Off",
-      "Watch DXY approach to 100 - dollar regime flip would invalidate reflation thesis",
-      "Reassess BMNR ladder timing given crypto liquidation cascade and risk asset stress"
+      "Monitor BMNR ladder closely as ETH breaks 13-month lows with co-founder selling pressure",
+      "Prepare for potential regime flip if DXY continues toward 100 and USDJPY intervention occurs",
+      "Consider reducing cyclical exposure as dollar strength and falling oil challenge reflation thesis"
     ]
   },
   "articles": [
     {
-      "title": "Bitcoin\u2019s Crash Has Broken Below A 4-Month Support, But There\u2019s Still One More Play Left",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T22:30:15+00:00",
-      "timeDisplay": "10:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:f46959c40094b:0-bitcoin-s-crash-has-broken-below-a-4-month-support-but-there-s-still-one-more-play-left/"
-    },
-    {
-      "title": "Chart of the Day: Bitcoin Falls Back to the Line That Has Marked Every Cycle Bottom",
+      "title": "Michael Saylor Says AI Boom Is Hurting Bitcoin Price as BTC Risks Breaking Key Support",
       "source": "bravenewcoin",
       "color": "#00e5ff",
-      "timestamp": "2026-06-05T22:29:29+00:00",
-      "timeDisplay": "10:29 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:c66fdbac2094b:0/"
+      "timestamp": "2026-06-06T17:21:48+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:162a30006094b:0/"
+    },
+    {
+      "title": "Wallet linked to Ethereum co-founder Joseph Lubin moves 110,000 ETH to defend $259M DAI debt position",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T17:21:19+00:00",
+      "timeDisplay": "5:21 PM",
+      "link": "https://www.tradingview.com/news/the_block:9e785c142094b:0-wallet-linked-to-ethereum-co-founder-joseph-lubin-moves-110-000-eth-to-defend-259m-dai-debt-position/"
+    },
+    {
+      "title": "Wall Street Veteran Jordi Visser Says Bitcoin Charts Show 'No Hope' Yet - He's Still Buying The Dip",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T16:31:17+00:00",
+      "timeDisplay": "4:31 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:22ff3b62f094b:0-wall-street-veteran-jordi-visser-says-bitcoin-charts-show-no-hope-yet-he-s-still-buying-the-dip/"
+    },
+    {
+      "title": "Bitcoin most oversold since 2020 crash: Can BTC rebound to $70K next?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T16:06:54+00:00",
+      "timeDisplay": "4:06 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:affd7033e094b:0-bitcoin-most-oversold-since-2020-crash-can-btc-rebound-to-70k-next/"
+    },
+    {
+      "title": "Bitcoin Price Under Bearish Pressure For 48 Straight Days On Binance",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T15:30:58+00:00",
+      "timeDisplay": "3:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:280252607094b:0-bitcoin-price-under-bearish-pressure-for-48-straight-days-on-binance/"
+    },
+    {
+      "title": "Michael Saylor Fires Back At Jim Cramer\u2019s \u2018Murder\u2019 Jab While Strategy Sits At $12 Billion Paper Loss",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T15:24:01+00:00",
+      "timeDisplay": "3:24 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:23e343ef6094b:0-michael-saylor-fires-back-at-jim-cramer-s-murder-jab-while-strategy-sits-at-12-billion-paper-loss/"
+    },
+    {
+      "title": "Strive's CEO Matt Cole Says Strive\u2019s 13% Bitcoin-Backed Yield Product Can Survive A Bear Market",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T13:07:55+00:00",
+      "timeDisplay": "1:07 PM",
+      "link": "https://www.tradingview.com/news/stocktwits:dc8c34eb2094b:0-strive-s-ceo-matt-cole-says-strive-s-13-bitcoin-backed-yield-product-can-survive-a-bear-market/"
+    },
+    {
+      "title": "Ethereum Price is Crashing:But Smart Money Is Making a Big Bet",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T12:29:59+00:00",
+      "timeDisplay": "12:29 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:3f464ea05094b:0-ethereum-price-is-crashing-but-smart-money-is-making-a-big-bet/"
+    },
+    {
+      "title": "Key facts: Bitcoin ~$60K; 898M\u20131.101B liquidation risk; MSTR sells BTC",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T12:13:21+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:7ad086b913a0b:0-key-facts-bitcoin-60k-898m-1-101b-liquidation-risk-mstr-sells-btc/"
+    },
+    {
+      "title": "Key facts: Mass ETH Liquidations; Russia Draft Law Allows ETH BTC USDT",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T12:13:21+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:7eeca98d06aff:0-key-facts-mass-eth-liquidations-russia-draft-law-allows-eth-btc-usdt/"
+    },
+    {
+      "title": "Crypto News: Crypto Tax Clarity Is Coming \u2014 Seven Draft Bills Head Into Tuesday's House Hearing as Illinois Moves to Tax Every Transaction",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T12:12:38+00:00",
+      "timeDisplay": "12:12 PM",
+      "link": "https://www.tradingview.com/news/binance_news:ab3204067094b:0-crypto-news-crypto-tax-clarity-is-coming-seven-draft-bills-head-into-tuesday-s-house-hearing-as-illinois-moves-to-tax-every-transaction/"
+    },
+    {
+      "title": "Bitcoin Is The 'Last Functioning Smoke Alarm Of Liquidity,' Says Macro Analyst Luke Gromen",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T11:50:58+00:00",
+      "timeDisplay": "11:50 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:787692fa0094b:0-bitcoin-is-the-last-functioning-smoke-alarm-of-liquidity-says-macro-analyst-luke-gromen/"
+    },
+    {
+      "title": "Joseph Lubin\u2019s $122 Million Move Sparks Sell-Off Fears for Ethereum",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T10:49:14+00:00",
+      "timeDisplay": "10:49 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:b2a32c582094b:0-joseph-lubin-s-122-million-move-sparks-sell-off-fears-for-ethereum/"
+    },
+    {
+      "title": "Analyst Who Predicted the Bitcoin Crash Says Price Could Reach $40,000, Here\u2019s When",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T09:30:53+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:3b7578eb6094b:0-analyst-who-predicted-the-bitcoin-crash-says-price-could-reach-40-000-here-s-when/"
+    },
+    {
+      "title": "Bitcoin Defies Flash Crash! BTC holds $60K Despite a Massive Nasdaq Tech Rout and Middle East Escalation. Are Maxis Right to Buy the Dip?",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T09:30:07+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/binance_news:c0e8e69b0094b:0-bitcoin-defies-flash-crash-btc-holds-60k-despite-a-massive-nasdaq-tech-rout-and-middle-east-escalation-are-maxis-right-to-buy-the-dip/"
+    },
+    {
+      "title": "Hyperliquid Whale Positions Total $3.95 Billion, Coinglass Data Show",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T07:43:45+00:00",
+      "timeDisplay": "7:43 AM",
+      "link": "https://www.tradingview.com/news/binance_news:99904c39b094b:0-hyperliquid-whale-positions-total-3-95-billion-coinglass-data-show/"
+    },
+    {
+      "title": "Bitcoin (BTC) Surpasses 61,000 USDT with 2.36% Decrease in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T07:34:08+00:00",
+      "timeDisplay": "7:34 AM",
+      "link": "https://www.tradingview.com/news/binance_news:e9b712335094b:0-bitcoin-btc-surpasses-61-000-usdt-with-2-36-decrease-in-24-hours/"
+    },
+    {
+      "title": "Ethereum Co-founder Linked Wallet Move 80,001 ETH, Is he Dumping ETH?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T06:56:05+00:00",
+      "timeDisplay": "6:56 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:ff51793ed094b:0-ethereum-co-founder-linked-wallet-move-80-001-eth-is-he-dumping-eth/"
+    },
+    {
+      "title": "When Is Crypto Going Back Up? 7 Signals Traders are Watching Right Now\u00a0",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T06:43:02+00:00",
+      "timeDisplay": "6:43 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:25424628d094b:0-when-is-crypto-going-back-up-7-signals-traders-are-watching-right-now/"
+    },
+    {
+      "title": "Russia Central Bank To Limit Retail Crypto Investors To Bitcoin, Ethereum, & USDT",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T06:12:50+00:00",
+      "timeDisplay": "6:12 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:437f1011e094b:0-russia-central-bank-to-limit-retail-crypto-investors-to-bitcoin-ethereum-usdt/"
+    },
+    {
+      "title": "Why Did Bitcoin Crash? On-Chain Data Points To One Missing Ingredient",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T05:00:15+00:00",
+      "timeDisplay": "5:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:648b38e51094b:0-why-did-bitcoin-crash-on-chain-data-points-to-one-missing-ingredient/"
+    },
+    {
+      "title": "Bitcoin Has 125 Days Until the Real Bottom, Charts Warn",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T04:59:04+00:00",
+      "timeDisplay": "4:59 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:8ecae884c094b:0-bitcoin-has-125-days-until-the-real-bottom-charts-warn/"
+    },
+    {
+      "title": "Bitcoin (BTC) Drops Below 60,000 USDT with a 4.25% Decrease in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T04:20:16+00:00",
+      "timeDisplay": "4:20 AM",
+      "link": "https://www.tradingview.com/news/binance_news:181ee18ba094b:0-bitcoin-btc-drops-below-60-000-usdt-with-a-4-25-decrease-in-24-hours/"
+    },
+    {
+      "title": "Bitcoin Repeating 2022 Bear Market? How the Next 6 Months Could Play Out\u201d",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T03:57:44+00:00",
+      "timeDisplay": "3:57 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:48ceea311094b:0-bitcoin-repeating-2022-bear-market-how-the-next-6-months-could-play-out/"
+    },
+    {
+      "title": "Veteran Analyst Eyes $53,000 Bitcoin As Final Cycle Stage Begins",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-06T02:00:24+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:6a2b391c7094b:0-veteran-analyst-eyes-53-000-bitcoin-as-final-cycle-stage-begins/"
+    },
+    {
+      "title": "Ethereum(ETH) Surpasses 1,600 USDT with a Narrowed 8.69% Decrease in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T22:39:07+00:00",
+      "timeDisplay": "10:39 PM",
+      "link": "https://www.tradingview.com/news/binance_news:7cf764621094b:0-ethereum-eth-surpasses-1-600-usdt-with-a-narrowed-8-69-decrease-in-24-hours/"
+    },
+    {
+      "title": "[LIVE] Stock Market, Gold Price, and Crypto Market Crash",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T22:36:00+00:00",
+      "timeDisplay": "10:36 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:b9b6d4215094b:0-live-stock-market-gold-price-and-crypto-market-crash/"
     },
     {
       "title": "ETH falls to 13-month low on Zcash bug news and Bitcoin drop to sub-$60K: Is $1.4K next?",
@@ -74,14 +274,6 @@
       "timestamp": "2026-06-05T22:18:29+00:00",
       "timeDisplay": "10:18 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:5e1d7bd9b094b:0-eth-falls-to-13-month-low-on-zcash-bug-news-and-bitcoin-drop-to-sub-60k-is-1-4k-next/"
-    },
-    {
-      "title": "Bitcoin is suffering from an 'attention' deficit, as momentum traders have moved on",
-      "source": "market-watch",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T21:58:00+00:00",
-      "timeDisplay": "9:58 PM",
-      "link": "https://www.tradingview.com/news/DJN_SN20260605008541:0/"
     },
     {
       "title": "U.S. Dollar Advances Amid Stronger-Than-Anticipated US NFP Data",
@@ -148,6 +340,14 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260605006179:0/"
     },
     {
+      "title": "Dollar Soars on Fed Rate Hike Expectations",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-05T19:31:07+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/barchart:390f8e97b094b:0-dollar-soars-on-fed-rate-hike-expectations/"
+    },
+    {
       "title": "CFTC Commitments: Comex Gold Futures - Jun 05",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -156,20 +356,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260605006139:0/"
     },
     {
-      "title": "Bitcoin Critic Peter Schiff Predicts USDT Will Eclipse BTC",
-      "source": "newsbtc",
+      "title": "Iran Peace Hopes and Weak China Oil Demand Hammers Crude Prices",
+      "source": "barchart",
       "color": "#00e5ff",
-      "timestamp": "2026-06-05T19:30:42+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:603f75d2d094b:0-bitcoin-critic-peter-schiff-predicts-usdt-will-eclipse-btc/"
-    },
-    {
-      "title": "Bitcoin bears face $2.6B trap as BTC funding rate drops: Is a short squeeze brewing?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T19:28:53+00:00",
-      "timeDisplay": "7:28 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:bc7fc00dc094b:0-bitcoin-bears-face-2-6b-trap-as-btc-funding-rate-drops-is-a-short-squeeze-brewing/"
+      "timestamp": "2026-06-05T19:14:00+00:00",
+      "timeDisplay": "7:14 PM",
+      "link": "https://www.tradingview.com/news/barchart:544594132094b:0-iran-peace-hopes-and-weak-china-oil-demand-hammers-crude-prices/"
     },
     {
       "title": "Oil Falls As Market Holds Out Hope for End to Conflict \u2014 Market Talk",
@@ -180,476 +372,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260605005987:0/"
     },
     {
-      "title": "Investors Flee Bitcoin ETFs as Crypto Continues to Crumble \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T18:41:00+00:00",
-      "timeDisplay": "6:41 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605005882:0/"
-    },
-    {
-      "title": "Cryptos Could Be Casualties of SpaceX IPO as Bitcoin Hits Lowest Price Since 2024 \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T18:21:00+00:00",
-      "timeDisplay": "6:21 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605002340:0/"
-    },
-    {
-      "title": "Gold falls about 3% as robust US jobs data cements bets on higher rates",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T18:02:57+00:00",
-      "timeDisplay": "6:02 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0P5:0-gold-falls-about-3-as-robust-us-jobs-data-cements-bets-on-higher-rates/"
-    },
-    {
-      "title": "Are Institutions Crashing The Bitcoin Price On Purpose? Here\u2019s What People Are Saying",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T18:00:16+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:1734d21be094b:0-are-institutions-crashing-the-bitcoin-price-on-purpose-here-s-what-people-are-saying/"
-    },
-    {
-      "title": "Gold and Silver Prices Tumble on Interest Rate Outlook \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:54:00+00:00",
-      "timeDisplay": "5:54 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605005718:0/"
-    },
-    {
-      "title": "Why Peter Schiff Says Michael Saylor Is Responsible for Both Bitcoin\u2019s Rise and Crash",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:30:23+00:00",
-      "timeDisplay": "5:30 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:9dae55b8f094b:0-why-peter-schiff-says-michael-saylor-is-responsible-for-both-bitcoin-s-rise-and-crash/"
-    },
-    {
-      "title": "US NY FED STAFF NOWCAST ESTIMATES US Q3 GDP GROWTH RATE AT 2.5%, UP FROM 2.4% PREVIOUS ESTIMATE, AFTER LATEST ISM MANUFACTURING, NONFARM PAYROLLS DATA",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:17:00+00:00",
-      "timeDisplay": "5:17 PM",
-      "link": "https://www.tradingview.com/news/macenews:dcd47c114094b:0-us-ny-fed-staff-nowcast-estimates-us-q3-gdp-growth-rate-at-2-5-up-from-2-4-previous-estimate-after-latest-ism-manufacturing-nonfarm-payrolls-data/"
-    },
-    {
-      "title": "US NY FED STAFF NOWCAST ESTIMATES US Q2 GDP GROWTH RATE AT 2.7%, UP FROM 2.5% PREVIOUS ESTIMATE, AFTER LATEST ISM MANUFACTURING, NONFARM PAYROLLS DATA",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:16:00+00:00",
-      "timeDisplay": "5:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:b0444ad38094b:0-us-ny-fed-staff-nowcast-estimates-us-q2-gdp-growth-rate-at-2-7-up-from-2-5-previous-estimate-after-latest-ism-manufacturing-nonfarm-payrolls-data/"
-    },
-    {
-      "title": "Bitcoin Treasury Stocks Erase $62 Billion as Crypto Trade Unwinds",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:14:22+00:00",
-      "timeDisplay": "5:14 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:bcd95fbdd094b:0-bitcoin-treasury-stocks-erase-62-billion-as-crypto-trade-unwinds/"
-    },
-    {
-      "title": "Bitcoin slid below $60,000: why is the crypto market crashing?",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:05:22+00:00",
-      "timeDisplay": "5:05 PM",
-      "link": "https://www.tradingview.com/news/invezz:9151545b7094b:0-bitcoin-slid-below-60-000-why-is-the-crypto-market-crashing/"
-    },
-    {
-      "title": "Crypto Biz: Nobody told Saylor \u2018never sell\u2019",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:04:07+00:00",
-      "timeDisplay": "5:04 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:d18bf17e6094b:0-crypto-biz-nobody-told-saylor-never-sell/"
-    },
-    {
-      "title": "US BAKER HUGHES OIL & GAS RIGS 563 IN LATEST WEEK, UP 1 RIG FROM LAST WEEK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:01:00+00:00",
-      "timeDisplay": "5:01 PM",
-      "link": "https://www.tradingview.com/news/macenews:458804a6d094b:0-us-baker-hughes-oil-gas-rigs-563-in-latest-week-up-1-rig-from-last-week/"
-    },
-    {
-      "title": "Crypto Spot Volume Hits 2.5-Year Low as the Market Quietly Changes Shape",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T17:00:00+00:00",
-      "timeDisplay": "5:00 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:60459e3d7094b:0-crypto-spot-volume-hits-2-5-year-low-as-the-market-quietly-changes-shape/"
-    },
-    {
-      "title": "Crypto Markets Are Crashing: Is MicroStrategy\u2019s 32 BTC Sale the Catalyst Behind a New Bear Market Narrative?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:53:47+00:00",
-      "timeDisplay": "4:53 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:fe7adccd4094b:0-crypto-markets-are-crashing-is-microstrategy-s-32-btc-sale-the-catalyst-behind-a-new-bear-market-narrative/"
-    },
-    {
-      "title": "Ethereum Liquidation Risk Mounts as $547 Million in DeFi Positions Near Critical Levels",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:52:03+00:00",
-      "timeDisplay": "4:52 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:326de2a98094b:0-ethereum-liquidation-risk-mounts-as-547-million-in-defi-positions-near-critical-levels/"
-    },
-    {
-      "title": "Bitcoin Falls Below $60,000 \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:45:00+00:00",
-      "timeDisplay": "4:45 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605005450:0/"
-    },
-    {
-      "title": "Bitcoin falls below $60,000 for first time since 2024 Donald Trump win",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:40:41+00:00",
-      "timeDisplay": "4:40 PM",
-      "link": "https://www.tradingview.com/news/moneycontrol:e80f2d995094b:0-bitcoin-falls-below-60-000-for-first-time-since-2024-donald-trump-win/"
-    },
-    {
-      "title": "Bitcoin Whales Return To Binance As Selloff Echoes February Panic",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:30:31+00:00",
-      "timeDisplay": "4:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:740e8df20094b:0-bitcoin-whales-return-to-binance-as-selloff-echoes-february-panic/"
-    },
-    {
-      "title": "Crude Oil and Brazilian Real Weakness Undercuts Sugar Prices",
+      "title": "Sugar Prices Slide as Crude Oil and the Brazilian Real Fall",
       "source": "barchart",
       "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:23:34+00:00",
-      "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/barchart:66b757665094b:0-crude-oil-and-brazilian-real-weakness-undercuts-sugar-prices/"
-    },
-    {
-      "title": "Bitcoin ETF Outflows Trigger $10 Billion Shock as BTC Tests Critical $60K Support",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:14:09+00:00",
-      "timeDisplay": "4:14 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:955d19295094b:0-bitcoin-etf-outflows-trigger-10-billion-shock-as-btc-tests-critical-60k-support/"
-    },
-    {
-      "title": "Bitcoin Falls Below $60,000 on Binance and Coinbase for First Time Since 2024",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:10:48+00:00",
-      "timeDisplay": "4:10 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:649fddedf094b:0-bitcoin-falls-below-60-000-on-binance-and-coinbase-for-first-time-since-2024/"
-    },
-    {
-      "title": "Weekly Wrap: Bitcoin Hits Two-Year Low Amid Relentless Selling",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T16:09:00+00:00",
-      "timeDisplay": "4:09 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:09aba2b3c094b:0-weekly-wrap-bitcoin-hits-two-year-low-amid-relentless-selling/"
-    },
-    {
-      "title": "Goldman Sachs' Mueller-Glissman Reportedly Calls Tech Selloff \u2018A Healthy Sign\u2019: \u2018Probably Not A Bad Idea To See A Bit Of Consolidation\u2019",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:50:32+00:00",
-      "timeDisplay": "3:50 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:0836c9775094b:0-goldman-sachs-mueller-glissman-reportedly-calls-tech-selloff-a-healthy-sign-probably-not-a-bad-idea-to-see-a-bit-of-consolidation/"
-    },
-    {
-      "title": "Crude Prices Fall on Iran Peace Hopes and Weak China Oil Demand",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:35:42+00:00",
-      "timeDisplay": "3:35 PM",
-      "link": "https://www.tradingview.com/news/barchart:195c1f8e0094b:0-crude-prices-fall-on-iran-peace-hopes-and-weak-china-oil-demand/"
-    },
-    {
-      "title": "Rainbows and unicorns with a dash of Debbie Downer: A May employment report deep dive",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T15:32:42+00:00",
-      "timeDisplay": "3:32 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42D0TP:0-rainbows-and-unicorns-with-a-dash-of-debbie-downer-a-may-employment-report-deep-dive/"
-    },
-    {
-      "title": "Tom Lee\u2019s BitMine Prices 9.5% Preferred Shares to Fund Ethereum Strategy",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:29:00+00:00",
-      "timeDisplay": "3:29 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:efc444e41094b:0-tom-lee-s-bitmine-prices-9-5-preferred-shares-to-fund-ethereum-strategy/"
-    },
-    {
-      "title": "Zcash Tumbles After Exploit Found \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T15:16:00+00:00",
-      "timeDisplay": "3:16 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605004776:0/"
-    },
-    {
-      "title": "Why are Bitcoin, Ethereum and XRP Prices Crashing Today?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:52:20+00:00",
-      "timeDisplay": "2:52 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:39d23e5c6094b:0-why-are-bitcoin-ethereum-and-xrp-prices-crashing-today/"
-    },
-    {
-      "title": "Hot jobs data fuels Fed rate hike bets, lifts yields",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T14:51:15+00:00",
-      "timeDisplay": "2:51 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0IN:0-hot-jobs-data-fuels-fed-rate-hike-bets-lifts-yields/"
-    },
-    {
-      "title": "Dollar Jumps on US Labor Market Strength",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:35:27+00:00",
-      "timeDisplay": "2:35 PM",
-      "link": "https://www.tradingview.com/news/barchart:2e8f3b47b094b:0-dollar-jumps-on-us-labor-market-strength/"
-    },
-    {
-      "title": "Gold falls over 2% as robust US jobs data cements bets on higher rates",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T14:34:03+00:00",
-      "timeDisplay": "2:34 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0K0:0-gold-falls-over-2-as-robust-us-jobs-data-cements-bets-on-higher-rates/"
-    },
-    {
-      "title": "Oil Falls, But Heads for Weekly Gain",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:32:32+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/te_news:556954:0-oil-falls-but-heads-for-weekly-gain/"
-    },
-    {
-      "title": "FED'S HAMMACK LINKED-IN POST: A SHIFT IN INFLATION EXPECTATIONS TOWARD HIGHER INFLATION WOULD WARRANT DECISIVE ACTION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:27:00+00:00",
-      "timeDisplay": "2:27 PM",
-      "link": "https://www.tradingview.com/news/macenews:81f7d3650094b:0-fed-s-hammack-linked-in-post-a-shift-in-inflation-expectations-toward-higher-inflation-would-warrant-decisive-action/"
-    },
-    {
-      "title": "FED'S HAMMACK: STARTING TO HEAR PEOPLE IN DISTRICT SAY THEY DON'T EXPECT INFLATION TO DECLINE SOON; SHIFT IN INFLATION EXPECTATIONS WOULD BE BAD",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:26:00+00:00",
-      "timeDisplay": "2:26 PM",
-      "link": "https://www.tradingview.com/news/macenews:b39cd6883094b:0-fed-s-hammack-starting-to-hear-people-in-district-say-they-don-t-expect-inflation-to-decline-soon-shift-in-inflation-expectations-would-be-bad/"
-    },
-    {
-      "title": "FED'S HAMMACK LINKED-IN POST: FOR TODAY, RIGHT TO KEEP INTEREST RATES STABLE BUT IF INFLATION TRENDS CONTINUE, MAY BE APPROPRIATE TO RAISE RATES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:25:00+00:00",
-      "timeDisplay": "2:25 PM",
-      "link": "https://www.tradingview.com/news/macenews:c45c01c32094b:0-fed-s-hammack-linked-in-post-for-today-right-to-keep-interest-rates-stable-but-if-inflation-trends-continue-may-be-appropriate-to-raise-rates/"
-    },
-    {
-      "title": "FED'S HAMMACK LINKED-IN POST: INFLATION HIGH, MOVING HIGHER; PERSISTENT INFLATION IS BIGGER CONCERN THAN JOBS MARKET",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:24:00+00:00",
-      "timeDisplay": "2:24 PM",
-      "link": "https://www.tradingview.com/news/macenews:9e82d8fe7094b:0-fed-s-hammack-linked-in-post-inflation-high-moving-higher-persistent-inflation-is-bigger-concern-than-jobs-market/"
-    },
-    {
-      "title": "FED'S HAMMACK LINKED-IN POST: LATEST EMPLOYMENT REPORT SHOWS JOB MARKET ROUGHLY IN BALANCE WITH UNEMPLOYMENT RATE RIGHT AT FULL EMPLOYMENT",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:22:00+00:00",
-      "timeDisplay": "2:22 PM",
-      "link": "https://www.tradingview.com/news/macenews:1c8bb5893094b:0-fed-s-hammack-linked-in-post-latest-employment-report-shows-job-market-roughly-in-balance-with-unemployment-rate-right-at-full-employment/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - June 5",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:18:00+00:00",
-      "timeDisplay": "2:18 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605004360:0/"
-    },
-    {
-      "title": "Dormant Ethereum Whale Resurfaces With Massive ETH Accumulation\u2014Could It Fuel the Next Rally?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:08:26+00:00",
-      "timeDisplay": "2:08 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:1c0d6ce99094b:0-dormant-ethereum-whale-resurfaces-with-massive-eth-accumulation-could-it-fuel-the-next-rally/"
-    },
-    {
-      "title": "Dollar Could Extend Gains if Fed's Warsh Signals Rate Rises After Strong Jobs Data \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T14:04:00+00:00",
-      "timeDisplay": "2:04 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605004258:0/"
-    },
-    {
-      "title": "Gold Hits 10-week Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:59:56+00:00",
-      "timeDisplay": "1:59 PM",
-      "link": "https://www.tradingview.com/news/te_news:556934:0-gold-hits-10-week-low/"
-    },
-    {
-      "title": "Zcash Sheds 31% as Cryptocurrency Plummets \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:42:00+00:00",
-      "timeDisplay": "1:42 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605004087:0/"
-    },
-    {
-      "title": "Gold falls as robust US jobs data cements bets on higher rates",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T13:36:10+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0EF:0-gold-falls-as-robust-us-jobs-data-cements-bets-on-higher-rates/"
-    },
-    {
-      "title": "MORE NEC'S HASSETT: OIL PRICES UNLIKELY TO STAY HIGH LONGER TERM; IF THE STRAIT OF HORMUZ REMAINS CLOSED, PIPELINES WILL BE BUILT TO THE RED SEA",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:16:00+00:00",
-      "timeDisplay": "1:16 PM",
-      "link": "https://www.tradingview.com/news/macenews:fa35e7829094b:0-more-nec-s-hassett-oil-prices-unlikely-to-stay-high-longer-term-if-the-strait-of-hormuz-remains-closed-pipelines-will-be-built-to-the-red-sea/"
-    },
-    {
-      "title": "MORE NEC'S HASSETT: THE FED CAN WAIT A WHILE BEFORE DOING ANYTHING",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:15:00+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:ad5b2e3c2094b:0-more-nec-s-hassett-the-fed-can-wait-a-while-before-doing-anything/"
-    },
-    {
-      "title": "MORE NEC'S HASSETT: THE FED HAS BEEN BEHIND THE CURVE IN CUTTING RATES",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:15:00+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/macenews:a99a8ac13094b:0-more-nec-s-hassett-the-fed-has-been-behind-the-curve-in-cutting-rates/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Jun 5",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T13:12:00+00:00",
-      "timeDisplay": "1:12 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260605003890:0/"
-    },
-    {
-      "title": "Gold Heads for Over 2% Weekly Loss",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:50:38+00:00",
-      "timeDisplay": "12:50 PM",
-      "link": "https://www.tradingview.com/news/te_news:556912:0-gold-heads-for-over-2-weekly-loss/"
-    },
-    {
-      "title": "Bitcoin, ether ETFs end 13- and 17-day outflow streaks as traders rotate into equity perps ahead of NFP: analysts",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:45:02+00:00",
-      "timeDisplay": "12:45 PM",
-      "link": "https://www.tradingview.com/news/the_block:8078dda7c094b:0-bitcoin-ether-etfs-end-13-and-17-day-outflow-streaks-as-traders-rotate-into-equity-perps-ahead-of-nfp-analysts/"
-    },
-    {
-      "title": "Treasury Yields Jump After Jobs Report",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:44:20+00:00",
-      "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/te_news:556907:0-treasury-yields-jump-after-jobs-report/"
-    },
-    {
-      "title": "Crypto Rout Deepens; Zcash Plummets After Bug Disclosure",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:44:09+00:00",
-      "timeDisplay": "12:44 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:232a007ddacf8:0-crypto-rout-deepens-zcash-plummets-after-bug-disclosure/"
-    },
-    {
-      "title": "US yields jump on stronger than expected jobs gains",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-05T12:40:41+00:00",
-      "timeDisplay": "12:40 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42D0FE:0-us-yields-jump-on-stronger-than-expected-jobs-gains/"
-    },
-    {
-      "title": "Dollar Set for Weekly Gain",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:36:22+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/te_news:556898:0-dollar-set-for-weekly-gain/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: FINANCIAL ACTIVITIES EMPLOYMENT -107K FROM MARCH 2025 PEAK",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:753867ae2094b:0-more-u-s-may-jobs-financial-activities-employment-107k-from-march-2025-peak/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: INSURANCE CARRIERS & RELATED -11K, COMMERCIAL BANKING -3K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:35:00+00:00",
-      "timeDisplay": "12:35 PM",
-      "link": "https://www.tradingview.com/news/macenews:06218aa5a094b:0-more-u-s-may-jobs-insurance-carriers-related-11k-commercial-banking-3k/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: FINANCIAL ACTIVITY -22K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:abb706038094b:0-more-u-s-may-jobs-financial-activity-22k/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: GOVERNMENT +52K, LOCAL GOVERNMENT +55K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:10233d0b7094b:0-more-u-s-may-jobs-government-52k-local-government-55k/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: INFORMATION -2K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:186dff1c1094b:0-more-u-s-may-jobs-information-2k/"
-    },
-    {
-      "title": "MORE U.S. MAY JOBS: HEALTHCARE & SOCIAL ASSISTANCE +47.2K",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-05T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/macenews:3bfe5d2da094b:0-more-u-s-may-jobs-healthcare-social-assistance-47-2k/"
+      "timestamp": "2026-06-05T18:27:30+00:00",
+      "timeDisplay": "6:27 PM",
+      "link": "https://www.tradingview.com/news/barchart:d4d572ad4094b:0-sugar-prices-slide-as-crude-oil-and-the-brazilian-real-fall/"
     }
   ]
 }

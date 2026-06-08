@@ -1,51 +1,144 @@
 {
-  "lastUpdated": "2026-06-08T19:19:55.402538+00:00",
-  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 07:19 PM UTC",
+  "lastUpdated": "2026-06-08T21:20:51.107747+00:00",
+  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 09:20 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with geopolitical tensions easing as Iran-Israel conflict pauses, leading to dollar weakness and reduced oil pressure, while NY Fed consumer surveys reveal sticky inflation expectations around 3.5% with rising job loss fears. Bitcoin and crypto markets remain in extreme fear despite institutional buying, while gold broke below its 200-day moving average despite safe-haven demand.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Iran-Israel pause is reducing the oil shock premium that was supporting the stagflationary undertone, while consumer inflation expectations remain elevated but stable, creating tension with the reflation thesis.",
+    "macroSummary": "Markets showed mixed signals with dollar weakness and oil gains paring back as Iran-Israel tensions appeared to pause, while strong US jobs data lifted Fed hike odds and pushed yields higher. Bitcoin and crypto assets rebounded with institutional buying resuming, though broader risk sentiment remained cautious with gold falling below its 200-day moving average.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "De-escalation in Middle East tensions reduces oil shock premium while strong jobs data reinforces Fed hawkishness, creating cross-currents that neither fully support nor contradict the reflation regime.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil paring gains as Iran-Israel tensions ease, reducing stagflation pressure"
+        "indicator": "USDJPY",
+        "level": "160",
+        "signal": "Yen clings to 160/$ level as dollar falls from highs"
+      },
+      {
+        "indicator": "Gold 200-day MA",
+        "level": "break below",
+        "signal": "Gold falls below 200-day moving average amid strong jobs data"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran-Israel conflict pause reducing oil shock premium that was embedded in current regime assessment",
+        "signal": "Iran-Israel pause reduces geopolitical oil premium, potentially easing stagflation pressure",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Consumer 1-year inflation expectations at 3.46% in May vs 3.64% in April showing modest cooling",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Rising consumer job loss expectations to 15.1% from 14.6% suggests economic anxiety increasing",
+        "signal": "Strong US jobs data lifts Fed hike odds and pushes yields higher, supporting reflation thesis",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold breaking below 200-day moving average despite geopolitical tensions indicates risk-on sentiment",
-        "tag": "CONTRADICTS"
+        "signal": "Dollar weakness despite strong jobs data suggests currency regime stress",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Dollar falling from highs as geopolitical premium unwinds",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Gold breaking 200-day MA indicates precious metals weakness despite geopolitical backdrop",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Institutional crypto buying resumes with Strategy purchasing $101M in Bitcoin",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices for sustained break below current levels as geopolitical premium unwinds",
-      "Watch DXY closely - dollar weakness from geopolitical unwinding could approach 100 threshold",
-      "BMNR ladder may benefit from crypto fear sentiment creating put premium opportunities"
+      "Monitor oil prices for sustained decline below war premium levels",
+      "Watch USDJPY closely at 160 intervention zone as yen remains under pressure",
+      "Consider BMNR ladder adjustments if crypto institutional flows accelerate"
     ]
   },
   "articles": [
+    {
+      "title": "U.S. Dollar Slips As War Concerns Linger Despite Trump's Reassurances",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T21:15:36+00:00",
+      "timeDisplay": "9:15 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:1761531449e81:0-u-s-dollar-slips-as-war-concerns-linger-despite-trump-s-reassurances/"
+    },
+    {
+      "title": "Stocks bounce back, oil pares gains as Iran and Israel signal a pause",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T21:00:44+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G16P:0-stocks-bounce-back-oil-pares-gains-as-iran-and-israel-signal-a-pause/"
+    },
+    {
+      "title": "Dollar eases as Iran and Israel agree to halt strikes",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T20:55:55+00:00",
+      "timeDisplay": "8:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G19Z:0-dollar-eases-as-iran-and-israel-agree-to-halt-strikes/"
+    },
+    {
+      "title": "Active tokenized RWAs surge almost 600% despite crypto pullback: Binance",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T20:53:35+00:00",
+      "timeDisplay": "8:53 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:0e054efea094b:0-active-tokenized-rwas-surge-almost-600-despite-crypto-pullback-binance/"
+    },
+    {
+      "title": "Bitcoin\u2019s \u201cElectrical Cost\u201d Floor Sits at $48,694: Is That the Bottom?",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T20:01:47+00:00",
+      "timeDisplay": "8:01 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:56e2ec656094b:0-bitcoin-s-electrical-cost-floor-sits-at-48-694-is-that-the-bottom/"
+    },
+    {
+      "title": "Peru election cliffhanger weighs on stocks, Mideast in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T19:49:53+00:00",
+      "timeDisplay": "7:49 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G15W:0-peru-election-cliffhanger-weighs-on-stocks-mideast-in-focus/"
+    },
+    {
+      "title": "Yields mixed after jobs data lifts Fed hike odds",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T19:44:00+00:00",
+      "timeDisplay": "7:44 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0TE:0-yields-mixed-after-jobs-data-lifts-fed-hike-odds/"
+    },
+    {
+      "title": "Strategy, Coinbase, Circle and Robinhood Lead Crypto Stocks Rally Amid Bitcoin Rebound",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:41:17+00:00",
+      "timeDisplay": "7:41 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:4c68707b4094b:0-strategy-coinbase-circle-and-robinhood-lead-crypto-stocks-rally-amid-bitcoin-rebound/"
+    },
+    {
+      "title": "Bitcoin Recovery Needs This To Happen, Glassnode Analyst Reveals",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:30:14+00:00",
+      "timeDisplay": "7:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:8927eb77c094b:0-bitcoin-recovery-needs-this-to-happen-glassnode-analyst-reveals/"
+    },
+    {
+      "title": "Oil Settles Higher as Israel-Iran Exchanges Raise Tension \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:22:00+00:00",
+      "timeDisplay": "7:22 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608007026:0/"
+    },
+    {
+      "title": "Ethereum is at Its Cheapest Valuation in 7 Years: Here\u2019s What Happened Last Time",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:01:10+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:b7f0f41cc094b:0-ethereum-is-at-its-cheapest-valuation-in-7-years-here-s-what-happened-last-time/"
+    },
     {
       "title": "CAD Needs Trade Deal to Trigger Sustained Rally \u2014 Market Talk",
       "source": "dow-jones",
@@ -119,6 +212,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0OY:0-bitcoin-s-dull-year-may-signal-market-maturity-bernstein-says/"
     },
     {
+      "title": "Why are Bitcoin, Ethereum and XRP Prices Going Up Today?",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T16:14:22+00:00",
+      "timeDisplay": "4:14 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:bfdc9c102094b:0-why-are-bitcoin-ethereum-and-xrp-prices-going-up-today/"
+    },
+    {
       "title": "Strategy (MSTR) stock rises as company resumes Bitcoin buying spree",
       "source": "invezz",
       "color": "#00e5ff",
@@ -151,6 +252,14 @@
       "link": "https://www.tradingview.com/news/te_news:557347:0-crude-oil-holds-below-session-peaks/"
     },
     {
+      "title": "Strategy Offers Semi-Monthly Dividend On Preferred Stock",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T15:44:00+00:00",
+      "timeDisplay": "3:44 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:a5edacf16094b:0-strategy-offers-semi-monthly-dividend-on-preferred-stock/"
+    },
+    {
       "title": "Strategy shareholders approve semi-monthly dividends for STRC preferred stock",
       "source": "the_block",
       "color": "#00e5ff",
@@ -165,14 +274,6 @@
       "timestamp": "2026-06-08T15:41:00+00:00",
       "timeDisplay": "3:41 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260608005349:0/"
-    },
-    {
-      "title": "Stocks bounce back, oil pares gains as Iran and Israel signal a pause",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T15:38:47+00:00",
-      "timeDisplay": "3:38 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G0W7:0-stocks-bounce-back-oil-pares-gains-as-iran-and-israel-signal-a-pause/"
     },
     {
       "title": "Why Coinbase (COIN) Stock Is Trading Up Today",
@@ -335,38 +436,6 @@
       "link": "https://www.tradingview.com/news/dpa_afx:edbc8c24636fb:0-cryptos-rebound-after-weekend-crash/"
     },
     {
-      "title": "Spot Bitcoin ETFs bleed $1.7B as outflow streak hits four weeks",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:46:26+00:00",
-      "timeDisplay": "2:46 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:39bc1c08d094b:0-spot-bitcoin-etfs-bleed-1-7b-as-outflow-streak-hits-four-weeks/"
-    },
-    {
-      "title": "Bitcoin price eyes $90K as FTX-era BTC bullish divergence flashes again",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:30:28+00:00",
-      "timeDisplay": "2:30 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:e50296b42094b:0-bitcoin-price-eyes-90k-as-ftx-era-btc-bullish-divergence-flashes-again/"
-    },
-    {
-      "title": "Yields mixed after jobs data lifts Fed hike odds",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T14:26:45+00:00",
-      "timeDisplay": "2:26 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0LF:0-yields-mixed-after-jobs-data-lifts-fed-hike-odds/"
-    },
-    {
-      "title": "Strategy Bought more Bitcoin as Tom Lee Scooped more ETH in the Bloodbath Aftermath: Bull Run Making a Comeback?",
-      "source": "cryptonews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:23:43+00:00",
-      "timeDisplay": "2:23 PM",
-      "link": "https://www.tradingview.com/news/cryptonews:87e3e3bca094b:0-strategy-bought-more-bitcoin-as-tom-lee-scooped-more-eth-in-the-bloodbath-aftermath-bull-run-making-a-comeback/"
-    },
-    {
       "title": "Ethereum Bears Could Be Trapped: ETH Liquidation Map Hints at a Major Short Squeeze",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -391,14 +460,6 @@
       "link": "https://www.tradingview.com/news/macenews:84657f87d094b:0-us-conference-board-employment-trends-index-107-1-in-may-from-107-88-in-april-5-of-8-components-down-suggests-weaker-outlook-despite-may-payroll-jump/"
     },
     {
-      "title": "Strategy Buys 1,550 Bitcoin \u2014 Nearly 50 Times The BTC It Sold Last Week",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:53:43+00:00",
-      "timeDisplay": "1:53 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:8df6652f8094b:0-strategy-buys-1-550-bitcoin-nearly-50-times-the-btc-it-sold-last-week/"
-    },
-    {
       "title": "Bitmine adds 127,000 ether, bringing treasury to 5.54 million ETH as Tom Lee calls crypto selloff \u2018superficial\u2019",
       "source": "the_block",
       "color": "#00e5ff",
@@ -413,22 +474,6 @@
       "timestamp": "2026-06-08T13:51:41+00:00",
       "timeDisplay": "1:51 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0EE:0-gold-erases-losses-after-ceasefire-hopes-emerge-strong-us-jobs-data-caps-gains/"
-    },
-    {
-      "title": "Strategy buys 1,550 Bitcoin after controversial 32 BTC sale",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:50:00+00:00",
-      "timeDisplay": "1:50 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:94ff072eb094b:0-strategy-buys-1-550-bitcoin-after-controversial-32-btc-sale/"
-    },
-    {
-      "title": "Strategy Buys 1,550 Bitcoin for $101 Million as BTC Jumps 3.5%",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:40:47+00:00",
-      "timeDisplay": "1:40 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:0988acaf3094b:0-strategy-buys-1-550-bitcoin-for-101-million-as-btc-jumps-3-5/"
     },
     {
       "title": "Crypto Shows Turnaround After Prolonged Losing Streak \u2014 Market Talk",
@@ -503,14 +548,6 @@
       "link": "https://www.tradingview.com/news/tradingview:bb2b81f39d678:0-key-facts-ether-on-chain-highs-31-065-58-eth-bought-below-emas/"
     },
     {
-      "title": "Dollar Turns Lower on Hopes for Israel-Iran Ceasefire \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:11:00+00:00",
-      "timeDisplay": "12:11 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608003545:0/"
-    },
-    {
       "title": "WTI Crude Trims Rebound",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -567,14 +604,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:02f882518094b:0-trump-says-iran-israel-looking-to-do-an-immediate-ceasefire-but-blockade-to-remain-in-place/"
     },
     {
-      "title": "Dollar Could Rise Further if U.S. Inflation Data Exceed Forecasts \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T10:16:00+00:00",
-      "timeDisplay": "10:16 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608002212:0/"
-    },
-    {
       "title": "Bitmine Makes Biggest Ethereum Purchase Of 2026 ",
       "source": "cryptoprowl",
       "color": "#00e5ff",
@@ -621,30 +650,6 @@
       "timestamp": "2026-06-08T08:05:00+00:00",
       "timeDisplay": "8:05 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260608001254:0/"
-    },
-    {
-      "title": "Gold extends losses on US interest rate-hike fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T07:35:26+00:00",
-      "timeDisplay": "7:35 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G07P:0-gold-extends-losses-on-us-interest-rate-hike-fears/"
-    },
-    {
-      "title": "Whales Buy the Dip as Ethereum Exchange Reserves Keep Falling",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T07:27:20+00:00",
-      "timeDisplay": "7:27 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:35a2c0b07094b:0-whales-buy-the-dip-as-ethereum-exchange-reserves-keep-falling/"
-    },
-    {
-      "title": "Gold Extends Fall on Middle East Escalation",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T07:08:43+00:00",
-      "timeDisplay": "7:08 AM",
-      "link": "https://www.tradingview.com/news/te_news:557180:0-gold-extends-fall-on-middle-east-escalation/"
     }
   ]
 }

@@ -1,45 +1,272 @@
 {
-  "lastUpdated": "2026-06-08T02:08:45.970532+00:00",
-  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 02:08 AM UTC",
-  "articleCount": 36,
+  "lastUpdated": "2026-06-08T07:18:33.017468+00:00",
+  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 07:18 AM UTC",
+  "articleCount": 52,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets experienced significant volatility with crypto assets staging recoveries from oversold levels while Asian equities tumbled amid tech sector weakness. Dollar strength increased on Fed rate hike expectations while oil prices rose on Iran-Israel missile escalation and supply disruption concerns.",
+    "macroSummary": "Markets show mixed dynamics with Iran-Israel escalation driving oil higher and dollar strength amid rising Fed hike expectations, while Bitcoin recovers above $63k after last week's selloff. US 10-year yields hit two-week highs as rate hike bets intensify, gold extends losses on interest rate fears, and Asian markets tumble on deepening tech selloff.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Dollar strength and Fed rate hike bets support reflation thesis, but Asian tech rout and crypto weakness suggest broader risk-off pressures are emerging.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Geopolitical oil shock supports reflation thesis but rising Fed hike bets and dollar strength at two-month peaks create cross-currents that complicate the bullish-cyclical narrative.",
+    "thresholdWatches": [
+      {
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar hits two-month peak as Fed hike bets ramp up, approaching regime flip threshold"
+      },
+      {
+        "indicator": "US10Y",
+        "level": "Two-week high",
+        "signal": "Treasury yields rising on rate hike fears, contributing to bond market stress"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Dollar strengthening on Fed rate hike expectations aligns with reflation environment",
+        "signal": "Dollar reaches two-month peak on Fed hike expectations, approaching DXY 100 threshold",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Oil jumps on Iran-Israel missile exchange, supporting reflation energy shock narrative",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil prices rising on Iran-Israel escalation and supply disruption concerns reinforces energy inflation pressures",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Asia markets tumbling with deepening tech rout suggests risk-off sentiment spreading geographically",
+        "signal": "Gold extends sharp selloff under $4,300 on US interest rate hike fears",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin and Ethereum hitting extreme oversold levels with RSI at historic lows indicates broad risk asset stress",
+        "signal": "Asian markets tumble with South Korea KOSPI plunging 8% as tech rout deepens",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Wall Street bracing for rockier times suggests institutional positioning for increased volatility",
+        "signal": "US 10-year Treasury yield hits two-week high amid rising rate expectations",
         "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder strikes as crypto volatility creates premium opportunities",
-      "Watch for VIX approach to 22 threshold as Asian weakness potentially spreads to US session",
-      "Assess cyclical positioning given mixed signals between dollar strength and risk asset weakness"
+      "Monitor DXY closely for break above 100 which would invalidate current regime",
+      "Assess BMNR ladder strikes against potential Fed hike cycle acceleration",
+      "Review cyclical overweight as rising rates and dollar strength pressure risk assets"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Recovers Slightly After Last Week's Sharp Selloff \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T07:06:00+00:00",
+      "timeDisplay": "7:06 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608000987:0/"
+    },
+    {
+      "title": "Oil Jumps as Iran and Israel Exchange Missile Strikes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:53:08+00:00",
+      "timeDisplay": "6:53 AM",
+      "link": "https://www.tradingview.com/news/te_news:557169:0-oil-jumps-as-iran-and-israel-exchange-missile-strikes/"
+    },
+    {
+      "title": "BTC/USD: Bitcoin Price Steady Above $60,000. Will a Major Support Hold the Line?",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:46:58+00:00",
+      "timeDisplay": "6:46 AM",
+      "link": "https://www.tradingview.com/news/tradingview:8ee7c18a9094b:0-btc-usd-bitcoin-price-steady-above-60-000-will-a-major-support-hold-the-line/"
+    },
+    {
+      "title": "XAU/USD: Gold Extends Sharp Selloff with Prices Diving Under $4,300",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:40:05+00:00",
+      "timeDisplay": "6:40 AM",
+      "link": "https://www.tradingview.com/news/tradingview:fd6606b8d094b:0-xau-usd-gold-extends-sharp-selloff-with-prices-diving-under-4-300/"
+    },
+    {
+      "title": "Dollar Stays Elevated After Iran, Israel Exchange Fire \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:37:00+00:00",
+      "timeDisplay": "6:37 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608000801:0/"
+    },
+    {
+      "title": "Bitcoin(BTC) Surpasses 63,000 USDT with a 2.10% Increase in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:19:08+00:00",
+      "timeDisplay": "6:19 AM",
+      "link": "https://www.tradingview.com/news/binance_news:b084d9444094b:0-bitcoin-btc-surpasses-63-000-usdt-with-a-2-10-increase-in-24-hours/"
+    },
+    {
+      "title": "Bitcoin rebounds after drop below $60K but bears are still in control",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:09:59+00:00",
+      "timeDisplay": "6:09 AM",
+      "link": "https://www.tradingview.com/news/invezz:3fc7779c7094b:0-bitcoin-rebounds-after-drop-below-60k-but-bears-are-still-in-control/"
+    },
+    {
+      "title": "Bitcoin Trader Says Something Extremely Bad Is Coming Today, Here\u2019s What",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T06:00:28+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:041da4366094b:0-bitcoin-trader-says-something-extremely-bad-is-coming-today-here-s-what/"
+    },
+    {
+      "title": "Gold extends losses on US interest rate-hike fears",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T05:52:45+00:00",
+      "timeDisplay": "5:52 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G061:0-gold-extends-losses-on-us-interest-rate-hike-fears/"
+    },
+    {
+      "title": "BTC pulls back from overnight highs as geopolitical tensions lift oil",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T05:47:10+00:00",
+      "timeDisplay": "5:47 AM",
+      "link": "https://www.tradingview.com/news/binance_news:96779576c094b:0-btc-pulls-back-from-overnight-highs-as-geopolitical-tensions-lift-oil/"
+    },
+    {
+      "title": "U.S. 10-Year Treasury Yield Hits Two-Week High as Mideast Ceasefire Is Tested \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T05:42:00+00:00",
+      "timeDisplay": "5:42 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608000363:0/"
+    },
+    {
+      "title": "Dollar Strength Returns as Crypto\u2019s Biggest Near-Term Headwind",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T05:35:11+00:00",
+      "timeDisplay": "5:35 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:a6cbbff97094b:0-dollar-strength-returns-as-crypto-s-biggest-near-term-headwind/"
+    },
+    {
+      "title": "Dollar scales two-month peak as Fed hike bets ramp up",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T05:25:54+00:00",
+      "timeDisplay": "5:25 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G05V:0-dollar-scales-two-month-peak-as-fed-hike-bets-ramp-up/"
+    },
+    {
+      "title": "Joseph Lubin moves 110,000 ETH to bolster Maker collateral against $259M DAI debt",
+      "source": "cryptobriefing",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T04:38:49+00:00",
+      "timeDisplay": "4:38 AM",
+      "link": "https://www.tradingview.com/news/cryptobriefing:92bc13f14094b:0-joseph-lubin-moves-110-000-eth-to-bolster-maker-collateral-against-259m-dai-debt/"
+    },
+    {
+      "title": "Bitcoin jumps 5% after Trump says Netanyahu has 'no choice' on US Iran deal",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T04:28:13+00:00",
+      "timeDisplay": "4:28 AM",
+      "link": "https://www.tradingview.com/news/binance_news:5712f5684094b:0-bitcoin-jumps-5-after-trump-says-netanyahu-has-no-choice-on-us-iran-deal/"
+    },
+    {
+      "title": "Did Strategy Sell More Bitcoin Last Week? Saylor\u2019s \u201932?\u2019 Post Spark Fear",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T04:26:14+00:00",
+      "timeDisplay": "4:26 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:403253726094b:0-did-strategy-sell-more-bitcoin-last-week-saylor-s-32-post-spark-fear/"
+    },
+    {
+      "title": "Bitcoin Price Jumped 5% as Trump Tells Israel \u201cI Call the Shots\u201d",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T04:25:41+00:00",
+      "timeDisplay": "4:25 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:de5a39440094b:0-bitcoin-price-jumped-5-as-trump-tells-israel-i-call-the-shots/"
+    },
+    {
+      "title": "Dollar hits two-month peak as Fed hike bets ramp up",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T04:09:00+00:00",
+      "timeDisplay": "4:09 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G049:0-dollar-hits-two-month-peak-as-fed-hike-bets-ramp-up/"
+    },
+    {
+      "title": "Bitcoin Rises as Investors Focus on Long-Term Demand Drivers \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T03:59:00+00:00",
+      "timeDisplay": "3:59 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260607000716:0/"
+    },
+    {
+      "title": "Bitcoin steadies after $60,000 breach as Strategy Inc's Saylor hints at buying",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T03:26:28+00:00",
+      "timeDisplay": "3:26 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:2a1eab9be094b:0/"
+    },
+    {
+      "title": "Bitcoin reclaims $63,000 in \u2018oversold relief rally\u2019; South Korea\u2019s KOSPI plunges 8%",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T03:07:41+00:00",
+      "timeDisplay": "3:07 AM",
+      "link": "https://www.tradingview.com/news/the_block:29bcfc6d0094b:0-bitcoin-reclaims-63-000-in-oversold-relief-rally-south-korea-s-kospi-plunges-8/"
+    },
+    {
+      "title": "Crypto market rally today: Here\u2019s why Bitcoin and top altcoins are going up",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T02:55:47+00:00",
+      "timeDisplay": "2:55 AM",
+      "link": "https://www.tradingview.com/news/invezz:067568b72094b:0-crypto-market-rally-today-here-s-why-bitcoin-and-top-altcoins-are-going-up/"
+    },
+    {
+      "title": "Indonesia's central bank to ensure rupiah does not fluctuate too much",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T02:43:38+00:00",
+      "timeDisplay": "2:43 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42G094:0-indonesia-s-central-bank-to-ensure-rupiah-does-not-fluctuate-too-much/"
+    },
+    {
+      "title": "AI TRENDS | Crypto Sectors Rebound 2%\u201325% in 24 Hours as NFT Segment Gains 25.55%",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T02:33:43+00:00",
+      "timeDisplay": "2:33 AM",
+      "link": "https://www.tradingview.com/news/binance_news:57bf80048094b:0-ai-trends-crypto-sectors-rebound-2-25-in-24-hours-as-nft-segment-gains-25-55/"
+    },
+    {
+      "title": "10x Research: Crypto Market Cap Fell 14.5% to $2.13 Trillion Last Week",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T02:23:45+00:00",
+      "timeDisplay": "2:23 AM",
+      "link": "https://www.tradingview.com/news/binance_news:03706e413094b:0-10x-research-crypto-market-cap-fell-14-5-to-2-13-trillion-last-week/"
+    },
+    {
+      "title": "US 10-Year Treasury Yield Hits 2-Week High",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T02:20:49+00:00",
+      "timeDisplay": "2:20 AM",
+      "link": "https://www.tradingview.com/news/te_news:557093:0-us-10-year-treasury-yield-hits-2-week-high/"
+    },
+    {
+      "title": "Analyst Darkfost Says Bitcoin Entered an \u201cExtreme Undervaluation\u201d Zone on Power Law Model",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T01:53:57+00:00",
+      "timeDisplay": "1:53 AM",
+      "link": "https://www.tradingview.com/news/binance_news:2f49f88b2094b:0-analyst-darkfost-says-bitcoin-entered-an-extreme-undervaluation-zone-on-power-law-model/"
+    },
     {
       "title": "Ethereum Price Mounts An Impressive Recovery As Market Mood Shifts",
       "source": "newsbtc",
@@ -47,6 +274,22 @@
       "timestamp": "2026-06-08T01:28:38+00:00",
       "timeDisplay": "1:28 AM",
       "link": "https://www.tradingview.com/news/newsbtc:ba36d9ef0094b:0-ethereum-price-mounts-an-impressive-recovery-as-market-mood-shifts/"
+    },
+    {
+      "title": "Wallet Accumulates 158.57 WBTC and 31,065.58 ETH via CowSwap Over the Past 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T01:25:28+00:00",
+      "timeDisplay": "1:25 AM",
+      "link": "https://www.tradingview.com/news/binance_news:68c1cf801094b:0-wallet-accumulates-158-57-wbtc-and-31-065-58-eth-via-cowswap-over-the-past-24-hours/"
+    },
+    {
+      "title": "James Wynn Loses Past 6 Days\u2019 Profits After Switching to Bitcoin Short, Onchain Lens Says",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T01:25:16+00:00",
+      "timeDisplay": "1:25 AM",
+      "link": "https://www.tradingview.com/news/binance_news:245ebd52d094b:0-james-wynn-loses-past-6-days-profits-after-switching-to-bitcoin-short-onchain-lens-says/"
     },
     {
       "title": "Dollar Towers on Fed Rate Hike Bets",
@@ -89,6 +332,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42F0BU:0-asia-markets-tumble-as-tech-rout-deepens/"
     },
     {
+      "title": "Dollar climbs to two-month peak as Fed hike bets ramp up",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T00:09:18+00:00",
+      "timeDisplay": "12:09 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42F0C9:0-dollar-climbs-to-two-month-peak-as-fed-hike-bets-ramp-up/"
+    },
+    {
       "title": "Bitcoin Supply In Loss Crosses Critical Threshold \u2014 Bullish Reversal Next?",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -121,12 +372,12 @@
       "link": "https://www.tradingview.com/news/te_news:557031:0-oil-gains-as-iran-fires-missiles-toward-israel/"
     },
     {
-      "title": "Hunter Biden\u2019s Great Crypto Comeback \u2013 Is Hunter Running?",
-      "source": "bravenewcoin",
+      "title": "Ethereum(ETH) Surpasses 1,700 USDT with a 9.40% Increase in 24 Hours",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-07T23:27:36+00:00",
-      "timeDisplay": "11:27 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:f1e85efe0094b:0/"
+      "timestamp": "2026-06-07T22:15:12+00:00",
+      "timeDisplay": "10:15 PM",
+      "link": "https://www.tradingview.com/news/binance_news:34e450782094b:0-ethereum-eth-surpasses-1-700-usdt-with-a-9-40-increase-in-24-hours/"
     },
     {
       "title": "Ethereum\u2019s RSI Just Hit Its Lowest Level In History, And That May Be Exactly The Point",
@@ -137,68 +388,20 @@
       "link": "https://www.tradingview.com/news/newsbtc:288641e62094b:0-ethereum-s-rsi-just-hit-its-lowest-level-in-history-and-that-may-be-exactly-the-point/"
     },
     {
-      "title": "NY Judge Halts Lawsuit Claiming 39,069 Dormant Bitcoin Wallets Until July Hearing",
-      "source": "beincrypto",
+      "title": "US House Ways and Means circulates seven crypto tax bill drafts ahead of June 9 hearing",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-07T21:33:47+00:00",
-      "timeDisplay": "9:33 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:bc7941eb3094b:0-ny-judge-halts-lawsuit-claiming-39-069-dormant-bitcoin-wallets-until-july-hearing/"
+      "timestamp": "2026-06-07T20:27:54+00:00",
+      "timeDisplay": "8:27 PM",
+      "link": "https://www.tradingview.com/news/binance_news:bd79867a9094b:0-us-house-ways-and-means-circulates-seven-crypto-tax-bill-drafts-ahead-of-june-9-hearing/"
     },
     {
-      "title": "Market Rout Leaves Wall Street Bracing for Rockier Times \u2014 WSJ",
-      "source": "dow-jones",
+      "title": "HyperInsight: Machi Big Brother Opens 25x Leveraged Long of 3,390 ETH",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-07T21:00:00+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260607000243:0/"
-    },
-    {
-      "title": "NY judge stays lawsuit seeking ownership of nearly 40,000 bitcoin wallets, sets July hearing on proposed amicus brief",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T20:59:02+00:00",
-      "timeDisplay": "8:59 PM",
-      "link": "https://www.tradingview.com/news/the_block:f619326ad094b:0-ny-judge-stays-lawsuit-seeking-ownership-of-nearly-40-000-bitcoin-wallets-sets-july-hearing-on-proposed-amicus-brief/"
-    },
-    {
-      "title": "What happens to Bitcoin if the Nasdaq falls further?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T20:52:36+00:00",
-      "timeDisplay": "8:52 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:324727820094b:0-what-happens-to-bitcoin-if-the-nasdaq-falls-further/"
-    },
-    {
-      "title": "Strategy\u2019s Saylor signals BTC buy as preferred dividend pay date vote looms",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T19:45:17+00:00",
-      "timeDisplay": "7:45 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:eea5d0e85094b:0-strategy-s-saylor-signals-btc-buy-as-preferred-dividend-pay-date-vote-looms/"
-    },
-    {
-      "title": "MicroStrategy and BitMine Could Trigger the Largest Bitcoin Crash Ever: DWF Labs Co-founder Warns",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T19:00:00+00:00",
-      "timeDisplay": "7:00 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:8ad30b7ab094b:0-microstrategy-and-bitmine-could-trigger-the-largest-bitcoin-crash-ever-dwf-labs-co-founder-warns/"
-    },
-    {
-      "title": "Bitcoin\u2019s \u201cElectrical Cost\u201d Suggests Possible Bear Market Floor Near $50,000 \u2014 Analyst",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T18:00:55+00:00",
-      "timeDisplay": "6:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a3fa0991f094b:0-bitcoin-s-electrical-cost-suggests-possible-bear-market-floor-near-50-000-analyst/"
-    },
-    {
-      "title": "JPMorgan says Strategy may need to rebuild dollar reserves to restore confidence",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T17:08:36+00:00",
-      "timeDisplay": "5:08 PM",
-      "link": "https://www.tradingview.com/news/the_block:4bcb9db94094b:0-jpmorgan-says-strategy-may-need-to-rebuild-dollar-reserves-to-restore-confidence/"
+      "timestamp": "2026-06-07T16:03:42+00:00",
+      "timeDisplay": "4:03 PM",
+      "link": "https://www.tradingview.com/news/binance_news:a9d2c93b0094b:0-hyperinsight-machi-big-brother-opens-25x-leveraged-long-of-3-390-eth/"
     },
     {
       "title": "Top Altcoins To Buy Now Ahead of Crypto Market Rally",
@@ -207,30 +410,6 @@
       "timestamp": "2026-06-07T15:56:15+00:00",
       "timeDisplay": "3:56 PM",
       "link": "https://www.tradingview.com/news/coinpedia:969e368f5094b:0-top-altcoins-to-buy-now-ahead-of-crypto-market-rally/"
-    },
-    {
-      "title": "Michael Saylor hints at fresh bitcoin buy with \u2018add more dots\u2019 post as Strategy sits $11.7 billion underwater",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T15:03:24+00:00",
-      "timeDisplay": "3:03 PM",
-      "link": "https://www.tradingview.com/news/the_block:523f28676094b:0-michael-saylor-hints-at-fresh-bitcoin-buy-with-add-more-dots-post-as-strategy-sits-11-7-billion-underwater/"
-    },
-    {
-      "title": "Michael Saylor Signals 'A Good Time To Add More Dots' After Bitcoin's Bear-Market Losses Near $174 Billion",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T14:51:12+00:00",
-      "timeDisplay": "2:51 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:ac23d3979094b:0-michael-saylor-signals-a-good-time-to-add-more-dots-after-bitcoin-s-bear-market-losses-near-174-billion/"
-    },
-    {
-      "title": "Bitcoin Price Rebounds From Oversold Levels as Senator Lummis Defends CLARITY Act Against Banking Critics",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T14:47:26+00:00",
-      "timeDisplay": "2:47 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:87e221eec094b:0/"
     },
     {
       "title": "Why One Analyst Calls the Ethereum Price Crash a Buying Signal",
@@ -249,30 +428,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:3fb9802e2094b:0-exclusive-can-the-clarity-act-save-crypto-after-its-worst-week-of-2026/"
     },
     {
-      "title": "Bitcoin risks new 'purge' with bear-market losses still $35B below 2022 total",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T14:29:19+00:00",
-      "timeDisplay": "2:29 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:c35e70487094b:0-bitcoin-risks-new-purge-with-bear-market-losses-still-35b-below-2022-total/"
-    },
-    {
-      "title": "Bitcoin\u2019s Worst Week Since FTX Raises The Question: Is The Bottom Already In?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T14:00:44+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:79df88383094b:0-bitcoin-s-worst-week-since-ftx-raises-the-question-is-the-bottom-already-in/"
-    },
-    {
-      "title": "Key facts: Binance Reserves Rise; Glassnode $46k\u2013$54k; MSTR Sells BTC",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T12:13:00+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:192903494793e:0-key-facts-binance-reserves-rise-glassnode-46k-54k-mstr-sells-btc/"
-    },
-    {
       "title": "Key facts: 412k ETH, 259M DAI; $1,950 support; Cardone warns",
       "source": "tradingview",
       "color": "#00e5ff",
@@ -289,44 +444,28 @@
       "link": "https://www.tradingview.com/news/beincrypto:6b68a703b094b:0-nft-market-cap-slides-near-record-lows-as-ethereum-drop-erases-blue-chip-gains/"
     },
     {
+      "title": "Whale Borrows 30 Million USDS on Spark and Buys 18,212 ETH, On-Chain Data Shows",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-07T09:43:47+00:00",
+      "timeDisplay": "9:43 AM",
+      "link": "https://www.tradingview.com/news/binance_news:998b7c1de094b:0-whale-borrows-30-million-usds-on-spark-and-buys-18-212-eth-on-chain-data-shows/"
+    },
+    {
+      "title": "BTC Bulls vs. Bears: Tom Lee's Optimism Collides With DWF's $10K Crash Warning",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-07T09:30:05+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/binance_news:b26fff91b094b:0-btc-bulls-vs-bears-tom-lee-s-optimism-collides-with-dwf-s-10k-crash-warning/"
+    },
+    {
       "title": "'Cancerous' Altcoins And A Struggling Ethereum Could Drag Bitcoin To $38,000, Gary Cardone Warns",
       "source": "stocktwits",
       "color": "#00e5ff",
       "timestamp": "2026-06-07T09:00:08+00:00",
       "timeDisplay": "9:00 AM",
       "link": "https://www.tradingview.com/news/stocktwits:c58034a91094b:0-cancerous-altcoins-and-a-struggling-ethereum-could-drag-bitcoin-to-38-000-gary-cardone-warns/"
-    },
-    {
-      "title": "Ethereum price: inverted cup & handle points to a crash amid ETF outflows",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T06:41:25+00:00",
-      "timeDisplay": "6:41 AM",
-      "link": "https://www.tradingview.com/news/invezz:4ab84c201094b:0-ethereum-price-inverted-cup-handle-points-to-a-crash-amid-etf-outflows/"
-    },
-    {
-      "title": "Ethereum(ETH) Surpasses 1,600 USDT with a 5.27% Increase in 24 Hours",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T05:14:09+00:00",
-      "timeDisplay": "5:14 AM",
-      "link": "https://www.tradingview.com/news/binance_news:47fecbd76094b:0-ethereum-eth-surpasses-1-600-usdt-with-a-5-27-increase-in-24-hours/"
-    },
-    {
-      "title": "Analyst: Joseph Lubin-Linked Addresses Add 110,000 ETH Collateral After Health Ratio Briefly Fell Below 1.2",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T03:07:15+00:00",
-      "timeDisplay": "3:07 AM",
-      "link": "https://www.tradingview.com/news/binance_news:09b4eac8b094b:0-analyst-joseph-lubin-linked-addresses-add-110-000-eth-collateral-after-health-ratio-briefly-fell-below-1-2/"
-    },
-    {
-      "title": "Address Buys 35,723 ETH at Average $1,563 After Selling 60,000 ETH a Week Earlier, Lookonchain Says",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-07T02:25:49+00:00",
-      "timeDisplay": "2:25 AM",
-      "link": "https://www.tradingview.com/news/binance_news:b8e13a8a6094b:0-address-buys-35-723-eth-at-average-1-563-after-selling-60-000-eth-a-week-earlier-lookonchain-says/"
     }
   ]
 }

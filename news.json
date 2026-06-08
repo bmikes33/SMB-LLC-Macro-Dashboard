@@ -1,51 +1,115 @@
 {
-  "lastUpdated": "2026-06-08T16:46:28.307798+00:00",
-  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 04:46 PM UTC",
+  "lastUpdated": "2026-06-08T19:19:55.402538+00:00",
+  "lastUpdatedDisplay": "Jun 08, 2026 \u2014 07:19 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed signals with geopolitical tensions easing as Iran and Israel signal a pause, causing oil to pare gains and stocks to bounce back. NY Fed consumer data reveals persistent inflation expectations around 3.5% with rising job loss concerns, while crypto markets rebounded after weekend selling but Bitcoin ETFs continue bleeding with $1.7B in outflows.",
+    "macroSummary": "Markets show mixed signals with geopolitical tensions easing as Iran-Israel conflict pauses, leading to dollar weakness and reduced oil pressure, while NY Fed consumer surveys reveal sticky inflation expectations around 3.5% with rising job loss fears. Bitcoin and crypto markets remain in extreme fear despite institutional buying, while gold broke below its 200-day moving average despite safe-haven demand.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Geopolitical tensions are de-escalating which undermines the Iran-war oil shock embedded in the current regime, while persistent high inflation expectations and rising job loss concerns point toward stagflationary pressures that challenge the bullish-cyclicals bias.",
+    "regimePressureReason": "Iran-Israel pause is reducing the oil shock premium that was supporting the stagflationary undertone, while consumer inflation expectations remain elevated but stable, creating tension with the reflation thesis.",
     "thresholdWatches": [
       {
-        "indicator": "USDJPY",
-        "level": "160",
-        "signal": "Yen clings to 160/$ level as dollar falls from highs after Iran halts strikes"
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil paring gains as Iran-Israel tensions ease, reducing stagflation pressure"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran-Israel tensions easing with stocks bouncing and oil paring gains contradicts the embedded war premium in current regime",
+        "signal": "Iran-Israel conflict pause reducing oil shock premium that was embedded in current regime assessment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Consumer job loss expectations rose to 15.1% in May from 14.6% in April, suggesting labor market deterioration",
+        "signal": "Consumer 1-year inflation expectations at 3.46% in May vs 3.64% in April showing modest cooling",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "1-year inflation expectations remain elevated at 3.46% with food prices expected to rise 5.8% and rent 7.4%",
+        "signal": "Rising consumer job loss expectations to 15.1% from 14.6% suggests economic anxiety increasing",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "USDJPY holding at critical 160 level with yen clinging to intervention zone",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Gold breaking below 200-day moving average despite geopolitical tensions indicates risk-on sentiment",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin ETFs experiencing sustained outflows of $1.7B over four weeks despite crypto rebound",
-        "tag": "NEUTRAL"
+        "signal": "Dollar falling from highs as geopolitical premium unwinds",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor geopolitical de-escalation impact on oil prices - may need to reassess embedded war premium",
-      "Watch for USDJPY intervention at 160 level as potential risk-off catalyst",
-      "Consider reducing BMNR ladder aggressiveness given mixed macro signals and persistent stagflation risks"
+      "Monitor oil prices for sustained break below current levels as geopolitical premium unwinds",
+      "Watch DXY closely - dollar weakness from geopolitical unwinding could approach 100 threshold",
+      "BMNR ladder may benefit from crypto fear sentiment creating put premium opportunities"
     ]
   },
   "articles": [
+    {
+      "title": "CAD Needs Trade Deal to Trigger Sustained Rally \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T18:52:00+00:00",
+      "timeDisplay": "6:52 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608006825:0/"
+    },
+    {
+      "title": "'Best thesis' for Bitcoin accumulation surfaces despite current downside risk: Analyst",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T18:11:29+00:00",
+      "timeDisplay": "6:11 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:b1055653e094b:0-best-thesis-for-bitcoin-accumulation-surfaces-despite-current-downside-risk-analyst/"
+    },
+    {
+      "title": "Gold erases losses despite strong US jobs data as ceasefire hopes emerge",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-08T17:54:58+00:00",
+      "timeDisplay": "5:54 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0PN:0-gold-erases-losses-despite-strong-us-jobs-data-as-ceasefire-hopes-emerge/"
+    },
+    {
+      "title": "Coinbase strategist says institutions aren\u2019t panicking about bitcoin, \u2018love it even more\u2019 at lower prices",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T17:52:18+00:00",
+      "timeDisplay": "5:52 PM",
+      "link": "https://www.tradingview.com/news/the_block:2cff312be094b:0-coinbase-strategist-says-institutions-aren-t-panicking-about-bitcoin-love-it-even-more-at-lower-prices/"
+    },
+    {
+      "title": "$52 Billion in Bitcoin and a New XRP Vision: Why Traders Are Watching Both Assets Closely",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T17:48:05+00:00",
+      "timeDisplay": "5:48 PM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:e03e592c2094b:0/"
+    },
+    {
+      "title": "Strategy Buys $101 Million Worth of Bitcoin. It's a Good Sign for Crypto. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T17:33:00+00:00",
+      "timeDisplay": "5:33 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608003923:0/"
+    },
+    {
+      "title": "US 10-Year Yield Resumes Increase",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T17:31:56+00:00",
+      "timeDisplay": "5:31 PM",
+      "link": "https://www.tradingview.com/news/te_news:557358:0-us-10-year-yield-resumes-increase/"
+    },
+    {
+      "title": "Crypto Market Still Stays in 'Extreme Fear' Amid Rebound \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T17:29:00+00:00",
+      "timeDisplay": "5:29 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608006299:0/"
+    },
     {
       "title": "Bitcoin's dull year may signal market maturity, Bernstein says",
       "source": "reuters",
@@ -279,14 +343,6 @@
       "link": "https://www.tradingview.com/news/cointelegraph:39bc1c08d094b:0-spot-bitcoin-etfs-bleed-1-7b-as-outflow-streak-hits-four-weeks/"
     },
     {
-      "title": "Strategy Buys $101 Million Worth of Bitcoin. It's a Good Sign for Crypto. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:39:00+00:00",
-      "timeDisplay": "2:39 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608003923:0/"
-    },
-    {
       "title": "Bitcoin price eyes $90K as FTX-era BTC bullish divergence flashes again",
       "source": "cointelegraph",
       "color": "#00e5ff",
@@ -362,8 +418,8 @@
       "title": "Strategy buys 1,550 Bitcoin after controversial 32 BTC sale",
       "source": "cointelegraph",
       "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:45:48+00:00",
-      "timeDisplay": "1:45 PM",
+      "timestamp": "2026-06-08T13:50:00+00:00",
+      "timeDisplay": "1:50 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:94ff072eb094b:0-strategy-buys-1-550-bitcoin-after-controversial-32-btc-sale/"
     },
     {
@@ -391,14 +447,6 @@
       "link": "https://www.tradingview.com/news/macenews:d8c8708a2094b:0-cnn-from-tehran-some-slight-signs-of-iran-israeli-de-escalation-after-latest-round-of-mutual-retaliatory-strikes-despite-pres-trump-s-order-to-stop/"
     },
     {
-      "title": "Has The Bitcoin Price Crash Ended Or Is This Just The Beginning? Analyst Answers",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:30:41+00:00",
-      "timeDisplay": "1:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:718692d3f094b:0-has-the-bitcoin-price-crash-ended-or-is-this-just-the-beginning-analyst-answers/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - Jun 8",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -421,22 +469,6 @@
       "timestamp": "2026-06-08T12:55:13+00:00",
       "timeDisplay": "12:55 PM",
       "link": "https://www.tradingview.com/news/chainwire:554c34ad1094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-5-54-million-tokens-and-total-crypto-and-total-cash-holdings-of-9-6-billion/"
-    },
-    {
-      "title": "Strategy Snaps Up $100 Million in Bitcoin \u2014 WSJ",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:42:00+00:00",
-      "timeDisplay": "12:42 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608003883:0/"
-    },
-    {
-      "title": "Bitcoin Rebounds 3.8% As Investors Await Strategy Filing",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:32:44+00:00",
-      "timeDisplay": "12:32 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:be98b1610094b:0-bitcoin-rebounds-3-8-as-investors-await-strategy-filing/"
     },
     {
       "title": "Dollar Likely to Fall if Risk Appetite Improves, Fed Avoids Rate Rises \u2014 Market Talk",
@@ -613,38 +645,6 @@
       "timestamp": "2026-06-08T07:08:43+00:00",
       "timeDisplay": "7:08 AM",
       "link": "https://www.tradingview.com/news/te_news:557180:0-gold-extends-fall-on-middle-east-escalation/"
-    },
-    {
-      "title": "Oil Jumps as Iran and Israel Exchange Missile Strikes",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T06:53:08+00:00",
-      "timeDisplay": "6:53 AM",
-      "link": "https://www.tradingview.com/news/te_news:557169:0-oil-jumps-as-iran-and-israel-exchange-missile-strikes/"
-    },
-    {
-      "title": "XAU/USD: Gold Extends Sharp Selloff with Prices Diving Under $4,300",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T06:40:05+00:00",
-      "timeDisplay": "6:40 AM",
-      "link": "https://www.tradingview.com/news/tradingview:fd6606b8d094b:0-xau-usd-gold-extends-sharp-selloff-with-prices-diving-under-4-300/"
-    },
-    {
-      "title": "U.S. 10-Year Treasury Yield Hits Two-Week High as Mideast Ceasefire Is Tested \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T05:42:00+00:00",
-      "timeDisplay": "5:42 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608000363:0/"
-    },
-    {
-      "title": "Joseph Lubin moves 110,000 ETH to bolster Maker collateral against $259M DAI debt",
-      "source": "cryptobriefing",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T04:38:49+00:00",
-      "timeDisplay": "4:38 AM",
-      "link": "https://www.tradingview.com/news/cryptobriefing:92bc13f14094b:0-joseph-lubin-moves-110-000-eth-to-bolster-maker-collateral-against-259m-dai-debt/"
     }
   ]
 }

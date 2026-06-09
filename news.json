@@ -1,51 +1,155 @@
 {
-  "lastUpdated": "2026-06-09T01:46:45.611153+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 01:46 AM UTC",
+  "lastUpdated": "2026-06-09T05:56:13.956141+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 05:56 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals as Iran-Israel tensions ease with reports of halted strikes and Trump urging restraint, leading to dollar weakness and ceasefire optimism supporting gold recovery. However, strong US jobs data is lifting Fed hike odds and pushing Treasury yields higher, while Bitcoin and crypto assets remain under pressure near key technical levels.",
+    "macroSummary": "Markets show tentative stabilization as Iran-Israel tensions ease with both sides signaling a pause in strikes, though inflation concerns persist with focus on upcoming U.S. CPI data. Dollar retreats from two-month highs while Treasury yields hold firm, and crypto markets remain volatile with Bitcoin struggling near $63-64K resistance.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Geopolitical de-escalation contradicts the embedded Iran-war oil shock assumption, while rising Treasury yields and Fed hike expectations support the reflationary backdrop.",
+    "regimePressureReason": "Geopolitical risk premium unwinding as Iran-Israel tensions ease contradicts the oil shock embedded in current regime, while persistent inflation concerns and firm Treasury yields support the reflation thesis.",
     "thresholdWatches": [
       {
         "indicator": "DXY",
         "level": "100",
-        "signal": "Dollar slipped to 100.042 and easing further on Iran-Israel ceasefire news"
+        "signal": "Dollar index slips to 100.042, approaching the regime flip threshold as war premium fades"
       }
     ],
     "keySignals": [
       {
-        "signal": "Iran-Israel tensions cooling with halted strikes and Trump urging restraint, undermining embedded war premium",
+        "signal": "Iran-Israel ceasefire optimism reduces oil supply disruption premium, contradicting embedded war shock assumption",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Strong US jobs data lifting Fed hike odds and pushing Treasury yields higher supports reflation thesis",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Dollar weakness approaching 100 threshold as geopolitical tensions ease",
+        "signal": "Dollar retreating from two-month highs as geopolitical tensions ease, approaching DXY 100 threshold",
         "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Oil markets stabilizing rather than spiking despite ongoing supply disruption concerns",
-        "tag": "CONTRADICTS"
+        "signal": "Treasury yields holding firm despite risk-off unwinding, supporting reflation thesis",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold finding support on ceasefire optimism despite rising yields shows risk-off demand fading",
-        "tag": "NEUTRAL"
+        "signal": "Gold falling on rising Treasury yields and reduced safe-haven demand",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Asia stocks rebounding on dip buying suggests risk appetite returning",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor DXY closely at 100 level - break below could signal dollar regime shift invalidating current setup",
-      "Reassess oil shock assumption in regime thesis as Iran-Israel tensions de-escalate",
-      "BMNR ladder may benefit from crypto weakness but watch for further ETH deterioration below $1700"
+      "Monitor oil prices closely - sustained decline below war premium levels challenges stagflation setup",
+      "Watch DXY 100 level - breach could signal dollar regime shift invalidating reflation framework",
+      "Consider tightening BMNR put ladder strikes if crypto volatility persists amid macro uncertainty"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar retreats from two-month high as Gulf tensions ease; rate hike bets rise",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T05:55:26+00:00",
+      "timeDisplay": "5:55 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H03I:0-dollar-retreats-from-two-month-high-as-gulf-tensions-ease-rate-hike-bets-rise/"
+    },
+    {
+      "title": "U.S. Treasury Yields Little Changed \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T05:39:00+00:00",
+      "timeDisplay": "5:39 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000287:0/"
+    },
+    {
+      "title": "Asia stocks rebound on dip buying, bonds lag",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T05:32:16+00:00",
+      "timeDisplay": "5:32 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H02H:0-asia-stocks-rebound-on-dip-buying-bonds-lag/"
+    },
+    {
+      "title": "Bitcoin price prediction: will CPI trigger a rally to $70K or crash to $60K?",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T05:25:11+00:00",
+      "timeDisplay": "5:25 AM",
+      "link": "https://www.tradingview.com/news/invezz:4d1419f27094b:0-bitcoin-price-prediction-will-cpi-trigger-a-rally-to-70k-or-crash-to-60k/"
+    },
+    {
+      "title": "Bitcoin Falls; Focus on Mideast Developments, U.S. Inflation Data \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T04:18:00+00:00",
+      "timeDisplay": "4:18 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000029:0/"
+    },
+    {
+      "title": "Gold steady as traders weigh Israel-Iran ceasefire, inflation risks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T04:11:27+00:00",
+      "timeDisplay": "4:11 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H035:0-gold-steady-as-traders-weigh-israel-iran-ceasefire-inflation-risks/"
+    },
+    {
+      "title": "China's yuan firms on softer dollar, solid trade data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T03:42:02+00:00",
+      "timeDisplay": "3:42 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42H08O:0-china-s-yuan-firms-on-softer-dollar-solid-trade-data/"
+    },
+    {
+      "title": "Bitcoin Price Will Dump to $50K in the Next 30 Days If This Happens",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T03:17:59+00:00",
+      "timeDisplay": "3:17 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:d9d4f4604094b:0-bitcoin-price-will-dump-to-50k-in-the-next-30-days-if-this-happens/"
+    },
+    {
+      "title": "Gold steadies as traders weigh Israel-Iran ceasefire, inflation risks",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T02:41:42+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H01B:0-gold-steadies-as-traders-weigh-israel-iran-ceasefire-inflation-risks/"
+    },
+    {
+      "title": "US 10-Year Yield Holds Firm",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T02:26:18+00:00",
+      "timeDisplay": "2:26 AM",
+      "link": "https://www.tradingview.com/news/te_news:557441:0-us-10-year-yield-holds-firm/"
+    },
+    {
+      "title": "Commodities intraday targets/key levels",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T01:54:40+00:00",
+      "timeDisplay": "1:54 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H01D:0-commodities-intraday-targets-key-levels/"
+    },
+    {
+      "title": "Ethereum Price Rebound Runs Out Of Fuel Near Key Resistance",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T01:48:32+00:00",
+      "timeDisplay": "1:48 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:07d3a1664094b:0-ethereum-price-rebound-runs-out-of-fuel-near-key-resistance/"
+    },
+    {
+      "title": "Dollar Eases as Iran and Israel Halt Strikes",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T01:41:28+00:00",
+      "timeDisplay": "1:41 AM",
+      "link": "https://www.tradingview.com/news/te_news:557418:0-dollar-eases-as-iran-and-israel-halt-strikes/"
+    },
     {
       "title": "Dollar hovers around two-month high as Iran-Israel truce hangs in balance",
       "source": "reuters",
@@ -239,6 +343,14 @@
       "link": "https://www.tradingview.com/news/gurufocus:4c68707b4094b:0-strategy-coinbase-circle-and-robinhood-lead-crypto-stocks-rally-amid-bitcoin-rebound/"
     },
     {
+      "title": "Dollar Slips as Middle East Tensions Ease Slightly",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:32:09+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/barchart:a9e45d228094b:0-dollar-slips-as-middle-east-tensions-ease-slightly/"
+    },
+    {
       "title": "Bitcoin Recovery Needs This To Happen, Glassnode Analyst Reveals",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -253,6 +365,14 @@
       "timestamp": "2026-06-08T19:22:00+00:00",
       "timeDisplay": "7:22 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260608007026:0/"
+    },
+    {
+      "title": "Crude Oil Prices Edge Higher on Shaky Middle East Ceasefire",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:14:22+00:00",
+      "timeDisplay": "7:14 PM",
+      "link": "https://www.tradingview.com/news/barchart:6031e0a62094b:0-crude-oil-prices-edge-higher-on-shaky-middle-east-ceasefire/"
     },
     {
       "title": "Institutional Conviction Remains Strong Despite Bitcoin Downturn, According to Coinbase Executive",
@@ -359,14 +479,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:bfdc9c102094b:0-why-are-bitcoin-ethereum-and-xrp-prices-going-up-today/"
     },
     {
-      "title": "Strategy (MSTR) stock rises as company resumes Bitcoin buying spree",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T16:07:57+00:00",
-      "timeDisplay": "4:07 PM",
-      "link": "https://www.tradingview.com/news/invezz:97d022de9094b:0-strategy-mstr-stock-rises-as-company-resumes-bitcoin-buying-spree/"
-    },
-    {
       "title": "BitMine Nears 5% Of ETH Supply With 5.5M Stack As Ether Falls 27% On Month",
       "source": "stocktwits",
       "color": "#00e5ff",
@@ -389,14 +501,6 @@
       "timestamp": "2026-06-08T15:57:28+00:00",
       "timeDisplay": "3:57 PM",
       "link": "https://www.tradingview.com/news/te_news:557347:0-crude-oil-holds-below-session-peaks/"
-    },
-    {
-      "title": "Strategy Offers Semi-Monthly Dividend On Preferred Stock",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:44:00+00:00",
-      "timeDisplay": "3:44 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:a5edacf16094b:0-strategy-offers-semi-monthly-dividend-on-preferred-stock/"
     },
     {
       "title": "Gold Falls Below 200-Day Moving Average \u2014 Market Talk",
@@ -541,110 +645,6 @@
       "timestamp": "2026-06-08T15:00:00+00:00",
       "timeDisplay": "3:00 PM",
       "link": "https://www.tradingview.com/news/macenews:74e41e80f094b:0-us-new-york-fed-consumer-expected-1-year-home-price-rise-3-5-in-may-3-1-in-april-3-3-in-march-3-0-in-february/"
-    },
-    {
-      "title": "Cryptos Rebound After Weekend Crash",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:58:46+00:00",
-      "timeDisplay": "2:58 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:edbc8c24636fb:0-cryptos-rebound-after-weekend-crash/"
-    },
-    {
-      "title": "Dollar Falls Back as Stocks Recover",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:28:54+00:00",
-      "timeDisplay": "2:28 PM",
-      "link": "https://www.tradingview.com/news/barchart:60c2e14ac094b:0-dollar-falls-back-as-stocks-recover/"
-    },
-    {
-      "title": "Ethereum Bears Could Be Trapped: ETH Liquidation Map Hints at a Major Short Squeeze",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:22:08+00:00",
-      "timeDisplay": "2:22 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:0f187ab9c094b:0-ethereum-bears-could-be-trapped-eth-liquidation-map-hints-at-a-major-short-squeeze/"
-    },
-    {
-      "title": "NY Engelhard Gold Prices - June 8",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:21:00+00:00",
-      "timeDisplay": "2:21 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608004746:0/"
-    },
-    {
-      "title": "US CONFERENCE BOARD EMPLOYMENT TRENDS INDEX 107.1 IN MAY FROM 107.88 IN APRIL; 5 OF 8 COMPONENTS DOWN,SUGGESTS WEAKER OUTLOOK DESPITE MAY PAYROLL JUMP",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T14:05:00+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/macenews:84657f87d094b:0-us-conference-board-employment-trends-index-107-1-in-may-from-107-88-in-april-5-of-8-components-down-suggests-weaker-outlook-despite-may-payroll-jump/"
-    },
-    {
-      "title": "Bitmine adds 127,000 ether, bringing treasury to 5.54 million ETH as Tom Lee calls crypto selloff \u2018superficial\u2019",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:52:01+00:00",
-      "timeDisplay": "1:52 PM",
-      "link": "https://www.tradingview.com/news/the_block:b39096d2b094b:0-bitmine-adds-127-000-ether-bringing-treasury-to-5-54-million-eth-as-tom-lee-calls-crypto-selloff-superficial/"
-    },
-    {
-      "title": "Gold erases losses after ceasefire hopes emerge; strong US jobs data caps gains",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T13:51:41+00:00",
-      "timeDisplay": "1:51 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0EE:0-gold-erases-losses-after-ceasefire-hopes-emerge-strong-us-jobs-data-caps-gains/"
-    },
-    {
-      "title": "Crypto Shows Turnaround After Prolonged Losing Streak \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:40:00+00:00",
-      "timeDisplay": "1:40 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608004435:0/"
-    },
-    {
-      "title": "CNN FROM TEHRAN: SOME SLIGHT SIGNS OF IRAN-ISRAELI DE-ESCALATION AFTER LATEST ROUND OF MUTUAL RETALIATORY STRIKES DESPITE PRES TRUMP'S ORDER TO STOP",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:36:00+00:00",
-      "timeDisplay": "1:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:d8c8708a2094b:0-cnn-from-tehran-some-slight-signs-of-iran-israeli-de-escalation-after-latest-round-of-mutual-retaliatory-strikes-despite-pres-trump-s-order-to-stop/"
-    },
-    {
-      "title": "Comex Gold Delivery Intentions Breakdown - Jun 8",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T13:15:00+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608004220:0/"
-    },
-    {
-      "title": "Gold Remains Close to Over Two-Month Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:57:26+00:00",
-      "timeDisplay": "12:57 PM",
-      "link": "https://www.tradingview.com/news/te_news:557300:0-gold-remains-close-to-over-two-month-low/"
-    },
-    {
-      "title": "Bitmine Immersion Technologies (BMNR) Announces ETH Holdings Reach 5.54 Million Tokens, and Total Crypto and Total Cash Holdings of $9.6 Billion",
-      "source": "chainwire",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:55:13+00:00",
-      "timeDisplay": "12:55 PM",
-      "link": "https://www.tradingview.com/news/chainwire:554c34ad1094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-5-54-million-tokens-and-total-crypto-and-total-cash-holdings-of-9-6-billion/"
-    },
-    {
-      "title": "Bitmine Immersion Technologies Adds 126,971 ETH, Reports 5,543,872 ETH Holdings",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:33:50+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/binance_news:9602bdf59094b:0-bitmine-immersion-technologies-adds-126-971-eth-reports-5-543-872-eth-holdings/"
     }
   ]
 }

@@ -1,51 +1,123 @@
 {
-  "lastUpdated": "2026-06-09T17:59:28.451579+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 05:59 PM UTC",
+  "lastUpdated": "2026-06-09T20:14:49.022273+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 08:14 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show clear risk-off behavior with Bitcoin crashing toward $59-62K lows, oil falling over 3.5% on easing Middle East tensions and weak China demand, and gold declining ahead of US inflation data. However, existing home sales rose 3.2% to 4.17M units in May, beating expectations and showing housing market resilience.",
+    "macroSummary": "Markets show broad risk-off sentiment with tech-led equity selling, crypto weakness as Bitcoin searches for a bottom near $59-62K, and oil falling over 3.5% on hopes for Middle East ceasefire progress and rising Hormuz flows. Gold drops over 1% on rate hike fears ahead of US inflation data, while yields slip and the dollar eases on fragile Israel-Iran truce expectations.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Risk assets are selling off sharply with crypto weakness following equities, oil collapsing on reduced geopolitical premium, and gold falling despite reflation concerns - all suggesting risk-off dynamics rather than bullish-cyclical behavior.",
+    "regimePressureReason": "Risk-off dynamics are emerging across equities, crypto, and commodities with oil collapsing on ceasefire hopes, contradicting the embedded Iran-war oil shock assumption in the Reflation regime.",
     "thresholdWatches": [
       {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "Multiple references to risk-off pressure spreading and equity selling suggest potential VIX spike"
+        "indicator": "Oil (WTI)",
+        "level": "Falling toward $115 threshold",
+        "signal": "Oil extends losses, falling more than 3.5% on Middle East deal hopes and rising Hormuz flows"
       }
     ],
     "keySignals": [
       {
-        "signal": "Bitcoin acting as 'canary in the coal mine' with sharp selloff to $59-62K levels amid broad crypto weakness",
+        "signal": "Oil falling sharply on Middle East ceasefire hopes and rising Hormuz flows contradicts embedded Iran-war oil shock premise",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil falling over 3.5% on easing Iran-Israel tensions and weak China demand, removing geopolitical premium",
+        "signal": "Broad risk-off across equities, crypto, and risk assets suggests potential regime shift from Reflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Cryptocurrency weakness explicitly following selling in equities suggests coordinated risk-off move",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Existing home sales beat expectations at 4.17M units (+3.2% MoM) with improving affordability driving demand",
+        "signal": "Gold dropping over 1% on rate hike fears ahead of inflation data aligns with Reflation concerns",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Treasury yields edging down as traders await inflation data, suggesting bond market stabilization",
-        "tag": "NEUTRAL"
+        "signal": "Dollar easing on fragile Israel-Iran truce expectations reduces geopolitical risk premium",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Bitcoin weakness and search for bottom signals broader risk asset stress",
+        "tag": "THRESHOLD_WATCH"
       }
     ],
     "actionItems": [
-      "Monitor VIX levels closely - if approaching 22, prepare for regime flip to Risk-Off",
-      "Consider reducing BMNR exposure if crypto weakness accelerates alongside equity selling",
-      "Watch oil price action - sustained weakness below current levels would undermine stagflation thesis"
+      "Monitor oil prices closely - sustained break toward $115 threshold would invalidate Iran-war shock assumption",
+      "Reassess BMNR ladder sizing given crypto weakness spreading to broader risk-off sentiment",
+      "Watch for VIX approaching 22 level as equity selling accelerates"
     ]
   },
   "articles": [
+    {
+      "title": "Cryptocurrency Traders Look for Bitcoin Bottom \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T20:09:00+00:00",
+      "timeDisplay": "8:09 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609007011:0/"
+    },
+    {
+      "title": "S&P 500, Nasdaq fall as tech selling resumes, Trump vows to react to downed US helicopter",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T20:00:54+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H16Z:0-s-p-500-nasdaq-fall-as-tech-selling-resumes-trump-vows-to-react-to-downed-us-helicopter/"
+    },
+    {
+      "title": "Cattle Climbs as Crude Oil Falls \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:36:00+00:00",
+      "timeDisplay": "7:36 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609006622:0/"
+    },
+    {
+      "title": "Barclays Oil Price Outlook Contingent on Hormuz Reopening \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:32:00+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609006609:0/"
+    },
+    {
+      "title": "Arthur Hayes Warns AI Stock Crash Could Hit Crypto Before BTC Rebounds",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:00:00+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:699f72628094b:0-arthur-hayes-warns-ai-stock-crash-could-hit-crypto-before-btc-rebounds/"
+    },
+    {
+      "title": "Oil Settles Lower on Continued Hopes for Middle East Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:00:00+00:00",
+      "timeDisplay": "7:00 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609006473:0/"
+    },
+    {
+      "title": "Yields slip as traders await inflation data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T18:55:34+00:00",
+      "timeDisplay": "6:55 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H0RI:0-yields-slip-as-traders-await-inflation-data/"
+    },
+    {
+      "title": "IRAN UPDATE: AS US MILITARY DETERMINES WHETHER IRAN SHOOTDOWN OF APACHE HELICOPTER WAS DELIBERATE, PRES TRUMP POSTS USA 'MUST, OF NECESSITY' RETALIATE",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T18:48:00+00:00",
+      "timeDisplay": "6:48 PM",
+      "link": "https://www.tradingview.com/news/macenews:b919d64ca094b:0-iran-update-as-us-military-determines-whether-iran-shootdown-of-apache-helicopter-was-deliberate-pres-trump-posts-usa-must-of-necessity-retaliate/"
+    },
+    {
+      "title": "Gold slips over 1% on rate-hike fears ahead of U.S. inflation data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T17:59:21+00:00",
+      "timeDisplay": "5:59 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H0QW:0-gold-slips-over-1-on-rate-hike-fears-ahead-of-u-s-inflation-data/"
+    },
     {
       "title": "Bitcoin may act as a \u2018canary in the coal mine\u2019 as risk-off pressure spreads: Bitwise",
       "source": "cointelegraph",
@@ -263,14 +335,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260609004526:0/"
     },
     {
-      "title": "Yields slip as traders await inflation data",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T14:05:31+00:00",
-      "timeDisplay": "2:05 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H0GZ:0-yields-slip-as-traders-await-inflation-data/"
-    },
-    {
       "title": "Oil Falls on Easing War Risks and Weak China Demand",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -439,22 +503,6 @@
       "link": "https://www.tradingview.com/news/stocktwits:23333bf3b094b:0-arthur-hayes-bets-the-ai-bubble-will-pop-and-drag-bitcoin-down-here-s-why-he-dumped-hype-near-zec-and-wld/"
     },
     {
-      "title": "Backpack US appoints former SEC Acting Chairman Piwowar to board amid push for crypto perps",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T13:05:03+00:00",
-      "timeDisplay": "1:05 PM",
-      "link": "https://www.tradingview.com/news/the_block:c7843c3ad094b:0-backpack-us-appoints-former-sec-acting-chairman-piwowar-to-board-amid-push-for-crypto-perps/"
-    },
-    {
-      "title": "Not $60,000: Analyst Reveals The Best Time To Actually Start Buying Bitcoin",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T13:00:55+00:00",
-      "timeDisplay": "1:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:8f1cd9b4c094b:0-not-60-000-analyst-reveals-the-best-time-to-actually-start-buying-bitcoin/"
-    },
-    {
       "title": "Ethereum Price Just Entered a \u2018High Conviction\u2019 Buy Zone \u2014 Here\u2019s Why Long-Term Buyers Are Watching",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -527,14 +575,6 @@
       "link": "https://www.tradingview.com/news/macenews:a14d73026094b:0-more-u-s-april-trade-goods-imports-6-4-billion-to-304-9-billion/"
     },
     {
-      "title": "MORE U.S. APRIL TRADE: SERVICES SURPLUS -$1.7 BILLION TO $27.8 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:35:00+00:00",
-      "timeDisplay": "12:35 PM",
-      "link": "https://www.tradingview.com/news/macenews:06b3ca8f1094b:0-more-u-s-april-trade-services-surplus-1-7-billion-to-27-8-billion/"
-    },
-    {
       "title": "Gold inches higher as oil falls, US rate-hike fears cap gains",
       "source": "reuters",
       "color": "#ff6d00",
@@ -605,46 +645,6 @@
       "timestamp": "2026-06-09T10:13:19+00:00",
       "timeDisplay": "10:13 AM",
       "link": "https://www.tradingview.com/news/the_block:ac0457924094b:0-stuck-in-distribution-bitcoin-slips-below-63-000-as-analysts-warn-rallies-are-being-sold-not-bought/"
-    },
-    {
-      "title": "MetaMask Unveils New A.I. Agent Wallet",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T09:22:00+00:00",
-      "timeDisplay": "9:22 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:35acd076c094b:0-metamask-unveils-new-a-i-agent-wallet/"
-    },
-    {
-      "title": "Gold steady as lower oil offsets US rate-hike fears",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T09:13:06+00:00",
-      "timeDisplay": "9:13 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H088:0-gold-steady-as-lower-oil-offsets-us-rate-hike-fears/"
-    },
-    {
-      "title": "A Few Reasons to Buy the Dip in AI & Chip ETFs",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T08:30:00+00:00",
-      "timeDisplay": "8:30 AM",
-      "link": "https://www.tradingview.com/news/zacks:3220100f8094b:0-a-few-reasons-to-buy-the-dip-in-ai-chip-etfs/"
-    },
-    {
-      "title": "Near-Term Backdrop for Gold Appears Less Supportive \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T08:19:00+00:00",
-      "timeDisplay": "8:19 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609001248:0/"
-    },
-    {
-      "title": "Crypto News Today (June 9): BTC Holding $63K, Humanity Protocol Hacked for $32M, Ethereum ETFs Turn Green",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T08:14:59+00:00",
-      "timeDisplay": "8:14 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:d084879c6094b:0-crypto-news-today-june-9-btc-holding-63k-humanity-protocol-hacked-for-32m-ethereum-etfs-turn-green/"
     }
   ]
 }

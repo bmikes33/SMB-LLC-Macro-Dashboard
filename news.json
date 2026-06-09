@@ -1,58 +1,90 @@
 {
-  "lastUpdated": "2026-06-09T22:04:57.550880+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 10:04 PM UTC",
+  "lastUpdated": "2026-06-09T23:50:37.621655+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 11:50 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show risk-off pressure with tech selling resuming, Bitcoin falling toward key support levels, and gold declining on rate hike fears ahead of US inflation data. Middle East tensions escalate with Trump ordering retaliatory strikes on Iran after helicopter downing, though oil prices paradoxically fell over 3.5% on truce hopes and demand concerns.",
-    "regimePressure": "PRESSURING",
-    "regimePressureReason": "Risk-off behavior across equities, crypto, and gold contradicts the bullish-cyclicals bias, while oil's sharp decline despite Iran escalation suggests reflation pressures may be easing.",
+    "macroSummary": "Markets show mixed signals with US-Iran military tensions escalating after helicopter downing, driving oil volatility despite hopes for Middle East deal. Equities and crypto face selling pressure while dollar weakens on Trump reassurances, with traders positioning ahead of key US inflation data.",
+    "regimePressure": "MIXED",
+    "regimePressureReason": "Iran escalation supports oil shock thesis but dollar weakness and falling yields contradict reflation pressures, while risk-off flows into crypto/equities create cross-currents.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "falling sharply",
-        "signal": "Oil down 3.5%+ despite Iran military strikes, suggesting supply concerns diminishing"
+        "indicator": "Oil",
+        "level": "approaching $115",
+        "signal": "Multiple oil spikes on Iran strikes and US helicopter downing, though settling lower on deal hopes"
       }
     ],
     "keySignals": [
       {
-        "signal": "S&P 500 and Nasdaq falling as tech selling resumes, indicating broad risk-off sentiment",
+        "signal": "Dollar slipping despite Iran tensions contradicts typical risk-off/reflation dollar strength",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Oil falling over 3.5% despite Trump ordering Iran retaliation, weakening stagflation thesis",
+        "signal": "Yields falling as traders await inflation data suggests bond market not pricing aggressive reflation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin showing extreme fear levels and testing key support, suggesting crypto risk-off spillover",
+        "signal": "Oil volatility on Iran helicopter downing and US retaliatory strikes supports geopolitical oil shock narrative",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Crypto and equity selling pressure with Bitcoin fear at extreme lows indicates risk-off sentiment emerging",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold falling over 1% on rate hike fears ahead of inflation data, indicating hawkish Fed expectations",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Atlanta Fed GDPNow upgraded to 3.3% from 3.0%, showing economic momentum remains strong",
+        "signal": "Atlanta Fed GDPNow raising Q2 growth to 3.3% from 3.0% supports underlying growth momentum",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ETH exposure closely given crypto weakness and potential break of key support levels",
-      "Prepare to reassess bullish-cyclicals bias if risk-off sentiment persists through inflation data",
-      "Watch oil price action for confirmation of supply disruption relief despite military escalation"
+      "Monitor DXY closely for break below 100 as dollar weakness contradicts reflation thesis",
+      "BMNR ladder: Consider reducing cash deployment if crypto weakness persists with broader risk-off",
+      "Watch oil volatility around $115 threshold as Iran situation develops"
     ]
   },
   "articles": [
     {
-      "title": "IRAN UPDATE: CENTCOM ANNOUNCES 'DEFENSIVE' RETALITORY ATTACKS ON IRAN AS ORDERED BY PRES TRUMP AFTER DOWNING OF US HELICOPTER; IRAN SAYS TO RESPOND",
+      "title": "Oil Rises on Escalating Supply Disruption Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T23:35:00+00:00",
+      "timeDisplay": "11:35 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609008642:0/"
+    },
+    {
+      "title": "Bitcoin Stablecoin Ratio Drops To Extreme Low\u2014What It Means For BTC",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T23:30:29+00:00",
+      "timeDisplay": "11:30 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:b39149e5a094b:0-bitcoin-stablecoin-ratio-drops-to-extreme-low-what-it-means-for-btc/"
+    },
+    {
+      "title": "Oil Rises After Fresh US Strikes on Iran",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T23:26:20+00:00",
+      "timeDisplay": "11:26 PM",
+      "link": "https://www.tradingview.com/news/te_news:557793:0-oil-rises-after-fresh-us-strikes-on-iran/"
+    },
+    {
+      "title": "Treasury Stablecoin Proposal Draws Major Warning From Hyperliquid Policy Center\u2013Here\u2019s Why",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T22:34:55+00:00",
+      "timeDisplay": "10:34 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:450afdc1a094b:0-treasury-stablecoin-proposal-draws-major-warning-from-hyperliquid-policy-center-here-s-why/"
+    },
+    {
+      "title": "IRAN UPDATE: CENTCOM ANNOUNCES 'DEFENSIVE' RETALIATORY ATTACKS ON IRAN AS ORDERED BY PRES TRUMP AFTER DOWNING OF US HELICOPTER; IRAN SAYS TO RESPOND",
       "source": "macenews",
       "color": "#00e5ff",
       "timestamp": "2026-06-09T21:50:00+00:00",
       "timeDisplay": "9:50 PM",
-      "link": "https://www.tradingview.com/news/macenews:137313acf094b:0-iran-update-centcom-announces-defensive-retalitory-attacks-on-iran-as-ordered-by-pres-trump-after-downing-of-us-helicopter-iran-says-to-respond/"
+      "link": "https://www.tradingview.com/news/macenews:137313acf094b:0-iran-update-centcom-announces-defensive-retaliatory-attacks-on-iran-as-ordered-by-pres-trump-after-downing-of-us-helicopter-iran-says-to-respond/"
     },
     {
       "title": "ETH crash to $1K looms if key support breaks: Will futures traders step in?",
@@ -303,6 +335,14 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0W4:0-dollar-eases-on-fragile-israel-iran-truce-us-inflation-data-in-view/"
     },
     {
+      "title": "Crude Oil Prices Sink as Israel-Iran Ceasefire Holds",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:37:29+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/barchart:c13f32fb3094b:0-crude-oil-prices-sink-as-israel-iran-ceasefire-holds/"
+    },
+    {
       "title": "Adam Back Warns of Bitcoin Fork Risk Over New Proposal: \u2018Fork Off and Find Out\u2019",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -391,20 +431,20 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260609004767:0/"
     },
     {
+      "title": "Dollar Weakens as Crude Oil Prices Sink",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:37:19+00:00",
+      "timeDisplay": "2:37 PM",
+      "link": "https://www.tradingview.com/news/barchart:ad3c6ea06094b:0-dollar-weakens-as-crude-oil-prices-sink/"
+    },
+    {
       "title": "Bitcoin bottom? These four charts hint at BTC price dropping to $50K",
       "source": "cointelegraph",
       "color": "#00e5ff",
       "timestamp": "2026-06-09T14:33:53+00:00",
       "timeDisplay": "2:33 PM",
       "link": "https://www.tradingview.com/news/cointelegraph:aa748c835094b:0-bitcoin-bottom-these-four-charts-hint-at-btc-price-dropping-to-50k/"
-    },
-    {
-      "title": "Outflows Slow But Don't Stop for Bitcoin ETFs \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:27:00+00:00",
-      "timeDisplay": "2:27 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609004655:0/"
     },
     {
       "title": "More Than Oil Prices Driving Canadian Export Strength \u2014 Market Talk",
@@ -605,46 +645,6 @@
       "timestamp": "2026-06-09T12:39:00+00:00",
       "timeDisplay": "12:39 PM",
       "link": "https://www.tradingview.com/news/macenews:a30f989a3094b:0-more-u-s-april-trade-china-deficit-falls-to-12-024-billion-from-14-635-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL TRADE: CAPITAL GOODS EXPORTS +$4.0 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:37:00+00:00",
-      "timeDisplay": "12:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:867237ea7094b:0-more-u-s-april-trade-capital-goods-exports-4-0-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL TRADE: FUEL OIL EXPORTS +$1.3 BILLION; TOTAL INDUSTRIAL SUPPLIES EXPORTS +$2.5 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:37:00+00:00",
-      "timeDisplay": "12:37 PM",
-      "link": "https://www.tradingview.com/news/macenews:a1bcbc691094b:0-more-u-s-april-trade-fuel-oil-exports-1-3-billion-total-industrial-supplies-exports-2-5-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL TRADE: CAPITAL GOODS IMPORTS $7.0 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:8031a171d094b:0-more-u-s-april-trade-capital-goods-imports-7-0-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL TRADE: COMPUTER IMPORTS +$2.2 BILLION, SEMICONDUCTOR IMPORTS +$1.7 BILLION, TELECOMS EQUIPMENT +$1.6 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:36:00+00:00",
-      "timeDisplay": "12:36 PM",
-      "link": "https://www.tradingview.com/news/macenews:234ee71d6094b:0-more-u-s-april-trade-computer-imports-2-2-billion-semiconductor-imports-1-7-billion-telecoms-equipment-1-6-billion/"
-    },
-    {
-      "title": "Gold inches higher as oil falls, US rate-hike fears cap gains",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T12:19:09+00:00",
-      "timeDisplay": "12:19 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H0CP:0-gold-inches-higher-as-oil-falls-us-rate-hike-fears-cap-gains/"
     }
   ]
 }

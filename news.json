@@ -1,51 +1,149 @@
 {
-  "lastUpdated": "2026-06-09T05:56:13.956141+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 05:56 AM UTC",
+  "lastUpdated": "2026-06-09T08:57:02.933490+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 08:57 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show tentative stabilization as Iran-Israel tensions ease with both sides signaling a pause in strikes, though inflation concerns persist with focus on upcoming U.S. CPI data. Dollar retreats from two-month highs while Treasury yields hold firm, and crypto markets remain volatile with Bitcoin struggling near $63-64K resistance.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Geopolitical risk premium unwinding as Iran-Israel tensions ease contradicts the oil shock embedded in current regime, while persistent inflation concerns and firm Treasury yields support the reflation thesis.",
-    "thresholdWatches": [
-      {
-        "indicator": "DXY",
-        "level": "100",
-        "signal": "Dollar index slips to 100.042, approaching the regime flip threshold as war premium fades"
-      }
-    ],
+    "macroSummary": "Middle East tensions are easing as Israel and Iran halt attacks, leading to dollar weakness and reduced oil prices. Market focus is shifting to upcoming US inflation data, while gold and Bitcoin struggle with mixed signals from geopolitical developments and rate expectations.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "The halt in Iran-Israel strikes is unwinding the war premium that was a key pillar of the reflation thesis, with oil falling and the dollar retreating from highs.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Iran-Israel ceasefire optimism reduces oil supply disruption premium, contradicting embedded war shock assumption",
+        "signal": "Oil prices falling as Israel-Iran conflict deescalates, removing war premium that supported reflation narrative",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar retreating from two-month highs as geopolitical tensions ease, approaching DXY 100 threshold",
-        "tag": "THRESHOLD_WATCH"
+        "signal": "Dollar retreating from two-month highs as Middle East tensions ease, moving away from DXY 100 threshold",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury yields holding firm despite risk-off unwinding, supporting reflation thesis",
+        "signal": "Gold falling on rising Treasury yields despite geopolitical uncertainty, suggesting inflation concerns outweigh safe haven demand",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold falling on rising Treasury yields and reduced safe-haven demand",
-        "tag": "SUPPORTS"
+        "signal": "Bitcoin struggling below $64K resistance despite rebound attempts, indicating risk appetite remains constrained",
+        "tag": "NEUTRAL"
       },
       {
-        "signal": "Asia stocks rebounding on dip buying suggests risk appetite returning",
-        "tag": "SUPPORTS"
+        "signal": "Market focus shifting to US CPI data this week as geopolitical premium fades",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained decline below war premium levels challenges stagflation setup",
-      "Watch DXY 100 level - breach could signal dollar regime shift invalidating reflation framework",
-      "Consider tightening BMNR put ladder strikes if crypto volatility persists amid macro uncertainty"
+      "Monitor oil prices closely - sustained weakness below recent highs could signal reflation thesis cracking",
+      "Watch DXY behavior near current levels - continued retreat suggests dollar strength narrative may be reversing",
+      "Prepare for CPI volatility in BMNR ladder - geopolitical premium fade puts more weight on inflation data"
     ]
   },
   "articles": [
+    {
+      "title": "Near-Term Backdrop for Gold Appears Less Supportive \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T08:19:00+00:00",
+      "timeDisplay": "8:19 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609001248:0/"
+    },
+    {
+      "title": "Gold Edges Lower as Traders Await Clarity on Middle East \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T07:54:00+00:00",
+      "timeDisplay": "7:54 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609001105:0/"
+    },
+    {
+      "title": "Oil Falls After Israel, Iran Halt Attacks That Threatened Peace Talks \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T07:50:00+00:00",
+      "timeDisplay": "7:50 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609001097:0/"
+    },
+    {
+      "title": "Dollar eases as investors weigh Middle East hopes, rate outlook",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T07:46:25+00:00",
+      "timeDisplay": "7:46 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0EZ:0-dollar-eases-as-investors-weigh-middle-east-hopes-rate-outlook/"
+    },
+    {
+      "title": "US dollar slips from recent highs as market focus shifts to inflation data",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T07:45:43+00:00",
+      "timeDisplay": "7:45 AM",
+      "link": "https://www.tradingview.com/news/invezz:d0ac8e1ca094b:0-us-dollar-slips-from-recent-highs-as-market-focus-shifts-to-inflation-data/"
+    },
+    {
+      "title": "Euro Recovers Against Dollar on Improved Risk Sentiment \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T07:16:00+00:00",
+      "timeDisplay": "7:16 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000967:0/"
+    },
+    {
+      "title": "Top Three Altcoins To Stack Amid \u2018Bitcoin is Dead\u2019 Narrative",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:56:21+00:00",
+      "timeDisplay": "6:56 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:37166b2b3094b:0-top-three-altcoins-to-stack-amid-bitcoin-is-dead-narrative/"
+    },
+    {
+      "title": "Bitcoin Falls Slightly as It Struggles to Recover From Recent Selloff \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:50:00+00:00",
+      "timeDisplay": "6:50 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000806:0/"
+    },
+    {
+      "title": "Dollar Falls After Iran, Israel Halt Strikes \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:31:00+00:00",
+      "timeDisplay": "6:31 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000711:0/"
+    },
+    {
+      "title": "Gold rises on weaker oil; inflation, rate outlook in focus",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T06:24:14+00:00",
+      "timeDisplay": "6:24 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H05Q:0-gold-rises-on-weaker-oil-inflation-rate-outlook-in-focus/"
+    },
+    {
+      "title": "Bitcoin rebound highlights discount but $162M bid liquidity points to downside risk",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:15:15+00:00",
+      "timeDisplay": "6:15 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3ce3d1e7e094b:0-bitcoin-rebound-highlights-discount-but-162m-bid-liquidity-points-to-downside-risk/"
+    },
+    {
+      "title": "US CPI Data is Critical for Bitcoin and Gold This Week",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:01:46+00:00",
+      "timeDisplay": "6:01 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:b09f39681094b:0-us-cpi-data-is-critical-for-bitcoin-and-gold-this-week/"
+    },
+    {
+      "title": "Bitmine Makes Largest Ethereum Purchase Of 2026 As Tom Lee Dismisses Market Selloff",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T06:00:56+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:4ed9a4fe6094b:0-bitmine-makes-largest-ethereum-purchase-of-2026-as-tom-lee-dismisses-market-selloff/"
+    },
     {
       "title": "Dollar retreats from two-month high as Gulf tensions ease; rate hike bets rise",
       "source": "reuters",
@@ -431,14 +529,6 @@
       "link": "https://www.tradingview.com/news/bravenewcoin:e03e592c2094b:0/"
     },
     {
-      "title": "Strategy Buys $101 Million Worth of Bitcoin. It's a Good Sign for Crypto. \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T17:33:00+00:00",
-      "timeDisplay": "5:33 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608003923:0/"
-    },
-    {
       "title": "US 10-Year Yield Resumes Increase",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -461,14 +551,6 @@
       "timestamp": "2026-06-08T16:24:45+00:00",
       "timeDisplay": "4:24 PM",
       "link": "https://www.tradingview.com/news/barchart:9f8b19d1e094b:0-crude-oil-strength-lifts-ethanol-and-sugar-prices/"
-    },
-    {
-      "title": "Bitcoin's dull year may signal market maturity, Bernstein says",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T16:23:04+00:00",
-      "timeDisplay": "4:23 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0OY:0-bitcoin-s-dull-year-may-signal-market-maturity-bernstein-says/"
     },
     {
       "title": "Why are Bitcoin, Ethereum and XRP Prices Going Up Today?",
@@ -557,94 +639,6 @@
       "timestamp": "2026-06-08T15:00:00+00:00",
       "timeDisplay": "3:00 PM",
       "link": "https://www.tradingview.com/news/macenews:1db5d828f094b:0-us-new-york-fed-consumer-1-year-food-price-rise-expectation-5-8-in-may-5-2-in-april-6-0-in-march-5-3-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR GAS PRICE RISE EXPECTATION 5.0% IN MAY, 5.1% IN APRIL, 9.4% IN MARCH, 4.1% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:a90c01f67094b:0-us-new-york-fed-consumer-1-year-gas-price-rise-expectation-5-0-in-may-5-1-in-april-9-4-in-march-4-1-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR HOUSEHOLD INCOME GROWTH EXPECTATION 2.8% IN MAY, 2.8% IN APRIL, 2.9% IN MARCH, 2.9% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:e75503a96094b:0-us-new-york-fed-consumer-1-year-household-income-growth-expectation-2-8-in-may-2-8-in-april-2-9-in-march-2-9-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR HOUSEHOLD SPENDING GROWTH EXPECTATION 5.0% IN MAY, 5.4% IN APRIL, 5.1% IN MARCH, 4.9% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:ce1664baf094b:0-us-new-york-fed-consumer-1-year-household-spending-growth-expectation-5-0-in-may-5-4-in-april-5-1-in-march-4-9-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR INFLATION EXPECTATION 3.46% IN MAY, 3.64% IN APRIL, 3.42% IN MARCH, 3.00% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:3f38a4baf094b:0-us-new-york-fed-consumer-1-year-inflation-expectation-3-46-in-may-3-64-in-april-3-42-in-march-3-00-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR JOB LOSS EXPECTATION 15.1% IN MAY, 14.6% IN APRIL, 14.4% IN MARCH, 13.8% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:807ba3f5c094b:0-us-new-york-fed-consumer-1-year-job-loss-expectation-15-1-in-may-14-6-in-april-14-4-in-march-13-8-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR JOB QUIT EXPECTATION 20.8% IN MAY, 18.2% IN APRIL, 18.3% IN MARCH, 15.9% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:281eea4be094b:0-us-new-york-fed-consumer-1-year-job-quit-expectation-20-8-in-may-18-2-in-april-18-3-in-march-15-9-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR MEDICAL PRICE INCREASE EXPECTATION 8.9% IN MAY, 9.6% IN APRIL, 9.7% IN MARCH, 9.7% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:e97611c67094b:0-us-new-york-fed-consumer-1-year-medical-price-increase-expectation-8-9-in-may-9-6-in-april-9-7-in-march-9-7-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR RENT PRICE INCREASE EXPECTATION 7.4% IN MAY, 6.0% IN APRIL, 7.1% IN MARCH, 5.9% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:d8afe88cb094b:0-us-new-york-fed-consumer-1-year-rent-price-increase-expectation-7-4-in-may-6-0-in-april-7-1-in-march-5-9-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 3-YEAR INFLATION EXPECTATION 3.13% IN MAY, 3.15% IN APRIL, 3.08% IN MARCH, 3.00% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:608393190094b:0-us-new-york-fed-consumer-3-year-inflation-expectation-3-13-in-may-3-15-in-april-3-08-in-march-3-00-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 5-YEAR INFLATION EXPECTATION 3.02% IN MAY, 3.01% IN APRIL, 3.05% IN MARCH, 2.98% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:572e31b30094b:0-us-new-york-fed-consumer-5-year-inflation-expectation-3-02-in-may-3-01-in-april-3-05-in-march-2-98-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER EXPECTED 1-YEAR HOME PRICE RISE 3.5% IN MAY, 3.1% IN APRIL, 3.3% IN MARCH, 3.0% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:74e41e80f094b:0-us-new-york-fed-consumer-expected-1-year-home-price-rise-3-5-in-may-3-1-in-april-3-3-in-march-3-0-in-february/"
     }
   ]
 }

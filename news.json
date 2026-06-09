@@ -1,51 +1,187 @@
 {
-  "lastUpdated": "2026-06-09T14:12:46.065034+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 02:12 PM UTC",
+  "lastUpdated": "2026-06-09T15:52:11.549195+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 03:52 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US housing data shows existing home sales rising 3.2% with new record-high median prices of $429,300, driven by improving affordability despite ongoing supply constraints. Trade data reveals mixed flows with China deficit narrowing while Canada deficit widens, and gold edges higher amid dollar weakness while oil falls on easing Middle East tensions.",
-    "regimePressure": "MIXED",
-    "regimePressureReason": "Housing strength supports reflation but easing Middle East tensions and falling oil prices work against the Iran-war oil shock embedded in the current regime thesis.",
+    "macroSummary": "Markets are showing risk-off behavior with oil falling over 3.5% on easing Middle East tensions, gold dropping on rate fears, and Bitcoin sliding toward $62K amid ETF outflows. However, US existing home sales beat expectations with a 3.2% increase and home prices hitting new records, while treasury yields edge lower ahead of inflation data.",
+    "regimePressure": "PRESSURING",
+    "regimePressureReason": "Oil's sharp decline on easing war tensions directly contradicts the embedded Iran-war oil shock assumption, while broader risk-off moves in commodities and crypto challenge the bullish-cyclicals bias.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "< $115",
-        "signal": "Oil falling amid easing Middle East tensions pressures the Iran-war oil shock assumption"
+        "signal": "Oil extending losses more than 3.5% as Middle East tensions ease, moving away from stagflation threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "US existing home sales beat expectations at 4.17M units with record median prices, showing housing market resilience",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Markets cheering easing Middle East tensions with oil prices falling challenges the embedded Iran-war oil shock narrative",
+        "signal": "Oil falls over 3.5% as Israel-Iran truce develops and Hormuz flows rise, undermining war premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakening as gold edges higher suggests potential pressure on DXY toward the 100 regime flip threshold",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "China trade deficit narrowing to $12B from $14.6B shows improving trade flows that could ease stagflationary pressures",
+        "signal": "Gold dropping on rate fears while dollar weakens suggests mixed cross-asset signals",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Capital goods exports rising $4B indicates continued industrial activity supporting cyclical equity thesis",
+        "signal": "Bitcoin sliding toward $62K with worst week for short-term holders since 2015 shows risk-off in speculative assets",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US existing home sales beat expectations at 4.17M units with record home prices reflecting supply constraints",
         "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Treasury yields edging down ahead of inflation data suggests some easing in rate pressures",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - falling WTI undermines core Iran-war assumption in current regime",
-      "Watch DXY for approach to 100 threshold as dollar weakness continues",
-      "Consider housing-related cyclicals given strong NAR data beating expectations"
+      "Monitor oil price action closely - sustained decline below war-shock levels may require regime reassessment",
+      "BMNR ladder may benefit from crypto weakness, consider rolling down strikes if BTC continues toward $50K levels",
+      "Watch for confirmation in tomorrow's inflation data - if benign, could accelerate the unwinding of stagflation fears"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar eases on fragile Israel-Iran truce; US inflation data in view",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T15:43:09+00:00",
+      "timeDisplay": "3:43 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0W4:0-dollar-eases-on-fragile-israel-iran-truce-us-inflation-data-in-view/"
+    },
+    {
+      "title": "Gold Futures Fall Further as Rate Fears Prevail \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:28:00+00:00",
+      "timeDisplay": "3:28 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609005113:0/"
+    },
+    {
+      "title": "Oil Extends Losses, Falling More Than 3.5% \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:25:00+00:00",
+      "timeDisplay": "3:25 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609005106:0/"
+    },
+    {
+      "title": "SPR Releases Help Contain Oil Price Rise \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:25:00+00:00",
+      "timeDisplay": "3:25 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609005103:0/"
+    },
+    {
+      "title": "Gold Drops Ahead of US Inflation Data",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:13:42+00:00",
+      "timeDisplay": "3:13 PM",
+      "link": "https://www.tradingview.com/news/te_news:557724:0-gold-drops-ahead-of-us-inflation-data/"
+    },
+    {
+      "title": "The old ball game: Trade balance, home sales, small business sentiment",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T15:13:15+00:00",
+      "timeDisplay": "3:13 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0YM:0-the-old-ball-game-trade-balance-home-sales-small-business-sentiment/"
+    },
+    {
+      "title": "Bitcoin price slips toward $62K local lows as bear-market history keeps repeating",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T15:05:28+00:00",
+      "timeDisplay": "3:05 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:3e3dd779c094b:0-bitcoin-price-slips-toward-62k-local-lows-as-bear-market-history-keeps-repeating/"
+    },
+    {
+      "title": "Treasury Yields Edge Down",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:59:30+00:00",
+      "timeDisplay": "2:59 PM",
+      "link": "https://www.tradingview.com/news/te_news:557720:0-treasury-yields-edge-down/"
+    },
+    {
+      "title": "Flows Through Hormuz Are Rising, Energy Secretary Wright Says \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:53:00+00:00",
+      "timeDisplay": "2:53 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609004821:0/"
+    },
+    {
+      "title": "Govt imports decline since import duty hike in May: Official",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:46:45+00:00",
+      "timeDisplay": "2:46 PM",
+      "link": "https://www.tradingview.com/news/moneycontrol:d1b722d6f094b:0-govt-imports-decline-since-import-duty-hike-in-may-official/"
+    },
+    {
+      "title": "Short-Term BTC Holders Have Worst Week Since 2015 \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:44:00+00:00",
+      "timeDisplay": "2:44 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609004767:0/"
+    },
+    {
+      "title": "Bitcoin bottom? These four charts hint at BTC price dropping to $50K",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:33:53+00:00",
+      "timeDisplay": "2:33 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:aa748c835094b:0-bitcoin-bottom-these-four-charts-hint-at-btc-price-dropping-to-50k/"
+    },
+    {
+      "title": "Outflows Slow But Don't Stop for Bitcoin ETFs \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:27:00+00:00",
+      "timeDisplay": "2:27 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609004655:0/"
+    },
+    {
+      "title": "More Than Oil Prices Driving Canadian Export Strength \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:14:00+00:00",
+      "timeDisplay": "2:14 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609004526:0/"
+    },
+    {
+      "title": "Yields slip as traders await inflation data",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T14:05:31+00:00",
+      "timeDisplay": "2:05 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H0GZ:0-yields-slip-as-traders-await-inflation-data/"
+    },
+    {
+      "title": "Oil Falls on Easing War Risks and Weak China Demand",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:00:04+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/te_news:557705:0-oil-falls-on-easing-war-risks-and-weak-china-demand/"
+    },
+    {
+      "title": "2 ETFs to Watch for Outsized Volume on Water Resource & Small-Cap",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:cd9852741094b:0-2-etfs-to-watch-for-outsized-volume-on-water-resource-small-cap/"
+    },
     {
       "title": "US NAR CHIEF ECONOMIST YUN: \u2018IMPROVING AFFORDABILITY IS HELPING DRIVE\u2019 SALES OF EXISTING HOUSES HIGHER",
       "source": "macenews",
@@ -215,6 +351,14 @@
       "link": "https://www.tradingview.com/news/newsbtc:8f1cd9b4c094b:0-not-60-000-analyst-reveals-the-best-time-to-actually-start-buying-bitcoin/"
     },
     {
+      "title": "Ethereum Price Just Entered a \u2018High Conviction\u2019 Buy Zone \u2014 Here\u2019s Why Long-Term Buyers Are Watching",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T12:52:17+00:00",
+      "timeDisplay": "12:52 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:c3f5126a3094b:0-ethereum-price-just-entered-a-high-conviction-buy-zone-here-s-why-long-term-buyers-are-watching/"
+    },
+    {
       "title": "MORE U.S. APRIL TRADE: CANADA DEFICIT RISES TO $6.151 BILLION FROM $3.710 BILLION",
       "source": "macenews",
       "color": "#00e5ff",
@@ -285,14 +429,6 @@
       "timestamp": "2026-06-09T12:35:00+00:00",
       "timeDisplay": "12:35 PM",
       "link": "https://www.tradingview.com/news/macenews:06b3ca8f1094b:0-more-u-s-april-trade-services-surplus-1-7-billion-to-27-8-billion/"
-    },
-    {
-      "title": "MORE U.S. APRIL TRADE: GOODS DEFICIT -$2.4 BILLION TO $83.7 BILLION",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T12:34:00+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/macenews:dacb8855f094b:0-more-u-s-april-trade-goods-deficit-2-4-billion-to-83-7-billion/"
     },
     {
       "title": "Bitcoin 'normal' 4-year cycle puts focus on $53K low before 2028 BTC price high",
@@ -415,44 +551,20 @@
       "link": "https://www.tradingview.com/news/99Bitcoins:43fe9b43c094b:0-metamask-has-new-ai-agent-wallet-which-lets-bots-trade-your-crypto/"
     },
     {
+      "title": "U.S. Congress Proposes New Tax Rules For Digital Assets",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:18:00+00:00",
+      "timeDisplay": "10:18 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:8d1ee3fad094b:0-u-s-congress-proposes-new-tax-rules-for-digital-assets/"
+    },
+    {
       "title": "\u2018Stuck in distribution\u2019: Bitcoin slips below $63,000 as analysts warn rallies are being sold, not bought",
       "source": "the_block",
       "color": "#00e5ff",
       "timestamp": "2026-06-09T10:13:19+00:00",
       "timeDisplay": "10:13 AM",
       "link": "https://www.tradingview.com/news/the_block:ac0457924094b:0-stuck-in-distribution-bitcoin-slips-below-63-000-as-analysts-warn-rallies-are-being-sold-not-bought/"
-    },
-    {
-      "title": "Bank of Japan\u2019s 1% Rate Hike Could be Critical for Bitcoin",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T10:09:11+00:00",
-      "timeDisplay": "10:09 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:9441d0321094b:0-bank-of-japan-s-1-rate-hike-could-be-critical-for-bitcoin/"
-    },
-    {
-      "title": "US Bitcoin ETFs log further outflows, though analyst sees signs of easing selling pressure",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T09:41:34+00:00",
-      "timeDisplay": "9:41 AM",
-      "link": "https://www.tradingview.com/news/the_block:c414a2a4d094b:0-us-bitcoin-etfs-log-further-outflows-though-analyst-sees-signs-of-easing-selling-pressure/"
-    },
-    {
-      "title": "Hive Digital\u2019s Chief Operating Officer Sells Company Stock",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T09:28:00+00:00",
-      "timeDisplay": "9:28 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:2cbaf439c094b:0-hive-digital-s-chief-operating-officer-sells-company-stock/"
-    },
-    {
-      "title": "Bitcoin Needs Much Weaker Dollar to Stage Decent Recovery \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T09:24:00+00:00",
-      "timeDisplay": "9:24 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609001654:0/"
     },
     {
       "title": "MetaMask Unveils New A.I. Agent Wallet",
@@ -533,118 +645,6 @@
       "timestamp": "2026-06-09T06:00:56+00:00",
       "timeDisplay": "6:00 AM",
       "link": "https://www.tradingview.com/news/newsbtc:4ed9a4fe6094b:0-bitmine-makes-largest-ethereum-purchase-of-2026-as-tom-lee-dismisses-market-selloff/"
-    },
-    {
-      "title": "Beyond Demand, Supply's Pivotal Role in Gold, Silver Prices",
-      "source": "cme_group",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T06:00:00+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/cme_group:a92d6a206094b:0/"
-    },
-    {
-      "title": "U.S. Treasury Yields Little Changed \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T05:39:00+00:00",
-      "timeDisplay": "5:39 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609000287:0/"
-    },
-    {
-      "title": "Gold steady as traders weigh Israel-Iran ceasefire, inflation risks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T04:11:27+00:00",
-      "timeDisplay": "4:11 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H035:0-gold-steady-as-traders-weigh-israel-iran-ceasefire-inflation-risks/"
-    },
-    {
-      "title": "Gold steadies as traders weigh Israel-Iran ceasefire, inflation risks",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T02:41:42+00:00",
-      "timeDisplay": "2:41 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H01B:0-gold-steadies-as-traders-weigh-israel-iran-ceasefire-inflation-risks/"
-    },
-    {
-      "title": "US 10-Year Yield Holds Firm",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T02:26:18+00:00",
-      "timeDisplay": "2:26 AM",
-      "link": "https://www.tradingview.com/news/te_news:557441:0-us-10-year-yield-holds-firm/"
-    },
-    {
-      "title": "Commodities intraday targets/key levels",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T01:54:40+00:00",
-      "timeDisplay": "1:54 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H01D:0-commodities-intraday-targets-key-levels/"
-    },
-    {
-      "title": "Ethereum Price Rebound Runs Out Of Fuel Near Key Resistance",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T01:48:32+00:00",
-      "timeDisplay": "1:48 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:07d3a1664094b:0-ethereum-price-rebound-runs-out-of-fuel-near-key-resistance/"
-    },
-    {
-      "title": "Gold extends falls on rising Treasury yields",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-09T01:20:54+00:00",
-      "timeDisplay": "1:20 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42H01E:0-gold-extends-falls-on-rising-treasury-yields/"
-    },
-    {
-      "title": "Gold's Near-Term Outlook Remains Bearish, Chart Shows \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T00:55:00+00:00",
-      "timeDisplay": "12:55 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608009275:0/"
-    },
-    {
-      "title": "Gold Falls as Geopolitical Tensions Spark Inflation Concerns \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T00:28:00+00:00",
-      "timeDisplay": "12:28 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608009229:0/"
-    },
-    {
-      "title": "\u2018Careful, Or You Will Be On Your Own\u2019 \u2014 Trump Reportedly Tells Netanyahu To Hold Back On Iran Strike Plans",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T00:12:27+00:00",
-      "timeDisplay": "12:12 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:b22f07d53094b:0-careful-or-you-will-be-on-your-own-trump-reportedly-tells-netanyahu-to-hold-back-on-iran-strike-plans/"
-    },
-    {
-      "title": "Ethereum OG Nails The Crash: Sells $188M, Buys Back Lower",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T00:00:58+00:00",
-      "timeDisplay": "12:00 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:69e65d8d7094b:0-ethereum-og-nails-the-crash-sells-188m-buys-back-lower/"
-    },
-    {
-      "title": "Gold Finds Support on Ceasefire Optimism",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T00:00:25+00:00",
-      "timeDisplay": "12:00 AM",
-      "link": "https://www.tradingview.com/news/te_news:557394:0-gold-finds-support-on-ceasefire-optimism/"
-    },
-    {
-      "title": "Oil Steadies as Iran and Israel Halt Strikes",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T23:41:11+00:00",
-      "timeDisplay": "11:41 PM",
-      "link": "https://www.tradingview.com/news/te_news:557391:0-oil-steadies-as-iran-and-israel-halt-strikes/"
     }
   ]
 }

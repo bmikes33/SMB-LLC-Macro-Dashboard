@@ -1,51 +1,131 @@
 {
-  "lastUpdated": "2026-06-09T00:02:41.982689+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 12:02 AM UTC",
+  "lastUpdated": "2026-06-09T01:46:45.611153+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 01:46 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets showed mixed signals as Israel-Iran tensions appeared to pause, leading to dollar weakness and oil paring gains despite still settling higher. US jobs data lifted Fed hike odds and pushed 10-year yields higher, while crypto markets rebounded with institutional buying despite remaining in 'extreme fear' territory.",
+    "macroSummary": "Markets show mixed signals as Iran-Israel tensions ease with reports of halted strikes and Trump urging restraint, leading to dollar weakness and ceasefire optimism supporting gold recovery. However, strong US jobs data is lifting Fed hike odds and pushing Treasury yields higher, while Bitcoin and crypto assets remain under pressure near key technical levels.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran-Israel pause reduces immediate oil shock risk while strong jobs data reinforces Fed hawkishness and rising yields, creating conflicting pressures on the reflation thesis.",
+    "regimePressureReason": "Geopolitical de-escalation contradicts the embedded Iran-war oil shock assumption, while rising Treasury yields and Fed hike expectations support the reflationary backdrop.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil paring gains as Iran-Israel strikes halt, reducing immediate stagflation pressure"
+        "indicator": "DXY",
+        "level": "100",
+        "signal": "Dollar slipped to 100.042 and easing further on Iran-Israel ceasefire news"
       }
     ],
     "keySignals": [
       {
-        "signal": "Dollar weakening as Iran-Israel tensions pause despite strong jobs data",
+        "signal": "Iran-Israel tensions cooling with halted strikes and Trump urging restraint, undermining embedded war premium",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US 10-year yields resuming increase after jobs data lifts Fed hike odds",
+        "signal": "Strong US jobs data lifting Fed hike odds and pushing Treasury yields higher supports reflation thesis",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Oil settling higher but paring gains as geopolitical tensions ease",
-        "tag": "MIXED"
+        "signal": "Dollar weakness approaching 100 threshold as geopolitical tensions ease",
+        "tag": "THRESHOLD_WATCH"
       },
       {
-        "signal": "Gold falling below 200-day moving average despite ceasefire hopes",
-        "tag": "SUPPORTS"
+        "signal": "Oil markets stabilizing rather than spiking despite ongoing supply disruption concerns",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crypto markets rebounding with institutional buying despite remaining in extreme fear",
+        "signal": "Gold finding support on ceasefire optimism despite rising yields shows risk-off demand fading",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - geopolitical premium unwinding could reduce stagflation pressure",
-      "Watch DXY weakness despite strong jobs data for potential regime shift signals",
-      "BMNR ladder may benefit from crypto institutional buying momentum but remain cautious on broader risk environment"
+      "Monitor DXY closely at 100 level - break below could signal dollar regime shift invalidating current setup",
+      "Reassess oil shock assumption in regime thesis as Iran-Israel tensions de-escalate",
+      "BMNR ladder may benefit from crypto weakness but watch for further ETH deterioration below $1700"
     ]
   },
   "articles": [
+    {
+      "title": "Dollar hovers around two-month high as Iran-Israel truce hangs in balance",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T01:31:31+00:00",
+      "timeDisplay": "1:31 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42H029:0-dollar-hovers-around-two-month-high-as-iran-israel-truce-hangs-in-balance/"
+    },
+    {
+      "title": "Gold extends falls on rising Treasury yields",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T01:20:54+00:00",
+      "timeDisplay": "1:20 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42H01E:0-gold-extends-falls-on-rising-treasury-yields/"
+    },
+    {
+      "title": "Bitcoin Price Stumbles Near $64K\u2014Was The Rebound Just A Trap?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T01:07:27+00:00",
+      "timeDisplay": "1:07 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:aa4bab530094b:0-bitcoin-price-stumbles-near-64k-was-the-rebound-just-a-trap/"
+    },
+    {
+      "title": "Bitcoin Crash To $30,000? China Mining Giant Says Strategy Can Survive",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T01:00:47+00:00",
+      "timeDisplay": "1:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:2412ad3f5094b:0-bitcoin-crash-to-30-000-china-mining-giant-says-strategy-can-survive/"
+    },
+    {
+      "title": "Gold's Near-Term Outlook Remains Bearish, Chart Shows \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:55:00+00:00",
+      "timeDisplay": "12:55 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608009275:0/"
+    },
+    {
+      "title": "Gold Falls as Geopolitical Tensions Spark Inflation Concerns \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:28:00+00:00",
+      "timeDisplay": "12:28 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260608009229:0/"
+    },
+    {
+      "title": "Bitcoin(BTC) Drops Below 63,000 USDT with a 0.37% Decrease in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:22:09+00:00",
+      "timeDisplay": "12:22 AM",
+      "link": "https://www.tradingview.com/news/binance_news:94909836e094b:0-bitcoin-btc-drops-below-63-000-usdt-with-a-0-37-decrease-in-24-hours/"
+    },
+    {
+      "title": "\u2018Careful, Or You Will Be On Your Own\u2019 \u2014 Trump Reportedly Tells Netanyahu To Hold Back On Iran Strike Plans",
+      "source": "stocktwits",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:12:27+00:00",
+      "timeDisplay": "12:12 AM",
+      "link": "https://www.tradingview.com/news/stocktwits:b22f07d53094b:0-careful-or-you-will-be-on-your-own-trump-reportedly-tells-netanyahu-to-hold-back-on-iran-strike-plans/"
+    },
+    {
+      "title": "Ethereum OG Nails The Crash: Sells $188M, Buys Back Lower",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:00:58+00:00",
+      "timeDisplay": "12:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:69e65d8d7094b:0-ethereum-og-nails-the-crash-sells-188m-buys-back-lower/"
+    },
+    {
+      "title": "Gold Finds Support on Ceasefire Optimism",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T00:00:25+00:00",
+      "timeDisplay": "12:00 AM",
+      "link": "https://www.tradingview.com/news/te_news:557394:0-gold-finds-support-on-ceasefire-optimism/"
+    },
     {
       "title": "Oil Steadies as Iran and Israel Halt Strikes",
       "source": "trading-economics",
@@ -61,6 +141,14 @@
       "timestamp": "2026-06-08T23:37:00+00:00",
       "timeDisplay": "11:37 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260608009099:0/"
+    },
+    {
+      "title": "Ethereum(ETH) Drops Below 1,700 USDT with a Narrowed 1.22% Increase in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T23:20:16+00:00",
+      "timeDisplay": "11:20 PM",
+      "link": "https://www.tradingview.com/news/binance_news:6acbc83ba094b:0-ethereum-eth-drops-below-1-700-usdt-with-a-narrowed-1-22-increase-in-24-hours/"
     },
     {
       "title": "Bitcoin Bottom Prediction: Top Analyst Says It\u2019s Close\u2014What Price Comes Next?",
@@ -117,6 +205,14 @@
       "timestamp": "2026-06-08T20:01:47+00:00",
       "timeDisplay": "8:01 PM",
       "link": "https://www.tradingview.com/news/beincrypto:56e2ec656094b:0-bitcoin-s-electrical-cost-floor-sits-at-48-694-is-that-the-bottom/"
+    },
+    {
+      "title": "U.S. Dollar Index Slips 0.03% to 100.042 on June 9",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T19:53:41+00:00",
+      "timeDisplay": "7:53 PM",
+      "link": "https://www.tradingview.com/news/binance_news:13647a69b094b:0-u-s-dollar-index-slips-0-03-to-100-042-on-june-9/"
     },
     {
       "title": "Peru election cliffhanger weighs on stocks, Mideast in focus",
@@ -303,36 +399,12 @@
       "link": "https://www.tradingview.com/news/cryptoprowl:a5edacf16094b:0-strategy-offers-semi-monthly-dividend-on-preferred-stock/"
     },
     {
-      "title": "Strategy shareholders approve semi-monthly dividends for STRC preferred stock",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:41:38+00:00",
-      "timeDisplay": "3:41 PM",
-      "link": "https://www.tradingview.com/news/the_block:56e8f2c69094b:0-strategy-shareholders-approve-semi-monthly-dividends-for-strc-preferred-stock/"
-    },
-    {
       "title": "Gold Falls Below 200-Day Moving Average \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-08T15:41:00+00:00",
       "timeDisplay": "3:41 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260608005349:0/"
-    },
-    {
-      "title": "Why Coinbase (COIN) Stock Is Trading Up Today",
-      "source": "stockstory",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:35:49+00:00",
-      "timeDisplay": "3:35 PM",
-      "link": "https://www.tradingview.com/news/stockstory:e0e4545af094b:0-why-coinbase-coin-stock-is-trading-up-today/"
-    },
-    {
-      "title": "KOSPI Crashes 8%, Nikkei Falls 4%, Gold Enters Bear Market \u2014 But Bitcoin's Rarest Bullish Signal Just Flashed as the Most Consequential Week of June Begins",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:34:24+00:00",
-      "timeDisplay": "3:34 PM",
-      "link": "https://www.tradingview.com/news/binance_news:499c25e98094b:0-kospi-crashes-8-nikkei-falls-4-gold-enters-bear-market-but-bitcoin-s-rarest-bullish-signal-just-flashed-as-the-most-consequential-week-of-june-begins/"
     },
     {
       "title": "Renewed Middle East Hostilities Boost Crude Oil Prices",
@@ -349,6 +421,14 @@
       "timestamp": "2026-06-08T15:33:04+00:00",
       "timeDisplay": "3:33 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G0Y0:0-dollar-falls-from-highs-after-iran-halts-israel-strikes-yen-clings-to-160/"
+    },
+    {
+      "title": "Ethereum(ETH) Surpasses 1,700 USDT with a 4.71% Increase in 24 Hours",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-08T15:13:07+00:00",
+      "timeDisplay": "3:13 PM",
+      "link": "https://www.tradingview.com/news/binance_news:bd9d72e5e094b:0-ethereum-eth-surpasses-1-700-usdt-with-a-4-71-increase-in-24-hours/"
     },
     {
       "title": "Analyst Charts Ethereum Long-Term Roadmap To $16,000 \u2013 There\u2019s No Need To Panic",
@@ -559,92 +639,12 @@
       "link": "https://www.tradingview.com/news/chainwire:554c34ad1094b:0-bitmine-immersion-technologies-bmnr-announces-eth-holdings-reach-5-54-million-tokens-and-total-crypto-and-total-cash-holdings-of-9-6-billion/"
     },
     {
-      "title": "Dollar Likely to Fall if Risk Appetite Improves, Fed Avoids Rate Rises \u2014 Market Talk",
-      "source": "dow-jones",
+      "title": "Bitmine Immersion Technologies Adds 126,971 ETH, Reports 5,543,872 ETH Holdings",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:29:00+00:00",
-      "timeDisplay": "12:29 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608003675:0/"
-    },
-    {
-      "title": "US 10-Year Yield Off Session Highs",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:16:50+00:00",
-      "timeDisplay": "12:16 PM",
-      "link": "https://www.tradingview.com/news/te_news:557289:0-us-10-year-yield-off-session-highs/"
-    },
-    {
-      "title": "Key facts: Ether on-chain highs; 31,065.58 ETH bought; Below EMAs",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T12:13:53+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:bb2b81f39d678:0-key-facts-ether-on-chain-highs-31-065-58-eth-bought-below-emas/"
-    },
-    {
-      "title": "WTI Crude Trims Rebound",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T11:49:30+00:00",
-      "timeDisplay": "11:49 AM",
-      "link": "https://www.tradingview.com/news/te_news:557286:0-wti-crude-trims-rebound/"
-    },
-    {
-      "title": "Gold hits more than two-month low as strong US jobs data boosts rate-hike bets",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T11:34:52+00:00",
-      "timeDisplay": "11:34 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0E8:0-gold-hits-more-than-two-month-low-as-strong-us-jobs-data-boosts-rate-hike-bets/"
-    },
-    {
-      "title": "UNDP Brings Ethereum, Cardano, and Stellar Together to Explore Blockchain for Public Good",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T11:33:55+00:00",
-      "timeDisplay": "11:33 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:2ed419997094b:0-undp-brings-ethereum-cardano-and-stellar-together-to-explore-blockchain-for-public-good/"
-    },
-    {
-      "title": "Cryptocurrencies Stabilize After Recent Losses but Recovery is Limited \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T11:04:00+00:00",
-      "timeDisplay": "11:04 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608002796:0/"
-    },
-    {
-      "title": "A Few Reasons to Buy the Dip in AI & Chip ETFs",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T11:00:00+00:00",
-      "timeDisplay": "11:00 AM",
-      "link": "https://www.tradingview.com/news/zacks:3220100f8094b:0-a-few-reasons-to-buy-the-dip-in-ai-chip-etfs/"
-    },
-    {
-      "title": "Markets Fret Over War Clouds, AI Bubble",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T10:54:51+00:00",
-      "timeDisplay": "10:54 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:c9e81fbc38fe1:0-markets-fret-over-war-clouds-ai-bubble/"
-    },
-    {
-      "title": "Trump Says Iran, Israel Looking To Do An Immediate Ceasefire \u2014 But Blockade To Remain In Place",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T10:50:41+00:00",
-      "timeDisplay": "10:50 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:02f882518094b:0-trump-says-iran-israel-looking-to-do-an-immediate-ceasefire-but-blockade-to-remain-in-place/"
-    },
-    {
-      "title": "Bitmine Makes Biggest Ethereum Purchase Of 2026 ",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T09:53:00+00:00",
-      "timeDisplay": "9:53 AM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:12be39ec3094b:0-bitmine-makes-biggest-ethereum-purchase-of-2026/"
+      "timestamp": "2026-06-08T12:33:50+00:00",
+      "timeDisplay": "12:33 PM",
+      "link": "https://www.tradingview.com/news/binance_news:9602bdf59094b:0-bitmine-immersion-technologies-adds-126-971-eth-reports-5-543-872-eth-holdings/"
     }
   ]
 }

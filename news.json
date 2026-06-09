@@ -1,45 +1,251 @@
 {
-  "lastUpdated": "2026-06-09T08:57:02.933490+00:00",
-  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 08:57 AM UTC",
+  "lastUpdated": "2026-06-09T11:53:17.095160+00:00",
+  "lastUpdatedDisplay": "Jun 09, 2026 \u2014 11:53 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Middle East tensions are easing as Israel and Iran halt attacks, leading to dollar weakness and reduced oil prices. Market focus is shifting to upcoming US inflation data, while gold and Bitcoin struggle with mixed signals from geopolitical developments and rate expectations.",
+    "macroSummary": "Markets showed risk-on behavior with tech stocks rallying while oil declined amid Middle East de-escalation hopes. Dollar weakened broadly as geopolitical tensions eased, supporting gold and improving sentiment across risk assets. Small business optimism declined with jobs market showing significant weakness.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "The halt in Iran-Israel strikes is unwinding the war premium that was a key pillar of the reflation thesis, with oil falling and the dollar retreating from highs.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Oil decline and dollar weakness contradict the reflation setup, while small business employment data shows deterioration that challenges growth assumptions.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "< $115",
+        "signal": "Oil slipping as Middle East tensions ease, moving away from stagflationary pressure"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "Oil prices falling as Israel-Iran conflict deescalates, removing war premium that supported reflation narrative",
+        "signal": "Oil falling on Middle East de-escalation undermines Iran war shock embedded in reflation thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar retreating from two-month highs as Middle East tensions ease, moving away from DXY 100 threshold",
+        "signal": "Dollar weakness across the board contradicts reflation currency dynamics",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold falling on rising Treasury yields despite geopolitical uncertainty, suggesting inflation concerns outweigh safe haven demand",
+        "signal": "NFIB jobs component dropped 5 points to 29%, lowest since May 2020, showing labor market stress",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Tech rally and risk-on sentiment supports equity bullish bias",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin struggling below $64K resistance despite rebound attempts, indicating risk appetite remains constrained",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Market focus shifting to US CPI data this week as geopolitical premium fades",
-        "tag": "NEUTRAL"
+        "signal": "Small business optimism below 52-year average for third straight month indicates economic weakness",
+        "tag": "CONTRADICTS"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely - sustained weakness below recent highs could signal reflation thesis cracking",
-      "Watch DXY behavior near current levels - continued retreat suggests dollar strength narrative may be reversing",
-      "Prepare for CPI volatility in BMNR ladder - geopolitical premium fade puts more weight on inflation data"
+      "Monitor oil prices for sustained decline that would invalidate stagflation component of reflation thesis",
+      "Watch DXY for approach to 100 threshold given broad dollar weakness",
+      "Consider reducing cyclical exposure if small business employment weakness continues"
     ]
   },
   "articles": [
+    {
+      "title": "Stocks rally as investors dive back into tech; oil slips",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T11:41:24+00:00",
+      "timeDisplay": "11:41 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0PN:0-stocks-rally-as-investors-dive-back-into-tech-oil-slips/"
+    },
+    {
+      "title": "Gold regains Rs 1.6 lakh/10gm level as weak US dollar lifts sentiment",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T11:38:14+00:00",
+      "timeDisplay": "11:38 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:a581919c8094b:0-gold-regains-rs-1-6-lakh-10gm-level-as-weak-us-dollar-lifts-sentiment/"
+    },
+    {
+      "title": "Dollar eases as Middle East hopes outweigh prospects of higher US rates",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T11:31:42+00:00",
+      "timeDisplay": "11:31 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0NA:0-dollar-eases-as-middle-east-hopes-outweigh-prospects-of-higher-us-rates/"
+    },
+    {
+      "title": "Cryptos Slip As Security Breach, U.S. CPI Weigh",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T11:23:43+00:00",
+      "timeDisplay": "11:23 AM",
+      "link": "https://www.tradingview.com/news/dpa_afx:8cff8f12bc354:0-cryptos-slip-as-security-breach-u-s-cpi-weigh/"
+    },
+    {
+      "title": "MEXC Prediction Markets Launches Combo to Enable Multi-Event Combination Trading",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:35:54+00:00",
+      "timeDisplay": "10:35 AM",
+      "link": "https://www.tradingview.com/news/chainwire:7cbc168f6094b:0-mexc-prediction-markets-launches-combo-to-enable-multi-event-combination-trading/"
+    },
+    {
+      "title": "Bybit's Latest Proof-of-Reserves Shows More Than $16.5 Billion in Mainstream Assets",
+      "source": "chainwire",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:35:03+00:00",
+      "timeDisplay": "10:35 AM",
+      "link": "https://www.tradingview.com/news/chainwire:24627c57e094b:0-bybit-s-latest-proof-of-reserves-shows-more-than-16-5-billion-in-mainstream-assets/"
+    },
+    {
+      "title": "India's gold tariff hike fuels smuggling revival, squeezes banks and refiners",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:34:03+00:00",
+      "timeDisplay": "10:34 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:e3e1a02cc094b:0-india-s-gold-tariff-hike-fuels-smuggling-revival-squeezes-banks-and-refiners/"
+    },
+    {
+      "title": "SBI Shinsei links bank deposits to crypto rewards in Japan: Nikkei",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:32:48+00:00",
+      "timeDisplay": "10:32 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:e8644c4ce094b:0-sbi-shinsei-links-bank-deposits-to-crypto-rewards-in-japan-nikkei/"
+    },
+    {
+      "title": "Buy the chip",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T10:31:48+00:00",
+      "timeDisplay": "10:31 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42H0KK:0-buy-the-chip/"
+    },
+    {
+      "title": "MetaMask Has New AI Agent Wallet Which Lets Bots Trade Your Crypto",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:26:30+00:00",
+      "timeDisplay": "10:26 AM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:43fe9b43c094b:0-metamask-has-new-ai-agent-wallet-which-lets-bots-trade-your-crypto/"
+    },
+    {
+      "title": "\u2018Stuck in distribution\u2019: Bitcoin slips below $63,000 as analysts warn rallies are being sold, not bought",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:13:19+00:00",
+      "timeDisplay": "10:13 AM",
+      "link": "https://www.tradingview.com/news/the_block:ac0457924094b:0-stuck-in-distribution-bitcoin-slips-below-63-000-as-analysts-warn-rallies-are-being-sold-not-bought/"
+    },
+    {
+      "title": "Bank of Japan\u2019s 1% Rate Hike Could be Critical for Bitcoin",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:09:11+00:00",
+      "timeDisplay": "10:09 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:9441d0321094b:0-bank-of-japan-s-1-rate-hike-could-be-critical-for-bitcoin/"
+    },
+    {
+      "title": "US NFIB SMALL BUSINESS INDEX: 19% OF OWNERS REPORTED THAT TAXES WAS THEIR SINGLE MOST IMPORTANT PROBLEM IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:02:00+00:00",
+      "timeDisplay": "10:02 AM",
+      "link": "https://www.tradingview.com/news/macenews:d24cd8b6c094b:0-us-nfib-small-business-index-19-of-owners-reported-that-taxes-was-their-single-most-important-problem-in-may/"
+    },
+    {
+      "title": "US NFIB SMALL BUSINESS INDEX: MAY INDEX REMAINS BELOW 52-YEAR AVERAGE OF 98 FOR THIRD STRAIGHT MONTH",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:02:00+00:00",
+      "timeDisplay": "10:02 AM",
+      "link": "https://www.tradingview.com/news/macenews:328e07f18094b:0-us-nfib-small-business-index-may-index-remains-below-52-year-average-of-98-for-third-straight-month/"
+    },
+    {
+      "title": "NFIB UNCERTAINTY INDEX 91 IN MAY VS 88 IN APRIL; 94 IN MAY 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:01:00+00:00",
+      "timeDisplay": "10:01 AM",
+      "link": "https://www.tradingview.com/news/macenews:846a8b52a094b:0-nfib-uncertainty-index-91-in-may-vs-88-in-april-94-in-may-2025/"
+    },
+    {
+      "title": "US NFIB SMALL BUSINESS INDEX: LARGEST MOVE DOWN 5 POINTS IN CURRENT JOBS TO 29%; LOWEST SINCE 23% IN MAY 2020",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:01:00+00:00",
+      "timeDisplay": "10:01 AM",
+      "link": "https://www.tradingview.com/news/macenews:7fc68d15a094b:0-us-nfib-small-business-index-largest-move-down-5-points-in-current-jobs-to-29-lowest-since-23-in-may-2020/"
+    },
+    {
+      "title": "US NFIB SMALL BUSINESS INDEX: LARGEST UPWARD 4 POINTS FOR EARNINGS TREND TO -15%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:01:00+00:00",
+      "timeDisplay": "10:01 AM",
+      "link": "https://www.tradingview.com/news/macenews:0bf2eb1f0094b:0-us-nfib-small-business-index-largest-upward-4-points-for-earnings-trend-to-15/"
+    },
+    {
+      "title": "US NATL FEDERATION OF INDEPENDENT BUSINESSES SMALL BUSINESS OPTIMISM INDEX 95.3 IN MAY VS 95.9 IN APRIL; 98.8 IN MAY 2025",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:00:00+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:1e26a8422094b:0-us-natl-federation-of-independent-businesses-small-business-optimism-index-95-3-in-may-vs-95-9-in-april-98-8-in-may-2025/"
+    },
+    {
+      "title": "US NFIB SMALL BUSINESS OPTIMISM INDEX: 3 OF 10 COMPONENTS UP, 6 DOWN, 1 UNCHANGED IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T10:00:00+00:00",
+      "timeDisplay": "10:00 AM",
+      "link": "https://www.tradingview.com/news/macenews:f67540c24094b:0-us-nfib-small-business-optimism-index-3-of-10-components-up-6-down-1-unchanged-in-may/"
+    },
+    {
+      "title": "U.S. Rate-Rise Bets Limit Dollar's Fall \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T09:52:00+00:00",
+      "timeDisplay": "9:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609001799:0/"
+    },
+    {
+      "title": "US Bitcoin ETFs log further outflows, though analyst sees signs of easing selling pressure",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T09:41:34+00:00",
+      "timeDisplay": "9:41 AM",
+      "link": "https://www.tradingview.com/news/the_block:c414a2a4d094b:0-us-bitcoin-etfs-log-further-outflows-though-analyst-sees-signs-of-easing-selling-pressure/"
+    },
+    {
+      "title": "Bitcoin Needs Much Weaker Dollar to Stage Decent Recovery \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T09:24:00+00:00",
+      "timeDisplay": "9:24 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609001653:0/"
+    },
+    {
+      "title": "Gold steady as lower oil offsets US rate-hike fears",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-09T09:13:06+00:00",
+      "timeDisplay": "9:13 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42H088:0-gold-steady-as-lower-oil-offsets-us-rate-hike-fears/"
+    },
+    {
+      "title": "Bitcoin At A Discount? Coinbase Exec Says Institutions And Govts Are Buying",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T09:00:56+00:00",
+      "timeDisplay": "9:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:14adb13e4094b:0-bitcoin-at-a-discount-coinbase-exec-says-institutions-and-govts-are-buying/"
+    },
+    {
+      "title": "A Few Reasons to Buy the Dip in AI & Chip ETFs",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T08:30:00+00:00",
+      "timeDisplay": "8:30 AM",
+      "link": "https://www.tradingview.com/news/zacks:3220100f8094b:0-a-few-reasons-to-buy-the-dip-in-ai-chip-etfs/"
+    },
     {
       "title": "Near-Term Backdrop for Gold Appears Less Supportive \u2014 Market Talk",
       "source": "dow-jones",
@@ -47,6 +253,14 @@
       "timestamp": "2026-06-09T08:19:00+00:00",
       "timeDisplay": "8:19 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260609001248:0/"
+    },
+    {
+      "title": "Crypto News Today (June 9): BTC Holding $63K, Humanity Protocol Hacked for $32M, Ethereum ETFs Turn Green",
+      "source": "99Bitcoins",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T08:14:59+00:00",
+      "timeDisplay": "8:14 AM",
+      "link": "https://www.tradingview.com/news/99Bitcoins:d084879c6094b:0-crypto-news-today-june-9-btc-holding-63k-humanity-protocol-hacked-for-32m-ethereum-etfs-turn-green/"
     },
     {
       "title": "Gold Edges Lower as Traders Await Clarity on Middle East \u2014 Market Talk",
@@ -182,7 +396,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-06-09T04:18:00+00:00",
       "timeDisplay": "4:18 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609000029:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260609000028:0/"
     },
     {
       "title": "Gold steady as traders weigh Israel-Iran ceasefire, inflation risks",
@@ -353,22 +567,6 @@
       "link": "https://www.tradingview.com/news/binance_news:6acbc83ba094b:0-ethereum-eth-drops-below-1-700-usdt-with-a-narrowed-1-22-increase-in-24-hours/"
     },
     {
-      "title": "Bitcoin Bottom Prediction: Top Analyst Says It\u2019s Close\u2014What Price Comes Next?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T23:03:37+00:00",
-      "timeDisplay": "11:03 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:5a0c38c1c094b:0-bitcoin-bottom-prediction-top-analyst-says-it-s-close-what-price-comes-next/"
-    },
-    {
-      "title": "Brazen bitcoin kidnapping and carjacking co-conspirator pleads guilty, faces up to 20 years in prison: DOJ",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T21:54:29+00:00",
-      "timeDisplay": "9:54 PM",
-      "link": "https://www.tradingview.com/news/the_block:466c51fbd094b:0-brazen-bitcoin-kidnapping-and-carjacking-co-conspirator-pleads-guilty-faces-up-to-20-years-in-prison-doj/"
-    },
-    {
       "title": "U.S. Dollar Slips As War Concerns Linger Despite Trump's Reassurances",
       "source": "dpa_afx",
       "color": "#00e5ff",
@@ -377,84 +575,12 @@
       "link": "https://www.tradingview.com/news/dpa_afx:1761531449e81:0-u-s-dollar-slips-as-war-concerns-linger-despite-trump-s-reassurances/"
     },
     {
-      "title": "Stocks bounce back, oil pares gains as Iran and Israel signal a pause",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T21:00:44+00:00",
-      "timeDisplay": "9:00 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G16P:0-stocks-bounce-back-oil-pares-gains-as-iran-and-israel-signal-a-pause/"
-    },
-    {
-      "title": "Dollar eases as Iran and Israel agree to halt strikes",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T20:55:55+00:00",
-      "timeDisplay": "8:55 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G19Z:0-dollar-eases-as-iran-and-israel-agree-to-halt-strikes/"
-    },
-    {
-      "title": "Active tokenized RWAs surge almost 600% despite crypto pullback: Binance",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T20:53:35+00:00",
-      "timeDisplay": "8:53 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:0e054efea094b:0-active-tokenized-rwas-surge-almost-600-despite-crypto-pullback-binance/"
-    },
-    {
-      "title": "Bitcoin\u2019s \u201cElectrical Cost\u201d Floor Sits at $48,694: Is That the Bottom?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T20:01:47+00:00",
-      "timeDisplay": "8:01 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:56e2ec656094b:0-bitcoin-s-electrical-cost-floor-sits-at-48-694-is-that-the-bottom/"
-    },
-    {
-      "title": "U.S. Dollar Index Slips 0.03% to 100.042 on June 9",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T19:53:41+00:00",
-      "timeDisplay": "7:53 PM",
-      "link": "https://www.tradingview.com/news/binance_news:13647a69b094b:0-u-s-dollar-index-slips-0-03-to-100-042-on-june-9/"
-    },
-    {
-      "title": "Peru election cliffhanger weighs on stocks, Mideast in focus",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T19:49:53+00:00",
-      "timeDisplay": "7:49 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G15W:0-peru-election-cliffhanger-weighs-on-stocks-mideast-in-focus/"
-    },
-    {
       "title": "Yields mixed after jobs data lifts Fed hike odds",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-06-08T19:44:00+00:00",
       "timeDisplay": "7:44 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0TE:0-yields-mixed-after-jobs-data-lifts-fed-hike-odds/"
-    },
-    {
-      "title": "Strategy, Coinbase, Circle and Robinhood Lead Crypto Stocks Rally Amid Bitcoin Rebound",
-      "source": "gurufocus",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T19:41:17+00:00",
-      "timeDisplay": "7:41 PM",
-      "link": "https://www.tradingview.com/news/gurufocus:4c68707b4094b:0-strategy-coinbase-circle-and-robinhood-lead-crypto-stocks-rally-amid-bitcoin-rebound/"
-    },
-    {
-      "title": "Dollar Slips as Middle East Tensions Ease Slightly",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T19:32:09+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/barchart:a9e45d228094b:0-dollar-slips-as-middle-east-tensions-ease-slightly/"
-    },
-    {
-      "title": "Bitcoin Recovery Needs This To Happen, Glassnode Analyst Reveals",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T19:30:14+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:8927eb77c094b:0-bitcoin-recovery-needs-this-to-happen-glassnode-analyst-reveals/"
     },
     {
       "title": "Oil Settles Higher as Israel-Iran Exchanges Raise Tension \u2014 Market Talk",
@@ -473,14 +599,6 @@
       "link": "https://www.tradingview.com/news/barchart:6031e0a62094b:0-crude-oil-prices-edge-higher-on-shaky-middle-east-ceasefire/"
     },
     {
-      "title": "Institutional Conviction Remains Strong Despite Bitcoin Downturn, According to Coinbase Executive",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T19:13:00+00:00",
-      "timeDisplay": "7:13 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:41ea86772094b:0-institutional-conviction-remains-strong-despite-bitcoin-downturn-according-to-coinbase-executive/"
-    },
-    {
       "title": "Ethereum is at Its Cheapest Valuation in 7 Years: Here\u2019s What Happened Last Time",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -497,36 +615,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260608006825:0/"
     },
     {
-      "title": "'Best thesis' for Bitcoin accumulation surfaces despite current downside risk: Analyst",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T18:11:29+00:00",
-      "timeDisplay": "6:11 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:b1055653e094b:0-best-thesis-for-bitcoin-accumulation-surfaces-despite-current-downside-risk-analyst/"
-    },
-    {
       "title": "Gold erases losses despite strong US jobs data as ceasefire hopes emerge",
       "source": "reuters",
       "color": "#ff6d00",
       "timestamp": "2026-06-08T17:54:58+00:00",
       "timeDisplay": "5:54 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0PN:0-gold-erases-losses-despite-strong-us-jobs-data-as-ceasefire-hopes-emerge/"
-    },
-    {
-      "title": "Coinbase strategist says institutions aren\u2019t panicking about bitcoin, \u2018love it even more\u2019 at lower prices",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T17:52:18+00:00",
-      "timeDisplay": "5:52 PM",
-      "link": "https://www.tradingview.com/news/the_block:2cff312be094b:0-coinbase-strategist-says-institutions-aren-t-panicking-about-bitcoin-love-it-even-more-at-lower-prices/"
-    },
-    {
-      "title": "$52 Billion in Bitcoin and a New XRP Vision: Why Traders Are Watching Both Assets Closely",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T17:48:05+00:00",
-      "timeDisplay": "5:48 PM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:e03e592c2094b:0/"
     },
     {
       "title": "US 10-Year Yield Resumes Increase",
@@ -551,94 +645,6 @@
       "timestamp": "2026-06-08T16:24:45+00:00",
       "timeDisplay": "4:24 PM",
       "link": "https://www.tradingview.com/news/barchart:9f8b19d1e094b:0-crude-oil-strength-lifts-ethanol-and-sugar-prices/"
-    },
-    {
-      "title": "Why are Bitcoin, Ethereum and XRP Prices Going Up Today?",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T16:14:22+00:00",
-      "timeDisplay": "4:14 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:bfdc9c102094b:0-why-are-bitcoin-ethereum-and-xrp-prices-going-up-today/"
-    },
-    {
-      "title": "BitMine Nears 5% Of ETH Supply With 5.5M Stack As Ether Falls 27% On Month",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T16:06:46+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:e7d6a1c7c094b:0-bitmine-nears-5-of-eth-supply-with-5-5m-stack-as-ether-falls-27-on-month/"
-    },
-    {
-      "title": "Gold erases losses despite strong US jobs data after ceasefire hopes emerge",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T16:00:09+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42G0NV:0-gold-erases-losses-despite-strong-us-jobs-data-after-ceasefire-hopes-emerge/"
-    },
-    {
-      "title": "Crude Oil Holds Below Session Peaks",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:57:28+00:00",
-      "timeDisplay": "3:57 PM",
-      "link": "https://www.tradingview.com/news/te_news:557347:0-crude-oil-holds-below-session-peaks/"
-    },
-    {
-      "title": "Gold Falls Below 200-Day Moving Average \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:41:00+00:00",
-      "timeDisplay": "3:41 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260608005349:0/"
-    },
-    {
-      "title": "Renewed Middle East Hostilities Boost Crude Oil Prices",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:34:09+00:00",
-      "timeDisplay": "3:34 PM",
-      "link": "https://www.tradingview.com/news/barchart:882513a5e094b:0-renewed-middle-east-hostilities-boost-crude-oil-prices/"
-    },
-    {
-      "title": "Dollar falls from highs after Iran halts Israel strikes; yen clings to 160/$",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-08T15:33:04+00:00",
-      "timeDisplay": "3:33 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42G0Y0:0-dollar-falls-from-highs-after-iran-halts-israel-strikes-yen-clings-to-160/"
-    },
-    {
-      "title": "Ethereum(ETH) Surpasses 1,700 USDT with a 4.71% Increase in 24 Hours",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:13:07+00:00",
-      "timeDisplay": "3:13 PM",
-      "link": "https://www.tradingview.com/news/binance_news:bd9d72e5e094b:0-ethereum-eth-surpasses-1-700-usdt-with-a-4-71-increase-in-24-hours/"
-    },
-    {
-      "title": "Analyst Charts Ethereum Long-Term Roadmap To $16,000 \u2013 There\u2019s No Need To Panic",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:52+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a2e55c621094b:0-analyst-charts-ethereum-long-term-roadmap-to-16-000-there-s-no-need-to-panic/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR EARNINGS GROWTH EXPECTATION 2.7% IN MAY, 2.7% IN APRIL, 2.4% IN MARCH, 2.5% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:e61fa14e7094b:0-us-new-york-fed-consumer-1-year-earnings-growth-expectation-2-7-in-may-2-7-in-april-2-4-in-march-2-5-in-february/"
-    },
-    {
-      "title": "US NEW YORK FED: CONSUMER 1-YEAR FOOD PRICE RISE EXPECTATION 5.8% IN MAY, 5.2% IN APRIL, 6.0% IN MARCH, 5.3% IN FEBRUARY",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-08T15:00:00+00:00",
-      "timeDisplay": "3:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:1db5d828f094b:0-us-new-york-fed-consumer-1-year-food-price-rise-expectation-5-8-in-may-5-2-in-april-6-0-in-march-5-3-in-february/"
     }
   ]
 }

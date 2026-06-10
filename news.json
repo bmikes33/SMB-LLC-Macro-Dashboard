@@ -1,45 +1,203 @@
 {
-  "lastUpdated": "2026-06-10T16:33:11.710203+00:00",
-  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 04:33 PM UTC",
+  "lastUpdated": "2026-06-10T19:32:07.260595+00:00",
+  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 07:32 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US CPI hit 4.2% year-over-year in May, the highest in three years, driven by higher energy prices, though core CPI cooled and met market expectations. Treasury yields retreated from session highs after the data, while the dollar eased as markets interpreted the inflation reading as keeping aggressive rate hikes at bay. Bitcoin and crypto assets faced significant institutional outflows through ETFs, with BTC hovering near cycle lows amid rate fears and geopolitical uncertainty.",
+    "macroSummary": "US inflation hit a 3-year high at 4.2% headline CPI but core CPI cooled, keeping aggressive rate hikes at bay and causing dollar weakness and yield easing. Oil extended gains on escalating Middle East tensions with Iran, while crude inventories dropped for the seventh consecutive week. Bitcoin and crypto markets remained under pressure with continued ETF outflows and extreme fear sentiment.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Inflation accelerating to 3-year highs supports the reflation thesis, but treasury yields and dollar weakness after the data suggests markets are not pricing aggressive monetary tightening, creating cross-currents in the regime narrative.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Inflation surge supports reflation thesis but core cooling and dollar weakness suggest Fed restraint, while oil gains from geopolitics may not sustain broad commodity reflation.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil (WTI)",
+        "level": "approaching $115",
+        "signal": "Oil extending gains on Iran tensions with inventory draws for 7th week"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "US CPI accelerated to 4.2% year-over-year in May, highest since April 2023, driven by energy price increases",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "Treasury yields retreated from session highs and dollar weakened after CPI data, suggesting markets view inflation as contained enough to avoid aggressive Fed action",
+        "signal": "Core CPI cooling despite headline 4.2% surge suggests disinflation forces still present",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bitcoin facing record institutional outflows through spot ETFs with institutions dumping 450% of daily BTC supply",
+        "signal": "Dollar slipping and yields easing despite inflation print shows Fed restraint expectations",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Crude oil inventories dropped 7.2 million barrels for seventh consecutive week, larger than 3.0 million expected",
+        "signal": "Oil inventory draws accelerating (-7.2M vs -3.0M expected) with Iran tensions escalating",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Gold trimmed losses on softer-than-expected core inflation data despite headline CPI acceleration",
+        "signal": "Bitcoin facing sustained selling pressure with ETF outflows and extreme fear territory",
         "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Treasury interest payments hit record $867B YTD (+12%) showing fiscal stress building",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor BMNR ladder positioning as crypto institutional outflows may pressure ETH-linked instruments",
-      "Watch for any treasury yield breakouts above session highs if reflation narrative reasserts",
-      "Consider defensive positioning given mixed signals between headline inflation acceleration and market's benign interpretation"
+      "Monitor oil closely for sustained break above $115 which would tilt regime toward stagflation",
+      "Watch for any DXY bounce toward 100 threshold as current dollar weakness may be temporary",
+      "Consider reducing BMNR exposure if crypto weakness persists alongside traditional risk-off signals"
     ]
   },
   "articles": [
+    {
+      "title": "Oil Futures Gain as Middle East Tensions Rise Again \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T19:18:00+00:00",
+      "timeDisplay": "7:18 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260610008118:0/"
+    },
+    {
+      "title": "Dollar slips as US inflation data keeps rate hike at bay",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T19:10:45+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I0V8:0-dollar-slips-as-us-inflation-data-keeps-rate-hike-at-bay/"
+    },
+    {
+      "title": "Elon Musk\u2019s SpaceX IPO could become bitcoin\u2019s latest headwind",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T19:10:39+00:00",
+      "timeDisplay": "7:10 PM",
+      "link": "https://www.tradingview.com/news/the_block:ef728a69b094b:0-elon-musk-s-spacex-ipo-could-become-bitcoin-s-latest-headwind/"
+    },
+    {
+      "title": "New Strategy Bitcoin Buy Doesn't Instill Fresh Confidence \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T19:09:00+00:00",
+      "timeDisplay": "7:09 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260610008063:0/"
+    },
+    {
+      "title": "Yields edge higher on Iran tensions, core CPI cools",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T19:01:41+00:00",
+      "timeDisplay": "7:01 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I0T6:0-yields-edge-higher-on-iran-tensions-core-cpi-cools/"
+    },
+    {
+      "title": "Gold slides 3% as Middle East escalation fuels inflation, rate-hike concerns",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T18:47:18+00:00",
+      "timeDisplay": "6:47 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I0TM:0-gold-slides-3-as-middle-east-escalation-fuels-inflation-rate-hike-concerns/"
+    },
+    {
+      "title": "Pending Bank of Japan rate decision may impact Bitcoin price: Should traders prepare?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:41:15+00:00",
+      "timeDisplay": "6:41 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:807400c94094b:0-pending-bank-of-japan-rate-decision-may-impact-bitcoin-price-should-traders-prepare/"
+    },
+    {
+      "title": "Oil Extends Gains",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:25:22+00:00",
+      "timeDisplay": "6:25 PM",
+      "link": "https://www.tradingview.com/news/te_news:558146:0-oil-extends-gains/"
+    },
+    {
+      "title": "CryptoQuant sees bitcoin bottom near $53,600 while demand remains \u2018deeply unfavorable\u2019",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:11:21+00:00",
+      "timeDisplay": "6:11 PM",
+      "link": "https://www.tradingview.com/news/the_block:4b9bf3052094b:0-cryptoquant-sees-bitcoin-bottom-near-53-600-while-demand-remains-deeply-unfavorable/"
+    },
+    {
+      "title": "IRAN UPDATE: SPECIFICS AWAITED ON TRUMP THREAT TO RENEW ATTACKS ON IRAN; ISRAEL SAYS READY TO RESUME ITS ATTACKS; TRUMP SAYS 100 MLN BLS TRANSITED",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:07:00+00:00",
+      "timeDisplay": "6:07 PM",
+      "link": "https://www.tradingview.com/news/macenews:08f08ece9094b:0-iran-update-specifics-awaited-on-trump-threat-to-renew-attacks-on-iran-israel-says-ready-to-resume-its-attacks-trump-says-100-mln-bls-transited/"
+    },
+    {
+      "title": "US TSY MAY BUDGET STATEMENT: INDIV TAXES $286 BLN, +16%; INDIVIDUAL REFUNDS $19 BLN, +17%; CORP TAXES $15 BLN, -67%; REFUNDS $4 BLN, +35%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:779829fda094b:0-us-tsy-may-budget-statement-indiv-taxes-286-bln-16-individual-refunds-19-bln-17-corp-taxes-15-bln-67-refunds-4-bln-35/"
+    },
+    {
+      "title": "US TSY MAY BUDGET STATEMENT: INTEREST ON PUBLIC DEBT $133 BLN, +44%; FY YTD RECORD $867 BLN, +12%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:94b7655b4094b:0-us-tsy-may-budget-statement-interest-on-public-debt-133-bln-44-fy-ytd-record-867-bln-12/"
+    },
+    {
+      "title": "US TSY MAY BUDGET: CUSTOMS DUTIES REFLECTING TARIFF INCOME $22 BLN, -4%; FY YTD $135 BLN, +156% VS '25; REFUNDS  $22 BLN; SCOTUS REFUNDS STARTED MAYY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:f56e267fc094b:0-us-tsy-may-budget-customs-duties-reflecting-tariff-income-22-bln-4-fy-ytd-135-bln-156-vs-25-refunds-22-bln-scotus-refunds-started-mayy/"
+    },
+    {
+      "title": "US TSY MAY BUDGET: DEFENSE MILITARY PROGRAMS $69 BLN, -4%, NOT ALL ASSOCIATED W/IRAN WAR; YTD $600 BLN, +3%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:7de8d25d7094b:0-us-tsy-may-budget-defense-military-programs-69-bln-4-not-all-associated-w-iran-war-ytd-600-bln-3/"
+    },
+    {
+      "title": "US TSY MAY BUDGET: DEFICIT -$292.648 BLN, -7% VS YR EARLIER; MAY ADJUSTED THE SAME; FY YTD -$1.246203 TLN, -9%",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:22834277c094b:0-us-tsy-may-budget-deficit-292-648-bln-7-vs-yr-earlier-may-adjusted-the-same-fy-ytd-1-246203-tln-9/"
+    },
+    {
+      "title": "US TSY MAY BUDGET: RECEIPTS $335.512 BLN, -10%; OUTLAYS $628.161 BLN, +9%; YTD RECEIPTS RECORD $3.655 TLN; YTD OUTLAYS RECORD $4.901851 TLN",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:01:00+00:00",
+      "timeDisplay": "6:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:c43f02a3e094b:0-us-tsy-may-budget-receipts-335-512-bln-10-outlays-628-161-bln-9-ytd-receipts-record-3-655-tln-ytd-outlays-record-4-901851-tln/"
+    },
+    {
+      "title": "Crypto Analyst Gives Timeframe For When The Bitcoin Price Will Hit $200,000",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T18:00:20+00:00",
+      "timeDisplay": "6:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:2a3221ab9094b:0-crypto-analyst-gives-timeframe-for-when-the-bitcoin-price-will-hit-200-000/"
+    },
+    {
+      "title": "After Bitcoin Crash, Can the hype for HYPE ETFs Continue?",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T17:00:00+00:00",
+      "timeDisplay": "5:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:2bcd6d10e094b:0-after-bitcoin-crash-can-the-hype-for-hype-etfs-continue/"
+    },
+    {
+      "title": "CoinMarketCap Index Steadies in 'Extreme Fear' Territory \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T16:45:00+00:00",
+      "timeDisplay": "4:45 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260610007463:0/"
+    },
     {
       "title": "Bitcoin Lower as ETF Outflow Slows Down \u2014 Market Talk",
       "source": "dow-jones",
@@ -47,6 +205,14 @@
       "timestamp": "2026-06-10T16:26:00+00:00",
       "timeDisplay": "4:26 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260610007349:0/"
+    },
+    {
+      "title": "Binance USDT Liquidity Signals Consolidation, Not Bitcoin Recovery Yet",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T16:23:03+00:00",
+      "timeDisplay": "4:23 PM",
+      "link": "https://www.tradingview.com/news/coinpedia:d841e9947094b:0-binance-usdt-liquidity-signals-consolidation-not-bitcoin-recovery-yet/"
     },
     {
       "title": "U.S. Crude Oil Export Relief Unsustainable \u2014 Market Talk",
@@ -257,14 +423,6 @@
       "link": "https://www.tradingview.com/news/te_news:558068:0-treasury-yields-retreat-from-session-highs/"
     },
     {
-      "title": "US CPI Rate Rises to 4.2%, Bitcoin Price Sees Minor Gains\u00a0",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:51:05+00:00",
-      "timeDisplay": "12:51 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:f67f88935094b:0-us-cpi-rate-rises-to-4-2-bitcoin-price-sees-minor-gains/"
-    },
-    {
       "title": "Dollar Dips as US Inflation Meets Expectations",
       "source": "trading-economics",
       "color": "#00e5ff",
@@ -279,6 +437,14 @@
       "timestamp": "2026-06-10T12:49:54+00:00",
       "timeDisplay": "12:49 PM",
       "link": "https://www.tradingview.com/news/the_block:d9c6d9778094b:0-in-the-shadow-of-geopolitics-and-ai-bitcoin-hovers-near-cycle-lows-as-etf-outflows-and-rate-fears-deepen-worst-stretch-of-2026/"
+    },
+    {
+      "title": "BitGo Opens Institutional DeFi Access to Aave, Spark and Tesseract",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T12:43:00+00:00",
+      "timeDisplay": "12:43 PM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:d92cd0832094b:0-bitgo-opens-institutional-defi-access-to-aave-spark-and-tesseract/"
     },
     {
       "title": "Higher Energy Prices Pushed Up Monthly Inflation \u2014 Market Talk",
@@ -337,14 +503,6 @@
       "link": "https://www.tradingview.com/news/macenews:45fc02337094b:0-u-s-may-cpi-new-vehicles-0-3-m-m-0-2-y-y/"
     },
     {
-      "title": "US CPI Matches Views but Core Inflation Slows, Bitcoin to $60,000?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:34:32+00:00",
-      "timeDisplay": "12:34 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:dd234af17094b:0-us-cpi-matches-views-but-core-inflation-slows-bitcoin-to-60-000/"
-    },
-    {
       "title": "U.S. MAY CPI: AIRFARES +2.7% M/M, +26.7% Y/Y",
       "source": "macenews",
       "color": "#00e5ff",
@@ -359,14 +517,6 @@
       "timestamp": "2026-06-10T12:34:00+00:00",
       "timeDisplay": "12:34 PM",
       "link": "https://www.tradingview.com/news/macenews:6114f3554094b:0-u-s-may-cpi-motor-vehicle-insurance-1-7-m-m-2-0-y-y/"
-    },
-    {
-      "title": "Bitcoin, XRP, Ethereum Slump as AI Selloff Hits Cryptos \u2014 Barrons.com",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:33:00+00:00",
-      "timeDisplay": "12:33 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260610005045:0/"
     },
     {
       "title": "MORE U.S. MAY CPI: OWNERS' EQUIVALENT RENT +0.3% M/M, +3.3% Y/Y",
@@ -401,78 +551,6 @@
       "link": "https://www.tradingview.com/news/macenews:fe3523010094b:0-u-s-may-cpi-gasoline-7-0-m-m-40-5-y-y/"
     },
     {
-      "title": "MORE U.S. MAY CPI: ENERGY +3.9% M/M, +23.5% Y/Y",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:d15583c30094b:0-more-u-s-may-cpi-energy-3-9-m-m-23-5-y-y/"
-    },
-    {
-      "title": "MORE U.S. MAY CPI: FOOD +0.2% M/M, +3.1% Y/Y",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:14e2781f6094b:0-more-u-s-may-cpi-food-0-2-m-m-3-1-y-y/"
-    },
-    {
-      "title": "MORE U.S. MAY CPI: SHELTER +0.3% M/M, +3.4% Y/Y",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:31:00+00:00",
-      "timeDisplay": "12:31 PM",
-      "link": "https://www.tradingview.com/news/macenews:626d323b8094b:0-more-u-s-may-cpi-shelter-0-3-m-m-3-4-y-y/"
-    },
-    {
-      "title": "U.S. MAY CPI +0.5% M/M (VS +0.5% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:21051f7ec094b:0-u-s-may-cpi-0-5-m-m-vs-0-5-expected/"
-    },
-    {
-      "title": "U.S. MAY CPI +4.2% Y/Y (VS +4.2% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:4db590820094b:0-u-s-may-cpi-4-2-y-y-vs-4-2-expected/"
-    },
-    {
-      "title": "U.S. MAY CPI EX-FOOD & ENERGY +0.2% M/M (VS +0.3% EXPECTED)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:30:00+00:00",
-      "timeDisplay": "12:30 PM",
-      "link": "https://www.tradingview.com/news/macenews:546fa340f094b:0-u-s-may-cpi-ex-food-energy-0-2-m-m-vs-0-3-expected/"
-    },
-    {
-      "title": "Every Time This Bitcoin Metric Crossed This Level, The Market Bottomed \u2014 It Just Happened Again",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:29:05+00:00",
-      "timeDisplay": "12:29 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:db8cf4c4b094b:0-every-time-this-bitcoin-metric-crossed-this-level-the-market-bottomed-it-just-happened-again/"
-    },
-    {
-      "title": "Arthur Hayes' Family Office Bets On Bitcoin Privacy \u2013 Caps Grants At $400,000",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:21:56+00:00",
-      "timeDisplay": "12:21 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:0e5d9881e094b:0-arthur-hayes-family-office-bets-on-bitcoin-privacy-caps-grants-at-400-000/"
-    },
-    {
-      "title": "Key facts: BTC ETF Outflows $2.97B; Res ~65K tgt 72\u201374K; Extreme Fear",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:13:54+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:015938232a926:0-key-facts-btc-etf-outflows-2-97b-res-65k-tgt-72-74k-extreme-fear/"
-    },
-    {
       "title": "Key facts: BlackRock 10,566 ETH buy; ETH near bear bottom; Whale opens 35k short",
       "source": "tradingview",
       "color": "#00e5ff",
@@ -487,14 +565,6 @@
       "timestamp": "2026-06-10T12:10:32+00:00",
       "timeDisplay": "12:10 PM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I0ES:0-gold-falls-more-than-2-on-fading-middle-east-peace-hopes/"
-    },
-    {
-      "title": "The Bitcoin Rally Has A Problem: Demand Is Drying Up",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T12:00:24+00:00",
-      "timeDisplay": "12:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:e61dbc166094b:0-the-bitcoin-rally-has-a-problem-demand-is-drying-up/"
     },
     {
       "title": "Oil Rises After Trump Warns Iran Over Prolonged Negotiations \u2014 Market Talk",
@@ -575,70 +645,6 @@
       "timestamp": "2026-06-10T07:12:26+00:00",
       "timeDisplay": "7:12 AM",
       "link": "https://www.tradingview.com/news/coinpedia:d2dd47819094b:0-top-altcoins-to-buy-before-the-next-big-rally/"
-    },
-    {
-      "title": "Gold Weighed by Geopolitical Risks, Firmer Inflation Expectation \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T07:12:00+00:00",
-      "timeDisplay": "7:12 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260610001590:0/"
-    },
-    {
-      "title": "EU proposes expanded sanctions on Russia-linked crypto platforms",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T07:05:46+00:00",
-      "timeDisplay": "7:05 AM",
-      "link": "https://www.tradingview.com/news/the_block:6a902606c094b:0-eu-proposes-expanded-sanctions-on-russia-linked-crypto-platforms/"
-    },
-    {
-      "title": "Ethereum open interest drops 25% as $1,500 support comes into focus",
-      "source": "invezz",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T06:39:43+00:00",
-      "timeDisplay": "6:39 AM",
-      "link": "https://www.tradingview.com/news/invezz:3aad6b618094b:0-ethereum-open-interest-drops-25-as-1-500-support-comes-into-focus/"
-    },
-    {
-      "title": "Indian gold falls below pre-duty-hike levels as overseas prices drop",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-10T06:37:31+00:00",
-      "timeDisplay": "6:37 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I06R:0-indian-gold-falls-below-pre-duty-hike-levels-as-overseas-prices-drop/"
-    },
-    {
-      "title": "Oil Turns Lower Despite Mideast Escalation",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T06:32:33+00:00",
-      "timeDisplay": "6:32 AM",
-      "link": "https://www.tradingview.com/news/te_news:557915:0-oil-turns-lower-despite-mideast-escalation/"
-    },
-    {
-      "title": "Silver ETFs bleed for 4th straight month, gold snaps year-long inflow streak in May",
-      "source": "moneycontrol",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T06:32:16+00:00",
-      "timeDisplay": "6:32 AM",
-      "link": "https://www.tradingview.com/news/moneycontrol:48c8a7a8b094b:0-silver-etfs-bleed-for-4th-straight-month-gold-snaps-year-long-inflow-streak-in-may/"
-    },
-    {
-      "title": "Gold drops as oil rises on renewed US-Iran hostilities",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-10T06:12:26+00:00",
-      "timeDisplay": "6:12 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I05J:0-gold-drops-as-oil-rises-on-renewed-us-iran-hostilities/"
-    },
-    {
-      "title": "Ethereum Fear Hits 2026 Extreme as History Points to a Rebound",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T05:19:36+00:00",
-      "timeDisplay": "5:19 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:993ed701a094b:0-ethereum-fear-hits-2026-extreme-as-history-points-to-a-rebound/"
     }
   ]
 }

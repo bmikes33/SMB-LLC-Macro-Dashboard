@@ -1,56 +1,163 @@
 {
-  "lastUpdated": "2026-06-10T01:57:29.946847+00:00",
-  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 01:57 AM UTC",
+  "lastUpdated": "2026-06-10T06:16:33.242876+00:00",
+  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 06:16 AM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US-Iran military tensions escalated with helicopter downing and retaliatory strikes, causing oil volatility and dollar strength before easing on truce hopes. Risk assets including crypto and tech stocks sold off amid geopolitical uncertainty and ahead of key US inflation data.",
+    "macroSummary": "US-Iran tensions escalated with Trump ordering defensive retaliatory strikes after a US helicopter was downed, driving oil higher and gold lower. Risk assets including Bitcoin and Ethereum faced selling pressure amid macro de-risking, while the dollar held firm on geopolitical uncertainty ahead of US inflation data.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Iran escalation initially supported oil shock thesis but quick de-escalation on truce hopes undermines sustained stagflationary pressure while risk-off behavior contradicts bullish equity setup.",
+    "regimePressureReason": "Oil surge from Iran strikes supports the reflation narrative, but widespread risk-off in crypto and equity markets suggests defensive positioning that could pressure cyclical bullishness.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "approaching $115",
-        "signal": "Multiple articles show oil spiking on Iran strikes then settling lower on Middle East deal hopes"
-      },
-      {
-        "indicator": "VIX",
-        "level": "> 22",
-        "signal": "S&P 500 and Nasdaq falling with resumed tech selling suggests elevated volatility"
+        "signal": "Multiple headlines note oil rising on US-Iran hostilities and supply disruption concerns"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil volatility from Iran strikes followed by quick retreat on truce hopes undermines sustained stagflationary oil shock",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Risk-off behavior in equities and crypto contradicts bullish-cyclicals equity bias",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar strength on geopolitical tensions but then slipping on Trump Iran deal reassurance shows conflicted flows",
-        "tag": "NEUTRAL"
-      },
-      {
-        "signal": "Atlanta Fed GDPNow upgrade to 3.3% Q2 growth supports underlying economic strength",
+        "signal": "US strikes on Iran driving oil higher on supply disruption fears",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Yields slipping ahead of inflation data suggests bond market not in panic mode yet",
-        "tag": "NEUTRAL"
+        "signal": "Bitcoin and Ethereum facing significant selling pressure with ETF outflows from macro de-risking",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Asian stocks sliding as Middle East tensions escalate",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "US 10-Year yield edging higher amid geopolitical tensions",
+        "tag": "SUPPORTS"
+      },
+      {
+        "signal": "Atlanta Fed GDPNow model raises Q2 GDP growth forecast to 3.3% from 3.0%",
+        "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - if WTI fails to sustain above recent highs, the Iran oil shock thesis weakens",
-      "Consider tightening BMNR put ladder strikes given crypto risk-off and ETH weakness to $1K levels",
-      "Prepare for potential regime shift if risk-off persists and VIX breaks above 22"
+      "Monitor BMNR ladder for potential volatility from crypto risk-off sentiment",
+      "Watch for VIX breach of 22 as geopolitical tensions could trigger broader risk-off",
+      "Prepare to reassess cyclical bullish bias if risk-off sentiment spreads beyond crypto to broader equities"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin Back At Production Cost: Analyst Says Best Value Zone Starts Here",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T06:00:20+00:00",
+      "timeDisplay": "6:00 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:cf214131f094b:0-bitcoin-back-at-production-cost-analyst-says-best-value-zone-starts-here/"
+    },
+    {
+      "title": "Ethereum Fear Hits 2026 Extreme as History Points to a Rebound",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T05:19:36+00:00",
+      "timeDisplay": "5:19 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:993ed701a094b:0-ethereum-fear-hits-2026-extreme-as-history-points-to-a-rebound/"
+    },
+    {
+      "title": "Dollar holds steady as US-Iran tensions and inflation data loom",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T05:10:55+00:00",
+      "timeDisplay": "5:10 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I02J:0-dollar-holds-steady-as-us-iran-tensions-and-inflation-data-loom/"
+    },
+    {
+      "title": "Nervous but not yet panicking",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42I0CR:0-nervous-but-not-yet-panicking/"
+    },
+    {
+      "title": "Gold drops as oil rises on renewed US-Iran hostilities",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T04:28:18+00:00",
+      "timeDisplay": "4:28 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I044:0-gold-drops-as-oil-rises-on-renewed-us-iran-hostilities/"
+    },
+    {
+      "title": "Ethereum Price Looks Vulnerable Again After A Failed Recovery Attempt",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T03:48:51+00:00",
+      "timeDisplay": "3:48 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:2e3d8dda0094b:0-ethereum-price-looks-vulnerable-again-after-a-failed-recovery-attempt/"
+    },
+    {
+      "title": "Bitcoin Falls; ETF Outflows Likely Driven by Macro De-Risking, Profit-Taking \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T03:41:00+00:00",
+      "timeDisplay": "3:41 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260609009236:0/"
+    },
+    {
+      "title": "Bitmine Now Controls 4.59% of ETH Supply After Fresh Purchase as Ethereum Price Hits a Crossroads",
+      "source": "bravenewcoin",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T03:23:58+00:00",
+      "timeDisplay": "3:23 AM",
+      "link": "https://www.tradingview.com/news/bravenewcoin:ca617c8d8094b:0/"
+    },
+    {
+      "title": "Bitcoin Price Back Under Pressure After Recovery Hopes Fade",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T03:13:52+00:00",
+      "timeDisplay": "3:13 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:2ba9a39ed094b:0-bitcoin-price-back-under-pressure-after-recovery-hopes-fade/"
+    },
+    {
+      "title": "WEDNESDAY WHITE HOUSE SCHEDULE: Subject to additions during the day",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T02:55:00+00:00",
+      "timeDisplay": "2:55 AM",
+      "link": "https://www.tradingview.com/news/macenews:561c8190e094b:0-wednesday-white-house-schedule-subject-to-additions-during-the-day/"
+    },
+    {
+      "title": "Gold drops as oil and dollar rise on renewed US-Iran hostilities",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T02:51:22+00:00",
+      "timeDisplay": "2:51 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I00V:0-gold-drops-as-oil-and-dollar-rise-on-renewed-us-iran-hostilities/"
+    },
+    {
+      "title": "Bitcoin Flashes One Of Its Rarest Demand Signals In Six Years \u2013 Details",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T02:30:04+00:00",
+      "timeDisplay": "2:30 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:2a28d8d39094b:0-bitcoin-flashes-one-of-its-rarest-demand-signals-in-six-years-details/"
+    },
+    {
+      "title": "US 10-Year Yield Edges Higher",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T02:00:01+00:00",
+      "timeDisplay": "2:00 AM",
+      "link": "https://www.tradingview.com/news/te_news:557838:0-us-10-year-yield-edges-higher/"
+    },
+    {
+      "title": "Gold extends drop as renewed US-Iran clashes test fragile truce",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T01:54:24+00:00",
+      "timeDisplay": "1:54 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:3857824f8094b:0-gold-extends-drop-as-renewed-us-iran-clashes-test-fragile-truce/"
+    },
     {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
@@ -116,12 +223,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260609008746:0/"
     },
     {
-      "title": "US Attacks Iran Amid the \u201cCeasefire\u201d: Bitcoin, Gold, and Oil React",
+      "title": "Trump Strikes Iran Amid Fragile Ceasefire: Bitcoin, Gold, and Oil React",
       "source": "beincrypto",
       "color": "#00e5ff",
       "timestamp": "2026-06-10T00:14:00+00:00",
       "timeDisplay": "12:14 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:9bf8a218b094b:0-us-attacks-iran-amid-the-ceasefire-bitcoin-gold-and-oil-react/"
+      "link": "https://www.tradingview.com/news/beincrypto:9bf8a218b094b:0-trump-strikes-iran-amid-fragile-ceasefire-bitcoin-gold-and-oil-react/"
     },
     {
       "title": "Is the Crypto Bull Market Over? Why This 50% Crash Is Different From 2018 and 2022",
@@ -268,6 +375,22 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260609006609:0/"
     },
     {
+      "title": "Crude Oil Weakness Weighs on the Dollar",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:31:44+00:00",
+      "timeDisplay": "7:31 PM",
+      "link": "https://www.tradingview.com/news/barchart:ba28ab626094b:0-crude-oil-weakness-weighs-on-the-dollar/"
+    },
+    {
+      "title": "Crude Oil Prices Finish Sharply Lower on US-Iran Peace Hopes",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T19:15:46+00:00",
+      "timeDisplay": "7:15 PM",
+      "link": "https://www.tradingview.com/news/barchart:f10e63d91094b:0-crude-oil-prices-finish-sharply-lower-on-us-iran-peace-hopes/"
+    },
+    {
       "title": "Arthur Hayes Warns AI Stock Crash Could Hit Crypto Before BTC Rebounds",
       "source": "newsbtc",
       "color": "#00e5ff",
@@ -298,6 +421,14 @@
       "timestamp": "2026-06-09T18:48:00+00:00",
       "timeDisplay": "6:48 PM",
       "link": "https://www.tradingview.com/news/macenews:b919d64ca094b:0-iran-update-as-us-military-determines-whether-iran-shootdown-of-apache-helicopter-was-deliberate-pres-trump-posts-usa-must-of-necessity-retaliate/"
+    },
+    {
+      "title": "Crude Oil Weakness Undercuts Sugar Prices",
+      "source": "barchart",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-09T18:22:28+00:00",
+      "timeDisplay": "6:22 PM",
+      "link": "https://www.tradingview.com/news/barchart:fc8943eeb094b:0-crude-oil-weakness-undercuts-sugar-prices/"
     },
     {
       "title": "Gold slips over 1% on rate-hike fears ahead of U.S. inflation data",
@@ -420,30 +551,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:142d9d48e094b:0-live-us-stock-market-today-gold-price-crypto-market-crash/"
     },
     {
-      "title": "Bitcoin Faces Fresh BIP-110 Battle as Adam Back Warns of Minority Fork Risk",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T16:09:09+00:00",
-      "timeDisplay": "4:09 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:f22220775094b:0-bitcoin-faces-fresh-bip-110-battle-as-adam-back-warns-of-minority-fork-risk/"
-    },
-    {
-      "title": "Bitcoin(BTC) Drops Below 61,000 USDT with a 4.56% Decrease in 24 Hours",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T16:06:09+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/binance_news:2717e161b094b:0-bitcoin-btc-drops-below-61-000-usdt-with-a-4-56-decrease-in-24-hours/"
-    },
-    {
-      "title": "What The Bitcoin Price Is Doing Now After Bouncing From $59,000",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T16:00:14+00:00",
-      "timeDisplay": "4:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:3bc3c76db094b:0-what-the-bitcoin-price-is-doing-now-after-bouncing-from-59-000/"
-    },
-    {
       "title": "Just In: Binance CZ Says Bitcoin Won\u2019t Be Dead For \u2018Too Long\u2019 As Price Crashes Again Today",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -538,118 +645,6 @@
       "timestamp": "2026-06-09T14:44:00+00:00",
       "timeDisplay": "2:44 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260609004768:0/"
-    },
-    {
-      "title": "Trader Opens 3,600 ETH Long Position at Average Price of $1,640",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:41:58+00:00",
-      "timeDisplay": "2:41 PM",
-      "link": "https://www.tradingview.com/news/binance_news:3a7948c02094b:0-trader-opens-3-600-eth-long-position-at-average-price-of-1-640/"
-    },
-    {
-      "title": "Dollar Weakens as Crude Oil Prices Sink",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:37:19+00:00",
-      "timeDisplay": "2:37 PM",
-      "link": "https://www.tradingview.com/news/barchart:ad3c6ea06094b:0-dollar-weakens-as-crude-oil-prices-sink/"
-    },
-    {
-      "title": "More Than Oil Prices Driving Canadian Export Strength \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:14:00+00:00",
-      "timeDisplay": "2:14 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260609004526:0/"
-    },
-    {
-      "title": "BlackRock Sells 3,671 BTC, Buys 10,566 ETH in On-Chain Rebalancing Move",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:06:48+00:00",
-      "timeDisplay": "2:06 PM",
-      "link": "https://www.tradingview.com/news/binance_news:16f7c6b10094b:0-blackrock-sells-3-671-btc-buys-10-566-eth-in-on-chain-rebalancing-move/"
-    },
-    {
-      "title": "Oil Falls on Easing War Risks and Weak China Demand",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:04+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/te_news:557705:0-oil-falls-on-easing-war-risks-and-weak-china-demand/"
-    },
-    {
-      "title": "2 ETFs to Watch for Outsized Volume on Water Resource & Small-Cap",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/zacks:cd9852741094b:0-2-etfs-to-watch-for-outsized-volume-on-water-resource-small-cap/"
-    },
-    {
-      "title": "US NAR CHIEF ECONOMIST YUN: \u2018IMPROVING AFFORDABILITY IS HELPING DRIVE\u2019 SALES OF EXISTING HOUSES HIGHER",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:d4001629a094b:0-us-nar-chief-economist-yun-improving-affordability-is-helping-drive-sales-of-existing-houses-higher/"
-    },
-    {
-      "title": "US NAR EXISTING HOME SALES +3.2% AT 4.17 MLN UNITS IN MAY VS APRIL 4.04 MLN (PREV 4.02 MLN); +3.2% YR-OVER-YR (MARKETS EXPECTED 4.08 MLN FOR MAY 2026)",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:cd432252b094b:0-us-nar-existing-home-sales-3-2-at-4-17-mln-units-in-may-vs-april-4-04-mln-prev-4-02-mln-3-2-yr-over-yr-markets-expected-4-08-mln-for-may-2026/"
-    },
-    {
-      "title": "US NAR EXISTING MULTI-UNIT HOME SALES UNCHANGED AT 370K IN MAY VS 370K IN APRIL; +2.8% YEAR-OVER-YEAR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:0978aaf21094b:0-us-nar-existing-multi-unit-home-sales-unchanged-at-370k-in-may-vs-370k-in-april-2-8-year-over-year/"
-    },
-    {
-      "title": "US NAR EXISTING SINGLE-FAMILY HOME SALES +3.5% TO 3.80 MLN UNITS IN MAY VS 3.67 MLN IN APRIL; +3.3% YEAR-OVER-YEAR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:e986a5b2a094b:0-us-nar-existing-single-family-home-sales-3-5-to-3-80-mln-units-in-may-vs-3-67-mln-in-april-3-3-year-over-year/"
-    },
-    {
-      "title": "US NAR MEDIAN EXISTING HOME SALES PRICE +2.8% TO $429,300 IN MAY VS $417,500 IN APRIL; +1.3% YEAR-OVER-YEAR",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:0d8e7204a094b:0-us-nar-median-existing-home-sales-price-2-8-to-429-300-in-may-vs-417-500-in-april-1-3-year-over-year/"
-    },
-    {
-      "title": "US NAR MONTHS' SUPPLY OF EXISTING HOMES FOR SALE 4.5 IN MAY VS 4.5 IN APRIL; 4.6 IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:1048f39e1094b:0-us-nar-months-supply-of-existing-homes-for-sale-4-5-in-may-vs-4-5-in-april-4-6-in-may-2025/"
-    },
-    {
-      "title": "US NAR YUN: \u2018NEW RECORD-HIGH MAY HOME PRICES REFLECTS SOLID FUNDMENTALS FOR HOMEOWNERS AND ONGOING SUPPLY CONSTRAINTS\u2019",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:fdce68626094b:0-us-nar-yun-new-record-high-may-home-prices-reflects-solid-fundmentals-for-homeowners-and-ongoing-supply-constraints/"
-    },
-    {
-      "title": "US NAR: ALL CASH SALES AT 25% OF SALES OF EXISTING HOUSES IN MAY VS 25% IN APRIL; 27% IN MAY 2025",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-09T14:00:00+00:00",
-      "timeDisplay": "2:00 PM",
-      "link": "https://www.tradingview.com/news/macenews:e19de0497094b:0-us-nar-all-cash-sales-at-25-of-sales-of-existing-houses-in-may-vs-25-in-april-27-in-may-2025/"
     }
   ]
 }

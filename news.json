@@ -1,51 +1,136 @@
 {
-  "lastUpdated": "2026-06-10T19:32:07.260595+00:00",
-  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 07:32 PM UTC",
+  "lastUpdated": "2026-06-10T21:57:08.140208+00:00",
+  "lastUpdatedDisplay": "Jun 10, 2026 \u2014 09:57 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "US inflation hit a 3-year high at 4.2% headline CPI but core CPI cooled, keeping aggressive rate hikes at bay and causing dollar weakness and yield easing. Oil extended gains on escalating Middle East tensions with Iran, while crude inventories dropped for the seventh consecutive week. Bitcoin and crypto markets remained under pressure with continued ETF outflows and extreme fear sentiment.",
+    "macroSummary": "Middle East tensions escalate with new wave of attacks on Iran driving oil gains and yield increases, while US inflation data shows core CPI cooling but headline hitting 3-year highs. Bitcoin faces continued selling pressure with ETF outflows, miner margin compression, and analyst calls for further downside to $53,600 levels.",
     "regimePressure": "MIXED",
-    "regimePressureReason": "Inflation surge supports reflation thesis but core cooling and dollar weakness suggest Fed restraint, while oil gains from geopolitics may not sustain broad commodity reflation.",
+    "regimePressureReason": "Iran war escalation supports the oil shock reflation narrative, but cooling core CPI and dollar weakness contradict broader reflation pressures while Bitcoin weakness suggests risk asset stress.",
     "thresholdWatches": [
       {
         "indicator": "Oil (WTI)",
         "level": "approaching $115",
-        "signal": "Oil extending gains on Iran tensions with inventory draws for 7th week"
+        "signal": "Oil extending gains on Iran escalation with Trump confirming 100M barrels through Hormuz strait"
+      },
+      {
+        "indicator": "US30Y",
+        "level": "approaching 5.10%",
+        "signal": "Yields edging higher on Iran tensions despite core CPI cooling"
       }
     ],
     "keySignals": [
       {
-        "signal": "Core CPI cooling despite headline 4.2% surge suggests disinflation forces still present",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Dollar slipping and yields easing despite inflation print shows Fed restraint expectations",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Oil inventory draws accelerating (-7.2M vs -3.0M expected) with Iran tensions escalating",
+        "signal": "Iran war escalation with new attacks confirmed by CENTCOM driving oil gains",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Bitcoin facing sustained selling pressure with ETF outflows and extreme fear territory",
-        "tag": "NEUTRAL"
+        "signal": "Core CPI cooling keeps rate hikes at bay with dollar slipping on inflation data",
+        "tag": "CONTRADICTS"
       },
       {
-        "signal": "Treasury interest payments hit record $867B YTD (+12%) showing fiscal stress building",
+        "signal": "Bitcoin testing key demand at $60K with miner margins at record lows and analyst calls for $53,600 bottom",
+        "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "Gold sliding 3% on Middle East escalation fueling inflation and rate-hike concerns",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "US Treasury interest payments hit record $867B YTD, up 12% with May payments up 44%",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Monitor oil closely for sustained break above $115 which would tilt regime toward stagflation",
-      "Watch for any DXY bounce toward 100 threshold as current dollar weakness may be temporary",
-      "Consider reducing BMNR exposure if crypto weakness persists alongside traditional risk-off signals"
+      "Monitor WTI crude for sustained break above $115 which would confirm stagflation tilt dominance",
+      "Watch BMNR performance against Bitcoin weakness - consider tightening put ladder strikes if crypto selloff accelerates",
+      "Track long-end yields for break above 5.10% on 30Y as Iran tensions could override cooling core inflation"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin bulls are still around. These charts show they just moved on to hotter markets.",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T21:54:00+00:00",
+      "timeDisplay": "9:54 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260610009437:0/"
+    },
+    {
+      "title": "IRAN UPDATE: CENTCOM CONFIRMS NEW WAVE OF ATTACKS UNDER WAY VS IRAN; EXPLOSIONS HEARD AT ISLANDS NEAR STRAIT AND AT LEAST TWO CITIES",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T21:49:00+00:00",
+      "timeDisplay": "9:49 PM",
+      "link": "https://www.tradingview.com/news/macenews:6fbc247d9094b:0-iran-update-centcom-confirms-new-wave-of-attacks-under-way-vs-iran-explosions-heard-at-islands-near-strait-and-at-least-two-cities/"
+    },
+    {
+      "title": "More Pain For Bitcoin? Analyst Explains Why BTC\u2019s Bottom May Be Months Away",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T21:23:43+00:00",
+      "timeDisplay": "9:23 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:1558cb15b094b:0-more-pain-for-bitcoin-analyst-explains-why-btc-s-bottom-may-be-months-away/"
+    },
+    {
+      "title": "U.S. Dollar Ends Roughly Flat Amid Reescalation In The Middle East, US CPI Data Release",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T21:15:56+00:00",
+      "timeDisplay": "9:15 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:ee30caa0483b2:0-u-s-dollar-ends-roughly-flat-amid-reescalation-in-the-middle-east-us-cpi-data-release/"
+    },
+    {
+      "title": "Bitcoin Now Testing Key Demand Area Following A Triangle Breakdown",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T21:00:02+00:00",
+      "timeDisplay": "9:00 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:9e592657f094b:0-bitcoin-now-testing-key-demand-area-following-a-triangle-breakdown/"
+    },
+    {
+      "title": "Bitcoin miner margins fall to record low: Will BTC\u2019s $60K floor hold?",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T20:42:55+00:00",
+      "timeDisplay": "8:42 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:637bc9b10094b:0-bitcoin-miner-margins-fall-to-record-low-will-btc-s-60k-floor-hold/"
+    },
+    {
+      "title": "Trump Says More Than 100 Million Barrels of Oil Got Through Hormuz \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T20:04:00+00:00",
+      "timeDisplay": "8:04 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260610008432:0/"
+    },
+    {
+      "title": "Bitcoin takes back seat to stablecoins and tokenization among financial advisors: Bitwise CIO",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T20:00:26+00:00",
+      "timeDisplay": "8:00 PM",
+      "link": "https://www.tradingview.com/news/the_block:0c6060263094b:0-bitcoin-takes-back-seat-to-stablecoins-and-tokenization-among-financial-advisors-bitwise-cio/"
+    },
+    {
+      "title": "Bitwise Memo Uncovers Key Insight From 40 Financial Advisors",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T19:40:11+00:00",
+      "timeDisplay": "7:40 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:2805697b4094b:0-bitwise-memo-uncovers-key-insight-from-40-financial-advisors/"
+    },
+    {
+      "title": "Bitcoin's Bear Market Gets a Healthier Read",
+      "source": "gurufocus",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-10T19:32:10+00:00",
+      "timeDisplay": "7:32 PM",
+      "link": "https://www.tradingview.com/news/gurufocus:7e699f577094b:0-bitcoin-s-bear-market-gets-a-healthier-read/"
+    },
     {
       "title": "Oil Futures Gain as Middle East Tensions Rise Again \u2014 Market Talk",
       "source": "dow-jones",
@@ -335,38 +420,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42I0WJ:0-from-chips-to-crude-markets-jolt-on-tech-tensions/"
     },
     {
-      "title": "Is MSTR's Small Operating Revenue Base Increasing Balance Sheet Risks?",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T14:13:00+00:00",
-      "timeDisplay": "2:13 PM",
-      "link": "https://www.tradingview.com/news/zacks:17eb7a57b094b:0-is-mstr-s-small-operating-revenue-base-increasing-balance-sheet-risks/"
-    },
-    {
-      "title": "Nasdaq Listed Fold Sells Bitcoin to Clear Debt and Stock Rallies 140%",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T14:11:12+00:00",
-      "timeDisplay": "2:11 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:3ecdf89ff094b:0-nasdaq-listed-fold-sells-bitcoin-to-clear-debt-and-stock-rallies-140/"
-    },
-    {
-      "title": "Crypto outflows are sentiment shock, not structural crisis: CoinShares' Butterfill",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T14:08:44+00:00",
-      "timeDisplay": "2:08 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:3c5262f0a094b:0-crypto-outflows-are-sentiment-shock-not-structural-crisis-coinshares-butterfill/"
-    },
-    {
-      "title": "Strategy's Road To 1 Million Bitcoin Could Be Shorter Than You Think, MSTR Analyst Says",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T14:04:44+00:00",
-      "timeDisplay": "2:04 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:26ed2d374094b:0-strategy-s-road-to-1-million-bitcoin-could-be-shorter-than-you-think-mstr-analyst-says/"
-    },
-    {
       "title": "NY Engelhard Gold Prices - June 10",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -391,28 +444,12 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260610005709:0/"
     },
     {
-      "title": "Bitcoin Faces Record Institutional Outflow as Spot ETFs Bleed",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T13:15:54+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:17f5ae548094b:0-bitcoin-faces-record-institutional-outflow-as-spot-etfs-bleed/"
-    },
-    {
       "title": "Comex Gold Delivery Intentions Breakdown - Jun 10",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-10T13:12:00+00:00",
       "timeDisplay": "1:12 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260610005534:0/"
-    },
-    {
-      "title": "Bitcoin price may slide toward $30K as institutions dump 450% of daily BTC supply",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T13:11:03+00:00",
-      "timeDisplay": "1:11 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:fb67c4c1d094b:0-bitcoin-price-may-slide-toward-30k-as-institutions-dump-450-of-daily-btc-supply/"
     },
     {
       "title": "Treasury Yields Retreat from Session Highs",
@@ -591,6 +628,14 @@
       "link": "https://www.tradingview.com/news/te_news:558037:0-oil-prices-up-1/"
     },
     {
+      "title": "Oil settles up nearly $2 after Trump threatens to hit Iran 'very hard'",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-10T11:14:17+00:00",
+      "timeDisplay": "11:14 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I03W:0-oil-settles-up-nearly-2-after-trump-threatens-to-hit-iran-very-hard/"
+    },
+    {
       "title": "Cryptocurrencies Fall Ahead of U.S. Inflation Data \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -605,46 +650,6 @@
       "timestamp": "2026-06-10T10:53:00+00:00",
       "timeDisplay": "10:53 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260610004057:0/"
-    },
-    {
-      "title": "Cryptos Fall As Markets Fear Inflation Spike, Hawkish Fed",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T10:34:55+00:00",
-      "timeDisplay": "10:34 AM",
-      "link": "https://www.tradingview.com/news/dpa_afx:6226797f5ba19:0-cryptos-fall-as-markets-fear-inflation-spike-hawkish-fed/"
-    },
-    {
-      "title": "Oil Prices Volatile Amid Escalating Middle East Tensions",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T09:46:28+00:00",
-      "timeDisplay": "9:46 AM",
-      "link": "https://www.tradingview.com/news/te_news:558009:0-oil-prices-volatile-amid-escalating-middle-east-tensions/"
-    },
-    {
-      "title": "Gold falls over 2% on fading Middle East peace hopes",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-10T08:55:34+00:00",
-      "timeDisplay": "8:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I08T:0-gold-falls-over-2-on-fading-middle-east-peace-hopes/"
-    },
-    {
-      "title": "Gold falls to 11-week low as oil rises on fresh US-Iran hostilities",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-10T07:55:52+00:00",
-      "timeDisplay": "7:55 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42I08N:0-gold-falls-to-11-week-low-as-oil-rises-on-fresh-us-iran-hostilities/"
-    },
-    {
-      "title": "Top Altcoins to Buy Before The Next Big Rally",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-10T07:12:26+00:00",
-      "timeDisplay": "7:12 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:d2dd47819094b:0-top-altcoins-to-buy-before-the-next-big-rally/"
     }
   ]
 }

@@ -1,51 +1,109 @@
 {
-  "lastUpdated": "2026-06-12T16:14:53.633010+00:00",
-  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 04:14 PM UTC",
+  "lastUpdated": "2026-06-12T18:23:16.590330+00:00",
+  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 06:23 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Headlines point to geopolitical de-escalation with Iran peace prospects lifting market sentiment, while US consumer sentiment improved significantly and inflation expectations declined across both 1-year and 5-year horizons. Bond yields are rising as traders reassess Fed policy amid the improving sentiment backdrop, with gold declining on higher rate expectations.",
+    "macroSummary": "Markets are pricing in potential Iran peace deal resolution which is driving crude oil lower and yields higher as geopolitical risk premium unwinds. Consumer sentiment and inflation expectations both improved in June, while Bitcoin remains stable around $64k amid SpaceX IPO developments and slowing ETF outflows.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Iran peace prospects and declining inflation expectations directly challenge the oil shock and stagflationary elements embedded in the current Reflation regime call.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil shock",
-        "level": "Iran de-escalation",
-        "signal": "Geopolitical de-escalation could unwind the Iran-war oil shock that was embedded in regime analysis"
-      }
-    ],
+    "regimePressureReason": "Iran peace deal developments are unwinding the oil shock that was embedded in the reflation regime, while improving consumer sentiment and declining inflation expectations challenge the stagflationary undertones.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "US consumer 5-year inflation expectations dropped to 3.4% from 3.9%, with 1-year falling to 4.6% from 4.8%",
+        "signal": "Iran-US-Pakistan peace negotiations advancing with potential agreement, driving crude oil lower as geopolitical risk premium unwinds",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Iran peace prospects driving geopolitical de-escalation and improved market sentiment",
+        "signal": "Consumer 1-year inflation expectations fell to 4.6% from 4.8% and 5-year expectations dropped to 3.4% from 3.9%",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Consumer sentiment surged to 48.9 vs 46.0 expected and 44.8 prior, with both current conditions and expectations improving sharply",
+        "signal": "Consumer sentiment jumped to 48.9 vs 46.0 expected and 44.8 prior, with both current conditions and expectations improving",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "10-year yields rebounding as traders weigh Iran peace prospects and Fed leadership transition",
-        "tag": "NEUTRAL"
+        "signal": "US 10-year yields rising as traders price in reduced geopolitical risk and potential Fed leadership changes",
+        "tag": "SUPPORTS"
       },
       {
-        "signal": "Dollar firm but failing to benefit from favorable shift in rate expectations",
+        "signal": "Gold facing second weekly loss on rate rise expectations as safe haven demand wanes",
         "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil prices closely for sustained decline below recent highs as Iran peace materialize",
-      "Consider reducing stagflation hedges if geopolitical tensions continue to ease",
-      "Watch for regime flip signals if inflation expectations continue declining and peace prospects solidify"
+      "Monitor oil complex closely - if Iran deal materializes, embedded war premium unwinds challenging core regime thesis",
+      "Watch for reflation narrative shift as inflation expectations decline and consumer confidence improves",
+      "Consider tightening BMNR put ladder strikes if geopolitical de-escalation continues reducing risk premium"
     ]
   },
   "articles": [
+    {
+      "title": "Gold heads for second weekly loss on rate rise expectations",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-12T18:19:46+00:00",
+      "timeDisplay": "6:19 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42K0RA:0-gold-heads-for-second-weekly-loss-on-rate-rise-expectations/"
+    },
+    {
+      "title": "U.S. Oil Rig Count Extends Climb \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T17:46:00+00:00",
+      "timeDisplay": "5:46 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612005243:0/"
+    },
+    {
+      "title": "IRAN UPDATE: USA, IRAN, PAKISTAN MEDIATOR CONVERGE AROUND AGREEMENT MEMO OF UNDERSTANDING ABOUT TO BE SIGNED BUT DISAGREE ON ITS ELEMENTS",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T17:23:00+00:00",
+      "timeDisplay": "5:23 PM",
+      "link": "https://www.tradingview.com/news/macenews:924bcf546094b:0-iran-update-usa-iran-pakistan-mediator-converge-around-agreement-memo-of-understanding-about-to-be-signed-but-disagree-on-its-elements/"
+    },
+    {
+      "title": "US NY FED NOWCAST STAFF ESTIMATE SEES US Q3 GDP GROWTH RATE AT 2.5%, UNCHANGED FROM PREV. ESTIMATE, AFTER LATEST ECONOMIC DATA",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T17:12:00+00:00",
+      "timeDisplay": "5:12 PM",
+      "link": "https://www.tradingview.com/news/macenews:87d6b1834094b:0-us-ny-fed-nowcast-staff-estimate-sees-us-q3-gdp-growth-rate-at-2-5-unchanged-from-prev-estimate-after-latest-economic-data/"
+    },
+    {
+      "title": "US NY FED NOWCAST STAFF ESTIMATE SEES US Q2 GDP GROWTH RATE AT 2.7%, UP LESS THAN 0.1 PERCENTAGE POINT FROM PREV. ESTIMATE, AFTER LATEST ECONOMIC DATA",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T17:10:00+00:00",
+      "timeDisplay": "5:10 PM",
+      "link": "https://www.tradingview.com/news/macenews:ec9391c32094b:0-us-ny-fed-nowcast-staff-estimate-sees-us-q2-gdp-growth-rate-at-2-7-up-less-than-0-1-percentage-point-from-prev-estimate-after-latest-economic-data/"
+    },
+    {
+      "title": "US BAKER HUGHES OIL & GAS RIGS DOWN 1 RIG IN LATEST WEEK FROM PREVIOUS WEEK TO 562",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T17:01:00+00:00",
+      "timeDisplay": "5:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:0ac1a80fd094b:0-us-baker-hughes-oil-gas-rigs-down-1-rig-in-latest-week-from-previous-week-to-562/"
+    },
+    {
+      "title": "Crude Falls on Hopes of US-Iran Deal",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T16:21:09+00:00",
+      "timeDisplay": "4:21 PM",
+      "link": "https://www.tradingview.com/news/te_news:558784:0-crude-falls-on-hopes-of-us-iran-deal/"
+    },
+    {
+      "title": "Bitcoin surfs SpaceX IPO at $64K as trader warns key BTC price support may crumble",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T16:17:33+00:00",
+      "timeDisplay": "4:17 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:4da886382094b:0-bitcoin-surfs-spacex-ipo-at-64k-as-trader-warns-key-btc-price-support-may-crumble/"
+    },
     {
       "title": "Bitcoin ETF Outflow Likely Tied to IPO Wave, Says Coinbase \u2014 Market Talk",
       "source": "dow-jones",
@@ -69,6 +127,14 @@
       "timestamp": "2026-06-12T15:26:00+00:00",
       "timeDisplay": "3:26 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260612004271:0/"
+    },
+    {
+      "title": "Teenage \u201cNinja Scammer\u201d Turns $13M Crypto into Lamborghini Lifestyle",
+      "source": "financemagnates",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T15:15:00+00:00",
+      "timeDisplay": "3:15 PM",
+      "link": "https://www.tradingview.com/news/financemagnates:cff5c4b08094b:0-teenage-ninja-scammer-turns-13m-crypto-into-lamborghini-lifestyle/"
     },
     {
       "title": "US 10-Year Yield Rebounds",
@@ -141,14 +207,6 @@
       "timestamp": "2026-06-12T14:00:00+00:00",
       "timeDisplay": "2:00 PM",
       "link": "https://www.tradingview.com/news/macenews:826964085094b:0-prelim-june-u-s-consumer-sentiment-index-48-9-vs-46-0-expected-and-44-8-may/"
-    },
-    {
-      "title": "Gold falls, heads for second weekly loss on higher-rate expectations",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-12T13:58:10+00:00",
-      "timeDisplay": "1:58 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42K0C8:0-gold-falls-heads-for-second-weekly-loss-on-higher-rate-expectations/"
     },
     {
       "title": "NY Engelhard Gold Prices - June 12",
@@ -300,7 +358,7 @@
       "color": "#00e5ff",
       "timestamp": "2026-06-12T11:06:00+00:00",
       "timeDisplay": "11:06 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260612002566:0/"
+      "link": "https://www.tradingview.com/news/DJN_DN20260612002567:0/"
     },
     {
       "title": "Dollar Fails to Benefit From Favorable Shift in Rate Expectations \u2014 Market Talk",
@@ -365,22 +423,6 @@
       "timestamp": "2026-06-12T09:39:38+00:00",
       "timeDisplay": "9:39 AM",
       "link": "https://www.tradingview.com/news/the_block:dfbb265ac094b:0-metaplanet-to-acquire-siiibo-securities-for-13-million-to-develop-bitcoin-linked-yield-products/"
-    },
-    {
-      "title": "Bitcoin Network \u2018Fires Miners\u2019 In August 2026 ? Adam Back Speaks Out",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T09:21:41+00:00",
-      "timeDisplay": "9:21 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:b1868a6bb094b:0-bitcoin-network-fires-miners-in-august-2026-adam-back-speaks-out/"
-    },
-    {
-      "title": "Crypto Laundering Network Linked To Ransomware Gangs Dismantled By Law Enforcement",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T09:11:31+00:00",
-      "timeDisplay": "9:11 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:82944d07b094b:0-crypto-laundering-network-linked-to-ransomware-gangs-dismantled-by-law-enforcement/"
     },
     {
       "title": "Gold steadies, but heads for second straight weekly loss",
@@ -597,54 +639,6 @@
       "timestamp": "2026-06-11T21:15:10+00:00",
       "timeDisplay": "9:15 PM",
       "link": "https://www.tradingview.com/news/dpa_afx:3e78c97ee44db:0-u-s-dollar-inches-lower-after-trump-announces-an-imminent-u-s-iran-deal/"
-    },
-    {
-      "title": "Tom Lee Says Bitmine To Slow Ethereum Purchases",
-      "source": "cryptoprowl",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T21:12:00+00:00",
-      "timeDisplay": "9:12 PM",
-      "link": "https://www.tradingview.com/news/cryptoprowl:d935cf858094b:0-tom-lee-says-bitmine-to-slow-ethereum-purchases/"
-    },
-    {
-      "title": "Crude Oil Slips Toward $86",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T20:40:09+00:00",
-      "timeDisplay": "8:40 PM",
-      "link": "https://www.tradingview.com/news/te_news:558462:0-crude-oil-slips-toward-86/"
-    },
-    {
-      "title": "Dollar falls after Trump halts US strikes on Iran",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-11T20:30:02+00:00",
-      "timeDisplay": "8:30 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42J18F:0-dollar-falls-after-trump-halts-us-strikes-on-iran/"
-    },
-    {
-      "title": "Cryptocurrencies Rise As Trump Cancels Iran Strike \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T20:08:00+00:00",
-      "timeDisplay": "8:08 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611007376:0/"
-    },
-    {
-      "title": "ETH futures traders lean into $1.6K range lows: Will Ether lead market recovery?",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:37:41+00:00",
-      "timeDisplay": "7:37 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:633bb46b6094b:0-eth-futures-traders-lean-into-1-6k-range-lows-will-ether-lead-market-recovery/"
-    },
-    {
-      "title": "Crude Oil Hits 7-week Low",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:34:56+00:00",
-      "timeDisplay": "7:34 PM",
-      "link": "https://www.tradingview.com/news/te_news:558454:0-crude-oil-hits-7-week-low/"
     }
   ]
 }

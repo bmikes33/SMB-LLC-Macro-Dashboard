@@ -1,45 +1,99 @@
 {
-  "lastUpdated": "2026-06-12T14:26:23.963419+00:00",
-  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 02:26 PM UTC",
+  "lastUpdated": "2026-06-12T16:14:53.633010+00:00",
+  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 04:14 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Consumer inflation expectations declined meaningfully in June (5-year fell to 3.4% from 3.9%, 1-year to 4.6% from 4.8%) while sentiment improved sharply, with markets pricing higher rate expectations despite dollar weakness. Iran peace deal speculation is emerging as a potential oil shock catalyst reversal, while crypto markets show mixed technical patterns with institutional caution around further downside.",
+    "macroSummary": "Headlines point to geopolitical de-escalation with Iran peace prospects lifting market sentiment, while US consumer sentiment improved significantly and inflation expectations declined across both 1-year and 5-year horizons. Bond yields are rising as traders reassess Fed policy amid the improving sentiment backdrop, with gold declining on higher rate expectations.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Inflation expectations are cooling significantly while Iran peace deal speculation directly threatens the embedded oil shock assumption underlying the current Reflation regime call.",
-    "thresholdWatches": [],
+    "regimePressureReason": "Iran peace prospects and declining inflation expectations directly challenge the oil shock and stagflationary elements embedded in the current Reflation regime call.",
+    "thresholdWatches": [
+      {
+        "indicator": "Oil shock",
+        "level": "Iran de-escalation",
+        "signal": "Geopolitical de-escalation could unwind the Iran-war oil shock that was embedded in regime analysis"
+      }
+    ],
     "keySignals": [
       {
-        "signal": "US consumer 5-year inflation expectations dropped sharply to 3.4% from 3.9%, undermining core Reflation thesis",
+        "signal": "US consumer 5-year inflation expectations dropped to 3.4% from 3.9%, with 1-year falling to 4.6% from 4.8%",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Bank of America discussing Iran peace deal asset allocation suggests oil shock reversal risk",
+        "signal": "Iran peace prospects driving geopolitical de-escalation and improved market sentiment",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar weakness despite higher rate expectations points to potential DXY 100 threshold approach",
-        "tag": "THRESHOLD_WATCH"
-      },
-      {
-        "signal": "Consumer sentiment improving emphatically (48.9 vs 44.8) supports risk-on continuation",
-        "tag": "SUPPORTS"
-      },
-      {
-        "signal": "China oil reserves could reduce crude imports into 2027, adding deflationary pressure to energy complex",
+        "signal": "Consumer sentiment surged to 48.9 vs 46.0 expected and 44.8 prior, with both current conditions and expectations improving sharply",
         "tag": "CONTRADICTS"
+      },
+      {
+        "signal": "10-year yields rebounding as traders weigh Iran peace prospects and Fed leadership transition",
+        "tag": "NEUTRAL"
+      },
+      {
+        "signal": "Dollar firm but failing to benefit from favorable shift in rate expectations",
+        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor Iran peace deal developments closely as oil shock reversal would invalidate key Reflation pillar",
-      "Consider reducing BMNR ladder aggressiveness given cooling inflation expectations may reduce ETH reflation sensitivity",
-      "Watch DXY closely for approach to 100 threshold given dollar weakness despite rate expectations"
+      "Monitor oil prices closely for sustained decline below recent highs as Iran peace materialize",
+      "Consider reducing stagflation hedges if geopolitical tensions continue to ease",
+      "Watch for regime flip signals if inflation expectations continue declining and peace prospects solidify"
     ]
   },
   "articles": [
+    {
+      "title": "Bitcoin ETF Outflow Likely Tied to IPO Wave, Says Coinbase \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T15:37:00+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612004343:0/"
+    },
+    {
+      "title": "Gold Doesn't Have a Friend in the World. And It Could Take a Minute Finding One. \u2014 Barrons.com",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T15:37:00+00:00",
+      "timeDisplay": "3:37 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612004348:0/"
+    },
+    {
+      "title": "Bitcoin Higher as ETF Outflows Slow \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T15:26:00+00:00",
+      "timeDisplay": "3:26 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612004271:0/"
+    },
+    {
+      "title": "US 10-Year Yield Rebounds",
+      "source": "trading-economics",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:58:05+00:00",
+      "timeDisplay": "2:58 PM",
+      "link": "https://www.tradingview.com/news/te_news:558755:0-us-10-year-yield-rebounds/"
+    },
+    {
+      "title": "Geopolitical De-escalation Lifts Crypto Market Sentiment",
+      "source": "dpa_afx",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:55:18+00:00",
+      "timeDisplay": "2:55 PM",
+      "link": "https://www.tradingview.com/news/dpa_afx:eae5d8f45742b:0-geopolitical-de-escalation-lifts-crypto-market-sentiment/"
+    },
+    {
+      "title": "Yields rise as traders weigh Iran peace prospects, Fed leadership transition",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-12T14:33:31+00:00",
+      "timeDisplay": "2:33 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42K0H1:0-yields-rise-as-traders-weigh-iran-peace-prospects-fed-leadership-transition/"
+    },
     {
       "title": "China's Oil Reserves Could Sustain Lower Crude Imports Into 2027, Capital Economics Says \u2014 Market Talk",
       "source": "dow-jones",
@@ -135,6 +189,14 @@
       "timestamp": "2026-06-12T13:21:00+00:00",
       "timeDisplay": "1:21 PM",
       "link": "https://www.tradingview.com/news/DJN_DN20260612003489:0/"
+    },
+    {
+      "title": "Bitcoin price prediction: JPMorgan flags BTC risk, miner revenue hits 2022 low",
+      "source": "invezz",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:00:45+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/invezz:2838b13d3094b:0-bitcoin-price-prediction-jpmorgan-flags-btc-risk-miner-revenue-hits-2022-low/"
     },
     {
       "title": "Can Retail ETFs Thrive Amid Sticky Inflation and Robust Job Growth?",
@@ -337,14 +399,6 @@
       "link": "https://www.tradingview.com/news/coinpedia:8134ce3b2094b:0-top-altcoins-to-buy-now-xrp-eth-and-others/"
     },
     {
-      "title": "AI buildout weighs on bitcoin demand but future gains could reverse trend, Relai CEO says",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T09:00:55+00:00",
-      "timeDisplay": "9:00 AM",
-      "link": "https://www.tradingview.com/news/the_block:17308b6e5094b:0-ai-buildout-weighs-on-bitcoin-demand-but-future-gains-could-reverse-trend-relai-ceo-says/"
-    },
-    {
       "title": "Will The SpaceX IPO Today Delay Altcoin and Crypto Rally?",
       "source": "coinpedia",
       "color": "#00e5ff",
@@ -369,14 +423,6 @@
       "link": "https://www.tradingview.com/news/DJN_DN20260612001628_20260612001628:0/"
     },
     {
-      "title": "Crypto News Today (June 12): BTC Ranging Between $62K-63K, SpaceX Futures Surge Ahead of IPO and Japan Crypto Reform Bill Edges Closer",
-      "source": "99Bitcoins",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T08:32:11+00:00",
-      "timeDisplay": "8:32 AM",
-      "link": "https://www.tradingview.com/news/99Bitcoins:a55589b4f094b:0-crypto-news-today-june-12-btc-ranging-between-62k-63k-spacex-futures-surge-ahead-of-ipo-and-japan-crypto-reform-bill-edges-closer/"
-    },
-    {
       "title": "Dollar's Falls Could Prove Limited Even if U.S.-Iran Deal Reached \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
@@ -399,14 +445,6 @@
       "timestamp": "2026-06-12T07:15:00+00:00",
       "timeDisplay": "7:15 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260612001351:0/"
-    },
-    {
-      "title": "Bitcoin Range-Bound After Tepid Recovery \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T07:07:00+00:00",
-      "timeDisplay": "7:07 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260612001328:0/"
     },
     {
       "title": "Australian Dollar's Downward Momentum Vs. U.S. Dollar Seems Stronger Than in March \u2014 Market Talk",
@@ -607,38 +645,6 @@
       "timestamp": "2026-06-11T19:34:56+00:00",
       "timeDisplay": "7:34 PM",
       "link": "https://www.tradingview.com/news/te_news:558454:0-crude-oil-hits-7-week-low/"
-    },
-    {
-      "title": "U.S. Dollar Index Falls 0.1% to 99.852 on June 12",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:33:43+00:00",
-      "timeDisplay": "7:33 PM",
-      "link": "https://www.tradingview.com/news/binance_news:a909ead4a094b:0-u-s-dollar-index-falls-0-1-to-99-852-on-june-12/"
-    },
-    {
-      "title": "Dollar Falls as President Trump Cancels Attacks on Iran",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:32:29+00:00",
-      "timeDisplay": "7:32 PM",
-      "link": "https://www.tradingview.com/news/barchart:f68912b0f094b:0-dollar-falls-as-president-trump-cancels-attacks-on-iran/"
-    },
-    {
-      "title": "Crude Oil WTI is down by 4.1%",
-      "source": "trading-economics",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:30:23+00:00",
-      "timeDisplay": "7:30 PM",
-      "link": "https://www.tradingview.com/news/te_news:558453:0-crude-oil-wti-is-down-by-4-1/"
-    },
-    {
-      "title": "Crude Oil Prices Whipsaw Sharply Lower on Iran Peace Hopes",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T19:15:15+00:00",
-      "timeDisplay": "7:15 PM",
-      "link": "https://www.tradingview.com/news/barchart:bf86a8137094b:0-crude-oil-prices-whipsaw-sharply-lower-on-iran-peace-hopes/"
     }
   ]
 }

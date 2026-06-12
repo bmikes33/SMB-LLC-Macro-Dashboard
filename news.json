@@ -1,51 +1,205 @@
 {
-  "lastUpdated": "2026-06-12T11:32:10.896865+00:00",
-  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 11:32 AM UTC",
+  "lastUpdated": "2026-06-12T14:26:23.963419+00:00",
+  "lastUpdatedDisplay": "Jun 12, 2026 \u2014 02:26 PM UTC",
   "articleCount": 75,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "Markets show mixed signals with gold heading for a second weekly loss amid persistent inflation concerns, while geopolitical tensions ease as Trump cancels Iran strikes and US-Iran deal optimism emerges. Oil falls to 8-week lows, the dollar weakens on peace deal prospects, and Bitcoin remains range-bound with continued institutional headwinds.",
+    "macroSummary": "Consumer inflation expectations declined meaningfully in June (5-year fell to 3.4% from 3.9%, 1-year to 4.6% from 4.8%) while sentiment improved sharply, with markets pricing higher rate expectations despite dollar weakness. Iran peace deal speculation is emerging as a potential oil shock catalyst reversal, while crypto markets show mixed technical patterns with institutional caution around further downside.",
     "regimePressure": "PRESSURING",
-    "regimePressureReason": "Oil collapse to 8-week lows directly contradicts the Iran-war oil shock premise underlying the current Reflation regime, while dollar weakness and geopolitical de-escalation pressure the stagflationary narrative.",
-    "thresholdWatches": [
-      {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil falls to 8-week low as Trump cancels Iran strikes and US-Iran deal optimism grows"
-      }
-    ],
+    "regimePressureReason": "Inflation expectations are cooling significantly while Iran peace deal speculation directly threatens the embedded oil shock assumption underlying the current Reflation regime call.",
+    "thresholdWatches": [],
     "keySignals": [
       {
-        "signal": "Oil drops to 8-week lows as Iran war premium evaporates with cancelled strikes and peace deal optimism",
+        "signal": "US consumer 5-year inflation expectations dropped sharply to 3.4% from 3.9%, undermining core Reflation thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar falls on US-Iran deal optimism despite favorable rate expectations shift",
+        "signal": "Bank of America discussing Iran peace deal asset allocation suggests oil shock reversal risk",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Gold heads for second weekly loss as inflation and rate-hike fears persist",
+        "signal": "Dollar weakness despite higher rate expectations points to potential DXY 100 threshold approach",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Consumer sentiment improving emphatically (48.9 vs 44.8) supports risk-on continuation",
         "tag": "SUPPORTS"
       },
       {
-        "signal": "Market sentiment improves emphatically as geopolitical tensions ease",
+        "signal": "China oil reserves could reduce crude imports into 2027, adding deflationary pressure to energy complex",
         "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin remains range-bound with institutional headwinds and miner capitulation concerns",
-        "tag": "NEUTRAL"
       }
     ],
     "actionItems": [
-      "Monitor oil price action closely - sustained weakness below recent lows could invalidate Iran-war shock premise of current regime",
-      "Watch for continued dollar weakness momentum if US-Iran deal materializes - could approach DXY 100 threshold",
-      "BMNR ladder may benefit from reduced geopolitical premium but watch for broader crypto weakness from institutional outflows"
+      "Monitor Iran peace deal developments closely as oil shock reversal would invalidate key Reflation pillar",
+      "Consider reducing BMNR ladder aggressiveness given cooling inflation expectations may reduce ETH reflation sensitivity",
+      "Watch DXY closely for approach to 100 threshold given dollar weakness despite rate expectations"
     ]
   },
   "articles": [
+    {
+      "title": "China's Oil Reserves Could Sustain Lower Crude Imports Into 2027, Capital Economics Says \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:06:00+00:00",
+      "timeDisplay": "2:06 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612003802:0/"
+    },
+    {
+      "title": "US CONSUMER 5-YEAR INFLATION EXPECTATIONS 3.4% IN JUNE VS. 3.9% IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:02:00+00:00",
+      "timeDisplay": "2:02 PM",
+      "link": "https://www.tradingview.com/news/macenews:b885e7ca7094b:0-us-consumer-5-year-inflation-expectations-3-4-in-june-vs-3-9-in-may/"
+    },
+    {
+      "title": "US CONSUMER 1-YEAR INFLATION EXPECTATIONS 4.6% IN JUNE VS. 4.8% IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:89b8e27b7094b:0-us-consumer-1-year-inflation-expectations-4-6-in-june-vs-4-8-in-may/"
+    },
+    {
+      "title": "US CONSUMER CURRENT CONDITIONS INDEX 48.4 IN JUNE VS. 45.8 IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:dd1ec3156094b:0-us-consumer-current-conditions-index-48-4-in-june-vs-45-8-in-may/"
+    },
+    {
+      "title": "US CONSUMER EXPECTATIONS INDEX 49.3 IN JUNE VS. 44.1 IN MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:01:00+00:00",
+      "timeDisplay": "2:01 PM",
+      "link": "https://www.tradingview.com/news/macenews:eba91fb9d094b:0-us-consumer-expectations-index-49-3-in-june-vs-44-1-in-may/"
+    },
+    {
+      "title": "PRELIM JUNE U.S CONSUMER SENTIMENT INDEX 48.9 VS 46.0 EXPECTED AND 44.8 MAY",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T14:00:00+00:00",
+      "timeDisplay": "2:00 PM",
+      "link": "https://www.tradingview.com/news/macenews:826964085094b:0-prelim-june-u-s-consumer-sentiment-index-48-9-vs-46-0-expected-and-44-8-may/"
+    },
+    {
+      "title": "Gold falls, heads for second weekly loss on higher-rate expectations",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-12T13:58:10+00:00",
+      "timeDisplay": "1:58 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42K0C8:0-gold-falls-heads-for-second-weekly-loss-on-higher-rate-expectations/"
+    },
+    {
+      "title": "NY Engelhard Gold Prices - June 12",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:58:00+00:00",
+      "timeDisplay": "1:58 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612003727:0/"
+    },
+    {
+      "title": "Bitcoin Price Holds Steady Ahead of SpaceX's Listing \u2014 WSJ",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:53:00+00:00",
+      "timeDisplay": "1:53 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612003687:0/"
+    },
+    {
+      "title": "If an Iran peace deal is agreed, these are the assets investors should buy, says Bank of America",
+      "source": "market-watch",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:51:00+00:00",
+      "timeDisplay": "1:51 PM",
+      "link": "https://www.tradingview.com/news/DJN_SN20260612005667:0/"
+    },
+    {
+      "title": "Coinbase Council Warns 7 Million Bitcoin May Face Future Quantum Risk",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:47:05+00:00",
+      "timeDisplay": "1:47 PM",
+      "link": "https://www.tradingview.com/news/newsbtc:b39557e01094b:0-coinbase-council-warns-7-million-bitcoin-may-face-future-quantum-risk/"
+    },
+    {
+      "title": "Comex Gold Delivery Intentions Breakdown - Jun 12",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:21:00+00:00",
+      "timeDisplay": "1:21 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612003489:0/"
+    },
+    {
+      "title": "Can Retail ETFs Thrive Amid Sticky Inflation and Robust Job Growth?",
+      "source": "zacks",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T13:00:00+00:00",
+      "timeDisplay": "1:00 PM",
+      "link": "https://www.tradingview.com/news/zacks:e9857b4f6094b:0-can-retail-etfs-thrive-amid-sticky-inflation-and-robust-job-growth/"
+    },
+    {
+      "title": "Cryptocurrencies Unlikely to Return to Last Week's Lows \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:58:00+00:00",
+      "timeDisplay": "12:58 PM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260612003308:0/"
+    },
+    {
+      "title": "US spot Bitcoin ETFs set to hit $2 trillion cumulative trading volume milestone amid mounting outflows",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:52:38+00:00",
+      "timeDisplay": "12:52 PM",
+      "link": "https://www.tradingview.com/news/the_block:374238ede094b:0-us-spot-bitcoin-etfs-set-to-hit-2-trillion-cumulative-trading-volume-milestone-amid-mounting-outflows/"
+    },
+    {
+      "title": "Metaplanet Pays $13 Million for License to Sell Bitcoin Yield Products in Japan",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:15:32+00:00",
+      "timeDisplay": "12:15 PM",
+      "link": "https://www.tradingview.com/news/beincrypto:c5e96a195094b:0-metaplanet-pays-13-million-for-license-to-sell-bitcoin-yield-products-in-japan/"
+    },
+    {
+      "title": "Key facts: 650k BTC Drop; Strategy Sells, BTC Hits 9\u2011yr Line",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:13:37+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:b9f426d09ac18:0-key-facts-650k-btc-drop-strategy-sells-btc-hits-9-yr-line/"
+    },
+    {
+      "title": "Key facts: ETH OI ~3.7M; Binance 44%+; perps lead; balances near lows",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:13:37+00:00",
+      "timeDisplay": "12:13 PM",
+      "link": "https://www.tradingview.com/news/tradingview:0189a47a2d00f:0-key-facts-eth-oi-3-7m-binance-44-perps-lead-balances-near-lows/"
+    },
+    {
+      "title": "Dollar firm as traders weigh prospects for Iran ceasefire",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-12T12:12:50+00:00",
+      "timeDisplay": "12:12 PM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42K0PV:0-dollar-firm-as-traders-weigh-prospects-for-iran-ceasefire/"
+    },
+    {
+      "title": "Metaplanet to form securities arm through Siiibo acquisition",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T12:05:09+00:00",
+      "timeDisplay": "12:05 PM",
+      "link": "https://www.tradingview.com/news/cointelegraph:d89b60174094b:0-metaplanet-to-form-securities-arm-through-siiibo-acquisition/"
+    },
     {
       "title": "Weekend Reads: China's oil shift and World Cup economics",
       "source": "reuters",
@@ -125,6 +279,22 @@
       "timestamp": "2026-06-12T10:00:00+00:00",
       "timeDisplay": "10:00 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42J113:0-newly-led-fed-poses-markets-wildcard-for-rockier-us-indexes/"
+    },
+    {
+      "title": "Standard Chartered Says Crypto Market Has Bottomed",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T09:45:00+00:00",
+      "timeDisplay": "9:45 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:e622aef57094b:0-standard-chartered-says-crypto-market-has-bottomed/"
+    },
+    {
+      "title": "Ethereum Staking Demand Soars As Investors Chase Rewards",
+      "source": "cryptoprowl",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-12T09:43:00+00:00",
+      "timeDisplay": "9:43 AM",
+      "link": "https://www.tradingview.com/news/cryptoprowl:984d1728c094b:0-ethereum-staking-demand-soars-as-investors-chase-rewards/"
     },
     {
       "title": "Metaplanet to acquire Siiibo Securities for $13 million to develop bitcoin-linked yield products",
@@ -263,30 +433,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42K0A2:0-india-gold-demand-ticks-up-as-prices-slip-china-premiums-ease/"
     },
     {
-      "title": "Why Strategy Sold 32 BTC? Michael Saylor Breaks Silence at BTC Prague",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T06:00:21+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:42d54449c094b:0-why-strategy-sold-32-btc-michael-saylor-breaks-silence-at-btc-prague/"
-    },
-    {
-      "title": "REG - Falconedge PLC - May Results - Bitcoin Yield",
-      "source": "lse",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T06:00:04+00:00",
-      "timeDisplay": "6:00 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026-06-12:newsml_RSL9903Ha:0-reg-falconedge-plc-may-results-bitcoin-yield/"
-    },
-    {
-      "title": "Michael Saylor: \u2018I Never Said the Company (Strategy) Wouldn\u2019t Sell Its Bitcoin\u2019",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T05:49:14+00:00",
-      "timeDisplay": "5:49 AM",
-      "link": "https://www.tradingview.com/news/coinpedia:f7e7592db094b:0-michael-saylor-i-never-said-the-company-strategy-wouldn-t-sell-its-bitcoin/"
-    },
-    {
       "title": "Tom Lee Hints Bitmine\u2019s Aggressive ETH Buying Is Almost Over",
       "source": "beincrypto",
       "color": "#00e5ff",
@@ -309,22 +455,6 @@
       "timestamp": "2026-06-12T04:08:51+00:00",
       "timeDisplay": "4:08 AM",
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42K06Y:0-china-s-yuan-strengthens-on-growing-prospects-of-us-iran-peace-deal/"
-    },
-    {
-      "title": "Bitcoin Pops 3% as Trump Cancels Iran Strikes \u2014 But One Headwind Stays",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T03:33:35+00:00",
-      "timeDisplay": "3:33 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:a7bead2c9094b:0-bitcoin-pops-3-as-trump-cancels-iran-strikes-but-one-headwind-stays/"
-    },
-    {
-      "title": "Bitcoin Rises; Nerm Term Direction Appears Uncertain \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T03:24:00+00:00",
-      "timeDisplay": "3:24 AM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611009255:0/"
     },
     {
       "title": "Gold set for weekly loss as inflation, rate hike fears persist",
@@ -375,14 +505,6 @@
       "link": "https://www.tradingview.com/news/te_news:558508:0-dollar-holds-decline-on-iran-deal-prospects/"
     },
     {
-      "title": "Dollar steadies on ceasefire prospects, PPI eases pressure on Fed",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-12T01:03:30+00:00",
-      "timeDisplay": "1:03 AM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42K01B:0-dollar-steadies-on-ceasefire-prospects-ppi-eases-pressure-on-fed/"
-    },
-    {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
       "color": "#ff6d00",
@@ -397,14 +519,6 @@
       "timestamp": "2026-06-12T00:39:00+00:00",
       "timeDisplay": "12:39 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260611009020:0/"
-    },
-    {
-      "title": "Whale Deposits 810 Bitcoin to a Centralized Exchange at a Loss",
-      "source": "binance_news",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-12T00:34:26+00:00",
-      "timeDisplay": "12:34 AM",
-      "link": "https://www.tradingview.com/news/binance_news:9dd84ae8c094b:0-whale-deposits-810-bitcoin-to-a-centralized-exchange-at-a-loss/"
     },
     {
       "title": "Asian Currencies Consolidate; May Be Buoyed by Risk-on Sentiment \u2014 Market Talk",
@@ -525,126 +639,6 @@
       "timestamp": "2026-06-11T19:15:15+00:00",
       "timeDisplay": "7:15 PM",
       "link": "https://www.tradingview.com/news/barchart:bf86a8137094b:0-crude-oil-prices-whipsaw-sharply-lower-on-iran-peace-hopes/"
-    },
-    {
-      "title": "Oil Settles Lower As Trump Cancels Planned Strikes on Iran \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T18:54:00+00:00",
-      "timeDisplay": "6:54 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611006909:0/"
-    },
-    {
-      "title": "Yields drop as Trump calls off strikes on Iran",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-11T18:46:57+00:00",
-      "timeDisplay": "6:46 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42J0VT:0-yields-drop-as-trump-calls-off-strikes-on-iran/"
-    },
-    {
-      "title": "Gold Slides Amid U.S.-Iran Escalation, Gains In Crude Oil, US Dollar",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T18:14:22+00:00",
-      "timeDisplay": "6:14 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:f049bef5c411d:0-gold-slides-amid-u-s-iran-escalation-gains-in-crude-oil-us-dollar/"
-    },
-    {
-      "title": "Gold Edges Slide Amid U.S.-Iran Escalation, Gains In Crude Oil, US Dollar",
-      "source": "dpa_afx",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T17:49:59+00:00",
-      "timeDisplay": "5:49 PM",
-      "link": "https://www.tradingview.com/news/dpa_afx:be5b98508f7aa:0-gold-edges-slide-amid-u-s-iran-escalation-gains-in-crude-oil-us-dollar/"
-    },
-    {
-      "title": "Oil Futures Fall As Trump Calls Off Planned Iran Strikes \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T17:49:00+00:00",
-      "timeDisplay": "5:49 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611006556:0/"
-    },
-    {
-      "title": "IRAN UPDATE: PRES TRUMP CANCELS ATTACK ON IRAN THREATENED FOR TONIGHT AFTER TALKS 'BEEN BROUGHT TO HIGHEST LEVEL OF IRANIAN LEADERSHIP AND APPROVED'",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T17:48:00+00:00",
-      "timeDisplay": "5:48 PM",
-      "link": "https://www.tradingview.com/news/macenews:3e17f026c094b:0-iran-update-pres-trump-cancels-attack-on-iran-threatened-for-tonight-after-talks-been-brought-to-highest-level-of-iranian-leadership-and-approved/"
-    },
-    {
-      "title": "Ethereum Nears 200 Million Non-Empty Wallets Despite Market Uncertainty",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T17:00:08+00:00",
-      "timeDisplay": "5:00 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:b1276e685094b:0-ethereum-nears-200-million-non-empty-wallets-despite-market-uncertainty/"
-    },
-    {
-      "title": "Michael Saylor Says Confidence in Ethereum Has Collapsed",
-      "source": "coinpedia",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:53:30+00:00",
-      "timeDisplay": "4:53 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:dcf1d4de6094b:0-michael-saylor-says-confidence-in-ethereum-has-collapsed/"
-    },
-    {
-      "title": "Grain Markets Unmoved by WASDE and Trump Threats \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:50:00+00:00",
-      "timeDisplay": "4:50 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611006320:0/"
-    },
-    {
-      "title": "U.S. Gasoline Market Seen Tightening Over Summer \u2014 Market Talk",
-      "source": "dow-jones",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:12:00+00:00",
-      "timeDisplay": "4:12 PM",
-      "link": "https://www.tradingview.com/news/DJN_DN20260611006041:0/"
-    },
-    {
-      "title": "US FREDDIE MAC 15-YEAR MORTGAGE RATE AVERAGES 5.84% IN LATEST WEEK VS. 5.79% LAST WEEK, 5.97% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:09:00+00:00",
-      "timeDisplay": "4:09 PM",
-      "link": "https://www.tradingview.com/news/macenews:e4a3edb71094b:0-us-freddie-mac-15-year-mortgage-rate-averages-5-84-in-latest-week-vs-5-79-last-week-5-97-year-ago/"
-    },
-    {
-      "title": "US FREDDIE MAC 30-YEAR MORTGAGE RATE AVERAGES 6.52% IN LATEST WEEK VS. 6.48% LAST WEEK, 6.84% YEAR AGO",
-      "source": "macenews",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:08:00+00:00",
-      "timeDisplay": "4:08 PM",
-      "link": "https://www.tradingview.com/news/macenews:eabfb2abf094b:0-us-freddie-mac-30-year-mortgage-rate-averages-6-52-in-latest-week-vs-6-48-last-week-6-84-year-ago/"
-    },
-    {
-      "title": "An ETF Retirement Portfolio for Moderate-Risk Investors",
-      "source": "zacks",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T16:01:00+00:00",
-      "timeDisplay": "4:01 PM",
-      "link": "https://www.tradingview.com/news/zacks:6815cb456094b:0-an-etf-retirement-portfolio-for-moderate-risk-investors/"
-    },
-    {
-      "title": "Ethereum Futures Just Hit A Binance Record: Are Traders Calling The Bottom?",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T15:30:17+00:00",
-      "timeDisplay": "3:30 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:4f692a127094b:0-ethereum-futures-just-hit-a-binance-record-are-traders-calling-the-bottom/"
-    },
-    {
-      "title": "Crude Oil Prices Climb as US-Iran Tensions Escalate",
-      "source": "barchart",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-11T15:29:58+00:00",
-      "timeDisplay": "3:29 PM",
-      "link": "https://www.tradingview.com/news/barchart:74737734b094b:0-crude-oil-prices-climb-as-us-iran-tensions-escalate/"
     }
   ]
 }

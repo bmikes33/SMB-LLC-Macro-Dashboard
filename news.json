@@ -1,51 +1,323 @@
 {
-  "lastUpdated": "2026-06-15T02:11:51.007594+00:00",
-  "lastUpdatedDisplay": "Jun 15, 2026 \u2014 02:11 AM UTC",
-  "articleCount": 33,
+  "lastUpdated": "2026-06-15T08:44:35.490114+00:00",
+  "lastUpdatedDisplay": "Jun 15, 2026 \u2014 08:44 AM UTC",
+  "articleCount": 57,
   "currentRegime": "Reflation",
   "currentRegimeColor": "#00e5ff",
   "regimeConfidence": "MEDIUM",
   "regimeAsOf": "2026-05-01T15:30:00-05:00",
   "summary": {
-    "macroSummary": "A US-Iran peace deal has been announced with Trump claiming it will be signed Sunday, though Tehran contradicts this timeline. The deal has triggered a broad risk-on rotation with oil prices plummeting, bond yields falling to 4-week lows, dollar weakening to 10-day lows, and Asian equities surging on expectations the Strait of Hormuz will reopen.",
+    "macroSummary": "Markets are rallying on news of a US-Iran interim peace deal that would end Strait of Hormuz blockades, with Bitcoin hitting $66K, gold soaring above $4,300, and the dollar falling to 10-day lows. The deal appears to remove the Iran-war oil shock premium that was embedded in current pricing, though negotiations are still ongoing with signing expected Friday.",
     "regimePressure": "CHALLENGING",
-    "regimePressureReason": "The Iran peace deal fundamentally undermines the regime's embedded war-oil shock assumption, with oil collapsing and yields/dollar falling in a classic disinflationary move that contradicts the reflation thesis.",
+    "regimePressureReason": "The core Iran-war oil shock that underpinned the current regime assessment is being unwound by peace deal developments, fundamentally altering the stagflationary setup.",
     "thresholdWatches": [
       {
-        "indicator": "Oil (WTI)",
-        "level": "< $115",
-        "signal": "Oil dropping sharply on peace deal expectations, moving away from stagflationary $115+ threshold"
+        "indicator": "DXY",
+        "level": "< 100",
+        "signal": "Dollar hits 10-day lows as peace deal reduces safe-haven demand, approaching potential regime flip threshold"
       }
     ],
     "keySignals": [
       {
-        "signal": "Oil prices collapsing on Iran peace deal expectations with Brent potentially falling to $80 by year-end",
+        "signal": "Iran-war oil shock embedded in current regime is being unwound by interim peace deal removing Strait of Hormuz blockade",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "US 10-year yields hitting 4-week lows as peace deal soothes inflation fears",
+        "signal": "Dollar weakness to 10-day lows approaches DXY 100 regime flip threshold as safe-haven demand recedes",
+        "tag": "THRESHOLD_WATCH"
+      },
+      {
+        "signal": "Treasury yields falling alongside dollar suggests unwinding of stagflationary war premium that supported reflation thesis",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Dollar falls to 10-day low on peace deal, moving away from DXY 100 regime flip threshold",
+        "signal": "Risk assets (Bitcoin, crypto) rallying strongly on geopolitical tension relief supports risk-on rotation",
         "tag": "CONTRADICTS"
       },
       {
-        "signal": "Asian equities surging and risk-on rotation accelerating on geopolitical tension relief",
-        "tag": "CONTRADICTS"
-      },
-      {
-        "signal": "Bitcoin approaching $65K and spot ETFs seeing $85.8M inflows after five-day outflow streak",
+        "signal": "Gold surge above $4,300 on peace deal shows continued inflation hedge demand despite geopolitical relief",
         "tag": "SUPPORTS"
       }
     ],
     "actionItems": [
-      "Reassess BMNR cash-secured put ladder strikes as crypto benefits from risk-on rotation and dollar weakness",
-      "Monitor oil complex positions as war premium rapidly deflates with peace deal momentum",
-      "Consider reducing cyclical overweights as disinflationary forces may shift growth/inflation mix away from reflation"
+      "Monitor oil prices closely - sustained decline below war-shock levels invalidates embedded stagflationary premise",
+      "Watch DXY for break below 100 which would confirm dollar regime flip away from reflation setup",
+      "Consider reducing BMNR put ladder strikes if crypto strength continues on reduced geopolitical premium"
     ]
   },
   "articles": [
+    {
+      "title": "Hedge funds reopen pre-war playbook as Iran war risks recede",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T08:27:14+00:00",
+      "timeDisplay": "8:27 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:c0d2a441e094b:0-hedge-funds-reopen-pre-war-playbook-as-iran-war-risks-recede/"
+    },
+    {
+      "title": "Dollar hovers around 10-day low as US, Iran reach peace deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-15T08:16:53+00:00",
+      "timeDisplay": "8:16 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42N0NS:0-dollar-hovers-around-10-day-low-as-us-iran-reach-peace-deal/"
+    },
+    {
+      "title": "BTC/USD: Bitcoin Hits Two-Week High at $66,000 as War End Sparks Crypto Enthusiasm",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T08:13:30+00:00",
+      "timeDisplay": "8:13 AM",
+      "link": "https://www.tradingview.com/news/tradingview:749b627d2094b:0-btc-usd-bitcoin-hits-two-week-high-at-66-000-as-war-end-sparks-crypto-enthusiasm/"
+    },
+    {
+      "title": "Dollar's Falls Could Remain Limited Ahead of Fed Decision \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T08:04:00+00:00",
+      "timeDisplay": "8:04 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615001162:0/"
+    },
+    {
+      "title": "XAU/USD: Gold Prices Soar Above $4,300 on US-Iran Peace Deal (But It Ain\u2019t a Done Deal)",
+      "source": "tradingview",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T07:44:22+00:00",
+      "timeDisplay": "7:44 AM",
+      "link": "https://www.tradingview.com/news/tradingview:9b1f4f06c094b:0-xau-usd-gold-prices-soar-above-4-300-on-us-iran-peace-deal-but-it-ain-t-a-done-deal/"
+    },
+    {
+      "title": "Ethereum Nears First-Ever 3 Straight Red Quarters as Bullish Signs Emerge",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T07:38:13+00:00",
+      "timeDisplay": "7:38 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:af31c4663094b:0-ethereum-nears-first-ever-3-straight-red-quarters-as-bullish-signs-emerge/"
+    },
+    {
+      "title": "U.S. and Iran Closer to Peace Deal But Crucial Negotiations Still Ahead \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T07:17:00+00:00",
+      "timeDisplay": "7:17 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000946:0/"
+    },
+    {
+      "title": "Gold Gains 2% as U.S.-Iran Deal Pushes Oil Lower \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T07:12:00+00:00",
+      "timeDisplay": "7:12 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000895:0/"
+    },
+    {
+      "title": "Comex Gold Futures Likely Eyeing Resistance at $4,400/Ounce, Daily Chart Shows \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T07:00:00+00:00",
+      "timeDisplay": "7:00 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000805:0/"
+    },
+    {
+      "title": "Bitcoin Whales Scoop $700 Million Into the Same Setup That Sparked a 24% Rally",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:53:22+00:00",
+      "timeDisplay": "6:53 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:4cdc6f308094b:0-bitcoin-whales-scoop-700-million-into-the-same-setup-that-sparked-a-24-rally/"
+    },
+    {
+      "title": "Bitcoin Rises After U.S, Iran Agree Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:52:00+00:00",
+      "timeDisplay": "6:52 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000753:0/"
+    },
+    {
+      "title": "Bitcoin nears $66K as Trump says US has peace deal with Iran",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:47:49+00:00",
+      "timeDisplay": "6:47 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:004a12d1d094b:0-bitcoin-nears-66k-as-trump-says-us-has-peace-deal-with-iran/"
+    },
+    {
+      "title": "Dollar Strength and Yen Weakness Seen in the Past Likely to Reverse \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:47:00+00:00",
+      "timeDisplay": "6:47 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000736:0/"
+    },
+    {
+      "title": "Dollar, Treasury Yields Fall After U.S.-Iran Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:38:00+00:00",
+      "timeDisplay": "6:38 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000692:0/"
+    },
+    {
+      "title": "Goobit Group AB has published its Year-end Report for the fiscal year 2025/2026, available on goobit.se.",
+      "source": "modular_finance",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T06:30:00+00:00",
+      "timeDisplay": "6:30 AM",
+      "link": "https://www.tradingview.com/news/modular_finance:b009bcfdeeb97:0-goobit-group-ab-has-published-its-year-end-report-for-the-fiscal-year-2025-2026-available-on-goobit-se/"
+    },
+    {
+      "title": "Why the Crypto Market is up Today",
+      "source": "coinpedia",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T05:56:41+00:00",
+      "timeDisplay": "5:56 AM",
+      "link": "https://www.tradingview.com/news/coinpedia:b343cb6bd094b:0-why-the-crypto-market-is-up-today/"
+    },
+    {
+      "title": "Dollar hits 10-day low as US, Iran reach peace deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-15T05:55:58+00:00",
+      "timeDisplay": "5:55 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42N043:0-dollar-hits-10-day-low-as-us-iran-reach-peace-deal/"
+    },
+    {
+      "title": "Bitcoin tops $65,000 as reports of US-Iran peace deal ease geopolitical fears",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T05:55:11+00:00",
+      "timeDisplay": "5:55 AM",
+      "link": "https://www.tradingview.com/news/the_block:5715130a9094b:0-bitcoin-tops-65-000-as-reports-of-us-iran-peace-deal-ease-geopolitical-fears/"
+    },
+    {
+      "title": "Google Cuts the Qubits Needed to Break Ethereum by 20x, But There\u2019s a Plan",
+      "source": "beincrypto",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T05:21:55+00:00",
+      "timeDisplay": "5:21 AM",
+      "link": "https://www.tradingview.com/news/beincrypto:493e07895094b:0-google-cuts-the-qubits-needed-to-break-ethereum-by-20x-but-there-s-a-plan/"
+    },
+    {
+      "title": "Markets celebrate MOU on SoH",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-15T04:30:00+00:00",
+      "timeDisplay": "4:30 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42N031:0-markets-celebrate-mou-on-soh/"
+    },
+    {
+      "title": "Bitcoin Gains After U.S., Iran Reach Interim Peace Deal \u2014 Market Talk",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T04:23:00+00:00",
+      "timeDisplay": "4:23 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260615000066:0/"
+    },
+    {
+      "title": "Bitcoin mining difficulty drops 10% in 11th largest downward adjustment",
+      "source": "cointelegraph",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T04:16:14+00:00",
+      "timeDisplay": "4:16 AM",
+      "link": "https://www.tradingview.com/news/cointelegraph:126c358bd094b:0-bitcoin-mining-difficulty-drops-10-in-11th-largest-downward-adjustment/"
+    },
+    {
+      "title": "IRAN UPDATE: PRES TRUMP SAYS FRIDAY SIGNING OF INTERIM PEACE DEAL WITH IRAN ENDS BLOCKADES OF STRAIT OF HORMUZ, ASKS ISRAEL TO HALT ATTACKS ON LEBANON",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T04:14:00+00:00",
+      "timeDisplay": "4:14 AM",
+      "link": "https://www.tradingview.com/news/macenews:b40f8f21c094b:0-iran-update-pres-trump-says-friday-signing-of-interim-peace-deal-with-iran-ends-blockades-of-strait-of-hormuz-asks-israel-to-halt-attacks-on-lebanon/"
+    },
+    {
+      "title": "US military prepares to lift Strait of Hormuz blockade if Iran deal is signed",
+      "source": "cryptobriefing",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T04:13:11+00:00",
+      "timeDisplay": "4:13 AM",
+      "link": "https://www.tradingview.com/news/cryptobriefing:856896c2f094b:0-us-military-prepares-to-lift-strait-of-hormuz-blockade-if-iran-deal-is-signed/"
+    },
+    {
+      "title": "China's yuan hits three-year high as dollar eases after US-Iran peace deal",
+      "source": "reuters",
+      "color": "#ff6d00",
+      "timestamp": "2026-06-15T04:12:41+00:00",
+      "timeDisplay": "4:12 AM",
+      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42N09B:0-china-s-yuan-hits-three-year-high-as-dollar-eases-after-us-iran-peace-deal/"
+    },
+    {
+      "title": "MONDAY-WEDNESDAY WHITE HOUSE SCHEDULE - President Trump travels to Evian, France, for the G-7 meeting",
+      "source": "macenews",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T04:08:00+00:00",
+      "timeDisplay": "4:08 AM",
+      "link": "https://www.tradingview.com/news/macenews:795286ed8094b:0-monday-wednesday-white-house-schedule-president-trump-travels-to-evian-france-for-the-g-7-meeting/"
+    },
+    {
+      "title": "Ethereum Price Rebound Gains Traction After Clearing Key Hurdles",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T03:48:04+00:00",
+      "timeDisplay": "3:48 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:746ce8354094b:0-ethereum-price-rebound-gains-traction-after-clearing-key-hurdles/"
+    },
+    {
+      "title": "Crypto Fund Managers See Further Bitcoin Downside, With Bottom Expected in Late Q3 or Early Q4",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T03:04:01+00:00",
+      "timeDisplay": "3:04 AM",
+      "link": "https://www.tradingview.com/news/binance_news:22a14acca094b:0-crypto-fund-managers-see-further-bitcoin-downside-with-bottom-expected-in-late-q3-or-early-q4/"
+    },
+    {
+      "title": "Bitcoin Price Reclaims $65,000 With Conviction\u2014Is A Bigger Rally Next?",
+      "source": "newsbtc",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T03:02:05+00:00",
+      "timeDisplay": "3:02 AM",
+      "link": "https://www.tradingview.com/news/newsbtc:98a4267b1094b:0-bitcoin-price-reclaims-65-000-with-conviction-is-a-bigger-rally-next/"
+    },
+    {
+      "title": "The Funding: Is the bitcoin bottom in? Crypto funds weigh in",
+      "source": "the_block",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T02:41:59+00:00",
+      "timeDisplay": "2:41 AM",
+      "link": "https://www.tradingview.com/news/the_block:59d0c990a094b:0-the-funding-is-the-bitcoin-bottom-in-crypto-funds-weigh-in/"
+    },
+    {
+      "title": "Singapore to Set Up Gold-Clearing System in Push to Become Trading Hub",
+      "source": "dow-jones",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T02:34:00+00:00",
+      "timeDisplay": "2:34 AM",
+      "link": "https://www.tradingview.com/news/DJN_DN20260614000876:0-singapore-to-set-up-gold-clearing-system-in-push-to-become-trading-hub/"
+    },
+    {
+      "title": "Bitcoin rallies to two-week high after US-Iran Hormuz Deal",
+      "source": "moneycontrol",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T02:27:40+00:00",
+      "timeDisplay": "2:27 AM",
+      "link": "https://www.tradingview.com/news/moneycontrol:250acfafd094b:0-bitcoin-rallies-to-two-week-high-after-us-iran-hormuz-deal/"
+    },
+    {
+      "title": "Crypto Market Rises as DeFi Gains 3.34% and Bitcoin Climbs 1.53% Above $65,000",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T02:14:35+00:00",
+      "timeDisplay": "2:14 AM",
+      "link": "https://www.tradingview.com/news/binance_news:de1e3d19f094b:0-crypto-market-rises-as-defi-gains-3-34-and-bitcoin-climbs-1-53-above-65-000/"
+    },
+    {
+      "title": "Bitcoin rallies to two-week high after US-Iran Hormuz deal",
+      "source": "cnbctv",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T02:07:37+00:00",
+      "timeDisplay": "2:07 AM",
+      "link": "https://www.tradingview.com/news/cnbctv:f9716c14e094b:0/"
+    },
     {
       "title": "Commodities intraday targets/key levels",
       "source": "reuters",
@@ -55,12 +327,36 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L1N42N01J:0-commodities-intraday-targets-key-levels/"
     },
     {
+      "title": "Bitcoin Rises to Nearly Two-Week High After U.S. and Iran Agree to End Hostilities",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T01:54:47+00:00",
+      "timeDisplay": "1:54 AM",
+      "link": "https://www.tradingview.com/news/binance_news:2925581c1094b:0-bitcoin-rises-to-nearly-two-week-high-after-u-s-and-iran-agree-to-end-hostilities/"
+    },
+    {
+      "title": "117 Partners Founder Questions Hoskinson\u2019s Explanation of Cardano Foundation\u2019s 1,096 BTC Use",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T01:33:49+00:00",
+      "timeDisplay": "1:33 AM",
+      "link": "https://www.tradingview.com/news/binance_news:b6d85fef6094b:0-117-partners-founder-questions-hoskinson-s-explanation-of-cardano-foundation-s-1-096-btc-use/"
+    },
+    {
       "title": "Gold Rises as U.S.-Iran Ceasefire Soothes Inflation Fears \u2014 Market Talk",
       "source": "dow-jones",
       "color": "#00e5ff",
       "timestamp": "2026-06-15T01:16:00+00:00",
       "timeDisplay": "1:16 AM",
       "link": "https://www.tradingview.com/news/DJN_DN20260614000770:0/"
+    },
+    {
+      "title": "Trader Killa Says Bitcoin Must Hold $64,000 or Risk Falling Below $60,000",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-15T01:10:15+00:00",
+      "timeDisplay": "1:10 AM",
+      "link": "https://www.tradingview.com/news/binance_news:cef4e19a3094b:0-trader-killa-says-bitcoin-must-hold-64-000-or-risk-falling-below-60-000/"
     },
     {
       "title": "US 10-Year Yield Hits 1-Month Low",
@@ -79,20 +375,12 @@
       "link": "https://www.tradingview.com/news/te_news:558844:0-dollar-falls-on-us-iran-peace-deal/"
     },
     {
-      "title": "Asian shares surge, oil prices slump on US-Iran peace deal",
-      "source": "cnbctv",
+      "title": "Trader Earns $4.93 Million From 10 ETH Long-Short Trades, Lookonchain Says",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-15T00:57:34+00:00",
-      "timeDisplay": "12:57 AM",
-      "link": "https://www.tradingview.com/news/cnbctv:9818bac88094b:0/"
-    },
-    {
-      "title": "UFC Hits the White House As Trump Announces Iran Peace Deal",
-      "source": "bravenewcoin",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-15T00:40:31+00:00",
-      "timeDisplay": "12:40 AM",
-      "link": "https://www.tradingview.com/news/bravenewcoin:830cccb13094b:0/"
+      "timestamp": "2026-06-15T00:53:55+00:00",
+      "timeDisplay": "12:53 AM",
+      "link": "https://www.tradingview.com/news/binance_news:188ddb994094b:0-trader-earns-4-93-million-from-10-eth-long-short-trades-lookonchain-says/"
     },
     {
       "title": "Shares surge, oil skids in Asia on Gulf deal",
@@ -111,20 +399,20 @@
       "link": "https://www.tradingview.com/news/te_news:558838:0-us-10y-bond-yield-hits-4-week-low/"
     },
     {
-      "title": "Dollar hits 10-day low as US, Iran reach peace deal",
-      "source": "reuters",
-      "color": "#ff6d00",
-      "timestamp": "2026-06-14T23:54:08+00:00",
-      "timeDisplay": "11:54 PM",
-      "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L4N42M08P:0-dollar-hits-10-day-low-as-us-iran-reach-peace-deal/"
-    },
-    {
       "title": "Gold Climbs on US-Iran Peace Agreement",
       "source": "trading-economics",
       "color": "#00e5ff",
       "timestamp": "2026-06-14T23:52:48+00:00",
       "timeDisplay": "11:52 PM",
       "link": "https://www.tradingview.com/news/te_news:558823:0-gold-climbs-on-us-iran-peace-agreement/"
+    },
+    {
+      "title": "Market News: It's Confirmed - US-Iran Deal Reached \u2014 Bitcoin Jumps to $65,642, Strait of Hormuz Reopens, But the Real Negotiation Starts Now",
+      "source": "binance_news",
+      "color": "#00e5ff",
+      "timestamp": "2026-06-14T23:51:33+00:00",
+      "timeDisplay": "11:51 PM",
+      "link": "https://www.tradingview.com/news/binance_news:2ab74fbb5094b:0-market-news-it-s-confirmed-us-iran-deal-reached-bitcoin-jumps-to-65-642-strait-of-hormuz-reopens-but-the-real-negotiation-starts-now/"
     },
     {
       "title": "Brent Futures May Fall to $80 per Barrel by Year-End if Strait of Hormuz Not Closed Again \u2014 Market Talk",
@@ -151,68 +439,12 @@
       "link": "https://www.tradingview.com/news/te_news:558814:0-oil-drops-on-us-iran-peace-deal/"
     },
     {
-      "title": "Trump Iran Deal: A Ceasefire That Solves Everything Except the Hard Parts",
-      "source": "beincrypto",
+      "title": "Ethereum(ETH) Surpasses 1,700 USDT with a 1.96% Increase in 24 Hours",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-14T22:46:52+00:00",
-      "timeDisplay": "10:46 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:b2bf32565094b:0-trump-iran-deal-a-ceasefire-that-solves-everything-except-the-hard-parts/"
-    },
-    {
-      "title": "Spot Bitcoin ETFs Snap Five-Day Outflow Streak With $85.8 Million Inflows",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T21:32:20+00:00",
-      "timeDisplay": "9:32 PM",
-      "link": "https://www.tradingview.com/news/newsbtc:a1801d5f9094b:0-spot-bitcoin-etfs-snap-five-day-outflow-streak-with-85-8-million-inflows/"
-    },
-    {
-      "title": "Donald Trump: Deal With Iran is Complete \u2013 Bitcoin, Gold and Oil React",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T21:27:46+00:00",
-      "timeDisplay": "9:27 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:8f6132edd094b:0-donald-trump-deal-with-iran-is-complete-bitcoin-gold-and-oil-react/"
-    },
-    {
-      "title": "Bitcoin mining difficulty drops 10% in second-largest negative adjustment of 2026",
-      "source": "the_block",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T20:42:19+00:00",
-      "timeDisplay": "8:42 PM",
-      "link": "https://www.tradingview.com/news/the_block:37f5b0d6e094b:0-bitcoin-mining-difficulty-drops-10-in-second-largest-negative-adjustment-of-2026/"
-    },
-    {
-      "title": "New MicroStrategy Bitcoin Metrics: Innovation or Goalpost Moving by Michael Saylor?",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T19:19:25+00:00",
-      "timeDisplay": "7:19 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:0bcb5dca2094b:0-new-microstrategy-bitcoin-metrics-innovation-or-goalpost-moving-by-michael-saylor/"
-    },
-    {
-      "title": "StanChart looks for 3 signs of BTC bottom, including Strategy\u2019s Monday news",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T19:05:46+00:00",
-      "timeDisplay": "7:05 PM",
-      "link": "https://www.tradingview.com/news/cointelegraph:647a78be0094b:0-stanchart-looks-for-3-signs-of-btc-bottom-including-strategy-s-monday-news/"
-    },
-    {
-      "title": "Charles Hoskinson Tries to Close Cardano\u2019s $70 Million Bitcoin Mystery",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T17:15:16+00:00",
-      "timeDisplay": "5:15 PM",
-      "link": "https://www.tradingview.com/news/beincrypto:ff4f5af1f094b:0-charles-hoskinson-tries-to-close-cardano-s-70-million-bitcoin-mystery/"
-    },
-    {
-      "title": "Arthur Hayes Says AI Drained Bitcoin's Liquidity, Is Now Bearish On All Risk Assets But Energy",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T16:06:34+00:00",
-      "timeDisplay": "4:06 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:f08630c47094b:0-arthur-hayes-says-ai-drained-bitcoin-s-liquidity-is-now-bearish-on-all-risk-assets-but-energy/"
+      "timestamp": "2026-06-14T21:26:09+00:00",
+      "timeDisplay": "9:26 PM",
+      "link": "https://www.tradingview.com/news/binance_news:6552b097e094b:0-ethereum-eth-surpasses-1-700-usdt-with-a-1-96-increase-in-24-hours/"
     },
     {
       "title": "BitMine's Preferred Stock Begins Trading This Week As Ethereum Heads For Its Worst First Half Since 2022",
@@ -223,12 +455,12 @@
       "link": "https://www.tradingview.com/news/stocktwits:098faa06b094b:0-bitmine-s-preferred-stock-begins-trading-this-week-as-ethereum-heads-for-its-worst-first-half-since-2022/"
     },
     {
-      "title": "Is Bitcoin Price Bottoming or Building for a Deeper Drop to $30,000?",
-      "source": "coinpedia",
+      "title": "Suspicious Transfer From Ethereum Aztec Router Contract Flags $2.19 Million Outflow, CertiK Says",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-14T14:32:59+00:00",
-      "timeDisplay": "2:32 PM",
-      "link": "https://www.tradingview.com/news/coinpedia:8bc042f0a094b:0-is-bitcoin-price-bottoming-or-building-for-a-deeper-drop-to-30-000/"
+      "timestamp": "2026-06-14T14:13:56+00:00",
+      "timeDisplay": "2:13 PM",
+      "link": "https://www.tradingview.com/news/binance_news:be2fe36bf094b:0-suspicious-transfer-from-ethereum-aztec-router-contract-flags-2-19-million-outflow-certik-says/"
     },
     {
       "title": "Ethereum can quantum-proof accounts for just 7 cents, says Ethereum's Kohaku lead",
@@ -239,12 +471,12 @@
       "link": "https://www.tradingview.com/news/cointelegraph:db398f07c094b:0-ethereum-can-quantum-proof-accounts-for-just-7-cents-says-ethereum-s-kohaku-lead/"
     },
     {
-      "title": "Michael Saylor Explains What Makes A Bitcoin Treasury Company Outperform BTC",
-      "source": "stocktwits",
+      "title": "Aunt Ai: Address Closes 23,200 ETH Short After About 18 Hours",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-14T13:15:46+00:00",
-      "timeDisplay": "1:15 PM",
-      "link": "https://www.tradingview.com/news/stocktwits:80bbd07de094b:0-michael-saylor-explains-what-makes-a-bitcoin-treasury-company-outperform-btc/"
+      "timestamp": "2026-06-14T13:33:41+00:00",
+      "timeDisplay": "1:33 PM",
+      "link": "https://www.tradingview.com/news/binance_news:c029e93d5094b:0-aunt-ai-address-closes-23-200-eth-short-after-about-18-hours/"
     },
     {
       "title": "Newly led Fed poses wildcard for rockier US indexes",
@@ -255,14 +487,6 @@
       "link": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N42K17L:0-newly-led-fed-poses-wildcard-for-rockier-us-indexes/"
     },
     {
-      "title": "Key facts: BTC diff -10.09%; BTC at 200wk SMA; CLARITY odds ~51\u201360%",
-      "source": "tradingview",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T12:13:33+00:00",
-      "timeDisplay": "12:13 PM",
-      "link": "https://www.tradingview.com/news/tradingview:0853b9276cf85:0-key-facts-btc-diff-10-09-btc-at-200wk-sma-clarity-odds-51-60/"
-    },
-    {
       "title": "Tether USDT Briefly Overtakes Ethereum in Market Cap: A $187B Wake-Up Call",
       "source": "cryptonews",
       "color": "#00e5ff",
@@ -271,44 +495,12 @@
       "link": "https://www.tradingview.com/news/cryptonews:2bf24e90f094b:0-tether-usdt-briefly-overtakes-ethereum-in-market-cap-a-187b-wake-up-call/"
     },
     {
-      "title": "Bitcoin nears $65K as Trump says Hormuz will 'open to all' in Sunday Iran peace deal",
-      "source": "cointelegraph",
+      "title": "Crypto Gains as T. Rowe Price ETF Nears Listing, Perps Rules Shift, and Hormuz Talks Wobble",
+      "source": "binance_news",
       "color": "#00e5ff",
-      "timestamp": "2026-06-14T10:06:04+00:00",
-      "timeDisplay": "10:06 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:0fe78473c094b:0-bitcoin-nears-65k-as-trump-says-hormuz-will-open-to-all-in-sunday-iran-peace-deal/"
-    },
-    {
-      "title": "CLARITY Act's July 4 Deadline Is 'Logistically Impossible' Amid 16-Day Senate Window, Says Eleanor Terrett",
-      "source": "stocktwits",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T09:37:06+00:00",
-      "timeDisplay": "9:37 AM",
-      "link": "https://www.tradingview.com/news/stocktwits:5a74029f3094b:0-clarity-act-s-july-4-deadline-is-logistically-impossible-amid-16-day-senate-window-says-eleanor-terrett/"
-    },
-    {
-      "title": "Coinbase Quantum Report Warns Millions Of Bitcoin Could Face Future Security Risks",
-      "source": "newsbtc",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T09:31:51+00:00",
-      "timeDisplay": "9:31 AM",
-      "link": "https://www.tradingview.com/news/newsbtc:952b1a80d094b:0-coinbase-quantum-report-warns-millions-of-bitcoin-could-face-future-security-risks/"
-    },
-    {
-      "title": "Bitcoin Mining Difficulty Drops 10% in Second-Largest 2026 Decline",
-      "source": "beincrypto",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T09:25:53+00:00",
-      "timeDisplay": "9:25 AM",
-      "link": "https://www.tradingview.com/news/beincrypto:e81c9a613094b:0-bitcoin-mining-difficulty-drops-10-in-second-largest-2026-decline/"
-    },
-    {
-      "title": "Trump says Iran peace deal to be signed Sunday, contradicting Tehran",
-      "source": "cointelegraph",
-      "color": "#00e5ff",
-      "timestamp": "2026-06-14T05:07:31+00:00",
-      "timeDisplay": "5:07 AM",
-      "link": "https://www.tradingview.com/news/cointelegraph:6081ac7bd094b:0-trump-says-iran-peace-deal-to-be-signed-sunday-contradicting-tehran/"
+      "timestamp": "2026-06-14T09:30:05+00:00",
+      "timeDisplay": "9:30 AM",
+      "link": "https://www.tradingview.com/news/binance_news:78c1f8904094b:0-crypto-gains-as-t-rowe-price-etf-nears-listing-perps-rules-shift-and-hormuz-talks-wobble/"
     }
   ]
 }
